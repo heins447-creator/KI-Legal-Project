@@ -1,0 +1,17 @@
+﻿KI Legal Windows-App
+
+Start:
+.\Windows_App\Scripts\Start_App.ps1
+
+Build:
+.\Windows_App\Scripts\Build_App.ps1
+
+Projekt:
+Windows_App\App\KI_Legal_WindowsApp.csproj
+
+Logs:
+Windows_App\Logs
+
+Hinweis:
+AnythingLLM_Storage bleibt unverändert.
+Die Windows-App liegt getrennt im Ordner Windows_App.
