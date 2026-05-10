@@ -1,0 +1,11 @@
+{
+  "version": "V1",
+  "default_case_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "official_language_code": "sv",
+  "procedural_language_code": "sv",
+  "internal_work_language_code": "de",
+  "rough_translation_target_language_code": "de",
+  "document_language_id_rule": "DLANG_<sha256[:16]>",
+  "language_routing_key_rule": "case|intake|primary|secondary|target",
+  "principle": "Die Sprache läuft als Dokument-Sprachprofil mit. Mehrsprachige Dokumente werden markiert. Inhaltliche Beweis- oder Entlastungsbewertung erfolgt nicht im Posteingang."
+}
