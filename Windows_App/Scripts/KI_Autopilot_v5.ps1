@@ -79,7 +79,7 @@ function Run-AgentRound {
     )
 
     LogLine "Runde $Runde gestartet."
-    LogLine "Auftrag Runde $Runde:"
+    LogLine ("Auftrag Runde {0}:" -f $Runde)
     LogLine $RoundAuftrag
 
     $AgentOutput = ""
@@ -193,15 +193,15 @@ try {
 
     for ($Runde = 1; $Runde -le $MaxRunden; $Runde++) {
         $Percent = [int](($Runde - 1) / [Math]::Max(1, $MaxRunden) * 80) + 5
-        Show-Phase -Phase "Runde $Runde von $MaxRunden: KI ändert Dateien" -Percent $Percent
+        Show-Phase -Phase ("Runde {0} von {1}: KI ändert Dateien" -f $Runde, $MaxRunden) -Percent $Percent
 
         $AgentResult = Run-AgentRound -RoundAuftrag $CurrentAuftrag -Runde $Runde
 
         $GitStatus = Get-GitShortStatus
-        LogLine "Git-Status nach Runde $Runde:"
+        LogLine ("Git-Status nach Runde {0}:" -f $Runde)
         LogLine $GitStatus
 
-        Show-Phase -Phase "Runde $Runde: Build prüfen" -Percent ($Percent + 10)
+        Show-Phase -Phase ("Runde {0}: Build prüfen" -f $Runde) -Percent ($Percent + 10)
 
         $BuildResult = Run-Build
 
@@ -274,3 +274,4 @@ catch {
 
     throw
 }
+
