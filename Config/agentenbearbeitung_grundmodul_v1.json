@@ -1,0 +1,56 @@
+{
+  "version": "V1",
+  "module": "Agentenbearbeitung Grundmodul",
+  "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "case_context": {
+    "matter_type": "Schwedischer Arbeitsrechtsstreit",
+    "parties_context": "Arbeitnehmer gegen kommunalen Arbeitgeber",
+    "jurisdiction_country_code": "SE",
+    "official_language_code": "sv",
+    "procedural_language_code": "sv",
+    "internal_work_language_code": "de"
+  },
+  "principle": "Die Agentenbearbeitung bereitet Aktenstruktur und fachliche Sichtung vor. Die abschließende anwaltliche Bewertung bleibt gesperrt.",
+  "tasks": [
+    {
+      "task_key": "DOKUMENTART_ERKENNEN",
+      "task_order": 10,
+      "task_label": "Dokumentart erkennen",
+      "task_scope": "Formale Art des Dokuments bestimmen, etwa Schriftsatz, Nachweis, Aussage, E-Mail, Bescheid, Protokoll, Bild oder Kontextmaterial.",
+      "allowed_output": "Vorschlag zur Dokumentart mit Begründung und Unsicherheitsgrad.",
+      "forbidden_output": "Keine rechtliche Verwertung und keine abschließende Beweiseinordnung."
+    },
+    {
+      "task_key": "SPRACHE_UND_UEBERSETZUNG_PRUEFEN",
+      "task_order": 20,
+      "task_label": "Sprache und Arbeitsübersetzung prüfen",
+      "task_scope": "Erkannte Sprache, Mehrsprachigkeit und grobe deutsche Arbeitsübersetzung prüfen.",
+      "allowed_output": "Sprachprofil, Übersetzungsbedarf und Hinweis auf unklare Textstellen.",
+      "forbidden_output": "Keine verbindliche beglaubigte Übersetzung."
+    },
+    {
+      "task_key": "SACHVERHALTSBEZUG_VORBEREITEN",
+      "task_order": 30,
+      "task_label": "Sachverhaltsbezug vorbereiten",
+      "task_scope": "Zeit, Beteiligte, Vorgang und mögliche Zuordnung zu einem Sachverhaltsabschnitt vorbereiten.",
+      "allowed_output": "Strukturvorschlag für die spätere Akte.",
+      "forbidden_output": "Keine endgültige Aktenzuordnung."
+    },
+    {
+      "task_key": "BEWEIS_ODER_ENTLASTUNG_VORSCHLAG",
+      "task_order": 40,
+      "task_label": "Beweis- oder Entlastungsvorschlag vorbereiten",
+      "task_scope": "Nur als Vorschlag kennzeichnen, ob ein Dokument als Nachweis, Aussage, Entlastung, Belastung oder Kontextmaterial in Betracht kommt.",
+      "allowed_output": "Nicht bindender Vorschlag mit Fundstellenhinweis.",
+      "forbidden_output": "Keine Beweiswürdigung, keine rechtliche Endbewertung."
+    },
+    {
+      "task_key": "ANWALTVORLAGE_STRUKTURIEREN",
+      "task_order": 50,
+      "task_label": "Anwaltvorlage strukturieren",
+      "task_scope": "Kurzblatt für den Anwalt vorbereiten: Dokument, Sprache, Beteiligte, mögliche Bedeutung, offene Prüfpunkte.",
+      "allowed_output": "Strukturierte Vorlage zur anwaltlichen Entscheidung.",
+      "forbidden_output": "Keine Klageentscheidung und keine Freigabe nach außen."
+    }
+  ]
+}
