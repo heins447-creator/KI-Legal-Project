@@ -6,3 +6,4 @@
 Windows_App/App/bin/
 Windows_App/App/obj/
 Windows_App/Logs/
+Windows_App/App/*.bak_*

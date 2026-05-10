@@ -1,12 +1,158 @@
 ﻿<Window x:Class="KI_Legal_WindowsApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KI_Legal_WindowsApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="KI Legal Project"
+        Height="760"
+        Width="1180"
+        MinHeight="620"
+        MinWidth="980"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Background="#F4F6F8">
 
-    </Grid>
+        <Menu DockPanel.Dock="Top" Background="#1F2937" Foreground="White">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="Beenden" Click="Beenden_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Dokumente"/>
+            <MenuItem Header="_Datenbank"/>
+            <MenuItem Header="_KI"/>
+            <MenuItem Header="_Einstellungen"/>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom" Background="#E5E7EB">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusTextBlock" Text="Bereit"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="170"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.RowSpan="2"
+                    Background="White"
+                    BorderBrush="#CBD5E1"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10"
+                    Margin="0,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="Navigation"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0,0,0,12"/>
+
+                    <Button Content="Dokumente laden"
+                            Height="34"
+                            Margin="0,0,0,8"
+                            Click="DokumenteLaden_Click"/>
+
+                    <Button Content="Analyse starten"
+                            Height="34"
+                            Margin="0,0,0,8"
+                            Click="AnalyseStarten_Click"/>
+
+                    <Button Content="Protokoll anzeigen"
+                            Height="34"
+                            Margin="0,0,0,18"
+                            Click="ProtokollAnzeigen_Click"/>
+
+                    <Separator Margin="0,4,0,12"/>
+
+                    <TextBlock Text="Bereiche"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,8"/>
+
+                    <ListBox x:Name="BereichListe" Height="220">
+                        <ListBoxItem Content="Posteingang"/>
+                        <ListBoxItem Content="Dokumente"/>
+                        <ListBoxItem Content="Fundstellen"/>
+                        <ListBoxItem Content="Datenbank"/>
+                        <ListBoxItem Content="KI-Auswertung"/>
+                        <ListBoxItem Content="Protokolle"/>
+                    </ListBox>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="0"
+                    Grid.Column="1"
+                    Background="White"
+                    BorderBrush="#CBD5E1"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="12"
+                    Margin="0,0,0,12">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Arbeitsbereich"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Margin="0,0,0,12"/>
+
+                    <ListView x:Name="DokumentenListe" Grid.Row="1">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Datei"
+                                                Width="360"
+                                                DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="Typ"
+                                                Width="90"
+                                                DisplayMemberBinding="{Binding Extension}"/>
+                                <GridViewColumn Header="Größe"
+                                                Width="100"
+                                                DisplayMemberBinding="{Binding SizeText}"/>
+                                <GridViewColumn Header="Pfad"
+                                                Width="500"
+                                                DisplayMemberBinding="{Binding FullName}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Background="#111827"
+                    BorderBrush="#CBD5E1"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Protokoll"
+                               Foreground="White"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Margin="0,0,0,8"/>
+
+                    <TextBox x:Name="LogTextBox"
+                             Grid.Row="1"
+                             Background="#0B1220"
+                             Foreground="#D1D5DB"
+                             BorderThickness="0"
+                             FontFamily="Consolas"
+                             FontSize="13"
+                             TextWrapping="Wrap"
+                             VerticalScrollBarVisibility="Auto"
+                             IsReadOnly="True"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
 </Window>
