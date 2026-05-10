@@ -1,0 +1,29 @@
+{
+  "version": "V1",
+  "module": "Anwaltvorlage Grundmodul",
+  "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "case_context": {
+    "matter_type": "Schwedischer Arbeitsrechtsstreit",
+    "parties_context": "Arbeitnehmer gegen kommunalen Arbeitgeber",
+    "jurisdiction_country_code": "SE",
+    "official_language_code": "sv",
+    "procedural_language_code": "sv",
+    "internal_work_language_code": "de",
+    "rough_translation_target_language_code": "de"
+  },
+  "minimum_for_lawyer_review": [
+    "technisch sicher oder durch Vorzimmer freigegeben",
+    "Posteingang bearbeitet",
+    "Sprache erkannt oder als unklar markiert",
+    "grobe Arbeitsübersetzung nach Deutsch möglich oder als erforderlich markiert",
+    "Anwaltvorlage organisatorisch erzeugt"
+  ],
+  "not_decided_here": [
+    "Beweiswert",
+    "Entlastungswert",
+    "rechtliche Relevanz",
+    "Aussagequalität",
+    "endgültige Aktenzuordnung",
+    "Klageentscheidung"
+  ]
+}
