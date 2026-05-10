@@ -2,17 +2,29 @@
 
 ## Zweck
 
-Dieses Modul setzt Vorzimmerentscheidungen technisch um.
+Dieses Modul setzt dokumentierte Vorzimmerentscheidungen technisch um.
 
-Die Vorzimmer-Arbeitsliste zeigt offene Fälle. Die Entscheidung wird nicht frei im Programm geraten, sondern über eine CSV-Datei im Entscheidungsordner vorgegeben.
+Die Vorzimmer-Arbeitsliste zeigt offene Fälle. Die eigentliche Entscheidung wird nicht durch das Programm geraten, sondern durch eine CSV-Eingabedatei vorgegeben.
+
+## Eingaberegel
+
+Als Eingabe werden nur CSV-Dateien verarbeitet, deren Dateiname mit folgendem Präfix beginnt:
+
+`EINGABE_VORZIMMER_ENTSCHEIDUNG_`
+
+Die Vorlage heißt:
+
+`EINGABE_VORZIMMER_ENTSCHEIDUNG_TEMPLATE.csv`
+
+Ergebnis-CSV-Dateien werden dadurch nicht mehr versehentlich als neue Eingabedateien verarbeitet.
 
 ## Entscheidungsordner
 
-Entscheidungsdateien werden abgelegt unter:
+Eingabedateien werden abgelegt unter:
 
 `Windows_App\Logs\Vorzimmer_Entscheidungen`
 
-Die Vorlage liegt zusätzlich unter:
+Die allgemeine Vorlage liegt zusätzlich unter:
 
 `Config\vorzimmer_entscheidung_template_v1.csv`
 
@@ -40,21 +52,12 @@ Entweder `intake_id` oder `source_path` muß angegeben werden.
 - `KEINE_AKTION`
 - `ZURUECKSTELLEN`
 
-## Wirkung
+## Ablage der Ergebnisse
 
-Bei einer Bewegungsentscheidung werden passende Arbeitsdateien in den Zielbereich verschoben.
-
-Nachweisdateien bleiben als Protokoll erhalten.
-
-Verarbeitete Entscheidungsdateien werden nach `Verarbeitet` verschoben.
-
-Fehlerhafte Entscheidungsdateien werden nach `Fehler` verschoben.
-
-## Starter
-
-Der Starter liegt unter:
-
-`Scripts\Run_Vorzimmer_Entscheidung.ps1`
+- Berichte nach `Windows_App\Logs\Vorzimmer_Entscheidungen\Berichte`
+- verarbeitete Eingabe-CSV nach `Windows_App\Logs\Vorzimmer_Entscheidungen\Verarbeitet`
+- fehlerhafte Eingabe-CSV nach `Windows_App\Logs\Vorzimmer_Entscheidungen\Fehler`
+- Nachweise nach `Windows_App\Logs\Vorzimmer_Entscheidungen\Nachweise`
 
 ## Leitregel
 

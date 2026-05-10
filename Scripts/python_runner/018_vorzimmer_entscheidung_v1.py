@@ -16,10 +16,14 @@ ROOT = Path(r"I:\KI_Legal_Project")
 POST = ROOT / "Posteingang"
 LOG = ROOT / "Windows_App" / "Logs"
 DECISION_DIR = LOG / "Vorzimmer_Entscheidungen"
+INPUT_DIR = DECISION_DIR
+REPORT_DIR = DECISION_DIR / "Berichte"
 PROCESSED_DIR = DECISION_DIR / "Verarbeitet"
 FAILED_DIR = DECISION_DIR / "Fehler"
 PROOF_DIR = DECISION_DIR / "Nachweise"
 CONFIG_TEMPLATE = ROOT / "Config" / "vorzimmer_entscheidung_template_v1.csv"
+
+INPUT_PREFIX = "EINGABE_VORZIMMER_ENTSCHEIDUNG_"
 
 DIRS = {
     "quarantaene": POST / "01_Quarantaene",
@@ -59,42 +63,26 @@ NO_MOVE_ACTIONS = {
 }
 
 VALID_ACTIONS = set(ACTION_TARGETS.keys()) | NO_MOVE_ACTIONS | {"ARCHIVIEREN"}
-
 IGNORE = {".gitkeep", "README_POSTEINGANG.md"}
 
 def now():
     return datetime.datetime.now().replace(microsecond=0).isoformat()
 
 def ensure_dirs():
-    for p in list(DIRS.values()) + [DECISION_DIR, PROCESSED_DIR, FAILED_DIR, PROOF_DIR]:
+    for p in list(DIRS.values()) + [INPUT_DIR, REPORT_DIR, PROCESSED_DIR, FAILED_DIR, PROOF_DIR]:
         p.mkdir(parents=True, exist_ok=True)
 
 def write_template():
     CONFIG_TEMPLATE.parent.mkdir(parents=True, exist_ok=True)
-    DECISION_DIR.mkdir(parents=True, exist_ok=True)
+    INPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    rows = [
-        {
-            "decision_id": "BEISPIEL_NICHT_AUSFUEHREN",
-            "intake_id": "INTAKE_ID_AUS_ARBEITSLISTE",
-            "source_path": "",
-            "aktion": "ANWALTVORLAGE",
-            "begruendung": "Kurze Begründung der Vorzimmerentscheidung",
-            "frist": "",
-            "verantwortlich": "Vorzimmer",
-        }
-    ]
+    text = (
+        "decision_id;intake_id;source_path;aktion;begruendung;frist;verantwortlich\n"
+        "BEISPIEL_NICHT_AUSFUEHREN;INTAKE_ID_AUS_ARBEITSLISTE;;ANWALTVORLAGE;Kurze Begründung der Vorzimmerentscheidung;;Vorzimmer\n"
+    )
 
-    for target in [CONFIG_TEMPLATE, DECISION_DIR / "VORZIMMER_ENTSCHEIDUNG_TEMPLATE.csv"]:
-        with open(target, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(
-                f,
-                fieldnames=["decision_id", "intake_id", "source_path", "aktion", "begruendung", "frist", "verantwortlich"],
-                delimiter=";"
-            )
-            writer.writeheader()
-            for row in rows:
-                writer.writerow(row)
+    CONFIG_TEMPLATE.write_text(text, encoding="utf-8", newline="\n")
+    (INPUT_DIR / "EINGABE_VORZIMMER_ENTSCHEIDUNG_TEMPLATE.csv").write_text(text, encoding="utf-8", newline="\n")
 
 def normalize_action(value):
     v = str(value or "").strip().upper()
@@ -113,11 +101,9 @@ def active_files(path):
 
 def decision_csv_files():
     files = []
-    for p in DECISION_DIR.glob("*.csv"):
+    for p in INPUT_DIR.glob(INPUT_PREFIX + "*.csv"):
         name = p.name.upper()
         if "TEMPLATE" in name:
-            continue
-        if name.startswith("VORZIMMER_ENTSCHEIDUNG_TEMPLATE"):
             continue
         files.append(p)
     return sorted(files)
@@ -139,6 +125,7 @@ def safe_unique(target):
 
 def extract_intake_id(path):
     stem = path.stem
+
     for suffix in [
         "_entscheidungskarte",
         "_sicherheitskarte",
@@ -200,6 +187,7 @@ def read_decisions(csv_path):
 
     with open(csv_path, "r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f, delimiter=";")
+
         for row in reader:
             if not row:
                 continue
@@ -211,7 +199,7 @@ def read_decisions(csv_path):
             if not action:
                 continue
 
-            if action == "BEISPIEL_NICHT_AUSFUEHREN":
+            if str(row.get("decision_id", "")).strip().upper() == "BEISPIEL_NICHT_AUSFUEHREN":
                 continue
 
             rows.append({
@@ -270,27 +258,20 @@ def move_decision_file(csv_path, ok):
 def write_reports(results):
     ts = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    txt = DECISION_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.txt"
-    csv_file = DECISION_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.csv"
-    json_file = DECISION_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.json"
+    txt = REPORT_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.txt"
+    csv_file = REPORT_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.csv"
+    json_file = REPORT_DIR / f"VORZIMMER_ENTSCHEIDUNG_V1_{ts}.json"
 
     data = {
         "time": now(),
         "results_count": len(results),
         "results": results,
+        "input_rule": "Nur CSV-Dateien mit Präfix " + INPUT_PREFIX + " werden als Eingabe verarbeitet.",
     }
 
     json_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
-    fields = [
-        "csv_file",
-        "decision_id",
-        "intake_id",
-        "aktion",
-        "status",
-        "message",
-        "moved_count",
-    ]
+    fields = ["csv_file", "decision_id", "intake_id", "aktion", "status", "message", "moved_count"]
 
     with open(csv_file, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fields, delimiter=";")
@@ -311,10 +292,11 @@ def write_reports(results):
         f.write("VORZIMMER ENTSCHEIDUNG V1\n")
         f.write("=" * 80 + "\n")
         f.write("Zeit: " + data["time"] + "\n")
-        f.write("Entscheidungen: " + str(len(results)) + "\n\n")
+        f.write("Entscheidungen: " + str(len(results)) + "\n")
+        f.write("Eingaberegel: " + data["input_rule"] + "\n\n")
 
         if not results:
-            f.write("Keine Entscheidungs-CSV gefunden. Vorlage wurde bereitgestellt.\n")
+            f.write("Keine Eingabe-CSV gefunden. Vorlage wurde bereitgestellt.\n")
         else:
             for i, r in enumerate(results, start=1):
                 f.write(str(i) + ". " + r.get("aktion", "") + " | " + r.get("status", "") + "\n")
@@ -376,7 +358,6 @@ def main():
         move_decision_file(csv_path, csv_ok)
 
     txt, csv_file, json_file = write_reports(results)
-
     errors = [r for r in results if r.get("status") == "FEHLER"]
 
     print("")
@@ -387,7 +368,8 @@ def main():
     print("CSV:", csv_file)
     print("JSON:", json_file)
     print("Vorlage:", CONFIG_TEMPLATE)
-    print("Entscheidungsordner:", DECISION_DIR)
+    print("Eingabeordner:", INPUT_DIR)
+    print("Berichte:", REPORT_DIR)
 
     if errors:
         sys.exit(1)
