@@ -1,0 +1,43 @@
+{
+  "version": "V1",
+  "case_context": {
+    "case_type": "Schwedischer Arbeitsrechtsstreit",
+    "parties": "Arbeitnehmer gegen kommunalen Arbeitgeber",
+    "official_language": "sv",
+    "procedural_language": "sv",
+    "internal_work_language": "de",
+    "rule": "Alle fallbezogenen Dokumente bleiben im Posteingang unbewertetes Aktenmaterial."
+  },
+  "posteingang_may_decide": [
+    "Eingang erfassen",
+    "Hashwert bilden",
+    "Dateityp prüfen",
+    "aktive oder ausführbare Dateien sperren",
+    "Windows-Defender-Prüfung anstoßen",
+    "Signaturhinweise erkennen",
+    "Sprachkontext feststellen",
+    "Vorzimmerentscheidung vorbereiten",
+    "technisch freigegebene Dateien organisatorisch weiterleiten"
+  ],
+  "posteingang_must_not_decide": [
+    "Beweiswert",
+    "Entlastungswert",
+    "Aussagequalität",
+    "Zeugenbezug",
+    "rechtliche Relevanz",
+    "prozessuale Verwendbarkeit",
+    "Sachverhaltsblock",
+    "Angriffs- oder Verteidigungsmittel",
+    "endgültige Aktenzuordnung"
+  ],
+  "downstream_agent_tasks": [
+    "Dokumentart bestimmen",
+    "Beweis oder Entlastung erkennen",
+    "Aussage, Nachweis, Korrespondenz oder Kontextmaterial trennen",
+    "Sachverhaltsblock zuordnen",
+    "Verfahrensrolle zuordnen",
+    "rechtliche Relevanz vorbereiten",
+    "Übersetzungsbedarf konkretisieren",
+    "Anwaltvorlage fachlich strukturieren"
+  ]
+}
