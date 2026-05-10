@@ -1,0 +1,179 @@
+{
+  "version": "V1",
+  "principle": "Das Vorzimmer pflegt Kommunikations- und Sprachgrundparameter. Inhaltliche Beweis- oder Rechtsbewertung erfolgt nachgelagert.",
+  "default_internal_work_language": "de",
+  "default_rough_translation_target": "de",
+  "templates": [
+    {
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "case_type": "Arbeitsrechtsstreit Arbeitnehmer gegen kommunalen Arbeitgeber in Schweden",
+      "jurisdiction_country_code": "SE",
+      "official_language_code": "sv",
+      "procedural_language_code": "sv",
+      "internal_work_language_code": "de",
+      "rough_translation_target_language_code": "de",
+      "default_document_language_code": "sv",
+      "notes": "Schwedischer Arbeitsrechtsfall. Amtssprache und Prozeßsprache Schwedisch. Interne Arbeitssprache des bearbeitenden Anwalts Deutsch.",
+      "editable": true
+    }
+  ],
+  "participant_profiles": [
+    {
+      "profile_key": "SE_ARBEITSRECHT_GERICHT",
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gericht",
+      "participant_label": "Schwedisches Gericht",
+      "country_code": "SE",
+      "expected_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "rough_translation_target_language_code": "de",
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "editable": true,
+      "notes": "Gerichtliche Kommunikation in schwedischer Prozeßsprache."
+    },
+    {
+      "profile_key": "SE_ARBEITSRECHT_ARBEITGEBER",
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegenseite",
+      "participant_label": "Kommunaler Arbeitgeber Schweden",
+      "country_code": "SE",
+      "expected_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "rough_translation_target_language_code": "de",
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "editable": true,
+      "notes": "Gegenseite im schwedischen Arbeitsrechtsstreit."
+    },
+    {
+      "profile_key": "SE_ARBEITSRECHT_GEGNERISCHER_ANWALT",
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegnerischer_anwalt",
+      "participant_label": "Gegnerischer Anwalt",
+      "country_code": "SE",
+      "expected_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "rough_translation_target_language_code": "de",
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "editable": true,
+      "notes": "Grundregel Schwedisch. Abweichungen können später durch das Vorzimmer eingetragen werden."
+    },
+    {
+      "profile_key": "SE_ARBEITSRECHT_MANDANT_NACH_ANNAHME",
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "mandant",
+      "participant_label": "Mandant nach Mandatsannahme",
+      "country_code": "",
+      "expected_language_code": "",
+      "communication_language_code": "",
+      "document_language_code": "",
+      "rough_translation_target_language_code": "de",
+      "created_after_mandate_acceptance": true,
+      "accepted_client_required": true,
+      "editable": true,
+      "notes": "Mandantenbezogene Spracheinstellungen werden erst nach Mandatsannahme konkret angelegt oder vervollständigt."
+    },
+    {
+      "profile_key": "KANZLEI_INTERN",
+      "template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "intern",
+      "participant_label": "Interne Bearbeitung Anwalt und Sekretariat",
+      "country_code": "DE",
+      "expected_language_code": "de",
+      "communication_language_code": "de",
+      "document_language_code": "de",
+      "rough_translation_target_language_code": "de",
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "editable": true,
+      "notes": "Interne Arbeitssprache Deutsch."
+    }
+  ],
+  "address_language_rules": [
+    {
+      "rule_key": "COUNTRY_SE_DEFAULT",
+      "country_code": "SE",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "sv",
+      "confidence_level": "hoch",
+      "notes": "Schweden führt zur Sprachvoreinstellung Schwedisch.",
+      "active": true
+    },
+    {
+      "rule_key": "COUNTRY_DE_DEFAULT",
+      "country_code": "DE",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "de",
+      "confidence_level": "hoch",
+      "notes": "Deutschland führt zur Sprachvoreinstellung Deutsch.",
+      "active": true
+    },
+    {
+      "rule_key": "COUNTRY_AT_DEFAULT",
+      "country_code": "AT",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "de",
+      "confidence_level": "hoch",
+      "notes": "Österreich führt zur Sprachvoreinstellung Deutsch.",
+      "active": true
+    },
+    {
+      "rule_key": "COUNTRY_FR_DEFAULT",
+      "country_code": "FR",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "fr",
+      "confidence_level": "hoch",
+      "notes": "Frankreich führt zur Sprachvoreinstellung Französisch.",
+      "active": true
+    },
+    {
+      "rule_key": "COUNTRY_ES_DEFAULT",
+      "country_code": "ES",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "es",
+      "confidence_level": "hoch",
+      "notes": "Spanien führt zur Sprachvoreinstellung Spanisch.",
+      "active": true
+    },
+    {
+      "rule_key": "COUNTRY_IT_DEFAULT",
+      "country_code": "IT",
+      "postal_code_prefix": "",
+      "address_contains": "",
+      "language_code": "it",
+      "confidence_level": "hoch",
+      "notes": "Italien führt zur Sprachvoreinstellung Italienisch.",
+      "active": true
+    },
+    {
+      "rule_key": "ADDRESS_SWEDEN_TEXT",
+      "country_code": "",
+      "postal_code_prefix": "",
+      "address_contains": "Sweden",
+      "language_code": "sv",
+      "confidence_level": "mittel",
+      "notes": "Adresshinweis Sweden.",
+      "active": true
+    },
+    {
+      "rule_key": "ADDRESS_SVERIGE_TEXT",
+      "country_code": "",
+      "postal_code_prefix": "",
+      "address_contains": "Sverige",
+      "language_code": "sv",
+      "confidence_level": "hoch",
+      "notes": "Adresshinweis Sverige.",
+      "active": true
+    }
+  ]
+}
