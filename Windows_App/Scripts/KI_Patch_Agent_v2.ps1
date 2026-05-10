@@ -146,7 +146,7 @@ function Invoke-OllamaWithProgress {
         }
 
         if ($TimeoutSeconds -gt 0 -and $Elapsed -ge $TimeoutSeconds) {
-            Stop-Job $Job -Force -ErrorAction SilentlyContinue
+            Stop-Job $Job -ErrorAction SilentlyContinue
             Remove-Job $Job -Force -ErrorAction SilentlyContinue
             throw "Zeitlimit erreicht: $TimeoutSeconds Sekunden. Der KI-Lauf wurde abgebrochen."
         }
@@ -320,3 +320,4 @@ catch {
     LogLine "FEHLER: $($_.Exception.Message)"
     throw
 }
+
