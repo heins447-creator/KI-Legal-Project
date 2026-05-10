@@ -1,5 +1,5 @@
-﻿model: deepseek/deepseek-chat
-yes: true
+model: deepseek/deepseek-chat
+yes-always: true
 auto-commits: false
 dirty-commits: false
 git: true

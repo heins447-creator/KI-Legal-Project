@@ -33,7 +33,6 @@ function W {
 
 function Q {
     param([string]$Text)
-    if ($null -eq $Text) { return '""' }
     return '"' + ($Text -replace '"','\"') + '"'
 }
 
@@ -54,21 +53,11 @@ function Run-Cmd {
     $Out = ""
     $Err = ""
 
-    if (Test-Path -LiteralPath $OutFile) {
-        $Out = Get-Content -LiteralPath $OutFile -Raw -ErrorAction SilentlyContinue
-    }
+    if (Test-Path -LiteralPath $OutFile) { $Out = Get-Content -LiteralPath $OutFile -Raw -ErrorAction SilentlyContinue }
+    if (Test-Path -LiteralPath $ErrFile) { $Err = Get-Content -LiteralPath $ErrFile -Raw -ErrorAction SilentlyContinue }
 
-    if (Test-Path -LiteralPath $ErrFile) {
-        $Err = Get-Content -LiteralPath $ErrFile -Raw -ErrorAction SilentlyContinue
-    }
-
-    if ($Out) {
-        $Out -split "`r?`n" | ForEach-Object { if ($_ -ne "") { W $_ } }
-    }
-
-    if ($Err) {
-        $Err -split "`r?`n" | ForEach-Object { if ($_ -ne "") { W $_ } }
-    }
+    if ($Out) { $Out -split "`r?`n" | ForEach-Object { if ($_ -ne "") { W $_ } } }
+    if ($Err) { $Err -split "`r?`n" | ForEach-Object { if ($_ -ne "") { W $_ } } }
 
     Remove-Item -LiteralPath $OutFile,$ErrFile -Force -ErrorAction SilentlyContinue
 
@@ -76,6 +65,14 @@ function Run-Cmd {
         ExitCode = $P.ExitCode
         Output = (($Out + "`n" + $Err) | Out-String)
     }
+}
+
+function Test-AiderFailure {
+    param([string]$Text)
+
+    if ([string]::IsNullOrWhiteSpace($Text)) { return $false }
+
+    return ($Text -match "Configuration error detected|aider: error|unrecognized arguments|Traceback|Unauthorized|Invalid API|API key|No API key|litellm|Provider List|BadRequest|AuthenticationError")
 }
 
 function New-AgentPrompt {
@@ -202,11 +199,11 @@ try {
         $AiderCmd = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File " + (Q $AiderInvoker) +
             " --model " + (Q $CheapModel) +
             " --message-file " + (Q $Prompt) +
-            " --yes --no-auto-commits --no-dirty-commits"
+            " --yes-always --no-auto-commits --no-dirty-commits"
 
         $Aider = Run-Cmd -Name ("aider_" + $Round) -Command $AiderCmd
 
-        if ($Aider.ExitCode -ne 0) {
+        if (($Aider.ExitCode -ne 0) -or (Test-AiderFailure -Text $Aider.Output)) {
             $LastError = $Aider.Output
             W "Aider-Lauf fehlgeschlagen."
             continue
