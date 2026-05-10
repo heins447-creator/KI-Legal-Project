@@ -1,0 +1,7 @@
+﻿model: deepseek/deepseek-chat
+yes: true
+auto-commits: false
+dirty-commits: false
+git: true
+show-model-warnings: false
+map-tokens: 8192

@@ -1,0 +1,12 @@
+﻿.git/
+Windows_App/App/bin/
+Windows_App/App/obj/
+Database/Backups/
+Tools/
+**/*.duckdb
+**/*.duckdb.wal
+**/*.duckdb.tmp
+**/*.apikey
+**/*.secret
+Secrets/
+secrets/
