@@ -278,7 +278,14 @@ $Context
     Show-Phase -Phase "Phase 4/5: Patch prüfen und anwenden" -Percent 85
 
     git -C $Root apply --check $PatchFile
+    if ($LASTEXITCODE -ne 0) {
+        throw "Patchprüfung fehlgeschlagen. Der Patch wurde nicht angewendet. Patchdatei: $PatchFile"
+    }
+
     git -C $Root apply --whitespace=nowarn $PatchFile
+    if ($LASTEXITCODE -ne 0) {
+        throw "Patchanwendung fehlgeschlagen. Arbeitsstand unverändert prüfen. Patchdatei: $PatchFile"
+    }
 
     LogLine "Patch angewendet."
 
@@ -320,4 +327,5 @@ catch {
     LogLine "FEHLER: $($_.Exception.Message)"
     throw
 }
+
 
