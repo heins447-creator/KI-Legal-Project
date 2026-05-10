@@ -72,7 +72,35 @@ function Test-AiderFailure {
 
     if ([string]::IsNullOrWhiteSpace($Text)) { return $false }
 
-    return ($Text -match "Configuration error detected|aider: error|unrecognized arguments|Traceback|Unauthorized|Invalid API|API key|No API key|litellm|Provider List|BadRequest|AuthenticationError")
+    return ($Text -match "Configuration error detected|aider: error|unrecognized arguments|Traceback|Unauthorized|Invalid API|API key|No API key|litellm|Provider List|BadRequest|AuthenticationError|RateLimit|Insufficient")
+}
+
+function Test-ExpectedFiles {
+    $Expected = @(
+        "Database\Migrations\011_quellenbetreuer_fachanwaltsraster_v1.sql",
+        "Scripts\python_runner\046_quellenbetreuer_fachanwaltsraster_v1.py",
+        "Scripts\python_runner\047_check_quellenbetreuer_fachanwaltsraster_v1.py",
+        "Scripts\Run_Quellenbetreuer_Fachanwaltsraster.ps1",
+        "Projektplanung\Quellen\QUELLENBETREUER_FACHANWALTSRASTER_V1.md"
+    )
+
+    $Missing = @()
+
+    foreach ($Rel in $Expected) {
+        $Full = Join-Path $Root $Rel
+        if (-not (Test-Path -LiteralPath $Full)) {
+            $Missing += $Rel
+        }
+    }
+
+    if ($Missing.Count -gt 0) {
+        W "Pflichtdateien fehlen:"
+        foreach ($M in $Missing) { W ("FEHLT: " + $M) }
+        return $false
+    }
+
+    W "Alle Pflichtdateien vorhanden."
+    return $true
 }
 
 function New-AgentPrompt {
@@ -96,6 +124,10 @@ I:\KI_Legal_Project
 
 AGENTS.md ist verbindlich.
 
+Du musst echte Dateien erzeugen oder ändern.
+
+Eine reine Textantwort ist unzulässig.
+
 ## Harte Grenzen
 
 Keine echten Mandantendaten verwenden.
@@ -105,27 +137,15 @@ Keine Änderungen außerhalb des Projektordners.
 Keine rechtliche Endbewertung.
 Keine Türschwelle programmieren, solange Quellenbetreuer und Fachanwaltsraster nicht als Grundlage stehen.
 
-## Lieferpflicht
+## Pflichtdateien
 
-Erzeuge oder korrigiere genau den beauftragten Baustein.
+Diese Dateien müssen nach Deinem Lauf existieren:
 
-Jeder erfolgreiche Baustein muß enthalten, soweit passend:
-
-- Migration
-- Python-Läufer
-- Python-Prüfdatei
-- PowerShell-Starter
-- Konfiguration
-- Dokumentation
-- Bericht
-- wiederholbarer Test
-
-## Technische Pflicht
-
-Alle Python-Dateien müssen syntaktisch gültig sein.
-Alle PowerShell-Dateien müssen syntaktisch gültig sein.
-Der .NET-Build darf nicht brechen.
-Bei Unsicherheit: konservativ bauen, keine freie Architekturentscheidung.
+- Database\Migrations\011_quellenbetreuer_fachanwaltsraster_v1.sql
+- Scripts\python_runner\046_quellenbetreuer_fachanwaltsraster_v1.py
+- Scripts\python_runner\047_check_quellenbetreuer_fachanwaltsraster_v1.py
+- Scripts\Run_Quellenbetreuer_Fachanwaltsraster.ps1
+- Projektplanung\Quellen\QUELLENBETREUER_FACHANWALTSRASTER_V1.md
 
 "@
 
@@ -206,6 +226,13 @@ try {
         if (($Aider.ExitCode -ne 0) -or (Test-AiderFailure -Text $Aider.Output)) {
             $LastError = $Aider.Output
             W "Aider-Lauf fehlgeschlagen."
+            continue
+        }
+
+        $FileGate = Test-ExpectedFiles
+        if (-not $FileGate) {
+            $LastError = "Aider hat keine oder nicht alle Pflichtdateien erzeugt."
+            W $LastError
             continue
         }
 

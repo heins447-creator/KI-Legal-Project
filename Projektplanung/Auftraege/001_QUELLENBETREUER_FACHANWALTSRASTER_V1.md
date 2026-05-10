@@ -1,25 +1,35 @@
 ﻿# Auftrag 001: QUELLENBETREUER_FACHANWALTSRASTER_V1
 
+## Absoluter Arbeitsauftrag
+
+Du bist ein Coding-Agent im lokalen Projektordner:
+
+`I:\KI_Legal_Project`
+
+Du musst echte Dateien im Repository erzeugen. Eine bloße Erklärung ist unzulässig.
+
+Wenn Du keine Dateien erzeugst, ist der Auftrag fehlgeschlagen.
+
 ## Ziel
 
-Baue das Grundgerüst für einen Quellenbetreuer, der Rechtsquellen, Sprachquellen und Berufs-/Gerichtsquellen fachgebietsbezogen verwaltet.
+Baue das Grundgerüst für den Quellenbetreuer und das Fachanwaltsraster.
 
-Dieser Auftrag ist Voraussetzung für spätere Türschwelle, Sprachpakete und Agentenbearbeitung.
+Dieser Baustein ist zwingende Grundlage für spätere Türschwelle, Sprachpakete, Agentenbearbeitung und Offline-Handakte.
 
 ## Fachlicher Ausgangspunkt
 
-Die interne Kanzleistruktur richtet sich an den deutschen Fachanwaltsgebieten aus.
+Interne Kanzleistruktur: deutsche Fachanwaltsgebiete.
 
-Für diesen ersten Auftrag ist nur aktiv anzulegen:
+Erster aktiver fachlicher Testfall:
 
 - Fachanwaltsraster: Arbeitsrecht
 - Zielland: Schweden
-- Sprache: Schwedisch
+- Sprache des Originalrechts: Schwedisch
 - Kanzleisprache: Deutsch
 - Paketname: `sv_de_arbeitsrecht_se`
 - spätere Dokumenttypen: Arbeitsvertrag und Kündigung
 
-## Nicht tun
+## Strikte Grenzen
 
 Keine Türschwellenmaske programmieren.
 
@@ -33,15 +43,29 @@ Keine echten Mandantendaten verwenden.
 
 Keine große EU-Datenbank importieren.
 
-## Anzulegende Struktur
+Keine API-Schlüssel schreiben.
 
-### Datenbankmigration
+Keine rechtliche Endbewertung.
 
-Lege eine Migration an:
+## Pflichtdateien
+
+Du musst mindestens genau diese Dateien erzeugen oder ändern:
+
+1. `Database\Migrations\011_quellenbetreuer_fachanwaltsraster_v1.sql`
+2. `Scripts\python_runner\046_quellenbetreuer_fachanwaltsraster_v1.py`
+3. `Scripts\python_runner\047_check_quellenbetreuer_fachanwaltsraster_v1.py`
+4. `Scripts\Run_Quellenbetreuer_Fachanwaltsraster.ps1`
+5. `Projektplanung\Quellen\QUELLENBETREUER_FACHANWALTSRASTER_V1.md`
+
+## Datenbankmigration
+
+Lege eine SQL-Migration an:
 
 `Database\Migrations\011_quellenbetreuer_fachanwaltsraster_v1.sql`
 
-Tabellen:
+Die Migration muss idempotent sein.
+
+Sie muss mindestens diese Tabellen anlegen, falls sie noch nicht bestehen:
 
 - `source_registry`
 - `source_adapter_registry`
@@ -55,42 +79,63 @@ Tabellen:
 - `language_package_registry`
 - `language_package_source_map`
 
-### Startdaten
+Die Tabellen dürfen einfache, robuste Spalten enthalten. Wichtig sind:
 
-Mindestens anlegen:
+- technische Kennung
+- Land
+- Sprache
+- Rechtsgebiet
+- Fachanwaltsbezug
+- Quellenart
+- Quellenrang
+- Aktualitätsstatus
+- Cache-Status
+- Offline-Fallback
+- erstellt/geändert Zeitstempel
+
+## Startdaten
+
+Der Python-Läufer muss Startdaten eintragen für:
 
 - deutsches Fachgebiet: Arbeitsrecht
-- Land: Schweden
+- Zielland: Schweden
+- Sprache: Schwedisch
+- Kanzleisprache: Deutsch
 - Sprachpaket: `sv_de_arbeitsrecht_se`
-- Quellentypen:
-  - EU-Justizportal
-  - CCBE
-  - EUR-Lex / Cellar / ELI
-  - ECLI
-  - IATE / VJM
-  - DGT-TM
-  - EuroVoc
-  - nationale Gesetzesquelle Schweden
-  - nationale Gerichtsquelle Schweden
-  - nationale Anwaltskammer / Berufsquelle Schweden
+
+Quellentypen müssen als Registereinträge vorbereitet werden:
+
+- EU-Justizportal
+- CCBE
+- EUR-Lex / Cellar / ELI
+- ECLI
+- IATE / VJM
+- DGT-TM
+- EuroVoc
+- nationale Gesetzesquelle Schweden
+- nationale Gerichtsquelle Schweden
+- nationale Anwaltskammer / Berufsquelle Schweden
 
 Noch keine Massendaten laden.
 
-### Python-Läufer
+## Python-Läufer
 
 Lege an:
 
 `Scripts\python_runner\046_quellenbetreuer_fachanwaltsraster_v1.py`
 
-Aufgaben:
+Pflichten:
 
+- Projektwurzel `I:\KI_Legal_Project` verwenden
+- DuckDB-Datei `Database\Legal_Brain.duckdb` verwenden
 - Migration anwenden
-- Startdaten eintragen
-- Cache-Ordner vorbereiten
-- Bericht schreiben
-- Tabellen prüfen
+- Startdaten idempotent eintragen
+- Cache-Ordner unter `Data\Sources\Cache` vorbereiten
+- Bericht unter `Windows_App\Logs` schreiben
+- am Ende klar `OK` oder Fehler ausgeben
+- sauberer Abbruch mit Exitcode 0/1
 
-### Prüfdatei
+## Prüfdatei
 
 Lege an:
 
@@ -104,23 +149,26 @@ Prüfung:
 - Sprachpaket `sv_de_arbeitsrecht_se` vorhanden
 - Quellenarten vorhanden
 - keine Massendaten importiert
+- Bericht unter `Windows_App\Logs` schreiben
+- Exitcode 0 nur bei Erfolg
 
-### Starter
+## PowerShell-Starter
 
 Lege an:
 
 `Scripts\Run_Quellenbetreuer_Fachanwaltsraster.ps1`
 
-Muß:
+Pflichten:
 
 - nach `I:\KI_Legal_Project` wechseln
+- `Tools\Python312\python.exe` verwenden
 - Python-Läufer starten
 - Prüfdatei starten
 - Bericht schreiben
 - bei Fehler sauber abbrechen
 - Einstiegspunkt anzeigen
 
-### Dokumentation
+## Dokumentation
 
 Lege an:
 
@@ -135,15 +183,11 @@ Inhalt:
 - Cache-Strategie
 - Warum keine freie Internetsuche
 - Warum zuerst Quellen, danach Türschwelle
+- Zusammenhang mit Arbeitsrecht Schweden
+- Zusammenhang mit Sprachpaket `sv_de_arbeitsrecht_se`
 
 ## Akzeptanzkriterien
 
-Der Lauf ist nur erfolgreich, wenn:
+Der Auftrag ist nur erfüllt, wenn alle Pflichtdateien existieren und mindestens eine echte Git-Änderung erzeugt wurde.
 
-- Build erfolgreich ist
-- Migration erfolgreich ist
-- Prüfung erfolgreich ist
-- Bericht geschrieben ist
-- Git-Status am Ende sauber ist
-- Commit erstellt ist
-- keine echten Fallunterlagen verwendet wurden
+Eine reine Antwort im Chat ohne Dateierzeugung ist verboten.
