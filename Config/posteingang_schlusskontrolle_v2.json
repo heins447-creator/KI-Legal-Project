@@ -1,0 +1,27 @@
+{
+  "version": "V2",
+  "required_final_points": [
+    "sicher",
+    "bearbeitet",
+    "sprache_erkannt",
+    "arbeitsuebersetzung_de_moeglich",
+    "anwaltvorlage"
+  ],
+  "case_context": {
+    "case_type": "Schwedischer Arbeitsrechtsstreit",
+    "official_language": "sv",
+    "procedural_language": "sv",
+    "internal_work_language": "de",
+    "rough_translation_target": "de"
+  },
+  "translation_backend": {
+    "status": "vorbereitet",
+    "allowed_backends": [
+      "google",
+      "ki",
+      "lokales_sprachmodell"
+    ],
+    "note": "Der Posteingang erzeugt Übersetzungsaufträge. Die konkrete Google- oder KI-Übersetzung kann daran angeschlossen werden."
+  },
+  "principle": "Die Schlußkontrolle entscheidet nicht über Beweiswert, Entlastung, rechtliche Erheblichkeit oder Aktenzuordnung. Sie stellt nur fest, ob der Eingang sicher, technisch bearbeitet, sprachlich vorerfaßt, übersetzbar und für die Anwaltvorlage bereit oder vorbereitbar ist."
+}

@@ -10,6 +10,7 @@ try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new() } catch {}
 $Root = "I:\KI_Legal_Project"
 $Python = Join-Path $Root "Tools\Python312\python.exe"
 $Pipeline = Join-Path $Root "Scripts\python_runner\014_posteingang_pipeline_v1.py"
+$DocLanguage = Join-Path $Root "Scripts\python_runner\031_dokumentsprachprofil_v1.py"
 $Status = Join-Path $Root "Scripts\python_runner\016_posteingang_betriebsstatus_v1.py"
 $LogDir = Join-Path $Root "Windows_App\Logs"
 $Ts = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
@@ -43,6 +44,10 @@ try {
         throw "Posteingang-Pipeline fehlt: $Pipeline"
     }
 
+    if (-not (Test-Path -LiteralPath $DocLanguage)) {
+        throw "Dokumentsprachprofil fehlt: $DocLanguage"
+    }
+
     if (-not (Test-Path -LiteralPath $Status)) {
         throw "Betriebsstatus-Skript fehlt: $Status"
     }
@@ -56,7 +61,7 @@ try {
     }
 
     W ""
-    W "2. Pipeline ausführen"
+    W "2. Sicherheits- und Sprachpipeline"
     W "----------------------------------------"
     & $Python $Pipeline --case-template $CaseTemplate 2>&1 | Tee-Object -FilePath $Report -Append
     if ($LASTEXITCODE -ne 0) {
@@ -64,7 +69,15 @@ try {
     }
 
     W ""
-    W "3. Betriebsstatus nach Verarbeitung"
+    W "3. Dokumentsprachprofil und Übersetzungsfähigkeit nach Deutsch"
+    W "----------------------------------------"
+    & $Python $DocLanguage 2>&1 | Tee-Object -FilePath $Report -Append
+    if ($LASTEXITCODE -ne 0) {
+        throw "Dokumentsprachprofil fehlgeschlagen."
+    }
+
+    W ""
+    W "4. Betriebsstatus nach Verarbeitung"
     W "----------------------------------------"
     & $Python $Status 2>&1 | Tee-Object -FilePath $Report -Append
     if ($LASTEXITCODE -ne 0) {
