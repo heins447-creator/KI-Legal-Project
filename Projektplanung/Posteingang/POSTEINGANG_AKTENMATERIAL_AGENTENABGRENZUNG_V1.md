@@ -8,18 +8,11 @@ Der Posteingang ist nur Sicherheits-, Prüf- und Entscheidungsbereich. Er ist ni
 
 ## Fallkontext
 
-Es handelt sich um einen Arbeitsrechtsstreit in Schweden.
-
-Beteiligung:
-
-- Arbeitnehmer
-- kommunaler Arbeitgeber in Schweden
-
-Sprachkontext:
+Es handelt sich um einen Arbeitsrechtsstreit in Schweden zwischen Arbeitnehmer und kommunalem Arbeitgeber.
 
 - Amtssprache: Schwedisch
 - Prozeßsprache: Schwedisch
-- maßgebliches Verfahren: schwedisches Arbeitsrecht und schwedische Verfahrenslogik
+- maßgebliche Verfahrenslogik: schwedisches Arbeitsrecht und schwedisches Verfahren
 - interne Arbeitssprache des bearbeitenden Anwalts: Deutsch
 
 ## Grenze des Posteingangs

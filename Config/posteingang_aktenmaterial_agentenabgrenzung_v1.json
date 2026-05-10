@@ -5,8 +5,9 @@
     "parties": "Arbeitnehmer gegen kommunalen Arbeitgeber",
     "official_language": "sv",
     "procedural_language": "sv",
+    "legal_context": "schwedisches Arbeitsrecht und schwedische Verfahrenslogik",
     "internal_work_language": "de",
-    "rule": "Alle fallbezogenen Dokumente bleiben im Posteingang unbewertetes Aktenmaterial."
+    "principle": "Der einzige systematische Sprachunterschied ist Deutsch als interne Arbeitssprache des bearbeitenden Anwalts."
   },
   "posteingang_may_decide": [
     "Eingang erfassen",
@@ -39,5 +40,6 @@
     "rechtliche Relevanz vorbereiten",
     "Übersetzungsbedarf konkretisieren",
     "Anwaltvorlage fachlich strukturieren"
-  ]
+  ],
+  "principle": "Fallbezogene Dokumente werden im Posteingang nicht inhaltlich bewertet. Sie werden als unbewertetes Aktenmaterial geführt, bis nachgelagerte Agentenbearbeitung oder anwaltliche Bearbeitung sie zuordnet."
 }

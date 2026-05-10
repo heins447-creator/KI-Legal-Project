@@ -52,8 +52,9 @@ CONFIG_DATA = {
         "parties": "Arbeitnehmer gegen kommunalen Arbeitgeber",
         "official_language": "sv",
         "procedural_language": "sv",
+        "legal_context": "schwedisches Arbeitsrecht und schwedische Verfahrenslogik",
         "internal_work_language": "de",
-        "rule": "Alle fallbezogenen Dokumente bleiben im Posteingang unbewertetes Aktenmaterial."
+        "principle": "Der einzige systematische Sprachunterschied ist Deutsch als interne Arbeitssprache des bearbeitenden Anwalts."
     },
     "posteingang_may_decide": [
         "Eingang erfassen",
@@ -86,7 +87,8 @@ CONFIG_DATA = {
         "rechtliche Relevanz vorbereiten",
         "Übersetzungsbedarf konkretisieren",
         "Anwaltvorlage fachlich strukturieren"
-    ]
+    ],
+    "principle": "Fallbezogene Dokumente werden im Posteingang nicht inhaltlich bewertet. Sie werden als unbewertetes Aktenmaterial geführt, bis nachgelagerte Agentenbearbeitung oder anwaltliche Bearbeitung sie zuordnet."
 }
 
 def now():
@@ -95,9 +97,9 @@ def now():
 def ensure_dirs():
     OUT.mkdir(parents=True, exist_ok=True)
     CONFIG.parent.mkdir(parents=True, exist_ok=True)
-    for p in DIRS.values():
-        p.mkdir(parents=True, exist_ok=True)
-        keep = p / ".gitkeep"
+    for path in DIRS.values():
+        path.mkdir(parents=True, exist_ok=True)
+        keep = path / ".gitkeep"
         if not keep.exists():
             keep.write_text("", encoding="utf-8")
 
@@ -131,90 +133,76 @@ def extract_intake_id(path):
 
     return stem
 
-def read_json(path):
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
+def boundary(area):
+    mapping = {
+        "roh": (
+            "ROH_EINGANG",
+            "Produktionslauf starten",
+            False,
+            "Rohdatei ist noch nicht technisch geprüft."
+        ),
+        "quarantaene": (
+            "TECHNISCH_GESPERRT_ODER_UNKLAR",
+            "technische Nachprüfung, Rückfrage oder Zurückweisung",
+            False,
+            "Datei darf inhaltlich nicht bearbeitet werden, solange technische Sperre oder Unklarheit besteht."
+        ),
+        "signatur": (
+            "SIGNATURPRUEFUNG_OFFEN",
+            "Signaturprüfung oder Absenderprüfung",
+            False,
+            "Signaturhinweis ist vorrangig. Inhaltliche Agentenbearbeitung erst nach Signaturentscheidung."
+        ),
+        "sprachpruefung": (
+            "SPRACHKONTEXT_ODER_UEBERSETZUNG_OFFEN",
+            "Sprache festlegen oder Übersetzung vorbereiten",
+            False,
+            "Sprachliche Unklarheit muß vor tiefer Inhaltsbearbeitung geklärt werden."
+        ),
+        "geprueft": (
+            "TECHNISCH_FREIGEGEBEN_UNBEWERTETES_AKTENMATERIAL",
+            "Anwaltvorlage oder nachgelagerte Agentenbearbeitung",
+            True,
+            "Die Datei ist nicht als Beweis, Entlastung oder Aussage bewertet. Sie ist nur technisch freigegebenes Aktenmaterial."
+        ),
+        "vorzimmer": (
+            "VORZIMMERENTSCHEIDUNG_OFFEN",
+            "organisatorische Entscheidung",
+            False,
+            "Vorzimmerkarten steuern nur den nächsten organisatorischen Schritt."
+        ),
+        "anwalt": (
+            "ANWALTVORLAGE_UNBEWERTETES_AKTENMATERIAL",
+            "anwaltliche oder agentengestützte Aktenbearbeitung",
+            True,
+            "Erst hier darf die inhaltliche Zuordnung vorbereitet werden."
+        ),
+        "rueckfrage": (
+            "RUECKFRAGE_OFFEN",
+            "Absender anschreiben oder Ersatzübersendung verlangen",
+            False,
+            "Der Eingang ist organisatorisch noch nicht verwertbar."
+        ),
+        "abgewiesen": (
+            "ABGEWIESEN",
+            "Archivierung oder Nachweis",
+            False,
+            "Abgewiesener Eingang wird nicht inhaltlich bearbeitet."
+        ),
+    }
 
-def boundary_for(area, file):
-    if area == "roh":
-        return {
-            "posteingang_status": "ROH_EINGANG",
-            "allowed_next_step": "Produktionslauf starten",
-            "agent_review_allowed": False,
-            "reason": "Rohdatei ist noch nicht technisch geprüft."
-        }
-
-    if area == "quarantaene":
-        return {
-            "posteingang_status": "TECHNISCH_GESPERRT_ODER_UNKLAR",
-            "allowed_next_step": "technische Nachprüfung, Rückfrage oder Zurückweisung",
-            "agent_review_allowed": False,
-            "reason": "Datei darf inhaltlich nicht bearbeitet werden, solange technische Sperre oder Unklarheit besteht."
-        }
-
-    if area == "signatur":
-        return {
-            "posteingang_status": "SIGNATURPRUEFUNG_OFFEN",
-            "allowed_next_step": "Signaturprüfung oder Absenderprüfung",
-            "agent_review_allowed": False,
-            "reason": "Signaturhinweis ist vorrangig. Inhaltliche Agentenbearbeitung erst nach Signaturentscheidung."
-        }
-
-    if area == "sprachpruefung":
-        return {
-            "posteingang_status": "SPRACHKONTEXT_ODER_UEBERSETZUNG_OFFEN",
-            "allowed_next_step": "Sprache festlegen oder Übersetzung vorbereiten",
-            "agent_review_allowed": False,
-            "reason": "Sprachliche Unklarheit muß vor tiefer Inhaltsbearbeitung geklärt werden."
-        }
-
-    if area == "geprueft":
-        return {
-            "posteingang_status": "TECHNISCH_FREIGEGEBEN_UNBEWERTETES_AKTENMATERIAL",
-            "allowed_next_step": "Anwaltvorlage oder nachgelagerte Agentenbearbeitung",
-            "agent_review_allowed": True,
-            "reason": "Die Datei ist nicht als Beweis, Entlastung oder Aussage bewertet. Sie ist nur technisch freigegebenes Aktenmaterial."
-        }
-
-    if area == "vorzimmer":
-        return {
-            "posteingang_status": "VORZIMMERENTSCHEIDUNG_OFFEN",
-            "allowed_next_step": "organisatorische Entscheidung",
-            "agent_review_allowed": False,
-            "reason": "Vorzimmerkarte steuert nur den nächsten organisatorischen Schritt."
-        }
-
-    if area == "anwalt":
-        return {
-            "posteingang_status": "ANWALTVORLAGE_UNBEWERTETES_AKTENMATERIAL",
-            "allowed_next_step": "anwaltliche oder agentengestützte Aktenbearbeitung",
-            "agent_review_allowed": True,
-            "reason": "Erst hier darf die inhaltliche Zuordnung vorbereitet werden."
-        }
-
-    if area == "rueckfrage":
-        return {
-            "posteingang_status": "RUECKFRAGE_OFFEN",
-            "allowed_next_step": "Absender anschreiben oder Ersatzübersendung verlangen",
-            "agent_review_allowed": False,
-            "reason": "Der Eingang ist organisatorisch noch nicht verwertbar."
-        }
-
-    if area == "abgewiesen":
-        return {
-            "posteingang_status": "ABGEWIESEN",
-            "allowed_next_step": "Archivierung oder Nachweis",
-            "agent_review_allowed": False,
-            "reason": "Abgewiesener Eingang wird nicht inhaltlich bearbeitet."
-        }
+    status, next_step, allowed, reason = mapping.get(area, (
+        "UNBEKANNT",
+        "Vorzimmer prüfen",
+        False,
+        "Bereich nicht eindeutig geregelt."
+    ))
 
     return {
-        "posteingang_status": "UNBEKANNT",
-        "allowed_next_step": "Vorzimmer prüfen",
-        "agent_review_allowed": False,
-        "reason": "Bereich nicht eindeutig geregelt."
+        "posteingang_status": status,
+        "allowed_next_step": next_step,
+        "agent_review_allowed": allowed,
+        "reason": reason
     }
 
 def build_rows():
@@ -222,28 +210,21 @@ def build_rows():
 
     for area in WORK_KEYS:
         for file in active_files(DIRS[area]):
-            intake_id = extract_intake_id(file)
-            data = read_json(file) if file.suffix.lower() == ".json" else {}
-            boundary = boundary_for(area, file)
-
-            original_name = data.get("original_name") or file.name
-            stored_path = data.get("stored_path") or str(file)
-
+            b = boundary(area)
             rows.append({
                 "time": now(),
                 "area": area,
-                "intake_id": intake_id,
-                "original_name": original_name,
+                "intake_id": extract_intake_id(file),
+                "original_name": file.name,
                 "path": str(file),
-                "stored_path": stored_path,
-                "posteingang_status": boundary["posteingang_status"],
-                "allowed_next_step": boundary["allowed_next_step"],
-                "agent_review_allowed": str(boundary["agent_review_allowed"]),
+                "posteingang_status": b["posteingang_status"],
+                "allowed_next_step": b["allowed_next_step"],
+                "agent_review_allowed": str(b["agent_review_allowed"]),
                 "content_classification_allowed_in_posteingang": "False",
                 "content_classification": "UNBEWERTETES_AKTENMATERIAL",
                 "forbidden_labels_here": "BEWEIS | ENTLASTUNG | AUSSAGE | NACHWEIS | SACHVERHALTSBLOCK | RECHTLICHE_RELEVANZ",
                 "downstream_responsibility": "Nachgelagerte Agentenbearbeitung oder anwaltliche Bearbeitung",
-                "reason": boundary["reason"],
+                "reason": b["reason"],
             })
 
     rows.sort(key=lambda x: (x["area"], x["original_name"]))
@@ -260,11 +241,11 @@ def write_reports(rows):
         "time": now(),
         "rows_count": len(rows),
         "config": CONFIG_DATA,
-        "rows": rows,
-        "principle": "Der Posteingang bewertet keine Beweise, keine Entlastung und keine Aussagen. Er führt fallbezogene Dokumente nur als unbewertetes Aktenmaterial weiter."
+        "rows": rows
     }
 
     json_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
+    CONFIG.write_text(json.dumps(CONFIG_DATA, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
     fields = [
         "time",
@@ -272,7 +253,6 @@ def write_reports(rows):
         "intake_id",
         "original_name",
         "path",
-        "stored_path",
         "posteingang_status",
         "allowed_next_step",
         "agent_review_allowed",
@@ -297,16 +277,17 @@ def write_reports(rows):
 
         f.write("FALLKONTEXT\n")
         f.write("-" * 80 + "\n")
-        f.write("Schwedischer Arbeitsrechtsstreit: Arbeitnehmer gegen kommunalen Arbeitgeber.\n")
+        f.write("Schwedischer Arbeitsrechtsstreit zwischen Arbeitnehmer und kommunalem Arbeitgeber.\n")
         f.write("Amtssprache: Schwedisch.\n")
         f.write("Prozeßsprache: Schwedisch.\n")
+        f.write("Maßgebliche Verfahrenslogik: schwedisches Arbeitsrecht und schwedisches Verfahren.\n")
         f.write("Interne Arbeitssprache des bearbeitenden Anwalts: Deutsch.\n\n")
 
         f.write("GRENZE DES POSTEINGANGS\n")
         f.write("-" * 80 + "\n")
-        f.write("Der Posteingang bewertet nicht, ob ein Dokument Beweis, Entlastung, Aussage oder Nachweis ist.\n")
-        f.write("Diese Einordnung erfolgt erst nachgelagert durch Agenten oder anwaltliche Bearbeitung.\n")
-        f.write("Der Posteingang prüft nur Eingang, Sicherheit, Signaturhinweis, Sprache und organisatorische Weiterleitung.\n\n")
+        f.write("Der Posteingang bewertet keine Beweise, keine Entlastung und keine Aussagen.\n")
+        f.write("Der Posteingang prüft nur Eingang, Sicherheit, Signaturhinweis, Sprache und organisatorische Weiterleitung.\n")
+        f.write("Die inhaltliche Einordnung erfolgt nachgelagert durch Agenten oder anwaltliche Bearbeitung.\n\n")
 
         if not rows:
             f.write("Keine aktiven Arbeitsdateien vorhanden.\n")
@@ -319,14 +300,12 @@ def write_reports(rows):
                 f.write("Status: " + row["posteingang_status"] + "\n")
                 f.write("Klassifikation im Posteingang: " + row["content_classification"] + "\n")
                 f.write("Nächster Schritt: " + row["allowed_next_step"] + "\n")
-                f.write("Begründung: " + row["reason"] + "\n\n")
+                f.write("Grund: " + row["reason"] + "\n\n")
 
     return txt, csv_file, json_file
 
 def main():
     ensure_dirs()
-    CONFIG.write_text(json.dumps(CONFIG_DATA, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
-
     rows = build_rows()
     txt, csv_file, json_file = write_reports(rows)
 
