@@ -54,6 +54,53 @@ namespace KI_Legal_WindowsApp
             StatusTextBlock.Text = "Dokumente geladen: " + files.Count;
         }
 
+        private void DokumentenListe_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (DokumentenListe.SelectedItem is not DocumentRow row)
+            {
+                VorschauTextBox.Text = "";
+                return;
+            }
+
+            try
+            {
+                string ext = row.Extension.ToLowerInvariant();
+
+                string[] erlaubteEndungen =
+                {
+                    ".txt",
+                    ".csv",
+                    ".json",
+                    ".xml",
+                    ".log",
+                    ".md"
+                };
+
+                if (!erlaubteEndungen.Contains(ext))
+                {
+                    VorschauTextBox.Text =
+                        "Für diesen Dateityp ist noch keine Textvorschau vorgesehen." +
+                        Environment.NewLine +
+                        Environment.NewLine +
+                        "Datei: " + row.FullName;
+                    return;
+                }
+
+                VorschauTextBox.Text = File.ReadAllText(row.FullName);
+                AddLog("Vorschau geladen: " + row.Name);
+                StatusTextBlock.Text = "Vorschau geladen: " + row.Name;
+            }
+            catch (Exception ex)
+            {
+                VorschauTextBox.Text =
+                    "Fehler beim Laden der Vorschau:" +
+                    Environment.NewLine +
+                    ex.Message;
+
+                AddLog("Fehler beim Laden der Vorschau: " + ex.Message);
+                StatusTextBlock.Text = "Vorschaufehler";
+            }
+        }
         private void AnalyseStarten_Click(object sender, RoutedEventArgs e)
         {
             AddLog("Analyse wurde angefordert. Die KI-Analyse wird im nächsten Ausbauschritt angebunden.");
