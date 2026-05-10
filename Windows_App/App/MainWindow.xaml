@@ -124,7 +124,7 @@
                 </Grid>
             </Border>
 
-            <Border Grid.Row="1"
+            <Border Grid.Row="2"
                     Grid.Column="1"
                     Background="#111827"
                     BorderBrush="#CBD5E1"
