@@ -1,0 +1,20 @@
+{
+  "version": "V1",
+  "agent": "SPRACHE_UND_UEBERSETZUNG_PRUEFEN",
+  "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "target_language_code": "de",
+  "case_context": {
+    "official_language_code": "sv",
+    "procedural_language_code": "sv",
+    "internal_work_language_code": "de"
+  },
+  "principle": "Der Agent prüft Sprache und bereitet eine grobe deutsche Arbeitsübersetzung vor. Er erstellt keine beglaubigte Übersetzung und keine rechtliche Bewertung.",
+  "forbidden_conclusions": [
+    "beglaubigte Übersetzung",
+    "Beweiswert",
+    "Entlastungswert",
+    "rechtliche Relevanz",
+    "prozessuale Verwertbarkeit",
+    "endgültige Aktenzuordnung"
+  ]
+}
