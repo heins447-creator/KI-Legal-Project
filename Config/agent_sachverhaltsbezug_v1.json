@@ -1,0 +1,34 @@
+{
+  "version": "V1",
+  "agent": "SACHVERHALTSBEZUG_VORBEREITEN",
+  "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "case_context": {
+    "case_type": "Schwedischer Arbeitsrechtsstreit",
+    "parties": "Arbeitnehmer gegen kommunalen Arbeitgeber",
+    "official_language_code": "sv",
+    "procedural_language_code": "sv",
+    "internal_work_language_code": "de"
+  },
+  "principle": "Der Agent bereitet nur einen moeglichen Sachverhaltsbezug vor. Er trifft keine rechtliche Bewertung und keine Beweiswuerdigung.",
+  "allowed_contexts": [
+    "ANSTELLUNG_VERTRAG",
+    "UNTERRICHT_SCHULORGANISATION",
+    "WARNUNG_MASSNAHME",
+    "KUENDIGUNG_AUSSCHLUSS",
+    "ARBEITSMILJOE_ARBEITSUMFELD",
+    "ELTERN_SCHUELER_KOMMUNIKATION",
+    "BEHOERDE_GERICHT_VERFAHREN",
+    "ZEITLICHER_ABLAUF",
+    "SONSTIGES_UNKLAR"
+  ],
+  "forbidden_conclusions": [
+    "Beweiswert",
+    "Entlastungswert",
+    "rechtliche Relevanz",
+    "prozessuale Verwertbarkeit",
+    "Verschulden",
+    "Glaubwuerdigkeit",
+    "endgueltige Aktenzuordnung",
+    "Klageentscheidung"
+  ]
+}
