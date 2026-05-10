@@ -1,0 +1,164 @@
+{
+  "version": "V2_NEUANFANG",
+  "available_languages": "EU24",
+  "principle": "Sprachen werden getrennt nach Systemkatalog, Person, Fall, Beteiligtem, Kommunikation, Dokument und tatsächlicher Sprache geführt.",
+  "staff_settings": [
+    {
+      "staff_profile_key": "LAWYER_DEFAULT",
+      "role_key": "anwalt",
+      "display_name": "Anwalt",
+      "internal_work_language_code": "de",
+      "accepted_matter_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "communication_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "document_review_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "default_draft_language_code": "de",
+      "default_translation_target_language_code": "de",
+      "can_accept_foreign_mandates": true,
+      "active": true,
+      "notes": "Grundeinstellung. Der Anwalt arbeitet intern deutsch und wählt selbst, in welchen Sprachen er Aufträge annimmt und kommuniziert."
+    },
+    {
+      "staff_profile_key": "SECRETARY_DEFAULT",
+      "role_key": "sekretariat",
+      "display_name": "Sekretariat",
+      "internal_work_language_code": "de",
+      "accepted_matter_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "communication_languages": [
+        "de",
+        "en"
+      ],
+      "document_review_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "default_draft_language_code": "de",
+      "default_translation_target_language_code": "de",
+      "can_accept_foreign_mandates": false,
+      "active": true,
+      "notes": "Grundeinstellung für Vorzimmer, Posteingang und vorbereitende Kommunikation."
+    }
+  ],
+  "case_settings": [
+    {
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "case_label": "Schweden Arbeitsrecht",
+      "jurisdiction_country_code": "SE",
+      "legal_area_key": "arbeitsrecht",
+      "country_language_code": "sv",
+      "procedural_language_code": "sv",
+      "internal_work_language_code": "de",
+      "default_document_language_code": "sv",
+      "default_actual_language_code": "sv",
+      "translation_required_default": true,
+      "interpreter_required_default": false,
+      "notes": "Schwedischer Arbeitsrechtsfall. Landessprache und Prozesssprache Schwedisch. Interne Arbeitssprache Deutsch."
+    }
+  ],
+  "participant_settings": [
+    {
+      "participant_profile_key": "SE_ARBEITSRECHT_GERICHT",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gericht",
+      "participant_label": "Schwedisches Gericht",
+      "official_or_procedural_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "actual_or_spoken_language_code": "sv",
+      "fallback_language_code": "en",
+      "translation_required": true,
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "notes": "Gerichtliche Kommunikation und Schriftsätze in schwedischer Prozesssprache."
+    },
+    {
+      "participant_profile_key": "SE_ARBEITSRECHT_GEGNER_ANWALT",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegnerischer_anwalt",
+      "participant_label": "Gegnerischer Anwalt",
+      "official_or_procedural_language_code": "sv",
+      "communication_language_code": "en",
+      "document_language_code": "sv",
+      "actual_or_spoken_language_code": "en",
+      "fallback_language_code": "sv",
+      "translation_required": true,
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "notes": "Kommunikation kann Englisch sein. Maßgebliche Verfahrens- und Dokumentensprache bleibt Schwedisch."
+    },
+    {
+      "participant_profile_key": "SE_ARBEITSRECHT_GEGENSEITE",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegenseite",
+      "participant_label": "Gegenseite",
+      "official_or_procedural_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "actual_or_spoken_language_code": "sv",
+      "fallback_language_code": "en",
+      "translation_required": true,
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "notes": "Gegenseite grundsätzlich in der Landessprache und Verfahrenssprache."
+    },
+    {
+      "participant_profile_key": "SE_ARBEITSRECHT_MANDANT_NACH_ANNAHME",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "mandant",
+      "participant_label": "Mandant nach Mandatsannahme",
+      "official_or_procedural_language_code": "sv",
+      "communication_language_code": "de",
+      "document_language_code": "de",
+      "actual_or_spoken_language_code": "de",
+      "fallback_language_code": "en",
+      "translation_required": true,
+      "created_after_mandate_acceptance": true,
+      "accepted_client_required": true,
+      "notes": "Mandantenbezogene Spracheinstellungen werden erst nach Annahme des Mandats als echtes Mandantenprofil angelegt."
+    },
+    {
+      "participant_profile_key": "SE_ARBEITSRECHT_INTERN",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "intern",
+      "participant_label": "Interne Bearbeitung",
+      "official_or_procedural_language_code": "de",
+      "communication_language_code": "de",
+      "document_language_code": "de",
+      "actual_or_spoken_language_code": "de",
+      "fallback_language_code": "en",
+      "translation_required": false,
+      "created_after_mandate_acceptance": false,
+      "accepted_client_required": false,
+      "notes": "Interne Bearbeitung und Arbeitsvermerke deutsch."
+    }
+  ],
+  "intake_rules": [
+    {
+      "intake_rule_key": "POSTEINGANG_SE_ARBEITSRECHT",
+      "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "incoming_area": "posteingang",
+      "expected_document_language_code": "sv",
+      "detected_language_policy": "dokumentensprache_ermitteln_und_mit_fallprofil_abgleichen",
+      "target_internal_language_code": "de",
+      "procedural_language_code": "sv",
+      "action_on_mismatch": "entscheidungskarte_fuer_vorzimmer_und_uebersetzungsbedarf_markieren",
+      "notes": "Beim Datenimport werden Dokumentensprache, tatsächlich erkannte Sprache, interne Arbeitssprache und Prozesssprache getrennt geführt."
+    }
+  ]
+}
