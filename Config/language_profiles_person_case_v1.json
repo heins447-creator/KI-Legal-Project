@@ -1,0 +1,209 @@
+{
+  "version": "V1",
+  "principle": "Sprache wird getrennt nach Software, Person, Fall, Beteiligtem und Kommunikation geführt.",
+  "available_languages": [
+    "bg",
+    "hr",
+    "cs",
+    "da",
+    "nl",
+    "en",
+    "et",
+    "fi",
+    "fr",
+    "de",
+    "el",
+    "hu",
+    "ga",
+    "it",
+    "lv",
+    "lt",
+    "mt",
+    "pl",
+    "pt",
+    "ro",
+    "sk",
+    "sl",
+    "es",
+    "sv"
+  ],
+  "staff_defaults": [
+    {
+      "staff_key": "LAWYER_DEFAULT",
+      "role_key": "anwalt",
+      "display_name": "Anwalt",
+      "internal_work_language_code": "de",
+      "accepted_matter_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "communication_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "document_review_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "default_translation_target_language_code": "de",
+      "active": true,
+      "notes": "Der Anwalt arbeitet intern deutsch. Auftragssprachen und Kommunikationssprachen sind auswählbar."
+    },
+    {
+      "staff_key": "SECRETARY_DEFAULT",
+      "role_key": "sekretariat",
+      "display_name": "Sekretariat",
+      "internal_work_language_code": "de",
+      "accepted_matter_languages": [
+        "de",
+        "en",
+        "sv"
+      ],
+      "communication_languages": [
+        "de",
+        "en"
+      ],
+      "document_review_languages": [
+        "de",
+        "en"
+      ],
+      "default_translation_target_language_code": "de",
+      "active": true,
+      "notes": "Das Sekretariat arbeitet im Posteingang und Vorzimmer mit eigener Sprachauswahl."
+    }
+  ],
+  "case_templates": [
+    {
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "case_label": "Schweden Arbeitsrecht",
+      "jurisdiction_country_code": "SE",
+      "country_language_code": "sv",
+      "procedural_language_code": "sv",
+      "internal_work_language_code": "de",
+      "source_document_language_code": "sv",
+      "target_document_language_code": "de",
+      "client_default_language_code": "de",
+      "opponent_lawyer_default_language_code": "en",
+      "opponent_party_default_language_code": "sv",
+      "court_default_language_code": "sv",
+      "translation_required": true,
+      "interpreter_required": false,
+      "notes": "Schwedischer Arbeitsrechtsfall. Landessprache und Prozeßsprache Schwedisch. Interne Arbeitssprache Deutsch. Kommunikation mit gegnerischem Anwalt kann Englisch sein."
+    }
+  ],
+  "participant_templates": [
+    {
+      "participant_profile_key": "TEMPLATE_SE_ARBEITSRECHT_MANDANT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "mandant",
+      "participant_label": "Mandant",
+      "mandate_accepted": false,
+      "actual_language_code": "de",
+      "communication_language_code": "de",
+      "document_language_code": "de",
+      "procedural_language_code": "sv",
+      "outgoing_language_code": "de",
+      "incoming_translation_target_language_code": "de",
+      "outgoing_translation_source_language_code": "de",
+      "translation_required": true,
+      "notes": "Mandantensprache wird erst mandantenbezogen festgelegt, wenn der Auftrag angenommen wird. Vorlagewert deutsch."
+    },
+    {
+      "participant_profile_key": "TEMPLATE_SE_ARBEITSRECHT_GERICHT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gericht",
+      "participant_label": "Schwedisches Gericht",
+      "mandate_accepted": true,
+      "actual_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "procedural_language_code": "sv",
+      "outgoing_language_code": "sv",
+      "incoming_translation_target_language_code": "de",
+      "outgoing_translation_source_language_code": "de",
+      "translation_required": true,
+      "notes": "Gerichtskommunikation in der Prozeßsprache Schwedisch."
+    },
+    {
+      "participant_profile_key": "TEMPLATE_SE_ARBEITSRECHT_GEGNER_ANWALT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegnerischer_anwalt",
+      "participant_label": "Gegnerischer Anwalt",
+      "mandate_accepted": true,
+      "actual_language_code": "sv",
+      "communication_language_code": "en",
+      "document_language_code": "sv",
+      "procedural_language_code": "sv",
+      "outgoing_language_code": "en",
+      "incoming_translation_target_language_code": "de",
+      "outgoing_translation_source_language_code": "de",
+      "translation_required": true,
+      "notes": "Kommunikation kann Englisch sein. Maßgebliche Verfahrens- und Dokumentensprache bleibt Schwedisch."
+    },
+    {
+      "participant_profile_key": "TEMPLATE_SE_ARBEITSRECHT_GEGENSEITE",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegenseite",
+      "participant_label": "Gegenseite",
+      "mandate_accepted": true,
+      "actual_language_code": "sv",
+      "communication_language_code": "sv",
+      "document_language_code": "sv",
+      "procedural_language_code": "sv",
+      "outgoing_language_code": "sv",
+      "incoming_translation_target_language_code": "de",
+      "outgoing_translation_source_language_code": "de",
+      "translation_required": true,
+      "notes": "Gegenseite im schwedischen Verfahren."
+    }
+  ],
+  "communication_rules": [
+    {
+      "rule_key": "SE_ARBEITSRECHT_KOMM_GERICHT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gericht",
+      "default_language_code": "sv",
+      "fallback_language_code": "sv",
+      "procedural_language_code": "sv",
+      "document_language_code": "sv",
+      "translation_required": true,
+      "notes": "An das Gericht wird in der Prozeßsprache Schwedisch geschrieben."
+    },
+    {
+      "rule_key": "SE_ARBEITSRECHT_KOMM_MANDANT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "mandant",
+      "default_language_code": "de",
+      "fallback_language_code": "en",
+      "procedural_language_code": "sv",
+      "document_language_code": "de",
+      "translation_required": true,
+      "notes": "Mandantensprache wird nach Annahme konkret festgelegt."
+    },
+    {
+      "rule_key": "SE_ARBEITSRECHT_KOMM_GEGNER_ANWALT",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "gegnerischer_anwalt",
+      "default_language_code": "en",
+      "fallback_language_code": "sv",
+      "procedural_language_code": "sv",
+      "document_language_code": "sv",
+      "translation_required": true,
+      "notes": "Kommunikationssprache Englisch möglich; prozessuale Sprache Schwedisch."
+    },
+    {
+      "rule_key": "SE_ARBEITSRECHT_KOMM_INTERN",
+      "case_key": "TEMPLATE_SE_ARBEITSRECHT",
+      "participant_role": "intern",
+      "default_language_code": "de",
+      "fallback_language_code": "en",
+      "procedural_language_code": "sv",
+      "document_language_code": "de",
+      "translation_required": false,
+      "notes": "Interne Bearbeitung deutsch."
+    }
+  ]
+}
