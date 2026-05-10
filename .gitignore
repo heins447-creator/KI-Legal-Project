@@ -7,3 +7,18 @@ Windows_App/App/bin/
 Windows_App/App/obj/
 Windows_App/Logs/
 Windows_App/App/*.bak_*
+# KI_Legal_Project: Aider darf diese Projektbausteine erzeugen
+!Database/
+!Database/Migrations/
+!Database/Migrations/*.sql
+!Scripts/
+!Scripts/python_runner/
+!Scripts/python_runner/*.py
+!Scripts/*.ps1
+!Projektplanung/
+!Projektplanung/Quellen/
+!Projektplanung/Quellen/*.md
+!Projektplanung/Auftraege/
+!Projektplanung/Auftraege/*.md
+!Projektplanung/Agentensteuerung/
+!Projektplanung/Agentensteuerung/*.md
