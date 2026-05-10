@@ -1,0 +1,25 @@
+{
+  "version": "V1",
+  "agent": "DOKUMENTART_ERKENNEN",
+  "case_template_key": "TEMPLATE_SE_ARBEITSRECHT",
+  "principle": "Der Agent erkennt nur die formale Dokumentart als Vorschlag. Er bewertet nicht den Beweiswert, die Entlastung oder die rechtliche Relevanz.",
+  "allowed_document_type_groups": [
+    "Schriftsatz",
+    "Korrespondenz",
+    "Nachweis",
+    "Aussage",
+    "Verwaltungsdokument",
+    "Protokoll",
+    "Bild",
+    "Technische Liste",
+    "Unklar"
+  ],
+  "forbidden_conclusions": [
+    "Beweiswert",
+    "Entlastungswert",
+    "rechtliche Relevanz",
+    "prozessuale Verwertbarkeit",
+    "endgültige Aktenzuordnung",
+    "Klageentscheidung"
+  ]
+}
