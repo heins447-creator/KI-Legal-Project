@@ -124,6 +124,33 @@
                 </Grid>
             </Border>
 
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Background="White"
+                    BorderBrush="#CBD5E1"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10"
+                    Margin="0,0,0,12">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Vorschau"
+                               FontSize="16"
+                               FontWeight="Bold"
+                               Margin="0,0,0,8"/>
+
+                    <TextBox x:Name="VorschauTextBox"
+                             Grid.Row="1"
+                             TextWrapping="Wrap"
+                             VerticalScrollBarVisibility="Auto"
+                             HorizontalScrollBarVisibility="Auto"
+                             IsReadOnly="True"/>
+                </Grid>
+            </Border>
             <Border Grid.Row="2"
                     Grid.Column="1"
                     Background="#111827"
