@@ -1,0 +1,10 @@
+﻿{
+    "time":  "2026-05-11 10:52:28",
+    "python":  "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+    "aider_exit_code":  0,
+    "aider_ok":  true,
+    "tesseract_exe":  "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "tesseract_found":  true,
+    "tesseract_lang_output":  "List of available languages in \"C:\\Program Files\\Tesseract-OCR/tessdata/\" (2):\r\neng\r\nosd\r\n",
+    "warning":  "Dokumentenpakete wurden in die Haupt-Python-Umgebung installiert. Dauerhaft sollte Aider-Python von Dokumenten-Python getrennt werden."
+}
