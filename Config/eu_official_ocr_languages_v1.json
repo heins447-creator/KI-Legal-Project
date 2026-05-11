@@ -1,0 +1,135 @@
+﻿{
+    "created_at":  "2026-05-11 11:04:43",
+    "purpose":  "OCR-Sprachkatalog der 24 EU-Amtssprachen plus osd für Tesseract",
+    "source_note":  "EU-Amtssprachen als Systemkatalog; Tesseract-Sprachcodes nach traineddata-Dateien.",
+    "eu_official_language_count":  24,
+    "eu_official_languages":  [
+                                  {
+                                      "eu":  "Bulgarian",
+                                      "code":  "bul",
+                                      "de":  "Bulgarisch"
+                                  },
+                                  {
+                                      "eu":  "Croatian",
+                                      "code":  "hrv",
+                                      "de":  "Kroatisch"
+                                  },
+                                  {
+                                      "eu":  "Czech",
+                                      "code":  "ces",
+                                      "de":  "Tschechisch"
+                                  },
+                                  {
+                                      "eu":  "Danish",
+                                      "code":  "dan",
+                                      "de":  "Dänisch"
+                                  },
+                                  {
+                                      "eu":  "Dutch",
+                                      "code":  "nld",
+                                      "de":  "Niederländisch"
+                                  },
+                                  {
+                                      "eu":  "English",
+                                      "code":  "eng",
+                                      "de":  "Englisch"
+                                  },
+                                  {
+                                      "eu":  "Estonian",
+                                      "code":  "est",
+                                      "de":  "Estnisch"
+                                  },
+                                  {
+                                      "eu":  "Finnish",
+                                      "code":  "fin",
+                                      "de":  "Finnisch"
+                                  },
+                                  {
+                                      "eu":  "French",
+                                      "code":  "fra",
+                                      "de":  "Französisch"
+                                  },
+                                  {
+                                      "eu":  "German",
+                                      "code":  "deu",
+                                      "de":  "Deutsch"
+                                  },
+                                  {
+                                      "eu":  "Greek",
+                                      "code":  "ell",
+                                      "de":  "Griechisch"
+                                  },
+                                  {
+                                      "eu":  "Hungarian",
+                                      "code":  "hun",
+                                      "de":  "Ungarisch"
+                                  },
+                                  {
+                                      "eu":  "Irish",
+                                      "code":  "gle",
+                                      "de":  "Irisch"
+                                  },
+                                  {
+                                      "eu":  "Italian",
+                                      "code":  "ita",
+                                      "de":  "Italienisch"
+                                  },
+                                  {
+                                      "eu":  "Latvian",
+                                      "code":  "lav",
+                                      "de":  "Lettisch"
+                                  },
+                                  {
+                                      "eu":  "Lithuanian",
+                                      "code":  "lit",
+                                      "de":  "Litauisch"
+                                  },
+                                  {
+                                      "eu":  "Maltese",
+                                      "code":  "mlt",
+                                      "de":  "Maltesisch"
+                                  },
+                                  {
+                                      "eu":  "Polish",
+                                      "code":  "pol",
+                                      "de":  "Polnisch"
+                                  },
+                                  {
+                                      "eu":  "Portuguese",
+                                      "code":  "por",
+                                      "de":  "Portugiesisch"
+                                  },
+                                  {
+                                      "eu":  "Romanian",
+                                      "code":  "ron",
+                                      "de":  "Rumänisch"
+                                  },
+                                  {
+                                      "eu":  "Slovak",
+                                      "code":  "slk",
+                                      "de":  "Slowakisch"
+                                  },
+                                  {
+                                      "eu":  "Slovenian",
+                                      "code":  "slv",
+                                      "de":  "Slowenisch"
+                                  },
+                                  {
+                                      "eu":  "Spanish",
+                                      "code":  "spa",
+                                      "de":  "Spanisch"
+                                  },
+                                  {
+                                      "eu":  "Swedish",
+                                      "code":  "swe",
+                                      "de":  "Schwedisch"
+                                  }
+                              ],
+    "extra_ocr_languages":  [
+                                {
+                                    "eu":  "Orientation and script detection",
+                                    "code":  "osd",
+                                    "de":  "Schrift- und Ausrichtungserkennung"
+                                }
+                            ]
+}
