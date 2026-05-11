@@ -9,6 +9,7 @@ try { [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false) } catc
 $Root = "I:\KI_Legal_Project"
 $Python = Join-Path $Root "Tools\Python312\python.exe"
 $Runner = Join-Path $Root "Scripts\python_runner\048_agenten_kontext_skill_register_v1.py"
+$Fixer = Join-Path $Root "Scripts\python_runner\050_fix_agenten_kontext_skill_bindings_v1.py"
 $Checker = Join-Path $Root "Scripts\python_runner\049_check_agenten_kontext_skill_register_v1.py"
 $LogDir = Join-Path $Root "Windows_App\Logs"
 $Ts = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
@@ -23,6 +24,31 @@ function W {
     $Line | Tee-Object -FilePath $Report -Append
 }
 
+function Invoke-PythonStep {
+    param(
+        [Parameter(Mandatory=$true)][string]$Label,
+        [Parameter(Mandatory=$true)][string]$File
+    )
+
+    if (-not (Test-Path -LiteralPath $File)) {
+        throw "$Label fehlt: $File"
+    }
+
+    W "Starte $Label"
+    $Out = & $Python $File 2>&1
+    $Code = $LASTEXITCODE
+
+    if ($Out) {
+        $Out | ForEach-Object { W ([string]$_) }
+    }
+
+    if ($Code -ne 0) {
+        throw "$Label fehlgeschlagen. Exitcode: $Code"
+    }
+
+    W "OK: $Label"
+}
+
 try {
     W "AGENTEN KONTEXT SKILL REGISTER gestartet."
     W "Root: $Root"
@@ -30,22 +56,12 @@ try {
     W "Report: $Report"
 
     if (-not (Test-Path -LiteralPath $Python)) { throw "Python fehlt: $Python" }
-    if (-not (Test-Path -LiteralPath $Runner)) { throw "Runner fehlt: $Runner" }
-    if (-not (Test-Path -LiteralPath $Checker)) { throw "Checker fehlt: $Checker" }
 
-    W "Starte Python-Läufer."
-    $RunnerOut = & $Python $Runner 2>&1
-    $RunnerCode = $LASTEXITCODE
-    if ($RunnerOut) { $RunnerOut | ForEach-Object { W ([string]$_) } }
-    if ($RunnerCode -ne 0) { throw "Python-Läufer fehlgeschlagen. Exitcode: $RunnerCode" }
+    Invoke-PythonStep -Label "Agenten-Runner 048" -File $Runner
+    Invoke-PythonStep -Label "Agenten-Bindungsfix 050" -File $Fixer
+    Invoke-PythonStep -Label "Agenten-Prüfung 049" -File $Checker
 
-    W "Starte Prüfdatei."
-    $CheckOut = & $Python $Checker 2>&1
-    $CheckCode = $LASTEXITCODE
-    if ($CheckOut) { $CheckOut | ForEach-Object { W ([string]$_) } }
-    if ($CheckCode -ne 0) { throw "Prüfdatei fehlgeschlagen. Exitcode: $CheckCode" }
-
-    W "OK: Agenten Kontext Skill Register abgeschlossen."
+    W "OK: Agenten-Kontext- und Skill-Register abgeschlossen."
 
     Write-Host ""
     Write-Host "FERTIG"
