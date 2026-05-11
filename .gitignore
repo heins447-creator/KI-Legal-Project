@@ -1,4 +1,4 @@
-*
+﻿*
 !.gitignore
 !Windows_App/
 !Windows_App/**
@@ -23,3 +23,7 @@ Windows_App/App/*.bak_*
 !Projektplanung/Agentensteuerung/
 !Projektplanung/Agentensteuerung/*.md
 # KI_Legal_Project: Aider Freigaben
+Tools/Tesseract/tessdata/*.traineddata
+Tools/_ToolLibrary/Downloads/
+Tools/_ToolLibrary/PythonWheelhouse/
+

@@ -67,10 +67,17 @@
                       "working_basic":  true,
                       "status":  "available",
                       "exe_path":  "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
-                      "version_text":  "Version nicht gelesen: Das Argument für den Parameter \"ArgumentList\" kann nicht überprüft werden. Das Argument ist NULL oder leer, oder ein Element der Argumentauflistung enthält einen NULL-Wert. Geben Sie eine Auflistung an, die keine NULL-Werte enthält, und führen Sie dann den Befehl erneut aus.",
+                      "version_text":  "Tesseract vorhanden; Projekt-tessdata: I:\\KI_Legal_Project\\Tools\\Tesseract\\tessdata; Sprachen: deu, eng, osd, swe",
                       "winget_id":  "UB-Mannheim.TesseractOCR",
                       "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\tesseract",
-                      "last_check":  "2026-05-11 10:52:28"
+                      "last_check":  "2026-05-11 10:55:54",
+                      "tessdata_dir":  "I:\\KI_Legal_Project\\Tools\\Tesseract\\tessdata",
+                      "languages":  [
+                                        "deu",
+                                        "eng",
+                                        "osd",
+                                        "swe"
+                                    ]
                   },
                   {
                       "tool_key":  "ghostscript",
