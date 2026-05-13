@@ -119,23 +119,26 @@ def verzeichnisse_anlegen():
               QUALITAETSWERTE, NOTIZEN]:
         d.mkdir(parents=True, exist_ok=True)
 
-def get_tesseract_version(tesseract_pfad):
+def get_tesseract_version(tesseract_pfad, tessdata_pfad=None):
     """Tesseract-Version abrufen, NUR erste Zeile."""
+    td = tessdata_pfad or str(Path(tesseract_pfad).parent / "tessdata")
     try:
         r = subprocess.run([tesseract_pfad, "--version"],
                            capture_output=True, text=True, timeout=30,
-                           env={**os.environ, "TESSDATA_PREFIX": str(Path(tesseract_pfad).parent / "tessdata")})
+                           env={**os.environ, "TESSDATA_PREFIX": td})
         if r.returncode == 0:
             return r.stdout.strip().split("\n")[0].strip()
     except Exception:
         pass
     return "UNBEKANNT"
 
-def get_tesseract_langs(tesseract_pfad):
+def get_tesseract_langs(tesseract_pfad, tessdata_pfad=None):
     """Verfuegbare Sprachen abrufen."""
+    td = tessdata_pfad or str(Path(tesseract_pfad).parent / "tessdata")
     try:
         r = subprocess.run([tesseract_pfad, "--list-langs"],
-                           capture_output=True, text=True, timeout=30)
+                           capture_output=True, text=True, timeout=30,
+                           env={**os.environ, "TESSDATA_PREFIX": td})
         if r.returncode == 0:
             lines = r.stdout.strip().split("\n")
             # Erste Zeile ist Info, dann kommen die Sprachen
@@ -196,7 +199,7 @@ def pruefe_tiff_integritaet(seite, km12_schreibbereich):
 # OCR-VERARBEITUNG
 # ---------------------------------------------------------------------------
 
-def run_tesseract(tesseract_pfad, tiff_pfad, ausgabe_basis, sprache, psm, oem, timeout_s):
+def run_tesseract(tesseract_pfad, tiff_pfad, ausgabe_basis, sprache, psm, oem, timeout_s, tessdata_pfad=None):
     """
     Fuehrt Tesseract aus und erzeugt txt, hocr, tsv.
 
@@ -204,7 +207,8 @@ def run_tesseract(tesseract_pfad, tiff_pfad, ausgabe_basis, sprache, psm, oem, t
         dict mit pfaden zu den Ausgabedateien und Exitcode.
         NIE den OCR-Text im Terminal ausgeben!
     """
-    env = {**os.environ, "TESSDATA_PREFIX": str(Path(tesseract_pfad).parent / "tessdata")}
+    td = tessdata_pfad or str(Path(tesseract_pfad).parent / "tessdata")
+    env = {**os.environ, "TESSDATA_PREFIX": td}
     base = str(ausgabe_basis)
 
     ergebnis = {
@@ -387,6 +391,7 @@ def ocr_seite(seite, config, tesseract_version):
         config.get("psm", 3),
         config.get("oem", 3),
         config.get("timeout_pro_seite", 600),
+        config.get("tessdata_pfad"),
     )
 
     # JSON-Datensatz
@@ -395,7 +400,8 @@ def ocr_seite(seite, config, tesseract_version):
     # OSD optional
     if config.get("osd_aktiv") and ocr_result["exitcode"] == 0:
         try:
-            env = {**os.environ, "TESSDATA_PREFIX": str(Path(config["tesseract_pfad"]).parent / "tessdata")}
+            td_osd = config.get("tessdata_pfad") or str(Path(config["tesseract_pfad"]).parent / "tessdata")
+            env = {**os.environ, "TESSDATA_PREFIX": td_osd}
             r_osd = subprocess.run([
                 config["tesseract_pfad"],
                 str(tiff_pfad),
@@ -653,7 +659,7 @@ def run_selftest():
 
         # Test 2: Tesseract-Version
         print("\nTest 2: Tesseract-Version abrufbar...")
-        version = get_tesseract_version(tesseract_pfad)
+        version = get_tesseract_version(tesseract_pfad, config.get("tessdata_pfad"))
         assert version and version != "UNBEKANNT"
         print(f"  OK: {version}")
         tests_bestanden += 1
@@ -678,7 +684,8 @@ def run_selftest():
         ocr_result = run_tesseract(tesseract_pfad, test_tiff, ocr_base,
                                     config.get("standardsprache", "eng"),
                                     config.get("psm", 3), config.get("oem", 3),
-                                    config.get("timeout_pro_seite", 120))
+                                    config.get("timeout_pro_seite", 120),
+                                    config.get("tessdata_pfad"))
         assert ocr_result["exitcode"] == 0, f"Tesseract exitcode={ocr_result['exitcode']}: {ocr_result['stderr']}"
         print(f"  OK: Tesseract exitcode=0")
         tests_bestanden += 1
@@ -835,8 +842,8 @@ def main():
         print(f"STRUKTURFEHLER: Tesseract nicht gefunden: {tesseract_pfad}")
         sys.exit(1)
 
-    tesseract_version = get_tesseract_version(tesseract_pfad)
-    verfuegbare_sprachen = get_tesseract_langs(tesseract_pfad)
+    tesseract_version = get_tesseract_version(tesseract_pfad, config.get("tessdata_pfad"))
+    verfuegbare_sprachen = get_tesseract_langs(tesseract_pfad, config.get("tessdata_pfad"))
     print(f"Tesseract:       {tesseract_version}")
     print(f"Sprachen:        {', '.join(verfuegbare_sprachen)}")
     print(f"Standardsprache: {config.get('standardsprache', 'eng')}")
