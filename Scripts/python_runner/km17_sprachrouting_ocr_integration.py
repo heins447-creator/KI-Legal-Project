@@ -85,6 +85,20 @@ def sha256_pfad(pfad):
             h.update(chunk)
     return h.hexdigest()
 
+def extrahiere_text_aus_hocr(hocr_pfad):
+    """Extrahiert reinen Text aus einer HOCR-Datei per ocrx_word spans."""
+    p = Path(hocr_pfad)
+    if not p.exists():
+        return ""
+    try:
+        html = p.read_text(encoding="utf-8", errors="ignore")
+    except Exception:
+        return ""
+    words = re.findall(r'<span[^>]*class=["\']ocrx_word["\'][^>]*>([^<]+)</span>', html)
+    if not words:
+        return ""
+    return ' '.join(words)
+
 def ocr_seite(tiff_pfad, ausgabe_pfad_prefix, sprache, config, tesseract_exe, tessdata_pfad):
     tiff = Path(tiff_pfad)
     if not tiff.exists():
@@ -99,6 +113,7 @@ def ocr_seite(tiff_pfad, ausgabe_pfad_prefix, sprache, config, tesseract_exe, te
         "-l", sprache, "--psm", str(psm), "--oem", str(oem),
         "-c", "tessedit_create_hocr=1",
         "-c", "tessedit_create_tsv=1",
+        "-c", "tessedit_create_txt=1",
         "-c", "tessedit_create_pdf=0"
     ]
     if tessdata_pfad:
@@ -248,6 +263,26 @@ def routing_ocr_hauptlauf(config):
         ergebnis["ocr_engine_version"] = "5.x"
         ergebnis["modul"] = "KM17"
         ergebnis["warnungen"] = []
+        # --- HOCR-Fallback (KM18-Fix) ---
+        if ergebnis.get("modi",{}).get("text",{}).get("zeichen",0) == 0 or ergebnis.get("modi",{}).get("text",{}).get("fehlend",False):
+            hocr_modus = ergebnis.get("modi",{}).get("hocr",{})
+            hocr_pfad = hocr_modus.get("pfad","")
+            if hocr_pfad and Path(hocr_pfad).exists():
+                hocr_text = extrahiere_text_aus_hocr(hocr_pfad)
+                if hocr_text:
+                    ergebnis["modi"]["text"] = {
+                        "pfad": ergebnis["modi"]["text"]["pfad"],
+                        "groesse_bytes": ergebnis["modi"]["text"].get("groesse_bytes", 0),
+                        "sha256": ergebnis["modi"]["text"].get("sha256", ""),
+                        "zeichen": len(hocr_text),
+                        "worte": len(hocr_text.split()),
+                        "text_snippet": hocr_text[:config.get("max_text_snippet_zeichen", 80)],
+                        "quelle": "HOCR-Fallback",
+                        "fehlend": False
+                    }
+                    ergebnis["warnungen"].append("Text aus HOCR extrahiert (TXT-Datei fehlt/leer)")
+        # --- HOCR-Fallback Ende ---
+
         if ok:
             statistik["OK"] += 1
             zm = ergebnis.get("modi",{}).get("text",{})
