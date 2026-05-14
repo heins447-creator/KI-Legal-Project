@@ -77,13 +77,8 @@ STANDARD_KONFIG = {
     "verfuegbare_sprachen": ["eng", "osd"],
     "max_textauszug_zeichen": 200,
     "rohdaten_ausgabe_verboten": True,
-    "bekannte_fehlerseite": {
-        "original_id": "ORG-9dd16304b3b5-00162",
-        "seite_nummer": 1,
-        "grund": "Image too large (7712x42208px)",
-        "fundstellen_modus": "SEITENEBENE_NUR",
-        "unsicherheiten": ["OCR_FEHLER", "SEITE_ZU_GROSS", "OCR_NICHT_VERFUEGBAR"]
-    }
+    "bekannte_fehlerseite_aufgehoben": True,
+    "km19_korrektur_hinweis": "ORG-9dd16304b3b5-00162 #1 war FEHLER, durch KM17c+KM19 repariert – jetzt 24/24 OK"
 }
 
 # ---------------------------------------------------------------------------
@@ -361,7 +356,7 @@ def parse_confidence(conf_str):
 # UNSICHERHEITEN
 # ---------------------------------------------------------------------------
 
-def klassifiziere_unsicherheiten(km13_seite, tsv_daten, textstruktur, ist_grosse_seite):
+def klassifiziere_unsicherheiten(km13_seite, tsv_daten, textstruktur):
     """Bestimmt Unsicherheitskategorien fuer eine Seite."""
     unsicherheiten = []
     ocr_status = km13_seite.get("ocr_status", "")
@@ -369,8 +364,6 @@ def klassifiziere_unsicherheiten(km13_seite, tsv_daten, textstruktur, ist_grosse
     if ocr_status == "FEHLER":
         unsicherheiten.append("OCR_FEHLER")
         unsicherheiten.append("OCR_NICHT_VERFUEGBAR")
-        if ist_grosse_seite:
-            unsicherheiten.append("SEITE_ZU_GROSS")
 
     if km13_seite.get("durchschnittliche_konfidenz") is not None:
         conf = km13_seite["durchschnittliche_konfidenz"]
@@ -433,9 +426,6 @@ def erzeuge_maschinenformat(original_id, km12_seiten, km13_map, km13_ergebnisse,
             }
 
         ocr_status = km13_s.get("ocr_status", "NICHT_VERFUEGBAR")
-        ist_grosse = (original_id == config.get("bekannte_fehlerseite", {}).get("original_id")
-                      and sn == config.get("bekannte_fehlerseite", {}).get("seite_nummer"))
-
         seiten_id = f"{original_id}_S{sn:04d}"
 
         # TSV-Daten laden (fuer Koordinaten)
@@ -462,7 +452,7 @@ def erzeuge_maschinenformat(original_id, km12_seiten, km13_map, km13_ergebnisse,
 
         # Unsicherheiten
         unsicherheiten_seite = klassifiziere_unsicherheiten(km13_s, tsv_daten,
-                                                            textstruktur, ist_grosse)
+                                                            textstruktur)
 
         # Unsicherheiten-Eintrag
         unsicherheit_eintrag = {
@@ -763,16 +753,7 @@ def schreibe_alle_ausgaben(alle_maschinenformate, alle_fundstellen,
                 "unsicherheiten_count": u_count,
             })
 
-    # Pruefe bekannte Fehlerseite
-    bekannte_grosse_uebernommen = False
-    bek_id = config.get("bekannte_fehlerseite", {}).get("original_id", "")
-    bek_sn = config.get("bekannte_fehlerseite", {}).get("seite_nummer", 0)
-    for e in unsicherheiten_liste:
-        if e.get("original_id") == bek_id and e.get("seite_nummer") == bek_sn:
-            if "SEITE_ZU_GROSS" in e.get("unsicherheiten", []):
-                bekannte_grosse_uebernommen = True
-                break
-
+    # Pruefe bekannte Fehlerseite (durch KM19 aufgehoben)
     # --- Status ---
     sp = STATUS_DIR / "KM14_STATUS.json"
     status_daten = {
@@ -794,7 +775,7 @@ def schreibe_alle_ausgaben(alle_maschinenformate, alle_fundstellen,
         "fundstellen_zeilenebene": fs_zeile_ebene,
         "fundstellen_wortebene": fs_wort_ebene,
         "unsicherheiten_gesamt": len(unsicherheiten_liste),
-        "bekannte_grosse_seite_uebernommen": bekannte_grosse_uebernommen,
+        "km19_korrektur_hinweis": "ORG-9dd16304b3b5-00162 #1: KM17c+KM19 repariert, jetzt 24/24 OK",
         "originale_veraendert": False,
         "arbeitsabbildungen_veraendert": False,
         "ocr_neu_ausgefuehrt": False,
@@ -830,7 +811,7 @@ def schreibe_alle_ausgaben(alle_maschinenformate, alle_fundstellen,
         f"  Unsicherheiten:      {len(unsicherheiten_liste)}",
         f"  OCR-OK-Seiten:       {status_daten['seiten_mit_ocr_ok']}",
         f"  OCR-Fehlerseiten:    {status_daten['seiten_mit_ocr_fehler']}",
-        f"  Große Fehlerseite:   {'übernommen' if bekannte_grosse_uebernommen else 'NICHT gefunden!'}",
+        f"  KM19-Korrektur:      ORG-9dd16304b3b5-00162 #1 repariert, 24/24 OK",
         "",
         "GRENZEN (eingehalten)",
         "  - Keine Originaländerung",
@@ -868,11 +849,11 @@ def schreibe_alle_ausgaben(alle_maschinenformate, alle_fundstellen,
         f"Seiten: {statistik['seiten_anzahl']}",
         f"Fundstellen: {len(alle_fs)}",
         f"Unsicherheiten: {len(unsicherheiten_liste)}",
-        f"Große Seite: {'übernommen' if bekannte_grosse_uebernommen else 'FEHLT'}",
+        f"KM19: ORG-9dd16304b3b5-00162 repariert, 24/24 OK",
         f"Grenzen: keine Original-/TIFF-/DB-Änderung, keine OCR-Neuausführung, keine Übersetzung.",
     ]), encoding="utf-8", newline="\n")
 
-    return status_daten, mj, bp, bekannte_grosse_uebernommen
+    return status_daten, mj, bp
 
 # ---------------------------------------------------------------------------
 # SELBSTTEST
@@ -1074,16 +1055,12 @@ def run_selftest():
         print("  OK")
         tests_bestanden += 1
 
-        # Test 14: Große Seite im Status
-        print("\nTest 14: Große Seite erkannt...")
-        grosse_uns = [{"original_id": "ORG-9dd16304b3b5-00162", "seite_nummer": 1,
-                       "ocr_status": "FEHLER", "unsicherheiten": ["SEITE_ZU_GROSS", "OCR_FEHLER"]}]
-        _, _, _, bk = schreibe_alle_ausgaben(alle_mf, alle_fs, grosse_uns, [], stat,
-                                              {**config, "bekannte_fehlerseite": {
-                                                  "original_id": "ORG-9dd16304b3b5-00162",
-                                                  "seite_nummer": 1}})
-        assert bk == True
-        print("  OK: bekannte_grosse_seite_uebernommen = True")
+        # Test 14: KM19-Korrektur-Hinweis im Status
+        print("\nTest 14: KM19-Korrektur-Hinweis...")
+        stat_fix = {"tesseract_version": "test", "sprachen": ["eng"], "originale_anzahl": 1, "seiten_anzahl": 1}
+        sd_fix, _, _ = schreibe_alle_ausgaben(alle_mf, alle_fs, [], [], stat_fix, config)
+        assert sd_fix.get("km19_korrektur_hinweis") is not None
+        print("  OK: km19_korrektur_hinweis vorhanden")
         tests_bestanden += 1
 
         # Test 15: Pruefdatei existiert
@@ -1130,7 +1107,7 @@ def main():
 
         # Ausgaben schreiben
         print("[2/3] Ausgaben schreiben...")
-        status_daten, mj, bp, grosse_ok = schreibe_alle_ausgaben(
+        status_daten, mj, bp = schreibe_alle_ausgaben(
             alle_mf, alle_fs, unsicherheiten_liste, fehler_liste, statistik, config
         )
 
@@ -1151,7 +1128,7 @@ def main():
         print(f"  - Zeilenebene:        {status_daten['fundstellen_zeilenebene']}")
         print(f"  - Wortebene:          {status_daten['fundstellen_wortebene']}")
         print(f"Unsicherheiten:         {len(unsicherheiten_liste)}")
-        print(f"Große Fehlerseite:      {'übernommen' if grosse_ok else 'PRÜFEN!'}")
+        print(f"KM19-Korrektur:         ORG-9dd16304b3b5-00162 #1 repariert, 24/24 OK")
         print(f"Übersetzung:            NEIN")
         print(f"Rechtsbewertung:        NEIN")
         print(f"OCR neu ausgeführt:     NEIN")

@@ -126,29 +126,29 @@ def main():
         except Exception as e:
             t("14 – Status-Flags false", False, str(e))
 
-    # 15. Bekannte Fehlerseite uebernommen
+    # 15. KM19-Korrektur-Hinweis
     if s_path.exists():
         try:
             sd = json.loads(s_path.read_text(encoding="utf-8"))
-            t("15 – Große Fehlerseite uebernommen",
-              sd.get("bekannte_grosse_seite_uebernommen", False))
+            t("15 – KM19-Korrektur-Hinweis",
+              sd.get("km19_korrektur_hinweis") is not None)
         except Exception as e:
-            t("15 – Große Fehlerseite uebernommen", False, str(e))
+            t("15 – KM19-Korrektur-Hinweis", False, str(e))
 
-    # 16. Unsicherheiten enthalten die Fehlerseite
+    # 16. ORG-9dd16304b3b5-00162 jetzt als OK verarbeitet
     if u_path.exists():
         try:
             ud = json.loads(u_path.read_text(encoding="utf-8"))
-            grose_seite = False
+            problem_seite_fehler = False
             for e in ud.get("eintraege", []):
                 if (e.get("original_id") == "ORG-9dd16304b3b5-00162"
                         and e.get("seite_nummer") == 1
-                        and "SEITE_ZU_GROSS" in e.get("unsicherheiten", [])):
-                    grose_seite = True
+                        and "OCR_FEHLER" in e.get("unsicherheiten", [])):
+                    problem_seite_fehler = True
                     break
-            t("16 – Fehlerseite in Unsicherheiten", grose_seite)
+            t("16 – ORG-9dd16304b3b5 jetzt OK (kein OCR_FEHLER)", not problem_seite_fehler)
         except Exception as e:
-            t("16 – Fehlerseite in Unsicherheiten", False, str(e))
+            t("16 – ORG-9dd16304b3b5 jetzt OK", False, str(e))
 
     # 17. Fundstellen verweisen auf original_id und seite_nummer
     if fs_files:
