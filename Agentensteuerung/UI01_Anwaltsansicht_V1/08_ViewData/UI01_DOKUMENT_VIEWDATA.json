@@ -1,0 +1,125 @@
+﻿{
+  "modul": "UI01",
+  "version": "1.0.0",
+  "zeitpunkt": "2026-05-14T17:13:21.875078+00:00",
+  "ausgewaehltes_dokument": "ORG-970b270eb1e8-00163",
+  "arbeitsvertrag_erkannt": "unsicher",
+  "av_hinweise": [],
+  "anzahl_seiten": 3,
+  "seiten_ids": [
+    "ORG-970b270eb1e8-00163_S0001",
+    "ORG-970b270eb1e8-00163_S0002",
+    "ORG-970b270eb1e8-00163_S0003"
+  ],
+  "original_bilder": [],
+  "fundstellen_anzahl": 0,
+  "sprachen": [],
+  "ocr_texte": {
+    "ORG-970b270eb1e8-00163_S0001": {
+      "seite": 1,
+      "ocr_status": "OK",
+      "fundstellen_ids": [
+        "ORG-970b270eb1e8-00163_S0001_FS_SEITE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_1_1",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_1_2",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_1",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_2",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_3",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_4",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_5",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_6",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_7",
+        "...+282"
+      ],
+      "ue_ids": [
+        "ORG-970b270eb1e8-00163_S0001_FS_SEITE_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_1_1_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_1_2_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_1_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_2_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_3_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_4_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_5_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_6_UE",
+        "ORG-970b270eb1e8-00163_S0001_FS_WORT_1_2_7_UE",
+        "...+282"
+      ],
+      "ocr_quelle": "KM13"
+    },
+    "ORG-970b270eb1e8-00163_S0002": {
+      "seite": 2,
+      "ocr_status": "OK",
+      "fundstellen_ids": [
+        "ORG-970b270eb1e8-00163_S0002_FS_SEITE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_1_1",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_1",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_2",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_3",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_1_1",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_1_2",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_1",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_2",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_3",
+        "...+463"
+      ],
+      "ue_ids": [
+        "ORG-970b270eb1e8-00163_S0002_FS_SEITE_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_1_1_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_1_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_2_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_1_2_3_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_1_1_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_1_2_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_1_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_2_UE",
+        "ORG-970b270eb1e8-00163_S0002_FS_WORT_2_2_3_UE",
+        "...+463"
+      ],
+      "ocr_quelle": "KM13"
+    },
+    "ORG-970b270eb1e8-00163_S0003": {
+      "seite": 3,
+      "ocr_status": "OK",
+      "fundstellen_ids": [
+        "ORG-970b270eb1e8-00163_S0003_FS_SEITE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_1",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_2",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_3",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_4",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_5",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_6",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_7",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_2_1_1",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_3_1_1",
+        "...+18"
+      ],
+      "ue_ids": [
+        "ORG-970b270eb1e8-00163_S0003_FS_SEITE_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_1_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_2_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_3_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_4_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_5_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_6_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_1_1_7_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_2_1_1_UE",
+        "ORG-970b270eb1e8-00163_S0003_FS_WORT_3_1_1_UE",
+        "...+18"
+      ],
+      "ocr_quelle": "KM13"
+    }
+  },
+  "merkmale": {
+    "dokumentart": "unbekannt",
+    "arbeitgeber": null,
+    "arbeitnehmer": null,
+    "mandant": null,
+    "arbeitsbeginn": null,
+    "vertragsdatum": null,
+    "kuendigungsdatum": null,
+    "orte": [],
+    "aktenzeichen": [],
+    "sprachen": [],
+    "ocr_qualitaet": "unsicher"
+  }
+}

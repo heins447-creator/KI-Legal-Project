@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALIN -- Anwaltsansicht -- UI01_V1</title>
+<link rel="stylesheet" href="ui01.css">
+</head>
+<body>
+<header>
+  <h1>ALIN -- Anwaltliche Dokumentenvorlage V1</h1>
+  <div class="header-info" id="header-info">
+    <span id="header-dokument">ORG-970b270eb1e8-00163</span>
+    <span id="header-av">Arbeitsvertrag: unsicher</span>
+    <span id="header-seiten">Seiten: 3</span>
+    <span class="uebersetzung-status" id="header-uebersetzung">Arbeitsuebersetzung noch nicht aktiv - OCR-Arbeitsgrundlage</span>
+  </div>
+</header>
+
+<main>
+  <section id="original-panel">
+    <h2>Originalansicht</h2>
+    <div id="page-nav"><button class="page-btn" data-seite="1" data-sid="ORG-970b270eb1e8-00163_S0001">Seite 1</button>
+<button class="page-btn" data-seite="2" data-sid="ORG-970b270eb1e8-00163_S0002">Seite 2</button>
+<button class="page-btn" data-seite="3" data-sid="ORG-970b270eb1e8-00163_S0003">Seite 3</button>
+</div>
+    <div id="original-view">
+      <p>Original-/Arbeitsabbildung:</p>
+      <div id="image-container">
+        <p class="placeholder">Keine Originalabbildung gefunden - Pfade aus KM12 wurden nicht aufgeloest</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeits-panel">
+    <h2>Arbeitsansicht (OCR + Fundstellen)</h2>
+    <div class="uebersetzung-banner" id="uebersetzung-banner">
+      Arbeitsuebersetzung noch nicht aktiv -- OCR-Arbeitsgrundlage
+    </div>
+    <div id="ocr-content">
+      <h3>OCR-Textstellen</h3>
+      <div id="fundstellen-container"></div>
+      <p class="hint" id="fundstellen-count">Fundstellen: 0</p>
+    </div>
+  </section>
+</main>
+
+<section id="features-panel">
+  <h2>Dokumentmerkmale <span class="hint">(Vorschlag aus OCR -- anwaltlich zu pruefen)</span></h2>
+  <table id="merkmale-table">
+    <tr><th>Merkmal</th><th>Wert</th></tr>
+<tr><td>dokumentart</td><td contenteditable="true" class="merkmal-edit">unbekannt</td></tr>
+<tr><td>arbeitgeber</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>arbeitnehmer</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>mandant</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>arbeitsbeginn</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>vertragsdatum</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>kuendigungsdatum</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>orte</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>aktenzeichen</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>sprachen</td><td contenteditable="true" class="merkmal-edit">-</td></tr>
+<tr><td>ocr_qualitaet</td><td contenteditable="true" class="merkmal-edit">unsicher</td></tr>
+
+</table>
+  <div class="merkmal-actions">
+    <button onclick="uebernehmeMerkmale()">Uebernehmen</button>
+    <button onclick="verwerfeMerkmale()">Verwerfen</button>
+  </div>
+</section>
+
+<section id="notizen-panel">
+  <h2>Notizen</h2>
+  <div class="notiz-field">
+    <label>Anwaltliche Notiz:</label>
+    <button class="mic-btn" onclick="startDiktat('anwaltliche_notiz')" title="Diktat starten">&#x1F399;</button>
+    <textarea id="anwaltliche_notiz" rows="6" placeholder="Freie anwaltliche Notiz..."></textarea>
+    <div class="mic-status" id="mic-status-notiz"></div>
+  </div>
+  <div class="notiz-field">
+    <label>Arbeitsauftrag an Sekretariat:</label>
+    <button class="mic-btn" onclick="startDiktat('arbeitsauftrag')" title="Diktat starten">&#x1F399;</button>
+    <textarea id="arbeitsauftrag" rows="4" placeholder="z.B. Akte anlegen, Uebersetzung pruefen, fehlende Anlagen nachfordern..."></textarea>
+    <div class="mic-status" id="mic-status-auftrag"></div>
+  </div>
+</section>
+
+<section id="entscheidung-panel">
+  <h2>Mandatsentscheidung</h2>
+  <div class="entscheidung-optionen">
+    <label><input type="radio" name="mandat" value="annehmen"> Mandat annehmen</label>
+    <label><input type="radio" name="mandat" value="ablehnen"> Mandat ablehnen</label>
+    <label><input type="radio" name="mandat" value="zurueckstellen"> Zurueckstellen / weitere Pruefung</label>
+    <label><input type="radio" name="mandat" value="zuordnen"> Bestehender Akte zuordnen</label>
+  </div>
+  <div class="notiz-field">
+    <label>Begruendung:</label>
+    <textarea id="begruendung" rows="4" placeholder="Begruendung zur Mandatsentscheidung..."></textarea>
+  </div>
+  <button id="save-btn" onclick="speichereEntscheidung()">Entscheidung speichern</button>
+  <div id="save-status"></div>
+</section>
+
+<footer>
+  <p>ALIN -- KI_Legal_Project | UI01 Anwaltsansicht V1 | Keine Rechtsberatung -- Arbeitsansicht zur anwaltlichen Pruefung</p>
+</footer>
+
+<script src="ui01.js"></script>
+</body>
+</html>

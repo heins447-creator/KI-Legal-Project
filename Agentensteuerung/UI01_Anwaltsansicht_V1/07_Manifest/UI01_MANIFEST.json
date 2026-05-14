@@ -1,0 +1,23 @@
+﻿{
+  "modul": "UI01",
+  "version": "1.0.0",
+  "zeitpunkt": "2026-05-14T17:13:21.875078+00:00",
+  "dokument": "ORG-970b270eb1e8-00163",
+  "arbeitsvertrag": "unsicher",
+  "seiten": 3,
+  "fundstellen": 0,
+  "sprachen": [],
+  "merkmale": {
+    "dokumentart": "unbekannt",
+    "arbeitgeber": null,
+    "arbeitnehmer": null,
+    "mandant": null,
+    "arbeitsbeginn": null,
+    "vertragsdatum": null,
+    "kuendigungsdatum": null,
+    "orte": [],
+    "aktenzeichen": [],
+    "sprachen": [],
+    "ocr_qualitaet": "unsicher"
+  }
+}
