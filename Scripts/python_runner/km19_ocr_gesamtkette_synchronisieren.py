@@ -229,7 +229,7 @@ def schreibe_alle_ausgaben(config, bereich, ist, sync_log, fehler, warnungen, vg
         "originale_veraendert": False, "datenbank_aenderungen": False,
         "uebersetzung_durchgefuehrt": False, "rechtsbewertung_durchgefuehrt": False,
         "internet_verwendet": False, "installation_durchgefuehrt": False, "produktivfreigabe": False,
-        "naechster_empfohlener_auftrag": "KM13b – Tesseract-Sprachpaket-Abgleich (24 EU-Sprachen fehlen)"}
+        "naechster_empfohlener_auftrag": "KM20 – Quellen- und Fundstellenkonsolidierung nach vollständiger OCR-Kette (25 Sprachen in tessdata, KM13b abgeschlossen)"}
     save_json(bereich / "02_Status" / "KM19_STATUS.json", status_daten)
     manifest_daten = {"modul": "KM19 – OCR-Gesamtkette Synchronisieren",
         "version": "km19_ocr_gesamtkette_synchronisieren_v1", "zeitpunkt": now(),
