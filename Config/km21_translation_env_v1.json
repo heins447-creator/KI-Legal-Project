@@ -1,0 +1,76 @@
+﻿{
+  "modul": "KM21",
+  "version": "1.0.0",
+  "beschreibung": "Lokale Uebersetzungsumgebung vorbereiten und inventarisieren",
+  "projektwurzel": "I:/KI_Legal_Project",
+  "pfade": {
+    "translation_root": "Tools/Translation",
+    "argos_dir": "Tools/Translation/Argos",
+    "models_dir": "Tools/Translation/Models",
+    "packages_dir": "Tools/Translation/Packages",
+    "test_dir": "Tools/Translation/Test",
+    "logs_dir": "Tools/Translation/Logs",
+    "cache_dir": "Tools/Translation/Cache"
+  },
+  "sprachrichtungen_interessant": [
+    {
+      "quellsprache": "sv",
+      "zielsprache": "de",
+      "beschreibung": "Schwedisch → Deutsch"
+    },
+    {
+      "quellsprache": "en",
+      "zielsprache": "de",
+      "beschreibung": "Englisch → Deutsch"
+    },
+    {
+      "quellsprache": "pt",
+      "zielsprache": "de",
+      "beschreibung": "Portugiesisch → Deutsch"
+    }
+  ],
+  "test_saetze": [
+    {
+      "quellsprache": "sv",
+      "text": "Detta aer ett testdokument."
+    },
+    {
+      "quellsprache": "en",
+      "text": "This is a test document."
+    },
+    {
+      "quellsprache": "pt",
+      "text": "Este e um documento de teste."
+    }
+  ],
+  "km15_schnittstelle": {
+    "eingabe": {
+      "uebersetzungseinheit_id": "string",
+      "quellsprache": "string (ISO 639-1)",
+      "zielsprache": "string (ISO 639-1)",
+      "text": "string"
+    },
+    "ausgabe": {
+      "uebersetzung_text": "string",
+      "modell": "string",
+      "status": "erfolg|modell_nicht_verfuegbar|sprachpaar_nicht_verfuegbar|technische_stoerung|uebersetzung_deaktiviert",
+      "confidence": "float|null",
+      "fehlermeldung": "string|null"
+    }
+  },
+  "grenzen": {
+    "keine_installation": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_api": true,
+    "keine_produktivuebersetzung": true,
+    "keine_rechtsbewertung": true,
+    "keine_datenbankaenderung": true,
+    "keine_originalaenderung": true
+  },
+  "selbsttest": {
+    "dummy_daten": true,
+    "max_dummy_zeichen": 200,
+    "keine_echten_akten": true
+  }
+}
