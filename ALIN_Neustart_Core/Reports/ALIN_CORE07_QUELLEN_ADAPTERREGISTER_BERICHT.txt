@@ -1,0 +1,73 @@
+======================================================================
+CORE-07 – Quellen- und Adapterregister Befüllung und Abgleich
+======================================================================
+Datum: 2026-05-16T06:12:00.000000+00:00
+Agent: ALIN_Core_Build_Agent
+
+1. Anzahl Quellen/Adapter
+   Vorher: 1
+   Nachher: 15
+   Zuwachs: 14
+
+2. Verteilung nach Quellentyp
+   Gesetz:              3
+   Verordnung:          0
+   Gerichtsentscheidung: 4
+   Fachliteratur:       1
+   Datenbank:           4
+   Sonstiges:           3
+
+3. Verteilung nach Land
+   EU: 7
+   DE: 3
+   SE: 5
+
+4. Verteilung nach Sprache
+   de:           4
+   sv:           5
+   mehrsprachig: 6
+
+5. Online-Status
+   Verfuegbar:      15
+   Eingeschraenkt:  0
+   Nicht verfuegbar: 0
+   Unbekannt:       0
+
+6. Offline-Cache-Status
+   Aktuell:          0
+   Veraltet:         0
+   Fehlt:            0
+   Nicht vorgesehen: 15
+
+7. Dry-Run-Status
+   Moeglich:     0
+   Nicht moeglich: 0
+   Ungetestet:   15
+
+8. Freigabe
+   Freigegeben (darf verwendet werden): 0
+   Gesperrt (darf nicht verwendet werden): 15
+
+9. Adapter (15)
+   - CCBE_Adapter
+   - DE_BAG_Adapter
+   - DE_BGH_Adapter
+   - DE_Gesetze_Adapter
+   - DGT_TM_Adapter
+   - ECLI_Adapter
+   - EU_Justizportal_Adapter
+   - EU_R_Lex_Adapter
+   - EuroVoc_Adapter
+   - IATE_Adapter
+   - SE_Advokatsamfundet_Adapter
+   - SE_Arbetsdomstolen_Adapter
+   - SE_Domstolsverket_Adapter
+   - SE_Lag_Adapter
+   - SE_Medlingsinstitutet_Adapter
+
+10. Gesamtergebnis
+      Quellen-Adapterregister: OK
+      Altbestand-Schnittstellen: OK
+      Nächster sinnvoller Auftrag: CORE-08 – Skillregister vervollstaendigen
+
+======================================================================
