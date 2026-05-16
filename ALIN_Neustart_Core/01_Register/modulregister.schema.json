@@ -8,7 +8,7 @@
     "schema_version": {
       "type": "string",
       "description": "Version dieses Schemas",
-      "enum": ["1.0.0"]
+      "enum": ["1.1.0"]
     },
     "register_id": {
       "type": "string",
@@ -26,16 +26,29 @@
           "modul_id",
           "modulname",
           "pfad",
+          "modultyp",
+          "bereich",
+          "kurzbeschreibung",
           "version",
-          "zweck",
-          "eingabe_schema",
-          "ausgabe_schema",
+          "version_status",
+          "eingabe",
+          "ausgabe",
+          "benoetigte_tools",
+          "benoetigte_ressourcen",
+          "benoetigte_skills",
+          "benoetigte_quellen",
+          "abhaengigkeiten",
+          "liefert_an",
           "status",
-          "letzter_test",
-          "abhaengig_von",
-          "liefert",
+          "teststatus",
           "darf_aufgerufen_werden",
-          "warnungen"
+          "darf_originale_veraendern",
+          "darf_datenbank_aendern",
+          "darf_online_gehen",
+          "darf_rechtsbewerten",
+          "darf_beweiswuerdigen",
+          "warnungen",
+          "naechster_pruefbedarf"
         ],
         "properties": {
           "modul_id": {
@@ -51,50 +64,109 @@
             "type": "string",
             "description": "Relativer Pfad zum Modul im Projekt"
           },
+          "modultyp": {
+            "type": "string",
+            "description": "Art des Moduls",
+            "enum": ["python_runner", "powershell_starter", "datenbank_migration", "windows_app", "pruefdatei", "patch", "unbekannt"]
+          },
+          "bereich": {
+            "type": "string",
+            "description": "Fachlicher Bereich des Moduls",
+            "enum": ["posteingang", "vorzimmer", "anwalt", "agent", "ocr", "sprache", "quellen", "ui", "schnittstellen", "healthcheck", "windows_app", "register", "backup", "test", "unbekannt"]
+          },
+          "kurzbeschreibung": {
+            "type": "string",
+            "description": "Kurzbeschreibung der Aufgabe"
+          },
           "version": {
             "type": "string",
             "description": "Semantische Version des Moduls"
           },
-          "zweck": {
+          "version_status": {
             "type": "string",
-            "description": "Kurzbeschreibung der Aufgabe"
+            "description": "Status der Version",
+            "enum": ["fest", "schaetzung", "unbekannt", "zu_pruefen"]
           },
-          "eingabe_schema": {
+          "eingabe": {
             "type": "string",
-            "description": "Name des Eingabe-Schemas in 03_Schnittstellen"
+            "description": "Beschreibung der erwarteten Eingabe"
           },
-          "ausgabe_schema": {
+          "ausgabe": {
             "type": "string",
-            "description": "Name des Ausgabe-Schemas in 03_Schnittstellen"
+            "description": "Beschreibung der erzeugten Ausgabe"
+          },
+          "benoetigte_tools": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der tool_ids, die dieses Modul benoetigt"
+          },
+          "benoetigte_ressourcen": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der ressourcen_ids, die dieses Modul benoetigt"
+          },
+          "benoetigte_skills": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der skill_ids, die dieses Modul benoetigt"
+          },
+          "benoetigte_quellen": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der quellen_ids, die dieses Modul benoetigt"
+          },
+          "abhaengigkeiten": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der modul_ids, von denen dieses Modul abhaengt"
+          },
+          "liefert_an": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Liste der modul_ids, die von diesem Modul abhaengen"
           },
           "status": {
             "type": "string",
             "enum": ["produktiv", "testbar", "entwicklung", "revision", "gesperrt", "ersetzt"],
             "description": "Betriebsstatus des Moduls"
           },
-          "letzter_test": {
+          "teststatus": {
             "type": "string",
-            "format": "date-time",
-            "description": "Zeitstempel des letzten erfolgreichen Tests"
-          },
-          "abhaengig_von": {
-            "type": "array",
-            "items": { "type": "string" },
-            "description": "Liste der modul_ids, von denen dieses Modul abhängt"
-          },
-          "liefert": {
-            "type": "array",
-            "items": { "type": "string" },
-            "description": "Liste der modul_ids, die von diesem Modul abhängen"
+            "enum": ["getestet", "teilweise_getestet", "ungeprueft", "fehlgeschlagen", "manuell_pruefen"],
+            "description": "Teststatus des Moduls"
           },
           "darf_aufgerufen_werden": {
             "type": "boolean",
             "description": "Ob das Modul aktuell aufgerufen werden darf"
           },
+          "darf_originale_veraendern": {
+            "type": "boolean",
+            "description": "Ob das Modul Originaldateien veraendern darf"
+          },
+          "darf_datenbank_aendern": {
+            "type": "boolean",
+            "description": "Ob das Modul Datenbankschemata oder -daten aendern darf"
+          },
+          "darf_online_gehen": {
+            "type": "boolean",
+            "description": "Ob das Modul eine Internetverbindung benoetigt oder aufbauen darf"
+          },
+          "darf_rechtsbewerten": {
+            "type": "boolean",
+            "description": "Ob das Modul rechtliche Bewertungen abgeben darf"
+          },
+          "darf_beweiswuerdigen": {
+            "type": "boolean",
+            "description": "Ob das Modul Beweise wuerdigen darf"
+          },
           "warnungen": {
             "type": "array",
             "items": { "type": "string" },
             "description": "Aktive Warnungen zu diesem Modul"
+          },
+          "naechster_pruefbedarf": {
+            "type": "string",
+            "description": "Beschreibung des naechsten Pruefbedarfs"
           }
         }
       }

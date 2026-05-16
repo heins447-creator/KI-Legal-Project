@@ -1,0 +1,44 @@
+============================================================
+CORE-09 – PRÜFBERICHT MODULREGISTER
+============================================================
+Zeitstempel: 2026-05-16T08:01:47.564987+00:00
+Geprüfte Module: 163
+
+ZUSAMMENFASSUNG
+  Fehler:   0
+  Warnungen: 1
+  Infos:    2
+
+STATISTIKEN
+  Module mit Beschreibung: 162 / 163
+  Module mit Version: 0 / 163
+  Module mit Abhängigkeiten: 86 / 163
+  Gesperrte Module: 3
+  Wiederverwendbare Module: 110
+  Manueller Prüfbedarf: 9
+
+MODULE NACH BEREICHEN
+  Allgemein: 1
+  agent: 26
+  anwalt: 18
+  ocr: 22
+  posteingang: 26
+  quellen: 8
+  register: 2
+  schnittstellen: 18
+  sprache: 10
+  ui: 15
+  unbekannt: 4
+  vorzimmer: 10
+  windows_app: 3
+
+WARNUNGEN
+  [WARNUNG] [check_ui01_anwaltsansicht_v1] Abhängigkeit 'ui01_anwaltsansicht' existiert nicht im Register
+
+INFOS
+  [INFO] Schema-Version korrekt: 1.1.0
+  [INFO] Alle 163 modul_ids sind eindeutig.
+
+============================================================
+ENDE PRÜFBERICHT
+============================================================

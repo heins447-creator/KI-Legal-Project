@@ -1,0 +1,73 @@
+============================================================
+CORE-09 – MODULREGISTER VERVOLLSTÄNDIGUNG BERICHT
+============================================================
+Zeitstempel: 2026-05-16T07:53:08.831659+00:00
+
+1. ANZAHL MODULE VORHER/NACHHER
+   Vorher:  163
+   Nachher: 163
+
+2. ANZAHL MODULE MIT BESCHREIBUNG
+   162 von 163
+   Lücken: 1
+
+3. ANZAHL MODULE MIT VERSION
+   0 von 163
+
+4. ANZAHL MODULE MIT ABHÄNGIGKEITEN
+   86 von 163
+
+5. MODULE NACH BEREICHEN
+   Allgemein: 1
+   agent: 26
+   anwalt: 18
+   ocr: 22
+   posteingang: 26
+   quellen: 8
+   register: 2
+   schnittstellen: 18
+   sprache: 10
+   ui: 15
+   unbekannt: 4
+   vorzimmer: 10
+   windows_app: 3
+
+6. GESPERRTE MODULE
+   Anzahl: 5
+   - _patch_css (patch, produktiv)
+   - _patch_html (patch, produktiv)
+   - WINAPP_APP.XAML (windows_app, entwicklung)
+   - WINAPP_ASSEMBLYINFO (windows_app, entwicklung)
+   - WINAPP_MAINWINDOW.XAML (windows_app, entwicklung)
+
+7. WIEDERVERWENDBARE MODULE
+   Anzahl: 110
+   (python_runner und powershell_starter, die aufgerufen werden dürfen)
+
+8. MODULE MIT MANUELLEM PRÜFBEDARF
+   Anzahl: 9
+   - Invoke_Aider_Local (manuell_pruefen)
+   - Run_ALIN_SafeJob (manuell_pruefen)
+   - Update_External_Tools_Library (manuell_pruefen)
+   - 011_language_context_v2 (manuell_pruefen)
+   - _patch_css (manuell_pruefen)
+   - _patch_html (manuell_pruefen)
+   - WINAPP_APP.XAML (ungeprueft)
+   - WINAPP_ASSEMBLYINFO (ungeprueft)
+   - WINAPP_MAINWINDOW.XAML (ungeprueft)
+
+9. WICHTIGSTE LÜCKEN
+   a) Beschreibungen teilweise generisch – manuelle Fachprüfung empfohlen.
+   b) Abhängigkeiten teilweise heuristisch ermittelt – Kreuzprüfung nötig.
+   c) Tools/Ressourcen/Skills/Quellen teilweise geschätzt.
+   d) Windows-App-Module noch in Entwicklung, nicht aufrufbar.
+   e) Patch-Module (_patch_*) nur manuell aufrufbar.
+
+10. NÄCHSTER SINNVOLLER AUFTRAG
+    CORE-10 – Modulregister-Abhängigkeiten validieren und testen.
+    Oder: Modulregister mit tatsächlichen Datei-Inhalten abgleichen
+    (Inhaltsanalyse statt nur Dateinamen).
+
+============================================================
+ENDE BERICHT
+============================================================

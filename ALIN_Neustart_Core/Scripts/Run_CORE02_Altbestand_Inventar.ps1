@@ -25,12 +25,12 @@ New-Item -ItemType Directory -Force -Path "$CoreDir\Config" | Out-Null
 # Python-Interpreter finden
 $PyExe = $null
 $PyCandidates = @(
-    (Join-Path $env:LOCALAPPDATA "Programs\Python\Python313\python.exe"),
+    (Join-Path $env:LOCALAPPDATA "Programs\Python\Python312\python.exe"),
     (Join-Path $env:LOCALAPPDATA "Programs\Python\Python312\python.exe"),
     (Join-Path $env:LOCALAPPDATA "Programs\Python\Python311\python.exe"),
     (Join-Path $env:LOCALAPPDATA "Microsoft\WindowsApps\python.exe"),
     (Join-Path $env:LOCALAPPDATA "Microsoft\WindowsApps\python3.exe"),
-    "C:\Python313\python.exe",
+    "I:\KI_Legal_Project\Tools\Python312\python.exe",
     "C:\Python312\python.exe",
     "C:\Python311\python.exe"
 )
