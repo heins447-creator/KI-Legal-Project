@@ -351,8 +351,8 @@ footer {{
       <span class="status-label status-tuerschwelle">Orientierungsübersetzung</span>
       <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:8px;">
         Nicht endgültig – anwaltlich zu prüfen.
-        <br><strong>Argos:</strong> {status.get("argos_translate", {}).get("status", "unbekannt")} (gesperrt)
-        <br><strong>DEEPL:</strong> {status.get("deepl_api", {}).get("status", "unbekannt")} (gesperrt)
+        <br><strong>Argos:</strong> {status.get("argos_translate", {}).get("status", "unbekannt")}
+        <br><strong>DEEPL:</strong> {status.get("deepl_api", {}).get("status", "unbekannt")}
         <br>Keine Cloud-Übersetzung aktiv.
       </p>
     </div>
