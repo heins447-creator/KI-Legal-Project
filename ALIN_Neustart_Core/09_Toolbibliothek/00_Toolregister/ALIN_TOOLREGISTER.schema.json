@@ -31,11 +31,31 @@
             "type": "string",
             "enum": ["ocr", "pdf", "bildverarbeitung", "uebersetzung", "windows_app", "datenbank", "sicherheit", "sonstiges"]
           },
+          "toolgruppe": { "type": "string", "description": "Logische Gruppierung, z. B. OCR, Runtime, Agent" },
+          "zweck": { "type": "string", "description": "Kurzbeschreibung der Aufgabe" },
           "pfad": { "type": "string", "description": "Relativer oder absoluter Pfad zur ausführbaren Datei" },
           "installationsstatus": {
             "type": "string",
             "enum": ["installiert", "nicht_installiert", "veraltet", "unbekannt"]
           },
+          "standardtool_ja_nein": { "type": "boolean", "description": "Ist dies das Standardtool für seine Kategorie?" },
+          "ersatztool_ja_nein": { "type": "boolean", "description": "Ist dies ein Ersatztool?" },
+          "version_status": {
+            "type": "string",
+            "enum": ["bekannt", "unbekannt", "zu_pruefen"],
+            "description": "Status der Versionsermittlung"
+          },
+          "healthcheck_befehl": { "type": "string", "description": "Befehl zur Versions-/Integritätsprüfung" },
+          "healthcheck_status": {
+            "type": "string",
+            "enum": ["ungeprueft", "bestanden", "fehlgeschlagen", "nicht_verfuegbar"]
+          },
+          "update_id": { "type": "string", "description": "Verweis auf Update-Register" },
+          "lizenz_id": { "type": "string", "description": "Verweis auf Lizenzregister" },
+          "offline_verfuegbar": { "type": "boolean" },
+          "online_erforderlich": { "type": "boolean" },
+          "darf_originale_veraendern": { "type": "boolean", "description": "Darf das Tool Originaldateien verändern? Immer false." },
+          "darf_von_modulen_verwendet_werden": { "type": "boolean", "description": "Darf von Fachmodulen verwendet werden?" },
           "letzte_pruefung": { "type": "string", "format": "date-time" },
           "darf_verwendet_werden": { "type": "boolean" },
           "warnungen": { "type": "array", "items": { "type": "string" } }
