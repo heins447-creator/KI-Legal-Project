@@ -1,0 +1,282 @@
+======================================================================
+CORE-10a FINDINGS-PRIORISIERUNG UND REPARATURPLAN
+Erstellt: 2026-05-16T09:14:00Z
+Auftrag:  Findings aus CORE-10 priorisieren, Reparaturauftraege ableiten
+Hinweis:  KEINE Registeraenderungen – nur Analyse und Planung
+======================================================================
+
+ZUSAMMENFASSUNG
+----------------------------------------------------------------------
+Gesamtfindings aus CORE-10: 551
+P0 (Kritisch):     310 Findings
+P1 (Hoch):          16 Findings
+P2 (Mittel):        96 Findings
+P3 (Niedrig):       31 Findings
+Summe:             453 Findings (98 aus P01/P05/P11/P12 = OK)
+
+======================================================================
+P0: KRITISCH – Sofortreparatur erforderlich. Systemkonsistenz gefaehrdet.
+======================================================================
+
+  Pruefung: P02 – Fehlende Abhaengigkeiten
+  Anzahl:   1 Finding
+  Problem:  Modul referenziert nicht-existentes Abhaengigkeitsmodul.
+            Laufzeitfehler wahrscheinlich.
+  Risiko:   HOCH – Modul kann nicht ausgefuehrt werden, da Abhaengigkeit fehlt.
+  Folge:    CORE-10a-P02: Abhaengigkeit korrigieren – entweder
+            ui01_anwaltsansicht nachinventarisieren oder Referenz entfernen.
+  Anwalt:   Nein
+  Details:
+    - check_ui01_anwaltsansicht_v1 referenziert unbekanntes Modul 'ui01_anwaltsansicht'
+
+  Erlaubte Aenderungen:   Modulregister.json: abhaengigkeiten korrigieren
+                          oder fehlendes Modul nachinventarisieren.
+  Verbotene Aenderungen:  Keine Aenderung an Quellcode der referenzierten
+                          (nicht existenten) Module.
+
+----------------------------------------------------------------------
+
+  Pruefung: P03 – Widerspruechliche Modulnamen
+  Anzahl:   123 Findings (20 Module betroffen)
+  Problem:  20 Module haben SQL-Code als modulname (z.B. 'SELECT table_name',
+            'SELECT COUNT(*)'). CORE-09-Heuristik hat SQL-Fragmente statt
+            Dateinamen extrahiert.
+  Risiko:   HOCH – Registerabfragen nach Modulnamen liefern falsche Ergebnisse.
+            Konsistenzpruefungen werden unbrauchbar.
+  Folge:    CORE-10a-P03: Heuristik in CORE-09 korrigieren
+            (determine_modulname) und 20 Modulnamen im Register bereinigen.
+  Anwalt:   Nein
+  Details:
+    SQL-Namen gefunden: 'SELECT table_name' (17 Module), 'SELECT COUNT(*)' (3 Module)
+    Betroffene Module (Auswahl):
+      - 002_apply_posteingang_schema
+      - 003_verify_posteingang_schema
+      - 012_posteingang_sprachkontext_gate_v2
+      - 013_kontrolle_posteingang_nach_bereinigung
+      - 013_posteingang_db_altlasten_cleanup
+      - 014_posteingang_clean_verify
+      - 020_posteingang_gesamtstatus_v1
+      - 021_posteingang_db_dateien_auswahl_testlauf_v1
+      - 025_schweden_arbeitsrecht_sprachkontext_korrektur_v1
+      - 032_check_dokumentsprachprofil_v1
+      - 033_posteingang_schlusskontrolle_v2
+      - 034_posteingang_endabnahme_v2
+      - 036_check_vorzimmer_kommunikationsparameter_v1
+      - 037_posteingang_endabnahme_v3
+      - 039_check_anwaltvorlage_grundmodul_v1
+      - 041_check_agentenbearbeitung_grundmodul_v1
+      - 043_check_agent_dokumentart_erkennen_v1
+      - 045_check_agent_sprache_uebersetzung_v1
+      - 047_check_agent_sachverhaltsbezug_v1
+
+  Erlaubte Aenderungen:   Modulregister.json: modulname korrigieren auf Basis
+                          des Dateinamens (ohne Pfad/Endung).
+  Verbotene Aenderungen:  Keine Aenderung an den Python-Quelldateien selbst
+                          (nur Register-Metadaten).
+
+----------------------------------------------------------------------
+
+  Pruefung: P10 – Querregister-Verknuepfungen
+  Anzahl:   186 Findings (35 Module, 8 fehlende Ressourcen)
+  Problem:  186 Verweise auf Ressourcen, die im ressourcenregister.json nicht
+            existieren. TESS_SPA, TESS_NLD, TESS_POL (Tesseract-Sprachpakete)
+            und ARGOS_DE_* (Argos-Translate-Sprachpaare) fehlen.
+  Risiko:   MITTEL-HOCH – Module koennen nicht ausgefuehrt werden, wenn
+            Ressourcen fehlen. Offline-Betrieb auf Gerichtslaptop
+            beeintraechtigt.
+  Folge:    CORE-10a-P10: Ressourcenregister vervollstaendigen
+            (TESS_* und ARGOS_DE_*) oder Modulregister bereinigen.
+  Anwalt:   Nein
+  Details:
+    Fehlende Ressourcen:
+      - TESS_SPA, TESS_NLD, TESS_POL (Tesseract OCR Sprachpakete)
+      - ARGOS_DE_SV, ARGOS_DE_ES, ARGOS_DE_NL, ARGOS_DE_PL, ARGOS_DE_FR
+        (Argos Translate Sprachpaare)
+    Betroffene Bereiche: OCR-Pipeline (KM13-KM19), Sprachuebersetzung
+                         (KM15, KM21), Agenten-Sprachkontext
+
+  Erlaubte Aenderungen:   Ressourcenregister.json: Fehlende Ressourcen
+                          nachinventarisieren ODER Modulregister: Verweise
+                          entfernen, wenn Ressourcen nicht mehr benoetigt.
+  Verbotene Aenderungen:  Keine Installation tatsaechlicher Tesseract/Argos-
+                          Pakete (nur Register-Eintragung).
+
+======================================================================
+P1: HOCH – Naechster Sprint. Funktionale Luecken, keine sofortige Gefaehrdung.
+======================================================================
+
+  Pruefung: P09 – Uebergaben ohne Schema-Abdeckung
+  Anzahl:   16 Findings (16 Module betroffen)
+  Problem:  16 Module liefern Daten an andere Module, aber ihr Bereich passt
+            zu keinem der 8 definierten Schnittstellen-Schemas. Neue
+            Uebergaben (vorzimmer, agent, quellen, sprache, ui) sind nicht
+            abgedeckt.
+  Risiko:   MITTEL – Keine Schema-Validierung moeglich. Datenformat-
+            Inkonsistenzen zwischen Modulen wahrscheinlich.
+  Folge:    CORE-10a-P09: Schnittstellen-Schemas fuer Bereiche 'vorzimmer',
+            'agent', 'quellen', 'sprache', 'ui' erstellen.
+  Anwalt:   Nein
+  Details:
+    Betroffene Module nach Bereich:
+      vorzimmer:  017_vorzimmer_arbeitsliste_v1
+                  018_vorzimmer_entscheidung_v1
+                  035_vorzimmer_kommunikationsparameter_v1
+      agent:      040_agentenbearbeitung_grundmodul_v1
+                  042_agent_dokumentart_erkennen_v1
+                  044_agent_sprache_uebersetzung_v1
+                  046_agent_sachverhaltsbezug_v1
+                  048_agenten_kontext_skill_register_v1
+                  055_agent_handoff_test_harness_v1
+      quellen:    051_quellenkandidaten_eu_se_v1
+                  053_source_adapter_healthcheck_framework_v1
+                  km20_quellen_fundstellen_konsolidierung
+      sprache:    km15_arbeitsuebersetzung_fundstellenbindung
+                  km21_translation_env_prepare
+      ui:         ui02_tuerschwelle_bau
+                  ui03_0_uebergabe_mandantenakte
+                  ui04b_logikpruefung_entscheidung
+
+  Erlaubte Aenderungen:   Neue Schnittstellen-Schemas erstellen
+                          (03_Schnittstellen/) oder Bereichszuordnung
+                          korrigieren.
+  Verbotene Aenderungen:  Keine Aenderung an Modul-Quellcode ohne
+                          begleitende Schema-Aenderung.
+
+======================================================================
+P2: MITTEL – Geplant. Qualitaetsmaengel, Workarounds moeglich.
+======================================================================
+
+  Pruefung: P04/P08 – Platzhalter-Eingaben/Ausgaben und Unklare Schnittstellen
+  Anzahl:   96 Findings (48 Module betroffen)
+  Problem:  48 PowerShell-Starter haben identische Platzhalter-Beschreibungen
+            fuer Eingabe/Ausgabe ('Konfiguration und Umgebungsvariablen' /
+            'Prozess-Start, Log-Datei, Exit-Code'). Keine spezifische
+            Schnittstellenbeschreibung.
+  Risiko:   NIEDRIG-MITTEL – Eingabe/Ausgabe nicht dokumentiert. Wartung und
+            Fehlersuche erschwert.
+  Folge:    CORE-10a-P04: PowerShell-Starter-Eingaben/Ausgaben im Register
+            verfeinern.
+  Anwalt:   Nein
+  Details:
+    Alle 48 PowerShell-Starter in Scripts/ sind betroffen.
+    Beispiele: Invoke_Aider_Local, Run_Agent_*, Run_KM*_AUTOLAUF,
+               UI*_AUTOLAUF, Update_External_Tools_Library
+
+  Erlaubte Aenderungen:   Modulregister.json: eingabe/ausgabe auf spezifische
+                          Parameter erweitern.
+  Verbotene Aenderungen:  Keine Aenderung an PowerShell-Skripten selbst
+                          (nur Register-Metadaten).
+
+======================================================================
+P3: NIEDRIG – Dokumentieren. Informationell, kein Reparaturbedarf.
+======================================================================
+
+  Pruefung: P06 – Datenbank-aendernde Module
+  Anzahl:   18 Findings
+  Problem:  18 Module haben darf_datenbank_aendern=true. Darunter 7
+            python_runner und 11 datenbank_migration.
+  Risiko:   NIEDRIG – Informationell. Kein Fehler, aber wichtig fuer
+            Backup/Restore-Planung.
+  Folge:    Dokumentation aktualisieren: Liste DB-aendernder Module in
+            Backup-Konzept uebernehmen.
+  Anwalt:   Nein
+  Details:
+    python_runner (7):  001_db_schema_audit, 002_apply_posteingang_schema,
+                        003_verify_posteingang_schema,
+                        013_posteingang_db_altlasten_cleanup,
+                        021_posteingang_db_dateien_auswahl_testlauf_v1,
+                        022_posteingang_db_testlauf_auswertung_v1
+    datenbank_migration (11): 001_posteingang_intake_schema,
+                              004_language_context_v2,
+                              005_dokumentsprachprofil_v1,
+                              006_vorzimmer_kommunikationsparameter_v1,
+                              007_anwaltvorlage_grundmodul_v1,
+                              008_agentenbearbeitung_grundmodul_v1,
+                              009_agent_dokumentart_erkennen_v1,
+                              010_agent_sprache_uebersetzung_v1,
+                              011_agent_sachverhaltsbezug_v1,
+                              011_quellenbetreuer_fachanwaltsraster_v1,
+                              012_agenten_kontext_skill_register_v1,
+                              014_source_adapter_healthcheck_framework_v1
+
+  Erlaubte Aenderungen:   Keine (nur Dokumentation).
+  Verbotene Aenderungen:  Keine Aenderung der Berechtigungen ohne
+                          Architektur-Review.
+
+----------------------------------------------------------------------
+
+  Pruefung: P07 – Online-faehige Module
+  Anzahl:   13 Findings
+  Problem:  13 Module haben darf_online_gehen=true. Darunter 5
+            PowerShell-Starter und 8 Python-Module.
+  Risiko:   NIEDRIG – Informationell. Wichtig fuer Offline-Gerichtslaptop-
+            Konfiguration.
+  Folge:    Dokumentation aktualisieren: Liste online-faehiger Module in
+            Offline-Konzept uebernehmen.
+  Anwalt:   Nein
+  Details:
+    PowerShell-Starter (5): Invoke_Aider_Local,
+                            Run_Quellenbetreuer_Fachanwaltsraster,
+                            Run_Quellenkandidaten_EU_SE,
+                            Run_Source_Adapter_Healthcheck_Framework,
+                            Update_External_Tools_Library
+    Python-Module (8):      046_quellenbetreuer_fachanwaltsraster_v1,
+                            047_check_quellenbetreuer_fachanwaltsraster_v1,
+                            051_quellenkandidaten_eu_se_v1,
+                            052_check_quellenkandidaten_eu_se_v1,
+                            053_source_adapter_healthcheck_framework_v1,
+                            054_check_source_adapter_healthcheck_framework_v1,
+                            km20_quellen_fundstellen_konsolidierung,
+                            011_quellenbetreuer_fachanwaltsraster_v1,
+                            014_source_adapter_healthcheck_framework_v1
+
+  Erlaubte Aenderungen:   Keine (nur Dokumentation).
+  Verbotene Aenderungen:  Keine Aenderung der Online-Berechtigungen ohne
+                          Datenschutz-Review.
+
+======================================================================
+REPARATUR-REIHENFOLGE (Vorgeschlagen)
+======================================================================
+
+  1. P03 – Modulnamen bereinigen (20 Module, 123 Findings)
+     Grund: Heisst alle anderen Pruefungen auf (Widersprueche verschwinden)
+
+  2. P02 – Fehlende Abhaengigkeit korrigieren (1 Finding)
+     Grund: Laufzeitfehler verhindern
+
+  3. P10 – Ressourcenregister vervollstaendigen (186 Findings)
+     Grund: Offline-Betrieb sicherstellen
+
+  4. P09 – Schnittstellen-Schemas erstellen (16 Findings)
+     Grund: Datenkonsistenz zwischen Modulen
+
+  5. P04/P08 – Platzhalter verfeinern (96 Findings)
+     Grund: Wartbarkeit verbessern
+
+  6. P06/P07 – Dokumentation aktualisieren (31 Findings)
+     Grund: Informationell, kein Eingriff erforderlich
+
+======================================================================
+ANWALTSPRUEFUNG ERFORDERLICH
+======================================================================
+
+  Keine der 551 Findings erfordert eine Anwaltspruefung.
+  Alle Findings betreffen technische Registerkonsistenz, Metadaten-
+  Qualitaet und Schnittstellenabdeckung. Keine Rechtsberatung,
+  keine Beweiswuerdigung, keine Mandantendaten betroffen.
+
+======================================================================
+HARTE GRENZEN (AGENTS.md)
+======================================================================
+
+  - Keine Aenderungen ausserhalb von I:\KI_Legal_Project
+  - Keine echten Mandantendaten an externe Modelle
+  - Keine API-Schluessel in Git
+  - Keine endgueltige Rechtsberatung
+  - Keine Beweiswuerdigung
+  - Keine Tuerschwelle, bevor Quellenregister, Fachanwaltsraster,
+    Quellenbetreuer, Adapter, Cache und Offline-Fallback stehen.
+
+======================================================================
+ENDE BERICHT
+======================================================================

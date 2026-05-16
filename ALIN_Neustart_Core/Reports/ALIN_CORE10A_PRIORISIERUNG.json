@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-05-16T09:14:00Z",
+  "priorisierung": {
+    "P0": [
+      {
+        "pruefung": "P02",
+        "anzahl": 1,
+        "problem": "Modul referenziert nicht-existentes Abhaengigkeitsmodul. Laufzeitfehler wahrscheinlich.",
+        "risiko": "HOCH – Modul kann nicht ausgefuehrt werden, da Abhaengigkeit fehlt.",
+        "folgeauftrag": "CORE-10a-P02: Abhaengigkeit korrigieren – entweder ui01_anwaltsansicht nachinventarisieren oder Referenz entfernen.",
+        "anwalt_pruefung": false
+      },
+      {
+        "pruefung": "P03",
+        "anzahl": 123,
+        "problem": "20 Module haben SQL-Code als modulname (z.B. 'SELECT table_name', 'SELECT COUNT(*)'). CORE-09-Heuristik hat SQL-Fragmente statt Dateinamen extrahiert.",
+        "risiko": "HOCH – Registerabfragen nach Modulnamen liefern falsche Ergebnisse. Konsistenzpruefungen werden unbrauchbar.",
+        "folgeauftrag": "CORE-10a-P03: Heuristik in CORE-09 korrigieren (determine_modulname) und 20 Modulnamen im Register bereinigen.",
+        "anwalt_pruefung": false
+      },
+      {
+        "pruefung": "P10",
+        "anzahl": 186,
+        "problem": "186 Verweise auf Ressourcen, die im ressourcenregister.json nicht existieren. TESS_SPA, TESS_NLD, TESS_POL (Tesseract-Sprachpakete) und ARGOS_DE_* (Argos-Translate-Sprachpaare) fehlen.",
+        "risiko": "MITTEL-HOCH – Module koennen nicht ausgefuehrt werden, wenn Ressourcen fehlen. Offline-Betrieb auf Gerichtslaptop beeintraechtigt.",
+        "folgeauftrag": "CORE-10a-P10: Ressourcenregister vervollstaendigen (TESS_* und ARGOS_DE_*) oder Modulregister bereinigen.",
+        "anwalt_pruefung": false
+      }
+    ],
+    "P1": [
+      {
+        "pruefung": "P09",
+        "anzahl": 16,
+        "problem": "16 Module liefern Daten an andere Module, aber ihr Bereich passt zu keinem der 8 definierten Schnittstellen-Schemas. Neue Uebergaben (vorzimmer, agent, quellen, sprache, ui) sind nicht abgedeckt.",
+        "risiko": "MITTEL – Keine Schema-Validierung moeglich. Datenformat-Inkonsistenzen zwischen Modulen wahrscheinlich.",
+        "folgeauftrag": "CORE-10a-P09: Schnittstellen-Schemas fuer Bereiche 'vorzimmer', 'agent', 'quellen', 'sprache', 'ui' erstellen.",
+        "anwalt_pruefung": false
+      }
+    ],
+    "P2": [
+      {
+        "pruefung": "P04_P08",
+        "anzahl": 96,
+        "problem": "48 PowerShell-Starter haben identische Platzhalter-Beschreibungen fuer Eingabe/Ausgabe ('Konfiguration und Umgebungsvariablen' / 'Prozess-Start, Log-Datei, Exit-Code'). Keine spezifische Schnittstellenbeschreibung.",
+        "risiko": "NIEDRIG-MITTEL – Eingabe/Ausgabe nicht dokumentiert. Wartung und Fehlersuche erschwert.",
+        "folgeauftrag": "CORE-10a-P04: PowerShell-Starter-Eingaben/Ausgaben im Register verfeinern.",
+        "anwalt_pruefung": false
+      }
+    ],
+    "P3": [
+      {
+        "pruefung": "P06",
+        "anzahl": 18,
+        "problem": "18 Module haben darf_datenbank_aendern=true. Darunter 7 python_runner und 11 datenbank_migration.",
+        "risiko": "NIEDRIG – Informationell. Kein Fehler, aber wichtig fuer Backup/Restore-Planung.",
+        "folgeauftrag": "Dokumentation aktualisieren: Liste DB-aendernder Module in Backup-Konzept uebernehmen.",
+        "anwalt_pruefung": false
+      },
+      {
+        "pruefung": "P07",
+        "anzahl": 13,
+        "problem": "13 Module haben darf_online_gehen=true. Darunter 5 PowerShell-Starter und 8 Python-Module.",
+        "risiko": "NIEDRIG – Informationell. Wichtig fuer Offline-Gerichtslaptop-Konfiguration.",
+        "folgeauftrag": "Dokumentation aktualisieren: Liste online-faehiger Module in Offline-Konzept uebernehmen.",
+        "anwalt_pruefung": false
+      }
+    ]
+  },
+  "analysen": {
+    "P02": {
+      "anzahl": 1,
+      "anzahl_module": 1,
+      "problem": "Modul referenziert nicht-existentes Abhaengigkeitsmodul. Laufzeitfehler wahrscheinlich.",
+      "risiko": "HOCH – Modul kann nicht ausgefuehrt werden, da Abhaengigkeit fehlt.",
+      "erlaubte_aenderungen": "Modulregister.json: abhaengigkeiten korrigieren oder fehlendes Modul nachinventarisieren.",
+      "verbotene_aenderungen": "Keine Aenderung an Quellcode der referenzierten (nicht existenten) Module.",
+      "folgeauftrag": "CORE-10a-P02: Abhaengigkeit korrigieren – entweder ui01_anwaltsansicht nachinventarisieren oder Referenz entfernen.",
+      "anwalt_pruefung": false
+    },
+    "P03": {
+      "anzahl": 123,
+      "anzahl_module": 20,
+      "sql_namen": ["SELECT COUNT(*)", "SELECT table_name"],
+      "problem": "20 Module haben SQL-Code als modulname (z.B. 'SELECT table_name', 'SELECT COUNT(*)'). CORE-09-Heuristik hat SQL-Fragmente statt Dateinamen extrahiert.",
+      "risiko": "HOCH – Registerabfragen nach Modulnamen liefern falsche Ergebnisse. Konsistenzpruefungen werden unbrauchbar.",
+      "erlaubte_aenderungen": "Modulregister.json: modulname korrigieren auf Basis des Dateinamens (ohne Pfad/Endung).",
+      "verbotene_aenderungen": "Keine Aenderung an den Python-Quelldateien selbst (nur Register-Metadaten).",
+      "folgeauftrag": "CORE-10a-P03: Heuristik in CORE-09 korrigieren (determine_modulname) und 20 Modulnamen im Register bereinigen.",
+      "anwalt_pruefung": false
+    },
+    "P10": {
+      "anzahl": 186,
+      "anzahl_ressourcen": 8,
+      "anzahl_module": 35,
+      "fehlende_ressourcen": ["ARGOS_DE_ES", "ARGOS_DE_FR", "ARGOS_DE_NL", "ARGOS_DE_PL", "ARGOS_DE_SV", "TESS_NLD", "TESS_POL", "TESS_SPA"],
+      "problem": "186 Verweise auf Ressourcen, die im ressourcenregister.json nicht existieren. TESS_SPA, TESS_NLD, TESS_POL (Tesseract-Sprachpakete) und ARGOS_DE_* (Argos-Translate-Sprachpaare) fehlen.",
+      "risiko": "MITTEL-HOCH – Module koennen nicht ausgefuehrt werden, wenn Ressourcen fehlen. Offline-Betrieb auf Gerichtslaptop beeintraechtigt.",
+      "erlaubte_aenderungen": "Ressourcenregister.json: Fehlende Ressourcen nachinventarisieren ODER Modulregister: Verweise entfernen, wenn Ressourcen nicht mehr benoetigt.",
+      "verbotene_aenderungen": "Keine Installation tatsaechlicher Tesseract/Argos-Pakete (nur Register-Eintragung).",
+      "folgeauftrag": "CORE-10a-P10: Ressourcenregister vervollstaendigen (TESS_* und ARGOS_DE_*) oder Modulregister bereinigen.",
+      "anwalt_pruefung": false
+    },
+    "P09": {
+      "anzahl": 16,
+      "anzahl_module": 16,
+      "module": ["017_vorzimmer_arbeitsliste_v1", "018_vorzimmer_entscheidung_v1", "035_vorzimmer_kommunikationsparameter_v1", "040_agentenbearbeitung_grundmodul_v1", "042_agent_dokumentart_erkennen_v1", "044_agent_sprache_uebersetzung_v1", "046_agent_sachverhaltsbezug_v1", "048_agenten_kontext_skill_register_v1", "051_quellenkandidaten_eu_se_v1", "053_source_adapter_healthcheck_framework_v1", "055_agent_handoff_test_harness_v1", "km15_arbeitsuebersetzung_fundstellenbindung", "km20_quellen_fundstellen_konsolidierung", "km21_translation_env_prepare", "ui02_tuerschwelle_bau", "ui03_0_uebergabe_mandantenakte", "ui04b_logikpruefung_entscheidung"],
+      "problem": "16 Module liefern Daten an andere Module, aber ihr Bereich passt zu keinem der 8 definierten Schnittstellen-Schemas. Neue Uebergaben (vorzimmer, agent, quellen, sprache, ui) sind nicht abgedeckt.",
+      "risiko": "MITTEL – Keine Schema-Validierung moeglich. Datenformat-Inkonsistenzen zwischen Modulen wahrscheinlich.",
+      "erlaubte_aenderungen": "Neue Schnittstellen-Schemas erstellen (03_Schnittstellen/) oder Bereichszuordnung korrigieren.",
+      "verbotene_aenderungen": "Keine Aenderung an Modul-Quellcode ohne begleitende Schema-Aenderung.",
+      "folgeauftrag": "CORE-10a-P09: Schnittstellen-Schemas fuer Bereiche 'vorzimmer', 'agent', 'quellen', 'sprache', 'ui' erstellen.",
+      "anwalt_pruefung": false
+    },
+    "P04_P08": {
+      "anzahl": 96,
+      "anzahl_module": 48,
+      "module": ["Invoke_Aider_Local", "KM17_AUTOLAUF", "KM17c_EINZELSEITE_KM12b_AUTOLAUF", "KM18_AUTOLAUF", "KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF", "KM19_OCRBETREUER_KORREKTUR_AUTOLAUF", "KM21_TRANSLATION_ENV_AUTOLAUF", "Run_Agent_Dokumentart", "Run_Agent_Handoff_Test_Harness", "Run_Agent_Sachverhaltsbezug", "Run_Agent_Sprache_Uebersetzung", "Run_Agenten_Kontext_Skill_Register", "Run_Agentenbearbeitung", "Run_AI_Coding_Agent_Project_Check", "Run_AI_Coding_Agent_Repair_Loop", "Run_Aktenmaterial_Freigabeliste", "Run_ALIN_SafeJob", "Run_Anwaltvorlage", "Run_Dokumentsprachprofil", "Run_KM10_Schnittstellen_Lueckenabgleich", "Run_KM12_Originalabbildung", "Run_KM12b_Uebergrosse_Arbeitsabbildungen", "Run_KM13_OCR_Pipeline", "Run_KM13b_Tesseract_Sprachpaket_Abgleich", "Run_KM14_Maschinenformat_Fundstellenstruktur", "Run_KM15_Arbeitsuebersetzung_Fundstellenbindung", "Run_KM16_Sprachrouting_Vor_OCR", "Run_KM20_Konsolidierung", "Run_KM20b_Bereinigung", "Run_Posteingang_Menu", "Run_Posteingang_Pipeline", "Run_Posteingang_Schlusskontrolle", "Run_Posteingang_Zentrale", "Run_Quellenbetreuer_Fachanwaltsraster", "Run_Quellenkandidaten_EU_SE", "Run_Source_Adapter_Healthcheck_Framework", "Run_Vorzimmer_Arbeitsliste", "Run_Vorzimmer_Entscheidung", "Run_Vorzimmer_Kommunikationsparameter", "UI01_ANWALTSANSICHT_AUTOLAUF", "ui02_0_bestandsabgleich_tuerschwelle", "ui02_tuerschwelle_bau_starter", "UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF", "UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF", "UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF", "UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF", "UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF", "Update_External_Tools_Library"],
+      "problem": "48 PowerShell-Starter haben identische Platzhalter-Beschreibungen fuer Eingabe/Ausgabe ('Konfiguration und Umgebungsvariablen' / 'Prozess-Start, Log-Datei, Exit-Code'). Keine spezifische Schnittstellenbeschreibung.",
+      "risiko": "NIEDRIG-MITTEL – Eingabe/Ausgabe nicht dokumentiert. Wartung und Fehlersuche erschwert.",
+      "erlaubte_aenderungen": "Modulregister.json: eingabe/ausgabe auf spezifische Parameter erweitern.",
+      "verbotene_aenderungen": "Keine Aenderung an PowerShell-Skripten selbst (nur Register-Metadaten).",
+      "folgeauftrag": "CORE-10a-P04: PowerShell-Starter-Eingaben/Ausgaben im Register verfeinern.",
+      "anwalt_pruefung": false
+    },
+    "P06": {
+      "anzahl": 18,
+      "module": ["001_db_schema_audit", "002_apply_posteingang_schema", "003_verify_posteingang_schema", "013_posteingang_db_altlasten_cleanup", "021_posteingang_db_dateien_auswahl_testlauf_v1", "022_posteingang_db_testlauf_auswertung_v1", "001_posteingang_intake_schema", "004_language_context_v2", "005_dokumentsprachprofil_v1", "006_vorzimmer_kommunikationsparameter_v1", "007_anwaltvorlage_grundmodul_v1", "008_agentenbearbeitung_grundmodul_v1", "009_agent_dokumentart_erkennen_v1", "010_agent_sprache_uebersetzung_v1", "011_agent_sachverhaltsbezug_v1", "011_quellenbetreuer_fachanwaltsraster_v1", "012_agenten_kontext_skill_register_v1", "014_source_adapter_healthcheck_framework_v1"],
+      "problem": "18 Module haben darf_datenbank_aendern=true. Darunter 7 python_runner und 11 datenbank_migration.",
+      "risiko": "NIEDRIG – Informationell. Kein Fehler, aber wichtig fuer Backup/Restore-Planung.",
+      "erlaubte_aenderungen": "Keine (nur Dokumentation).",
+      "verbotene_aenderungen": "Keine Aenderung der Berechtigungen ohne Architektur-Review.",
+      "folgeauftrag": "Dokumentation aktualisieren: Liste DB-aendernder Module in Backup-Konzept uebernehmen.",
+      "anwalt_pruefung": false
+    },
+    "P07": {
+      "anzahl": 13,
+      "module": ["Invoke_Aider_Local", "Run_Quellenbetreuer_Fachanwaltsraster", "Run_Quellenkandidaten_EU_SE", "Run_Source_Adapter_Healthcheck_Framework", "Update_External_Tools_Library", "046_quellenbetreuer_fachanwaltsraster_v1", "047_check_quellenbetreuer_fachanwaltsraster_v1", "051_quellenkandidaten_eu_se_v1", "052_check_quellenkandidaten_eu_se_v1", "053_source_adapter_healthcheck_framework_v1", "054_check_source_adapter_healthcheck_framework_v1", "km20_quellen_fundstellen_konsolidierung", "011_quellenbetreuer_fachanwaltsraster_v1", "014_source_adapter_healthcheck_framework_v1"],
+      "problem": "13 Module haben darf_online_gehen=true. Darunter 5 PowerShell-Starter und 8 Python-Module.",
+      "risiko": "NIEDRIG – Informationell. Wichtig fuer Offline-Gerichtslaptop-Konfiguration.",
+      "erlaubte_aenderungen": "Keine (nur Dokumentation).",
+      "verbotene_aenderungen": "Keine Aenderung der Online-Berechtigungen ohne Datenschutz-Review.",
+      "folgeauftrag": "Dokumentation aktualisieren: Liste online-faehiger Module in Offline-Konzept uebernehmen.",
+      "anwalt_pruefung": false
+    }
+  }
+}
