@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "skillregister",
+  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
+  "eintraege": [
+    {
+      "skill_id": "SKILL_OCR",
+      "skillname": "OCR-Pipeline",
+      "zweck": "Texterkennung in Bildern",
+      "eingabe": "Dokument oder Rohdaten",
+      "ausgabe": "Strukturierte Ergebnisse",
+      "modellabhaengigkeit": "je nach Skill unterschiedlich",
+      "fallback": "manuell",
+      "teststatus": "ungeprueft",
+      "darf_bewerten": false,
+      "darf_beweiswuerdigen": false,
+      "warnungen": [
+        "Durch Altbestandsinventarisierung ermittelt."
+      ]
+    },
+    {
+      "skill_id": "SKILL_DOKUMENTART",
+      "skillname": "Dokumentart erkennen",
+      "zweck": "Erkennt die Art eines Dokuments",
+      "eingabe": "Dokument oder Rohdaten",
+      "ausgabe": "Strukturierte Ergebnisse",
+      "modellabhaengigkeit": "je nach Skill unterschiedlich",
+      "fallback": "manuell",
+      "teststatus": "ungeprueft",
+      "darf_bewerten": false,
+      "darf_beweiswuerdigen": false,
+      "warnungen": [
+        "Durch Altbestandsinventarisierung ermittelt."
+      ]
+    },
+    {
+      "skill_id": "SKILL_SACHVERHALTSBEZUG",
+      "skillname": "Sachverhaltsbezug herstellen",
+      "zweck": "Verknuepft Inhalte mit Sachverhalt",
+      "eingabe": "Dokument oder Rohdaten",
+      "ausgabe": "Strukturierte Ergebnisse",
+      "modellabhaengigkeit": "je nach Skill unterschiedlich",
+      "fallback": "manuell",
+      "teststatus": "ungeprueft",
+      "darf_bewerten": false,
+      "darf_beweiswuerdigen": false,
+      "warnungen": [
+        "Durch Altbestandsinventarisierung ermittelt."
+      ]
+    },
+    {
+      "skill_id": "SKILL_SPRACHE",
+      "skillname": "Sprache erkennen/uebersetzen",
+      "zweck": "Sprachliche Analyse und Uebersetzung",
+      "eingabe": "Dokument oder Rohdaten",
+      "ausgabe": "Strukturierte Ergebnisse",
+      "modellabhaengigkeit": "je nach Skill unterschiedlich",
+      "fallback": "manuell",
+      "teststatus": "ungeprueft",
+      "darf_bewerten": false,
+      "darf_beweiswuerdigen": false,
+      "warnungen": [
+        "Durch Altbestandsinventarisierung ermittelt."
+      ]
+    },
+    {
+      "skill_id": "SKILL_QUELLEN",
+      "skillname": "Quellenbetreuung",
+      "zweck": "Verwaltung und Pruefung von Rechtsquellen",
+      "eingabe": "Dokument oder Rohdaten",
+      "ausgabe": "Strukturierte Ergebnisse",
+      "modellabhaengigkeit": "je nach Skill unterschiedlich",
+      "fallback": "manuell",
+      "teststatus": "ungeprueft",
+      "darf_bewerten": false,
+      "darf_beweiswuerdigen": false,
+      "warnungen": [
+        "Durch Altbestandsinventarisierung ermittelt."
+      ]
+    }
+  ]
+}

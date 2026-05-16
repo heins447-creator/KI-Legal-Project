@@ -1,5 +1,7 @@
 ﻿*
 !.gitignore
+!ALIN_Neustart_Core/
+!ALIN_Neustart_Core/**
 !Windows_App/
 !Windows_App/**
 
@@ -16,6 +18,7 @@ Windows_App/App/*.bak_*
 !Scripts/python_runner/*.py
 !Scripts/*.ps1
 !Projektplanung/
+!Projektplanung/*.md
 !Projektplanung/Quellen/
 !Projektplanung/Quellen/*.md
 !Projektplanung/Auftraege/

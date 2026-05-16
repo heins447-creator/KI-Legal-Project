@@ -1,6 +1,44 @@
 {
   "schema_version": "1.0.0",
-  "beschreibung": "Platzhalter: Altbestand Schnittstellen. Wird in einem späteren Auftrag nur lesend befüllt.",
-  "status": "leer",
-  "hinweis": "Diese Datei wird durch Inventarisierung des Altbestands befüllt. Keine manuelle Bearbeitung."
+  "beschreibung": "Inventar aller Schnittstellen im Altbestand.",
+  "status": "befuellt",
+  "letzte_aktualisierung": "2026-05-16T03:12:35.494680+00:00",
+  "hinweis": "Durch CORE-02 Inventarisierung ermittelt. Keine manuelle Bearbeitung.",
+  "schnittstellen": [
+    {
+      "name": "uebergabe_posteingang_sekretariat",
+      "schema": "uebergabe_posteingang_sekretariat.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "uebergabe_sekretariat_weiche",
+      "schema": "uebergabe_sekretariat_weiche.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "uebergabe_weiche_ocr",
+      "schema": "uebergabe_weiche_ocr.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "uebergabe_weiche_anwalt",
+      "schema": "uebergabe_weiche_anwalt.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "uebergabe_ocr_an_akte",
+      "schema": "uebergabe_ocr_an_akte.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "uebergabe_ocr_an_anwalt",
+      "schema": "uebergabe_ocr_an_anwalt.schema.json",
+      "status": "definiert"
+    },
+    {
+      "name": "ruecklauf_anwalt_sekretariat",
+      "schema": "ruecklauf_anwalt_sekretariat.schema.json",
+      "status": "definiert"
+    }
+  ]
 }

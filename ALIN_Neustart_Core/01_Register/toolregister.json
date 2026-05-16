@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "toolregister",
+  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
+  "eintraege": [
+    {
+      "tool_id": "AIDER",
+      "name": "Aider",
+      "version": "unbekannt",
+      "kategorie": "sonstiges",
+      "pfad": "",
+      "installationsstatus": "unbekannt",
+      "letzte_pruefung": "2026-05-16T03:12:35.494680+00:00",
+      "darf_verwendet_werden": true,
+      "warnungen": [
+        "Status durch Inventarisierung ermittelt, nicht geprueft."
+      ]
+    },
+    {
+      "tool_id": "PYTHON",
+      "name": "Python",
+      "version": "unbekannt",
+      "kategorie": "sonstiges",
+      "pfad": "",
+      "installationsstatus": "unbekannt",
+      "letzte_pruefung": "2026-05-16T03:12:35.494680+00:00",
+      "darf_verwendet_werden": true,
+      "warnungen": [
+        "Status durch Inventarisierung ermittelt, nicht geprueft."
+      ]
+    },
+    {
+      "tool_id": "TESSERACT",
+      "name": "Tesseract OCR",
+      "version": "unbekannt",
+      "kategorie": "ocr",
+      "pfad": "",
+      "installationsstatus": "unbekannt",
+      "letzte_pruefung": "2026-05-16T03:12:35.494680+00:00",
+      "darf_verwendet_werden": true,
+      "warnungen": [
+        "Status durch Inventarisierung ermittelt, nicht geprueft."
+      ]
+    }
+  ]
+}

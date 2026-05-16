@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "lizenzregister",
+  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
+  "eintraege": [
+    {
+      "komponente_id": "TESSERACT",
+      "name": "Tesseract OCR",
+      "version": "unbekannt",
+      "typ": "software",
+      "hersteller_oder_projekt": "Google / Tesseract-OCR",
+      "lizenzname": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "lizenztext_pfad": "",
+      "copyright_hinweis": "Copyright 2006-2024 Google Inc.",
+      "notice_erforderlich": true,
+      "kommerziell_erlaubt": true,
+      "weitergabe_erlaubt": true,
+      "interne_nutzung_erlaubt": true,
+      "quellcode_offenlegung_erforderlich": false,
+      "kauf_lizenz_erforderlich": false,
+      "quelle_offiziell": "https://github.com/tesseract-ocr/tesseract",
+      "download_pfad": "",
+      "sha256": "",
+      "freigabestatus": "freigegeben",
+      "geprueft_am": "2026-05-16T03:12:35.494680+00:00",
+      "warnungen": [
+        "Durch Inventarisierung ermittelt. SHA256 und Download-Pfad muessen geprueft werden."
+      ]
+    }
+  ]
+}

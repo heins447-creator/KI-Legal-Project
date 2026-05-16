@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "quellen_adapter_register",
+  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
+  "eintraege": [
+    {
+      "quelle_id": "EUR_LEX",
+      "quellentyp": "gesetz",
+      "land": "EU",
+      "rechtsgebiet": "Allgemein",
+      "sprache": "de",
+      "adapter": "EU_R_Lex_Adapter",
+      "online_status": "unbekannt",
+      "offline_cache_status": "nicht_vorgesehen",
+      "dry_run_status": "ungetestet",
+      "letzter_healthcheck": "2026-05-16T03:12:35.494680+00:00",
+      "darf_verwendet_werden": false,
+      "warnungen": [
+        "Durch Inventarisierung ermittelt. Noch nicht geprueft."
+      ]
+    }
+  ]
+}

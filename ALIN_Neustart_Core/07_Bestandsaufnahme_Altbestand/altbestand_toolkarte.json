@@ -1,6 +1,24 @@
 {
   "schema_version": "1.0.0",
-  "beschreibung": "Platzhalter: Altbestand Toolkarte. Wird in einem späteren Auftrag nur lesend befüllt.",
-  "status": "leer",
-  "hinweis": "Diese Datei wird durch Inventarisierung des Altbestands befüllt. Keine manuelle Bearbeitung."
+  "beschreibung": "Inventar aller Tools im Altbestand.",
+  "status": "befuellt",
+  "letzte_aktualisierung": "2026-05-16T03:12:35.494680+00:00",
+  "hinweis": "Durch CORE-02 Inventarisierung ermittelt. Keine manuelle Bearbeitung.",
+  "tools": [
+    {
+      "tool_id": "AIDER",
+      "name": "Aider",
+      "kategorie": "sonstiges"
+    },
+    {
+      "tool_id": "PYTHON",
+      "name": "Python",
+      "kategorie": "sonstiges"
+    },
+    {
+      "tool_id": "TESSERACT",
+      "name": "Tesseract OCR",
+      "kategorie": "ocr"
+    }
+  ]
 }

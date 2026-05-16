@@ -1,0 +1,2778 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "modulregister",
+  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
+  "eintraege": [
+    {
+      "modul_id": "Invoke_Aider_Local",
+      "modulname": "Invoke_Aider_Local",
+      "pfad": "Scripts/Invoke_Aider_Local.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM17_AUTOLAUF",
+      "modulname": "KM17_AUTOLAUF",
+      "pfad": "Scripts/KM17_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM17c_EINZELSEITE_KM12b_AUTOLAUF",
+      "modulname": "KM17c_EINZELSEITE_KM12b_AUTOLAUF",
+      "pfad": "Scripts/KM17c_EINZELSEITE_KM12b_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM18_AUTOLAUF",
+      "modulname": "KM18 AUTOLAUF – OCR-Ergebnisdiagnose",
+      "pfad": "Scripts/KM18_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF",
+      "modulname": "KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF",
+      "pfad": "Scripts/KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM19_OCRBETREUER_KORREKTUR_AUTOLAUF",
+      "modulname": "KM19_OCRBETREUER_KORREKTUR_AUTOLAUF",
+      "pfad": "Scripts/KM19_OCRBETREUER_KORREKTUR_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "KM21_TRANSLATION_ENV_AUTOLAUF",
+      "modulname": "KM21_TRANSLATION_ENV_AUTOLAUF",
+      "pfad": "Scripts/KM21_TRANSLATION_ENV_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agent_Dokumentart",
+      "modulname": "Run_Agent_Dokumentart",
+      "pfad": "Scripts/Run_Agent_Dokumentart.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agent_Handoff_Test_Harness",
+      "modulname": "Run_Agent_Handoff_Test_Harness",
+      "pfad": "Scripts/Run_Agent_Handoff_Test_Harness.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agent_Sachverhaltsbezug",
+      "modulname": "Run_Agent_Sachverhaltsbezug",
+      "pfad": "Scripts/Run_Agent_Sachverhaltsbezug.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agent_Sprache_Uebersetzung",
+      "modulname": "Run_Agent_Sprache_Uebersetzung",
+      "pfad": "Scripts/Run_Agent_Sprache_Uebersetzung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agenten_Kontext_Skill_Register",
+      "modulname": "Run_Agenten_Kontext_Skill_Register",
+      "pfad": "Scripts/Run_Agenten_Kontext_Skill_Register.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Agentenbearbeitung",
+      "modulname": "Run_Agentenbearbeitung",
+      "pfad": "Scripts/Run_Agentenbearbeitung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_AI_Coding_Agent_Project_Check",
+      "modulname": "Run_AI_Coding_Agent_Project_Check",
+      "pfad": "Scripts/Run_AI_Coding_Agent_Project_Check.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_AI_Coding_Agent_Repair_Loop",
+      "modulname": "Run_AI_Coding_Agent_Repair_Loop",
+      "pfad": "Scripts/Run_AI_Coding_Agent_Repair_Loop.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Aktenmaterial_Freigabeliste",
+      "modulname": "Run_Aktenmaterial_Freigabeliste",
+      "pfad": "Scripts/Run_Aktenmaterial_Freigabeliste.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_ALIN_SafeJob",
+      "modulname": "Run_ALIN_SafeJob",
+      "pfad": "Scripts/Run_ALIN_SafeJob.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Anwaltvorlage",
+      "modulname": "Run_Anwaltvorlage",
+      "pfad": "Scripts/Run_Anwaltvorlage.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Dokumentsprachprofil",
+      "modulname": "Run_Dokumentsprachprofil",
+      "pfad": "Scripts/Run_Dokumentsprachprofil.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM10_Schnittstellen_Lueckenabgleich",
+      "modulname": "Run_KM10_Schnittstellen_Lueckenabgleich",
+      "pfad": "Scripts/Run_KM10_Schnittstellen_Lueckenabgleich.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM12_Originalabbildung",
+      "modulname": "Run_KM12_Originalabbildung",
+      "pfad": "Scripts/Run_KM12_Originalabbildung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM12b_Uebergrosse_Arbeitsabbildungen",
+      "modulname": "Run_KM12b_Uebergrosse_Arbeitsabbildungen",
+      "pfad": "Scripts/Run_KM12b_Uebergrosse_Arbeitsabbildungen.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM13_OCR_Pipeline",
+      "modulname": "KM13 – OCR-Pipeline",
+      "pfad": "Scripts/Run_KM13_OCR_Pipeline.ps1",
+      "version": "1.0.0",
+      "zweck": "Starter fuer km13_ocr_pipeline.py.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM13b_Tesseract_Sprachpaket_Abgleich",
+      "modulname": "KM13b – Tesseract-Sprachpaket-Abgleich",
+      "pfad": "Scripts/Run_KM13b_Tesseract_Sprachpaket_Abgleich.ps1",
+      "version": "1.0.0",
+      "zweck": "Prueft Tesseract-Installationen, Sprachpakete und gleicht mit KM13-Config ab.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM14_Maschinenformat_Fundstellenstruktur",
+      "modulname": "KM14 – Maschinenformat / Fundstellenstruktur",
+      "pfad": "Scripts/Run_KM14_Maschinenformat_Fundstellenstruktur.ps1",
+      "version": "1.0.0",
+      "zweck": "Liest KM12 (Arbeitsabbildungen, Koordinaten) und KM13 (OCR).",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM15_Arbeitsuebersetzung_Fundstellenbindung",
+      "modulname": "KM15 – Arbeitsuebersetzungsschicht mit Fundstellenbindung",
+      "pfad": "Scripts/Run_KM15_Arbeitsuebersetzung_Fundstellenbindung.ps1",
+      "version": "1.0.0",
+      "zweck": "Baut Platzhalter-Uebersetzungseinheiten aus KM14-Fundstellen.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM16_Sprachrouting_Vor_OCR",
+      "modulname": "Run_KM16_Sprachrouting_Vor_OCR",
+      "pfad": "Scripts/Run_KM16_Sprachrouting_Vor_OCR.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM20_Konsolidierung",
+      "modulname": "Run_KM20_Konsolidierung",
+      "pfad": "Scripts/Run_KM20_Konsolidierung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_KM20b_Bereinigung",
+      "modulname": "Run_KM20b_Bereinigung",
+      "pfad": "Scripts/Run_KM20b_Bereinigung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Posteingang_Menu",
+      "modulname": "Run_Posteingang_Menu",
+      "pfad": "Scripts/Run_Posteingang_Menu.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Posteingang_Pipeline",
+      "modulname": "Run_Posteingang_Pipeline",
+      "pfad": "Scripts/Run_Posteingang_Pipeline.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Posteingang_Schlusskontrolle",
+      "modulname": "Run_Posteingang_Schlusskontrolle",
+      "pfad": "Scripts/Run_Posteingang_Schlusskontrolle.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Posteingang_Zentrale",
+      "modulname": "Run_Posteingang_Zentrale",
+      "pfad": "Scripts/Run_Posteingang_Zentrale.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Quellenbetreuer_Fachanwaltsraster",
+      "modulname": "Run_Quellenbetreuer_Fachanwaltsraster",
+      "pfad": "Scripts/Run_Quellenbetreuer_Fachanwaltsraster.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Quellenkandidaten_EU_SE",
+      "modulname": "Run_Quellenkandidaten_EU_SE",
+      "pfad": "Scripts/Run_Quellenkandidaten_EU_SE.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Source_Adapter_Healthcheck_Framework",
+      "modulname": "Run_Source_Adapter_Healthcheck_Framework",
+      "pfad": "Scripts/Run_Source_Adapter_Healthcheck_Framework.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Arbeitsliste",
+      "modulname": "Run_Vorzimmer_Arbeitsliste",
+      "pfad": "Scripts/Run_Vorzimmer_Arbeitsliste.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Entscheidung",
+      "modulname": "Run_Vorzimmer_Entscheidung",
+      "pfad": "Scripts/Run_Vorzimmer_Entscheidung.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Kommunikationsparameter",
+      "modulname": "Run_Vorzimmer_Kommunikationsparameter",
+      "pfad": "Scripts/Run_Vorzimmer_Kommunikationsparameter.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI01_ANWALTSANSICHT_AUTOLAUF",
+      "modulname": "UI01_ANWALTSANSICHT_AUTOLAUF",
+      "pfad": "Scripts/UI01_ANWALTSANSICHT_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui02_0_bestandsabgleich_tuerschwelle",
+      "modulname": "UI02-0 Bestandsabgleich Tuerschwelle PowerShell-Starter",
+      "pfad": "Scripts/ui02_0_bestandsabgleich_tuerschwelle.ps1",
+      "version": "1.0.0",
+      "zweck": "Startet den Python-Laeufer fuer den Bestandsabgleich",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui02_tuerschwelle_bau_starter",
+      "modulname": "ui02_tuerschwelle_bau_starter",
+      "pfad": "Scripts/ui02_tuerschwelle_bau_starter.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF",
+      "modulname": "UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF",
+      "pfad": "Scripts/UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF",
+      "modulname": "UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF",
+      "pfad": "Scripts/UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF",
+      "modulname": "UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF",
+      "pfad": "Scripts/UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF",
+      "modulname": "UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF",
+      "pfad": "Scripts/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF",
+      "modulname": "UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF",
+      "pfad": "Scripts/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "Update_External_Tools_Library",
+      "modulname": "Update_External_Tools_Library",
+      "pfad": "Scripts/Update_External_Tools_Library.ps1",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "001_db_schema_audit",
+      "modulname": "SELECT table_schema, table_name, table_type",
+      "pfad": "Scripts/python_runner/001_db_schema_audit.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "002_apply_posteingang_schema",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/002_apply_posteingang_schema.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "003_verify_posteingang_schema",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/003_verify_posteingang_schema.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "004_posteingang_arbeitsstruktur_v1",
+      "modulname": "004_posteingang_arbeitsstruktur_v1",
+      "pfad": "Scripts/python_runner/004_posteingang_arbeitsstruktur_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "005_posteingang_sicherheitsgate_v2",
+      "modulname": "005_posteingang_sicherheitsgate_v2",
+      "pfad": "Scripts/python_runner/005_posteingang_sicherheitsgate_v2.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "011_language_context_v2",
+      "modulname": "CREATE TABLE lang_language_catalog (",
+      "pfad": "Scripts/python_runner/011_language_context_v2.py",
+      "version": "1.0.0",
+      "zweck": "language_code VARCHAR PRIMARY KEY,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "012_posteingang_sprachkontext_gate_v2",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "013_kontrolle_posteingang_nach_bereinigung",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "013_posteingang_db_altlasten_cleanup",
+      "modulname": "SELECT COUNT(*)",
+      "pfad": "Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "014_posteingang_clean_verify",
+      "modulname": "SELECT COUNT(*)",
+      "pfad": "Scripts/python_runner/014_posteingang_clean_verify.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "014_posteingang_pipeline_v1",
+      "modulname": "014_posteingang_pipeline_v1",
+      "pfad": "Scripts/python_runner/014_posteingang_pipeline_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "015_posteingang_pipeline_smoketest_v1",
+      "modulname": "015_posteingang_pipeline_smoketest_v1",
+      "pfad": "Scripts/python_runner/015_posteingang_pipeline_smoketest_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "016_posteingang_betriebsstatus_v1",
+      "modulname": "016_posteingang_betriebsstatus_v1",
+      "pfad": "Scripts/python_runner/016_posteingang_betriebsstatus_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "017_vorzimmer_arbeitsliste_v1",
+      "modulname": "017_vorzimmer_arbeitsliste_v1",
+      "pfad": "Scripts/python_runner/017_vorzimmer_arbeitsliste_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "018_vorzimmer_entscheidung_v1",
+      "modulname": "018_vorzimmer_entscheidung_v1",
+      "pfad": "Scripts/python_runner/018_vorzimmer_entscheidung_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "019_vorzimmer_entscheidung_smoketest_v1",
+      "modulname": "019_vorzimmer_entscheidung_smoketest_v1",
+      "pfad": "Scripts/python_runner/019_vorzimmer_entscheidung_smoketest_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "020_posteingang_gesamtstatus_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/020_posteingang_gesamtstatus_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "021_posteingang_db_dateien_auswahl_testlauf_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "022_posteingang_db_testlauf_auswertung_v1",
+      "modulname": "022_posteingang_db_testlauf_auswertung_v1",
+      "pfad": "Scripts/python_runner/022_posteingang_db_testlauf_auswertung_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "023_vorzimmer_entscheidungsvorschlag_v1",
+      "modulname": "023_vorzimmer_entscheidungsvorschlag_v1",
+      "pfad": "Scripts/python_runner/023_vorzimmer_entscheidungsvorschlag_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "025_schweden_arbeitsrecht_sprachkontext_korrektur_v1",
+      "modulname": "SELECT COUNT(*)",
+      "pfad": "Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "026_posteingang_aktenmaterial_agentenabgrenzung_v1",
+      "modulname": "026_posteingang_aktenmaterial_agentenabgrenzung_v1",
+      "pfad": "Scripts/python_runner/026_posteingang_aktenmaterial_agentenabgrenzung_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "027_posteingang_aktenmaterial_freigabeliste_v1",
+      "modulname": "027_posteingang_aktenmaterial_freigabeliste_v1",
+      "pfad": "Scripts/python_runner/027_posteingang_aktenmaterial_freigabeliste_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "031_dokumentsprachprofil_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS posteingang_document_language_profile (",
+      "pfad": "Scripts/python_runner/031_dokumentsprachprofil_v1.py",
+      "version": "1.0.0",
+      "zweck": "document_language_id VARCHAR PRIMARY KEY,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "032_check_dokumentsprachprofil_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/032_check_dokumentsprachprofil_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "033_posteingang_schlusskontrolle_v2",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "034_posteingang_endabnahme_v2",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/034_posteingang_endabnahme_v2.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "035_vorzimmer_kommunikationsparameter_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS vz_language_package_catalog (",
+      "pfad": "Scripts/python_runner/035_vorzimmer_kommunikationsparameter_v1.py",
+      "version": "1.0.0",
+      "zweck": "language_code VARCHAR PRIMARY KEY,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "036_check_vorzimmer_kommunikationsparameter_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "037_posteingang_endabnahme_v3",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/037_posteingang_endabnahme_v3.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "038_anwaltvorlage_grundmodul_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS anwalt_review_queue (",
+      "pfad": "Scripts/python_runner/038_anwaltvorlage_grundmodul_v1.py",
+      "version": "1.0.0",
+      "zweck": "review_id VARCHAR,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "039_check_anwaltvorlage_grundmodul_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "040_agentenbearbeitung_grundmodul_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS agent_task_catalog (",
+      "pfad": "Scripts/python_runner/040_agentenbearbeitung_grundmodul_v1.py",
+      "version": "1.0.0",
+      "zweck": "task_key VARCHAR,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "041_check_agentenbearbeitung_grundmodul_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "042_agent_dokumentart_erkennen_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS agent_document_type_suggestion (",
+      "pfad": "Scripts/python_runner/042_agent_dokumentart_erkennen_v1.py",
+      "version": "1.0.0",
+      "zweck": "suggestion_id VARCHAR,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "043_check_agent_dokumentart_erkennen_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "044_agent_sprache_uebersetzung_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS agent_language_translation_review (",
+      "pfad": "Scripts/python_runner/044_agent_sprache_uebersetzung_v1.py",
+      "version": "1.0.0",
+      "zweck": "translation_review_id VARCHAR,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "045_check_agent_sprache_uebersetzung_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "046_agent_sachverhaltsbezug_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS agent_fact_context_suggestion (",
+      "pfad": "Scripts/python_runner/046_agent_sachverhaltsbezug_v1.py",
+      "version": "1.0.0",
+      "zweck": "fact_context_id VARCHAR,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "046_quellenbetreuer_fachanwaltsraster_v1",
+      "modulname": "046_quellenbetreuer_fachanwaltsraster_v1",
+      "pfad": "Scripts/python_runner/046_quellenbetreuer_fachanwaltsraster_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "047_check_agent_sachverhaltsbezug_v1",
+      "modulname": "SELECT table_name",
+      "pfad": "Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py",
+      "version": "1.0.0",
+      "zweck": "FROM information_schema.tables",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "047_check_quellenbetreuer_fachanwaltsraster_v1",
+      "modulname": "047_check_quellenbetreuer_fachanwaltsraster_v1",
+      "pfad": "Scripts/python_runner/047_check_quellenbetreuer_fachanwaltsraster_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "048_agenten_kontext_skill_register_v1",
+      "modulname": "048_agenten_kontext_skill_register_v1",
+      "pfad": "Scripts/python_runner/048_agenten_kontext_skill_register_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "049_check_agenten_kontext_skill_register_v1",
+      "modulname": "049_check_agenten_kontext_skill_register_v1",
+      "pfad": "Scripts/python_runner/049_check_agenten_kontext_skill_register_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "050_fix_agenten_kontext_skill_bindings_v1",
+      "modulname": "050_fix_agenten_kontext_skill_bindings_v1",
+      "pfad": "Scripts/python_runner/050_fix_agenten_kontext_skill_bindings_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "051_quellenkandidaten_eu_se_v1",
+      "modulname": "051_quellenkandidaten_eu_se_v1",
+      "pfad": "Scripts/python_runner/051_quellenkandidaten_eu_se_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "052_check_quellenkandidaten_eu_se_v1",
+      "modulname": "052_check_quellenkandidaten_eu_se_v1",
+      "pfad": "Scripts/python_runner/052_check_quellenkandidaten_eu_se_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "053_source_adapter_healthcheck_framework_v1",
+      "modulname": "053_source_adapter_healthcheck_framework_v1",
+      "pfad": "Scripts/python_runner/053_source_adapter_healthcheck_framework_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "054_check_source_adapter_healthcheck_framework_v1",
+      "modulname": "054_check_source_adapter_healthcheck_framework_v1",
+      "pfad": "Scripts/python_runner/054_check_source_adapter_healthcheck_framework_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "055_agent_handoff_test_harness_v1",
+      "modulname": "055_agent_handoff_test_harness_v1",
+      "pfad": "Scripts/python_runner/055_agent_handoff_test_harness_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "056_check_agent_handoff_test_harness_v1",
+      "modulname": "056_check_agent_handoff_test_harness_v1",
+      "pfad": "Scripts/python_runner/056_check_agent_handoff_test_harness_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "_patch_css",
+      "modulname": "' + new_css + '",
+      "pfad": "Scripts/python_runner/_patch_css.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "_patch_html",
+      "modulname": "Patch ui03_1 HTML template: add decision buttons and badge-ki",
+      "pfad": "Scripts/python_runner/_patch_html.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km10_schnittstellen_lueckenabgleich",
+      "modulname": "PRUEFDATEI KM10 – SCHNITTSTELLEN- UND LUECKENABGLEICH",
+      "pfad": "Scripts/python_runner/check_km10_schnittstellen_lueckenabgleich.py",
+      "version": "1.0.0",
+      "zweck": "=====================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km12_originalabbildung",
+      "modulname": "PRUEFDATEI: check_km12_originalabbildung.py",
+      "pfad": "Scripts/python_runner/check_km12_originalabbildung.py",
+      "version": "1.0.0",
+      "zweck": "============================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km12b_uebergrosse_arbeitsabbildungen",
+      "modulname": "KM12b – Prüfdatei: Übergroße Arbeitsabbildungen",
+      "pfad": "Scripts/python_runner/check_km12b_uebergrosse_arbeitsabbildungen.py",
+      "version": "1.0.0",
+      "zweck": "================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km13_ocr_pipeline",
+      "modulname": "KM13 PRUEFDATEI – check_km13_ocr_pipeline.py",
+      "pfad": "Scripts/python_runner/check_km13_ocr_pipeline.py",
+      "version": "1.0.0",
+      "zweck": "=============================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km13b_tesseract_sprachpaket_abgleich",
+      "modulname": "CHECK KM13b – TESSERACT-SPRACHPAKET-ABGLEICH (PRUEFDATEI)",
+      "pfad": "Scripts/python_runner/check_km13b_tesseract_sprachpaket_abgleich.py",
+      "version": "1.0.0",
+      "zweck": "===========================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km14_maschinenformat_fundstellenstruktur",
+      "modulname": "KM14 PRUEFDATEI – check_km14_maschinenformat_fundstellenstruktur.py",
+      "pfad": "Scripts/python_runner/check_km14_maschinenformat_fundstellenstruktur.py",
+      "version": "1.0.0",
+      "zweck": "====================================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km15_arbeitsuebersetzung_fundstellenbindung",
+      "modulname": "CHECK KM15 – ARBEITSUEBERSETZUNGSSCHICHT MIT FUNDSTELLENBINDUNG",
+      "pfad": "Scripts/python_runner/check_km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "version": "1.0.0",
+      "zweck": "===============================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km16_sprachrouting_vor_ocr",
+      "modulname": "Pruefdatei fuer KM16 – Sprachrouting vor OCR.",
+      "pfad": "Scripts/python_runner/check_km16_sprachrouting_vor_ocr.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km17_sprachrouting_ocr_integration",
+      "modulname": "Pruefdatei fuer KM17. Akzeptiert Lauf trotz dokumentierter OCR-Einzelfehler.",
+      "pfad": "Scripts/python_runner/check_km17_sprachrouting_ocr_integration.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km17c_einzelseite_km12b_ocr",
+      "modulname": "KM17c – Prüfdatei",
+      "pfad": "Scripts/python_runner/check_km17c_einzelseite_km12b_ocr.py",
+      "version": "1.0.0",
+      "zweck": "=================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km18_ocr_ergebnisdiagnose",
+      "modulname": "KM18 PRUEFDATEI – Validiert KM18-Diagnose-Ausgaben.",
+      "pfad": "Scripts/python_runner/check_km18_ocr_ergebnisdiagnose.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km19_ocr_gesamtkette_synchronisieren",
+      "modulname": "KM19 OCR-Gesamtkette Pruefdatei – check_km19_ocr_gesamtkette_synchronisieren",
+      "pfad": "Scripts/python_runner/check_km19_ocr_gesamtkette_synchronisieren.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km19_ocrbetreuer_korrektur",
+      "modulname": "KM19 Check-Script – prueft Korrektheit der korrigierten Manifeste",
+      "pfad": "Scripts/python_runner/check_km19_ocrbetreuer_korrektur.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_km21_translation_env_prepare",
+      "modulname": "check_km21_translation_env_prepare",
+      "pfad": "Scripts/python_runner/check_km21_translation_env_prepare.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui01_anwaltsansicht_v1",
+      "modulname": "check_ui01_anwaltsansicht_v1",
+      "pfad": "Scripts/python_runner/check_ui01_anwaltsansicht_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui02c_freigabe_dropdowns_notizen",
+      "modulname": "UI02c – PRUEFDATEI – Prueft alle erzeugten Dateien auf Konsistenz",
+      "pfad": "Scripts/python_runner/check_ui02c_freigabe_dropdowns_notizen.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui03_0_uebergabe_mandantenakte",
+      "modulname": "UI03-0 – PRUEFDATEI – Prueft alle erzeugten Dateien auf Konsistenz",
+      "pfad": "Scripts/python_runner/check_ui03_0_uebergabe_mandantenakte.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui03_1_anwalts_dreiansicht",
+      "modulname": "Prüfdatei für UI03-1 Anwalts-Dreiansicht",
+      "pfad": "Scripts/python_runner/check_ui03_1_anwalts_dreiansicht.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui04_durchstich_sekretariat_anwalt_ruecklauf",
+      "modulname": "Pruefdatei fuer UI04 Durchstich Sekretariat -> Anwalt -> Ruecklauf",
+      "pfad": "Scripts/python_runner/check_ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "check_ui04b_logikpruefung_entscheidung",
+      "modulname": "Pruefdatei fuer UI04b Logikpruefung und Entscheidungsmaske",
+      "pfad": "Scripts/python_runner/check_ui04b_logikpruefung_entscheidung.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km10_schnittstellen_lueckenabgleich",
+      "modulname": "KLEINMODUL 10 – SCHNITTSTELLEN- UND LUECKENABGLEICH DOKUMENTENSTRASSE",
+      "pfad": "Scripts/python_runner/km10_schnittstellen_lueckenabgleich.py",
+      "version": "1.0.0",
+      "zweck": "=====================================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km12_originalabbildung",
+      "modulname": "KLEINMODUL 12 – ORIGINALABBILDUNG / ARBEITSABBILDUNG (originalabbildung_v1)",
+      "pfad": "Scripts/python_runner/km12_originalabbildung.py",
+      "version": "1.0.0",
+      "zweck": "============================================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km12b_uebergrosse_arbeitsabbildungen",
+      "modulname": "KM12b – Behandlung übergroßer Arbeitsabbildungen",
+      "pfad": "Scripts/python_runner/km12b_uebergrosse_arbeitsabbildungen.py",
+      "version": "1.0.0",
+      "zweck": "=================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km13_ocr_pipeline",
+      "modulname": "KLEINMODUL 13 – OCR-PIPELINE (ocr_pipeline_v1)",
+      "pfad": "Scripts/python_runner/km13_ocr_pipeline.py",
+      "version": "1.0.0",
+      "zweck": "===============================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km13b_tesseract_sprachpaket_abgleich",
+      "modulname": "KLEINMODUL 13b – TESSERACT-SPRACHPAKET-ABGLEICH (v1)",
+      "pfad": "Scripts/python_runner/km13b_tesseract_sprachpaket_abgleich.py",
+      "version": "1.0.0",
+      "zweck": "=====================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km14_maschinenformat_fundstellenstruktur",
+      "modulname": "KLEINMODUL 14 – MASCHINENFORMAT / FUNDSTELLENSTRUKTUR (v1)",
+      "pfad": "Scripts/python_runner/km14_maschinenformat_fundstellenstruktur.py",
+      "version": "1.0.0",
+      "zweck": "==========================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km15_arbeitsuebersetzung_fundstellenbindung",
+      "modulname": "KLEINMODUL 15 – ARBEITSUEBERSETZUNGSSCHICHT MIT FUNDSTELLENBINDUNG (v1)",
+      "pfad": "Scripts/python_runner/km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "version": "1.0.0",
+      "zweck": "========================================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km16_sprachrouting_vor_ocr",
+      "modulname": "KM16 – Sprachrouting vor OCR. Bestimmt je Seite eine wahrscheinliche OCR-Sprache.",
+      "pfad": "Scripts/python_runner/km16_sprachrouting_vor_ocr.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km17_sprachrouting_ocr_integration",
+      "modulname": "KM17 – Sprachrouting-OCR-Integration. Fuehrt Tesseract-OCR sprachspezifisch je Seite aus.",
+      "pfad": "Scripts/python_runner/km17_sprachrouting_ocr_integration.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km17c_einzelseite_km12b_ocr",
+      "modulname": "KM17c – OCR-Neulauf für die KM12b-abgeleitete Einzelseite",
+      "pfad": "Scripts/python_runner/km17c_einzelseite_km12b_ocr.py",
+      "version": "1.0.0",
+      "zweck": "==========================================================",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km18_ocr_ergebnisdiagnose",
+      "modulname": "KM18 – OCR-Ergebnisdiagnose. Prueft KM17-Ergebnisse: TIFF, Tesseract-Ausgaben, HOCR-Text.",
+      "pfad": "Scripts/python_runner/km18_ocr_ergebnisdiagnose.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km19_ocr_gesamtkette_synchronisieren",
+      "modulname": "km19_ocr_gesamtkette_synchronisieren",
+      "pfad": "Scripts/python_runner/km19_ocr_gesamtkette_synchronisieren.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km19_ocrbetreuer_korrektur",
+      "modulname": "KM19 – OCR-Betreuer Korrekturlauf",
+      "pfad": "Scripts/python_runner/km19_ocrbetreuer_korrektur.py",
+      "version": "1.0.0",
+      "zweck": "Version:  km19_ocrbetreuer_korrektur_v1",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km20_pruefung",
+      "modulname": "km20_pruefung",
+      "pfad": "Scripts/python_runner/km20_pruefung.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km20_quellen_fundstellen_konsolidierung",
+      "modulname": "km20_quellen_fundstellen_konsolidierung",
+      "pfad": "Scripts/python_runner/km20_quellen_fundstellen_konsolidierung.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km20b_testdummy_ausschliessen",
+      "modulname": "km20b_testdummy_ausschliessen",
+      "pfad": "Scripts/python_runner/km20b_testdummy_ausschliessen.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "km21_translation_env_prepare",
+      "modulname": "km21_translation_env_prepare",
+      "pfad": "Scripts/python_runner/km21_translation_env_prepare.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "post01_0_bestandsaufnahme_posteingang_v1",
+      "modulname": "POST01-0 Bestandsaufnahme Posteingang und Briefkasten-Module",
+      "pfad": "Scripts/python_runner/post01_0_bestandsaufnahme_posteingang_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "pruefe_ui02_0_bestandsabgleich",
+      "modulname": "Pruefscript fuer UI02-0 Bestandsabgleich Tuerschwelle",
+      "pfad": "Scripts/python_runner/pruefe_ui02_0_bestandsabgleich.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui01_anwaltsansicht_v1",
+      "modulname": "ui01_anwaltsansicht_v1",
+      "pfad": "Scripts/python_runner/ui01_anwaltsansicht_v1.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui02_0_bestandsabgleich_tuerschwelle",
+      "modulname": "UI02-0 Bestandsabgleich Tuerschwelle – Inventar/Wiederverwendung",
+      "pfad": "Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui02_tuerschwelle_bau",
+      "modulname": "UI02 Tuerschwelle Bau – erweitert UI01 zur Sekretariats-/Mandatsfreigabe-Vorlage",
+      "pfad": "Scripts/python_runner/ui02_tuerschwelle_bau.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui02c_freigabe_dropdowns_notizen",
+      "modulname": "UI02c – Anwaltliche Freigabevorschlaege, Dropdowns, Wiedervorlage und Notiz-/Diktatfelder",
+      "pfad": "Scripts/python_runner/ui02c_freigabe_dropdowns_notizen.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui03_0_uebergabe_mandantenakte",
+      "modulname": "UI03-0 – Uebergabe Tuerschwelle UI02c → Mandantenakte (regulaere Verarbeitung vorbereiten)",
+      "pfad": "Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui03_1_anwalts_dreiansicht",
+      "modulname": "UI03-1 – Anwalts-Dreiansicht (Original / OCR / Deutsch) fuer die Mandantenakte.",
+      "pfad": "Scripts/python_runner/ui03_1_anwalts_dreiansicht.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui04_durchstich_sekretariat_anwalt_ruecklauf",
+      "modulname": "UI04 - Durchstich Sekretariat -> Anwalt -> Ruecklauf -> Sekretariatsergebnis.",
+      "pfad": "Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "ui04b_logikpruefung_entscheidung",
+      "modulname": "UI04b Logikpruefung und gefuehrte Entscheidungsmaske.",
+      "pfad": "Scripts/python_runner/ui04b_logikpruefung_entscheidung.py",
+      "version": "1.0.0",
+      "zweck": "",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "001_posteingang_intake_schema",
+      "modulname": "Posteingang Datenmodell V1",
+      "pfad": "Database/Migrations/001_posteingang_intake_schema.sql",
+      "version": "1.0.0",
+      "zweck": "Zweck:",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "004_language_context_v2",
+      "modulname": "Sprachkontext V2 Neuanfang",
+      "pfad": "Database/Migrations/004_language_context_v2.sql",
+      "version": "1.0.0",
+      "zweck": "Zweck:",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "005_dokumentsprachprofil_v1",
+      "modulname": "Dokumentsprachprofil V1",
+      "pfad": "Database/Migrations/005_dokumentsprachprofil_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Dokumentiert die Spracherkennung je Eingang/Dokument.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "006_vorzimmer_kommunikationsparameter_v1",
+      "modulname": "Vorzimmer Kommunikationsparameter V1",
+      "pfad": "Database/Migrations/006_vorzimmer_kommunikationsparameter_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Zweck:",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "007_anwaltvorlage_grundmodul_v1",
+      "modulname": "Anwaltvorlage Grundmodul V1",
+      "pfad": "Database/Migrations/007_anwaltvorlage_grundmodul_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Der Posteingang ist abgeschlossen. Dieses Modul legt nur die formale Anwaltvorlage an.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "008_agentenbearbeitung_grundmodul_v1",
+      "modulname": "Agentenbearbeitung Grundmodul V1",
+      "pfad": "Database/Migrations/008_agentenbearbeitung_grundmodul_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Nachgelagerte Bearbeitung nach Posteingang und Anwaltvorlage.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "009_agent_dokumentart_erkennen_v1",
+      "modulname": "Agent Dokumentart erkennen V1",
+      "pfad": "Database/Migrations/009_agent_dokumentart_erkennen_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Erster konkreter Agent nach Anwaltvorlage.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "010_agent_sprache_uebersetzung_v1",
+      "modulname": "Agent Sprache und Uebersetzung V1",
+      "pfad": "Database/Migrations/010_agent_sprache_uebersetzung_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Zweiter konkreter Agent nach Dokumentart.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "011_agent_sachverhaltsbezug_v1",
+      "modulname": "Agent Sachverhaltsbezug V1",
+      "pfad": "Database/Migrations/011_agent_sachverhaltsbezug_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Dritte konkrete Agentenfunktion.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "011_quellenbetreuer_fachanwaltsraster_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS schema_migrations (",
+      "pfad": "Database/Migrations/011_quellenbetreuer_fachanwaltsraster_v1.sql",
+      "version": "1.0.0",
+      "zweck": "migration_id VARCHAR PRIMARY KEY,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "012_agenten_kontext_skill_register_v1",
+      "modulname": "CREATE TABLE IF NOT EXISTS agent_role_registry (",
+      "pfad": "Database/Migrations/012_agenten_kontext_skill_register_v1.sql",
+      "version": "1.0.0",
+      "zweck": "role_code VARCHAR PRIMARY KEY,",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "014_source_adapter_healthcheck_framework_v1",
+      "modulname": "Migration 014: Source Adapter Healthcheck Framework V1",
+      "pfad": "Database/Migrations/014_source_adapter_healthcheck_framework_v1.sql",
+      "version": "1.0.0",
+      "zweck": "Ziel: Grundgeruest fuer Quellenadapter, Healthcheck-Logik, Dry-Run und Sicherheitsregeln.",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "produktiv",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": true,
+      "warnungen": [
+        "Altbestand, durch Inventarisierung ermittelt."
+      ]
+    },
+    {
+      "modul_id": "WINAPP_APP.XAML",
+      "modulname": "Windows App - App.xaml",
+      "pfad": "Windows_App/App/App.xaml.cs",
+      "version": "1.0.0",
+      "zweck": "Windows-App-Komponente",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "entwicklung",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": false,
+      "warnungen": [
+        "Windows-App-Grundgeruest, noch in Entwicklung."
+      ]
+    },
+    {
+      "modul_id": "WINAPP_ASSEMBLYINFO",
+      "modulname": "Windows App - AssemblyInfo",
+      "pfad": "Windows_App/App/AssemblyInfo.cs",
+      "version": "1.0.0",
+      "zweck": "Windows-App-Komponente",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "entwicklung",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": false,
+      "warnungen": [
+        "Windows-App-Grundgeruest, noch in Entwicklung."
+      ]
+    },
+    {
+      "modul_id": "WINAPP_MAINWINDOW.XAML",
+      "modulname": "Windows App - MainWindow.xaml",
+      "pfad": "Windows_App/App/MainWindow.xaml.cs",
+      "version": "1.0.0",
+      "zweck": "Windows-App-Komponente",
+      "eingabe_schema": "",
+      "ausgabe_schema": "",
+      "status": "entwicklung",
+      "letzter_test": "2026-05-16T03:12:35.494680+00:00",
+      "abhaengig_von": [],
+      "liefert": [],
+      "darf_aufgerufen_werden": false,
+      "warnungen": [
+        "Windows-App-Grundgeruest, noch in Entwicklung."
+      ]
+    }
+  ]
+}
