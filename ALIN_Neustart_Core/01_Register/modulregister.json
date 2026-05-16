@@ -12,8 +12,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quellcode-Pfad, Aktion (add/edit/drop), Modell-Parameter, Kontextfenster.",
+      "ausgabe": "Aider-Ausgabe, Aenderungsvorschlag, Diff-Preview, Exit-Code, Aider-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -46,8 +46,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Arbeitsabbildung-Pfad, Seitenbereich, OCR-Parameter.",
+      "ausgabe": "OCR-Gesamtergebnis, Seitenliste, Konfidenzreport, Log-Datei.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -78,8 +78,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Einzelseite-Arbeitsabbildung, Seitennummer, Sprachvermutung.",
+      "ausgabe": "OCR-Text der Seite, Koordinaten-Mapping, Seitenkonfidenz, Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -110,8 +110,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "OCR-Rohergebnis, erwartete Sprache, Qualitaetsschwellen.",
+      "ausgabe": "OCR-Diagnosebericht, Qualitaetsbewertung, Korrekturvorschlag, Log.",
       "benoetigte_tools": [
         "TESSERACT"
       ],
@@ -150,8 +150,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Einzel-OCR-Ergebnisse, Dokument-ID, Synchronisierungsregeln.",
+      "ausgabe": "Synchronisierte OCR-Kette, konsolidierter Text, Seitenverknuepfung, Log.",
       "benoetigte_tools": [
         "TESSERACT"
       ],
@@ -193,8 +193,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "OCR-Ergebnis mit Fehlverdacht, Korrekturvorschlaege, Seitenliste.",
+      "ausgabe": "Korrigiertes OCR-Ergebnis, Aenderungsprotokoll, Konfidenznachweis, Log.",
       "benoetigte_tools": [
         "TESSERACT"
       ],
@@ -235,8 +235,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quellsprache, Zielsprache, Argos-Modell-Pfad, Uebersetzungsparameter.",
+      "ausgabe": "Uebersetzungsumgebungs-Status, verfuegbare Modelle, Testuebersetzung, Log.",
       "benoetigte_tools": [
         "ARGOS_TRANSLATE"
       ],
@@ -279,8 +279,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokumentdatei-Pfad, erwartete Kategorien, Erkennungsmodus, Konfidenzschwelle.",
+      "ausgabe": "Erkannte Dokumentart, Konfidenzwert, Alternativvorschlaege, Agent-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -316,8 +316,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quell-Agent-ID, Ziel-Agent-ID, Uebergabedaten, Testmodus.",
+      "ausgabe": "Handoff-Ergebnis, Datenintegritaet, Uebergabeprotokoll, Test-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -351,8 +351,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokumenttext, Sachverhalts-Keywords, Rechtsgebiet, Bezugsregeln.",
+      "ausgabe": "Sachverhaltsbezug-Vorschlag, relevante Passagen, Konfidenz, Agent-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -388,8 +388,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quelltext, Quellsprache, Zielsprache, Agent-Parameter, Terminologie.",
+      "ausgabe": "Agent-Uebersetzung, Konfidenz, Alternativen, Agent-Log.",
       "benoetigte_tools": [
         "OLLAMA",
         "ARGOS_TRANSLATE"
@@ -438,8 +438,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Agent-ID, Kontextdaten, Skill-Register-Referenz, Bindungsmodus.",
+      "ausgabe": "Skill-Bindungsstatus, verfuegbare Skills, Kontext-Hash, Agent-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -473,8 +473,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Agentenauftrag, Eingabedaten, Skill-Set, Ausfuehrungsmodus.",
+      "ausgabe": "Agent-Ergebnis, Zwischenschritte, Skill-Verbrauch, Agent-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -508,8 +508,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Projektverzeichnis, Pruefmodus, Regelsatz, Ausgabeformat.",
+      "ausgabe": "Pruefbericht, Fehlerliste, Empfehlungen, Projekt-Check-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -541,8 +541,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Fehlerbericht, Modul-ID, Reparaturmodus, Max-Iterationen, Backup-Modus.",
+      "ausgabe": "Reparaturvorschlag, angewendete Aenderungen, Testergebnis, Repair-Loop-Log.",
       "benoetigte_tools": [
         "OLLAMA"
       ],
@@ -574,8 +574,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Akten-ID, Materialtyp, Freigabestatus, Empfaengerliste.",
+      "ausgabe": "Freigabeliste, Versandstatus, Empfangsbestaetigungen, Freigabe-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -608,8 +608,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Job-Definition, Sicherheitsparameter, Ausfuehrungsumgebung, Rollback-Plan.",
+      "ausgabe": "Job-Status, Ergebnis, Sicherheitsprotokoll, SafeJob-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -641,8 +641,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Vorlagen-ID, Mandanten-Daten, Sachverhalt, Ausgabeformat.",
+      "ausgabe": "Generierte Vorlage, Platzhalter-Ersetzung, Qualitaetsbewertung, Vorlagen-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -675,8 +675,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokumentdatei, erwartete Sprachen, Profilierungsmodus, Granularitaet.",
+      "ausgabe": "Sprachprofil, Sprachanteile, Konfidenzwerte, Profil-Log.",
       "benoetigte_tools": [
         "ARGOS_TRANSLATE"
       ],
@@ -718,8 +718,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Schnittstellenregister, Modulregister, Abgleichsmodus, Toleranzregeln.",
+      "ausgabe": "Lueckenbericht, fehlende Schnittstellen, Empfehlungen, Abgleich-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -750,8 +750,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Originaldatei-Pfad, Zielverzeichnis, Abbildungsmodus, Groessenlimit.",
+      "ausgabe": "Arbeitsabbildung-Pfad, SHA256-Hash Original, SHA256-Hash Abbildung, Groesseninfo, Log.",
       "benoetigte_tools": [
         "PYMUPDF"
       ],
@@ -784,8 +784,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Arbeitsabbildung-Pfad, Seitengroessenlimit, Kompressionsmodus, Qualitaetsstufe.",
+      "ausgabe": "Aufbereitete Arbeitsabbildung, Groessenreduktion, Qualitaetsbewertung, Log.",
       "benoetigte_tools": [
         "PYMUPDF"
       ],
@@ -818,8 +818,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Arbeitsabbildung-Pfad, erwartete Sprachenliste, OCR-Engine-Auswahl, Konfiguration.",
+      "ausgabe": "OCR-Text pro Seite, erkannte Sprache, Konfidenzwerte, Qualitaetsreport, Log.",
       "benoetigte_tools": [
         "TESSERACT"
       ],
@@ -863,8 +863,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Tessdata-Verzeichnis, erforderliche Sprachenliste, Vergleichsmodus.",
+      "ausgabe": "Sprachpaket-Status, fehlende Pakete, Installationshinweise, Versionsabgleich, Log.",
       "benoetigte_tools": [
         "ARGOS_TRANSLATE",
         "TESSERACT"
@@ -912,8 +912,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "OCR-Text, Seitenkoordinaten, Dokument-ID, Strukturierungsregeln.",
+      "ausgabe": "Fundstellen-JSON, Textstruktur-Markdown, Koordinaten-Mapping, Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -948,8 +948,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quelltext, Quellsprache, Zielsprache, Terminologie-Profil, Fundstellen-JSON.",
+      "ausgabe": "Uebersetzungsvorschlag, Fundstellen-Erklaerung, Konfidenz, Log.",
       "benoetigte_tools": [
         "ARGOS_TRANSLATE"
       ],
@@ -997,8 +997,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokumentprobe, verfuegbare Sprachpakete, Routing-Regeln.",
+      "ausgabe": "Erkannte Hauptsprache, OCR-Reihenfolge, Sprachwechsel-Verdacht, Log.",
       "benoetigte_tools": [
         "ARGOS_TRANSLATE",
         "TESSERACT"
@@ -1049,8 +1049,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quelldaten-Pfade, Konsolidierungsregeln, Zielformat, Deduplizierungsmodus.",
+      "ausgabe": "Konsolidierte Daten, Duplikate-Report, Datenqualitaet, Konsolidierungs-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1083,8 +1083,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Zu bereinigende Daten, Bereinigungsregeln, Backup-Modus, Testmodus.",
+      "ausgabe": "Bereinigte Daten, Entfernte Eintraege, Protokoll, Bereinigungs-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1117,8 +1117,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Benutzerauswahl, Posteingangs-ID, Filterkriterien, Sortierung.",
+      "ausgabe": "Gewaehlte Aktion, naechster Prozessschritt, Status, Menu-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1151,8 +1151,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Posteingangsdatei, Dokumentart, Prioritaet, Mandanten-ID, Sachgebiet.",
+      "ausgabe": "Verarbeitetes Dokument, Weichenstellung, OCR-Auftrag, Pipeline-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1185,8 +1185,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Zu pruefendes Dokument, Pruefliste, Akten-ID, Kontrollmodus.",
+      "ausgabe": "Kontrollergebnis, Freigabestatus, Auffaelligkeiten, Kontroll-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1219,8 +1219,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Posteingangsverzeichnis, Verarbeitungsregeln, Batch-Modus, Zeitfenster.",
+      "ausgabe": "Verarbeitete Dokumente, Fehlerliste, Statistik, Zentral-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1253,8 +1253,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Rechtsgebiet, Fachanwaltschaft, Rechtsraum, Aktualitaetsdatum.",
+      "ausgabe": "Fachanwaltsraster-Eintrag, Quellenliste, Verfuegbarkeit, Quellen-Log.",
       "benoetigte_tools": [
         "SQLITE",
         "PYTHON"
@@ -1301,8 +1301,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Rechtsgebiet, EU-Rechtsraum, SE-Rechtsraum, Suchkriterien.",
+      "ausgabe": "Quellenkandidaten-Liste, Verfuegbarkeitsstatus, URLs, Quellen-Log.",
       "benoetigte_tools": [
         "SQLITE",
         "PYTHON"
@@ -1349,8 +1349,8 @@
       "kurzbeschreibung": "Prüfdatei für RUN SOURCE ADAPTER HEALTHFRAMEWORK. Validiert Ergebnisse und Dateien auf Konsistenz.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Quellen-ID, Adapter-Typ, Pruefmodus, Timeout, Retry-Regeln.",
+      "ausgabe": "Verfuegbarkeitsstatus, Antwortzeit, Offline-Fallback-Liste, Healthcheck-Log.",
       "benoetigte_tools": [
         "SQLITE",
         "PYTHON"
@@ -1397,8 +1397,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Benutzer-ID, Filterdatum, Sortierung, Prioritaetsmodus.",
+      "ausgabe": "Arbeitsliste, Faelligkeiten, Statusuebersicht, Erinnerungen, Arbeitsliste-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1431,8 +1431,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Entscheidungsvorschlag, Dokument-ID, Benutzerrolle, Entscheidungstyp.",
+      "ausgabe": "Entscheidung, Kommentar, naechster Schritt, Weichenstellung, Entscheidungs-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1465,8 +1465,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Mandanten-ID, Kontaktliste, Kommunikationskanal, Vorlage.",
+      "ausgabe": "Kommunikationsvorschlag, Parameter-Set, Adressatenliste, Kommunikations-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1499,8 +1499,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Mandanten-ID, Akten-ID, Dokument-ID, Anwalt-Ansichtsmodus.",
+      "ausgabe": "Anwaltsansicht-Layout, Dokumentvorschau, Notizfeld, Statusleiste, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1531,8 +1531,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Posteingangs-ID, Dokumentart, Schweregrad, Freigabebedingungen.",
+      "ausgabe": "Freigabeentscheidung, Weichenstellung, Protokolleintrag, Tuer-Schwelle-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1563,8 +1563,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Bausatz-ID, Konfigurationsprofil, Zielverzeichnis, Bauparameter.",
+      "ausgabe": "Bausatz-Status, Installationsprotokoll, Fehlerliste, Bau-Starter-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1595,8 +1595,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokument-ID, Freigabestatus, Dropdown-Werte, Notiztext.",
+      "ausgabe": "Aktualisierter Status, gespeicherte Dropdown-Werte, Notiz, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1627,8 +1627,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokument-ID, Quellmodul, Zielmodul, Uebergabetyp, Prioritaet.",
+      "ausgabe": "Uebergabestatus, Empfangsbestaetigung, Aktenverknuepfung, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1659,8 +1659,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokument-ID, Dreiansicht-Modus, Zoomstufe, Seitenbereich.",
+      "ausgabe": "Dreiansicht-Layout, Navigationsleiste, Seitenminiaturen, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1691,8 +1691,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Dokument-ID, Sekretariat-Status, Anwalt-Rueckmeldung, Durchstichtyp.",
+      "ausgabe": "Ruecklaufstatus, Anwalt-Entscheidung, Protokolleintrag, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1725,8 +1725,8 @@
       "kurzbeschreibung": "PowerShell-Autolauf-Starter. Orchestriert den Python-Runner und protokolliert Ergebnisse.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Entscheidungsdaten, Logikregeln, Pruemuster, Eskalationsstufe.",
+      "ausgabe": "Logikpruefungsergebnis, Plausibilitaetsbewertung, Warnungen, UI-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
@@ -1757,8 +1757,8 @@
       "kurzbeschreibung": "PowerShell-Starter für zugehörigen Python-Runner. Setzt Umgebung und startet Ausführung.",
       "version": "1.0.0",
       "version_status": "schaetzung",
-      "eingabe": "Konfiguration und Umgebungsvariablen.",
-      "ausgabe": "Prozess-Start, Log-Datei, Exit-Code.",
+      "eingabe": "Tool-Liste, Update-Modus, Versionspruefung, Download-Quellen.",
+      "ausgabe": "Update-Status, neue Versionen, Fehlerliste, Hash-Verifizierung, Update-Log.",
       "benoetigte_tools": [
         "PYTHON"
       ],
