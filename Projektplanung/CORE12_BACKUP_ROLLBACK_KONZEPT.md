@@ -8,6 +8,7 @@
 | **Schema-Version** | `CORE-12-v1` |
 | **Status** | Konzept vollständig erstellt |
 | **Zweck** | Backup-Pflicht, Rollback-Pfade und Sperrlogik für alle DB-ändernden Module |
+| **Sperrregister-Status** | Verbindliches Register (versioniert, siehe CORE-12a) |
 
 ## Zusammenfassung
 
@@ -108,9 +109,11 @@ Diese Module sind **KRITISCH**, weil sie sowohl DB-ändernd **als auch** online-
 
 **Geschätzte Dauer:** 2–5 Minuten
 
-## Sperrregister
+## Sperrregister (verbindliches Register)
 
-Das Sperrregister (`ALIN_Neustart_Core/01_Register/sperrregister.json`) enthält für jedes kritische Modul:
+Das Sperrregister (`ALIN_Neustart_Core/01_Register/sperrregister.json`) ist ein **verbindliches Register** und wird versioniert (nicht gitignored).
+
+Es enthält für jedes kritische Modul:
 
 - `modul_id` – Eindeutige Identifikation
 - `sperrstatus` – Aktuell: `vorbereitet`
@@ -119,6 +122,8 @@ Das Sperrregister (`ALIN_Neustart_Core/01_Register/sperrregister.json`) enthält
 - `gesperrte_operationen` – Was blockiert wird
 - `ausnahmen` – Was erlaubt bleibt (z. B. lesender Zugriff)
 - `protokollierung` – Vollständige Protokollierung
+
+**Hinweis:** Das Sperrregister wird manuell gepflegt (kein Laufzeit-Artefakt). Änderungen erfordern Git-Commit.
 
 ## Harte Grenzen
 
@@ -146,3 +151,4 @@ Das Sperrregister (`ALIN_Neustart_Core/01_Register/sperrregister.json`) enthält
 | Version | Datum | Änderung |
 |---------|-------|----------|
 | v1 | 2026-05-16 | Erstellerstellung des Konzepts |
+| v1.1 | 2026-05-16 | CORE-12a: Sperrregister als verbindliches Register geklärt und versioniert |
