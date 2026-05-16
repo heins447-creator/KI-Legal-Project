@@ -371,7 +371,7 @@
       "version_status": "zu_pruefen",
       "healthcheck_befehl": "python -c \"import argostranslate; print(argostranslate.__version__)\"",
       "healthcheck_status": "ungeprueft",
-      "update_id": "",
+      "update_id": "UPD_ARGOS",
       "lizenz_id": "ARGOS",
       "offline_verfuegbar": true,
       "online_erforderlich": false,

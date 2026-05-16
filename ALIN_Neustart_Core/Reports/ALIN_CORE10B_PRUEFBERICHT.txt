@@ -1,0 +1,55 @@
+================================================================================
+ALIN CORE-10b PRÜFBERICHT
+================================================================================
+Bericht-ID    : CORE10B-PRUEF-20260516
+Erstellt      : 2026-05-16 19:55:00
+Prüfdatei     : alin_core10b_pruefung.py
+Exit-Code     : 0
+Status        : BESTANDEN
+================================================================================
+
+PRÜFPUNKTE
+----------
+[OK] Alle von Modulen referenzierten Ressourcen existieren im Register
+[OK] Tool TESSERACT im Toolregister vorhanden
+[OK] Update UPD_TESSERACT im Update-Register vorhanden
+[OK] Lizenz TESSERACT im Lizenzregister vorhanden
+[OK] Tool ARGOS_TRANSLATE im Toolregister vorhanden
+[OK] Update UPD_ARGOS im Update-Register vorhanden
+[OK] Lizenz ARGOS im Lizenzregister vorhanden
+[OK] ARGOS_TRANSLATE update_id korrekt auf 'UPD_ARGOS' gesetzt
+
+ERGEBNIS
+--------
+Keine Fehler gefunden.
+Alle 8 Ressourcen (TESS_SPA, TESS_NLD, TESS_POL, ARGOS_DE_ES, ARGOS_DE_FR,
+ARGOS_DE_NL, ARGOS_DE_PL, ARGOS_DE_SV) sind im Ressourcenregister als
+existierende Ressourcen-IDs vorhanden.
+
+MODIFIZIERTE REGISTER-DATEIEN
+------------------------------
+ALIN_Neustart_Core/01_Register/ressourcenregister.json
+  + 3 Tesseract-Einträge (TESS_SPA, TESS_NLD, TESS_POL) – vorhanden/freigegeben
+  + 5 Argos-Einträge (ARGOS_DE_ES/FR/NL/PL/SV) – fehlend/gesperrt
+
+ALIN_Neustart_Core/01_Register/toolregister.json
+  ARGOS_TRANSLATE: update_id "" -> "UPD_ARGOS"
+
+KEINE ÄNDERUNG ERFORDERLICH
+---------------------------
+ALIN_Neustart_Core/01_Register/update_register.json (UPD_ARGOS/UPD_TESSERACT ok)
+ALIN_Neustart_Core/01_Register/lizenzregister.json (ARGOS/TESSERACT ok)
+
+FOLGEAUFTRÄGE
+-------------
+[ ] Kontrollierter Download der Argos-Modelle
+[ ] SHA256-Prüfung der heruntergeladenen Modelle
+[ ] Lizenzprüfung der Argos-Sprachpaare
+[ ] Argos Translate Healthcheck nach Installation
+[ ] Toolfreigabe prüfen (darf_verwendet_werden)
+[ ] Ressourcenstatus auf 'freigegeben' setzen
+[ ] darf_von_modulen_verwendet_werden auf true setzen
+
+================================================================================
+ENDE DER PRÜFUNG
+================================================================================
