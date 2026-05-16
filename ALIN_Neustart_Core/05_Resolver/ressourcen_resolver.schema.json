@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Ressourcen-Resolver",
+  "description": "Schema für den Ressourcen-Resolver.",
+  "type": "object",
+  "required": ["schema_version", "resolver_id", "eingabe", "ausgabe"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "resolver_id": { "type": "string", "const": "ressourcen_resolver" },
+    "eingabe": {
+      "type": "object",
+      "required": ["ressourcen_typ", "sprache", "land", "rechtsgebiet"],
+      "properties": {
+        "ressourcen_typ": { "type": "string", "enum": ["ocr", "uebersetzung", "terminologie", "quelle", "skill"] },
+        "sprache": { "type": "string" },
+        "land": { "type": "string" },
+        "rechtsgebiet": { "type": "string" },
+        "dokumenttyp": { "type": "string" }
+      }
+    },
+    "ausgabe": {
+      "type": "object",
+      "required": ["ressourcen_id", "status", "pfad"],
+      "properties": {
+        "ressourcen_id": { "type": "string" },
+        "status": { "type": "string", "enum": ["freigegeben", "testbar", "gesperrt", "fehlt"] },
+        "pfad": { "type": "string" },
+        "version": { "type": "string" },
+        "offline_verfuegbar": { "type": "boolean" },
+        "fallback": { "type": "string" },
+        "warnungen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Entscheidungsprotokoll",
+  "description": "Schema für das Entscheidungsprotokoll. Jede Entscheidung muss nachvollziehbar sein.",
+  "type": "object",
+  "required": ["schema_version", "protokoll_id", "entscheidungen"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "protokoll_id": { "type": "string", "const": "entscheidungsprotokoll" },
+    "entscheidungen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entscheidung_id", "zeitstempel", "wer", "rolle", "entscheidung", "begruendung", "bezogen_auf", "vorschlag", "sicherheit", "aenderung", "folgeauftrag", "widerrufbar"],
+        "properties": {
+          "entscheidung_id": { "type": "string" },
+          "zeitstempel": { "type": "string", "format": "date-time" },
+          "wer": { "type": "string" },
+          "rolle": { "type": "string", "enum": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"] },
+          "entscheidung": { "type": "string", "description": "Die getroffene Entscheidung" },
+          "begruendung": { "type": "string", "description": "Begründung der Entscheidung" },
+          "bezogen_auf": { "type": "string", "description": "Vorgangs-ID, Dokument-ID oder Akten-ID" },
+          "vorschlag": { "type": "string", "description": "Vorheriger Vorschlag des Systems" },
+          "sicherheit": { "type": "string", "enum": ["sicher", "unsicher", "manuell_geprueft"] },
+          "aenderung": { "type": "string", "description": "Was sich durch die Entscheidung ändert" },
+          "folgeauftrag": { "type": "string", "description": "Resultierender Folgeauftrag" },
+          "widerrufbar": { "type": "boolean", "description": "Ob die Entscheidung widerrufbar ist" }
+        }
+      }
+    }
+  }
+}

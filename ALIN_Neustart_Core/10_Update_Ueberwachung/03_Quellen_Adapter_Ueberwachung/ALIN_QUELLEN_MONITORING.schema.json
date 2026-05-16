@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Quellen-Monitoring",
+  "description": "Schema für das Quellen-Monitoring.",
+  "type": "object",
+  "required": ["schema_version", "monitoring_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "monitoring_id": { "type": "string", "const": "quellen_monitoring" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["quelle_id", "online_status", "offline_cache_status", "letzter_healthcheck", "warnungen"],
+        "properties": {
+          "quelle_id": { "type": "string" },
+          "online_status": {
+            "type": "string",
+            "enum": ["verfuegbar", "eingeschraenkt", "nicht_verfuegbar", "unbekannt"]
+          },
+          "offline_cache_status": {
+            "type": "string",
+            "enum": ["aktuell", "veraltet", "fehlt", "nicht_vorgesehen"]
+          },
+          "letzter_healthcheck": { "type": "string", "format": "date-time" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "toolregister",
+  "letzte_aenderung": "2026-05-16T00:00:00Z",
+  "eintraege": [
+    {
+      "tool_id": "TESSERACT",
+      "name": "Tesseract OCR",
+      "version": "5.x",
+      "kategorie": "ocr",
+      "pfad": "Tools/Tesseract/tesseract.exe",
+      "installationsstatus": "installiert",
+      "letzte_pruefung": "2026-05-16T00:00:00Z",
+      "darf_verwendet_werden": true,
+      "warnungen": []
+    },
+    {
+      "tool_id": "PYMUPDF",
+      "name": "PyMuPDF",
+      "version": "1.23.x",
+      "kategorie": "pdf",
+      "pfad": "Python/Lib/site-packages/fitz",
+      "installationsstatus": "installiert",
+      "letzte_pruefung": "2026-05-16T00:00:00Z",
+      "darf_verwendet_werden": true,
+      "warnungen": []
+    },
+    {
+      "tool_id": "DUCKDB",
+      "name": "DuckDB",
+      "version": "0.10.x",
+      "kategorie": "datenbank",
+      "pfad": "Tools/DuckDB/duckdb.exe",
+      "installationsstatus": "installiert",
+      "letzte_pruefung": "2026-05-16T00:00:00Z",
+      "darf_verwendet_werden": true,
+      "warnungen": []
+    }
+  ]
+}

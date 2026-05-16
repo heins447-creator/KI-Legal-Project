@@ -1,0 +1,28 @@
+ALIN Healthcheck Bericht
+========================
+
+Zeitstempel: {ZEITSTEMPEL}
+Healthcheck-ID: {HEALTHCHECK_ID}
+
+Geprüfte Komponenten:
+{KOMPONENTEN_LISTE}
+
+Zusammenfassung:
+- Vorhanden: {ANZAHL_VORHANDEN}
+- Testbar: {ANZAHL_TESTBAR}
+- Fehlt: {ANZAHL_FEHLT}
+- Unklar: {ANZAHL_UNKLAR}
+- Blockiert: {ANZAHL_BLOCKIERT}
+- Manuelle Prüfung: {ANZAHL_MANUELL}
+
+Warnungen:
+{WARNUNGEN}
+
+Fehler:
+{FEHLER}
+
+Empfohlene Aktion:
+{EMPFOHLENE_AKTION}
+
+Nächster Schritt:
+{NAECHSTER_SCHRITT}

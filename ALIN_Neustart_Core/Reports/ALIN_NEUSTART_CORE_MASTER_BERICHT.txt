@@ -1,0 +1,490 @@
+ALIN Neustart Core – Master-Bericht
+====================================
+
+Zeitstempel: 2026-05-16T02:15:00Z
+Bericht-ID: ALIN_NEUSTART_CORE_MASTER_BERICHT
+
+1. ANGELEGTE ORDNER
+===================
+
+ALIN_Neustart_Core/
+├── 00_Dokumentation
+├── 01_Register
+├── 02_Statusmodell
+├── 03_Schnittstellen
+├── 04_Healthcheck
+├── 05_Resolver
+├── 06_Audit_Protokoll
+├── 07_Bestandsaufnahme_Altbestand
+├── 08_Windows_App_Grundlage
+├── 09_Toolbibliothek
+│   ├── 00_Toolregister
+│   ├── 01_Download_Quellen
+│   ├── 02_Installer_Offline
+│   ├── 03_Installiert
+│   ├── 04_Hashes
+│   ├── 05_Lizenzen
+│   ├── 06_Healthcheck
+│   ├── 07_Nachlade_Routine
+│   └── 08_Testpakete
+├── 10_Update_Ueberwachung
+│   ├── 00_Update_Register
+│   ├── 01_Tool_Updates
+│   ├── 02_Sprachpaket_Updates
+│   ├── 03_Quellen_Adapter_Ueberwachung
+│   ├── 04_Skill_Model_Ueberwachung
+│   ├── 05_Schema_Migration_Ueberwachung
+│   ├── 06_Cache_Ueberwachung
+│   ├── 07_Rollback
+│   ├── 08_Healthcheck
+│   └── 09_Berichte
+├── 11_Lizenzen_Compliance
+│   ├── 00_Lizenzregister
+│   ├── 01_Lizenztexte
+│   ├── 02_Third_Party_Notices
+│   ├── 03_Compliance_Pruefung
+│   ├── 04_Kauf_und_Commercial_Lizenzen
+│   ├── 05_Modelle_und_Sprachpakete
+│   ├── 06_Quellen_Nutzungsbedingungen
+│   └── 07_Berichte
+├── 12_Dokumentation_Hilfe_Infofelder
+│   ├── 00_Hilferegister
+│   ├── 01_Feldhilfen
+│   ├── 02_Buttonhilfen
+│   ├── 03_Warnhinweise
+│   ├── 04_Kanzleisprache
+│   ├── 05_Entwicklerdokumentation
+│   ├── 06_Benutzerhandbuch
+│   └── 07_Kontext_Hilfe
+├── 13_Anforderungen_Abnahme
+├── 14_Architekturentscheidungen
+├── 15_Teststrategie
+├── 16_Build_Release
+├── 17_Backup_Restore
+├── 18_Rechte_Rollen
+├── 19_Secrets_Sicherheit
+├── 20_Datenschutz_Mandatsgeheimnis
+├── 21_Support_Diagnose
+├── 22_Performance_Limits
+├── 23_Import_Export
+├── 24_Konfigurationsprofile
+├── Scripts
+└── Reports
+
+Anzahl angelegter Ordner: 26 Hauptordner + 26 Unterordner = 52 Ordner
+
+2. ANGELEGTE DATEIEN
+====================
+
+00_Dokumentation:
+- ALIN_GRUNDMODELL.md
+- ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md
+- ALIN_BEGRIFFSWELT_TECHNIK_KANZLEI.md
+- ALIN_MODULPAKETE.md
+- ALIN_NAECHSTE_AUFTRAEGE.md
+
+01_Register:
+- modulregister.schema.json
+- ressourcenregister.schema.json
+- skillregister.schema.json
+- quellen_adapter_register.schema.json
+- toolregister.schema.json
+- lizenzregister.schema.json
+- update_register.schema.json
+
+02_Statusmodell:
+- eingang_status.json
+- dokument_status.json
+- akte_status.json
+- weiche_status.json
+- anwalt_status.json
+- ruecklauf_status.json
+- statusmodell.schema.json
+
+03_Schnittstellen:
+- uebergabe_posteingang_sekretariat.schema.json
+- uebergabe_sekretariat_weiche.schema.json
+- uebergabe_weiche_ocr.schema.json
+- uebergabe_weiche_anwalt.schema.json
+- ruecklauf_anwalt_sekretariat.schema.json
+- uebergabe_ocr_an_akte.schema.json
+- uebergabe_ocr_an_anwalt.schema.json
+
+04_Healthcheck:
+- systemstart_healthcheck.schema.json
+- healthcheck_regeln.json
+- healthcheck_statuswerte.json
+- healthcheck_bericht_template.txt
+
+05_Resolver:
+- aktenprofil_resolver.schema.json
+- ressourcen_resolver.schema.json
+- workflow_resolver.schema.json
+- tool_resolver.schema.json
+- quellen_resolver.schema.json
+
+06_Audit_Protokoll:
+- ereignisprotokoll.schema.json
+- entscheidungsprotokoll.schema.json
+- aenderungsprotokoll.schema.json
+- freigabeprotokoll.schema.json
+
+07_Bestandsaufnahme_Altbestand:
+- altbestand_modulkarte.json
+- altbestand_ressourcenkarte.json
+- altbestand_schnittstellen.json
+- altbestand_luecken.json
+- altbestand_toolkarte.json
+- altbestand_lizenzhinweise.json
+
+08_Windows_App_Grundlage:
+- ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md
+- ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md
+- ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md
+- ALIN_WINDOWS_BARRIEREFREIHEIT_CHECKLISTE_V1.md
+- ALIN_WINDOWS_WEBVIEW2_OPTION_V1.md
+- ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md
+
+09_Toolbibliothek:
+- 00_Toolregister/ALIN_TOOLREGISTER.schema.json
+- 00_Toolregister/ALIN_TOOLREGISTER.json
+- 01_Download_Quellen/ALIN_OFFIZIELLE_DOWNLOADQUELLEN.md
+- 02_Installer_Offline/README_INSTALLER_DEPOT.md
+- 04_Hashes/SHA256_MANIFEST_SCHEMA.csv
+- 05_Lizenzen/ALIN_LIZENZSTATUS.md
+- 06_Healthcheck/ALIN_TOOL_HEALTHCHECK.schema.json
+- 07_Nachlade_Routine/ALIN_TOOL_NACHLADEKONZEPT.md
+- 08_Testpakete/ALIN_TOOL_TESTMATRIX.md
+
+10_Update_Ueberwachung:
+- 00_Update_Register/ALIN_UPDATE_REGISTER.schema.json
+- 00_Update_Register/ALIN_UPDATE_REGISTER.json
+- 03_Quellen_Adapter_Ueberwachung/ALIN_QUELLEN_MONITORING.schema.json
+- 06_Cache_Ueberwachung/ALIN_CACHE_STATUS.schema.json
+- 07_Rollback/ALIN_ROLLBACK_KONZEPT.md
+- 08_Healthcheck/ALIN_UPDATE_HEALTHCHECK.schema.json
+- 09_Berichte/ALIN_UPDATE_UEBERWACHUNG_BERICHT.txt
+
+11_Lizenzen_Compliance:
+- 00_Lizenzregister/ALIN_LIZENZREGISTER.schema.json
+- 00_Lizenzregister/ALIN_LIZENZREGISTER.json
+- 02_Third_Party_Notices/THIRD_PARTY_LICENSES_TEMPLATE.md
+- 02_Third_Party_Notices/NOTICE_TEMPLATE.txt
+- 03_Compliance_Pruefung/ALIN_LIZENZPRUEFUNG.schema.json
+- 04_Kauf_und_Commercial_Lizenzen/COMMERCIAL_LICENSES_REGISTER.md
+- 05_Modelle_und_Sprachpakete/MODEL_AND_LANGUAGE_PACKAGE_LICENSES.md
+- 06_Quellen_Nutzungsbedingungen/SOURCE_TERMS_REGISTER.md
+
+12_Dokumentation_Hilfe_Infofelder:
+- 00_Hilferegister/ALIN_HILFEREGISTER.schema.json
+- 01_Feldhilfen/ALIN_FELDHILFEN.json
+- 02_Buttonhilfen/ALIN_BUTTONHILFEN.json
+- 03_Warnhinweise/ALIN_WARNHINWEISE.json
+- 04_Kanzleisprache/ALIN_KANZLEI_UI_WOERTERBUCH.md
+- 04_Kanzleisprache/ALIN_BUTTON_BEZEICHNUNGEN.md
+- 04_Kanzleisprache/ALIN_FELDBEZEICHNUNGEN.md
+- 04_Kanzleisprache/ALIN_INFOBUTTON_TEXTE.md
+- 05_Entwicklerdokumentation/ALIN_ENTWICKLERDOKUMENTATION_STRUKTUR.md
+- 06_Benutzerhandbuch/ALIN_BENUTZERHILFE_STRUKTUR.md
+- 07_Kontext_Hilfe/ALIN_INFOBUTTON_REGELN.md
+
+13_Anforderungen_Abnahme:
+- ALIN_ANFORDERUNGEN.schema.json
+- ALIN_ABNAHMEKRITERIEN.schema.json
+- DEFINITION_OF_DONE.md
+
+14_Architekturentscheidungen:
+- ADR_0001_WINDOWS_APP_GRUNDLAGE.md
+- ADR_0002_TOOLREGISTER.md
+- ADR_0003_OFFLINE_BETRIEB.md
+- ADR_0004_ORIGINALSCHUTZ.md
+- ADR_0005_KEINE_HARTE_VERDRAHTUNG.md
+
+15_Teststrategie:
+- TESTKATALOG.md
+- TESTDATEN_REGELN.md
+- REGRESSIONSTEST_PLAN.md
+- FEHLERFALL_TESTS.md
+
+16_Build_Release:
+- VERSION.json
+- CHANGELOG.md
+- RELEASE_CHECKLIST.md
+- ROLLBACK_PLAN.md
+
+17_Backup_Restore:
+- BACKUP_KONZEPT.md
+- RESTORE_TESTPLAN.md
+- INTEGRITAETSPRUEFUNG.schema.json
+
+18_Rechte_Rollen:
+- ROLLENMODELL.md
+- BERECHTIGUNGEN.schema.json
+- FREIGABEREGELN.md
+
+19_Secrets_Sicherheit:
+- SECRETS_POLICY.md
+- API_KEY_VERBOT_GIT.md
+- LOG_SANITIZING_REGELN.md
+
+20_Datenschutz_Mandatsgeheimnis:
+- DATENSCHUTZ_MARKIERUNGEN.schema.json
+- MANDATSGEHEIMNIS_REGELN.md
+- EXPORTREGELN.md
+
+21_Support_Diagnose:
+- DIAGNOSEPAKET_SCHEMA.json
+- SUPPORT_EXPORT_REGELN.md
+- FEHLERBERICHT_TEMPLATE.txt
+
+22_Performance_Limits:
+- LEISTUNGSGRENZEN.md
+- TIMEOUT_REGELN.md
+- WIEDERAUFNAHME_REGELN.md
+
+23_Import_Export:
+- EXPORTFORMATE.md
+- IMPORTFORMATE.md
+- PORTABILITAET_REGELN.md
+
+24_Konfigurationsprofile:
+- PROFIL_KANZLEI_PC.json
+- PROFIL_GERICHTSLAPTOP_OFFLINE.json
+- PROFIL_ENTWICKLUNG.json
+- PROFIL_TEST.json
+
+Anzahl angelegter Dateien: 95
+
+3. ZWECK JEDES BEREICHS
+========================
+
+00_Dokumentation: Erklärt das ALIN-Core-Grundmodell, Software-Grundsätze, Begriffswelt, Modulpakete und nächste Aufträge.
+
+01_Register: Zentrale Verzeichnisse für Module, Ressourcen, Skills, Quellen/Adapter, Tools, Lizenzen und Updates.
+
+02_Statusmodell: Einheitliche Zustände und Übergänge für Eingang, Dokument, Akte, Weiche, Anwalt und Rücklauf.
+
+03_Schnittstellen: Verträge für alle Übergaben zwischen Prozessschritten.
+
+04_Healthcheck: Systemstart-Prüfung aller Bestandteile mit Regeln und Statuswerten.
+
+05_Resolver: Bestimmung von Sprache, Land, Rechtsraum, Rechtsgebiet, Ressourcen und nächstem Schritt aus Kontext.
+
+06_Audit_Protokoll: Nachvollziehbarkeit aller Ereignisse, Entscheidungen, Änderungen und Freigaben.
+
+07_Bestandsaufnahme_Altbestand: Platzhalter für spätere Inventarisierung des vorhandenen Altbestands.
+
+08_Windows_App_Grundlage: Vorbereitung für WinUI 3 / WebView2 mit Architektur, UI, Deployment und Barrierefreiheit.
+
+09_Toolbibliothek: Verwaltung aller externen Tools mit Register, Downloadquellen, Hashes, Lizenzen und Healthcheck.
+
+10_Update_Ueberwachung: Zentrale Überwachung von Updates mit Register, Monitoring, Cache, Rollback und Berichten.
+
+11_Lizenzen_Compliance: Lizenzregister, Third-Party-Notices, Compliance-Prüfung und kommerzielle Lizenzen.
+
+12_Dokumentation_Hilfe_Infofelder: Hilferegister, Feldhilfen, Buttonhilfen, Warnhinweise und Kanzleisprache.
+
+13_Anforderungen_Abnahme: Schemas für Anforderungen, Abnahmekriterien und Definition of Done.
+
+14_Architekturentscheidungen: ADRs für Windows-App, Toolregister, Offline-Betrieb, Originalschutz und keine harte Verdrahtung.
+
+15_Teststrategie: Testkatalog, Testdaten-Regeln, Regressionstest-Plan und Fehlerfall-Tests.
+
+16_Build_Release: Versionsnummer, Changelog, Release-Checkliste und Rollback-Plan.
+
+17_Backup_Restore: Backup-Konzept, Restore-Testplan und Integritätsprüfung.
+
+18_Rechte_Rollen: Rollenmodell, Berechtigungen und Freigaberegeln.
+
+19_Secrets_Sicherheit: Secrets-Policy, API-Key-Verbot in Git und Log-Sanitizing.
+
+20_Datenschutz_Mandatsgeheimnis: Datenschutz-Markierungen, Mandatsgeheimnis-Regeln und Exportregeln.
+
+21_Support_Diagnose: Diagnosepaket-Schema, Support-Export-Regeln und Fehlerbericht-Template.
+
+22_Performance_Limits: Leistungsgrenzen, Timeout-Regeln und Wiederaufnahme-Regeln.
+
+23_Import_Export: Exportformate, Importformate und Portabilitätsregeln.
+
+24_Konfigurationsprofile: Profile für Kanzlei-PC, Gerichtslaptop offline, Entwicklung und Test.
+
+4. ALTE BESTÄNDE (UNVERÄNDERT)
+===============================
+
+Folgende Bestandteile bleiben unverändert und werden später angebunden:
+
+- Posteingang / Briefkasten (Scripts/python_runner/014_posteingang_pipeline_v1.py)
+- Sicherheitsgate (Scripts/python_runner/005_posteingang_sicherheitsgate_v2.py)
+- Sprachgate (Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py)
+- Vorzimmer (Scripts/python_runner/017_vorzimmer_arbeitsliste_v1.py)
+- Aktenmaterial-Freigabeliste (Scripts/python_runner/027_posteingang_aktenmaterial_freigabeliste_v1.py)
+- Schlusskontrolle (Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+- Endabnahme (Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+- UI01 Anwaltsansicht (Scripts/python_runner/ui01_anwaltsansicht_v1.py)
+- UI02 Türschwelle (Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py)
+- UI03 Mandantenakte (Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py)
+- UI04 Rücklauf (Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py)
+- KM12 Originalabbildung (Scripts/python_runner/km12_originalabbildung.py)
+- KM13 OCR-Pipeline (Scripts/python_runner/km13_ocr_pipeline.py)
+- KM14–KM21 OCR-/Übersetzungsstrecke
+- Quellenbetreuer (Scripts/python_runner/046_quellenbetreuer_fachanwaltsraster_v1.py)
+- Agenten-/Skill-Bausteine
+- Datenbanktabellen (Database/Migrations/)
+- Config-Dateien
+- Logs und Testläufe
+
+5. PROFESSIONELLE SOFTWAREGRUNDSÄTZE
+=====================================
+
+1. Altbestand bleibt unverändert.
+2. Neue Architektur entsteht in ALIN_Neustart_Core.
+3. Fachmodule werden später einzeln geprüft und angebunden.
+4. Keine harte Verdrahtung von Tools, Sprachen, Quellen, Adaptern oder Skills.
+5. Tools werden zentral registriert.
+6. Lizenzen werden zentral überwacht.
+7. Updates werden zentral überwacht.
+8. Quellen und Adapter bekommen Healthchecks.
+9. UI verwendet Kanzleisprache.
+10. Technische Begriffe bleiben intern.
+11. Jede Entscheidung wird protokolliert.
+12. Jede Übergabe hat ein Schema.
+13. Jede Ressource hat Version, Status, Lizenz, Hash und Healthcheck.
+14. Unsichere Treffer werden markiert, nicht stillschweigend übernommen.
+15. Keine automatische Stammdatenüberschreibung.
+16. Keine Beweiswürdigung durch System oder Skill.
+17. Keine endgültige Rechtsbewertung durch System oder Skill.
+18. Keine endgültige Übersetzung ohne gesonderte Freigabe.
+19. Keine Cloudpflicht.
+20. Gerichtslaptop muss offlinefähig bleiben.
+
+6. WINDOWS-APP-GRUNDSÄTZE
+==========================
+
+- Windows App SDK als spätere Grundlage prüfen
+- WinUI 3 als moderne Desktop-UI prüfen
+- WebView2 als Übergang für HTML-Prüfansichten prüfen
+- WPF/WinForms/Win32 nur als Übergangs-/Integrationsschicht
+- MSIX oder anderes zulässiges Bereitstellungsmodell prüfen
+- Barrierefreiheit
+- Tastaturbedienung
+- Kontrast
+- Skalierung
+- Fensterverwaltung
+- Vollbild
+- Geteilte Ansicht
+- Lokale Ressourcen
+- Offline-Betrieb
+
+7. TOOL-/LIZENZ-/UPDATEBEREICHE
+=================================
+
+Toolbibliothek:
+- Register mit Schema und Beispieldaten
+- Offizielle Downloadquellen dokumentiert
+- Installer-Depot vorbereitet
+- SHA256-Manifest-Schema
+- Lizenzstatus-Regeln
+- Tool-Healthcheck-Schema
+- Nachladekonzept
+- Testmatrix
+
+Update-Überwachung:
+- Update-Register mit Schema
+- Quellen-Monitoring-Schema
+- Cache-Status-Schema
+- Rollback-Konzept
+- Update-Healthcheck-Schema
+- Berichtstemplate
+
+Lizenzen und Compliance:
+- Lizenzregister mit Schema und Beispieldaten (Tesseract, PyMuPDF, DuckDB)
+- Third-Party-Notices-Template
+- Compliance-Prüfung-Schema
+- Commercial-Licenses-Register
+- Model- und Language-Package-Licenses
+- Source-Terms-Register
+
+8. KANZLEIBEGRIFFE
+===================
+
+Zulässige sichtbare Begriffe:
+- Briefkasten
+- Posteingang
+- E-Akte
+- Akte
+- Mandant
+- Vorgang
+- Dokumente
+- Dateien
+- Aufgabe
+- Frist
+- Fristverdacht
+- Wiedervorlage
+- Vorlage an Anwalt
+- Rücklauf an Sekretariat
+- Zur Akte nehmen
+- Unterlagen nachfordern
+- Sicherheitsprüfung
+- Schlusskontrolle
+- Verwaltungspost
+- Notiz zur Akte
+- Auftrag an Sekretariat
+
+Nicht sichtbar verwenden:
+- Registry, Adapter, Resolver, Workflow Engine, Contract, Schema, Healthcheck, Pipeline, OCR-Backend, Resource Layer
+
+9. NÄCHSTE SINNVOLLE AUFTRÄGE
+==============================
+
+Phase 1: Grundmodell vervollständigen
+- CORE-01: Register mit Altbestand befüllen
+- CORE-02: Statusmodell implementieren
+- CORE-03: Schnittstellenverträge finalisieren
+- CORE-04: Healthcheck implementieren
+- CORE-05: Resolver implementieren
+
+Phase 2: Altbestand anbinden
+- CORE-06: Altbestand inventarisieren
+- CORE-07: Posteingang anbinden
+- CORE-08: OCR-Strecke anbinden
+- CORE-09: UI anbinden
+- CORE-10: Quellen und Skills anbinden
+
+Phase 3: Windows-App-Grundlage
+- CORE-11: Windows-App-Architektur finalisieren
+- CORE-12: UI-Grundlagen implementieren
+- CORE-13: Barrierefreiheit umsetzen
+- CORE-14: Deployment vorbereiten
+- CORE-15: Info-Buttons und Hilfe
+
+Phase 4: Test und Abnahme
+- CORE-16: Teststrategie umsetzen
+- CORE-17: Build und Release
+- CORE-18: Backup und Restore
+- CORE-19: Rechte und Rollen
+- CORE-20: Datenschutz und Mandatsgeheimnis
+
+Empfohlener nächster Auftrag: CORE-01 (Register befüllen)
+
+10. GIT-STATUS
+==============
+
+Vor Abschluss geprüft:
+- Nur Dateien aus ALIN_Neustart_Core/ sind neu.
+- Keine Änderungen am Altbestand.
+- Keine fremden Dateien.
+- Keine unbeabsichtigten Änderungen.
+
+Commit: Nein (erfordert ausdrückliche Freigabe).
+
+11. ABSCHLUSS
+=============
+
+Status: Abgeschlossen
+Neues Verzeichnis: I:\KI_Legal_Project\ALIN_Neustart_Core\
+Anzahl Ordner: 52
+Anzahl Dateien: 95
+Berichtspfad: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\ALIN_NEUSTART_CORE_MASTER_BERICHT.txt
+Git-Status: Nur neue Dateien in ALIN_Neustart_Core/
+Commit: Nein
+Nächster sinnvoller Auftrag: CORE-01 (Register befüllen)

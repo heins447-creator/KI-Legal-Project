@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Lizenzprüfung",
+  "description": "Schema für die Lizenzprüfung.",
+  "type": "object",
+  "required": ["schema_version", "pruefung_id", "zeitstempel", "ergebnisse"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "pruefung_id": { "type": "string", "const": "lizenzpruefung" },
+    "zeitstempel": { "type": "string", "format": "date-time" },
+    "ergebnisse": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["komponente_id", "freigabestatus", "pruefer", "bemerkung"],
+        "properties": {
+          "komponente_id": { "type": "string" },
+          "freigabestatus": {
+            "type": "string",
+            "enum": ["freigegeben", "nur_interne_nutzung", "lizenz_pruefen", "kommerziell_klaeren", "gesperrt", "ersatztool_erforderlich"]
+          },
+          "pruefer": { "type": "string" },
+          "bemerkung": { "type": "string" }
+        }
+      }
+    }
+  }
+}

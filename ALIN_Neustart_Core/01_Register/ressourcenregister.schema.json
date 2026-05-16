@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Ressourcenregister",
+  "description": "Zentrales Verzeichnis aller Ressourcen (Sprachpakete, OCR-Modelle, Übersetzungsressourcen, Terminologien).",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "ressourcenregister" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "resource_id",
+          "typ",
+          "sprache",
+          "land",
+          "rechtsraum",
+          "rechtsgebiet",
+          "dokumenttyp",
+          "pfad",
+          "status",
+          "offline_verfuegbar",
+          "online_erforderlich",
+          "fallback",
+          "letzte_pruefung",
+          "warnungen"
+        ],
+        "properties": {
+          "resource_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "typ": {
+            "type": "string",
+            "enum": ["ocr_sprachpaket", "uebersetzungsmodell", "terminologie", "schriftart", "vorlage", "sonstiges"]
+          },
+          "sprache": { "type": "string", "description": "ISO 639-1 Code, z. B. de, sv, en" },
+          "land": { "type": "string", "description": "ISO 3166-1 Alpha-2, z. B. DE, SE, US" },
+          "rechtsraum": { "type": "string", "description": "z. B. EU, Bundesrepublik Deutschland, Schweden" },
+          "rechtsgebiet": { "type": "string", "description": "z. B. Arbeitsrecht, Zivilrecht" },
+          "dokumenttyp": { "type": "string", "description": "z. B. Arbeitsvertrag, Klageschrift" },
+          "pfad": { "type": "string", "description": "Relativer Pfad zur Ressource" },
+          "status": {
+            "type": "string",
+            "enum": ["freigegeben", "testbar", "veraltet", "gesperrt", "fehlt"]
+          },
+          "offline_verfuegbar": { "type": "boolean" },
+          "online_erforderlich": { "type": "boolean" },
+          "fallback": { "type": "string", "description": "resource_id des Fallbacks" },
+          "letzte_pruefung": { "type": "string", "format": "date-time" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

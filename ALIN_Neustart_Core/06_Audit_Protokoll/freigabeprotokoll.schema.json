@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Freigabeprotokoll",
+  "description": "Schema für das Freigabeprotokoll.",
+  "type": "object",
+  "required": ["schema_version", "protokoll_id", "freigaben"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "protokoll_id": { "type": "string", "const": "freigabeprotokoll" },
+    "freigaben": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["freigabe_id", "zeitstempel", "wer", "rolle", "freigabe_typ", "bezogen_auf", "gueltig_bis"],
+        "properties": {
+          "freigabe_id": { "type": "string" },
+          "zeitstempel": { "type": "string", "format": "date-time" },
+          "wer": { "type": "string" },
+          "rolle": { "type": "string", "enum": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"] },
+          "freigabe_typ": { "type": "string", "enum": ["modul", "ressource", "tool", "update", "dokument"] },
+          "bezogen_auf": { "type": "string", "description": "ID des freigegebenen Objekts" },
+          "gueltig_bis": { "type": "string", "format": "date-time" },
+          "bedingungen": { "type": "string", "description": "Bedingungen der Freigabe" }
+        }
+      }
+    }
+  }
+}

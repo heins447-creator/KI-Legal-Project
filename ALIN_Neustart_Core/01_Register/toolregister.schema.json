@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Toolregister",
+  "description": "Zentrales Verzeichnis aller externen Tools.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "toolregister" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tool_id",
+          "name",
+          "version",
+          "kategorie",
+          "pfad",
+          "installationsstatus",
+          "letzte_pruefung",
+          "darf_verwendet_werden",
+          "warnungen"
+        ],
+        "properties": {
+          "tool_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "kategorie": {
+            "type": "string",
+            "enum": ["ocr", "pdf", "bildverarbeitung", "uebersetzung", "windows_app", "datenbank", "sicherheit", "sonstiges"]
+          },
+          "pfad": { "type": "string", "description": "Relativer oder absoluter Pfad zur ausführbaren Datei" },
+          "installationsstatus": {
+            "type": "string",
+            "enum": ["installiert", "nicht_installiert", "veraltet", "unbekannt"]
+          },
+          "letzte_pruefung": { "type": "string", "format": "date-time" },
+          "darf_verwendet_werden": { "type": "boolean" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

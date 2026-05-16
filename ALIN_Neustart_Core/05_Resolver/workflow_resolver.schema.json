@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Workflow-Resolver",
+  "description": "Schema für den Workflow-Resolver.",
+  "type": "object",
+  "required": ["schema_version", "resolver_id", "eingabe", "ausgabe"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "resolver_id": { "type": "string", "const": "workflow_resolver" },
+    "eingabe": {
+      "type": "object",
+      "required": ["aktueller_status", "dokumenttyp", "sicherheitsstatus"],
+      "properties": {
+        "aktueller_status": { "type": "string" },
+        "dokumenttyp": { "type": "string" },
+        "sicherheitsstatus": { "type": "string" },
+        "sprache": { "type": "string" },
+        "rechtsgebiet": { "type": "string" }
+      }
+    },
+    "ausgabe": {
+      "type": "object",
+      "required": ["zulaessige_schritte", "empfohlener_schritt"],
+      "properties": {
+        "zulaessige_schritte": { "type": "array", "items": { "type": "string" } },
+        "empfohlener_schritt": { "type": "string" },
+        "warnungen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

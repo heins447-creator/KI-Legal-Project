@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "statuswerte_id": "healthcheck_statuswerte",
+  "beschreibung": "Zulässige Statuswerte für Healthcheck-Komponenten",
+  "statuswerte": [
+    {
+      "wert": "vorhanden",
+      "bedeutung": "Komponente ist vorhanden und erreichbar",
+      "farbe": "gruen"
+    },
+    {
+      "wert": "testbar",
+      "bedeutung": "Komponente ist vorhanden, aber nicht getestet",
+      "farbe": "gelb"
+    },
+    {
+      "wert": "letzter_test_ok",
+      "bedeutung": "Letzter Test war erfolgreich",
+      "farbe": "gruen"
+    },
+    {
+      "wert": "letzter_test_alt",
+      "bedeutung": "Letzter Test ist älter als 7 Tage",
+      "farbe": "gelb"
+    },
+    {
+      "wert": "fehlt",
+      "bedeutung": "Komponente fehlt",
+      "farbe": "rot"
+    },
+    {
+      "wert": "unklar",
+      "bedeutung": "Status der Komponente ist unklar",
+      "farbe": "gelb"
+    },
+    {
+      "wert": "blockiert",
+      "bedeutung": "Komponente ist blockiert",
+      "farbe": "rot"
+    },
+    {
+      "wert": "nur_dry_run",
+      "bedeutung": "Komponente ist nur im Dry-Run-Modus verfügbar",
+      "farbe": "gelb"
+    },
+    {
+      "wert": "manuelle_pruefung_erforderlich",
+      "bedeutung": "Manuelle Prüfung erforderlich",
+      "farbe": "orange"
+    }
+  ]
+}

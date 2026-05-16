@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "profil_id": "test",
+  "beschreibung": "Profil für Testumgebung",
+  "einstellungen": {
+    "online": true,
+    "automatische_updates": false,
+    "cloud_synchronisation": false,
+    "offline_fallback": true,
+    "maximale_dateigroesse_mb": 50,
+    "maximale_seitenzahl": 100,
+    "parallelverarbeitung": 2,
+    "timeout_ocr_sekunden": 60,
+    "timeout_uebersetzung_sekunden": 60
+  }
+}

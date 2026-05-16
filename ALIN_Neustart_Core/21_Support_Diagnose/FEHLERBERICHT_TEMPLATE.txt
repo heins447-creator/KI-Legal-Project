@@ -1,0 +1,26 @@
+ALIN Fehlerbericht
+==================
+
+Zeitstempel: {ZEITSTEMPEL}
+Vorgangs-ID: {VORGANGS_ID}
+Dokument-ID: {DOKUMENT_ID}
+
+Fehlerbeschreibung:
+{FEHLERBESCHREIBUNG}
+
+Schritte zur Reproduktion:
+{SCHRITTE}
+
+Erwartetes Verhalten:
+{ERWARTET}
+
+Tatsächliches Verhalten:
+{TATSÄCHLICH}
+
+Umgebung:
+- ALIN-Version: {VERSION}
+- Betriebssystem: {OS}
+- Profil: {PROFIL}
+
+Anhänge:
+{ANHÄNGE}

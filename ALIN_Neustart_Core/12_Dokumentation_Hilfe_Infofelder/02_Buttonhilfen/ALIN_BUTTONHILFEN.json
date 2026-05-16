@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "buttonhilfen",
+  "letzte_aenderung": "2026-05-16T00:00:00Z",
+  "eintraege": [
+    {
+      "hilfe_id": "BTN_ZUR_AKTE_NEHMEN",
+      "typ": "button",
+      "bezeichnung": "Zur Akte nehmen",
+      "kurzhilfe": "Dokument in die Akte einordnen.",
+      "langhilfe": "Das Dokument wird in die Mandantenakte einsortiert und ist dort dauerhaft verfügbar."
+    },
+    {
+      "hilfe_id": "BTN_VORLAGE_AN_ANWALT",
+      "typ": "button",
+      "bezeichnung": "Vorlage an Anwalt",
+      "kurzhilfe": "Dokument an den Anwalt zur Prüfung übergeben.",
+      "langhilfe": "Das Dokument wird an den Anwalt übergeben. Der Anwalt kann es prüfen, freigeben oder zurückweisen."
+    }
+  ]
+}

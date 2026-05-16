@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Änderungsprotokoll",
+  "description": "Schema für das Änderungsprotokoll.",
+  "type": "object",
+  "required": ["schema_version", "protokoll_id", "aenderungen"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "protokoll_id": { "type": "string", "const": "aenderungsprotokoll" },
+    "aenderungen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["aenderung_id", "zeitstempel", "wer", "rolle", "objekt", "feld", "alt_wert", "neu_wert", "begruendung"],
+        "properties": {
+          "aenderung_id": { "type": "string" },
+          "zeitstempel": { "type": "string", "format": "date-time" },
+          "wer": { "type": "string" },
+          "rolle": { "type": "string", "enum": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"] },
+          "objekt": { "type": "string", "description": "Was geändert wurde (z. B. Akte, Dokument, Config)" },
+          "feld": { "type": "string", "description": "Welches Feld geändert wurde" },
+          "alt_wert": { "type": "string" },
+          "neu_wert": { "type": "string" },
+          "begruendung": { "type": "string" }
+        }
+      }
+    }
+  }
+}

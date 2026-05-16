@@ -1,0 +1,10 @@
+ALIN Third-Party Notices
+========================
+
+Dieses Projekt verwendet folgende Third-Party-Komponenten:
+
+- Tesseract OCR (Apache-2.0)
+- PyMuPDF (AGPL-3.0)
+- DuckDB (MIT)
+
+Vollständige Lizenztexte befinden sich im Verzeichnis 01_Lizenztexte/.

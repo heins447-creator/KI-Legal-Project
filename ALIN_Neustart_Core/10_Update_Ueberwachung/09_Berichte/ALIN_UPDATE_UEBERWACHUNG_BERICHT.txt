@@ -1,0 +1,19 @@
+ALIN Update-Überwachung Bericht
+================================
+
+Zeitstempel: {ZEITSTEMPEL}
+
+Geprüfte Updates:
+{UPDATE_LISTE}
+
+Zusammenfassung:
+- Aktuell: {ANZAHL_AKTUELL}
+- Update verfügbar: {ANZAHL_VERFUEGBAR}
+- Geprüft: {ANZAHL_GEPRUEFT}
+- Gesperrt: {ANZAHL_GESPERRT}
+
+Warnungen:
+{WARNUNGEN}
+
+Empfohlene Aktion:
+{EMPFOHLENE_AKTION}

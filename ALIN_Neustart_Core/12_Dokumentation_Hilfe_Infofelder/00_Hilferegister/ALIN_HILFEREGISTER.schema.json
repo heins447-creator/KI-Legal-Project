@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Hilferegister",
+  "description": "Zentrales Verzeichnis aller Hilfetexte.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "hilferegister" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["hilfe_id", "typ", "bezeichnung", "kurzhilfe", "langhilfe"],
+        "properties": {
+          "hilfe_id": { "type": "string" },
+          "typ": { "type": "string", "enum": ["feld", "button", "warnung", "info"] },
+          "bezeichnung": { "type": "string" },
+          "kurzhilfe": { "type": "string", "maxLength": 200 },
+          "langhilfe": { "type": "string" }
+        }
+      }
+    }
+  }
+}

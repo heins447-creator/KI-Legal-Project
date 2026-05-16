@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Quellen- und Adapterregister",
+  "description": "Zentrales Verzeichnis aller Quellen und ihrer Adapter.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "quellen_adapter_register" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "quelle_id",
+          "quellentyp",
+          "land",
+          "rechtsgebiet",
+          "sprache",
+          "adapter",
+          "online_status",
+          "offline_cache_status",
+          "dry_run_status",
+          "letzter_healthcheck",
+          "darf_verwendet_werden",
+          "warnungen"
+        ],
+        "properties": {
+          "quelle_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "quellentyp": {
+            "type": "string",
+            "enum": ["gesetz", "verordnung", "gerichtsentscheidung", "fachliteratur", "datenbank", "sonstiges"]
+          },
+          "land": { "type": "string" },
+          "rechtsgebiet": { "type": "string" },
+          "sprache": { "type": "string" },
+          "adapter": { "type": "string", "description": "Name des zuständigen Adapters" },
+          "online_status": {
+            "type": "string",
+            "enum": ["verfuegbar", "eingeschraenkt", "nicht_verfuegbar", "unbekannt"]
+          },
+          "offline_cache_status": {
+            "type": "string",
+            "enum": ["aktuell", "veraltet", "fehlt", "nicht_vorgesehen"]
+          },
+          "dry_run_status": {
+            "type": "string",
+            "enum": ["moeglich", "nicht_moeglich", "ungetestet"]
+          },
+          "letzter_healthcheck": { "type": "string", "format": "date-time" },
+          "darf_verwendet_werden": { "type": "boolean" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

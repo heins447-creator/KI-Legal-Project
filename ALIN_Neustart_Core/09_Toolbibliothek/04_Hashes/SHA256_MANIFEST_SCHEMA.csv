@@ -1,0 +1,4 @@
+tool_id,version,datei,sha256
+TESSERACT,5.x,Tools/Tesseract/tesseract.exe,
+PYMUPDF,1.23.x,Python/Lib/site-packages/fitz,
+DUCKDB,0.10.x,Tools/DuckDB/duckdb.exe,

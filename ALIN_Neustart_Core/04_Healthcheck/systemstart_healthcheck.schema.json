@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Systemstart-Healthcheck",
+  "description": "Schema für den Systemstart-Healthcheck.",
+  "type": "object",
+  "required": ["schema_version", "healthcheck_id", "zeitstempel", "pruefungen"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "healthcheck_id": { "type": "string", "const": "systemstart_healthcheck" },
+    "zeitstempel": { "type": "string", "format": "date-time" },
+    "pruefungen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["komponente", "status", "letzte_pruefung", "details"],
+        "properties": {
+          "komponente": {
+            "type": "string",
+            "enum": [
+              "projektwurzel",
+              "datenbank",
+              "tabellen",
+              "config",
+              "tools",
+              "tesseract",
+              "ocr_sprachpakete",
+              "uebersetzungspakete",
+              "quellenregister",
+              "adapterregister",
+              "skillregister",
+              "posteingang",
+              "km12_bis_km21",
+              "ui01_bis_ui04",
+              "offline_fallbacks",
+              "lizenzstatus",
+              "update_status",
+              "windows_app_grundlage"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["vorhanden", "testbar", "letzter_test_ok", "letzter_test_alt", "fehlt", "unklar", "blockiert", "nur_dry_run", "manuelle_pruefung_erforderlich"]
+          },
+          "letzte_pruefung": { "type": "string", "format": "date-time" },
+          "details": { "type": "string" }
+        }
+      }
+    }
+  }
+}

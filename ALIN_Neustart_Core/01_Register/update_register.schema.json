@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Update-Register",
+  "description": "Zentrales Verzeichnis aller Updates und ihrer Prüfstatus.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "update_register" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "update_id",
+          "komponente_id",
+          "aktuelle_version",
+          "verfuegbare_version",
+          "quelle",
+          "lizenz",
+          "hash",
+          "pruefstatus",
+          "automatische_pruefung",
+          "automatische_ersetzung",
+          "rollback_moeglich",
+          "freigabeprotokoll",
+          "warnungen"
+        ],
+        "properties": {
+          "update_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "komponente_id": { "type": "string", "description": "Verweis auf Lizenzregister" },
+          "aktuelle_version": { "type": "string" },
+          "verfuegbare_version": { "type": "string" },
+          "quelle": { "type": "string" },
+          "lizenz": { "type": "string" },
+          "hash": { "type": "string" },
+          "pruefstatus": {
+            "type": "string",
+            "enum": ["geprueft", "testbar", "ungeprueft", "gesperrt", "zurueckgesetzt"]
+          },
+          "automatische_pruefung": { "type": "boolean" },
+          "automatische_ersetzung": { "type": "boolean" },
+          "rollback_moeglich": { "type": "boolean" },
+          "freigabeprotokoll": { "type": "array", "items": { "type": "string" } },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
