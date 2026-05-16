@@ -1,0 +1,68 @@
+================================================================================
+ALIN CORE-10g PRÜFBERICHT
+================================================================================
+Bericht-ID    : CORE10G-PRUEF-20260516
+Erstellt      : 2026-05-16 19:22:30
+Prüfdatei     : alin_core10g_pruefung.py
+Exit-Code     : 0
+Status        : BESTANDEN
+================================================================================
+
+PRÜFPUNKTE
+----------
+[OK] review_listen.json vorhanden
+[OK] review_listen.json ist gueltiges JSON
+[OK] Alle 8 Reviewlisten vorhanden
+[OK] Alle 4 Risikoklassen vorhanden
+[OK] Bericht ALIN_CORE10G_REVIEWLISTEN_BERICHT.txt vorhanden
+[OK] Pruefung nur lesend – keine Online-/Cloud-Nutzung
+
+ERGEBNIS
+--------
+Keine Fehler gefunden.
+Alle Reviewlisten korrekt strukturiert.
+163 Module analysiert, keine Registeränderung vorgenommen.
+
+ANALYSE-ERGEBNIS
+----------------
+  DB-ändernde Module:               18
+  Online-fähige Module:             14
+  Installations-/Update-Module:      5
+  Rechtsbewertende Module:           0
+  Beweiswürdigende Module:           0
+  Original-ändernde Module:          2
+  Produktiv freigegebene Module:     0
+
+  Risikoklassen:
+    KRITISCH:   2 Module
+    HOCH:      14 Module
+    MITTEL:    16 Module
+    NIEDRIG:  131 Module
+
+  Kritische Module:
+    - 011_quellenbetreuer_fachanwaltsraster_v1 (DB + Online)
+    - 014_source_adapter_healthcheck_framework_v1 (DB + Online)
+
+NEUE DATEIEN
+------------
+  ALIN_Neustart_Core/04_Healthcheck/review_listen.json
+  ALIN_Neustart_Core/Scripts/alin_core10g_reviewlisten_dokumentieren.py
+  ALIN_Neustart_Core/Scripts/alin_core10g_pruefung.py
+  ALIN_Neustart_Core/Scripts/Run_CORE10g_Reviewlisten.ps1
+  ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10g_Reviewlisten.md
+  ALIN_Neustart_Core/Reports/ALIN_CORE10G_REVIEWLISTEN_BERICHT.txt
+
+GEÄNDERTE DATEIEN
+------------------
+  (keine – nur neue Dateien und lesende Analyse)
+
+FOLGEAUFTRÄGE
+-------------
+[ ] Backup-Konzept für 18 DB-ändernde Module aktualisieren
+[ ] Offline-Gerichtslaptop-Konfiguration für 14 online-fähige Module prüfen
+[ ] Originalschutz-Audit für 2 original-ändernde Module (_patch_css, _patch_html)
+[ ] Kritische Module (2) für Mandatsgeheimnis-Review vorsehen
+
+================================================================================
+ENDE DER PRÜFUNG
+================================================================================
