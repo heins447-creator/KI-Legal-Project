@@ -27,4 +27,5 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "`nCORE-06 erfolgreich abgeschlossen." -ForegroundColor Green
-Write-Host "Bericht: $CORE\Reports\ALIN_CORE06_RESSOURCENREGISTER_BERICHT.txt" -ForegroundColor Green
+$BerichtPfad = "$CORE\Reports\ALIN_CORE06_RESSOURCENREGISTER_BERICHT.txt"
+Write-Host "Bericht: $BerichtPfad" -ForegroundColor Green

@@ -51,9 +51,9 @@ def main() -> int:
     lizreg = load_json(liz_path)
     altbestand = load_json(alt_path)
 
-    # Abgleich mit Toolregister
+    # Abgleich mit Toolregister, Update-Register, Lizenzregister
     tool_ids = {t["tool_id"] for t in toolreg.get("eintraege", [])}
-    upd_ids = {u["komponente_id"] for u in updreg.get("eintraege", [])}
+    upd_ids = {u["update_id"] for u in updreg.get("eintraege", [])}
     liz_ids = {l["komponente_id"] for l in lizreg.get("eintraege", [])}
 
     verknuepfungen_tool = 0
@@ -99,6 +99,8 @@ def main() -> int:
     quellen = sum(1 for r in register["eintraege"] if r["typ"] in ("quellenregister", "adapter"))
     ui = sum(1 for r in register["eintraege"] if r["typ"] == "ui_hilfe")
     sicher = sum(1 for r in register["eintraege"] if r["typ"] == "sicherheitsressource")
+    winapp = sum(1 for r in register["eintraege"] if r["typ"] == "windows_app_ressource")
+    sonst = sum(1 for r in register["eintraege"] if r["typ"] == "sonstiges")
     vorhanden = sum(1 for r in register["eintraege"] if r.get("vorhanden_ja_nein_unbekannt") == "ja")
     fehlt = sum(1 for r in register["eintraege"] if r.get("vorhanden_ja_nein_unbekannt") == "nein")
     unbekannt = sum(1 for r in register["eintraege"] if r.get("vorhanden_ja_nein_unbekannt") == "unbekannt")
@@ -122,8 +124,10 @@ Agent: ALIN_Core_Build_Agent
    Übersetzungsressourcen:   {uebers}
    Terminologie/Schreibweise: {term}
    Quellen/Adapter:          {quellen}
-   Windows-App/UI-Hilfen:    {ui}
+   Windows-App-Ressourcen:   {winapp}
+   UI-Hilfen:                {ui}
    Sicherheitsressourcen:    {sicher}
+   Sonstige:                 {sonst}
 
 3. Physische Verfügbarkeit
    Vorhanden (ja):   {vorhanden}
@@ -155,9 +159,9 @@ Agent: ALIN_Core_Build_Agent
 {chr(10).join(f"   - {rid}: {lid}" for rid, lid in fehlende_lizenzen) or "   (keine)"}
 
 10. Gesamtergebnis
-    Ressourcenregister: OK
-    Altbestand-Ressourcenkarte: OK
-    Nächster sinnvoller Auftrag: CORE-07 – Quellen-/Adapterregister vervollständigen
+     Ressourcenregister: OK
+     Altbestand-Ressourcenkarte: OK
+     Nächster sinnvoller Auftrag: CORE-07 – Quellen-/Adapterregister vervollständigen
 
 ======================================================================
 """.strip()

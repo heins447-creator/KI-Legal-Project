@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "register_id": "update_register",
-  "letzte_aenderung": "2026-05-16T04:02:00+00:00",
+  "letzte_aenderung": "2026-05-16T05:15:00+00:00",
   "eintraege": [
     {
       "update_id": "UPD_TESSERACT",
@@ -217,6 +217,133 @@
       "warnungen": [
         "Gesamtsystem-Update",
         "Alle Register neu validieren"
+      ]
+    },
+    {
+      "update_id": "UPD_PYMUPDF",
+      "komponente_id": "PYMUPDF",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://pypi.org/project/PyMuPDF/",
+      "lizenz": "AGPL-3.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "AGPL-Lizenz prüfen",
+        "Nur lesende Operationen für Originalschutz"
+      ]
+    },
+    {
+      "update_id": "UPD_DUCKDB",
+      "komponente_id": "DUCKDB",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://duckdb.org/docs/installation/",
+      "lizenz": "MIT",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "MIT-Lizenz",
+        "Keine Mandantendaten in unverschlüsselte DB"
+      ]
+    },
+    {
+      "update_id": "UPD_PILLOW",
+      "komponente_id": "PILLOW",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://pypi.org/project/Pillow/",
+      "lizenz": "HPND",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "HPND-Lizenz",
+        "Nur Arbeitskopien bearbeiten"
+      ]
+    },
+    {
+      "update_id": "UPD_NUMPY",
+      "komponente_id": "NUMPY",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://pypi.org/project/numpy/",
+      "lizenz": "BSD-3-Clause",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "BSD-3-Clause-Lizenz"
+      ]
+    },
+    {
+      "update_id": "UPD_OPENCV",
+      "komponente_id": "OPENCV",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://pypi.org/project/opencv-python/",
+      "lizenz": "Apache-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Apache-2.0 Lizenz",
+        "Nur Arbeitskopien bearbeiten"
+      ]
+    },
+    {
+      "update_id": "UPD_ARGOS",
+      "komponente_id": "ARGOS_TRANSLATE",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/argosopentech/argos-translate/releases",
+      "lizenz": "MIT",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "MIT-Lizenz",
+        "Installationsstatus unklar",
+        "Nur als Ersatztool vorgesehen"
+      ]
+    },
+    {
+      "update_id": "UPD_OLLAMA",
+      "komponente_id": "OLLAMA",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://ollama.com/download",
+      "lizenz": "MIT",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Installationsstatus unklar",
+        "Nur als Ersatztool vorgesehen",
+        "Modell-Lizenzen separat prüfen"
       ]
     }
   ]

@@ -1,58 +1,56 @@
 ======================================================================
 CORE-06 – Ressourcenregister Befüllung und Abgleich
 ======================================================================
-Datum: 2026-05-16T04:48:45.242762+00:00
+Datum: 2026-05-16T05:35:00+00:00
 Agent: ALIN_Core_Build_Agent
 
 1. Anzahl Ressourcen
    Vorher: 2
-   Nachher: 22
-   Zuwachs: 20
+   Nachher: 36
+   Zuwachs: 34
 
 2. Verteilung nach Typ
    OCR-Sprachpakete:        5
    Übersetzungsressourcen:   4
    Terminologie/Schreibweise: 4
    Quellen/Adapter:          3
-   Windows-App/UI-Hilfen:    3
+   Windows-App-Ressourcen:   4
+   UI-Hilfen:                3
    Sicherheitsressourcen:    3
+   Sonstige:                 10
 
 3. Physische Verfügbarkeit
-   Vorhanden (ja):   10
-   Fehlt (nein):     3
-   Unbekannt:        9
+   Vorhanden (ja):   17
+   Fehlt (nein):     4
+   Unbekannt:        15
 
 4. Status
-   Freigegeben:  14
+   Freigegeben:  27
    Testbar:      2
    Veraltet:     0
-   Gesperrt:     3
+   Gesperrt:     4
    Fehlt:        3
 
 5. Verknüpfungen
-   Mit Toolregister:   8/22
-   Mit Update-Register: 0/22
-   Mit Lizenzregister: 5/22
+   Mit Toolregister:   21/36
+   Mit Update-Register: 16/36
+   Mit Lizenzregister: 16/36
 
 6. Gesperrt / Nicht für Module freigegeben
-   Nicht für Modulnutzung freigegeben: 8
+   Nicht für Modulnutzung freigegeben: 10
 
 7. Fehlende Verknüpfungen (Tool)
    (keine)
 
 8. Fehlende Verknüpfungen (Update)
-   - TESS_DEU: UPD_TESSERACT
-   - TESS_SWE: UPD_TESSERACT
-   - TESS_ENG: UPD_TESSERACT
-   - TESS_FRA: UPD_TESSERACT
-   - TESS_DEU_FRK: UPD_TESSERACT
+   (keine)
 
 9. Fehlende Verknüpfungen (Lizenz)
    (keine)
 
 10. Gesamtergebnis
-    Ressourcenregister: OK
-    Altbestand-Ressourcenkarte: OK
-    Nächster sinnvoller Auftrag: CORE-07 – Quellen-/Adapterregister vervollständigen
+     Ressourcenregister: OK
+     Altbestand-Ressourcenkarte: OK
+     Nächster sinnvoller Auftrag: CORE-07 – Quellen-/Adapterregister vervollständigen
 
 ======================================================================

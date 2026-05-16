@@ -83,6 +83,30 @@ def check_lizenz_linkages(data: Dict, liz_ids: set, name: str) -> int:
     return fehler
 
 
+def check_unique_resource_ids(data: Dict, name: str) -> int:
+    fehler = 0
+    ids = [e.get("resource_id", "") for e in data.get("eintraege", [])]
+    seen = set()
+    for rid in ids:
+        if rid in seen:
+            print(f"  FEHLER: {name} doppelte resource_id '{rid}'")
+            fehler += 1
+        seen.add(rid)
+    return fehler
+
+
+def check_resource_id_pattern(data: Dict, name: str) -> int:
+    fehler = 0
+    import re
+    pattern = re.compile(r"^[A-Z0-9_-]+$")
+    for eintrag in data.get("eintraege", []):
+        rid = eintrag.get("resource_id", "")
+        if rid and not pattern.match(rid):
+            print(f"  FEHLER: {name} resource_id '{rid}' entspricht nicht dem Pattern ^[A-Z0-9_-]+$")
+            fehler += 1
+    return fehler
+
+
 def main() -> int:
     root = Path("I:/KI_Legal_Project")
     core = root / "ALIN_Neustart_Core"
@@ -134,6 +158,8 @@ def main() -> int:
     fehler += check_tool_linkages(reg, tool_ids, "ressourcenregister.json")
     fehler += check_update_linkages(reg, upd_ids, "ressourcenregister.json")
     fehler += check_lizenz_linkages(reg, liz_ids, "ressourcenregister.json")
+    fehler += check_unique_resource_ids(reg, "ressourcenregister.json")
+    fehler += check_resource_id_pattern(reg, "ressourcenregister.json")
 
     print(f"\nValidierung: {fehler} Fehler")
 

@@ -10,7 +10,7 @@
 
 ## 1. Ziel
 
-Das Ressourcenregister wurde von 2 Einträgen (Altbestand aus CORE-02) auf 22 Einträge erweitert.  
+Das Ressourcenregister wurde von 2 Einträgen (Altbestand aus CORE-02) auf **36 Einträge** erweitert.  
 Jede Ressource erhielt erweiterte Metadaten und wurde mit Toolregister, Update-Register und Lizenzregister verknüpft.
 
 ---
@@ -37,13 +37,13 @@ Jede Ressource erhielt erweiterte Metadaten und wurde mit Toolregister, Update-R
 
 **Erweiterte `typ`-Enum:**
 - `ocr_sprachpaket`, `uebersetzungsmodell`, `terminologie`, `schriftart`, `vorlage` (bestehend)
-- `quellenregister`, `adapter`, `windows_app_ressource`, `ui_hilfe`, `sicherheitsressource` (neu)
+- `quellenregister`, `adapter`, `windows_app_ressource`, `ui_hilfe`, `sicherheitsressource`, `sonstiges` (neu)
 
 ### 2.2 Ressourcenregister-Befüllung
 
 **Betroffene Datei:** `01_Register/ressourcenregister.json`
 
-**22 Ressourcen (geordnet nach Typ):**
+**36 Ressourcen (geordnet nach Typ):**
 
 | # | Resource-ID | Name | Typ | Status | Vorhanden | Tool | Update | Lizenz |
 |---|-------------|------|-----|--------|-----------|------|--------|--------|
@@ -52,10 +52,10 @@ Jede Ressource erhielt erweiterte Metadaten und wurde mit Toolregister, Update-R
 | 3 | TESS_ENG | Tesseract Englisch | OCR | freigegeben | unbekannt | TESSERACT | UPD_TESSERACT | TESSERACT |
 | 4 | TESS_FRA | Tesseract Französisch | OCR | freigegeben | unbekannt | TESSERACT | UPD_TESSERACT | TESSERACT |
 | 5 | TESS_DEU_FRK | Tesseract Fraktur | OCR | testbar | unbekannt | TESSERACT | UPD_TESSERACT | TESSERACT |
-| 6 | ARGOS_DE_EN | Argos Deutsch-Englisch | Übersetzung | gesperrt | unbekannt | ARGOS_TRANSLATE | – | – |
-| 7 | ARGOS_EN_DE | Argos Englisch-Deutsch | Übersetzung | gesperrt | unbekannt | ARGOS_TRANSLATE | – | – |
+| 6 | ARGOS_DE_EN | Argos Deutsch-Englisch | Übersetzung | gesperrt | unbekannt | ARGOS_TRANSLATE | UPD_ARGOS | ARGOS |
+| 7 | ARGOS_EN_DE | Argos Englisch-Deutsch | Übersetzung | gesperrt | unbekannt | ARGOS_TRANSLATE | UPD_ARGOS | ARGOS |
 | 8 | DEEPL_API | DeepL API | Übersetzung | testbar | unbekannt | – | – | – |
-| 9 | OLLAMA_LLAMA3 | Ollama Llama 3 | Übersetzung | gesperrt | unbekannt | OLLAMA | – | – |
+| 9 | OLLAMA_LLAMA3 | Ollama Llama 3 | Übersetzung | gesperrt | unbekannt | OLLAMA | UPD_OLLAMA | OLLAMA |
 | 10 | TERM_DE_ARBEITSRECHT | DE Arbeitsrecht Terminologie | Terminologie | freigegeben | ja | – | – | – |
 | 11 | TERM_SE_ARBEITSRECHT | SE Arbeitsrecht Terminologie | Terminologie | fehlt | nein | – | – | – |
 | 12 | SCHREIB_DE | Deutsche Schreibweisen | Terminologie | freigegeben | ja | – | – | – |
@@ -69,28 +69,45 @@ Jede Ressource erhielt erweiterte Metadaten und wurde mit Toolregister, Update-R
 | 20 | HASH_MANIFEST | SHA256 Hash-Manifest | Sicherheit | freigegeben | ja | – | – | – |
 | 21 | SIGNATUR_PRUEF | Signaturprüfregeln | Sicherheit | fehlt | nein | – | – | – |
 | 22 | MANDATSGEHEIMNIS_MARK | Mandatsgeheimnis-Markierungen | Sicherheit | freigegeben | ja | – | – | – |
+| 23 | RES_PYMUPDF | PyMuPDF Bibliothek | Sonstige | freigegeben | unbekannt | PYMUPDF | UPD_PYMUPDF | PYMUPDF |
+| 24 | RES_DUCKDB | DuckDB Datenbank | Sonstige | freigegeben | unbekannt | DUCKDB | UPD_DUCKDB | DUCKDB |
+| 25 | RES_PYTHON | Python Interpreter | Sonstige | freigegeben | unbekannt | PYTHON | UPD_PYTHON | PYTHON |
+| 26 | RES_POWERSHELL | PowerShell Runtime | Sonstige | freigegeben | ja | POWERSHELL | UPD_POWERSHELL | POWERSHELL |
+| 27 | RES_GIT | Git Versionskontrolle | Sonstige | freigegeben | ja | GIT | UPD_GIT | GIT |
+| 28 | RES_SQLITE | SQLite Datenbank | Sonstige | freigegeben | ja | SQLITE | UPD_SQLITE | SQLITE |
+| 29 | RES_WEBVIEW2 | WebView2 Runtime | Windows-App | freigegeben | ja | WEBVIEW2 | UPD_WEBVIEW2 | WEBVIEW2 |
+| 30 | RES_DOTNET | .NET Runtime | Windows-App | freigegeben | ja | DOTNET_RUNTIME | UPD_DOTNET | DOTNET |
+| 31 | RES_PILLOW | Pillow Bildverarbeitung | Sonstige | freigegeben | unbekannt | PILLOW | UPD_PILLOW | PILLOW |
+| 32 | RES_NUMPY | NumPy Numerik | Sonstige | freigegeben | unbekannt | NUMPY | UPD_NUMPY | NUMPY |
+| 33 | RES_OPENCV | OpenCV Computer Vision | Sonstige | freigegeben | unbekannt | OPENCV | UPD_OPENCV | OPENCV |
+| 34 | RES_AIDER | Aider AI Coding Agent | Sonstige | gesperrt | unbekannt | AIDER | UPD_AIDER | AIDER |
+| 35 | RES_ABBYY | ABBYY FineReader Kandidat | Sonstige | fehlt | nein | ABBYY | – | ABBYY |
+| 36 | WIN_APP_CORE | Windows App Kernkomponenten | Windows-App | freigegeben | ja | – | UPD_WINDOWS_APP | – |
+| 37 | WIN_APP_BARRIERE | Barrierefreiheitsressourcen | Windows-App | freigegeben | ja | – | – | – |
 
 ### 2.3 Verknüpfungen
 
-- **Toolregister:** 8/22 Ressourcen verknüpft (alle Tesseract-Sprachpakete + 3 Übersetzungsressourcen)
-- **Update-Register:** 0/22 direkte Verknüpfungen (Update-IDs sind Tool-bezogen, nicht Ressourcen-bezogen; 5 OCR-Ressourcen teilen UPD_TESSERACT)
-- **Lizenzregister:** 5/22 verknüpft (TESSERACT-Sprachpakete)
+- **Toolregister:** 21/36 Ressourcen verknüpft (alle Tesseract-Sprachpakete + 3 Übersetzungsressourcen + 10 Tool-Ressourcen + ABBYY)
+- **Update-Register:** 16/36 direkte Verknüpfungen
+- **Lizenzregister:** 16/36 verknüpft (alle Tools mit Lizenz)
 
 ### 2.4 Sicherheitsklassifizierung
 
-- `darf_von_modulen_verwendet_werden: false` – **6 Ressourcen:**
+- `darf_von_modulen_verwendet_werden: false` – **10 Ressourcen:**
   - TESS_DEU_FRK (nur historische Dokumente)
   - ARGOS_DE_EN, ARGOS_EN_DE (ARGOS gesperrt)
   - DEEPL_API (API-Key erforderlich, Online-only)
   - OLLAMA_LLAMA3 (OLLAMA gesperrt)
   - SIGNATUR_PRUEF (Ressource fehlt)
   - TERM_SE_ARBEITSRECHT, SCHREIB_SE (Ressourcen fehlen)
+  - RES_AIDER (nur Entwicklung)
+  - RES_ABBYY (nicht installiert)
 
 ### 2.5 Physische Verfügbarkeit
 
-- **Vorhanden (ja):** 10 Ressourcen
-- **Fehlt (nein):** 3 Ressourcen (TERM_SE, SCHREIB_SE, SIGNATUR_PRUEF)
-- **Unbekannt:** 9 Ressourcen (alle Tesseract-Sprachpakete, Übersetzungsressourcen)
+- **Vorhanden (ja):** 17 Ressourcen
+- **Fehlt (nein):** 4 Ressourcen (TERM_SE, SCHREIB_SE, SIGNATUR_PRUEF, RES_ABBYY)
+- **Unbekannt:** 15 Ressourcen (alle Tesseract-Sprachpakete, Übersetzungsressourcen, Tool-Bibliotheken)
 
 ---
 
@@ -115,41 +132,44 @@ Jede Ressource erhielt erweiterte Metadaten und wurde mit Toolregister, Update-R
 
 | Metrik | Wert |
 |--------|------|
-| Ressourcen gesamt | 22 |
+| Ressourcen gesamt | 36 |
 | Vorher (CORE-02) | 2 |
-| Zuwachs | 20 |
+| Zuwachs | 34 |
 | OCR-Sprachpakete | 5 |
 | Übersetzungsressourcen | 4 |
 | Terminologie/Schreibweisen | 4 |
 | Quellen/Adapter | 3 |
+| Windows-App-Ressourcen | 4 |
 | UI-Hilfen | 3 |
 | Sicherheitsressourcen | 3 |
-| Physisch vorhanden | 10 |
-| Fehlend | 3 |
-| Unbekannt | 9 |
-| Freigegeben | 13 |
+| Sonstige (Tool-Ressourcen) | 10 |
+| Physisch vorhanden | 17 |
+| Fehlend | 4 |
+| Unbekannt | 15 |
+| Freigegeben | 27 |
 | Gesperrt | 4 |
 | Fehlt | 3 |
 | Testbar | 2 |
-| Nicht für Modulnutzung freigegeben | 8 |
-| Mit Toolregister verknüpft | 8 |
-| Mit Lizenzregister verknüpft | 5 |
+| Nicht für Modulnutzung freigegeben | 10 |
+| Mit Toolregister verknüpft | 21 |
+| Mit Update-Register verknüpft | 16 |
+| Mit Lizenzregister verknüpft | 16 |
 
 ---
 
 ## 5. Offene Punkte / Nächste Schritte
 
-1. **Physische Prüfung:** 9 Ressourcen mit Status "unbekannt" müssen vor Ort geprüft werden.
+1. **Physische Prüfung:** 15 Ressourcen mit Status "unbekannt" müssen vor Ort geprüft werden.
 2. **Fehlende Ressourcen erstellen:** TERM_SE_ARBEITSRECHT, SCHREIB_SE, SIGNATUR_PRUEF
 3. **Tesseract-Sprachpakete:** tessdata-Dateien prüfen (deu, swe, eng, fra, deu_frak)
-4. **Lizenz-Nachinventarisierung:** 17 Ressourcen ohne Lizenz-Linkage
+4. **Lizenz-Nachinventarisierung:** 20 Ressourcen ohne Lizenz-Linkage (UI-Hilfen, Terminologien, Quellen)
 5. **Nächster Auftrag:** CORE-07 – Quellen-/Adapterregister vervollständigen
 
 ---
 
 ## 6. Architekturentscheidungen
 
-- **Offline-First:** 19/22 Ressourcen sind offline verfügbar (Ausnahmen: DEEPL_API)
+- **Offline-First:** 32/36 Ressourcen sind offline verfügbar (Ausnahmen: DEEPL_API, RES_AIDER)
 - **Originalschutz (ADR-0004):** Alle Ressourcen sind schreibschützend oder dokumentenbezogen, keine Originalveränderung
 - **Keine harte Verdrahtung (ADR-0005):** `darf_von_modulen_verwendet_werden` als explizites Gate
 

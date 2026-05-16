@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "register_id": "ressourcenregister",
-  "letzte_aenderung": "2026-05-16T04:48:45.242762+00:00",
+  "letzte_aenderung": "2026-05-16T05:20:00+00:00",
   "eintraege": [
     {
       "resource_id": "TESS_DEU",
@@ -25,7 +25,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Physische Datei muss vor Ort geprueft werden.",
         "tessdata_fast vs tessdata_best klaeren."
@@ -53,7 +53,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "TESS_DEU",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Physische Datei muss vor Ort geprueft werden.",
         "Fallback auf Deutsch bei unzureichender Qualitaet."
@@ -81,7 +81,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "TESS_DEU",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Physische Datei muss vor Ort geprueft werden."
       ]
@@ -108,7 +108,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "TESS_ENG",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Physische Datei muss vor Ort geprueft werden.",
         "Selten benoetigt, niedrige Prioritaet."
@@ -136,7 +136,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "TESS_DEU",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Nur fuer historische Dokumente relevant.",
         "Nicht standardmaessig installiert."
@@ -156,15 +156,15 @@
       "status": "gesperrt",
       "pruefstatus": "ungeprueft",
       "tool_id": "ARGOS_TRANSLATE",
-      "update_id": "",
-      "lizenz_id": "",
+      "update_id": "UPD_ARGOS",
+      "lizenz_id": "ARGOS",
       "version": "unbekannt",
       "hash": "",
       "offline_verfuegbar": true,
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "DEEPL_API",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "ARGOS_TRANSLATE ist im Toolregister gesperrt.",
         "Nur fuer Entwicklung vorgesehen.",
@@ -185,15 +185,15 @@
       "status": "gesperrt",
       "pruefstatus": "ungeprueft",
       "tool_id": "ARGOS_TRANSLATE",
-      "update_id": "",
-      "lizenz_id": "",
+      "update_id": "UPD_ARGOS",
+      "lizenz_id": "ARGOS",
       "version": "unbekannt",
       "hash": "",
       "offline_verfuegbar": true,
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "DEEPL_API",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "ARGOS_TRANSLATE ist im Toolregister gesperrt.",
         "Nur fuer Entwicklung vorgesehen.",
@@ -222,7 +222,7 @@
       "online_erforderlich": true,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "GOOGLETRANS",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Erfordert gueltigen API-Key.",
         "Nicht fuer Offline-Gerichtslaptop geeignet.",
@@ -243,15 +243,15 @@
       "status": "gesperrt",
       "pruefstatus": "ungeprueft",
       "tool_id": "OLLAMA",
-      "update_id": "",
-      "lizenz_id": "",
+      "update_id": "UPD_OLLAMA",
+      "lizenz_id": "OLLAMA",
       "version": "unbekannt",
       "hash": "",
       "offline_verfuegbar": true,
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "OLLAMA ist im Toolregister gesperrt.",
         "Keine Mandantendaten verarbeiten.",
@@ -280,7 +280,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Erste Version, muss bei Fachanwalt validiert werden."
       ]
@@ -307,7 +307,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "TERM_DE_ARBEITSRECHT",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Muss noch erstellt werden.",
         "Fachanwalt fuer schwedisches Recht konsultieren."
@@ -335,7 +335,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Enthaelt Datumsformate, Einheiten, Aktenzeichenmuster."
       ]
@@ -362,7 +362,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "SCHREIB_DE",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Muss noch erstellt werden.",
         "Personnummer-Format, Datumsformat, Waehrung klaeren."
@@ -390,7 +390,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Nur als Referenzregister, keine Onlineabfrage ohne Freigabe."
       ]
@@ -417,7 +417,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Schema definiert, Implementierung folgt in spaeterem Auftrag."
       ]
@@ -444,7 +444,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Cache-Inhalt muss regelmaessig aktualisiert werden.",
         "Offline-Cache-Groesse pruefen."
@@ -472,7 +472,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Muss bei UI-Einfuehrung aktualisiert werden."
       ]
@@ -499,7 +499,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Nur 2 Eintraege vorhanden, muss erweitert werden."
       ]
@@ -526,7 +526,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Nur 2 Eintraege vorhanden, muss erweitert werden."
       ]
@@ -553,7 +553,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Schema vorhanden, Manifest muss bei jeder Aenderung neu generiert werden."
       ]
@@ -580,7 +580,7 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": false,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Muss noch erstellt werden.",
         "Fuer digitale Signaturen und Beweissicherung relevant."
@@ -608,9 +608,433 @@
       "online_erforderlich": false,
       "darf_von_modulen_verwendet_werden": true,
       "fallback": "",
-      "letzte_pruefung": "2026-05-16T04:45:00+00:00",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
       "warnungen": [
         "Schema definiert, Implementierung in Windows-App folgt."
+      ]
+    },
+    {
+      "resource_id": "RES_PYMUPDF",
+      "name": "PyMuPDF PDF-Verarbeitungsbibliothek",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Python/Lib/site-packages/fitz",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "PYMUPDF",
+      "update_id": "UPD_PYMUPDF",
+      "lizenz_id": "PYMUPDF",
+      "version": "1.23.x",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "AGPL-3.0 Lizenz pruefen.",
+        "Nur lesende Operationen fuer Originalschutz."
+      ]
+    },
+    {
+      "resource_id": "RES_DUCKDB",
+      "name": "DuckDB analytische Datenbank",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Tools/DuckDB/duckdb.exe",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "DUCKDB",
+      "update_id": "UPD_DUCKDB",
+      "lizenz_id": "DUCKDB",
+      "version": "0.10.x",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "MIT-Lizenz.",
+        "Keine Mandantendaten in unverschluesselte DB."
+      ]
+    },
+    {
+      "resource_id": "RES_PYTHON",
+      "name": "Python Interpreter Runtime",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Tools/Python312/python.exe",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "PYTHON",
+      "update_id": "UPD_PYTHON",
+      "lizenz_id": "PYTHON",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Version ueber py --version ermitteln.",
+        "Kompatibilitaet mit allen Modulen testen."
+      ]
+    },
+    {
+      "resource_id": "RES_POWERSHELL",
+      "name": "PowerShell Runtime",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "POWERSHELL",
+      "update_id": "UPD_POWERSHELL",
+      "lizenz_id": "POWERSHELL",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Windows-Systemkomponente.",
+        "Kompatibilitaet mit Start-Skripten pruefen."
+      ]
+    },
+    {
+      "resource_id": "RES_GIT",
+      "name": "Git Versionskontrolle",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "GIT",
+      "update_id": "UPD_GIT",
+      "lizenz_id": "GIT",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "GPL-2.0 Lizenz.",
+        "Keine API-Keys in Git speichern.",
+        "Keine Mandantendaten committen."
+      ]
+    },
+    {
+      "resource_id": "RES_SQLITE",
+      "name": "SQLite eingebettete Datenbank",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "SQLITE",
+      "update_id": "UPD_SQLITE",
+      "lizenz_id": "SQLITE",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Public-Domain.",
+        "Migrationstests bei Update erforderlich."
+      ]
+    },
+    {
+      "resource_id": "RES_WEBVIEW2",
+      "name": "WebView2 Runtime fuer Windows-App UI",
+      "typ": "windows_app_ressource",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "WEBVIEW2",
+      "update_id": "UPD_WEBVIEW2",
+      "lizenz_id": "WEBVIEW2",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Microsoft-Software-Lizenz.",
+        "Evergreen-Installer bevorzugen.",
+        "Offline-Installer fuer Gerichtslaptop bereithalten."
+      ]
+    },
+    {
+      "resource_id": "RES_DOTNET",
+      "name": ".NET Runtime fuer Windows-App",
+      "typ": "windows_app_ressource",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "DOTNET_RUNTIME",
+      "update_id": "UPD_DOTNET",
+      "lizenz_id": "DOTNET",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "MIT-Lizenz.",
+        "Offline-Installer bereithalten."
+      ]
+    },
+    {
+      "resource_id": "RES_PILLOW",
+      "name": "Pillow Bildverarbeitungsbibliothek",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Python/Lib/site-packages/PIL",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "PILLOW",
+      "update_id": "UPD_PILLOW",
+      "lizenz_id": "PILLOW",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "HPND-Lizenz.",
+        "Nur Arbeitskopien bearbeiten."
+      ]
+    },
+    {
+      "resource_id": "RES_NUMPY",
+      "name": "NumPy numerische Bibliothek",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Python/Lib/site-packages/numpy",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "NUMPY",
+      "update_id": "UPD_NUMPY",
+      "lizenz_id": "NUMPY",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "BSD-3-Clause-Lizenz."
+      ]
+    },
+    {
+      "resource_id": "RES_OPENCV",
+      "name": "OpenCV Computer-Vision-Bibliothek",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Python/Lib/site-packages/cv2",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "freigegeben",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "OPENCV",
+      "update_id": "UPD_OPENCV",
+      "lizenz_id": "OPENCV",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Apache-2.0 Lizenz.",
+        "Nur Arbeitskopien bearbeiten."
+      ]
+    },
+    {
+      "resource_id": "RES_AIDER",
+      "name": "Aider AI Coding Agent",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "unbekannt",
+      "status": "gesperrt",
+      "pruefstatus": "ungeprueft",
+      "tool_id": "AIDER",
+      "update_id": "UPD_AIDER",
+      "lizenz_id": "AIDER",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": false,
+      "online_erforderlich": true,
+      "darf_von_modulen_verwendet_werden": false,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Nur im Entwicklungsmodus.",
+        "Keine Mandantendaten verarbeiten.",
+        "Online-Verbindung erforderlich.",
+        "Nicht fuer Produktivbetrieb freigegeben."
+      ]
+    },
+    {
+      "resource_id": "RES_ABBYY",
+      "name": "ABBYY FineReader OCR Kaufkandidat",
+      "typ": "sonstiges",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Allgemein",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "",
+      "vorhanden_ja_nein_unbekannt": "nein",
+      "status": "fehlt",
+      "pruefstatus": "nicht_pruefbar",
+      "tool_id": "ABBYY",
+      "update_id": "",
+      "lizenz_id": "ABBYY",
+      "version": "unbekannt",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": false,
+      "fallback": "TESSERACT",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Kommerzielle Lizenz erforderlich.",
+        "Nicht installiert.",
+        "Nur als Ersatztool-Kandidat.",
+        "Kosten pruefen vor Anschaffung."
+      ]
+    },
+    {
+      "resource_id": "WIN_APP_CORE",
+      "name": "ALIN Windows App Kernkomponenten",
+      "typ": "windows_app_ressource",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Bundesrepublik Deutschland",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "Windows_App/App/",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "",
+      "update_id": "UPD_WINDOWS_APP",
+      "lizenz_id": "",
+      "version": "1.0",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Eigenentwicklung, Proprietaer.",
+        "Rollback-Plan bei Deployment beachten."
+      ]
+    },
+    {
+      "resource_id": "WIN_APP_BARRIERE",
+      "name": "Windows App Barrierefreiheitsressourcen",
+      "typ": "windows_app_ressource",
+      "sprache": "de",
+      "land": "DE",
+      "rechtsraum": "Bundesrepublik Deutschland",
+      "rechtsgebiet": "Allgemein",
+      "dokumenttyp": "Systemressource",
+      "pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_BARRIEREFREIHEIT_CHECKLISTE_V1.md",
+      "vorhanden_ja_nein_unbekannt": "ja",
+      "status": "freigegeben",
+      "pruefstatus": "geprueft",
+      "tool_id": "",
+      "update_id": "",
+      "lizenz_id": "",
+      "version": "1.0",
+      "hash": "",
+      "offline_verfuegbar": true,
+      "online_erforderlich": false,
+      "darf_von_modulen_verwendet_werden": true,
+      "fallback": "",
+      "letzte_pruefung": "2026-05-16T05:20:00+00:00",
+      "warnungen": [
+        "Checkliste vor jeder Release pruefen."
       ]
     }
   ]
