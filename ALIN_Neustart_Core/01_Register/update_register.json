@@ -1,6 +1,223 @@
 {
   "schema_version": "1.0.0",
   "register_id": "update_register",
-  "letzte_aenderung": "2026-05-16T03:12:35.494680+00:00",
-  "eintraege": []
+  "letzte_aenderung": "2026-05-16T04:02:00+00:00",
+  "eintraege": [
+    {
+      "update_id": "UPD_TESSERACT",
+      "komponente_id": "TESSERACT",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/tesseract-ocr/tesseract/releases",
+      "lizenz": "Apache-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Version muss manuell geprüft werden",
+        "Offline-Installation erforderlich"
+      ]
+    },
+    {
+      "update_id": "UPD_PYTHON",
+      "komponente_id": "PYTHON",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://www.python.org/downloads/",
+      "lizenz": "PSF-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Version über py --version prüfbar",
+        "Kompatibilität mit allen Modulen testen"
+      ]
+    },
+    {
+      "update_id": "UPD_AIDER",
+      "komponente_id": "AIDER",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/paul-gauthier/aider/releases",
+      "lizenz": "Apache-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Nur im Entwicklungsmodus verwendet",
+        "Keine Mandantendaten verarbeiten"
+      ]
+    },
+    {
+      "update_id": "UPD_GIT",
+      "komponente_id": "GIT",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://git-scm.com/downloads",
+      "lizenz": "GPL-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Systemkomponente",
+        "Keine API-Keys in Git speichern"
+      ]
+    },
+    {
+      "update_id": "UPD_DOTNET",
+      "komponente_id": "DOTNET_RUNTIME",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://dotnet.microsoft.com/download",
+      "lizenz": "MIT",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Voraussetzung für Windows-App",
+        "Offline-Installer bereithalten"
+      ]
+    },
+    {
+      "update_id": "UPD_WEBVIEW2",
+      "komponente_id": "WEBVIEW2_RUNTIME",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://developer.microsoft.com/microsoft-edge/webview2/",
+      "lizenz": "Microsoft-Software-Lizenz",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Voraussetzung für WebView2-UI",
+        "Evergreen-Installer bevorzugen"
+      ]
+    },
+    {
+      "update_id": "UPD_POWERSHELL",
+      "komponente_id": "POWERSHELL",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/PowerShell/PowerShell/releases",
+      "lizenz": "MIT",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Windows-Systemkomponente",
+        "Kompatibilität mit Start-Skripten prüfen"
+      ]
+    },
+    {
+      "update_id": "UPD_SQLITE",
+      "komponente_id": "SQLITE",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://sqlite.org/download.html",
+      "lizenz": "Public-Domain",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Datenbank-Engine",
+        "Migrationstests bei Update erforderlich"
+      ]
+    },
+    {
+      "update_id": "UPD_TESS_DEU",
+      "komponente_id": "TESS_DEU",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/tesseract-ocr/tessdata",
+      "lizenz": "Apache-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "OCR-Sprachpaket",
+        "Offline-Verfügbarkeit prüfen"
+      ]
+    },
+    {
+      "update_id": "UPD_TESS_SWE",
+      "komponente_id": "TESS_SWE",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "https://github.com/tesseract-ocr/tessdata",
+      "lizenz": "Apache-2.0",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": false,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "OCR-Sprachpaket",
+        "Offline-Verfügbarkeit prüfen"
+      ]
+    },
+    {
+      "update_id": "UPD_WINDOWS_APP",
+      "komponente_id": "WINDOWS_APP",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "Internes Build-System",
+      "lizenz": "Proprietär",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": true,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Eigenentwicklung",
+        "Rollback-Plan bei Deployment beachten"
+      ]
+    },
+    {
+      "update_id": "UPD_ALIN_CORE",
+      "komponente_id": "ALIN_CORE",
+      "aktuelle_version": "unbekannt",
+      "verfuegbare_version": "unbekannt",
+      "quelle": "Git-Repository",
+      "lizenz": "Proprietär",
+      "hash": "",
+      "pruefstatus": "ungeprueft",
+      "automatische_pruefung": false,
+      "automatische_ersetzung": false,
+      "rollback_moeglich": true,
+      "freigabeprotokoll": [],
+      "warnungen": [
+        "Gesamtsystem-Update",
+        "Alle Register neu validieren"
+      ]
+    }
+  ]
 }

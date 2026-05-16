@@ -1,0 +1,26 @@
+======================================================================
+CORE-04 UPDATE-REGISTER BEFÜLLUNG
+======================================================================
+Zeitstempel: 2026-05-16T04:02:00+00:00
+Anzahl Einträge: 12
+
+Einträge:
+  UPD_TESSERACT -> TESSERACT (Status: ungeprueft)
+  UPD_PYTHON -> PYTHON (Status: ungeprueft)
+  UPD_AIDER -> AIDER (Status: ungeprueft)
+  UPD_GIT -> GIT (Status: ungeprueft)
+  UPD_DOTNET -> DOTNET_RUNTIME (Status: ungeprueft)
+  UPD_WEBVIEW2 -> WEBVIEW2_RUNTIME (Status: ungeprueft)
+  UPD_POWERSHELL -> POWERSHELL (Status: ungeprueft)
+  UPD_SQLITE -> SQLITE (Status: ungeprueft)
+  UPD_TESS_DEU -> TESS_DEU (Status: ungeprueft)
+  UPD_TESS_SWE -> TESS_SWE (Status: ungeprueft)
+  UPD_WINDOWS_APP -> WINDOWS_APP (Status: ungeprueft)
+  UPD_ALIN_CORE -> ALIN_CORE (Status: ungeprueft)
+
+Hinweise:
+- Alle Versionen sind 'unbekannt' – manuelle Prüfung erforderlich
+- Alle Prüfstatus sind 'ungeprueft' – Healthcheck noch nicht durchgeführt
+- Automatische Prüfung/Ersetzung ist deaktiviert (Dry-Run-Standard)
+- Rollback ist nur für Windows-App und ALIN-Core möglich
+======================================================================
