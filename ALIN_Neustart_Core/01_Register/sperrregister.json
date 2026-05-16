@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "register_id": "sperrregister",
+  "letzte_aenderung": "2026-05-16T23:45:00+00:00",
+  "beschreibung": "Sperrregister für kritische Module (DB-ändernd und/oder online-fähig). Ein Modul ist gesperrt, bis alle Freigabe-Bedingungen erfüllt sind.",
+  "eintraege": [
+    {
+      "modul_id": "011_quellenbetreuer_fachanwaltsraster_v1",
+      "modulname": "Quellenbetreuer Fachanwaltsraster V1",
+      "bereich": "anwalt",
+      "sperrstatus": "vorbereitet",
+      "sperrgrund": "DB-ändernd UND online-fähig – erfordert explizite Freigabe vor Ausführung",
+      "freigabe_erfordert": [
+        "manuelle_bestätigung",
+        "backup_erfolgt",
+        "offline_modus_bestätigt"
+      ],
+      "gesperrte_operationen": [
+        "datenbank_aenderung",
+        "online_verbindung",
+        "schema_migration"
+      ],
+      "ausnahmen": [
+        "lesender_zugriff",
+        "pruefung",
+        "bericht_erstellung"
+      ],
+      "protokollierung": "vollstaendig",
+      "gueltig_ab": "2026-05-16T23:45:00+00:00"
+    },
+    {
+      "modul_id": "014_source_adapter_healthcheck_framework_v1",
+      "modulname": "Source Adapter Healthcheck Framework V1",
+      "bereich": "quellen",
+      "sperrstatus": "vorbereitet",
+      "sperrgrund": "DB-ändernd UND online-fähig – erfordert explizite Freigabe vor Ausführung",
+      "freigabe_erfordert": [
+        "manuelle_bestätigung",
+        "backup_erfolgt",
+        "offline_modus_bestätigt"
+      ],
+      "gesperrte_operationen": [
+        "datenbank_aenderung",
+        "online_verbindung",
+        "schema_migration"
+      ],
+      "ausnahmen": [
+        "lesender_zugriff",
+        "pruefung",
+        "bericht_erstellung"
+      ],
+      "protokollierung": "vollstaendig",
+      "gueltig_ab": "2026-05-16T23:45:00+00:00"
+    }
+  ]
+}
