@@ -1,0 +1,211 @@
+======================================================================
+CORE-10 KONSISTENZ-BERICHT
+Erstellt: 2026-05-16T08:35:24Z
+Auftrag: Modulabhaengigkeiten, Schnittstellen, Registerkonsistenz
+======================================================================
+
+Gepruefte Module:       163
+Gepruefte Tools:        16
+Gepruefte Ressourcen:   37
+Gepruefte Skills:       35
+Gepruefte Quellen:      15
+Schnittstellen-Schemas: 7
+
+
+----------------------------------------------------------------------
+Pruefung 01: Modul-ID-Eindeutigkeit
+----------------------------------------------------------------------
+  OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 02: Fehlende Abhaengigkeiten
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 1
+    1. FEHLENDE_ABHAENGIGKEIT modul='check_ui01_anwaltsansicht_v1' referenziert unbekanntes Modul 'ui01_anwaltsansicht'
+
+----------------------------------------------------------------------
+Pruefung 03: Widerspruechliche Modulnamen
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 123
+    1. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py)
+    2. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py)
+    3. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py)
+    4. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+    5. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+    6. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+    7. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+    8. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+    9. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+   10. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+   11. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+   12. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+   13. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+   14. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+   15. WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+   16. WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py)
+   17. WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py)
+   18. WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+   19. WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+   20. WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+  ... und 103 weitere (siehe Pruefbericht).
+
+----------------------------------------------------------------------
+Pruefung 04: Module ohne Eingabe/Ausgabe/Teststatus
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 96
+    1. LEER_EINGABE modul='Invoke_Aider_Local' eingabe='Konfiguration und Umgebungsvariablen.'
+    2. LEER_AUSGABE modul='Invoke_Aider_Local' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    3. LEER_EINGABE modul='KM17_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    4. LEER_AUSGABE modul='KM17_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    5. LEER_EINGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    6. LEER_AUSGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    7. LEER_EINGABE modul='KM18_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    8. LEER_AUSGABE modul='KM18_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    9. LEER_EINGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   10. LEER_AUSGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   11. LEER_EINGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   12. LEER_AUSGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   13. LEER_EINGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   14. LEER_AUSGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   15. LEER_EINGABE modul='Run_Agent_Dokumentart' eingabe='Konfiguration und Umgebungsvariablen.'
+   16. LEER_AUSGABE modul='Run_Agent_Dokumentart' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   17. LEER_EINGABE modul='Run_Agent_Handoff_Test_Harness' eingabe='Konfiguration und Umgebungsvariablen.'
+   18. LEER_AUSGABE modul='Run_Agent_Handoff_Test_Harness' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   19. LEER_EINGABE modul='Run_Agent_Sachverhaltsbezug' eingabe='Konfiguration und Umgebungsvariablen.'
+   20. LEER_AUSGABE modul='Run_Agent_Sachverhaltsbezug' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+  ... und 76 weitere (siehe Pruefbericht).
+
+----------------------------------------------------------------------
+Pruefung 05: Aufrufrechte ohne Ressourcen
+----------------------------------------------------------------------
+  OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 06: Datenbank-aendernde Module
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 18
+    1. DB_AENDERUNG modul='001_db_schema_audit' modultyp='python_runner' bereich='register'
+    2. DB_AENDERUNG modul='002_apply_posteingang_schema' modultyp='python_runner' bereich='posteingang'
+    3. DB_AENDERUNG modul='003_verify_posteingang_schema' modultyp='python_runner' bereich='posteingang'
+    4. DB_AENDERUNG modul='013_posteingang_db_altlasten_cleanup' modultyp='python_runner' bereich='posteingang'
+    5. DB_AENDERUNG modul='021_posteingang_db_dateien_auswahl_testlauf_v1' modultyp='python_runner' bereich='posteingang'
+    6. DB_AENDERUNG modul='022_posteingang_db_testlauf_auswertung_v1' modultyp='python_runner' bereich='posteingang'
+    7. DB_AENDERUNG modul='001_posteingang_intake_schema' modultyp='datenbank_migration' bereich='posteingang'
+    8. DB_AENDERUNG modul='004_language_context_v2' modultyp='datenbank_migration' bereich='register'
+    9. DB_AENDERUNG modul='005_dokumentsprachprofil_v1' modultyp='datenbank_migration' bereich='sprache'
+   10. DB_AENDERUNG modul='006_vorzimmer_kommunikationsparameter_v1' modultyp='datenbank_migration' bereich='vorzimmer'
+   11. DB_AENDERUNG modul='007_anwaltvorlage_grundmodul_v1' modultyp='datenbank_migration' bereich='anwalt'
+   12. DB_AENDERUNG modul='008_agentenbearbeitung_grundmodul_v1' modultyp='datenbank_migration' bereich='agent'
+   13. DB_AENDERUNG modul='009_agent_dokumentart_erkennen_v1' modultyp='datenbank_migration' bereich='agent'
+   14. DB_AENDERUNG modul='010_agent_sprache_uebersetzung_v1' modultyp='datenbank_migration' bereich='agent'
+   15. DB_AENDERUNG modul='011_agent_sachverhaltsbezug_v1' modultyp='datenbank_migration' bereich='agent'
+   16. DB_AENDERUNG modul='011_quellenbetreuer_fachanwaltsraster_v1' modultyp='datenbank_migration' bereich='anwalt'
+   17. DB_AENDERUNG modul='012_agenten_kontext_skill_register_v1' modultyp='datenbank_migration' bereich='agent'
+   18. DB_AENDERUNG modul='014_source_adapter_healthcheck_framework_v1' modultyp='datenbank_migration' bereich='quellen'
+
+----------------------------------------------------------------------
+Pruefung 07: Online-faehige Module
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 14
+    1. ONLINE_FAEHIG modul='Invoke_Aider_Local' modultyp='powershell_starter' bereich='unbekannt'
+    2. ONLINE_FAEHIG modul='Run_Quellenbetreuer_Fachanwaltsraster' modultyp='powershell_starter' bereich='anwalt'
+    3. ONLINE_FAEHIG modul='Run_Quellenkandidaten_EU_SE' modultyp='powershell_starter' bereich='quellen'
+    4. ONLINE_FAEHIG modul='Run_Source_Adapter_Healthcheck_Framework' modultyp='powershell_starter' bereich='quellen'
+    5. ONLINE_FAEHIG modul='Update_External_Tools_Library' modultyp='powershell_starter' bereich='unbekannt'
+    6. ONLINE_FAEHIG modul='046_quellenbetreuer_fachanwaltsraster_v1' modultyp='python_runner' bereich='anwalt'
+    7. ONLINE_FAEHIG modul='047_check_quellenbetreuer_fachanwaltsraster_v1' modultyp='pruefdatei' bereich='anwalt'
+    8. ONLINE_FAEHIG modul='051_quellenkandidaten_eu_se_v1' modultyp='python_runner' bereich='quellen'
+    9. ONLINE_FAEHIG modul='052_check_quellenkandidaten_eu_se_v1' modultyp='pruefdatei' bereich='quellen'
+   10. ONLINE_FAEHIG modul='053_source_adapter_healthcheck_framework_v1' modultyp='pruefdatei' bereich='quellen'
+   11. ONLINE_FAEHIG modul='054_check_source_adapter_healthcheck_framework_v1' modultyp='pruefdatei' bereich='quellen'
+   12. ONLINE_FAEHIG modul='km20_quellen_fundstellen_konsolidierung' modultyp='python_runner' bereich='quellen'
+   13. ONLINE_FAEHIG modul='011_quellenbetreuer_fachanwaltsraster_v1' modultyp='datenbank_migration' bereich='anwalt'
+   14. ONLINE_FAEHIG modul='014_source_adapter_healthcheck_framework_v1' modultyp='datenbank_migration' bereich='quellen'
+
+----------------------------------------------------------------------
+Pruefung 08: Unklare Schnittstellen
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 96
+    1. UNKLAR_EINGABE modul='Invoke_Aider_Local' eingabe='Konfiguration und Umgebungsvariablen.'
+    2. UNKLAR_AUSGABE modul='Invoke_Aider_Local' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    3. UNKLAR_EINGABE modul='KM17_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    4. UNKLAR_AUSGABE modul='KM17_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    5. UNKLAR_EINGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    6. UNKLAR_AUSGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    7. UNKLAR_EINGABE modul='KM18_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+    8. UNKLAR_AUSGABE modul='KM18_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+    9. UNKLAR_EINGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   10. UNKLAR_AUSGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   11. UNKLAR_EINGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   12. UNKLAR_AUSGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   13. UNKLAR_EINGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+   14. UNKLAR_AUSGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   15. UNKLAR_EINGABE modul='Run_Agent_Dokumentart' eingabe='Konfiguration und Umgebungsvariablen.'
+   16. UNKLAR_AUSGABE modul='Run_Agent_Dokumentart' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   17. UNKLAR_EINGABE modul='Run_Agent_Handoff_Test_Harness' eingabe='Konfiguration und Umgebungsvariablen.'
+   18. UNKLAR_AUSGABE modul='Run_Agent_Handoff_Test_Harness' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+   19. UNKLAR_EINGABE modul='Run_Agent_Sachverhaltsbezug' eingabe='Konfiguration und Umgebungsvariablen.'
+   20. UNKLAR_AUSGABE modul='Run_Agent_Sachverhaltsbezug' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+  ... und 76 weitere (siehe Pruefbericht).
+
+----------------------------------------------------------------------
+Pruefung 09: Uebergaben ohne Schema-Abdeckung
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 17
+    1. SCHEMA_LUECKE modul='017_vorzimmer_arbeitsliste_v1' liefert_an=['Run_Vorzimmer_Arbeitsliste'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+    2. SCHEMA_LUECKE modul='018_vorzimmer_entscheidung_v1' liefert_an=['Run_Vorzimmer_Entscheidung', 'ui04_durchstich_sekretariat_anwalt_ruecklauf'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+    3. SCHEMA_LUECKE modul='035_vorzimmer_kommunikationsparameter_v1' liefert_an=['Run_Vorzimmer_Kommunikationsparameter', '036_check_vorzimmer_kommunikationsparameter_v1'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+    4. SCHEMA_LUECKE modul='040_agentenbearbeitung_grundmodul_v1' liefert_an=['Run_Agentenbearbeitung', '041_check_agentenbearbeitung_grundmodul_v1', '042_agent_dokumentart_erkennen_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+    5. SCHEMA_LUECKE modul='042_agent_dokumentart_erkennen_v1' liefert_an=['Run_Agent_Dokumentart', '043_check_agent_dokumentart_erkennen_v1', '044_agent_sprache_uebersetzung_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+    6. SCHEMA_LUECKE modul='044_agent_sprache_uebersetzung_v1' liefert_an=['Run_Agent_Sprache_Uebersetzung', '045_check_agent_sprache_uebersetzung_v1', '046_agent_sachverhaltsbezug_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+    7. SCHEMA_LUECKE modul='046_agent_sachverhaltsbezug_v1' liefert_an=['Run_Agent_Sachverhaltsbezug', '047_check_agent_sachverhaltsbezug_v1', '048_agenten_kontext_skill_register_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+    8. SCHEMA_LUECKE modul='048_agenten_kontext_skill_register_v1' liefert_an=['Run_Agenten_Kontext_Skill_Register', '049_check_agenten_kontext_skill_register_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+    9. SCHEMA_LUECKE modul='051_quellenkandidaten_eu_se_v1' liefert_an=['Run_Quellenkandidaten_EU_SE', '052_check_quellenkandidaten_eu_se_v1', '053_source_adapter_healthcheck_framework_v1'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+   10. SCHEMA_LUECKE modul='053_source_adapter_healthcheck_framework_v1' liefert_an=['Run_Source_Adapter_Healthcheck_Framework', '054_check_source_adapter_healthcheck_framework_v1'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+   11. SCHEMA_LUECKE modul='055_agent_handoff_test_harness_v1' liefert_an=['Run_Agent_Handoff_Test_Harness', '056_check_agent_handoff_test_harness_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+   12. SCHEMA_LUECKE modul='km15_arbeitsuebersetzung_fundstellenbindung' liefert_an=['Run_KM15_Arbeitsuebersetzung_Fundstellenbindung', 'check_km15_arbeitsuebersetzung_fundstellenbindung', 'km20_quellen_fundstellen_konsolidierung'] aber bereich='sprache' passt zu keinem Schnittstellen-Schema
+   13. SCHEMA_LUECKE modul='km20_quellen_fundstellen_konsolidierung' liefert_an=['Run_KM20_Konsolidierung', 'km20_pruefung', 'km20b_testdummy_ausschliessen'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+   14. SCHEMA_LUECKE modul='km21_translation_env_prepare' liefert_an=['check_km21_translation_env_prepare'] aber bereich='sprache' passt zu keinem Schnittstellen-Schema
+   15. SCHEMA_LUECKE modul='ui02_tuerschwelle_bau' liefert_an=['ui02c_freigabe_dropdowns_notizen'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+   16. SCHEMA_LUECKE modul='ui03_0_uebergabe_mandantenakte' liefert_an=['check_ui03_0_uebergabe_mandantenakte', 'ui03_1_anwalts_dreiansicht'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+   17. SCHEMA_LUECKE modul='ui04b_logikpruefung_entscheidung' liefert_an=['check_ui04b_logikpruefung_entscheidung'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+
+----------------------------------------------------------------------
+Pruefung 10: Querregister-Verknuepfungen
+----------------------------------------------------------------------
+  ANZAHL FINDINGS: 186
+    1. UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_SPA'
+    2. UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_NLD'
+    3. UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_POL'
+    4. UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_SPA'
+    5. UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_NLD'
+    6. UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_POL'
+    7. UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_SPA'
+    8. UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_NLD'
+    9. UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_POL'
+   10. UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_SV'
+   11. UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_ES'
+   12. UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_NL'
+   13. UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_PL'
+   14. UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_FR'
+   15. UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_SV'
+   16. UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_ES'
+   17. UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_NL'
+   18. UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_PL'
+   19. UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_FR'
+   20. UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_SV'
+  ... und 166 weitere (siehe Pruefbericht).
+
+----------------------------------------------------------------------
+Pruefung 11: Bidirektionale Abhaengigkeiten
+----------------------------------------------------------------------
+  OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 12: AGENTS.md-Konformitaet
+----------------------------------------------------------------------
+  OK – keine Auffaelligkeiten.
+
+======================================================================
+ENDE KONSISTENZ-BERICHT
+======================================================================
