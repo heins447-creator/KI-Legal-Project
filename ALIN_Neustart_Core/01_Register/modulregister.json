@@ -4378,7 +4378,7 @@
       "benoetigte_skills": [],
       "benoetigte_quellen": [],
       "abhaengigkeiten": [
-        "ui01_anwaltsansicht"
+        "ui01_anwaltsansicht_v1"
       ],
       "liefert_an": [],
       "status": "produktiv",
