@@ -1,0 +1,96 @@
+{
+  "modul_id": "UI08",
+  "modulname": "Posteingang / Importstrecke – Visuelle Arbeitsübersicht",
+  "version": "1.0.0",
+  "version_status": "entwicklung",
+  "betriebsmodus": "demo",
+  "produktiv_freigegeben": false,
+  "warnung": "DIES IST EINE DEMO-AUSBAUSTUFE. KEINE PRODUKTIVFREIGABE. KEINE ECHTEN MANDANTENDATEN.",
+  "beschreibung": "UI08 bietet eine visuelle Arbeitsübersicht über die bestehende Posteingang-Infrastruktur (KM04–KM21). Es liest DuckDB-Tabellen, JSON-Karten und CSV-Listen ein und zeigt den aktuellen Zustand aller Posteingangsdokumente in einer HTML-Übersicht.",
+  "abhaengigkeiten": {
+    "datenbank": "Database/Legal_Brain.duckdb",
+    "posteingang_verzeichnis": "Posteingang",
+    "bestehende_module": [
+      "005_posteingang_sicherheitsgate_v2",
+      "012_posteingang_sprachkontext_gate_v2",
+      "014_posteingang_pipeline_v1",
+      "016_posteingang_betriebsstatus_v1",
+      "017_vorzimmer_arbeitsliste_v1",
+      "018_vorzimmer_entscheidung_v1",
+      "020_posteingang_gesamtstatus_v1",
+      "031_dokumentsprachprofil_v1",
+      "033_posteingang_schlusskontrolle_v2"
+    ]
+  },
+  "anzeige_bereiche": [
+    {
+      "id": "eingang",
+      "name": "Eingang / Intake",
+      "db_tabellen": ["posteingang_intake", "posteingang_checks", "posteingang_decisions"],
+      "json_patterns": ["Posteingang/**/entscheidungskarte.json", "Posteingang/**/sicherheitskarte.json"],
+      "farbe": "#2563eb"
+    },
+    {
+      "id": "sicherheit",
+      "name": "Sicherheitsgate",
+      "db_tabellen": ["posteingang_document_language_profile", "posteingang_document_language_audit"],
+      "json_patterns": ["Posteingang/Sicherheit/*.json"],
+      "farbe": "#16a34a"
+    },
+    {
+      "id": "sprache",
+      "name": "Sprachkontext",
+      "db_tabellen": ["lang_intake_language_rules", "lang_participant_language_settings"],
+      "json_patterns": ["Posteingang/Sprachberichte/*.json", "Posteingang/Vorzimmer/*sprachkarte.json"],
+      "farbe": "#ca8a04"
+    },
+    {
+      "id": "vorzimmer",
+      "name": "Vorzimmer / Entscheidung",
+      "db_tabellen": [],
+      "json_patterns": ["Posteingang/Vorzimmer/*.json", "Posteingang/Entscheidungen/*.json"],
+      "farbe": "#9333ea"
+    },
+    {
+      "id": "anwalt",
+      "name": "Anwalt / Review",
+      "db_tabellen": ["anwalt_review_queue", "anwalt_review_audit"],
+      "json_patterns": ["Posteingang/Anwalt/*.json"],
+      "farbe": "#dc2626"
+    },
+    {
+      "id": "agent",
+      "name": "Agentenbearbeitung",
+      "db_tabellen": ["agent_work_queue", "agent_processing_audit"],
+      "json_patterns": ["Posteingang/Agent/*.json"],
+      "farbe": "#0891b2"
+    },
+    {
+      "id": "schlusskontrolle",
+      "name": "Schlusskontrolle",
+      "db_tabellen": [],
+      "json_patterns": ["Posteingang/Schlusskontrolle/*.json", "Posteingang/Endabnahme/*.json"],
+      "farbe": "#4f46e5"
+    }
+  ],
+  "demo_modus": {
+    "max_dokumente": 10,
+    "nur_musterdaten": true,
+    "echte_daten_erlaubt": false,
+    "wasserzeichen": "DEMO – UI08 POSTEINGANG ÜBERSICHT"
+  },
+  "sperrregister_pruefung": {
+    "aktiv": true,
+    "pfad": "ALIN_Neustart_Core/01_Register/sperrregister.json"
+  },
+  "ausgabe": {
+    "html_posteingang_uebersicht": "Windows_App/Pruefseiten/UI08_Posteingang_Uebersicht.html",
+    "json_status": "Windows_App/Logs/UI08_POSTEINGANG_STATUS.json",
+    "bericht": "Windows_App/Logs/UI08_POSTEINGANG_BERICHT.txt"
+  },
+  "grenzen": {
+    "max_dateigroesse_mb": 50,
+    "max_dokumente_pro_lauf": 20,
+    "timeout_sekunden": 30
+  }
+}
