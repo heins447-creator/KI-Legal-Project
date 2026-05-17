@@ -1,0 +1,296 @@
+{
+  "modul_id": "UI09",
+  "modulname": "Zentrale Grundschalter und Profilfelder",
+  "version": "1.0.0",
+  "version_status": "Entwurf",
+  "letzte_aenderung": "2026-05-17",
+  "produktiv_freigegeben": false,
+  "nur_musterdaten": true,
+  "echte_daten_erlaubt": false,
+  "beschreibung": "Zentrale Profil- und Schalterebene fuer alle ALIN-Module. Ersetzt verstreute Einzelschalter in Posteingang, Vorzimmer, Anwalt, Agenten und Schlusskontrolle durch ein gemeinsames Profilsystem.",
+  "register_pruefung": {
+    "sperrregister": true,
+    "modulregister": false,
+    "toolregister": false
+  },
+  "abhaengigkeiten": {
+    "sperrregister": "ALIN_Neustart_Core/01_Register/sperrregister.json",
+    "ressourcenregister": "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+    "ui08c_sanierungsstatus": "Windows_App/Logs/UI08C_SANIERUNGSSTATUS.json"
+  },
+  "zentrales_profil": {
+    "profil_id": "ALIN_HAUPTPROFIL",
+    "profil_version": "1.0.0",
+    "gueltig_ab": "2026-05-17",
+    "felder": [
+      {
+        "feld_id": "sprache_dokument",
+        "name": "Dokumentensprache",
+        "beschreibung": "Erkannte oder gesetzte Sprache des Dokuments",
+        "typ": "string",
+        "erlaubte_werte": ["de", "en", "fr", "es", "it", "pl", "ru", "tr", "ar", "zh", "ja", "unbekannt"],
+        "default": "unbekannt",
+        "pflichtfeld": true,
+        "quelle": "OCR / Tesseract / manuelle Eingabe",
+        "nutzer": ["Posteingang", "OCR", "Uebersetzung", "Agent"]
+      },
+      {
+        "feld_id": "sprache_anwalt",
+        "name": "Anwaltssprache",
+        "beschreibung": "Bevorzugte Arbeitssprache des bearbeitenden Anwalts",
+        "typ": "string",
+        "erlaubte_werte": ["de", "en"],
+        "default": "de",
+        "pflichtfeld": true,
+        "quelle": "Anwaltsprofil / Mandantenakte",
+        "nutzer": ["Anwalt", "Uebersetzung", "UI05"]
+      },
+      {
+        "feld_id": "sprache_mandant",
+        "name": "Mandantensprache",
+        "beschreibung": "Muttersprache oder bevorzugte Sprache des Mandanten",
+        "typ": "string",
+        "erlaubte_werte": ["de", "en", "fr", "es", "it", "pl", "ru", "tr", "ar", "zh", "ja"],
+        "default": "de",
+        "pflichtfeld": false,
+        "quelle": "Mandantenstamm",
+        "nutzer": ["Posteingang", "Vorzimmer", "Anwalt"]
+      },
+      {
+        "feld_id": "rechtsraum",
+        "name": "Rechtsraum",
+        "beschreibung": "Zustaendiger Rechtsraum fuer das Dokument",
+        "typ": "string",
+        "erlaubte_werte": ["DE", "EU", "US", "UK", "CH", "AT", "unbekannt"],
+        "default": "unbekannt",
+        "pflichtfeld": true,
+        "quelle": "Aktenstamm / manuelle Eingabe",
+        "nutzer": ["Posteingang", "Anwalt", "Agent", "Quellenbetreuer"]
+      },
+      {
+        "feld_id": "akten_id",
+        "name": "Aktenbezug",
+        "beschreibung": "Eindeutige Akten-ID, der das Dokument zugeordnet ist",
+        "typ": "string",
+        "default": null,
+        "pflichtfeld": true,
+        "quelle": "Posteingang / Sekretariat",
+        "nutzer": ["Posteingang", "Mandantenakte", "Agent"]
+      },
+      {
+        "feld_id": "sicherheitsstatus",
+        "name": "Sicherheitsstatus",
+        "beschreibung": "Ergebnis der Sicherheitspruefung beim Eingang",
+        "typ": "string",
+        "erlaubte_werte": ["freigegeben", "quarantaene", "gesperrt", "unbekannt"],
+        "default": "unbekannt",
+        "pflichtfeld": true,
+        "quelle": "Sicherheitsgate",
+        "nutzer": ["Posteingang", "Vorzimmer", "Anwalt"]
+      },
+      {
+        "feld_id": "freigabe_vorzimmer",
+        "name": "Vorzimmer-Freigabe",
+        "beschreibung": "Freigabestatus durch das Vorzimmer",
+        "typ": "boolean",
+        "default": false,
+        "pflichtfeld": true,
+        "quelle": "Vorzimmer-Entscheidung",
+        "nutzer": ["Vorzimmer", "Anwalt", "Weiche"]
+      },
+      {
+        "feld_id": "freigabe_anwalt",
+        "name": "Anwalt-Freigabe",
+        "beschreibung": "Freigabestatus durch den bearbeitenden Anwalt",
+        "typ": "boolean",
+        "default": false,
+        "pflichtfeld": true,
+        "quelle": "Anwaltsansicht",
+        "nutzer": ["Anwalt", "Mandantenakte", "Agent"]
+      },
+      {
+        "feld_id": "freigabe_schlusskontrolle",
+        "name": "Schlusskontrolle-Freigabe",
+        "beschreibung": "Freigabestatus nach Schlusskontrolle",
+        "typ": "boolean",
+        "default": false,
+        "pflichtfeld": true,
+        "quelle": "Schlusskontrolle",
+        "nutzer": ["Schlusskontrolle", "Mandantenakte"]
+      },
+      {
+        "feld_id": "ressourcenpaket_ocr",
+        "name": "OCR-Ressourcenpaket",
+        "beschreibung": "Verfuegbare OCR-Sprachpakete und -Modelle",
+        "typ": "array",
+        "default": ["deu", "eng"],
+        "pflichtfeld": false,
+        "quelle": "Ressourcenregister",
+        "nutzer": ["OCR", "Posteingang"]
+      },
+      {
+        "feld_id": "ressourcenpaket_uebersetzung",
+        "name": "Uebersetzungs-Ressourcenpaket",
+        "beschreibung": "Verfuegbare Uebersetzungsmodelle und -Sprachpaare",
+        "typ": "array",
+        "default": ["de-en", "en-de"],
+        "pflichtfeld": false,
+        "quelle": "Ressourcenregister / Argos",
+        "nutzer": ["Uebersetzung", "Agent"]
+      },
+      {
+        "feld_id": "betriebsmodus",
+        "name": "Betriebsmodus",
+        "beschreibung": "Globaler Betriebsmodus des Systems",
+        "typ": "string",
+        "erlaubte_werte": ["demo", "produktiv", "wartung", "offline"],
+        "default": "demo",
+        "pflichtfeld": true,
+        "quelle": "Systemkonfiguration",
+        "nutzer": ["Alle Module"]
+      },
+      {
+        "feld_id": "online_status",
+        "name": "Online-/Offline-Modus",
+        "beschreibung": "Ob das System online oder offline betrieben wird",
+        "typ": "boolean",
+        "default": false,
+        "pflichtfeld": true,
+        "quelle": "Systemkonfiguration",
+        "nutzer": ["Alle Module", "Update-Ueberwachung"]
+      },
+      {
+        "feld_id": "mandant_id",
+        "name": "Mandanten-ID",
+        "beschreibung": "Eindeutige Mandantenkennung",
+        "typ": "string",
+        "default": null,
+        "pflichtfeld": true,
+        "quelle": "Mandantenstamm",
+        "nutzer": ["Posteingang", "Mandantenakte", "Anwalt"]
+      },
+      {
+        "feld_id": "sachgebiet",
+        "name": "Sachgebiet",
+        "beschreibung": "Rechtliches Sachgebiet der Akte",
+        "typ": "string",
+        "erlaubte_werte": ["Mietrecht", "Arbeitsrecht", "Familienrecht", "Erbrecht", "Vertragsrecht", "Strafrecht", "Verwaltungsrecht", "Sonstiges", "unbekannt"],
+        "default": "unbekannt",
+        "pflichtfeld": false,
+        "quelle": "Aktenstamm / Anwalt",
+        "nutzer": ["Anwalt", "Agent", "Quellenbetreuer"]
+      }
+    ]
+  },
+  "grundschalter": {
+    "schalter": [
+      {
+        "id": "GS01",
+        "name": "Automatische Spracherkennung",
+        "beschreibung": "OCR-Spracherkennung automatisch beim Posteingang",
+        "default": true,
+        "aenderbar_durch": ["Admin", "Vorzimmer"],
+        "wirkt_auf": ["Posteingang", "OCR", "Agent"]
+      },
+      {
+        "id": "GS02",
+        "name": "Automatische Aktenzuordnung",
+        "beschreibung": "Dokumente automatisch Akten zuordnen wenn moeglich",
+        "default": false,
+        "aenderbar_durch": ["Admin", "Vorzimmer"],
+        "wirkt_auf": ["Posteingang", "Mandantenakte"]
+      },
+      {
+        "id": "GS03",
+        "name": "Sicherheitsgate aktiv",
+        "beschreibung": "Sicherheitspruefung beim Dokumenteneingang",
+        "default": true,
+        "aenderbar_durch": ["Admin"],
+        "wirkt_auf": ["Posteingang", "Sicherheitsgate"]
+      },
+      {
+        "id": "GS04",
+        "name": "Agenten-Autostart",
+        "beschreibung": "Agentenbearbeitung automatisch nach Freigabe starten",
+        "default": true,
+        "aenderbar_durch": ["Admin", "Anwalt"],
+        "wirkt_auf": ["Agent", "Anwalt"]
+      },
+      {
+        "id": "GS05",
+        "name": "Offline-Cache aktiv",
+        "beschreibung": "Ressourcen und Modelle lokal cachen fuer Offline-Betrieb",
+        "default": true,
+        "aenderbar_durch": ["Admin"],
+        "wirkt_auf": ["Cache", "Update-Ueberwachung", "Alle Module"]
+      },
+      {
+        "id": "GS06",
+        "name": "Protokollierung aktiv",
+        "beschreibung": "Audit-Protokoll fuer alle Aenderungen fuehren",
+        "default": true,
+        "aenderbar_durch": ["Admin"],
+        "wirkt_auf": ["Audit-Protokoll", "Alle Module"]
+      },
+      {
+        "id": "GS07",
+        "name": "Musterdaten-Modus",
+        "beschreibung": "Nur Musterdaten verwenden, keine echten Mandantendaten",
+        "default": true,
+        "aenderbar_durch": ["Admin"],
+        "wirkt_auf": ["Alle Module"]
+      },
+      {
+        "id": "GS08",
+        "name": "Automatische Schlusskontrolle",
+        "beschreibung": "Schlusskontrolle automatisch anlegen wenn alle Freigaben vorhanden",
+        "default": false,
+        "aenderbar_durch": ["Admin", "Vorzimmer"],
+        "wirkt_auf": ["Schlusskontrolle", "Mandantenakte"]
+      }
+    ]
+  },
+  "validierungsregeln": [
+    {
+      "regel_id": "VAL01",
+      "beschreibung": "Wenn betriebsmodus=produktiv, dann muss online_status=true oder offline_cache_aktiv=true sein",
+      "bedingung": "betriebsmodus == 'produktiv' IMPLIZIERT (online_status == true OR GS05 == true)",
+      "schwere": "KRITISCH"
+    },
+    {
+      "regel_id": "VAL02",
+      "beschreibung": "Wenn sicherheitsstatus=gesperrt, dann duerfen keine Freigaben erteilt werden",
+      "bedingung": "sicherheitsstatus == 'gesperrt' IMPLIZIERT (freigabe_vorzimmer=false AND freigabe_anwalt=false AND freigabe_schlusskontrolle=false)",
+      "schwere": "KRITISCH"
+    },
+    {
+      "regel_id": "VAL03",
+      "beschreibung": "Akten-ID muss im Produktivmodus gesetzt sein",
+      "bedingung": "betriebsmodus == 'produktiv' IMPLIZIERT akten_id IS NOT NULL",
+      "schwere": "HOCH"
+    },
+    {
+      "regel_id": "VAL04",
+      "beschreibung": "Mandanten-ID muss immer gesetzt sein",
+      "bedingung": "mandant_id IS NOT NULL",
+      "schwere": "KRITISCH"
+    },
+    {
+      "regel_id": "VAL05",
+      "beschreibung": "Wenn musterdaten_modus=false, dann muss betriebsmodus=produktiv sein",
+      "bedingung": "GS07 == false IMPLIZIERT betriebsmodus == 'produktiv'",
+      "schwere": "HOCH"
+    }
+  ],
+  "ausgabe": {
+    "html_profiluebersicht": "Windows_App/Logs/UI09_PROFILUEBERSICHT.html",
+    "json_profil": "Windows_App/Logs/UI09_ZENTRALES_PROFIL.json",
+    "json_grundschalter": "Windows_App/Logs/UI09_GRUNDSCHALTER.json",
+    "bericht": "Windows_App/Logs/UI09_ZENTRALE_GRUNDSCHALTER_BERICHT.txt"
+  },
+  "grenzen": {
+    "max_dokumente_demo": 10,
+    "nur_lesend_auf_ui03_ui07b": true,
+    "keine_datenbank_aenderung": true
+  }
+}
