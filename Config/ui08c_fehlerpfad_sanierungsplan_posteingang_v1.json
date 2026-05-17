@@ -1,0 +1,178 @@
+{
+  "modul_id": "UI08c",
+  "modulname": "Fehlerpfad-Sanierungsplan Posteingang",
+  "version": "1.0.0",
+  "version_status": "Entwurf",
+  "letzte_aenderung": "2026-05-17",
+  "produktiv_freigegeben": false,
+  "nur_musterdaten": true,
+  "echte_daten_erlaubt": false,
+  "beschreibung": "Strukturierte Auswertung der UI08b-Fehlerpfad-Ergebnisse. Ordnet jeden Fehlerpfad einer Verantwortlichkeit zu, klassifiziert die Sanierbarkeit und gibt Handlungsempfehlungen.",
+  "register_pruefung": {
+    "sperrregister": true,
+    "modulregister": false,
+    "toolregister": false
+  },
+  "abhaengigkeiten": {
+    "ui08b_status_json": "Windows_App/Logs/UI08B_FEHLERPFAD_STATUS.json",
+    "ui08b_bericht": "Windows_App/Logs/UI08B_FEHLERPFAD_PRUEFUNG_POSTEINGANG_BERICHT.txt",
+    "datenbank": "Database/Legal_Brain.duckdb",
+    "sperrregister": "ALIN_Neustart_Core/01_Register/sperrregister.json"
+  },
+  "sanierungsmatrix": {
+    "verantwortlichkeiten": [
+      {
+        "id": "POSTEINGANG",
+        "name": "Posteingang / Intake",
+        "zustaendig_fuer": ["FEHLER_01", "FEHLER_02", "FEHLER_03", "FEHLER_04"],
+        "automatisch_sanierbar": ["FEHLER_01", "FEHLER_02"],
+        "manuelle_freigabe_erforderlich": ["FEHLER_03", "FEHLER_04"],
+        "beschreibung": "Spracherkennung, Aktenzuordnung, Eingangssperren"
+      },
+      {
+        "id": "VORZIMMER",
+        "name": "Vorzimmer / Sekretariat",
+        "zustaendig_fuer": ["FEHLER_05", "FEHLER_06"],
+        "automatisch_sanierbar": ["FEHLER_05"],
+        "manuelle_freigabe_erforderlich": ["FEHLER_06"],
+        "beschreibung": "Sicherheitsfreigabe, Entscheidungsklärung"
+      },
+      {
+        "id": "ANWALT",
+        "name": "Anwalt",
+        "zustaendig_fuer": ["FEHLER_07"],
+        "automatisch_sanierbar": [],
+        "manuelle_freigabe_erforderlich": ["FEHLER_07"],
+        "beschreibung": "Anwaltliche Freigabe von Dokumenten"
+      },
+      {
+        "id": "AGENT",
+        "name": "Agentenstrecke",
+        "zustaendig_fuer": ["FEHLER_08"],
+        "automatisch_sanierbar": ["FEHLER_08"],
+        "manuelle_freigabe_erforderlich": [],
+        "beschreibung": "Agenten-Neustart, Warteschlangen-Reset"
+      },
+      {
+        "id": "SCHLUSSKONTROLLE",
+        "name": "Schlusskontrolle",
+        "zustaendig_fuer": ["FEHLER_09"],
+        "automatisch_sanierbar": [],
+        "manuelle_freigabe_erforderlich": ["FEHLER_09"],
+        "beschreibung": "Manuelle Nachkontrolle und Freigabe"
+      }
+    ],
+    "sanierungsregeln": [
+      {
+        "fehler_id": "FEHLER_01",
+        "name": "Fehlende Sprache",
+        "schwere": "KRITISCH",
+        "automatisch": true,
+        "automatische_aktion": "Spracherkennung via Tesseract neu starten, Fallback auf OCR-Sprachprofil",
+        "manuelle_aktion": null,
+        "bleibt_gesperrt": false,
+        "max_wiederholungen": 3,
+        "escalation": "Vorzimmer"
+      },
+      {
+        "fehler_id": "FEHLER_02",
+        "name": "Unsichere Sprache",
+        "schwere": "HOCH",
+        "automatisch": true,
+        "automatische_aktion": "Sprachvermutung in Warteschlange setzen, manuelle Bestätigung anfordern",
+        "manuelle_aktion": null,
+        "bleibt_gesperrt": false,
+        "max_wiederholungen": 2,
+        "escalation": "Vorzimmer"
+      },
+      {
+        "fehler_id": "FEHLER_03",
+        "name": "Fehlender Aktenbezug",
+        "schwere": "KRITISCH",
+        "automatisch": false,
+        "automatische_aktion": null,
+        "manuelle_aktion": "Sekretariat ordnet Dokument manuell Akte zu oder erstellt neue Akte",
+        "bleibt_gesperrt": true,
+        "max_wiederholungen": 0,
+        "escalation": "Anwalt"
+      },
+      {
+        "fehler_id": "FEHLER_04",
+        "name": "Gesperrter Eingang",
+        "schwere": "KRITISCH",
+        "automatisch": false,
+        "automatische_aktion": null,
+        "manuelle_aktion": "Sicherheitsprüfung durchführen, Freigabe durch berechtigte Person",
+        "bleibt_gesperrt": true,
+        "max_wiederholungen": 0,
+        "escalation": "Anwalt"
+      },
+      {
+        "fehler_id": "FEHLER_05",
+        "name": "Fehlende Sicherheitsfreigabe",
+        "schwere": "HOCH",
+        "automatisch": true,
+        "automatische_aktion": "Erneuter Sicherheitsscan, Quarantäne-Prüfung wiederholen",
+        "manuelle_aktion": null,
+        "bleibt_gesperrt": false,
+        "max_wiederholungen": 2,
+        "escalation": "Vorzimmer"
+      },
+      {
+        "fehler_id": "FEHLER_06",
+        "name": "Unklare Vorzimmerentscheidung",
+        "schwere": "MITTEL",
+        "automatisch": false,
+        "automatische_aktion": null,
+        "manuelle_aktion": "Vorzimmer klärt Entscheidung, setzt Weiche (Anwalt/OCR/Akte)",
+        "bleibt_gesperrt": false,
+        "max_wiederholungen": 0,
+        "escalation": "Anwalt"
+      },
+      {
+        "fehler_id": "FEHLER_07",
+        "name": "Fehlende Anwaltfreigabe",
+        "schwere": "HOCH",
+        "automatisch": false,
+        "automatische_aktion": null,
+        "manuelle_aktion": "Anwalt prüft Dokument und gibt Freigabe oder Ablehnung",
+        "bleibt_gesperrt": true,
+        "max_wiederholungen": 0,
+        "escalation": "Anwalt"
+      },
+      {
+        "fehler_id": "FEHLER_08",
+        "name": "Blockierte Agentenbearbeitung",
+        "schwere": "MITTEL",
+        "automatisch": true,
+        "automatische_aktion": "Agenten-Task resetten, Warteschlange neu aufbauen, Retry-Logik",
+        "manuelle_aktion": null,
+        "bleibt_gesperrt": false,
+        "max_wiederholungen": 3,
+        "escalation": "Vorzimmer"
+      },
+      {
+        "fehler_id": "FEHLER_09",
+        "name": "Unvollständige Schlusskontrolle",
+        "schwere": "KRITISCH",
+        "automatisch": false,
+        "automatische_aktion": null,
+        "manuelle_aktion": "Schlusskontrolle manuell durchführen, Protokoll erstellen",
+        "bleibt_gesperrt": true,
+        "max_wiederholungen": 0,
+        "escalation": "Anwalt"
+      }
+    ]
+  },
+  "ausgabe": {
+    "html_sanierungsplan": "Windows_App/Logs/UI08C_SANIERUNGSPLAN.html",
+    "json_sanierungsstatus": "Windows_App/Logs/UI08C_SANIERUNGSSTATUS.json",
+    "bericht": "Windows_App/Logs/UI08C_SANIERUNGSPLAN_BERICHT.txt",
+    "csv_massnahmen": "Windows_App/Logs/UI08C_MASSNAHMEN.csv"
+  },
+  "grenzen": {
+    "max_dokumente_demo": 10,
+    "nur_lesend_auf_ui03_ui07b": true,
+    "keine_datenbank_aenderung": true
+  }
+}
