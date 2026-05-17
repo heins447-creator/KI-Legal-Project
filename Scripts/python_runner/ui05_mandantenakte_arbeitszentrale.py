@@ -111,52 +111,125 @@ def lese_ui04b_formular():
     return load_json(path)
 
 def bestimme_aktionen(ui03, ui04b, plausi, formular):
-    """Bestimmt die nächsten zulässigen Aktionen basierend auf Status."""
-    aktionen = []
+    """Bestimmt die nächsten zulässigen Aktionen basierend auf Status.
+    
+    Priorisierung:
+      P0 (sofort)  – OCR-Fehler beheben
+      P1           – OCR-Freigabe prüfen
+      P2           – Übersetzung (nur wenn OCR freigegeben)
+      P3           – Entscheidung (UI04b)
+      P4           – Geparkte Aufträge verwalten
+    """
+    aktionen = []      # Liste von Dicts mit prioritaet, label, modul
     gesperrte_aktionen = []
+    abhaengigkeiten = []
 
     # UI03-Status prüfen
+    ocr_fehlerhaft = False
+    ocr_freigegeben = False
     if ui03:
         ocr_status = ui03.get("ocr_status", {})
         uebersetzung = ui03.get("uebersetzung", {})
         freigabe = ui03.get("freigabe", {})
         parkstatus = ui03.get("parkstatus", {})
 
+        # P0: OCR-Fehler (blockiert alles)
         if ocr_status.get("status") == "fehlerhaft":
-            aktionen.append("OCR-Fehler prüfen (UI03-1b)")
+            ocr_fehlerhaft = True
+            aktionen.append({
+                "prioritaet": 0,
+                "label": "OCR-Fehler prüfen (UI03-1b)",
+                "modul": "UI03-1b",
+                "blockierend": True,
+                "grund": "OCR enthält Fehler – weitere Verarbeitung blockiert"
+            })
+
+        # P1: OCR-Freigabe
+        if freigabe.get("status") == "ausstehend":
+            aktionen.append({
+                "prioritaet": 1,
+                "label": "OCR-Freigabe prüfen (UI03-1d)",
+                "modul": "UI03-1d",
+                "blockierend": False
+            })
+        elif freigabe.get("status") == "freigegeben":
+            ocr_freigegeben = True
+
+        # P2: Übersetzung (Abhängigkeit: OCR muss freigegeben sein)
         if uebersetzung.get("status") == "fehlende_sprachpaare":
             gesperrte_aktionen.append({
                 "aktion": "Übersetzung starten",
-                "grund": "Fehlende Argos-Sprachpaare (KM21b blockiert)"
+                "grund": "Fehlende Argos-Sprachpaare (KM21b blockiert)",
+                "modul": "KM21b",
+                "prioritaet": 2
             })
         elif uebersetzung.get("status") == "ausstehend":
-            aktionen.append("Übersetzungsarbeitsplatz öffnen (UI03-1c)")
-        if freigabe.get("status") == "ausstehend":
-            aktionen.append("OCR-Freigabe prüfen (UI03-1d)")
-        if parkstatus.get("status") == "geparkt":
-            aktionen.append("Geparkte Aufträge verwalten (UI03-1f)")
+            if ocr_fehlerhaft:
+                abhaengigkeiten.append("Übersetzung wartet auf OCR-Fehlerbehebung")
+            elif not ocr_freigegeben:
+                abhaengigkeiten.append("Übersetzung wartet auf OCR-Freigabe")
+            else:
+                aktionen.append({
+                    "prioritaet": 2,
+                    "label": "Übersetzungsarbeitsplatz öffnen (UI03-1c)",
+                    "modul": "UI03-1c",
+                    "blockierend": False
+                })
 
-    # UI04b-Status prüfen
+        # P4: Geparkte Aufträge (niedrigste Priorität)
+        if parkstatus.get("status") == "geparkt":
+            aktionen.append({
+                "prioritaet": 4,
+                "label": "Geparkte Aufträge verwalten (UI03-1f)",
+                "modul": "UI03-1f",
+                "blockierend": False
+            })
+
+    # UI04b-Status prüfen (P3)
     if ui04b:
         plausi_status = ui04b.get("plausibilitaet_status", "")
         if plausi_status == "fehlerhaft":
-            aktionen.append("Entscheidungsmaske korrigieren (UI04b)")
+            aktionen.append({
+                "prioritaet": 3,
+                "label": "Entscheidungsmaske korrigieren (UI04b)",
+                "modul": "UI04b",
+                "blockierend": True,
+                "grund": "Plausibilitätsfehler – Entscheidung nicht möglich"
+            })
         elif plausi_status == "warnung":
-            aktionen.append("Entscheidung mit Warnungen prüfen (UI04b)")
+            aktionen.append({
+                "prioritaet": 3,
+                "label": "Entscheidung mit Warnungen prüfen (UI04b)",
+                "modul": "UI04b",
+                "blockierend": False
+            })
         elif plausi_status == "ok":
-            aktionen.append("Entscheidung freigeben (UI04b)")
+            aktionen.append({
+                "prioritaet": 3,
+                "label": "Entscheidung freigeben (UI04b)",
+                "modul": "UI04b",
+                "blockierend": False
+            })
 
-    # Sperrregister prüfen
+    # Sperrregister prüfen (immer anzeigen, Priorität unabhängig)
     for modul_id in ["011_quellenbetreuer_fachanwaltsraster_v1", "014_source_adapter_healthcheck_framework_v1"]:
         sperr = pruefe_sperrregister(modul_id)
         if sperr.get("gesperrt"):
             gesperrte_aktionen.append({
                 "aktion": f"{modul_id} ausführen",
                 "grund": sperr.get("grund", "Gesperrt"),
-                "freigabe_erfordert": sperr.get("freigabe_erfordert", [])
+                "freigabe_erfordert": sperr.get("freigabe_erfordert", []),
+                "prioritaet": 99
             })
 
-    return {"zulaessig": aktionen, "gesperrt": gesperrte_aktionen}
+    # Sortieren nach Priorität
+    aktionen.sort(key=lambda x: x["prioritaet"])
+
+    return {
+        "zulaessig": aktionen,
+        "gesperrt": gesperrte_aktionen,
+        "abhaengigkeiten": abhaengigkeiten
+    }
 
 def generate_html(arbeitszentrale, cfg):
     """Erzeugt HTML für die Arbeitszentrale."""
@@ -165,6 +238,7 @@ def generate_html(arbeitszentrale, cfg):
     ui04b = arbeitszentrale.get("ui04b", {})
     aktionen = arbeitszentrale.get("naechste_aktionen", {})
     gesperrt = aktionen.get("gesperrt", [])
+    abhaengigkeiten = aktionen.get("abhaengigkeiten", [])
 
     # Status-Badges
     def badge(status, label):
@@ -204,13 +278,26 @@ def generate_html(arbeitszentrale, cfg):
 
     # Aktionen
     aktionen_html = '<div class="aktionen-gruppe">'
-    aktionen_html += '<h4>Nächste zulässige Aktionen</h4>'
+    aktionen_html += '<h4>Nächste zulässige Aktionen (nach Priorität)</h4>'
     if aktionen.get("zulaessig"):
         for a in aktionen["zulaessig"]:
-            aktionen_html += f'<div class="aktion zulaessig">▶ {a}</div>'
+            prio = a.get("prioritaet", 99)
+            block = " 🔴 BLOCKIEREND" if a.get("blockierend") else ""
+            label = a.get("label", a)
+            modul = a.get("modul", "")
+            aktionen_html += f'<div class="aktion zulaessig prio-{prio}"><strong>P{prio}</strong> ▶ {label}{block}</div>'
     else:
         aktionen_html += '<p class="hinweis">Keine Aktionen verfügbar</p>'
     aktionen_html += '</div>'
+
+    # Abhängigkeiten
+    abhaengigkeiten_html = ""
+    if abhaengigkeiten:
+        abhaengigkeiten_html = '<div class="aktionen-gruppe abhaengigkeiten">'
+        abhaengigkeiten_html += '<h4>⏳ Wartende Aktionen (Abhängigkeiten)</h4>'
+        for ab in abhaengigkeiten:
+            abhaengigkeiten_html += f'<div class="aktion abhaengig">⏳ {ab}</div>'
+        abhaengigkeiten_html += '</div>'
 
     # Gesperrte Aktionen
     gesperrt_html = ""
@@ -252,7 +339,13 @@ body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: var(
 .aktion { padding: 10px 14px; border-radius: var(--radius-md); margin-bottom: 8px; font-size: 0.85rem; }
 .aktion.zulaessig { background: var(--ok-bg); color: var(--ok); border: 1px solid #86efac; }
 .aktion.gesperrt { background: var(--danger-bg); color: var(--danger); border: 1px solid #fca5a5; opacity: 0.7; }
+.aktion.abhaengig { background: #f1f5f9; color: #475569; border: 1px dashed #94a3b8; font-style: italic; }
 .aktionen-gruppe.gesperrt { grid-column: 1 / -1; }
+.prio-0 { border-left: 4px solid #dc2626; }
+.prio-1 { border-left: 4px solid #f59e0b; }
+.prio-2 { border-left: 4px solid #3b82f6; }
+.prio-3 { border-left: 4px solid #10b981; }
+.prio-4 { border-left: 4px solid #8b5cf6; }
 .hinweis { color: var(--text-secondary); font-style: italic; font-size: 0.85rem; }
 .detail { font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; }
 footer { text-align: center; padding: 16px; font-size: 0.7rem; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 24px; }
@@ -281,10 +374,13 @@ footer { text-align: center; padding: 16px; font-size: 0.7rem; color: var(--text
 {ui04b_html}
 </div>
 <div class="karte">
-{aktionen_html}
+  {aktionen_html}
 </div>
 <div class="karte">
-{gesperrt_html}
+  {abhaengigkeiten_html}
+</div>
+<div class="karte">
+  {gesperrt_html}
 </div>
 </div>
 <footer>
@@ -375,8 +471,11 @@ UI04b-Status:
 - Fehler: {ui04b_status.get('fehler', 0) if ui04b_status else 0}
 - Warnungen: {ui04b_status.get('warnungen', 0) if ui04b_status else 0}
 
-Nächste zulässige Aktionen:
-{chr(10).join(['- ' + a for a in aktionen['zulaessig']]) if aktionen['zulaessig'] else '- Keine'}
+Nächste zulässige Aktionen (nach Priorität):
+{chr(10).join(['- P' + str(a.get('prioritaet', 99)) + (' [BLOCKIEREND]' if a.get('blockierend') else '') + ' ' + a.get('label', a) for a in aktionen['zulaessig']]) if aktionen['zulaessig'] else '- Keine'}
+
+Wartende Aktionen (Abhängigkeiten):
+{chr(10).join(['- ⏳ ' + ab for ab in aktionen.get('abhaengigkeiten', [])]) if aktionen.get('abhaengigkeiten') else '- Keine'}
 
 Gesperrte Aktionen (Sperrregister):
 {chr(10).join(['- 🔒 ' + g['aktion'] + ' (' + g['grund'] + ')' for g in aktionen['gesperrt']]) if aktionen['gesperrt'] else '- Keine'}

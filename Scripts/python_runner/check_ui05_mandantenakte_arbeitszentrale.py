@@ -56,6 +56,27 @@ t("Status hat Aktionen", "naechste_aktionen" in status)
 t("Status hat Sperrregister-Prüfung", status.get("sperrregister_pruefung", False))
 t("Status hat Gesperrt-Flag", "gesperrte_aktionen_blockiert" in status)
 
+# Prioritäten und Abhängigkeiten (UI05b)
+print("\n--- Prioritäten / Abhängigkeiten / Blockierung ---")
+if status:
+    aktionen = status.get("naechste_aktionen", {})
+    zulaessig = aktionen.get("zulaessig", [])
+    gesperrt = aktionen.get("gesperrt", [])
+    abhaengig = aktionen.get("abhaengigkeiten", [])
+
+    prios = [a.get("prioritaet", 99) for a in zulaessig]
+    t("Prioritäten numerisch", all(isinstance(p, int) for p in prios) if prios else True)
+    t("Prioritäten sortiert", prios == sorted(prios) if len(prios) > 1 else True)
+    t("Blockierend-Flag vorhanden", all("blockierend" in a for a in zulaessig) if zulaessig else True)
+
+    p0 = [a for a in zulaessig if a.get("prioritaet") == 0]
+    t("P0 blockierend", all(a.get("blockierend") for a in p0) if p0 else True)
+    t("Abhängigkeiten separate Liste", isinstance(abhaengig, list))
+
+    uebersetzung_zulaessig = any("bersetzung" in a.get("label", "") for a in zulaessig)
+    uebersetzung_gesperrt = any("bersetzung" in g.get("aktion", "") or "Argos" in g.get("grund", "") for g in gesperrt)
+    t("Übersetzung gesperrt wenn Argos fehlt", not uebersetzung_zulaessig or not uebersetzung_gesperrt)
+
 # Sperrregister
 print("\n--- Sperrregister ---")
 sperrregister_path = CORE / "sperrregister.json"
