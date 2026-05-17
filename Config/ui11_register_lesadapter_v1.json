@@ -1,0 +1,79 @@
+{
+  "modul_id": "UI11",
+  "modulname": "Register-Leseadapter",
+  "version": "1.0.0",
+  "version_status": "Entwurf",
+  "letzte_aenderung": "2026-05-17",
+  "produktiv_freigegeben": false,
+  "nur_musterdaten": true,
+  "echte_daten_erlaubt": false,
+  "beschreibung": "Liest alle 8 zentralen Register aus ALIN_Neustart_Core/01_Register/ und stellt sie als zentraler Adapter-JSON fuer Module ausserhalb des Freeze bereit. Prueft Konsistenz zwischen Registern ohne die eingefrorene Strecke UI03-UI07b zu beruehren.",
+  "register_pruefung": {
+    "sperrregister": true,
+    "modulregister": false,
+    "toolregister": false
+  },
+  "abhaengigkeiten": {
+    "sperrregister": "ALIN_Neustart_Core/01_Register/sperrregister.json",
+    "ressourcenregister": "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+    "skillregister": "ALIN_Neustart_Core/01_Register/skillregister.json",
+    "toolregister": "ALIN_Neustart_Core/01_Register/toolregister.json",
+    "quellen_adapter_register": "ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+    "lizenzregister": "ALIN_Neustart_Core/01_Register/lizenzregister.json",
+    "update_register": "ALIN_Neustart_Core/01_Register/update_register.json",
+    "modulregister": "ALIN_Neustart_Core/01_Register/modulregister.json"
+  },
+  "adapter_konfiguration": {
+    "ausgabe_format": "json",
+    "konsistenzpruefung": true,
+    "freeze_kompatibilitaet": {
+      "beruehrt_ui03_ui07b": false,
+      "nur_lesend": true,
+      "neue_dateien": true
+    }
+  },
+  "konsistenzregeln": [
+    {
+      "regel_id": "REG_KONS_01",
+      "beschreibung": "Jedes gesperrte Modul im Sperrregister muss im Modulregister existieren",
+      "schwere": "KRITISCH",
+      "quelle": ["sperrregister", "modulregister"]
+    },
+    {
+      "regel_id": "REG_KONS_02",
+      "beschreibung": "Jedes Tool im Toolregister muss im Ressourcenregister eine Lizenz haben",
+      "schwere": "HOCH",
+      "quelle": ["toolregister", "lizenzregister"]
+    },
+    {
+      "regel_id": "REG_KONS_03",
+      "beschreibung": "Jedes Modul im Modulregister, das Ressourcen benoetigt, muss diese im Ressourcenregister finden",
+      "schwere": "MITTEL",
+      "quelle": ["modulregister", "ressourcenregister"]
+    },
+    {
+      "regel_id": "REG_KONS_04",
+      "beschreibung": "Update-Register-Eintraege duerfen nicht aelter als 90 Tage sein (Demo-Modus: Warnung)",
+      "schwere": "WARNUNG",
+      "quelle": ["update_register"]
+    },
+    {
+      "regel_id": "REG_KONS_05",
+      "beschreibung": "Quellen-Adapter-Register muss mindestens einen EU-Quelleneintrag haben",
+      "schwere": "MITTEL",
+      "quelle": ["quellen_adapter_register"]
+    }
+  ],
+  "ausgabe": {
+    "json_adapter": "Windows_App/Logs/UI11_REGISTER_ADAPTER.json",
+    "html_register_uebersicht": "Windows_App/Logs/UI11_REGISTER_UEBERSICHT.html",
+    "bericht": "Windows_App/Logs/UI11_REGISTER_LESADAPTER_BERICHT.txt",
+    "konsistenz_log": "Windows_App/Logs/UI11_KONSISTENZ_LOG.json"
+  },
+  "grenzen": {
+    "max_dokumente_demo": 10,
+    "nur_lesend_auf_ui03_ui07b": true,
+    "keine_datenbank_aenderung": true,
+    "keine_dateien_in_frozen_module": true
+  }
+}
