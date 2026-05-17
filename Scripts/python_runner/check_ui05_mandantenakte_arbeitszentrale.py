@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""Prüfdatei für UI05 – Mandantenakte Arbeitszentrale"""
+import json, sys
+from pathlib import Path
+
+ROOT = Path(r"I:\KI_Legal_Project")
+SB = ROOT / "Agentensteuerung" / "UI05_Mandantenakte_Arbeitszentrale"
+CORE = ROOT / "ALIN_Neustart_Core" / "01_Register"
+
+FEHLER = []
+ok = 0
+ges = 0
+
+def t(bez, bed):
+    global ok, ges
+    ges += 1
+    v = bool(bed)
+    print(f"  {'[OK]' if v else '[FEHLER]'} {bez}")
+    if not v:
+        FEHLER.append(bez)
+    else:
+        ok += 1
+
+print("UI05 PRÜFDATEI =======================================")
+
+# Datei-Existenz
+print("\n--- Dateien ---")
+t("Status JSON", (SB / "02_Status" / "UI05_ARBEITSZENTRALE_STATUS.json").exists())
+t("Bericht", (SB / "03_Berichte" / "UI05_BERICHT.txt").exists())
+t("Fehlerbericht", (SB / "05_Fehler" / "UI05_FEHLER.txt").exists())
+t("Manifest", (SB / "07_Manifest" / "UI05_MANIFEST.json").exists())
+t("index.html", (SB / "11_Browseransicht" / "index.html").exists())
+
+# HTML-Inhalt
+print("\n--- HTML-Inhalt ---")
+html = ""
+if (SB / "11_Browseransicht" / "index.html").exists():
+    html = (SB / "11_Browseransicht" / "index.html").read_text(encoding="utf-8")
+
+t("Akten-ID angezeigt", "Akten-ID" in html)
+t("UI03-Status angezeigt", "OCR" in html and "Übersetzung" in html)
+t("UI04b-Status angezeigt", "Plausibilität" in html or "Entscheidung" in html)
+t("Nächste Aktionen", "zulässig" in html.lower() or "Nächste" in html)
+t("Gesperrte Aktionen", "gesperrt" in html.lower() or "🔒" in html)
+t("Sperrregister-Hinweis", "Sperrregister" in html or "gesperrt" in html.lower())
+t("Kein Internet/Cloud", "http://" not in html.lower() and "https://" not in html.lower())
+
+# JSON-Inhalt
+print("\n--- JSON-Inhalt ---")
+status = {}
+if (SB / "02_Status" / "UI05_ARBEITSZENTRALE_STATUS.json").exists():
+    status = json.loads((SB / "02_Status" / "UI05_ARBEITSZENTRALE_STATUS.json").read_text(encoding="utf-8"))
+t("Status hat UI03", "ui03" in status)
+t("Status hat UI04b", "ui04b" in status)
+t("Status hat Aktionen", "naechste_aktionen" in status)
+t("Status hat Sperrregister-Prüfung", status.get("sperrregister_pruefung", False))
+t("Status hat Gesperrt-Flag", "gesperrte_aktionen_blockiert" in status)
+
+# Sperrregister
+print("\n--- Sperrregister ---")
+sperrregister_path = CORE / "sperrregister.json"
+t("Sperrregister existiert", sperrregister_path.exists())
+if sperrregister_path.exists():
+    sperr = json.loads(sperrregister_path.read_text(encoding="utf-8"))
+    eintraege = sperr.get("eintraege", [])
+    t("Sperrregister hat Einträge", len(eintraege) >= 2)
+    ids = {e.get("modul_id") for e in eintraege}
+    t("011_quellenbetreuer... im Sperrregister", "011_quellenbetreuer_fachanwaltsraster_v1" in ids)
+    t("014_source_adapter... im Sperrregister", "014_source_adapter_healthcheck_framework_v1" in ids)
+
+# Grenzen
+print("\n--- Grenzen ---")
+t("Keine DB-Datei", not any(SB.rglob("*.db")) and not any(SB.rglob("*.duckdb")))
+t("Keine neue OCR-Ausgabe", "neue OCR" not in html.lower() or "Keine neue OCR" in html)
+
+print(f"\nBESTANDEN: {ok}/{ges}")
+if FEHLER:
+    print("FEHLER:")
+    for f in FEHLER:
+        print(f"  - {f}")
+
+sys.exit(0 if ok == ges else 1)
