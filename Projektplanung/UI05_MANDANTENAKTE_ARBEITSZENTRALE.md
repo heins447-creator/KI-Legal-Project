@@ -13,6 +13,8 @@ Zentrale Arbeitsseite, die die bisher getrennten Ansichten UI03 (OCR, Übersetzu
 5. **Sekretariat-/Anwalt-Rücklauf sehen** – Entscheidungsstatus aus UI04b
 6. **Nächste zulässige Aktion anzeigen** – Basierend auf Status und Sperrregister
 7. **Keine gesperrten Aktionen auslösen** – Sperrregister wird geprüft
+8. **Navigationsleiste** – Schnellzugriff auf alle UI-Module (UI05c)
+9. **Schaltflächen-Darstellung** – Zulässige Aktionen als Buttons, gesperrte als erklärender Text (UI05c)
 
 ## Architektur
 
@@ -34,27 +36,30 @@ Zentrale Arbeitsseite, die die bisher getrennten Ansichten UI03 (OCR, Übersetzu
 | `03_Berichte/UI05_BERICHT.txt` | Menschenlesbarer Bericht |
 | `05_Fehler/UI05_FEHLER.txt` | Fehler und Warnungen |
 | `07_Manifest/UI05_MANIFEST.json` | Datei-Manifest |
-| `11_Browseransicht/index.html` | HTML-Ansicht |
+| `11_Browseransicht/index.html` | HTML-Ansicht (zentrale Startseite) |
 
 ### Ansichtskarten
 
 - **Aktenstatus** – UI03-Status (OCR, Übersetzung, Freigabe, Parkstatus)
 - **Entscheidungsstatus** – UI04b-Status (Plausibilität, Dokumente, Fehler, Warnungen)
-- **Nächste zulässige Aktionen** – Empfohlene nächste Schritte
-- **Gesperrte Aktionen** – Durch Sperrregister blockierte Aktionen
+- **Navigationsleiste** – Schnellzugriff auf alle UI-Module (UI05c)
+- **Nächste zulässige Aktionen** – Empfohlene nächste Schritte als Buttons (UI05c)
+- **Wartende Aktionen** – Abhängigkeiten (z. B. Übersetzung wartet auf OCR-Freigabe) (UI05b)
+- **Gesperrte Aktionen** – Durch Sperrregister blockierte Aktionen (als `action-disabled`, nicht als Button)
 
 ## Aktionen-Logik
 
-### Zulässige Aktionen (Beispiele)
+### Priorisierung (UI05b)
 
-| Bedingung | Aktion |
-|-----------|--------|
-| OCR fehlerhaft | OCR-Fehler prüfen (UI03-1b) |
-| Übersetzung ausstehend | Übersetzungsarbeitsplatz öffnen (UI03-1c) |
-| Freigabe ausstehend | OCR-Freigabe prüfen (UI03-1d) |
-| Geparkt | Geparkte Aufträge verwalten (UI03-1f) |
-| UI04b fehlerhaft | Entscheidungsmaske korrigieren (UI04b) |
-| UI04b OK | Entscheidung freigeben (UI04b) |
+| Priorität | Bedingung | Aktion | Blockierend |
+|-----------|-----------|--------|-------------|
+| P0 | OCR fehlerhaft | OCR-Fehler prüfen (UI03-1b) | Ja |
+| P1 | Freigabe ausstehend | OCR-Freigabe prüfen (UI03-1d) | Nein |
+| P2 | Übersetzung ausstehend + OCR frei | Übersetzungsarbeitsplatz öffnen (UI03-1c) | Nein |
+| P3 | UI04b fehlerhaft | Entscheidungsmaske korrigieren (UI04b) | Ja |
+| P3 | UI04b Warnung | Entscheidung mit Warnungen prüfen (UI04b) | Nein |
+| P3 | UI04b OK | Entscheidung freigeben (UI04b) | Nein |
+| P4 | Geparkt | Geparkte Aufträge verwalten (UI03-1f) | Nein |
 
 ### Gesperrte Aktionen
 
@@ -62,10 +67,19 @@ Zentrale Arbeitsseite, die die bisher getrennten Ansichten UI03 (OCR, Übersetzu
 |-------|-------|
 | `011_quellenbetreuer_fachanwaltsraster_v1` | DB-ändernd + Online-fähig |
 | `014_source_adapter_healthcheck_framework_v1` | DB-ändernd + Online-fähig |
+| KM21b (Übersetzung) | Fehlende Argos-Sprachpaare |
 
 ## Sperrregister-Integration
 
-UI05 liest das [`sperrregister.json`](ALIN_Neustart_Core/01_Register/sperrregister.json) und zeigt gesperrte Aktionen mit 🔒-Symbol an. Gesperrte Aktionen können nicht ausgelöst werden.
+UI05 liest das [`sperrregister.json`](ALIN_Neustart_Core/01_Register/sperrregister.json) und zeigt gesperrte Aktionen als `action-disabled` (nicht als auslösbaren Button) an. Gesperrte Aktionen können nicht ausgelöst werden.
+
+## Navigation / Bedienbarkeit (UI05c)
+
+- **Navigationsleiste** oben im HTML mit Schnellzugriff auf alle Module
+- **Zulässige Aktionen** werden als `<button class="btn-action">` dargestellt (visuell hervorgehoben, nicht klickbar auslösbar, da statisch)
+- **Blockierende Aktionen** erhalten zusätzlich die Klasse `blockierend` (rot)
+- **Gesperrte Aktionen** werden als `<div class="action-disabled">` dargestellt (grau, opacity 0.7)
+- **Abhängigkeiten** (wartende Aktionen) bleiben als gestrichelte Info-Boxen
 
 ## Grenzen
 
@@ -96,3 +110,5 @@ UI05 liest das [`sperrregister.json`](ALIN_Neustart_Core/01_Register/sperrregist
 | Version | Datum | Änderung |
 |---------|-------|----------|
 | v1 | 2026-05-17 | Erstellerstellung |
+| v1.1 (UI05b) | 2026-05-17 | Priorisierung P0-P4, Blockierend-Flag, Abhängigkeiten-Tracking, CSS-Farbmarkierung |
+| v1.2 (UI05c) | 2026-05-17 | Navigationsleiste, Buttons für zulässige Aktionen, disabled-Style für gesperrte, Selbsttest erweitert |
