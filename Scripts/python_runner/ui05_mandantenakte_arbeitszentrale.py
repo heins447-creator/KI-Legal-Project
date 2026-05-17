@@ -276,16 +276,37 @@ def generate_html(arbeitszentrale, cfg):
     else:
         ui04b_html = '<div class="status-gruppe"><h4>UI04b</h4><p class="hinweis">UI04b Status nicht verfügbar</p></div>'
 
-    # Aktionen
+    # Navigation: Schnellzugriff auf alle Module (als Hinweise, da Dateien evtl. noch nicht existieren)
+    nav_html = '<div class="nav-leiste">'
+    nav_html += '<h4>🧭 Schnellzugriff:</h4>'
+    module = [
+        ("UI03-1g Gesamtansicht", "UI03-1g"),
+        ("UI03-1b OCR-Kontrolle", "UI03-1b"),
+        ("UI03-1c Übersetzung", "UI03-1c"),
+        ("UI03-1d OCR-Freigabe", "UI03-1d"),
+        ("UI03-1e Übergabe", "UI03-1e"),
+        ("UI03-1f Geparkte", "UI03-1f"),
+        ("UI04b Entscheidung", "UI04b"),
+    ]
+    for name, mod in module:
+        aktiv = any(a.get("modul") == mod for a in aktionen.get("zulaessig", []))
+        cls = "nav-link" if aktiv else "nav-link inaktiv"
+        nav_html += f'<span class="{cls}">{name}</span>'
+    nav_html += '</div>'
+
+    # Aktionen als visuelle Schaltflächen (nicht auslösbar, da statisch)
     aktionen_html = '<div class="aktionen-gruppe">'
     aktionen_html += '<h4>Nächste zulässige Aktionen (nach Priorität)</h4>'
     if aktionen.get("zulaessig"):
         for a in aktionen["zulaessig"]:
             prio = a.get("prioritaet", 99)
-            block = " 🔴 BLOCKIEREND" if a.get("blockierend") else ""
+            block = a.get("blockierend", False)
             label = a.get("label", a)
             modul = a.get("modul", "")
-            aktionen_html += f'<div class="aktion zulaessig prio-{prio}"><strong>P{prio}</strong> ▶ {label}{block}</div>'
+            if block:
+                aktionen_html += f'<button class="btn-action blockierend prio-{prio}" title="BLOCKIEREND – vorher beheben"><strong>P{prio}</strong> 🔴 {label}</button>'
+            else:
+                aktionen_html += f'<button class="btn-action prio-{prio}"><strong>P{prio}</strong> ▶ {label}</button>'
     else:
         aktionen_html += '<p class="hinweis">Keine Aktionen verfügbar</p>'
     aktionen_html += '</div>'
@@ -299,13 +320,13 @@ def generate_html(arbeitszentrale, cfg):
             abhaengigkeiten_html += f'<div class="aktion abhaengig">⏳ {ab}</div>'
         abhaengigkeiten_html += '</div>'
 
-    # Gesperrte Aktionen
+    # Gesperrte Aktionen (nur erklärend, nicht als Button)
     gesperrt_html = ""
     if gesperrt:
         gesperrt_html = '<div class="aktionen-gruppe gesperrt">'
         gesperrt_html += '<h4>🔒 Gesperrte Aktionen</h4>'
         for g in gesperrt:
-            gesperrt_html += f'<div class="aktion gesperrt">🔒 {g["aktion"]}<br><small>{g["grund"]}</small></div>'
+            gesperrt_html += f'<div class="action-disabled">🔒 {g["aktion"]}<br><small>{g["grund"]}</small></div>'
         gesperrt_html += '</div>'
 
     css = """:root {
@@ -346,6 +367,15 @@ body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: var(
 .prio-2 { border-left: 4px solid #3b82f6; }
 .prio-3 { border-left: 4px solid #10b981; }
 .prio-4 { border-left: 4px solid #8b5cf6; }
+.nav-leiste { background: var(--card-bg); padding: 12px 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow); margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.nav-leiste h4 { font-size: 0.8rem; color: var(--text-secondary); margin-right: 8px; font-weight: 600; }
+.nav-link { display: inline-block; padding: 6px 14px; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; background: var(--accent-light); color: var(--accent2); border: 1px solid #c7d2fe; cursor: default; }
+.nav-link.inaktiv { background: #f3f4f6; color: #9ca3af; border: 1px solid #e5e7eb; }
+.btn-action { display: inline-block; width: 100%; padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600; background: var(--ok-bg); color: var(--ok); border: 1px solid #86efac; cursor: pointer; text-align: left; margin-bottom: 8px; }
+.btn-action:hover { background: #dcfce7; }
+.btn-action.blockierend { background: var(--danger-bg); color: var(--danger); border: 1px solid #fca5a5; }
+.btn-action.blockierend:hover { background: #fee2e2; }
+.action-disabled { display: inline-block; width: 100%; padding: 10px 14px; border-radius: var(--radius-md); font-size: 0.85rem; background: #f3f4f6; color: #9ca3af; border: 1px solid #e5e7eb; text-align: left; margin-bottom: 8px; opacity: 0.7; }
 .hinweis { color: var(--text-secondary); font-style: italic; font-size: 0.85rem; }
 .detail { font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; }
 footer { text-align: center; padding: 16px; font-size: 0.7rem; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 24px; }
@@ -364,6 +394,7 @@ footer { text-align: center; padding: 16px; font-size: 0.7rem; color: var(--text
 <h1>UI05 – Mandantenakte Arbeitszentrale</h1>
 <div class="akten-id">Akten-ID: {akten_id}</div>
 </div>
+{nav_html}
 <div class="container">
 <div class="karte">
 <h3>📁 Aktenstatus</h3>
@@ -474,6 +505,15 @@ UI04b-Status:
 Nächste zulässige Aktionen (nach Priorität):
 {chr(10).join(['- P' + str(a.get('prioritaet', 99)) + (' [BLOCKIEREND]' if a.get('blockierend') else '') + ' ' + a.get('label', a) for a in aktionen['zulaessig']]) if aktionen['zulaessig'] else '- Keine'}
 
+Navigation (Schnellzugriff auf Module):
+- UI03-1g Gesamtansicht
+- UI03-1b OCR-Kontrolle
+- UI03-1c Übersetzungsarbeitsplatz
+- UI03-1d OCR-Freigabe
+- UI03-1e Übergabe
+- UI03-1f Geparkte Aufträge
+- UI04b Entscheidung
+
 Wartende Aktionen (Abhängigkeiten):
 {chr(10).join(['- ⏳ ' + ab for ab in aktionen.get('abhaengigkeiten', [])]) if aktionen.get('abhaengigkeiten') else '- Keine'}
 
@@ -561,6 +601,12 @@ def selbsttest():
     t("Aktionen im HTML", "zulässig" in html.lower() or "Nächste" in html)
     t("Gesperrte Aktionen im HTML", "gesperrt" in html.lower() or "🔒" in html)
     t("Sperrregister-Hinweis im HTML", "Sperrregister" in html or "gesperrt" in html.lower())
+
+    # UI05c Navigation und Bedienbarkeit
+    t("Navigationsleiste im HTML", "nav-leiste" in html)
+    t("Schnellzugriff im HTML", "Schnellzugriff" in html)
+    t("Buttons für zulässige Aktionen", "btn-action" in html)
+    t("Disabled-Style für gesperrte Aktionen", "action-disabled" in html)
 
     t("Keine DB-Änderung", True)
     t("Kein Internet/Cloud", "http://" not in html.lower() and "https://" not in html.lower())

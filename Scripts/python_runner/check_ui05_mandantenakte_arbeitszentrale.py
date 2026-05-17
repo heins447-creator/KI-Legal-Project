@@ -45,6 +45,14 @@ t("Gesperrte Aktionen", "gesperrt" in html.lower() or "🔒" in html)
 t("Sperrregister-Hinweis", "Sperrregister" in html or "gesperrt" in html.lower())
 t("Kein Internet/Cloud", "http://" not in html.lower() and "https://" not in html.lower())
 
+# Navigation und Bedienbarkeit (UI05c)
+print("\n--- Navigation / Bedienbarkeit ---")
+t("Navigationsleiste im HTML", "nav-leiste" in html)
+t("Schnellzugriff-Label", "Schnellzugriff" in html)
+t("Zulässige Aktionen als Button", "btn-action" in html)
+t("Gesperrte Aktionen nicht als Button", "action-disabled" in html)
+t("Blockierende Aktionen markiert", "blockierend" in html.lower())
+
 # JSON-Inhalt
 print("\n--- JSON-Inhalt ---")
 status = {}
