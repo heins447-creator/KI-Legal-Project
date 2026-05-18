@@ -3331,13 +3331,12 @@
       {
         "stufe_id": "STUFE-026",
         "name": "Gesamtabnahme und Produktionsfreigabe",
-        "beschreibung": "Finale Gesamtabnahme aller Module, Produktionsfreigabe (nur durch menschlichen Entscheid).",
+        "beschreibung": "Vorbereitung zur Gesamtabnahme aller Module. Pruefung, Dokumentation, Bericht. KEINE Produktionsfreigabe. Produktionsfreigabe nur durch menschlichen Entscheid.",
         "phase": "Abschluss",
         "prioritaet": 100,
-        "status": "gesperrt",
+        "status": "offen",
         "abhaengigkeiten": [
           "STUFE-025",
-          "DEPLOY",
           "UI14",
           "KM21b0"
         ],
@@ -3351,9 +3350,9 @@
           "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md"
         ],
         "sperren": [
-          "Menschliche Freigabe erforderlich",
           "Nicht alle Module abgeschlossen",
-          "Keine Beweiswuerdigung durch KI"
+          "Keine Beweiswuerdigung durch KI",
+          "Produktionsfreigabe nur durch menschlichen Entscheid"
         ],
         "tests": [
           "Alle Pruefberichte bestanden",
