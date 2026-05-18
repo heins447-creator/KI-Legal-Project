@@ -1,0 +1,32 @@
+{
+  "modul_id": "CORE-23",
+  "version": "1.0.0",
+  "name": "Arbeitsstart-Zentrale / Projekt-Dashboard",
+  "referenziert": {
+    "arbeitsindex": "Config/core21_arbeitsindex_v1.json",
+    "agentenregeln": "Config/core22_agentenregeln_v1.json",
+    "manifest_core21": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE21_arbeitsindex.json",
+    "manifest_core22": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+    "reste_archiv_sperrplan": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE19_reste_archiv_sperrplan.json",
+    "bericht_core20": "ALIN_Neustart_Core/Reports/CORE20_MASTER_UMBAU_BERICHT.txt",
+    "bericht_core21": "ALIN_Neustart_Core/Reports/CORE21_ARBEITSINDEX_BERICHT.txt",
+    "bericht_core22": "ALIN_Neustart_Core/Reports/CORE22_AGENTEN_EINSTIEG_BERICHT.txt"
+  },
+  "dashboard_felder": [
+    "aktiver_arbeitsbestand",
+    "referenzbereiche",
+    "gesperrte_bereiche",
+    "letzter_migrationsstand",
+    "offene_manuelle_pruefungen",
+    "gesperrte_restdateien",
+    "zulaessige_naechste_arbeiten",
+    "blockierte_arbeiten",
+    "startpunkt_fuer_roo",
+    "status_core_13_bis_22"
+  ],
+  "ausgabe": {
+    "json_manifest": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+    "html_manifest": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.html",
+    "text_bericht": "ALIN_Neustart_Core/Reports/CORE23_PROJEKT_DASHBOARD_BERICHT.txt"
+  }
+}

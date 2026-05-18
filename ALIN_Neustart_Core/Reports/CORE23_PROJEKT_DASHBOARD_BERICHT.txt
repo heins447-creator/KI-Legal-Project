@@ -1,0 +1,102 @@
+======================================================================
+CORE-23 Arbeitsstart-Zentrale / Projekt-Dashboard
+======================================================================
+Version:    1.0.0
+Zeitstempel: 2026-05-18T03:36:03.439463+00:00
+Produktiv freigegeben: False
+
+ZUSAMMENFASSUNG
+----------------------------------------
+Aktiver Arbeitsbestand:   311
+Referenzbestand:          311
+Gesperrte Dateien:        6492
+Archiv-Dateien:           1643
+Dubletten:                59879
+Manuell zu prüfen:        25385
+
+KATEGORIE-VERTEILUNG (Arbeitsbestand)
+----------------------------------------
+  dokumentation: 14
+  register: 11
+  schema_status: 10
+  sonstige: 61
+  planung: 4
+  migration_sql: 1
+  test: 6
+  konfiguration: 19
+  script: 141
+  starter: 44
+
+STARTPUNKT FÜR ROO
+----------------------------------------
+Datei:       ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md
+Bemerkung:   Erste Datei die Roo lesen sollte: Masterauftrag Neustart Core
+
+ERSTE SCHRITTE:
+  1. Config/core21_arbeitsindex_v1.json laden
+  2. ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md lesen
+  3. ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md lesen
+  4. Bereichsstatus prüfen vor jedem Schreibzugriff
+  5. Dashboard (dieses Dokument) als Orientierung nutzen
+
+LETZTER MIGRATIONSSTAND (CORE-19)
+----------------------------------------
+Reste:      0
+Archiv:     1643
+Gesperrt:   6492
+Testreste:  3359
+Laufzeit:   1367
+Dubletten:  59879
+Manuell:    25385
+
+ZULÄSSIGE NÄCHSTE ARBEITEN
+----------------------------------------
+  [OK] Lesen in aktiv/ und referenz/
+  [OK] Schreiben in aktiv/ (nur wenn bereich_status=='aktiv')
+  [OK] Berichte in Reports/ schreiben
+  [OK] Manifeste in 08_Migration/09_Manifest/ schreiben
+  [OK] Pläne in 08_Migration/01_Plaene/ schreiben
+  [OK] Start mit ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md
+
+BLOCKIERTE ARBEITEN
+----------------------------------------
+  [X] Löschen im Altbestand
+  [X] Verschieben im Altbestand
+  [X] Umbenennen im Altbestand
+  [X] Schreiben in referenz/ oder gesperrt/
+  [X] Echte Mandantendaten an externe Modelle
+  [X] API-Schlüssel in Git
+  [X] Schreiben ohne Prüfung von bereich_status()
+
+STATUS CORE-13 BIS CORE-22
+----------------------------------------
+  CORE-13 | Altbestand-Inventur: abgeschlossen | Inventurdaten vorhanden
+  CORE-14 | CORE13-Auswertung: fehlerhaft | Auswertung erstellt
+  CORE-15 | Migrationsplan: fehlerhaft | Migrationsplan vorhanden
+  CORE-16 | Dry-Run-Validierung: vorhanden | Dry-Run-Ergebnis vorhanden
+  CORE-17 | Kopierende Migration: fehlerhaft | Manifest kopierte Dateien vorhanden
+  CORE-18 | Neustruktur-Validierung: vorhanden | Validierungsergebnis vorhanden
+  CORE-19 | Reste-Archiv-Sperrplan: abgeschlossen | Reste=0, Archiv=1643, Gesperrt=6492
+  CORE-20 | Master-Umbau-Bericht: abgeschlossen | Master-Umbau dokumentiert
+  CORE-21 | Arbeitsindex: abgeschlossen | Arbeitsbestand=311, Referenz=311
+  CORE-22 | Agenten-Einstieg: abgeschlossen | Agentenregeln manifestiert
+
+OFFENE MANUELLE PRÜFUNGEN
+----------------------------------------
+Gesamt: 25385
+Beispiele:
+  - .aider.chat.history.md
+  - .aider.conf.yml
+  - .aiderignore
+  - .gitignore
+  - AGENTS.md
+
+AUSGABEDATEIEN
+----------------------------------------
+JSON:   I:\KI_Legal_Project\ALIN_Neustart_Core\08_Migration\09_Manifest\CORE23_dashboard.json
+HTML:   I:\KI_Legal_Project\ALIN_Neustart_Core\08_Migration\09_Manifest\CORE23_dashboard.html
+BERICHT: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE23_PROJEKT_DASHBOARD_BERICHT.txt
+
+======================================================================
+ENDE DES BERICHTS
+======================================================================

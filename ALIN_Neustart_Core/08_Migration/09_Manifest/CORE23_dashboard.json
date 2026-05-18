@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "modul_id": "CORE-23",
+    "name": "Arbeitsstart-Zentrale / Projekt-Dashboard",
+    "version": "1.0.0",
+    "zeitstempel": "2026-05-18T03:36:03.439463+00:00",
+    "produktiv_freigegeben": false,
+    "nur_aggregierend": true
+  },
+  "zusammenfassung": {
+    "aktiver_arbeitsbestand_anzahl": 311,
+    "referenzbestand_anzahl": 311,
+    "gesperrte_dateien_gesamt": 6492,
+    "archiv_dateien": 1643,
+    "dubletten": 59879,
+    "manuell_zu_pruefen": 25385,
+    "kategorien": {
+      "dokumentation": 14,
+      "register": 11,
+      "schema_status": 10,
+      "sonstige": 61,
+      "planung": 4,
+      "migration_sql": 1,
+      "test": 6,
+      "konfiguration": 19,
+      "script": 141,
+      "starter": 44
+    }
+  },
+  "aktiver_arbeitsbestand": {
+    "beschreibung": "Dateien und Bereiche mit Schreib-/Leserecht",
+    "bereiche": [
+      "ALIN_Neustart_Core/00_Dokumentation/",
+      "ALIN_Neustart_Core/01_Register/",
+      "ALIN_Neustart_Core/02_Statusmodell/",
+      "ALIN_Neustart_Core/03_Schnittstellen/",
+      "ALIN_Neustart_Core/04_Healthcheck/",
+      "ALIN_Neustart_Core/05_Resolver/",
+      "ALIN_Neustart_Core/06_Audit_Protokoll/",
+      "ALIN_Neustart_Core/10_Update_Ueberwachung/",
+      "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/",
+      "ALIN_Neustart_Core/13_Anforderungen_Abnahme/",
+      "ALIN_Neustart_Core/14_Architekturentscheidungen/",
+      "ALIN_Neustart_Core/15_Teststrategie/",
+      "ALIN_Neustart_Core/23_Import_Export/",
+      "ALIN_Neustart_Core/24_Konfigurationsprofile/",
+      "ALIN_Neustart_Core/Config/",
+      "ALIN_Neustart_Core/Scripts/",
+      "ALIN_Neustart_Core/Reports/",
+      "Projektplanung/",
+      "Scripts/python_runner/",
+      "Config/",
+      "Database/Migrations/",
+      "Windows_App/"
+    ],
+    "anzahl_dateien": 311,
+    "kategorie_verteilung": {
+      "dokumentation": 14,
+      "register": 11,
+      "schema_status": 10,
+      "sonstige": 61,
+      "planung": 4,
+      "migration_sql": 1,
+      "test": 6,
+      "konfiguration": 19,
+      "script": 141,
+      "starter": 44
+    }
+  },
+  "referenzbereiche": {
+    "beschreibung": "Nur lesen, nicht schreiben",
+    "bereiche": [
+      "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+      "ALIN_Neustart_Core/08_Migration/01_Plaene/",
+      "ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/",
+      "ALIN_Neustart_Core/08_Migration/09_Manifest/",
+      "Agentensteuerung/",
+      "07_Berichte/",
+      "10_Tool_Inventar/"
+    ]
+  },
+  "gesperrte_bereiche": {
+    "beschreibung": "Ablehnen oder nur mit Freigabe",
+    "bereiche": [
+      "gesperrt",
+      "manuell",
+      "archiv",
+      "dublette",
+      "testrest",
+      "laufzeit"
+    ],
+    "gesperrte_dateien": 6492
+  },
+  "letzter_migrationsstand": {
+    "beschreibung": "Aus CORE-19 Reste-Archiv-Sperrplan",
+    "reste": 0,
+    "archiv": 1643,
+    "gesperrt": 6492,
+    "testreste": 3359,
+    "laufzeit": 1367,
+    "dubletten": 59879,
+    "manuell": 25385
+  },
+  "offene_manuelle_pruefungen": {
+    "beschreibung": "Dateien die manuell geprüft werden müssen",
+    "anzahl": 25385,
+    "beispiele": [
+      ".aider.chat.history.md",
+      ".aider.conf.yml",
+      ".aiderignore",
+      ".gitignore",
+      "AGENTS.md"
+    ]
+  },
+  "gesperrte_restdateien": {
+    "beschreibung": "Dateien die dauerhaft gesperrt sind",
+    "anzahl": 6492,
+    "beispiele": [
+      "Agentensteuerung/09_Analysebericht_Validator/01_Skript/analysebericht_validator.py",
+      "ALIN_Neustart_Core/Scripts/alin_core04_update_register_befuellen.py",
+      "Config/ui07_betriebsvorbereitung_v1.json",
+      "Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json",
+      "Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json"
+    ]
+  },
+  "zulaessige_naechste_arbeiten": {
+    "beschreibung": "Aus CORE-22 Agentenregeln",
+    "arbeiten": [
+      "Lesen in aktiv/ und referenz/",
+      "Schreiben in aktiv/ (nur wenn bereich_status=='aktiv')",
+      "Berichte in Reports/ schreiben",
+      "Manifeste in 08_Migration/09_Manifest/ schreiben",
+      "Pläne in 08_Migration/01_Plaene/ schreiben",
+      "Start mit ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md"
+    ]
+  },
+  "blockierte_arbeiten": {
+    "beschreibung": "Aus CORE-22 verbotene Operationen",
+    "arbeiten": [
+      "Löschen im Altbestand",
+      "Verschieben im Altbestand",
+      "Umbenennen im Altbestand",
+      "Schreiben in referenz/ oder gesperrt/",
+      "Echte Mandantendaten an externe Modelle",
+      "API-Schlüssel in Git",
+      "Schreiben ohne Prüfung von bereich_status()"
+    ]
+  },
+  "startpunkt_fuer_roo": {
+    "datei": "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+    "bemerkung": "Erste Datei die Roo lesen sollte: Masterauftrag Neustart Core",
+    "alternativen": [
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md"
+    ],
+    "erste_schritte": [
+      "1. Config/core21_arbeitsindex_v1.json laden",
+      "2. ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md lesen",
+      "3. ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md lesen",
+      "4. Bereichsstatus prüfen vor jedem Schreibzugriff",
+      "5. Dashboard (dieses Dokument) als Orientierung nutzen"
+    ]
+  },
+  "status_core_13_bis_22": {
+    "CORE-13": {
+      "titel": "Altbestand-Inventur",
+      "status": "abgeschlossen",
+      "quelle": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json",
+      "bemerkung": "Inventurdaten vorhanden"
+    },
+    "CORE-14": {
+      "titel": "CORE13-Auswertung",
+      "status": "fehlerhaft",
+      "quelle": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE14_auswertung.json",
+      "bemerkung": "Auswertung erstellt"
+    },
+    "CORE-15": {
+      "titel": "Migrationsplan",
+      "status": "fehlerhaft",
+      "quelle": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE15_migrationsplan.json",
+      "bemerkung": "Migrationsplan vorhanden"
+    },
+    "CORE-16": {
+      "titel": "Dry-Run-Validierung",
+      "status": "vorhanden",
+      "quelle": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE16_dry_run_ergebnis.json",
+      "bemerkung": "Dry-Run-Ergebnis vorhanden"
+    },
+    "CORE-17": {
+      "titel": "Kopierende Migration",
+      "status": "fehlerhaft",
+      "quelle": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE17_kopierte_dateien_manifest.json",
+      "bemerkung": "Manifest kopierte Dateien vorhanden"
+    },
+    "CORE-18": {
+      "titel": "Neustruktur-Validierung",
+      "status": "vorhanden",
+      "quelle": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE18_neustruktur_validierung.json",
+      "bemerkung": "Validierungsergebnis vorhanden"
+    },
+    "CORE-19": {
+      "titel": "Reste-Archiv-Sperrplan",
+      "status": "abgeschlossen",
+      "quelle": "ALIN_Neustart_Core/08_Migration/01_Plaene/CORE19_reste_archiv_sperrplan.json",
+      "bemerkung": "Reste=0, Archiv=1643, Gesperrt=6492"
+    },
+    "CORE-20": {
+      "titel": "Master-Umbau-Bericht",
+      "status": "abgeschlossen",
+      "quelle": "ALIN_Neustart_Core/Reports/CORE20_MASTER_UMBAU_BERICHT.txt",
+      "bemerkung": "Master-Umbau dokumentiert"
+    },
+    "CORE-21": {
+      "titel": "Arbeitsindex",
+      "status": "abgeschlossen",
+      "quelle": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE21_arbeitsindex.json",
+      "bemerkung": "Arbeitsbestand=311, Referenz=311"
+    },
+    "CORE-22": {
+      "titel": "Agenten-Einstieg",
+      "status": "abgeschlossen",
+      "quelle": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+      "bemerkung": "Agentenregeln manifestiert"
+    }
+  }
+}
