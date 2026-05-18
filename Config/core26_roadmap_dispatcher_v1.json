@@ -1,0 +1,92 @@
+{
+  "modul_id": "CORE-26",
+  "version": "1.0.0",
+  "name": "Roadmap-Dispatcher und Selbstfortsetzung",
+  "zeitstempel": "2026-05-18T06:10:00+02:00",
+  "referenziert": {
+    "roadmap": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+    "dashboard": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+    "arbeitsindex": "Config/core21_arbeitsindex_v1.json",
+    "agentenregeln": "Config/core22_agentenregeln_v1.json",
+    "entwicklungsmanager": "Config/core24_entwicklungsmanager_v1.json",
+    "queue": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json",
+    "reparatur_log": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_reparatur_log.json"
+  },
+  "ausfuehrungsmodus": {
+    "standard": "execute_next",
+    "erlaubte_modi": ["plan_only", "execute_next"],
+    "beschreibung": "plan_only = nur naechsten Auftrag ermitteln; execute_next = Auftrag ermitteln und in Queue schreiben"
+  },
+  "dispatcher_regeln": {
+    "status_datei": "ALIN_Neustart_Core/09_Automanager/CORE26_dispatcher_status.json",
+    "auftrags_datei": "ALIN_Neustart_Core/09_Automanager/CORE26_naechster_auftrag.json",
+    "bericht_datei": "ALIN_Neustart_Core/Reports/CORE26_ROADMAP_DISPATCHER_BERICHT.txt",
+    "max_blockade_meldungen": 50,
+    "automatisch_naechsten_ableiten": true
+  },
+  "sicherheitsgrenzen": [
+    "Keine Loeschung",
+    "Keine Verschiebung",
+    "Keine Umbenennung alter Dateien",
+    "Keine DB-Aenderung",
+    "Keine Originalaenderung",
+    "Keine echten Mandantendaten",
+    "Keine Cloud",
+    "Kein Internet",
+    "Keine API-Nutzung",
+    "Keine Installation",
+    "Keine Produktivfreigabe"
+  ],
+  "pfad_pruefung": {
+    "funktion": "bereich_status(pfad)",
+    "ergebnisse": ["aktiv", "referenz", "gesperrt", "unbekannt"],
+    "schreibregel": {
+      "aktiv": "erlaubt",
+      "referenz": "nur_lesen",
+      "gesperrt": "verboten",
+      "unbekannt": "nachfragen"
+    }
+  },
+  "ausfuehrbarkeitskriterien": {
+    "abhaengigkeiten_erfuellt": "alle deps haben status 'abgeschlossen'",
+    "nicht_gesperrt": "stufe nicht als 'gesperrt' markiert",
+    "kein_gesperrter_pfad": "pruefe gegen core21_arbeitsindex_v1.json -> gesperrt-Bereiche",
+    "keine_produktivfreigabe": "stufe verlangt keine Produktivfreigabe",
+    "keine_echten_daten": "stufe verlangt keine echten Daten",
+    "keine_cloud_internet_api": "stufe verlangt keine Cloud/Internet/API",
+    "keine_db_aenderung": "stufe verlangt keine DB-Aenderung ohne Freigabe",
+    "innerhalb_aktiver_bereiche": "stufe liegt innerhalb aktiver Arbeitsbereiche"
+  },
+  "auftragsstruktur": {
+    "ziel": ["stufe_id", "name", "beschreibung"],
+    "eingaben": "Liste",
+    "ausgaben": "Liste",
+    "erlaubte_pfade": "aus aktivem Arbeitsindex",
+    "gesperrte_pfade": "aus gesperrtem Arbeitsindex",
+    "rote_linien": "was verboten ist",
+    "testpflichten": ["py_compile", "Check", "Runner"],
+    "berichtspflichten": "Bericht in Reports/",
+    "commit_regel": "nur bei Erfolg",
+    "folgeentscheidung": "naechste Stufe nach dieser"
+  },
+  "python_toolchain": {
+    "python_exe": "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+    "py_compile_flag": "-m py_compile",
+    "runner_verzeichnis": "Scripts/python_runner/",
+    "check_prefix": "check_"
+  },
+  "git_regeln": {
+    "erlaubte_befehle": [
+      "git status",
+      "git diff",
+      "git diff --stat",
+      "git diff --name-only",
+      "git add",
+      "git commit",
+      "git log -1 --oneline"
+    ],
+    "commit_nachricht_prefix": "CORE-26",
+    "commit_nur_bei_erfolg": true,
+    "nur_auftragsbezogene_dateien": true
+  }
+}
