@@ -1,5 +1,5 @@
 {
-  "auftrags_id": "AUFTRAG-STUFE-020-2026-05-18T103500+0000",
+  "auftrags_id": "AUFTRAG-STUFE-020-2026-05-18T111956+0000",
   "stufe_id": "STUFE-020",
   "name": "Datenschutz und Mandatsgeheimnis",
   "beschreibung": "Datenschutz-Markierungen umsetzen, Mandatsgeheimnis-Regeln pruefen, Exportregeln definieren.",
@@ -74,6 +74,6 @@
     "Mandatsgeheimnis-Regeln geprueft",
     "Exportregeln definiert"
   ],
-  "erzeugt_am": "2026-05-18T10:35:00+0000",
+  "erzeugt_am": "2026-05-18T11:19:56+0000",
   "modul": "CORE-26"
 }

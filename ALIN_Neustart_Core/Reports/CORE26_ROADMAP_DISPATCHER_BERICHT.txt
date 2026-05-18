@@ -1,11 +1,11 @@
 ================================================================================
 CORE-26: ROADMAP-DISPATCHER BERICHT
 ================================================================================
-Zeitstempel: 2026-05-18T10:35:00+0000
+Zeitstempel: 2026-05-18T11:19:56+0000
 Modul: CORE-26 - Roadmap-Dispatcher und Selbstfortsetzung
 Version: 1.0.0
 
-Commit-Hash: 452d5901310946d772b36f5f9c021a2745ea91b9
+Commit-Hash: 1666748e50b305e2fa1f1f8e2b13806e0207b53e
 
 ROADMAP-STATUS:
   Roadmap gelesen: JA (CORE-25)
@@ -104,183 +104,13 @@ ABGESCHLOSSENE STUFEN:
   - VZ01
   Gesamt: 90 Stufen abgeschlossen
 
-BLOCKIERTE STUFEN:
-  - STUFE-000: Masterauftrag und Grundmodell
-      Grund: bereits abgeschlossen
-  - STUFE-001: Register befuellen
-      Grund: bereits abgeschlossen
-  - STUFE-002: Statusmodell implementieren
-      Grund: bereits abgeschlossen
-  - STUFE-003: Schnittstellenvertraege finalisieren
-      Grund: bereits abgeschlossen
-  - STUFE-004: Healthcheck implementieren
-      Grund: bereits abgeschlossen
-  - STUFE-005: Resolver implementieren
-      Grund: bereits abgeschlossen
-  - STUFE-006: Altbestand inventarisieren
-      Grund: bereits abgeschlossen
-  - STUFE-007: Posteingang anbinden
-      Grund: bereits abgeschlossen
-  - STUFE-008: OCR-Strecke anbinden
-      Grund: bereits abgeschlossen
-  - STUFE-009: UI anbinden
-      Grund: bereits abgeschlossen
-  - STUFE-010: Quellen und Skills anbinden
-      Grund: bereits abgeschlossen
-  - CORE-10a: Findings Priorisierung und Reparaturplan
-      Grund: bereits abgeschlossen
-  - CORE-10b: Ressourcenluecken Klaerung
-      Grund: bereits abgeschlossen
-  - CORE-10c: SQL Modulnamen bereinigen
-      Grund: bereits abgeschlossen
-  - CORE-10d: Schnittstellenbereiche nachtragen
-      Grund: bereits abgeschlossen
-  - CORE-10e: UI01 Abhaengigkeit Klaerung
-      Grund: bereits abgeschlossen
-  - CORE-10f: Platzhalter verfeinern
-      Grund: bereits abgeschlossen
-  - CORE-10g: Reviewlisten dokumentieren
-      Grund: bereits abgeschlossen
-  - STUFE-011: Windows-App-Architektur finalisieren
-      Grund: bereits abgeschlossen
-  - STUFE-012: UI-Grundlagen implementieren
-      Grund: bereits abgeschlossen
-  - STUFE-013: Altbestand inventarisiert und inventur
-      Grund: bereits abgeschlossen
-  - STUFE-014: CORE13-Auswertung und Sperrplan
-      Grund: bereits abgeschlossen
-  - STUFE-015: Migrationsplan und kopierende Migration
-      Grund: bereits abgeschlossen
-  - STUFE-016: Neustruktur-Validierung und Reste-Archiv
-      Grund: bereits abgeschlossen
-  - STUFE-017: Arbeitsindex und Agenten-Einstieg
-      Grund: bereits abgeschlossen
-  - STUFE-018: Projekt-Dashboard
-      Grund: bereits abgeschlossen
-  - STUFE-019: Rechte und Rollen
-      Grund: bereits abgeschlossen
-  - STUFE-021: Arbeitsindex und Agentenregeln
-      Grund: bereits abgeschlossen
-  - STUFE-022: Agenten-Einstieg
-      Grund: bereits abgeschlossen
-  - STUFE-023: Projekt-Dashboard
-      Grund: bereits abgeschlossen
-  - STUFE-024: Autonomer Entwicklungsmanager
-      Grund: bereits abgeschlossen
-  - UI01: Anwaltsansicht
-      Grund: bereits abgeschlossen
-  - UI02: Tuerschwelle und Bestandsabgleich
-      Grund: bereits abgeschlossen
-  - UI02c: Freigabe Dropdowns und Notizen
-      Grund: bereits abgeschlossen
-  - UI03_0: Uebergabe Mandantenakte
-      Grund: bereits abgeschlossen
-  - UI03_1: Anwalts Dreiansicht
-      Grund: bereits abgeschlossen
-  - UI03_1b: OCR Uebersetzungskontrolle
-      Grund: bereits abgeschlossen
-  - UI03_1c: Uebersetzungsarbeitsplatz
-      Grund: bereits abgeschlossen
-  - UI03_1d: OCR Freigabeablauf
-      Grund: bereits abgeschlossen
-  - UI03_1e: Uebergabe Freigabe
-      Grund: bereits abgeschlossen
-  - UI03_1f: Geparkte Auftraege
-      Grund: bereits abgeschlossen
-  - UI03_1g: Gesamtansicht
-      Grund: bereits abgeschlossen
-  - UI04: Durchstich Sekretariat-Anwalt-Ruecklauf
-      Grund: bereits abgeschlossen
-  - UI04b: Logikpruefung Entscheidung
-      Grund: bereits abgeschlossen
-  - UI05: Mandantenakte Arbeitszentrale
-      Grund: bereits abgeschlossen
-  - UI06: Musterlauf Gesamtkette
-      Grund: bereits abgeschlossen
-  - UI06b: Fehlerpfad Pruefung
-      Grund: bereits abgeschlossen
-  - UI07: Betriebsvorbereitung
-      Grund: bereits abgeschlossen
-  - UI07b: Gesamtfreeze Demo Betriebsstrecke
-      Grund: bereits abgeschlossen
-  - UI08: Posteingang Importstrecke
-      Grund: bereits abgeschlossen
-  - UI08b: Fehlerpfad Pruefung Posteingang
-      Grund: bereits abgeschlossen
-  - UI08c: Fehlerpfad Sanierungsplan Posteingang
-      Grund: bereits abgeschlossen
-  - UI09: Zentrale Grundschalter Profilfelder
-      Grund: bereits abgeschlossen
-  - UI10: Profil Lesadapter
-      Grund: bereits abgeschlossen
-  - UI11: Register Lesadapter
-      Grund: bereits abgeschlossen
-  - UI12: Master Adapter
-      Grund: bereits abgeschlossen
-  - UI13: Abnahme Entscheidungsuebersicht
-      Grund: bereits abgeschlossen
-  - UI14: Ausfuehrungs-Nachlaufzentrale
-      Grund: bereits abgeschlossen
-  - KM12: Originalabbildung
-      Grund: bereits abgeschlossen
-  - KM12b: Uebergrosse Arbeitsabbildungen
-      Grund: bereits abgeschlossen
-  - KM13: OCR-Pipeline
-      Grund: bereits abgeschlossen
-  - KM13b: Tesseract Sprachpaket Abgleich
-      Grund: bereits abgeschlossen
-  - KM14: Maschinenformat Fundstellenstruktur
-      Grund: bereits abgeschlossen
-  - KM15: Arbeitsuebersetzung Fundstellenbindung
-      Grund: bereits abgeschlossen
-  - KM16: Sprachrouting vor OCR
-      Grund: bereits abgeschlossen
-  - KM17: Sprachrouting OCR Integration
-      Grund: bereits abgeschlossen
-  - KM17c: Einzelseite KM12b OCR
-      Grund: bereits abgeschlossen
-  - KM18: OCR Ergebnisdiagnose
-      Grund: bereits abgeschlossen
-  - KM19: OCR Gesamtkette synchronisieren
-      Grund: bereits abgeschlossen
-  - KM19b: OCRBetreuer Korrektur
-      Grund: bereits abgeschlossen
-  - KM20: Konsolidierung
-      Grund: bereits abgeschlossen
-  - KM20b: Bereinigung
-      Grund: bereits abgeschlossen
-  - KM21: Translation Environment
-      Grund: bereits abgeschlossen
-  - KM21b0: ARGOS Modellbereitstellung
-      Grund: bereits abgeschlossen
-  - POST01: Posteingang Intake
-      Grund: bereits abgeschlossen
-  - POST02: Posteingang Schlusskontrolle
-      Grund: bereits abgeschlossen
-  - POST03: Posteingang Endabnahme
-      Grund: bereits abgeschlossen
-  - VZ01: Vorzimmer Kommunikationsparameter
-      Grund: bereits abgeschlossen
-  - Q01: Quellenbetreuer Fachanwaltsraster
-      Grund: bereits abgeschlossen
-  - Q02: Quellenkandidaten EU SE Official Sources
-      Grund: bereits abgeschlossen
-  - Q03: Source Adapter Healthcheck Framework
-      Grund: bereits abgeschlossen
-  - AG01: Agentenbearbeitung Grundmodul
-      Grund: bereits abgeschlossen
-  - AG02: Agent Dokumentart erkennen
-      Grund: bereits abgeschlossen
-  - AG03: Agent Sprache Uebersetzung
-      Grund: bereits abgeschlossen
-  - AG04: Agent Sachverhaltsbezug
-      Grund: bereits abgeschlossen
+NICHT-AUSFUEHRBARE STUFEN (offen oder blockiert):
   - DEPLOY: Deployment und Betrieb
       Grund: Abhaengigkeit nicht erfuellt: WINAPP
       Grund: Abhaengigkeit nicht erfuellt: STUFE-020
   - STUFE-026: Gesamtabnahme und Produktionsfreigabe
       Grund: Stufe ist gesperrt
-  Gesamt: 87 Stufen blockiert
+  Gesamt: 2 Stufen nicht ausfuehrbar
 
 NAECHSTE AUSGEWAEHLTE STUFE:
   Stufe-ID: STUFE-020
@@ -289,7 +119,7 @@ NAECHSTE AUSGEWAEHLTE STUFE:
   Prioritaet: 20
 
 ERZEUGTER AUFTRAG:
-  Auftrags-ID: AUFTRAG-STUFE-020-2026-05-18T103500+0000
+  Auftrags-ID: AUFTRAG-STUFE-020-2026-05-18T111956+0000
   Stufe: STUFE-020
   Name: Datenschutz und Mandatsgeheimnis
   Folgeentscheidung: STUFE-024
@@ -311,6 +141,6 @@ FORTSETZUNG:
 ================================================================================
 ENDE BERICHT
 ================================================================================
-[2026-05-18T10:35:00+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
-[2026-05-18T10:35:00+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
-[2026-05-18T10:35:00+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
+[2026-05-18T11:19:56+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
+[2026-05-18T11:19:56+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
+[2026-05-18T11:19:56+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
