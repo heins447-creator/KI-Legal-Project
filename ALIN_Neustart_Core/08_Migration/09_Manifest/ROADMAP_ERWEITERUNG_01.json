@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "modul_id": "ROADMAP-EXT-01",
+    "name": "Fachliche Ausbau-Roadmap Erweiterung 01",
+    "version": "1.0.0",
+    "zeitstempel_erstellung": "2026-05-18T20:19:00+0000",
+    "quellen": [
+      "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap_v2.json",
+      "Projektplanung/ROADMAP_ERWEITERUNG_01.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md"
+    ],
+    "ziel_format": "CORE-25 v2 kompatibel",
+    "anzahl_stufen": 6,
+    "id_schema": "EXT-XXX fuer Erweiterungsstufen",
+    "voraussetzung": "STUFE-026 abgeschlossen"
+  },
+  "roadmap": {
+    "stufen": [
+      {
+        "stufe_id": "EXT-001",
+        "name": "DuckDB-Schema fuer lokale Datenhaltung",
+        "beschreibung": "Einfuehrung von DuckDB als lokale, dateibasierte analytische Datenbank. Schemas fuer Dokumente, OCR-Ergebnisse, Uebersetzungen, Terminologie und Vektorembeddings.",
+        "phase": "Phase A: Datenfundament",
+        "prioritaet": 101,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "STUFE-026",
+          "STUFE-001",
+          "UI14"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/modulregister.json",
+          "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_ocr_an_akte.schema.json",
+          "Config/core21_arbeitsindex_v1.json"
+        ],
+        "ausgaben": [
+          "Database/Migrations/100_duckdb_schema_ext001.sql",
+          "Scripts/python_runner/ext001_duckdb_schema.py",
+          "Scripts/python_runner/check_ext001_duckdb_schema.py",
+          "Scripts/EXT001_DUCKDB_SCHEMA_AUTOLAUF.ps1",
+          "Config/ext001_duckdb_schema_v1.json",
+          "Projektplanung/EXT001_DUCKDB_SCHEMA.md",
+          "ALIN_Neustart_Core/Reports/EXT001_DUCKDB_SCHEMA_BERICHT.txt"
+        ],
+        "sperren": [
+          "Kein Cloud-DB-Service",
+          "Keine echten Mandantendaten",
+          "Keine Remote-Verbindungen",
+          "Nur lokale .duckdb-Dateien",
+          "Schema-Migration nur nach Backup"
+        ],
+        "tests": [
+          "DuckDB-Schema validiert",
+          "Migration idempotent ausfuehrbar",
+          "Pruefdatei bestanden",
+          "Python-Runner erfolgreich",
+          "PowerShell-Starter funktioniert",
+          "Lesender und schreibender Zugriff getestet",
+          "Keine Datenlecks bei Testdaten"
+        ],
+        "erlaubte_naechste_module": [
+          "EXT-002",
+          "EXT-003",
+          "EXT-004"
+        ],
+        "blockierte_module": [
+          "EXT-005",
+          "EXT-006"
+        ],
+        "fertigstellungskriterien": [
+          "Migration angelegt und getestet",
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
+          "Konfiguration unter Config abgelegt",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben"
+        ]
+      },
+      {
+        "stufe_id": "EXT-002",
+        "name": "Verbesserte OCR mit PaddleOCR und Layout-Analyse",
+        "beschreibung": "Erweiterung der OCR-Strecke um PaddleOCR zur Verbesserung bei komplexen Layouts. Layout-Analyse fuer strukturierte Extraktion von Tabellen, Spalten und Fussnoten.",
+        "phase": "Phase B: OCR-Verbesserung",
+        "prioritaet": 102,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "EXT-001",
+          "KM21b0",
+          "STUFE-008"
+        ],
+        "eingaben": [
+          "Config/ocr_pipeline_v1.json",
+          "Config/km17_sprachrouting_ocr_v1.json",
+          "Config/eu_official_ocr_languages_v1.json",
+          "Database/Migrations/100_duckdb_schema_ext001.sql"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ext002_paddleocr_layout.py",
+          "Scripts/python_runner/check_ext002_paddleocr_layout.py",
+          "Scripts/EXT002_PADDLEOCR_LAYOUT_AUTOLAUF.ps1",
+          "Config/ext002_paddleocr_layout_v1.json",
+          "Projektplanung/EXT002_PADDLEOCR_LAYOUT.md",
+          "ALIN_Neustart_Core/Reports/EXT002_PADDLEOCR_LAYOUT_BERICHT.txt"
+        ],
+        "sperren": [
+          "Kein Cloud-OCR-Service",
+          "Keine Internetverbindung waehrend OCR",
+          "Nur lokale PaddleOCR-Modelle",
+          "Keine echten Mandantendokumente fuer Training",
+          "Nur Test-PDFs mit synthetischen oder frei lizenzierten Inhalten"
+        ],
+        "tests": [
+          "PaddleOCR-Installation offline-faehig",
+          "Layout-Analyse erkennt Tabellen und Spalten",
+          "OCR-Ergebnisse in DuckDB gespeichert",
+          "Pruefdatei bestanden",
+          "Vergleich mit Tesseract-Baseline dokumentiert",
+          "Python-Runner und PowerShell-Starter funktionieren"
+        ],
+        "erlaubte_naechste_module": [
+          "EXT-005"
+        ],
+        "blockierte_module": [
+          "EXT-006"
+        ],
+        "fertigstellungskriterien": [
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
+          "Konfiguration unter Config abgelegt",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben",
+          "Performance-Vergleich dokumentiert"
+        ]
+      },
+      {
+        "stufe_id": "EXT-003",
+        "name": "EU-Terminologiepakete fuer Rechtssicherheit",
+        "beschreibung": "Aufbau eines lokalen EU-Terminologie-Registers fuer rechtssichere Uebersetzungen. Enthaelt EuroVoc-Konzepte, EU-Verordnungsbegriffe und validierte Uebersetzungsaequivalente.",
+        "phase": "Phase C: Rechtswissen",
+        "prioritaet": 103,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "EXT-001",
+          "Q02",
+          "KM21"
+        ],
+        "eingaben": [
+          "Config/eu_official_ocr_languages_v1.json",
+          "ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+          "ALIN_Neustart_Core/09_Toolbibliothek/01_Download_Quellen/ALIN_OFFIZIELLE_DOWNLOADQUELLEN.md",
+          "Database/Migrations/100_duckdb_schema_ext001.sql"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ext003_eu_terminologie.py",
+          "Scripts/python_runner/check_ext003_eu_terminologie.py",
+          "Scripts/EXT003_EU_TERMINOLOGIE_AUTOLAUF.ps1",
+          "Config/ext003_eu_terminologie_v1.json",
+          "Projektplanung/EXT003_EU_TERMINOLOGIE.md",
+          "ALIN_Neustart_Core/Reports/EXT003_EU_TERMINOLOGIE_BERICHT.txt"
+        ],
+        "sperren": [
+          "Kein Cloud-Uebersetzungsdienst",
+          "Keine Online-Terminologie-Abfragen",
+          "EU-Daten nur aus lokalen Quellen",
+          "Keine echten Mandantendaten fuer Validierung",
+          "Lizenzpruefung aller EU-Daten erforderlich"
+        ],
+        "tests": [
+          "Terminologie-JSON validiert und vollstaendig",
+          "DuckDB-Import aller Begriffe erfolgreich",
+          "Abfrage nach Begriff und Sprachpaar funktioniert",
+          "Lizenzregister-Eintrag fuer EU-Daten vorhanden",
+          "Pruefdatei bestanden",
+          "Offline-Operation bestaetigt"
+        ],
+        "erlaubte_naechste_module": [
+          "EXT-004"
+        ],
+        "blockierte_module": [
+          "EXT-005",
+          "EXT-006"
+        ],
+        "fertigstellungskriterien": [
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
+          "Konfiguration unter Config abgelegt",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben",
+          "Lizenzkompliance bestaetigt"
+        ]
+      },
+      {
+        "stufe_id": "EXT-004",
+        "name": "FastAPI-Backend fuer lokale API",
+        "beschreibung": "Lokales FastAPI-Backend als zentrale API-Schicht. Endpunkte fuer Dokumentenverwaltung, OCR-Trigger, Uebersetzungsanfragen, Terminologie-Abfragen und semantische Suche. Ausschliesslich localhost.",
+        "phase": "Phase D: API-Schicht",
+        "prioritaet": 104,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "EXT-001",
+          "EXT-003",
+          "STUFE-019"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json",
+          "Config/ext001_duckdb_schema_v1.json",
+          "Config/ext003_eu_terminologie_v1.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ext004_fastapi_backend.py",
+          "Scripts/python_runner/check_ext004_fastapi_backend.py",
+          "Scripts/EXT004_FASTAPI_BACKEND_AUTOLAUF.ps1",
+          "Config/ext004_fastapi_backend_v1.json",
+          "Projektplanung/EXT004_FASTAPI_BACKEND.md",
+          "ALIN_Neustart_Core/Reports/EXT004_FASTAPI_BACKEND_BERICHT.txt"
+        ],
+        "sperren": [
+          "Kein externer API-Zugriff",
+          "Nur 127.0.0.1 / localhost erlaubt",
+          "Keine externe Authentifizierung",
+          "Lokale Autorisierung basierend auf STUFE-019",
+          "Keine echten Mandantendaten ueber Endpunkte",
+          "Kein HTTPS-Zwang im lokalen Entwicklungsmodus"
+        ],
+        "tests": [
+          "FastAPI-Server startet lokal erfolgreich",
+          "Alle Endpunkte liefern erwartete Schemas",
+          "DuckDB-Verbindung ueber API funktioniert",
+          "Autorisierung fuer verschiedene Rollen getestet",
+          "Pruefdatei bestanden",
+          "Python-Runner und PowerShell-Starter funktionieren",
+          "Keine ausgehenden Netzwerkverbindungen"
+        ],
+        "erlaubte_naechste_module": [
+          "EXT-005",
+          "EXT-006"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
+          "Konfiguration unter Config abgelegt",
+          "API-Schema-Dokumentation vorhanden",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben",
+          "Netzwerk-Isolation bestaetigt"
+        ]
+      },
+      {
+        "stufe_id": "EXT-005",
+        "name": "Semantische Suche in Dokumenten",
+        "beschreibung": "Lokale semantische Suche ueber Dokumenteninhalte mit lokalen Embedding-Modellen. Speicherung in DuckDB oder FAISS-Indizierung. Inhaltliche Suche ueber OCR-Texte und Uebersetzungen.",
+        "phase": "Phase E: KI-Suche",
+        "prioritaet": 105,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "EXT-001",
+          "EXT-002",
+          "EXT-004"
+        ],
+        "eingaben": [
+          "Config/ext002_paddleocr_layout_v1.json",
+          "Config/ext004_fastapi_backend_v1.json",
+          "ALIN_Neustart_Core/01_Register/toolregister.json",
+          "Database/Migrations/100_duckdb_schema_ext001.sql"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ext005_semantische_suche.py",
+          "Scripts/python_runner/check_ext005_semantische_suche.py",
+          "Scripts/EXT005_SEMANTISCHE_SUCHE_AUTOLAUF.ps1",
+          "Config/ext005_semantische_suche_v1.json",
+          "Projektplanung/EXT005_SEMANTISCHE_SUCHE.md",
+          "ALIN_Neustart_Core/Reports/EXT005_SEMANTISCHE_SUCHE_BERICHT.txt"
+        ],
+        "sperren": [
+          "Kein Cloud-Embedding-Service",
+          "Keine Vektor-Cloud-Datenbank",
+          "Nur lokale Modelle aus Toolregister",
+          "Keine echten Mandantendokumente fuer Indexierung",
+          "Embedding-Berechnung offline und lokal"
+        ],
+        "tests": [
+          "Embedding-Modell laedt und arbeitet offline",
+          "Vektorindizierung funktioniert lokal",
+          "Semantische Abfrage liefert relevante Ergebnisse",
+          "Integration ueber FastAPI-Endpunkt getestet",
+          "Pruefdatei bestanden",
+          "Python-Runner und PowerShell-Starter funktionieren",
+          "Speicherbedarf dokumentiert"
+        ],
+        "erlaubte_naechste_module": [
+          "EXT-006"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
+          "Konfiguration unter Config abgelegt",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben",
+          "Embedding-Performance und Speicherbedarf dokumentiert"
+        ]
+      },
+      {
+        "stufe_id": "EXT-006",
+        "name": "WPF-Frontend fuer Windows-App",
+        "beschreibung": "Neuentwicklung des Windows-Frontends auf Basis von WPF. Ersetzt die WinUI-3-App. Bietet Dreiansicht, Posteingang, OCR-Kontrolle, semantische Suche und Rechtswissen-Integration. Kommuniziert ausschliesslich mit lokalem FastAPI-Backend.",
+        "phase": "Phase F: UI-Neuaufbau",
+        "prioritaet": 106,
+        "status": "geplant",
+        "abhaengigkeiten": [
+          "EXT-004",
+          "EXT-005",
+          "WINAPP",
+          "STUFE-011"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
+          "Config/ext004_fastapi_backend_v1.json",
+          "Config/ext005_semantische_suche_v1.json",
+          "Windows_App/App/KI_Legal_WindowsApp.csproj"
+        ],
+        "ausgaben": [
+          "Windows_App_WPF/App/KI_Legal_WPF.csproj",
+          "Windows_App_WPF/App/App.xaml",
+          "Windows_App_WPF/App/MainWindow.xaml",
+          "Windows_App_WPF/Scripts/Build_App.ps1",
+          "Windows_App_WPF/Scripts/Start_App.ps1",
+          "Config/ext006_wpf_frontend_v1.json",
+          "Projektplanung/EXT006_WPF_FRONTEND.md",
+          "ALIN_Neustart_Core/Reports/EXT006_WPF_FRONTEND_BERICHT.txt",
+          "ALIN_Neustart_Core/08_Migration/08_Archiv_Vorschlag/WINAPP_ARCHIVIERUNG.json"
+        ],
+        "sperren": [
+          "Kein Deployment der WPF-App",
+          "Keine Produktivfreigabe",
+          "Alte WinUI-3-App muss vor Freigabe archiviert werden",
+          "Keine echten Mandantendaten im UI-Test",
+          "Keine externen UI-Bibliotheken ohne Lizenzpruefung",
+          "App kommuniziert nur mit localhost"
+        ],
+        "tests": [
+          "WPF-App kompiliert und startet lokal",
+          "Dreiansicht funktioniert",
+          "Posteingangsbearbeitung ueber FastAPI getestet",
+          "Semantische Suche integriert und getestet",
+          "Rechtswissen-Panel funktioniert",
+          "Pruefdatei bestanden",
+          "Build-Skript funktioniert",
+          "Start-Skript funktioniert",
+          "Alte App wurde archiviert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [
+          "DEPLOY"
+        ],
+        "fertigstellungskriterien": [
+          "WPF-Projekt kompilierbar",
+          "Build- und Start-Skripte vorhanden",
+          "Konfiguration unter Config abgelegt",
+          "Dokumentation unter Projektplanung erstellt",
+          "Bericht unter Reports geschrieben",
+          "Archivierung der alten WinUI-3-App dokumentiert",
+          "Lizenzregister aktualisiert"
+        ]
+      }
+    ],
+    "phases": [
+      "Phase A: Datenfundament",
+      "Phase B: OCR-Verbesserung",
+      "Phase C: Rechtswissen",
+      "Phase D: API-Schicht",
+      "Phase E: KI-Suche",
+      "Phase F: UI-Neuaufbau"
+    ]
+  },
+  "validierung": {
+    "zyklische_abhaengigkeiten": false,
+    "alle_stufen_eindeutige_id": true,
+    "alle_abhaengigkeiten_aufloesbar": true,
+    "pruefzeitstempel": "2026-05-18T20:19:00+0000",
+    "ids_normalisiert": true,
+    "vorgaenger_roadmap": "CORE25_gesamt_roadmap_v2.json"
+  }
+}
