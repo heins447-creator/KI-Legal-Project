@@ -1,0 +1,77 @@
+On branch agent/005_AGENT_HANDOFF_TEST_HARNESS_V1-2026-05-11_00-58-23
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json
+	modified:   ALIN_Neustart_Core/Reports/CORE24_ENTWICKLUNGSMANAGER_BERICHT.txt
+	modified:   ALIN_Neustart_Core/Reports/CORE25_GESAMT_ROADMAP_BERICHT.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_git_status_nach.txt
+	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_git_status_vor.txt
+	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_git_status_nach.txt
+	ALIN_Neustart_Core/Reports/CORE26_ROADMAP_DISPATCHER_BERICHT.txt
+	ALIN_Neustart_Core/Scripts/__pycache__/
+	Config/ai_coding_agent_aider_runtime_v1.json
+	Config/alin_dss_config.json
+	Config/alin_posteingang_config.json
+	Config/arbeitsuebersetzung_fundstellenbindung_v1.json
+	Config/core12_backup_rollback_konzept_v1.json
+	Config/core26_roadmap_dispatcher_v1.json
+	Config/km12b_uebergrosse_arbeitsabbildungen_v1.json
+	Config/km17_sprachrouting_ocr_v1.json
+	Config/km17c_einzelseite_km12b_ocr_v1.json
+	Config/km18_ocr_ergebnisdiagnose_v1.json
+	Config/km19_ocr_gesamtkette_synchronisieren_v1.json
+	Config/km19_ocrbetreuer_korrektur_v1.json
+	Config/km21b0_argos_modellbereitstellung_v1.json
+	Config/maschinenformat_fundstellenstruktur_v1.json
+	Config/ocr_pipeline_v1.json
+	Config/originalabbildung_v1.json
+	Config/post01_0_bestandsaufnahme_posteingang_v1.json
+	Config/posteingang_aktenmaterial_freigabeliste_v1.json
+	Config/source_adapter_policy_v1.json
+	Config/sprachrouting_vor_ocr_v1.json
+	Config/tesseract_sprachpaket_abgleich_v1.json
+	Config/ui02_0_bestandsabgleich_tuerschwelle_v1.json
+	Config/ui02_tuerschwelle_bau_v1.json
+	Config/ui02c_freigabe_dropdowns_notizen_v1.json
+	Config/ui03_1_anwalts_dreiansicht_v1.json
+	Config/ui03_1c_uebersetzungsarbeitsplatz_v1.json
+	Config/ui03_1d_ocr_freigabeablauf_v1.json
+	Config/ui03_1e_uebergabe_freigabe_v1.json
+	Config/ui03_1f_geparkte_auftraege_v1.json
+	Config/ui03_1g_gesamtansicht_v1.json
+	Config/ui04_durchstich_sekretariat_anwalt_ruecklauf_v1.json
+	Config/ui04b_logikpruefung_entscheidung_v1.json
+	Config/ui05_mandantenakte_arbeitszentrale_v1.json
+	Config/ui06_musterlauf_gesamtkette_v1.json
+	Config/ui12_master_adapter_v1.json
+	Config/ui13_abnahme_entscheidungsuebersicht_v1.json
+	Config/ui14_ausfuehrungs_nachlaufzentrale_v1.json
+	Projektplanung/CORE26_ROADMAP_DISPATCHER.md
+	Projektplanung/KM12b_UEBERGROSSE_ARBEITSABBILDUNGEN.md
+	Projektplanung/KM13b_TESSERACT_SPRACHPAKET_ABGLEICH.md
+	Projektplanung/KM14_DOKUMENTATION.md
+	Projektplanung/KM16_SPRACHROUTING_VOR_OCR.md
+	Projektplanung/KM17_SPRACHROUTING_OCR_INTEGRATION.md
+	Projektplanung/KM17c_EINZELSEITE_KM12b_OCR.md
+	Projektplanung/KM18_OCR_ERGEBNISDIAGNOSE.md
+	Projektplanung/KM19_OCRBETREUER_KORREKTUR.md
+	Projektplanung/KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN.md
+	Projektplanung/UI02_0_BESTANDSABGLEICH_DOKUMENTATION.md
+	Projektplanung/UI02_TUERSCHWELLENVORLAGE_DOKU.md
+	Projektplanung/UI02c_FREIGABE_DROPDOWNS_NOTIZEN.md
+	Projektplanung/UI03_0_UEBERGABE_MANDANTENAKTE.md
+	Projektplanung/UI03_1_ANWALTS_DREIANSICHT.md
+	Projektplanung/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG.md
+	Scripts/CORE26_ROADMAP_DISPATCHER_AUTOLAUF.ps1
+	Scripts/_temp_ui12_commit.ps1
+	Scripts/_temp_ui13_commit.ps1
+	Scripts/_temp_ui14_commit.ps1
+	Scripts/python_runner/check_core26_roadmap_dispatcher.py
+	Scripts/python_runner/core26_roadmap_dispatcher.py
+	Scripts/python_runner/post01_0_bestandsaufnahme_posteingang_v1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")

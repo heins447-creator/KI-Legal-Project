@@ -1,0 +1,79 @@
+{
+  "auftrags_id": "AUFTRAG-CORE-19-2026-05-18T064146+0000",
+  "stufe_id": "CORE-19",
+  "name": "Rechte und Rollen",
+  "beschreibung": "Rollenmodell implementieren, Berechtigungen pruefen, Freigaberegeln definieren.",
+  "eingaben": [
+    "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+    "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+    "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+  ],
+  "ausgaben": [
+    "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+    "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+    "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+  ],
+  "erlaubte_pfade": [
+    "ALIN_Neustart_Core/00_Dokumentation/",
+    "ALIN_Neustart_Core/01_Register/",
+    "ALIN_Neustart_Core/02_Statusmodell/",
+    "ALIN_Neustart_Core/03_Schnittstellen/",
+    "ALIN_Neustart_Core/04_Healthcheck/",
+    "ALIN_Neustart_Core/05_Resolver/",
+    "ALIN_Neustart_Core/06_Audit_Protokoll/",
+    "ALIN_Neustart_Core/10_Update_Ueberwachung/",
+    "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/",
+    "ALIN_Neustart_Core/13_Anforderungen_Abnahme/",
+    "ALIN_Neustart_Core/14_Architekturentscheidungen/",
+    "ALIN_Neustart_Core/15_Teststrategie/",
+    "ALIN_Neustart_Core/23_Import_Export/",
+    "ALIN_Neustart_Core/24_Konfigurationsprofile/",
+    "ALIN_Neustart_Core/Config/",
+    "ALIN_Neustart_Core/Scripts/",
+    "ALIN_Neustart_Core/Reports/",
+    "Projektplanung/",
+    "Scripts/python_runner/",
+    "Config/",
+    "Database/Migrations/",
+    "Windows_App/"
+  ],
+  "gesperrte_pfade": [
+    "gesperrt",
+    "manuell",
+    "archiv",
+    "dublette",
+    "testrest",
+    "laufzeit"
+  ],
+  "rote_linien": [
+    "Keine Loeschung",
+    "Keine Verschiebung",
+    "Keine Umbenennung alter Dateien",
+    "Keine DB-Aenderung",
+    "Keine Originalaenderung",
+    "Keine echten Mandantendaten",
+    "Keine Cloud",
+    "Kein Internet",
+    "Keine API-Nutzung",
+    "Keine Installation",
+    "Keine Produktivfreigabe"
+  ],
+  "testpflichten": [
+    "py_compile auf allen neuen Python-Dateien",
+    "Check-Datei erfolgreich ausfuehren",
+    "Runner erfolgreich ausfuehren",
+    "Bericht pruefen"
+  ],
+  "berichtspflichten": [
+    "ALIN_Neustart_Core/Reports/CORE_19_BERICHT.txt"
+  ],
+  "commit_regel": "Nur bei Erfolg, Prefix: CORE-26",
+  "folgeentscheidung": "CORE-20",
+  "tests_aus_roadmap": [
+    "Rollenmodell validiert",
+    "Berechtigungs-Schema geprueft",
+    "Freigaberegeln definiert"
+  ],
+  "erzeugt_am": "2026-05-18T06:41:46+0000",
+  "modul": "CORE-26"
+}
