@@ -1,0 +1,27 @@
+{
+  "manifest_id": "EXT-003-TERMINOLOGIE",
+  "erzeugt": "2026-05-18T20:53:25+0000",
+  "anzahl_eintraege": 4,
+  "kategorien": [
+    "verordnung",
+    "richtlinie",
+    "vertrag",
+    "berufsrecht"
+  ],
+  "sprachen": [
+    "de",
+    "en",
+    "fr"
+  ],
+  "quellen": [
+    "Art. 288 AEUV",
+    "AEUV",
+    "BRAO § 43a"
+  ],
+  "sicherheit": {
+    "cloud_verboten": true,
+    "online_abfragen_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_quellen": true
+  }
+}

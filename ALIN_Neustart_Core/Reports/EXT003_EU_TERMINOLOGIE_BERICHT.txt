@@ -1,0 +1,11 @@
+EXT-003 – EU-Terminologiepaket Bericht
+Erzeugt: 2026-05-18T20:53:25+0000
+Datenbank: I:\KI_Legal_Project\Database\DuckDB\alin_local.duckdb
+Manifest: I:\KI_Legal_Project\ALIN_Neustart_Core\18_Terminologie\EU_TERMINOLOGIE_MANIFEST.json
+
+Eingefügte Einträge: 3
+Gesamtanzahl: 4
+Kategorien: verordnung, richtlinie, vertrag, berufsrecht
+Sprachen: de, en, fr
+
+Status: ERFOLGREICH

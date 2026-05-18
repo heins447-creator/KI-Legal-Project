@@ -1,0 +1,18 @@
+{
+  "modul_id": "EXT-003",
+  "name": "EU-Terminologiepakete fuer Rechtssicherheit",
+  "version": "1.0.0",
+  "manifest_id": "EXT-003-TERMINOLOGIE",
+  "manifest_pfad": "ALIN_Neustart_Core/18_Terminologie/EU_TERMINOLOGIE_MANIFEST.json",
+  "datenbank": "Database/DuckDB/alin_local.duckdb",
+  "tabelle": "alin_ext001.terminologie",
+  "kategorien": ["verordnung", "richtlinie", "vertrag", "berufsrecht"],
+  "sprachen": ["de", "en", "fr"],
+  "mindest_anzahl_eintraege": 4,
+  "sicherheit": {
+    "cloud_verboten": true,
+    "online_abfragen_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_quellen": true
+  }
+}
