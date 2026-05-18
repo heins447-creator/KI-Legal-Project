@@ -1,0 +1,52 @@
+{
+  "modul_id": "CORE-20",
+  "stufe_id": "STUFE-020",
+  "name": "Datenschutz und Mandatsgeheimnis",
+  "version": "1.0.0",
+  "zeitstempel_erstellung": "2026-05-18T11:34:00+02:00",
+  "beschreibung": "Technische und organisatorische Grundschicht fuer Mandatsgeheimnis, Datenschutz, Zugriff nach Rollen, Protokollierung, Datenminimierung, Zweckbindung und Sperre externer Dienste.",
+  "ziele": [
+    "Mandatsgeheimnis-Regeln definieren",
+    "Exportregeln mit Freigabe und Protokollierung festlegen",
+    "Datenschutz-Markierungen als Schema definieren",
+    "Keine echten Mandantendaten verwenden",
+    "Keine Cloud, kein Internet, keine externen APIs"
+  ],
+  "eingaben": [
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
+  ],
+  "ausgaben": [
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json",
+    "ALIN_Neustart_Core/Reports/CORE20_DATENSCHUTZ_MANDATSGEHEIMNIS_BERICHT.txt"
+  ],
+  "sicherheitsgrenzen": [
+    "Keine Loeschung",
+    "Keine Verschiebung",
+    "Keine Umbenennung alter Dateien",
+    "Keine DB-Aenderung",
+    "Keine Originalaenderung",
+    "Keine echten Mandantendaten",
+    "Keine Cloud",
+    "Kein Internet",
+    "Keine API-Nutzung",
+    "Keine Installation",
+    "Keine Produktivfreigabe"
+  ],
+  "tests": [
+    "Schema ist gueltiges JSON",
+    "Schema enthaelt alle Pflichtfelder",
+    "Schema enthaelt alle erwarteten Markierungen",
+    "Mandatsgeheimnis-Regeln sind strukturiert",
+    "Exportregeln sind strukturiert"
+  ],
+  "python_toolchain": {
+    "python_exe": "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+    "runner": "Scripts/python_runner/core20_datenschutz_mandatsgeheimnis.py",
+    "check": "Scripts/python_runner/check_core20_datenschutz_mandatsgeheimnis.py"
+  },
+  "autolauf": "Scripts/CORE20_DATENSCHUTZ_MANDATSGEHEIMNIS_AUTOLAUF.ps1"
+}
