@@ -1,0 +1,12 @@
+EXT-002 – PaddleOCR / Layout-Analyse Bericht
+Erzeugt: 2026-05-18T21:07:42+0000
+Datenbank: I:\KI_Legal_Project\Database\DuckDB\alin_local.duckdb
+PaddleOCR verfuegbar: False
+
+Synthetische OCR-Ergebnisse eingefuegt: 1
+Block-Typen: kopfzeile, text, tabelle, spalte, fussnote, fusszeile
+
+Installations-Skript: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Toolbibliothek\01_Download_Quellen\PADDLEOCR_INSTALL.ps1
+Layout-Stub: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Toolbibliothek\02_PaddleOCR_Stub\alin_paddleocr_layout.py
+
+Status: ERFOLGREICH (Infrastruktur vorbereitet)
