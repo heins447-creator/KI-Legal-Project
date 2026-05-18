@@ -47,6 +47,7 @@ DASHBOARD_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest
 ARBEITSINDEX_PATH = BASE_DIR / "Config" / "core21_arbeitsindex_v1.json"
 AGENTENREGELN_PATH = BASE_DIR / "Config" / "core22_agentenregeln_v1.json"
 QUEUE_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE24_auftragsqueue.json"
+MAPPING_PATH = BASE_DIR / "ALIN_Neustart_Core" / "09_Automanager" / "CORE27_stufe_zu_core_mapping.json"
 REPARATUR_LOG_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE24_reparatur_log.json"
 
 # Ausgabedateien
@@ -88,6 +89,55 @@ def speichere_json(pfad: Path, daten: dict) -> None:
     pfad.parent.mkdir(parents=True, exist_ok=True)
     with open(pfad, "w", encoding="utf-8") as f:
         json.dump(daten, f, ensure_ascii=False, indent=2)
+
+def lade_mapping_tabelle() -> dict:
+    """
+    Liest die CORE27 Mapping-Tabelle STUFE-XXX -> CORE-YY.
+    """
+    if not MAPPING_PATH.exists():
+        return {}
+    try:
+        return lade_json(MAPPING_PATH)
+    except Exception:
+        return {}
+
+
+def bestimme_technische_modul_id(stufe_id: str, mapping: dict) -> str:
+    """
+    Bestimmt die technische Modul-ID fuer eine Stufe.
+    - Wenn Stufe kein STUFE-Praefix hat, wird sie unveraendert zurueckgegeben
+    - Wenn Stufe STUFE-XXX ist, pruefe Mapping-Tabelle
+    - Falls Mapping existiert, verwende gemappte CORE-Nummer
+    - Falls kein Mapping existiert, bestimme naechste freie CORE-Nummer
+    """
+    if not stufe_id.startswith("STUFE-"):
+        return stufe_id
+    
+    eintraege = mapping.get("mapping_eintraege", [])
+    for eintrag in eintraege:
+        if eintrag.get("stufe_id") == stufe_id:
+            return eintrag.get("technische_modul_id", stufe_id)
+    
+    # Kein Mapping gefunden - bestimme naechste freie Nummer
+    # Sammle alle bekannten CORE-Nummern
+    existierende = set()
+    for eintrag in eintraege:
+        tid = eintrag.get("technische_modul_id", "")
+        match = re.match(r"CORE-(\d+)", tid)
+        if match:
+            existierende.add(int(match.group(1)))
+    
+    # Fuege auch die festen technischen Module hinzu
+    for tm in ["CORE-14", "CORE-15", "CORE-16", "CORE-17", "CORE-18",
+               "CORE-19", "CORE-20", "CORE-21", "CORE-22", "CORE-23",
+               "CORE-24", "CORE-25", "CORE-26", "CORE-27"]:
+        match = re.match(r"CORE-(\d+)", tm)
+        if match:
+            existierende.add(int(match.group(1)))
+    
+    naechste = max(existierende) + 1 if existierende else 27
+    return f"CORE-{naechste}"
+
 
 
 def run_cmd(cmd: list[str], cwd: Path = BASE_DIR, timeout: int = 120) -> tuple[int, str, str]:
@@ -484,7 +534,7 @@ def erzeuge_auftrag(
 
     # Berichtspflichten
     berichtspflichten = [
-        f"ALIN_Neustart_Core/Reports/{sid.replace('-', '_')}_BERICHT.txt"
+        f"ALIN_Neustart_Core/Reports/{technische_id.replace('-', '_')}_BERICHT.txt"
     ]
 
     auftrag = {

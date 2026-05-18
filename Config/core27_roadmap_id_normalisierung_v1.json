@@ -1,0 +1,77 @@
+{
+  "modul_id": "CORE-27",
+  "version": "1.0.0",
+  "name": "Roadmap-ID-Normalisierung und Kollisionsvermeidung",
+  "zeitstempel": "2026-05-18T07:00:00+02:00",
+  "referenziert": {
+    "roadmap_original": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+    "roadmap_bereinigt": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap_v2.json",
+    "mapping_tabelle": "ALIN_Neustart_Core/09_Automanager/CORE27_stufe_zu_core_mapping.json",
+    "dispatcher": "Scripts/python_runner/core26_roadmap_dispatcher.py",
+    "dispatcher_config": "Config/core26_roadmap_dispatcher_v1.json"
+  },
+  "namensraum_regeln": {
+    "technische_module": "CORE-XX (z.B. CORE-14, CORE-19, CORE-26, CORE-27)",
+    "fachliche_roadmap_stufen": "STUFE-XXX (3-stellig, zero-padded, z.B. STUFE-019, STUFE-020)",
+    "ui_strecken": "UIxx (beibehalten)",
+    "km_strecken": "KMxx (beibehalten)",
+    "post_strecken": "POSTxx (beibehalten)",
+    "vorzimmer_strecken": "VZxx (beibehalten)",
+    "quellen_strecken": "Qxx (beibehalten)",
+    "agenten_strecken": "AGxx (beibehalten)",
+    "winapp": "WINAPP (beibehalten)",
+    "deploy": "DEPLOY (beibehalten)"
+  },
+  "existierende_technische_module": [
+    "CORE-14",
+    "CORE-15",
+    "CORE-16",
+    "CORE-17",
+    "CORE-18",
+    "CORE-19",
+    "CORE-20",
+    "CORE-21",
+    "CORE-22",
+    "CORE-23",
+    "CORE-24",
+    "CORE-25",
+    "CORE-26"
+  ],
+  "mapping_regeln": {
+    "stufe_zu_core": "STUFE-XXX wird bei Bedarf auf naechste freie CORE-Nummer gemappt",
+    "naechste_freie_core_nummer": "max(existierende_technische_module) + 1",
+    "beispiel": {
+      "STUFE-019": "CORE-27",
+      "STUFE-020": "CORE-28",
+      "STUFE-021": "CORE-29"
+    }
+  },
+  "dispatcher_anpassung": {
+    "stufe_id_erkennung": "Pruefe ob stufe_id mit 'STUFE-' beginnt",
+    "mapping_pruefung": "Falls STUFE-XXX, suche in Mapping-Tabelle nach zugeordneter CORE-Nummer",
+    "neue_core_nummer": "Falls kein Mapping existiert, bestimme naechste freie CORE-Nummer und trage in Mapping ein",
+    "auftrags_id": "Verwende technische Modul-ID (CORE-YY), nicht Stufen-ID (STUFE-XXX)"
+  },
+  "sicherheitsgrenzen": [
+    "Keine Loeschung bestehender Dateien",
+    "Keine Aenderung an existierenden technischen Modulen",
+    "Roadmap-Original bleibt erhalten",
+    "Bereinigte Roadmap wird als neue Datei (_v2.json) geschrieben",
+    "Git-Commit nur bei Erfolg"
+  ],
+  "ausgaben": {
+    "bericht": "ALIN_Neustart_Core/Reports/CORE27_ROADMAP_ID_NORMALISIERUNG_BERICHT.txt",
+    "git_status_vor": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE27_git_status_vor.txt",
+    "git_status_nach": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE27_git_status_nach.txt"
+  },
+  "python_toolchain": {
+    "python_exe": "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+    "py_compile_flag": "-m py_compile",
+    "runner_verzeichnis": "Scripts/python_runner/",
+    "check_prefix": "check_"
+  },
+  "git_regeln": {
+    "commit_nachricht": "CORE-27: Roadmap-IDs normalisiert und Kollisionen bereinigt",
+    "commit_nur_bei_erfolg": true
+  }
+}

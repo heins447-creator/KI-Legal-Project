@@ -1,0 +1,78 @@
+================================================================================
+CORE-27: ROADMAP-ID-NORMALISIERUNG BERICHT
+================================================================================
+Zeitstempel: 2026-05-18T07:52:58+0000
+Modul: CORE-27 - Roadmap-ID-Normalisierung und Kollisionsvermeidung
+Version: 1.0.0
+
+ZUSAMMENFASSUNG:
+  Roadmap-Original: CORE25_gesamt_roadmap.json
+  Roadmap-Bereinigt: CORE25_gesamt_roadmap_v2.json
+  Mapping-Tabelle: CORE27_stufe_zu_core_mapping.json
+
+STATISTIK:
+  Anzahl Stufen gesamt: 90
+  Ersetzte Stufen-IDs: 27
+  Aktualisierte Abhaengigkeiten: 57
+  Aktualisierte erlaubte Module: 85
+  Aktualisierte blockierte Module: 34
+  Aktualisierte Sperren-Texte: 10
+  ID-Mapping-Eintraege: 27
+
+MAPPING-TABELLE (STUFE-XXX -> CORE-YY):
+  STUFE-014 (CORE13-Auswertung und Sperrplan) -> CORE-27
+      Urspruenglich: CORE-14, Kollidiert mit: CORE-14
+  STUFE-015 (Migrationsplan und kopierende Migration) -> CORE-28
+      Urspruenglich: CORE-15, Kollidiert mit: CORE-15
+  STUFE-016 (Neustruktur-Validierung und Reste-Archiv) -> CORE-29
+      Urspruenglich: CORE-16, Kollidiert mit: CORE-16
+  STUFE-017 (Arbeitsindex und Agenten-Einstieg) -> CORE-30
+      Urspruenglich: CORE-17, Kollidiert mit: CORE-17
+  STUFE-018 (Projekt-Dashboard) -> CORE-31
+      Urspruenglich: CORE-18, Kollidiert mit: CORE-18
+  STUFE-019 (Rechte und Rollen) -> CORE-32
+      Urspruenglich: CORE-19, Kollidiert mit: CORE-19
+  STUFE-020 (Datenschutz und Mandatsgeheimnis) -> CORE-33
+      Urspruenglich: CORE-20, Kollidiert mit: CORE-20
+  STUFE-021 (Arbeitsindex und Agentenregeln) -> CORE-34
+      Urspruenglich: CORE-21, Kollidiert mit: CORE-21
+  STUFE-022 (Agenten-Einstieg) -> CORE-35
+      Urspruenglich: CORE-22, Kollidiert mit: CORE-22
+  STUFE-023 (Projekt-Dashboard) -> CORE-36
+      Urspruenglich: CORE-23, Kollidiert mit: CORE-23
+  STUFE-024 (Autonomer Entwicklungsmanager) -> CORE-37
+      Urspruenglich: CORE-24, Kollidiert mit: CORE-24
+  STUFE-025 (Programmierbare Gesamt-Roadmap) -> CORE-38
+      Urspruenglich: CORE-25, Kollidiert mit: CORE-25
+  STUFE-026 (Gesamtabnahme und Produktionsfreigabe) -> CORE-39
+      Urspruenglich: CORE-26, Kollidiert mit: CORE-26
+
+  Anzahl Kollisionen: 13
+  Naechste freie CORE-Nummer: 40
+
+KOLLISIONSPRUEFUNG:
+  Status: BESTANDEN - Keine Kollisionen gefunden
+
+DISPATCHER-ANPASSUNG:
+  Status: ERFOLG
+  Meldung: Dispatcher aktualisiert
+
+NAMENSRAUM-TRENNUNG:
+  Technische Module: CORE-XX (z.B. CORE-14, CORE-19, CORE-26, CORE-27)
+  Fachliche Roadmap-Stufen: STUFE-XXX (z.B. STUFE-019, STUFE-020)
+  UI-Strecken: UIxx (beibehalten)
+  KM-Strecken: KMxx (beibehalten)
+  POST-Strecken: POSTxx (beibehalten)
+  VZ-Strecken: VZxx (beibehalten)
+  Q-Strecken: Qxx (beibehalten)
+  AG-Strecken: AGxx (beibehalten)
+
+AUSGABEDATEIEN:
+  - I:\KI_Legal_Project\ALIN_Neustart_Core\08_Migration\09_Manifest\CORE25_gesamt_roadmap_v2.json
+  - I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE27_stufe_zu_core_mapping.json
+  - I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE27_ROADMAP_ID_NORMALISIERUNG_BERICHT.txt
+
+================================================================================
+ENDE BERICHT
+================================================================================
+[2026-05-18T07:52:58+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE27_ROADMAP_ID_NORMALISIERUNG_BERICHT.txt
