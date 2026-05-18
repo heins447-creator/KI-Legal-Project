@@ -1,18 +1,17 @@
 {
-  "auftrags_id": "AUFTRAG-WINAPP-2026-05-18T130019+0000",
-  "stufe_id": "WINAPP",
-  "name": "Windows App Build und Release",
-  "beschreibung": "Windows-App kompilieren, Release-Checkliste, Changelog, Rollback-Plan.",
+  "auftrags_id": "AUFTRAG-DEPLOY-2026-05-18T131146+0000",
+  "stufe_id": "DEPLOY",
+  "name": "Deployment und Betrieb",
+  "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung.",
   "eingaben": [
-    "Windows_App/App/KI_Legal_WindowsApp.csproj",
-    "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
-    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
-    "ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md"
+    "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+    "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md",
+    "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json"
   ],
   "ausgaben": [
-    "Windows_App/Scripts/Build_App.ps1",
-    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
-    "ALIN_Neustart_Core/16_Build_Release/VERSION.json"
+    "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+    "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json",
+    "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_KANZLEI_PC.json"
   ],
   "erlaubte_pfade": [
     "ALIN_Neustart_Core/00_Dokumentation/",
@@ -66,15 +65,15 @@
     "Bericht pruefen"
   ],
   "berichtspflichten": [
-    "ALIN_Neustart_Core/Reports/WINAPP_BERICHT.txt"
+    "ALIN_Neustart_Core/Reports/DEPLOY_BERICHT.txt"
   ],
   "commit_regel": "Nur bei Erfolg, Prefix: CORE-26",
-  "folgeentscheidung": "DEPLOY",
+  "folgeentscheidung": null,
   "tests_aus_roadmap": [
-    "Build erfolgreich",
-    "Release-Checkliste abgearbeitet",
-    "Rollback-Plan aktuell"
+    "Deployment-Pruefpunkte abgearbeitet",
+    "Offline-Profil getestet",
+    "Gerichtslaptop-Profil validiert"
   ],
-  "erzeugt_am": "2026-05-18T13:00:19+0000",
+  "erzeugt_am": "2026-05-18T13:11:46+0000",
   "modul": "CORE-26"
 }

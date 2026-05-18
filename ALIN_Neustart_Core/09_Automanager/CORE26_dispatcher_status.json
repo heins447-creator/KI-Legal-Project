@@ -1,21 +1,20 @@
 {
   "modul_id": "CORE-26",
   "version": "1.0.0",
-  "zeitstempel": "2026-05-18T13:00:19+0000",
+  "zeitstempel": "2026-05-18T13:11:46+0000",
   "dispatcher_status": "BEREIT",
-  "naechste_stufe": "WINAPP",
-  "naechste_stufe_name": "Windows App Build und Release",
-  "blockierte_stufen_anzahl": 2,
+  "naechste_stufe": "DEPLOY",
+  "naechste_stufe_name": "Deployment und Betrieb",
+  "blockierte_stufen_anzahl": 1,
   "blockierte_stufen_ids": [
-    "DEPLOY",
     "STUFE-026"
   ],
   "bericht_zusammenfassung": {
     "roadmap_gelesen": true,
     "stufen_anzahl": 90,
-    "abgeschlossen_anzahl": 87,
-    "blockiert_anzahl": 2,
-    "naechste_stufe": "WINAPP",
+    "abgeschlossen_anzahl": 88,
+    "blockiert_anzahl": 1,
+    "naechste_stufe": "DEPLOY",
     "queue_geschrieben": true,
     "modus": "execute_next",
     "technische_blockaden_anzahl": 0

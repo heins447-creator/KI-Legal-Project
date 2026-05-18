@@ -1,11 +1,11 @@
 ================================================================================
 CORE-26: ROADMAP-DISPATCHER BERICHT
 ================================================================================
-Zeitstempel: 2026-05-18T13:00:19+0000
+Zeitstempel: 2026-05-18T13:11:46+0000
 Modul: CORE-26 - Roadmap-Dispatcher und Selbstfortsetzung
 Version: 1.0.0
 
-Commit-Hash: 7b029d8a5af4a00911d09cc44c337715d6c7359f
+Commit-Hash: f9218232283e4db62831d07c3748413a797ff797
 
 ROADMAP-STATUS:
   Roadmap gelesen: JA (CORE-25)
@@ -99,26 +99,25 @@ ABGESCHLOSSENE STUFEN:
   - UI13
   - UI14
   - VZ01
-  Gesamt: 87 Stufen abgeschlossen
+  - WINAPP
+  Gesamt: 88 Stufen abgeschlossen
 
 NICHT-AUSFUEHRBARE STUFEN (offen oder blockiert):
-  - DEPLOY: Deployment und Betrieb
-      Grund: Abhaengigkeit nicht erfuellt: WINAPP
   - STUFE-026: Gesamtabnahme und Produktionsfreigabe
       Grund: Stufe ist gesperrt
-  Gesamt: 2 Stufen nicht ausfuehrbar
+  Gesamt: 1 Stufen nicht ausfuehrbar
 
 NAECHSTE AUSGEWAEHLTE STUFE:
-  Stufe-ID: WINAPP
-  Name: Windows App Build und Release
+  Stufe-ID: DEPLOY
+  Name: Deployment und Betrieb
   Phase: Build und Release
-  Prioritaet: 80
+  Prioritaet: 90
 
 ERZEUGTER AUFTRAG:
-  Auftrags-ID: AUFTRAG-WINAPP-2026-05-18T130019+0000
-  Stufe: WINAPP
-  Name: Windows App Build und Release
-  Folgeentscheidung: DEPLOY
+  Auftrags-ID: AUFTRAG-DEPLOY-2026-05-18T131146+0000
+  Stufe: DEPLOY
+  Name: Deployment und Betrieb
+  Folgeentscheidung: None
 
 QUEUE-STATUS:
   Queue-Eintrag geschrieben: JA
@@ -131,12 +130,12 @@ TECHNISCHE BLOCKADEN:
   Keine technischen Blockaden
 
 FORTSETZUNG:
-  Naechster automatischer Lauf wird Stufe 'WINAPP' bearbeiten
+  Naechster automatischer Lauf wird Stufe 'DEPLOY' bearbeiten
   Status-JSON und Auftrags-JSON wurden geschrieben
 
 ================================================================================
 ENDE BERICHT
 ================================================================================
-[2026-05-18T13:00:19+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
-[2026-05-18T13:00:19+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
-[2026-05-18T13:00:19+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
+[2026-05-18T13:11:46+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
+[2026-05-18T13:11:46+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
+[2026-05-18T13:11:46+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
