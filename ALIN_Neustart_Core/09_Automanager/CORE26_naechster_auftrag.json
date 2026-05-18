@@ -1,17 +1,24 @@
 {
-  "auftrags_id": "AUFTRAG-STUFE-020-2026-05-18T112928+0000",
-  "stufe_id": "STUFE-020",
-  "name": "Datenschutz und Mandatsgeheimnis",
-  "beschreibung": "Datenschutz-Markierungen umsetzen, Mandatsgeheimnis-Regeln pruefen, Exportregeln definieren.",
+  "auftrags_id": "AUFTRAG-STUFE-025-2026-05-18T125448+0000",
+  "stufe_id": "STUFE-025",
+  "name": "Programmierbare Gesamt-Roadmap",
+  "beschreibung": "Fachliches Gesamtkonzept wird in maschinenlesbare Roadmap fuer CORE-24 zerlegt.",
   "eingaben": [
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
+    "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+    "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+    "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+    "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+    "Config/core24_entwicklungsmanager_v1.json",
+    "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json"
   ],
   "ausgaben": [
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
-    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
+    "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+    "ALIN_Neustart_Core/Reports/CORE25_GESAMT_ROADMAP_BERICHT.txt",
+    "Config/core25_roadmap_v1.json",
+    "Scripts/python_runner/core25_gesamt_roadmap.py",
+    "Scripts/python_runner/check_core25_gesamt_roadmap.py",
+    "Scripts/CORE25_GESAMT_ROADMAP_AUTOLAUF.ps1",
+    "Projektplanung/CORE25_GESAMT_ROADMAP.md"
   ],
   "erlaubte_pfade": [
     "ALIN_Neustart_Core/00_Dokumentation/",
@@ -65,15 +72,16 @@
     "Bericht pruefen"
   ],
   "berichtspflichten": [
-    "ALIN_Neustart_Core/Reports/STUFE_020_BERICHT.txt"
+    "ALIN_Neustart_Core/Reports/STUFE_025_BERICHT.txt"
   ],
   "commit_regel": "Nur bei Erfolg, Prefix: CORE-26",
-  "folgeentscheidung": "STUFE-024",
+  "folgeentscheidung": "STUFE-026",
   "tests_aus_roadmap": [
-    "Datenschutz-Markierungen validiert",
-    "Mandatsgeheimnis-Regeln geprueft",
-    "Exportregeln definiert"
+    "Roadmap-JSON validiert",
+    "Abhaengigkeiten zyklenfrei",
+    "Alle Stufen eindeutige ID",
+    "Pruefdatei bestanden"
   ],
-  "erzeugt_am": "2026-05-18T11:29:28+0000",
+  "erzeugt_am": "2026-05-18T12:54:48+0000",
   "modul": "CORE-26"
 }
