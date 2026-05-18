@@ -1,0 +1,34 @@
+{
+  "modul_id": "CORE-22",
+  "version": "1.0.0",
+  "name": "Agenten-Einstieg und Arbeitsregel-Erzwingung",
+  "referenziert": {
+    "arbeitsindex_config": "Config/core21_arbeitsindex_v1.json",
+    "agenten_regeln": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json"
+  },
+  "pfad_pruefung": {
+    "funktion": "bereich_status(pfad)",
+    "ergebnisse": ["aktiv", "referenz", "gesperrt", "unbekannt"],
+    "schreibregel": {
+      "aktiv": "erlaubt",
+      "referenz": "nur_lesen",
+      "gesperrt": "verboten",
+      "unbekannt": "nachfragen"
+    }
+  },
+  "agenten_start_routine": [
+    "1. Lade Config/core21_arbeitsindex_v1.json",
+    "2. Prüfe Startpunkt existiert",
+    "3. Prüfe erste Lesedateien existieren",
+    "4. Bei Schreibzugriff: bereich_status() prüfen",
+    "5. Bei 'aktiv' → fortfahren",
+    "6. Bei 'referenz' → nur lesen, nicht schreiben",
+    "7. Bei 'gesperrt' → ablehnen",
+    "8. Bei 'unbekannt' → nachfragen"
+  ],
+  "mandantendaten_regel": {
+    "externe_modelle": "verboten",
+    "git": "nur_schemata_und_configs",
+    "berichte": "erlaubt_in_reports_und_manifest"
+  }
+}
