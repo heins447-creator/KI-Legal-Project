@@ -3254,7 +3254,7 @@
         "beschreibung": "Windows-App kompilieren, Release-Checkliste, Changelog, Rollback-Plan.",
         "phase": "Build und Release",
         "prioritaet": 80,
-        "status": "offen",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-012",
           "UI14"
