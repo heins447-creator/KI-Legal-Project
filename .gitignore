@@ -25,6 +25,8 @@ Windows_App/App/*.bak_*
 !Projektplanung/Auftraege/*.md
 !Projektplanung/Agentensteuerung/
 !Projektplanung/Agentensteuerung/*.md
+!Config/
+!Config/*.json
 # KI_Legal_Project: Aider Freigaben
 Tools/Tesseract/tessdata/*.traineddata
 Tools/_ToolLibrary/Downloads/
