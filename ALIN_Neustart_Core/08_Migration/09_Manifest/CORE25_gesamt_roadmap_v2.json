@@ -1193,7 +1193,7 @@
         "beschreibung": "Datenschutz-Markierungen umsetzen, Mandatsgeheimnis-Regeln pruefen, Exportregeln definieren.",
         "phase": "Phase 4: Test und Abnahme",
         "prioritaet": 20,
-        "status": "offen",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-019"
         ],
