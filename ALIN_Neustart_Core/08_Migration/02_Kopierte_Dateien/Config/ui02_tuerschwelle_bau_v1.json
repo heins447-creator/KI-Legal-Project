@@ -1,0 +1,35 @@
+{
+  "modul": "UI02",
+  "version": "1.0.0",
+  "projektwurzel": "I:\\KI_Legal_Project",
+  "schreibbereich": "I:\\KI_Legal_Project\\Agentensteuerung\\UI02_Tuerschwelle_Bau",
+  "km20_master_index": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/07_Manifest/KM20_MASTER_INDEX.json",
+  "km20_konsolidierung": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/08_Konsolidierung/KM20_KONSOLIDIERUNG.json",
+  "km12_manifest": "Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/07_Manifest/KM12_ABBILDUNG_MANIFEST.json",
+  "km14_fundstellen_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/09_Fundstellen",
+  "km14_textstruktur_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/10_Textstruktur",
+  "km17_ocr_dir": "Agentensteuerung/17_Sprachrouting_OCR/08_OCR_Ergebnisse",
+  "km19_ocr_segmente_dir": "Agentensteuerung/19_OCR_Segmente_Export/08_OCR_Segmente",
+  "ui01_html": "Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht/index.html",
+  "ui01_css": "Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht/ui01.css",
+  "ui01_js": "Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht/ui01.js",
+  "testdaten_muster": [
+    "ORG-T",
+    "TEST",
+    "DUMMY"
+  ],
+  "max_dokumente_ui02": 2,
+  "ollama_url": "http://localhost:11434/api/generate",
+  "ollama_timeout_s": 30,
+  "png_max_breite": 800,
+  "png_max_hoehe": 1200,
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_neue_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_installation": true,
+    "keine_cloud": true
+  }
+}

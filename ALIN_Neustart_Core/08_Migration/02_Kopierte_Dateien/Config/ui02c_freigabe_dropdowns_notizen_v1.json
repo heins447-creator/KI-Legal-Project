@@ -1,0 +1,78 @@
+{
+  "modul": "UI02c",
+  "version": "1.0.0",
+  "sprachen": [
+    "Schwedisch",
+    "Englisch",
+    "Deutsch",
+    "Franzoesisch",
+    "unbekannt"
+  ],
+  "rechtsgebiete": [
+    "Arbeitsrecht",
+    "Schulrecht / Bildungsrecht",
+    "Sozialrecht",
+    "Verwaltungsrecht",
+    "Zivilrecht",
+    "Strafrecht",
+    "anderes",
+    "unbekannt"
+  ],
+  "verfahrenslaender": [
+    "Schweden",
+    "Deutschland",
+    "Portugal",
+    "anderes",
+    "unbekannt"
+  ],
+  "dokumentarten": [
+    "Arbeitsvertrag",
+    "Kuendigung",
+    "sonstiges",
+    "unbekannt"
+  ],
+  "sprachpakete": [
+    "sv-de",
+    "en-de",
+    "de-en",
+    "de-sv",
+    "fr-de",
+    "keine / spaeter festlegen"
+  ],
+  "entscheidungsoptionen": [
+    "Mandat annehmen",
+    "Mandat ablehnen",
+    "Zurueckstellen / Wiedervorlage",
+    "Bestehender Akte zuordnen",
+    "Weitere Unterlagen anfordern",
+    "Regulaere Verarbeitung starten"
+  ],
+  "wiedervorlage_gruende": [
+    "fehlende Unterlagen",
+    "bessere Scans erforderlich",
+    "Sprache unklar",
+    "Rechtsgebiet unklar",
+    "Anwaltliche Pruefung erforderlich",
+    "Rueckfrage an Mandant",
+    "Rueckfrage an Sekretariat"
+  ],
+  "rueckgabe_gruende": [
+    "bessere Scans anfordern",
+    "fehlende Anlage anfordern",
+    "Mandantendaten ergaenzen",
+    "Sprache pruefen",
+    "Dokumente neu zuordnen",
+    "regulaere Verarbeitung starten",
+    "Akte anlegen",
+    "bestehender Akte zuordnen"
+  ],
+  "agentenauftrag_vorschlaege": [
+    "Arbeitsvertrag vollstaendig auswerten",
+    "Kuendigung vollstaendig auswerten",
+    "Fristen pruefen",
+    "Parteien und Daten pruefen",
+    "fehlende Unterlagen feststellen",
+    "Uebersetzung spaeter regulaer erstellen",
+    "Beweis-/Dokumentenliste vorbereiten"
+  ]
+}

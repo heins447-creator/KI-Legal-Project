@@ -1,0 +1,140 @@
+{
+  "modul_id": "UI07b",
+  "modulname": "Gesamtfreeze Demo-Betriebsstrecke",
+  "version": "1.0.0",
+  "version_status": "freeze",
+  "freeze_status": "eingefroren",
+  "freeze_datum": "2026-05-17",
+  "freeze_begruendung": "UI03-Strecke bis UI07 vollständig. Keine Änderungen ohne expliziten Auftrag.",
+  "betriebsmodus": "demo",
+  "produktiv_freigegeben": false,
+  "warnung": "DIES IST EINE GEFRORENE DEMO-BETRIEBSSTRECKE. KEINE PRODUKTIVFREIGABE. KEINE ÄNDERUNGEN OHNE EXPLIZITEN AUFTRAG.",
+  "strecke_ui03_bis_ui07": {
+    "module": [
+      {
+        "id": "UI03-1b",
+        "name": "OCR-/Übersetzungskontrolle",
+        "config": "Config/ui03_1b_ocr_uebersetzungskontrolle_v1.json",
+        "runner": "Scripts/python_runner/ui03_1b_ocr_uebersetzungskontrolle.py",
+        "check": "Scripts/python_runner/check_ui03_1b_ocr_uebersetzungskontrolle.py",
+        "starter": "Scripts/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE.md"
+      },
+      {
+        "id": "UI03-1c",
+        "name": "Übersetzungsarbeitsplatz",
+        "config": "Config/ui03_1c_uebersetzungsarbeitsplatz_v1.json",
+        "runner": "Scripts/python_runner/ui03_1c_uebersetzungsarbeitsplatz.py",
+        "check": "Scripts/python_runner/check_ui03_1c_uebersetzungsarbeitsplatz.py",
+        "starter": "Scripts/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1c_UEBERSETZUNGSARBEITSPLATZ.md"
+      },
+      {
+        "id": "UI03-1d",
+        "name": "OCR-Freigabeablauf",
+        "config": "Config/ui03_1d_ocr_freigabeablauf_v1.json",
+        "runner": "Scripts/python_runner/ui03_1d_ocr_freigabeablauf.py",
+        "check": "Scripts/python_runner/check_ui03_1d_ocr_freigabeablauf.py",
+        "starter": "Scripts/UI03_1d_OCR_FREIGABEABLAUF_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1d_OCR_FREIGABEABLAUF.md"
+      },
+      {
+        "id": "UI03-1e",
+        "name": "Übergabe Freigabeentscheidung",
+        "config": "Config/ui03_1e_uebergabe_freigabe_v1.json",
+        "runner": "Scripts/python_runner/ui03_1e_uebergabe_freigabe.py",
+        "check": "Scripts/python_runner/check_ui03_1e_uebergabe_freigabe.py",
+        "starter": "Scripts/UI03_1e_UEBERGABE_FREIGABE_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1e_UEBERGABE_FREIGABE.md"
+      },
+      {
+        "id": "UI03-1f",
+        "name": "Geparkte Aufträge verwalten",
+        "config": "Config/ui03_1f_geparkte_auftraege_v1.json",
+        "runner": "Scripts/python_runner/ui03_1f_geparkte_auftraege.py",
+        "check": "Scripts/python_runner/check_ui03_1f_geparkte_auftraege.py",
+        "starter": "Scripts/UI03_1f_GEPARKTE_AUFTRAEGE_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1f_GEPARKTE_AUFTRAEGE.md"
+      },
+      {
+        "id": "UI03-1g",
+        "name": "Kombinierte Gesamtansicht",
+        "config": "Config/ui03_1g_gesamtansicht_v1.json",
+        "runner": "Scripts/python_runner/ui03_1g_gesamtansicht.py",
+        "check": "Scripts/python_runner/check_ui03_1g_gesamtansicht.py",
+        "starter": "Scripts/UI03_1g_GESAMTANSICHT_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI03_1g_GESAMTANSICHT.md"
+      },
+      {
+        "id": "UI04b",
+        "name": "Logikprüfung und Entscheidung",
+        "config": "Config/ui04b_logikpruefung_entscheidung_v1.json",
+        "runner": "Scripts/python_runner/ui04b_logikpruefung_entscheidung.py",
+        "check": "Scripts/python_runner/check_ui04b_logikpruefung_entscheidung.py",
+        "starter": "Scripts/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG.md"
+      },
+      {
+        "id": "UI05",
+        "name": "Mandantenakte Arbeitszentrale",
+        "config": "Config/ui05_mandantenakte_arbeitszentrale_v1.json",
+        "runner": "Scripts/python_runner/ui05_mandantenakte_arbeitszentrale.py",
+        "check": "Scripts/python_runner/check_ui05_mandantenakte_arbeitszentrale.py",
+        "starter": "Scripts/UI05_MANDANTENAKTE_ARBEITSZENTRALE_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI05_MANDANTENAKTE_ARBEITSZENTRALE.md"
+      },
+      {
+        "id": "UI06",
+        "name": "Musterlauf Gesamtkette",
+        "config": "Config/ui06_musterlauf_gesamtkette_v1.json",
+        "runner": "Scripts/python_runner/ui06_musterlauf_gesamtkette.py",
+        "check": "Scripts/python_runner/check_ui06_musterlauf_gesamtkette.py",
+        "starter": "Scripts/UI06_MUSTERLAUF_GESAMTKETTE_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI06_MUSTERLAUF_GESAMTKETTE.md"
+      },
+      {
+        "id": "UI06b",
+        "name": "Fehlerpfadprüfung Gesamtkette",
+        "runner": "Scripts/python_runner/ui06b_fehlerpfad_pruefung.py",
+        "check": "Scripts/python_runner/check_ui06b_fehlerpfad_pruefung.py",
+        "starter": "Scripts/UI06B_FEHLERPFAD_PRUEFUNG_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI06B_FEHLERPFAD_PRUEFUNG.md"
+      },
+      {
+        "id": "UI07",
+        "name": "Betriebsvorbereitung",
+        "config": "Config/ui07_betriebsvorbereitung_v1.json",
+        "runner": "Scripts/python_runner/ui07_betriebsvorbereitung.py",
+        "check": "Scripts/python_runner/check_ui07_betriebsvorbereitung.py",
+        "starter": "Scripts/UI07_BETRIEBSVORBEREITUNG_AUTOLAUF.ps1",
+        "doku": "Projektplanung/UI07_BETRIEBSVORBEREITUNG.md"
+      }
+    ],
+    "ergaenzende_doku": [
+      "Projektplanung/UI03_0_UEBERGABE_MANDANTENAKTE.md",
+      "Projektplanung/UI01_ANWALTSANSICHT_V1.md",
+      "Projektplanung/ZWISCHENABNAHME_UI03_1b_bis_1f.md"
+    ],
+    "ergaenzende_runner": [
+      "Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+      "Scripts/python_runner/ui01_anwaltsansicht_v1.py",
+      "Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py"
+    ]
+  },
+  "freeze_regeln": [
+    "Keine Änderungen an UI03-UI07-Modulen ohne expliziten Auftrag.",
+    "Keine neue Fachlogik in der Demo-Betriebsstrecke.",
+    "Erlaubt: Bugfixes, Textkorrekturen, Dokumentationsupdates.",
+    "Erlaubt: Neue Module außerhalb der Demo-Strecke (UI08+).",
+    "Jede Änderung erfordert neuen Freeze-Check (UI07b wiederholen)."
+  ],
+  "ausgabe": {
+    "html_freeze_uebersicht": "Windows_App/Pruefseiten/UI07b_Gesamtfreeze_Uebersicht.html",
+    "json_status": "Windows_App/Logs/UI07B_FREEZE_STATUS.json",
+    "bericht": "Windows_App/Logs/UI07B_GESAMTFREEZE_BERICHT.txt"
+  },
+  "grenzen": {
+    "max_module": 20,
+    "timeout_sekunden": 30
+  }
+}

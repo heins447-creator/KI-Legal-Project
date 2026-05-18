@@ -1,0 +1,40 @@
+{
+  "schema_version": "UI05-v1",
+  "modul_id": "ui05_mandantenakte_arbeitszentrale",
+  "modulname": "UI05 – Mandantenakte Gesamtarbeitsplatz / Arbeitszentrale",
+  "register_pruefung": {
+    "toolregister": "nur_lesend",
+    "ressourcenregister": "nur_lesend",
+    "modulregister": "nur_lesend",
+    "sperrregister": "nur_lesend"
+  },
+  "quellen": {
+    "ui03_1g": "Agentensteuerung/UI03_Mandantenakte/26_Gesamtansicht_UI03_1g/02_Status/UI03_1g_GESAMTANSICHT_STATUS.json",
+    "ui04b_status": "Agentensteuerung/UI04_Durchstich_Sekretariat_Anwalt_Ruecklauf/15_UI04b_Logikpruefung/02_Status/UI04b_STATUS.json",
+    "ui04b_plausi": "Agentensteuerung/UI04_Durchstich_Sekretariat_Anwalt_Ruecklauf/15_UI04b_Logikpruefung/09_Plausibilitaet/UI04b_PLAUSIBILITAET.json",
+    "ui04b_formular": "Agentensteuerung/UI04_Durchstich_Sekretariat_Anwalt_Ruecklauf/15_UI04b_Logikpruefung/10_Bereinigtes_Formular/UI04b_FORMULAR_SCHEMA.json"
+  },
+  "ausgabe": {
+    "status": "02_Status/UI05_ARBEITSZENTRALE_STATUS.json",
+    "bericht": "03_Berichte/UI05_BERICHT.txt",
+    "fehler": "05_Fehler/UI05_FEHLER.txt",
+    "manifest": "07_Manifest/UI05_MANIFEST.json",
+    "browseransicht": "11_Browseransicht/index.html"
+  },
+  "schreibbereiche": {
+    "status": "02_Status",
+    "berichte": "03_Berichte",
+    "fehler": "05_Fehler",
+    "manifest": "07_Manifest",
+    "browseransicht": "11_Browseransicht"
+  },
+  "grenzen": {
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_installation": true,
+    "nur_lesend": true,
+    "gesperrte_aktionen_blockieren": true
+  },
+  "sperrregister_pruefung": true
+}

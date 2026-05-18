@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "weiche_status",
+  "beschreibung": "Statusmodell für die Weiche (Routing-Entscheidung)",
+  "zustaende": [
+    "entscheidung_offen",
+    "bestandsakte",
+    "neumandat",
+    "verwaltungspost",
+    "sicherheitsproblem",
+    "ocr_pfad",
+    "anwalt_pfad",
+    "nachforderung",
+    "gesperrt"
+  ],
+  "uebergaenge": [
+    {"von": "entscheidung_offen", "nach": "bestandsakte", "bedingung": "Aktenbezug klar, Mandant bekannt"},
+    {"von": "entscheidung_offen", "nach": "neumandat", "bedingung": "Neuer Mandant, kein Aktenbezug"},
+    {"von": "entscheidung_offen", "nach": "verwaltungspost", "bedingung": "Kein Mandantenbezug"},
+    {"von": "entscheidung_offen", "nach": "sicherheitsproblem", "bedingung": "Sicherheitsverdacht"},
+    {"von": "bestandsakte", "nach": "anwalt_pfad", "bedingung": "Anwalt zugewiesen"},
+    {"von": "neumandat", "nach": "anwalt_pfad", "bedingung": "Mandat angenommen"},
+    {"von": "bestandsakte", "nach": "ocr_pfad", "bedingung": "OCR erforderlich"},
+    {"von": "neumandat", "nach": "ocr_pfad", "bedingung": "OCR erforderlich"},
+    {"von": "entscheidung_offen", "nach": "nachforderung", "bedingung": "Unterlagen unvollständig"},
+    {"von": "sicherheitsproblem", "nach": "gesperrt", "bedingung": "Gesperrt"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

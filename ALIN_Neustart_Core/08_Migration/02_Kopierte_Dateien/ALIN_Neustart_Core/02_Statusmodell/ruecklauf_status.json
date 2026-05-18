@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "ruecklauf_status",
+  "beschreibung": "Statusmodell für Rücklauf an Sekretariat",
+  "zustaende": [
+    "ruecklauf_sekretariat",
+    "in_bearbeitung_sekretariat",
+    "unterlagen_nachgefordert",
+    "zur_akte_gelegt",
+    "weiterleitung_anwalt",
+    "abgeschlossen",
+    "wiedervorlage"
+  ],
+  "uebergaenge": [
+    {"von": "ruecklauf_sekretariat", "nach": "in_bearbeitung_sekretariat", "bedingung": "Sekretariat öffnet"},
+    {"von": "in_bearbeitung_sekretariat", "nach": "unterlagen_nachgefordert", "bedingung": "Unterlagen fehlen"},
+    {"von": "in_bearbeitung_sekretariat", "nach": "zur_akte_gelegt", "bedingung": "In Akte einsortiert"},
+    {"von": "in_bearbeitung_sekretariat", "nach": "weiterleitung_anwalt", "bedingung": "Erneut an Anwalt"},
+    {"von": "in_bearbeitung_sekretariat", "nach": "abgeschlossen", "bedingung": "Vorgang erledigt"},
+    {"von": "in_bearbeitung_sekretariat", "nach": "wiedervorlage", "bedingung": "Zurückgestellt"},
+    {"von": "unterlagen_nachgefordert", "nach": "in_bearbeitung_sekretariat", "bedingung": "Unterlagen eingegangen"},
+    {"von": "wiedervorlage", "nach": "in_bearbeitung_sekretariat", "bedingung": "Wiedervorlage fällig"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

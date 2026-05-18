@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "feldhilfen",
+  "letzte_aenderung": "2026-05-16T00:00:00Z",
+  "eintraege": [
+    {
+      "hilfe_id": "FELD_AKTEN_ID",
+      "typ": "feld",
+      "bezeichnung": "Akten-ID",
+      "kurzhilfe": "Eindeutige Kennung der Mandantenakte.",
+      "langhilfe": "Die Akten-ID ist die eindeutige Kennung der Mandantenakte. Sie wird automatisch vergeben oder manuell eingegeben."
+    },
+    {
+      "hilfe_id": "FELD_MANDANTEN_ID",
+      "typ": "feld",
+      "bezeichnung": "Mandanten-ID",
+      "kurzhilfe": "Eindeutige Kennung des Mandanten.",
+      "langhilfe": "Die Mandanten-ID ist die eindeutige Kennung des Mandanten. Sie wird beim Anlegen des Mandats vergeben."
+    }
+  ]
+}

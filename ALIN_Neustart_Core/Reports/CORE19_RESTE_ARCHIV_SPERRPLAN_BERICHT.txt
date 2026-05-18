@@ -1,0 +1,102 @@
+======================================================================
+CORE-19 RESTE-/ARCHIV-/SPERRPLAN BERICHT
+======================================================================
+
+Zeitstempel: 2026-05-18T03:15:35.347640
+
+Zusammenfassung:
+----------------------------------------
+  archiv                           1643
+  dubletten                       59879
+  gesperrt                         6492
+  laufzeit                         1367
+  manuell                         25385
+  reste                               0
+  testreste                        3359
+
+ARCHIV (1643 Eintraege):
+----------------------------------------
+  07_Berichte/TOOL_INVENTUR_20260511_125017.txt
+  07_Berichte/TOOL_INVENTUR_20260511_125139.txt
+  07_Berichte/TOOL_INVENTUR_20260511_125234.txt
+  Agentensteuerung/04_Berichte/DEEPSEEK_CONTINUE_SETUP.txt
+  Agentensteuerung/04_Berichte/KM12b_UEBERGROSSE_ARBEITSABBILDUNGEN_ABSCHLUSSBERICHT.txt
+  Agentensteuerung/04_Berichte/KM13b_ABSCHLUSSBERICHT.txt
+  Agentensteuerung/04_Berichte/KM13_TESSDATA_PFADKORREKTUR_BERICHT.txt
+  Agentensteuerung/04_Berichte/KM14_KM15_NACH_TESSDATA_KORREKTUR_BERICHT.txt
+  Agentensteuerung/04_Berichte/KM15_TERMINALFIX_BERICHT.txt
+  Agentensteuerung/08_Strukturanalyse_Dokumentenstrasse/09_Abschlussbericht/ABSCHLUSSBERICHT_STRUKTURANALYSE.txt
+  ... und 1633 weitere
+
+GESPERRT (6492 Eintraege):
+----------------------------------------
+  Agentensteuerung/09_Analysebericht_Validator/01_Skript/analysebericht_validator.py
+  ALIN_Neustart_Core/Scripts/alin_core04_update_register_befuellen.py
+  Config/ui07_betriebsvorbereitung_v1.json
+  Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json
+  Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json
+  Config/ui08_posteingang_importstrecke_v1.json
+  Config/ui09_zentrale_grundschalter_profilfelder_v1.json
+  Config/ui10_profil_lesadapter_v1.json
+  Config/ui11_register_lesadapter_v1.json
+  Config/ui12_master_adapter_v1.json
+  ... und 6482 weitere
+
+TESTRESTE (3359 Eintraege):
+----------------------------------------
+  ACCEPTANCE_TESTS.md
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/99_Reparatur/patch_km12_selftest_20260513_163514.py
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/99_Reparatur/patch_km12_selftest_20260513_163901.py
+  Agentensteuerung/18_OCR_Ergebnisdiagnose/08_Tesseract_Testausgaben/KM18_TESTLAUF_ERGEBNISSE.json
+  Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/08_Konsolidierung/KM20_TESTDATEN.json
+  Agentensteuerung/21_Translation_Environment/09_Test/KM21_DUMMY_TRANSLATION_TEST.json
+  Agentensteuerung/98_Tool_Kompatibilitaetspruefung/01_test_create.txt
+  Agentensteuerung/98_Tool_Kompatibilitaetspruefung/02_test_edit.txt
+  Agentensteuerung/98_Tool_Kompatibilitaetspruefung/03_test_python.py
+  AnythingLLM_Storage/storage/documents/custom-documents/2025-09-17-Abrahamsson-von-Attest-darf-nicht-durchgestrichen-werden.pdf-6c848a6a-83d9-4ff2-9a4e-1c51566d684a.json
+  ... und 3349 weitere
+
+LAUFZEIT (1367 Eintraege):
+----------------------------------------
+  .aider.tags.cache.v4/cache.db
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/90_RunLogs/RUN_KM12_20260513_164637.log
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/90_RunLogs/RUN_KM12_20260513_164640.log
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/90_RunLogs/RUN_KM12_20260513_164804.log
+  Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/90_RunLogs/RUN_KM12_HARD_FIX_20260513_165138.log
+  Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/90_RunLogs/RUN_KM14_20260513_190722.log
+  Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung/90_RunLogs/RUN_KM15_MANUELL_20260513_204610.log
+  Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung/90_RunLogs/RUN_KM15_TERMINAL_FIX_20260513_212103.log
+  Agentensteuerung/UI02_Tuerschwelle_Bau/17_Freigabe_UI02c/90_RunLogs/UI02c_AUSFUEHRUNGSNOTIZ.txt
+  ALIN_Neustart_Core/10_Update_Ueberwachung/06_Cache_Ueberwachung/ALIN_CACHE_STATUS.schema.json
+  ... und 1357 weitere
+
+DUBLETTEN (59879 Eintraege):
+----------------------------------------
+  alin_update_manager.py
+  10_Tool_Inventar/fehlende_tools.json
+  10_Tool_Inventar/installierte_tools.json
+  10_Tool_Inventar/tool_bedarf_module.json
+  10_Tool_Inventar/tool_versionen.json
+  Agentensteuerung/09_Analysebericht_Validator/selftest_output.txt
+  Agentensteuerung/09_Analysebericht_Validator/stderr.txt
+  Agentensteuerung/09_Analysebericht_Validator/stdout.txt
+  Agentensteuerung/09_Analysebericht_Validator/04_Tests/dummy_reports/04_Maschinenformat/MASCHINENFORMAT_SOLLKONZEPT.txt
+  Agentensteuerung/10_Schnittstellen_Lueckenabgleich_Dokumentenstrasse/01_Skript/check_km10_schnittstellen_lueckenabgleich.py
+  ... und 59869 weitere
+
+MANUELL (25385 Eintraege):
+----------------------------------------
+  .aider.chat.history.md
+  .aider.conf.yml
+  .aiderignore
+  .gitignore
+  AGENTS.md
+  ALIN_Ausfuehrliche_Agenten_Matrix.pdf
+  alin_dss_bridge.py
+  ALIN_Marschplan_Autonome_Installation.pdf
+  alin_posteingang_pruefung.py
+  alin_posteingang_ui.py
+  ... und 25375 weitere
+
+======================================================================
+ENDE BERICHT

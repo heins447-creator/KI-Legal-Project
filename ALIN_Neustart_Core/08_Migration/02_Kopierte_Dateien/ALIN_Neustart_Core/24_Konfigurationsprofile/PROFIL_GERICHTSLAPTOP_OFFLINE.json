@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "profil_id": "gerichtslaptop_offline",
+  "beschreibung": "Profil für Gerichtslaptop ohne Internet",
+  "einstellungen": {
+    "online": false,
+    "automatische_updates": false,
+    "cloud_synchronisation": false,
+    "offline_fallback": true,
+    "maximale_dateigroesse_mb": 50,
+    "maximale_seitenzahl": 500,
+    "parallelverarbeitung": 2,
+    "timeout_ocr_sekunden": 600,
+    "timeout_uebersetzung_sekunden": 240
+  }
+}

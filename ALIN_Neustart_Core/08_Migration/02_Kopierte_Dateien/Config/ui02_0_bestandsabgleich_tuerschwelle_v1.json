@@ -1,0 +1,25 @@
+{
+  "modul": "UI02_0",
+  "version": "1.0.0",
+  "projektwurzel": "I:\\KI_Legal_Project",
+  "schreibbereich": "I:\\KI_Legal_Project\\Agentensteuerung\\UI02_0_Bestandsabgleich_Tuerschwelle",
+  "master_index": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/07_Manifest/KM20_MASTER_INDEX.json",
+  "konsolidierungsquelle": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/08_Konsolidierung/KM20_KONSOLIDIERUNG.json",
+  "km14_fundstellen_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur",
+  "km12_manifest": "Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/07_Manifest/KM12_ABBILDUNG_MANIFEST.json",
+  "km17_ocr_dir": "Agentensteuerung/17_Sprachrouting_OCR/08_OCR_Ergebnisse",
+  "km15_status": "Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung/02_Status/KM15_STATUS.json",
+  "km21_status": "Agentensteuerung/21_Translation_Environment/02_Status/KM21_STATUS.json",
+  "ui01_status": "Agentensteuerung/UI01_Anwaltsansicht_V1/02_Status/UI01_STATUS.json",
+  "ui01_viewdata": "Agentensteuerung/UI01_Anwaltsansicht_V1/08_ViewData/UI01_DOKUMENT_VIEWDATA.json",
+  "ui01_html": "Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht/index.html",
+  "posteingang_runners_dir": "Scripts/python_runner",
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_neue_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_installation": true
+  }
+}

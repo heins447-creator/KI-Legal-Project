@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "warnhinweise",
+  "letzte_aenderung": "2026-05-16T00:00:00Z",
+  "eintraege": [
+    {
+      "hilfe_id": "WARN_FRISTVERDACHT",
+      "typ": "warnung",
+      "bezeichnung": "Fristverdacht",
+      "kurzhilfe": "Mögliche Frist erkannt. Bitte prüfen.",
+      "langhilfe": "Das System hat einen Hinweis auf eine mögliche Frist erkannt. Bitte prüfen Sie das Dokument manuell."
+    },
+    {
+      "hilfe_id": "WARN_SICHERHEIT",
+      "typ": "warnung",
+      "bezeichnung": "Sicherheitswarnung",
+      "kurzhilfe": "Sicherheitsproblem erkannt. Bitte prüfen.",
+      "langhilfe": "Das System hat ein Sicherheitsproblem erkannt. Das Dokument wurde in Quarantäne verschoben."
+    }
+  ]
+}

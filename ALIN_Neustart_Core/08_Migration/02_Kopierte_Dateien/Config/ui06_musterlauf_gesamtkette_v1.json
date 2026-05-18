@@ -1,0 +1,73 @@
+{
+  "modul": "UI06",
+  "version": "1.0.0",
+  "beschreibung": "Musterlauf Posteingang -> Türschwelle -> Mandantenakte -> UI05-Arbeitszentrale",
+  "register_pruefung": {
+    "toolregister": true,
+    "ressourcenregister": true,
+    "sperrregister": true
+  },
+  "ausgabe": {
+    "schreibbereich": "Agentensteuerung/UI06_Musterlauf_Gesamtkette",
+    "status_json": "02_Status/UI06_MUSTERLAUF_STATUS.json",
+    "bericht": "03_Berichte/UI06_BERICHT.txt",
+    "fehler": "05_Fehler/UI06_FEHLER.txt",
+    "manifest": "07_Manifest/UI06_MANIFEST.json",
+    "html": "11_Browseransicht/index.html"
+  },
+  "musterlauf": {
+    "akten_id": "MUSTER-2026-001",
+    "dokumente": [
+      {
+        "id": "DOC-001",
+        "name": "Muster_Klageerwiderung.pdf",
+        "sprache": "de",
+        "seiten": 12,
+        "ocr_status": "ok",
+        "ocr_text_vorhanden": true
+      },
+      {
+        "id": "DOC-002",
+        "name": "Muster_Beweismittelverzeichnis_EN.pdf",
+        "sprache": "en",
+        "seiten": 8,
+        "ocr_status": "ok",
+        "ocr_text_vorhanden": true
+      },
+      {
+        "id": "DOC-003",
+        "name": "Muster_Gerichtsbescheid_SV.pdf",
+        "sprache": "sv",
+        "seiten": 4,
+        "ocr_status": "fehlerhaft",
+        "ocr_text_vorhanden": false,
+        "ocr_fehler": "Tesseract SV-Modell fehlt"
+      }
+    ],
+    "posteingang": {
+      "eingangsdatum": "2026-05-10",
+      "absender": "Landgericht Musterstadt",
+      "verfahrensnummer": "3 O 123/26",
+      "dringend": true
+    },
+    "tuerschwelle": {
+      "mandatsfaehig": true,
+      "fristen": ["2026-06-15"],
+      "risiko": "mittel"
+    },
+    "ui04b_entscheidung": {
+      "entscheidung": "annehmen",
+      "plausibilitaet_status": "ok",
+      "dokumente": 3,
+      "fehler": 1,
+      "warnungen": 0
+    }
+  },
+  "grenzen": {
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_originalaenderung": true,
+    "nur_musterdaten": true
+  }
+}

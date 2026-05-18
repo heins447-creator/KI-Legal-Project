@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "tool_healthcheck",
+  "letzte_aenderung": "2026-05-16T04:15:00+00:00",
+  "healthchecks": [
+    {
+      "tool_id": "TESSERACT",
+      "befehl": "tesseract --version",
+      "erwartet": "tesseract",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "PYMUPDF",
+      "befehl": "python -c \"import fitz; print(fitz.__doc__)\"",
+      "erwartet": "fitz",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "DUCKDB",
+      "befehl": "duckdb --version",
+      "erwartet": "v",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "PYTHON",
+      "befehl": "python --version",
+      "erwartet": "Python",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "POWERSHELL",
+      "befehl": "powershell -Command \"$PSVersionTable.PSVersion\"",
+      "erwartet": "Major",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "GIT",
+      "befehl": "git --version",
+      "erwartet": "git version",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "SQLITE",
+      "befehl": "python -c \"import sqlite3; print(sqlite3.sqlite_version)\"",
+      "erwartet": "3.",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "WEBVIEW2",
+      "befehl": "reg query \"HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\EdgeUpdate\\Clients\\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}\" /v pv",
+      "erwartet": "pv",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "DOTNET_RUNTIME",
+      "befehl": "dotnet --version",
+      "erwartet": ".",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "PILLOW",
+      "befehl": "python -c \"from PIL import Image; print(Image.__version__)\"",
+      "erwartet": ".",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "NUMPY",
+      "befehl": "python -c \"import numpy; print(numpy.__version__)\"",
+      "erwartet": ".",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "OPENCV",
+      "befehl": "python -c \"import cv2; print(cv2.__version__)\"",
+      "erwartet": ".",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "AIDER",
+      "befehl": "aider --version",
+      "erwartet": "aider",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "ARGOS_TRANSLATE",
+      "befehl": "python -c \"import argostranslate; print(argostranslate.__version__)\"",
+      "erwartet": ".",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "OLLAMA",
+      "befehl": "ollama --version",
+      "erwartet": "ollama",
+      "timeout_sekunden": 10,
+      "status": "ungeprueft",
+      "letzte_ausfuehrung": "",
+      "ergebnis": ""
+    },
+    {
+      "tool_id": "ABBYY",
+      "befehl": "",
+      "erwartet": "",
+      "timeout_sekunden": 0,
+      "status": "nicht_verfuegbar",
+      "letzte_ausfuehrung": "",
+      "ergebnis": "Nicht installiert"
+    }
+  ]
+}

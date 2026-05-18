@@ -1,0 +1,25 @@
+{
+  "modul": "UI03-1f",
+  "version": "1.0.0",
+  "beschreibung": "Geparkte Uebersetzungsauftraege verwalten – Parkgrund, fehlende Modelle, Wiederaufnahme vorbereiten",
+  "core11_konform": true,
+  "register_pruefung": {
+    "tesseract_tool_id": "TESSERACT",
+    "argos_tool_id": "ARGOS_TRANSLATE"
+  },
+  "ausgabe": {
+    "verwaltung_html": "02_Status/UI03_1f_GEPARKTE_AUFTRAEGE.html",
+    "status_json": "02_Status/UI03_1f_GEPARKTE_AUFTRAEGE.json",
+    "bericht": "03_Berichte/UI03_1f_GEPARKTE_AUFTRAEGE_BERICHT.txt",
+    "fehler": "05_Fehler/UI03_1f_GEPARKTE_AUFTRAEGE_FEHLER.txt"
+  },
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_echte_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_registeraenderung": true
+  }
+}

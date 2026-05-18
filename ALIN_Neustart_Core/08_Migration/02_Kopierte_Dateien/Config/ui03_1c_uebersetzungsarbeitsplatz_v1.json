@@ -1,0 +1,26 @@
+{
+  "modul": "UI03-1c",
+  "version": "1.0.0",
+  "beschreibung": "Übersetzungsarbeitsplatz bei fehlender lokaler Übersetzung – Dreiansicht mit OCR als Basis, Folgeaufträge, Sonstiges-Freitext",
+  "core11_konform": true,
+  "register_pruefung": {
+    "tesseract_tool_id": "TESSERACT",
+    "argos_tool_id": "ARGOS_TRANSLATE",
+    "deepl_ressource_id": "DEEPL_API"
+  },
+  "ausgabe": {
+    "arbeitsplatz_html": "02_Status/UI03_1c_UEBERSETZUNGSARBEITSPLATZ.html",
+    "status_json": "02_Status/UI03_1c_UEBERSETZUNGSARBEITSPLATZ.json",
+    "bericht": "03_Berichte/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_BERICHT.txt",
+    "fehler": "05_Fehler/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_FEHLER.txt"
+  },
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_endgueltige_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_registeraenderung": true
+  }
+}

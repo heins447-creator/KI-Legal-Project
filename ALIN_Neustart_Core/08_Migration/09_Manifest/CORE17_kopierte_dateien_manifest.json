@@ -1,0 +1,2196 @@
+{
+  "meta": {
+    "modul_id": "CORE-17",
+    "name": "Kopierende Migration Manifest",
+    "version": "1.0.0",
+    "zeitstempel": "2026-05-18T03:15:04.760465",
+    "produktiv_freigegeben": false,
+    "nur_kopierend": true
+  },
+  "zusammenfassung": {
+    "geplant": 311,
+    "kopiert": 311,
+    "uebersprungen_gesperrt": 0,
+    "fehler": 0,
+    "bytes_kopiert": 2663173
+  },
+  "kopierte_dateien": [
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+      "groesse": 1718,
+      "sha256": "e4d6eae80aa8ce78324de4f56098676b927dbae8d8a411efb593a33d462107f3",
+      "zeitstempel": "2026-05-18T03:15:04.761428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_BEGRIFFSWELT_TECHNIK_KANZLEI.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_BEGRIFFSWELT_TECHNIK_KANZLEI.md",
+      "groesse": 2516,
+      "sha256": "ab65a47437b9d51a8dcef95e1b73fba61d0a0919c9cd4ad40159998d56417145",
+      "zeitstempel": "2026-05-18T03:15:04.762431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_GRUNDMODELL.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_GRUNDMODELL.md",
+      "groesse": 3754,
+      "sha256": "235a4ab11c665efd35d8c2dabd22fdb4d291921e9398ec1a8d55a5e4b6089342",
+      "zeitstempel": "2026-05-18T03:15:04.763433"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+      "groesse": 2588,
+      "sha256": "4a2a9e6e45dbb3f8bdd61b2b96d5ece605bfac2e360041580985fb39ed185283",
+      "zeitstempel": "2026-05-18T03:15:04.763433"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+      "groesse": 1971,
+      "sha256": "84ff4786bdfb366329e52d388bb5bbfcbd79df1d87e0af6b5b864d4b175af7d5",
+      "zeitstempel": "2026-05-18T03:15:04.764433"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+      "groesse": 3853,
+      "sha256": "8959362b3fc975cd3af631d9795888ae251a90eef4f690b89f3527a26ec57fc3",
+      "zeitstempel": "2026-05-18T03:15:04.765431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md",
+      "groesse": 2666,
+      "sha256": "1d4f80e96504ced3d13d9cde4070c1f2a06867c475d8b7bea0588277dc5952d4",
+      "zeitstempel": "2026-05-18T03:15:04.766447"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/modulregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/modulregister.json",
+      "groesse": 241689,
+      "sha256": "d0fcc0abfce2aa177a1e134c34a0de330636350389ddbc866e2f55fceaae28e0",
+      "zeitstempel": "2026-05-18T03:15:04.766447"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+      "groesse": 10976,
+      "sha256": "82334a22d6571b1d9aa0b51c37acbb115c8627dc17904457dc35c06887284bb2",
+      "zeitstempel": "2026-05-18T03:15:04.767431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+      "groesse": 42280,
+      "sha256": "c1a09eb34db8a45f54c7d07c855a2cddd9291423232c8e69bf6c4456e1764c84",
+      "zeitstempel": "2026-05-18T03:15:04.767431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/schnittstellenregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/schnittstellenregister.json",
+      "groesse": 17568,
+      "sha256": "b155854cc362544b4ab360219dacc9706682dd1d9a83f23c0fdcae45b167dbe1",
+      "zeitstempel": "2026-05-18T03:15:04.768430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/skillregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/skillregister.json",
+      "groesse": 37002,
+      "sha256": "2d6e08bd7d4ed52430d36d0c30fdef1cd08a2acb7cc3ed4621296c409d5f3818",
+      "zeitstempel": "2026-05-18T03:15:04.768430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/sperrregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/sperrregister.json",
+      "groesse": 1877,
+      "sha256": "b592b5756f81695e0c7ed8b4b2e75b81e37b045dfd73ff5984638194495c83a3",
+      "zeitstempel": "2026-05-18T03:15:04.769428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/toolregister.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/toolregister.json",
+      "groesse": 15882,
+      "sha256": "7dd5f557a897d48eef9077af0ae447482a6b57dd6f67291397eaed7d8efbb41c",
+      "zeitstempel": "2026-05-18T03:15:04.770428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/01_Register/update_register.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/01_Register/update_register.json",
+      "groesse": 10979,
+      "sha256": "34dc8b1e06ca2325d9aa818f528d1dd79030ef514d3ce9f06a94101dcc997efc",
+      "zeitstempel": "2026-05-18T03:15:04.770428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/akte_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/akte_status.json",
+      "groesse": 1492,
+      "sha256": "13ba0319512e6be4d1920c9e85b53141a2a3ca081d45482ccad822f7051c8e01",
+      "zeitstempel": "2026-05-18T03:15:04.771430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/anwalt_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/anwalt_status.json",
+      "groesse": 1386,
+      "sha256": "208f1fa09cabeabce7186db0c79b9cc6e930b7af3f83a4e7f518fcd3946ccfbb",
+      "zeitstempel": "2026-05-18T03:15:04.771430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/dokument_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/dokument_status.json",
+      "groesse": 1772,
+      "sha256": "6c71c51c4a4436d6e319f2925d159c8582b082994a4d324f4502a734dc2cb573",
+      "zeitstempel": "2026-05-18T03:15:04.771430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/eingang_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/eingang_status.json",
+      "groesse": 1208,
+      "sha256": "7f28b4881dfa326825bd840622c70e555f96b329f1c4db1fa3c86107c458155b",
+      "zeitstempel": "2026-05-18T03:15:04.772429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/ruecklauf_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/ruecklauf_status.json",
+      "groesse": 1451,
+      "sha256": "3f6e63f69ee954f0b7493fb401ec3303d3f01a0434dea247e101535c4fb68c64",
+      "zeitstempel": "2026-05-18T03:15:04.772429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/02_Statusmodell/weiche_status.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/02_Statusmodell/weiche_status.json",
+      "groesse": 1515,
+      "sha256": "44f4942fce7ae5f5a1c91eb051d03b2e08512fd4c21c46cae35a6cc464abde9e",
+      "zeitstempel": "2026-05-18T03:15:04.773429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/04_Healthcheck/healthcheck_regeln.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/04_Healthcheck/healthcheck_regeln.json",
+      "groesse": 3283,
+      "sha256": "8d2a26291a99aa2bf59712e82939472c0a7f7a077ca7394ab3fa4bc038a3cb0f",
+      "zeitstempel": "2026-05-18T03:15:04.773429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/04_Healthcheck/healthcheck_statuswerte.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/04_Healthcheck/healthcheck_statuswerte.json",
+      "groesse": 1315,
+      "sha256": "1062986b7385d8d29511ea19e09430695d4859a512eac11d047cc18d26ca1412",
+      "zeitstempel": "2026-05-18T03:15:04.774429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/04_Healthcheck/review_listen.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/04_Healthcheck/review_listen.json",
+      "groesse": 114551,
+      "sha256": "1e7d711cb15e9e2d370c90760d48da818ee77ecb9474cc3a8f06c5441309c5f8",
+      "zeitstempel": "2026-05-18T03:15:04.774429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_lizenzhinweise.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_lizenzhinweise.json",
+      "groesse": 15980,
+      "sha256": "62858e6917ab77bfc1cc4853e3365cf73ad364cc4a8e2d555d3f9d22132a1410",
+      "zeitstempel": "2026-05-18T03:15:04.775430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_luecken.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_luecken.json",
+      "groesse": 24817,
+      "sha256": "aed21544503309a5e6e7fd3550cd8292a3cc5213aceb53b45dd03d8af399d519",
+      "zeitstempel": "2026-05-18T03:15:04.775430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_modulkarte.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_modulkarte.json",
+      "groesse": 28390,
+      "sha256": "ca1f344c34ab97594b921b5844a08fefa6f5e7eebc17d7b8219b2d33452adfd7",
+      "zeitstempel": "2026-05-18T03:15:04.776430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_ressourcenkarte.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_ressourcenkarte.json",
+      "groesse": 3489,
+      "sha256": "2fea56f60af6ffc9375fdcf7e628265bff8a2a4ef6f8cf33c4370012033c1d8d",
+      "zeitstempel": "2026-05-18T03:15:04.776430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_schnittstellen.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_schnittstellen.json",
+      "groesse": 1330,
+      "sha256": "0a236f1ce388ae40296f58e65caf164f0ebda03158eafd7cca91747dbba0f9a1",
+      "zeitstempel": "2026-05-18T03:15:04.777430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_toolkarte.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_toolkarte.json",
+      "groesse": 590,
+      "sha256": "7f9a1f8ad90b3347c18bb99978585403954fa611f3a213d10e9cad8d0f481569",
+      "zeitstempel": "2026-05-18T03:15:04.777430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE02_Altbestand_Inventarisierung_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE02_Altbestand_Inventarisierung_V1.md",
+      "groesse": 1999,
+      "sha256": "9839b684abe313e6265675b3c00a1df5e6ea50fce798d873c73599f3af4efbec",
+      "zeitstempel": "2026-05-18T03:15:04.778430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE03_Registerqualitaet_Luecken_Nachinventarisierung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE03_Registerqualitaet_Luecken_Nachinventarisierung.md",
+      "groesse": 11066,
+      "sha256": "737e7d95f061574f94a2620ea2ecce8f905fdfa293ece5614f56831dcc434364",
+      "zeitstempel": "2026-05-18T03:15:04.778430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE04_Update_Register_Befuellung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE04_Update_Register_Befuellung.md",
+      "groesse": 4482,
+      "sha256": "e002c83d7bcbcbd4936846dc562f6dfa175e7912661eba0aafa915fbb7bd9c46",
+      "zeitstempel": "2026-05-18T03:15:04.778430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE05_Toolregister_Vervollstaendigung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE05_Toolregister_Vervollstaendigung.md",
+      "groesse": 7186,
+      "sha256": "bbe9ae2192633da6645f3e7fe9e11e81f624dd35d153d94a7f04e2ee7cac2893",
+      "zeitstempel": "2026-05-18T03:15:04.779429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE06_Ressourcenregister_Vervollstaendigung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE06_Ressourcenregister_Vervollstaendigung.md",
+      "groesse": 9351,
+      "sha256": "dbcbcc2de258b03462b7eac7e27a8b197c51773b6d29da0d181f1b225585d76b",
+      "zeitstempel": "2026-05-18T03:15:04.779429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE07_Quellen_Adapterregister_Vervollstaendigung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE07_Quellen_Adapterregister_Vervollstaendigung.md",
+      "groesse": 3762,
+      "sha256": "a10ed068de9afbd6a5a0c3865777f83c800b5e71373161a4741585df32c5efdf",
+      "zeitstempel": "2026-05-18T03:15:04.780429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE08_Skillregister_Vervollstaendigung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE08_Skillregister_Vervollstaendigung.md",
+      "groesse": 4872,
+      "sha256": "b3a7e165ebec2e194018c5f5beefe6f6b793ab786bea192af0f389ad2f9745a9",
+      "zeitstempel": "2026-05-18T03:15:04.780429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE09_Modulregister_Vervollstaendigung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE09_Modulregister_Vervollstaendigung.md",
+      "groesse": 2782,
+      "sha256": "74ece6e5717e9c9df3b9a2fc97322e187e11b7067013b1ca2472c2825f024104",
+      "zeitstempel": "2026-05-18T03:15:04.781430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10a_Findings_Priorisierung_Reparaturplan.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10a_Findings_Priorisierung_Reparaturplan.md",
+      "groesse": 13279,
+      "sha256": "3ad7b0410c37870e2310f9ba689725abe2f188b5a7e24af3f22cebeaca5bf5ce",
+      "zeitstempel": "2026-05-18T03:15:04.781430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10b_Ressourcenluecken_Klaerung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10b_Ressourcenluecken_Klaerung.md",
+      "groesse": 7933,
+      "sha256": "0ca1e40945ec09c9f60fa4290e8661ed18e000b93de3829e802481cac1b01a7c",
+      "zeitstempel": "2026-05-18T03:15:04.781430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10c_SQL_Modulnamen_Bereinigen.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10c_SQL_Modulnamen_Bereinigen.md",
+      "groesse": 3383,
+      "sha256": "9349cb08e848e096fd3ca913d81b339555acddca6076e1210e40cef4a71cc721",
+      "zeitstempel": "2026-05-18T03:15:04.782429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10d_Schnittstellenbereiche.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10d_Schnittstellenbereiche.md",
+      "groesse": 5607,
+      "sha256": "4b394dce72b35f64cd418077bd83479f36af0dd5c4468faf8a370d41f4bd61c4",
+      "zeitstempel": "2026-05-18T03:15:04.782429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10e_UI01_Abhaengigkeit_Klaerung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10e_UI01_Abhaengigkeit_Klaerung.md",
+      "groesse": 3049,
+      "sha256": "500bfde6c3dc1abecaabf4fe6691955c36e62e6ae30d9cb371a50548342140c7",
+      "zeitstempel": "2026-05-18T03:15:04.783429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10f_Platzhalter_Verfeinern.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10f_Platzhalter_Verfeinern.md",
+      "groesse": 2379,
+      "sha256": "d56eaf6aa0606226c16b92617c151ba3eee5eedb3c301f9d7233e1981ddd8075",
+      "zeitstempel": "2026-05-18T03:15:04.783429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10g_Reviewlisten.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10g_Reviewlisten.md",
+      "groesse": 3100,
+      "sha256": "ddea816d763b8bca3615f33e01521c2fac8a97c9452c80869475cd65caa9f063",
+      "zeitstempel": "2026-05-18T03:15:04.784429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10_Modulabhaengigkeiten_Schnittstellen_Konsistenz.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10_Modulabhaengigkeiten_Schnittstellen_Konsistenz.md",
+      "groesse": 2386,
+      "sha256": "e4bb582d54d3352db441e61a245af4e495c9011f49a965089bfad999d4820894",
+      "zeitstempel": "2026-05-18T03:15:04.784429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE11_Gesamtpruefung.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE11_Gesamtpruefung.md",
+      "groesse": 2347,
+      "sha256": "ab9f40f2399d18dd6d8b265e62e485b867b77a7d886458606d1dbc1fcb12cf4e",
+      "zeitstempel": "2026-05-18T03:15:04.784429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
+      "groesse": 1981,
+      "sha256": "17451d78baea7cec03c36ac5b253b753f87a3063289298b5594d2ed86f170bf1",
+      "zeitstempel": "2026-05-18T03:15:04.785429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_BARRIEREFREIHEIT_CHECKLISTE_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_BARRIEREFREIHEIT_CHECKLISTE_V1.md",
+      "groesse": 1058,
+      "sha256": "0bf96cfdb8f8713ece4ea3a4567c19b46d687334b980f7e1931f9bbf8649ed79",
+      "zeitstempel": "2026-05-18T03:15:04.785429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+      "groesse": 1093,
+      "sha256": "5fbcd1c95a0571c3a964c7eeace9f639d1a5c338cfb612ba1085ee20005af6c0",
+      "zeitstempel": "2026-05-18T03:15:04.786429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md",
+      "groesse": 839,
+      "sha256": "573c1b7082954985382a554fb05537a793dd847673e113402656d0008c3016a5",
+      "zeitstempel": "2026-05-18T03:15:04.786429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
+      "groesse": 1444,
+      "sha256": "8a5de71a6ad50313e985d5633c0a89537082d91007f545b11111970b4e104519",
+      "zeitstempel": "2026-05-18T03:15:04.787429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_WEBVIEW2_OPTION_V1.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_WEBVIEW2_OPTION_V1.md",
+      "groesse": 987,
+      "sha256": "b1fde0a69e5f3a2475b228c3140c399f047c8e854e47b9c6df0e2ec0c8ef1899",
+      "zeitstempel": "2026-05-18T03:15:04.787429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/00_Toolregister/ALIN_TOOLREGISTER.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/00_Toolregister/ALIN_TOOLREGISTER.json",
+      "groesse": 15873,
+      "sha256": "8974ba284f02025c996a786031e7e7107923f98744e12179fe77c75cc539120f",
+      "zeitstempel": "2026-05-18T03:15:04.788430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/01_Download_Quellen/ALIN_OFFIZIELLE_DOWNLOADQUELLEN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/01_Download_Quellen/ALIN_OFFIZIELLE_DOWNLOADQUELLEN.md",
+      "groesse": 1096,
+      "sha256": "6d91ab71312ef893df1bf2f3b0eeebf0612a9f744998e4f68534c1cda9abb896",
+      "zeitstempel": "2026-05-18T03:15:04.788430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/02_Installer_Offline/README_INSTALLER_DEPOT.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/02_Installer_Offline/README_INSTALLER_DEPOT.md",
+      "groesse": 446,
+      "sha256": "b81b31f7e270e9a08977d6cb435ffc56082823dfa0eee956f38b8696e3600882",
+      "zeitstempel": "2026-05-18T03:15:04.789429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/05_Lizenzen/ALIN_LIZENZSTATUS.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/05_Lizenzen/ALIN_LIZENZSTATUS.md",
+      "groesse": 485,
+      "sha256": "6760fae91ea86cc30e725eafb22a080986f70b662910b61acc8b3e800f9a5470",
+      "zeitstempel": "2026-05-18T03:15:04.789429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/06_Healthcheck/TOOL_HEALTHCHECK.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/06_Healthcheck/TOOL_HEALTHCHECK.json",
+      "groesse": 4129,
+      "sha256": "dada37f31ce42cc5f1fbb1766a8c6fcee61f2bc02ca47dfe758b0fa5f9fe8cfc",
+      "zeitstempel": "2026-05-18T03:15:04.790428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/07_Nachlade_Routine/ALIN_TOOL_NACHLADEKONZEPT.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/07_Nachlade_Routine/ALIN_TOOL_NACHLADEKONZEPT.md",
+      "groesse": 521,
+      "sha256": "06f28c74f7a4ff819d67e4e68a90889dbba668d7f61e1bc88d35476d3784c01c",
+      "zeitstempel": "2026-05-18T03:15:04.790428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/09_Toolbibliothek/08_Testpakete/ALIN_TOOL_TESTMATRIX.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/09_Toolbibliothek/08_Testpakete/ALIN_TOOL_TESTMATRIX.md",
+      "groesse": 693,
+      "sha256": "369088943c4476785caab891be0f1cc629ef156d480730d8d67a4bf4b1a182cb",
+      "zeitstempel": "2026-05-18T03:15:04.791429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/10_Update_Ueberwachung/00_Update_Register/ALIN_UPDATE_REGISTER.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/10_Update_Ueberwachung/00_Update_Register/ALIN_UPDATE_REGISTER.json",
+      "groesse": 7034,
+      "sha256": "403718e3cc9b256e585a9cf0cb534b532a6aabb76678b3c6ecbf71482aac7d4b",
+      "zeitstempel": "2026-05-18T03:15:04.791429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/10_Update_Ueberwachung/07_Rollback/ALIN_ROLLBACK_KONZEPT.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/10_Update_Ueberwachung/07_Rollback/ALIN_ROLLBACK_KONZEPT.md",
+      "groesse": 566,
+      "sha256": "592a454f38cfe58a5dfdef740d3e82a10640258523dca6391ab7c8309f3ead95",
+      "zeitstempel": "2026-05-18T03:15:04.792429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/11_Lizenzen_Compliance/02_Third_Party_Notices/THIRD_PARTY_LICENSES_TEMPLATE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/11_Lizenzen_Compliance/02_Third_Party_Notices/THIRD_PARTY_LICENSES_TEMPLATE.md",
+      "groesse": 541,
+      "sha256": "b81d0b8585d35a710a6ecf32b57612c060da5564e3beee3b3568cd658cd253f0",
+      "zeitstempel": "2026-05-18T03:15:04.792429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/11_Lizenzen_Compliance/04_Kauf_und_Commercial_Lizenzen/COMMERCIAL_LICENSES_REGISTER.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/11_Lizenzen_Compliance/04_Kauf_und_Commercial_Lizenzen/COMMERCIAL_LICENSES_REGISTER.md",
+      "groesse": 411,
+      "sha256": "636879df7d092eaa18d93ac5f30d1ce55f5cbf37999b97c320655ffb6e859de6",
+      "zeitstempel": "2026-05-18T03:15:04.793430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/11_Lizenzen_Compliance/05_Modelle_und_Sprachpakete/MODEL_AND_LANGUAGE_PACKAGE_LICENSES.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/11_Lizenzen_Compliance/05_Modelle_und_Sprachpakete/MODEL_AND_LANGUAGE_PACKAGE_LICENSES.md",
+      "groesse": 399,
+      "sha256": "059c9e7d2eadd8b14db839b863d65c16f0f2514c018ad499606bf7dbbd2de237",
+      "zeitstempel": "2026-05-18T03:15:04.794432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/11_Lizenzen_Compliance/06_Quellen_Nutzungsbedingungen/SOURCE_TERMS_REGISTER.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/11_Lizenzen_Compliance/06_Quellen_Nutzungsbedingungen/SOURCE_TERMS_REGISTER.md",
+      "groesse": 405,
+      "sha256": "b138ce3aad150e322cb4ac491ddd856819f7236d6a0869aafba6727a589538b6",
+      "zeitstempel": "2026-05-18T03:15:04.794432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/01_Feldhilfen/ALIN_FELDHILFEN.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/01_Feldhilfen/ALIN_FELDHILFEN.json",
+      "groesse": 738,
+      "sha256": "2f7d8c0f49ca031362ab105d08e75fcee4e45ca8bc12f38335ec9d99809f63d3",
+      "zeitstempel": "2026-05-18T03:15:04.795433"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/02_Buttonhilfen/ALIN_BUTTONHILFEN.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/02_Buttonhilfen/ALIN_BUTTONHILFEN.json",
+      "groesse": 745,
+      "sha256": "bf8fdad8d415f3873cd17c6a364cdff637bca91902d945dce5ef6ad375901610",
+      "zeitstempel": "2026-05-18T03:15:04.795433"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/03_Warnhinweise/ALIN_WARNHINWEISE.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/03_Warnhinweise/ALIN_WARNHINWEISE.json",
+      "groesse": 750,
+      "sha256": "618a9ab123dea20831d85abf948d6d07ad482251df35fa92e1c442b1be59127d",
+      "zeitstempel": "2026-05-18T03:15:04.796428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_BUTTON_BEZEICHNUNGEN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_BUTTON_BEZEICHNUNGEN.md",
+      "groesse": 562,
+      "sha256": "94c7bc1dfd126c65b1a27e64a13e381ab329ce437b83b8d3df52db2e5ed56324",
+      "zeitstempel": "2026-05-18T03:15:04.796428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_FELDBEZEICHNUNGEN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_FELDBEZEICHNUNGEN.md",
+      "groesse": 499,
+      "sha256": "7853809b18a6aad7e7a4c28c3186b7b257a889f5374234245da5657e20fa6ef7",
+      "zeitstempel": "2026-05-18T03:15:04.796428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_INFOBUTTON_TEXTE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_INFOBUTTON_TEXTE.md",
+      "groesse": 537,
+      "sha256": "af9139201b19d632fa05d507090154fe670907ae133331cd5a6ec3f623f2c29e",
+      "zeitstempel": "2026-05-18T03:15:04.797429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_KANZLEI_UI_WOERTERBUCH.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/04_Kanzleisprache/ALIN_KANZLEI_UI_WOERTERBUCH.md",
+      "groesse": 1176,
+      "sha256": "f9b13afee1e9087d65040d51a3dfac3173183761a2596c6f48c43535235edf1b",
+      "zeitstempel": "2026-05-18T03:15:04.797429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/05_Entwicklerdokumentation/ALIN_ENTWICKLERDOKUMENTATION_STRUKTUR.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/05_Entwicklerdokumentation/ALIN_ENTWICKLERDOKUMENTATION_STRUKTUR.md",
+      "groesse": 407,
+      "sha256": "958ee84ea60fcecfd6acb66954fb28469b3eb81eb58ed883862e4f7e8f1433bb",
+      "zeitstempel": "2026-05-18T03:15:04.798430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/06_Benutzerhandbuch/ALIN_BENUTZERHILFE_STRUKTUR.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/06_Benutzerhandbuch/ALIN_BENUTZERHILFE_STRUKTUR.md",
+      "groesse": 338,
+      "sha256": "845162327545cf72d1db60b82b312e9f187af2067c8a57f9c6b9accf8ee02de2",
+      "zeitstempel": "2026-05-18T03:15:04.798430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/07_Kontext_Hilfe/ALIN_INFOBUTTON_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/07_Kontext_Hilfe/ALIN_INFOBUTTON_REGELN.md",
+      "groesse": 648,
+      "sha256": "d6e1a1c5aae409cc812e72f95b34a6b6dccb734b8d5300139231104545ff04e8",
+      "zeitstempel": "2026-05-18T03:15:04.799429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/13_Anforderungen_Abnahme/DEFINITION_OF_DONE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/13_Anforderungen_Abnahme/DEFINITION_OF_DONE.md",
+      "groesse": 843,
+      "sha256": "de15e54bd1fca0055a9e2a1ddf4aefe6e7eba5052f21f7af63bb648055e4ce43",
+      "zeitstempel": "2026-05-18T03:15:04.799429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0001_WINDOWS_APP_GRUNDLAGE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0001_WINDOWS_APP_GRUNDLAGE.md",
+      "groesse": 510,
+      "sha256": "f36ed07b2746f9b1ade9f6f5a9f249b80e5d81ee53909a010f432f920fe04801",
+      "zeitstempel": "2026-05-18T03:15:04.800430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0002_TOOLREGISTER.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0002_TOOLREGISTER.md",
+      "groesse": 424,
+      "sha256": "146fd41b5770cacdb0dc0bc1828b692a1f3edadd7994d06234dc097ef7399a97",
+      "zeitstempel": "2026-05-18T03:15:04.800430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0003_OFFLINE_BETRIEB.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0003_OFFLINE_BETRIEB.md",
+      "groesse": 421,
+      "sha256": "3e872c352d477bf2617adbb91f72d2b04d389f6547013b1156a31f32d34e9b11",
+      "zeitstempel": "2026-05-18T03:15:04.801429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0004_ORIGINALSCHUTZ.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0004_ORIGINALSCHUTZ.md",
+      "groesse": 393,
+      "sha256": "c60a36e1a712d6bec4f24aad523c0f866f2b22d22e84224bd0f7a151a8803848",
+      "zeitstempel": "2026-05-18T03:15:04.801429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0005_KEINE_HARTE_VERDRAHTUNG.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/14_Architekturentscheidungen/ADR_0005_KEINE_HARTE_VERDRAHTUNG.md",
+      "groesse": 357,
+      "sha256": "db171763347f91a85346e09acf8d809b96334b44334b494de23e9b08838dcc87",
+      "zeitstempel": "2026-05-18T03:15:04.802430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/15_Teststrategie/FEHLERFALL_TESTS.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/15_Teststrategie/FEHLERFALL_TESTS.md",
+      "groesse": 559,
+      "sha256": "d534e9a41d042e876066ec52b7ba64153b22a73e4b87372f381a40ae28bd8674",
+      "zeitstempel": "2026-05-18T03:15:04.802430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/15_Teststrategie/REGRESSIONSTEST_PLAN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/15_Teststrategie/REGRESSIONSTEST_PLAN.md",
+      "groesse": 713,
+      "sha256": "88d43829a4bccb777007c231bda4bb3506f2603b50556936c49cb99f0598e252",
+      "zeitstempel": "2026-05-18T03:15:04.803430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/15_Teststrategie/TESTDATEN_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/15_Teststrategie/TESTDATEN_REGELN.md",
+      "groesse": 475,
+      "sha256": "257bd68c7dd88bbd56c6117cbfd22ef2b473e2584e75ff225c520545f3b65bf1",
+      "zeitstempel": "2026-05-18T03:15:04.803430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/15_Teststrategie/TESTKATALOG.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/15_Teststrategie/TESTKATALOG.md",
+      "groesse": 919,
+      "sha256": "526bb86b615d072394461113a1240b65041f670187c7c4da4251650a072aa5d0",
+      "zeitstempel": "2026-05-18T03:15:04.803430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+      "groesse": 1155,
+      "sha256": "ff45e05fc0f133cc5d77da94907b1da0d4a0b1972d57ed408c4e6678d38508ab",
+      "zeitstempel": "2026-05-18T03:15:04.804428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
+      "groesse": 443,
+      "sha256": "09d4d966b14e02d2ba04d71d2647aa0d8049dcfc4b870b3ead765cdf4120a8b4",
+      "zeitstempel": "2026-05-18T03:15:04.804428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md",
+      "groesse": 385,
+      "sha256": "64f363f5e7bf24240bb797a1acfa46455cbc1ff996da0fcea2e79267fe5377a5",
+      "zeitstempel": "2026-05-18T03:15:04.805429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/16_Build_Release/VERSION.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/16_Build_Release/VERSION.json",
+      "groesse": 212,
+      "sha256": "e9fa6b4f55fca915afab1812d68449ce8cea43dcc7177bd2aa0b29e42af2229b",
+      "zeitstempel": "2026-05-18T03:15:04.805429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/17_Backup_Restore/BACKUP_KONZEPT.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/17_Backup_Restore/BACKUP_KONZEPT.md",
+      "groesse": 512,
+      "sha256": "e6ebaed77959e5dd3f26875c2ed2a37dacb9afe4bacd76ad2c934cdecefc8860",
+      "zeitstempel": "2026-05-18T03:15:04.805429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/17_Backup_Restore/RESTORE_TESTPLAN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/17_Backup_Restore/RESTORE_TESTPLAN.md",
+      "groesse": 267,
+      "sha256": "7114d44a5343514bd0579208c67a9e0fc2fec719185df3c3bc3eb8a89b4c2769",
+      "zeitstempel": "2026-05-18T03:15:04.806429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+      "groesse": 406,
+      "sha256": "33346147c78913507b8446143eda84ec8cf07d17be12967332f0a3b7486d5648",
+      "zeitstempel": "2026-05-18T03:15:04.806429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+      "groesse": 698,
+      "sha256": "eef4e171761b7772119e693b97f22c4207c219f37f7a66db262f80ed572620c8",
+      "zeitstempel": "2026-05-18T03:15:04.807428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/19_Secrets_Sicherheit/API_KEY_VERBOT_GIT.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/19_Secrets_Sicherheit/API_KEY_VERBOT_GIT.md",
+      "groesse": 349,
+      "sha256": "a9d7b8367b7078199ab81f63d635af90d7a00bd528d75b3f9c5bc14d3cf8c39e",
+      "zeitstempel": "2026-05-18T03:15:04.807428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/19_Secrets_Sicherheit/LOG_SANITIZING_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/19_Secrets_Sicherheit/LOG_SANITIZING_REGELN.md",
+      "groesse": 420,
+      "sha256": "c7fe70c1180ec309911cb42a73f330510d90983aa223a7435cc5fead017eb227",
+      "zeitstempel": "2026-05-18T03:15:04.807428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/19_Secrets_Sicherheit/SECRETS_POLICY.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/19_Secrets_Sicherheit/SECRETS_POLICY.md",
+      "groesse": 554,
+      "sha256": "73cd13a741c789520a31b2374b6c810b9b080be11ced18bdfb205db2709200e3",
+      "zeitstempel": "2026-05-18T03:15:04.808429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+      "groesse": 404,
+      "sha256": "504a91427d16a606b5ff996a30df73aaca9a4fc278c7b2d2321dd4fb8a6fae4b",
+      "zeitstempel": "2026-05-18T03:15:04.808429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+      "groesse": 410,
+      "sha256": "f1c7b8f426486af4d95b6e1c323aa0d4d9e1668f6fb8ec36b7b10a28cef301b8",
+      "zeitstempel": "2026-05-18T03:15:04.809429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/21_Support_Diagnose/DIAGNOSEPAKET_SCHEMA.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/21_Support_Diagnose/DIAGNOSEPAKET_SCHEMA.json",
+      "groesse": 659,
+      "sha256": "33967c60a132daf3aac091b89d38949fba83b6c19b1367348a8f0b0acf81fe67",
+      "zeitstempel": "2026-05-18T03:15:04.809429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/21_Support_Diagnose/SUPPORT_EXPORT_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/21_Support_Diagnose/SUPPORT_EXPORT_REGELN.md",
+      "groesse": 397,
+      "sha256": "9ce5ef707a9cc473440baa4ba7fa449f4b1322dd92bf8928e90b7a46745018f6",
+      "zeitstempel": "2026-05-18T03:15:04.810430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/22_Performance_Limits/LEISTUNGSGRENZEN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/22_Performance_Limits/LEISTUNGSGRENZEN.md",
+      "groesse": 585,
+      "sha256": "357653b9e41e580089699634b7e040f020873513847ba2ceed50aab16c80a3fc",
+      "zeitstempel": "2026-05-18T03:15:04.810430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/22_Performance_Limits/TIMEOUT_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/22_Performance_Limits/TIMEOUT_REGELN.md",
+      "groesse": 471,
+      "sha256": "f230b187e0a06440e693833e760b7ec16c1063c3b832de2ead0114460f722ffd",
+      "zeitstempel": "2026-05-18T03:15:04.811430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/22_Performance_Limits/WIEDERAUFNAHME_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/22_Performance_Limits/WIEDERAUFNAHME_REGELN.md",
+      "groesse": 476,
+      "sha256": "0317fc7ce023c7620311881f9ab253fa23b964e3c6b825bf07b49bc7e909959f",
+      "zeitstempel": "2026-05-18T03:15:04.811430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/23_Import_Export/EXPORTFORMATE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/23_Import_Export/EXPORTFORMATE.md",
+      "groesse": 417,
+      "sha256": "7e0e336e21185ca16b34642fa427efb40197a0a3e82dd9af89c8db85d0f059a2",
+      "zeitstempel": "2026-05-18T03:15:04.812430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/23_Import_Export/IMPORTFORMATE.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/23_Import_Export/IMPORTFORMATE.md",
+      "groesse": 357,
+      "sha256": "b4cab60861cf22f055cfe49c2551681b7d89034bf54df0d0e8cdf913554236c8",
+      "zeitstempel": "2026-05-18T03:15:04.812430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/23_Import_Export/PORTABILITAET_REGELN.md",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/23_Import_Export/PORTABILITAET_REGELN.md",
+      "groesse": 420,
+      "sha256": "a40416f35a97bbde9fe477943e6f06047252b548f411930daf69425516d421d4",
+      "zeitstempel": "2026-05-18T03:15:04.813430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_ENTWICKLUNG.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_ENTWICKLUNG.json",
+      "groesse": 453,
+      "sha256": "6f4ca18b4be774fda2352822de93d68cc28ca6dc820ae35b89504d9248b9b716",
+      "zeitstempel": "2026-05-18T03:15:04.813430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json",
+      "groesse": 472,
+      "sha256": "6a118afed2aab7b6daac8f4a0cb51f2ec6ad83056103a47545125edf0f3eda5a",
+      "zeitstempel": "2026-05-18T03:15:04.813430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_KANZLEI_PC.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_KANZLEI_PC.json",
+      "groesse": 465,
+      "sha256": "d8b69ed8174e83fa69ecb355acde68b58a26bf983dc5a12b413bdc52740cc601",
+      "zeitstempel": "2026-05-18T03:15:04.814429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_TEST.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_TEST.json",
+      "groesse": 435,
+      "sha256": "dc59716af72eafe86c75f5e8cd5022cf07db994d3536120f8b203388f8b83e89",
+      "zeitstempel": "2026-05-18T03:15:04.814429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core02_altbestand_inventar.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core02_altbestand_inventar.py",
+      "groesse": 23656,
+      "sha256": "cb767c43c8de42d43109c11fa70a56624471381b63afde14494f469f806533b1",
+      "zeitstempel": "2026-05-18T03:15:04.815427"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core02_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core02_pruefung.py",
+      "groesse": 7634,
+      "sha256": "449ef48c4fbe873ebe6598aa814d1d579491ca98c5cc25e2f3abf38bdb52ac17",
+      "zeitstempel": "2026-05-18T03:15:04.815427"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core03_registerqualitaet_analyse.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core03_registerqualitaet_analyse.py",
+      "groesse": 12302,
+      "sha256": "20ecbe8ef1be7cf9092fab1dc3b815695f7d6e3480a7777130850ceaa92e0630",
+      "zeitstempel": "2026-05-18T03:15:04.815427"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core04_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core04_pruefung.py",
+      "groesse": 4067,
+      "sha256": "495e43fc00bb307f69a5a53e2240b6601157a5d46c242d5a651dffe016ade943",
+      "zeitstempel": "2026-05-18T03:15:04.816430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core05_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core05_pruefung.py",
+      "groesse": 4302,
+      "sha256": "c2d78363093addcedff1e093d4fe8c4526f43f5dfd2f17c7ca479d1450dbd783",
+      "zeitstempel": "2026-05-18T03:15:04.816430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core05_toolregister_befuellen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core05_toolregister_befuellen.py",
+      "groesse": 4135,
+      "sha256": "815a88b1dc358f9e01d88007743fbf9d0d313c730c7f26f5617e3de54ccbde9c",
+      "zeitstempel": "2026-05-18T03:15:04.817429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core06_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core06_pruefung.py",
+      "groesse": 6677,
+      "sha256": "8513310f8f5611df1ab671000c3fbb688956a8c18c39b05665dfc4fd198f4f44",
+      "zeitstempel": "2026-05-18T03:15:04.817429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core06_ressourcenregister_befuellen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core06_ressourcenregister_befuellen.py",
+      "groesse": 6975,
+      "sha256": "32bcf0af6d78f0996b7b2d44c2f0bb53763fbad900c2cdc1638994c1bbce03fd",
+      "zeitstempel": "2026-05-18T03:15:04.817429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core07_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core07_pruefung.py",
+      "groesse": 5146,
+      "sha256": "a156e173a6c27e92ff253246a46b0b93ece070ece63914eb37682b8f89b8b553",
+      "zeitstempel": "2026-05-18T03:15:04.818428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core07_quellen_adapterregister_befuellen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core07_quellen_adapterregister_befuellen.py",
+      "groesse": 6317,
+      "sha256": "155efd24e95d6e4f3d4c97069d92f67410fe2c8e387efda526e8cd56937110b9",
+      "zeitstempel": "2026-05-18T03:15:04.818428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core08_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core08_pruefung.py",
+      "groesse": 6470,
+      "sha256": "bd93724abd3d4b6058e293a8db71a704a5f116c2fd33bf7eb8a9b3fe937b42e3",
+      "zeitstempel": "2026-05-18T03:15:04.819427"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core08_skillregister_befuellen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core08_skillregister_befuellen.py",
+      "groesse": 5846,
+      "sha256": "6ba2190d05752e6b7187f241475dee396c3c0b24c0a32236e99cf3c208863544",
+      "zeitstempel": "2026-05-18T03:15:04.819427"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core09_modulregister_befuellen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core09_modulregister_befuellen.py",
+      "groesse": 50063,
+      "sha256": "d49d8a2491324ee3849cc701022465a8908e0b3620fbe975dab71f0bcd7f3166",
+      "zeitstempel": "2026-05-18T03:15:04.820429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core09_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core09_pruefung.py",
+      "groesse": 11078,
+      "sha256": "eed06346edc3752976091d401ce9fa925a4759804a86531b909fea7ce3380649",
+      "zeitstempel": "2026-05-18T03:15:04.820429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10a_findings_priorisierung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10a_findings_priorisierung.py",
+      "groesse": 19042,
+      "sha256": "4a058c5e07e85b0025dff488a3cecc7f483b8acdf55cd5042320bc13bc59210d",
+      "zeitstempel": "2026-05-18T03:15:04.820429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10b_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10b_pruefung.py",
+      "groesse": 3989,
+      "sha256": "da21ff3d194a7b6944ac1c28c9038ba6a9a85e4b0222a91bbd71d833c61e63cb",
+      "zeitstempel": "2026-05-18T03:15:04.821430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10b_ressourcenluecken_klaeren.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10b_ressourcenluecken_klaeren.py",
+      "groesse": 6303,
+      "sha256": "457527318d2535d841b79cfbae2aa61549bb70d629ea3acad18bd045c2c6b0ef",
+      "zeitstempel": "2026-05-18T03:15:04.821430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10c_sql_modulnamen_bereinigen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10c_sql_modulnamen_bereinigen.py",
+      "groesse": 4828,
+      "sha256": "d99669cfa4bc8982ce637bdedb816c235cb6b82309fef77828c6d5f238c9c623",
+      "zeitstempel": "2026-05-18T03:15:04.822429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10d_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10d_pruefung.py",
+      "groesse": 5099,
+      "sha256": "6b15688513761ac4b98892d163a323bd0627c56d25ba209d915c1cf7a6077d10",
+      "zeitstempel": "2026-05-18T03:15:04.822429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10d_schnittstellenbereiche_nachtragen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10d_schnittstellenbereiche_nachtragen.py",
+      "groesse": 5299,
+      "sha256": "ac32d8eb6e97088878f5b30840e5ab05b0db8edc939e5bbaa30bc1f31094714e",
+      "zeitstempel": "2026-05-18T03:15:04.822429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10e_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10e_pruefung.py",
+      "groesse": 1610,
+      "sha256": "4107a7deb69a22e064d3595aecdbe1fd2024196e09e501df97d807db7b9db7cd",
+      "zeitstempel": "2026-05-18T03:15:04.823428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10e_ui01_abhaengigkeit_klaeren.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10e_ui01_abhaengigkeit_klaeren.py",
+      "groesse": 3454,
+      "sha256": "7de909a050494d41033d3cb74eddb4ef8c5a6df7666d562576a0c11c931eb048",
+      "zeitstempel": "2026-05-18T03:15:04.823428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10f_platzhalter_verfeinern.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10f_platzhalter_verfeinern.py",
+      "groesse": 15654,
+      "sha256": "4fca22d0ec431bc27bfe15070d4c315f89661aec28f480146a113c205ed19eb4",
+      "zeitstempel": "2026-05-18T03:15:04.824432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10f_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10f_pruefung.py",
+      "groesse": 1596,
+      "sha256": "7a57c8ada97e1998411dc9ac125cb173ef8a6de29edde55f208e5fed7398d1d3",
+      "zeitstempel": "2026-05-18T03:15:04.824432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10g_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10g_pruefung.py",
+      "groesse": 2504,
+      "sha256": "90f79dfb9f3a030c7ae27f951fc691e93749c99a8bee218a5e1870c6c9c2593d",
+      "zeitstempel": "2026-05-18T03:15:04.824432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10g_reviewlisten_dokumentieren.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10g_reviewlisten_dokumentieren.py",
+      "groesse": 12394,
+      "sha256": "6c4ca6e9cc2f29a9a83710d5746f828d094de1b65b216703a40bf50d88185978",
+      "zeitstempel": "2026-05-18T03:15:04.825430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core10_konsistenz_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core10_konsistenz_pruefung.py",
+      "groesse": 17285,
+      "sha256": "a52f73e0b6a58d4a699050955d0bc356e48e1562a4354687ca3452dab7ff737b",
+      "zeitstempel": "2026-05-18T03:15:04.825430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/alin_core11_gesamtpruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/alin_core11_gesamtpruefung.py",
+      "groesse": 9820,
+      "sha256": "890588a9eb8de6291ca0d5fbaf6af22a54609a192471964ccb0833c521b88ef7",
+      "zeitstempel": "2026-05-18T03:15:04.826429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/check_alin_core10a_findings_priorisierung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/check_alin_core10a_findings_priorisierung.py",
+      "groesse": 2376,
+      "sha256": "0e6f9632fe1e6bd0ee6e79b8e692901d929d8b6a18825fba59228f5ff696b87a",
+      "zeitstempel": "2026-05-18T03:15:04.826429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/check_alin_core10c_sql_modulnamen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/check_alin_core10c_sql_modulnamen.py",
+      "groesse": 1373,
+      "sha256": "9e2b05f50c1dfae9fa051161c18e1473c533f86b8cbf582423000ef1a5a85e7b",
+      "zeitstempel": "2026-05-18T03:15:04.827429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE02_Altbestand_Inventar.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE02_Altbestand_Inventar.ps1",
+      "groesse": 3367,
+      "sha256": "a213dd2cba042e2443f2d46322840ef86b425453166d93f985dc4cb6aa7ba071",
+      "zeitstempel": "2026-05-18T03:15:04.827429"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE04_Update_Register.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE04_Update_Register.ps1",
+      "groesse": 2391,
+      "sha256": "27b1692339efe2ffd5d26bffd5b099bdbf0fc86dc24704f3087b65e05a572065",
+      "zeitstempel": "2026-05-18T03:15:04.828428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE05_Toolregister.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE05_Toolregister.ps1",
+      "groesse": 2451,
+      "sha256": "66c656e62fd75ba5ee48e3b9b9bcaa05a1ae7a3f11dea58c9b407e675e1ec6ad",
+      "zeitstempel": "2026-05-18T03:15:04.828428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE06_Ressourcenregister.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE06_Ressourcenregister.ps1",
+      "groesse": 1226,
+      "sha256": "4681a68ae1b7687f1c217d370cfe927f51edac09dca96c573d0abd5d285ccfd8",
+      "zeitstempel": "2026-05-18T03:15:04.828428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE07_Quellen_Adapterregister.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE07_Quellen_Adapterregister.ps1",
+      "groesse": 1261,
+      "sha256": "2f260f44e9c14e792a21ff8fa75737b825e311651f5878aad7964188067981c8",
+      "zeitstempel": "2026-05-18T03:15:04.829430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE08_Skillregister.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE08_Skillregister.ps1",
+      "groesse": 1196,
+      "sha256": "498a6f7aad8c2d9e5a8389873e3e79ba13bae081a25831458df4b2c1a367d978",
+      "zeitstempel": "2026-05-18T03:15:04.829430"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE09_Modulregister.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE09_Modulregister.ps1",
+      "groesse": 2708,
+      "sha256": "567a82d024ee9fd5944abebe2a927b1d92f301103c59d99e72dabdd8fcdde8fa",
+      "zeitstempel": "2026-05-18T03:15:04.830428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10a_Priorisierung.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10a_Priorisierung.ps1",
+      "groesse": 1863,
+      "sha256": "cdd34c5ff67d60e996879022034651be500f601330a6bcb5f8cb619f1d5c17aa",
+      "zeitstempel": "2026-05-18T03:15:04.830428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10b_Ressourcenluecken.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10b_Ressourcenluecken.ps1",
+      "groesse": 1257,
+      "sha256": "52792f9e2835a46173d300addd4fab84bc2283b218a379d2bc19178998c39d7a",
+      "zeitstempel": "2026-05-18T03:15:04.830428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10c_SQL_Modulnamen.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10c_SQL_Modulnamen.ps1",
+      "groesse": 1686,
+      "sha256": "a6d1b69db434fcfa950f7a03d4458682d63b771dd320ee0bbe51c94569d4746a",
+      "zeitstempel": "2026-05-18T03:15:04.831428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10d_Schnittstellenbereiche.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10d_Schnittstellenbereiche.ps1",
+      "groesse": 2177,
+      "sha256": "3e047315deb78f8282e295ff8911e550a1aaf60606f58ca53acee511ca5d1bcb",
+      "zeitstempel": "2026-05-18T03:15:04.831428"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10e_UI01_Abhaengigkeit.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10e_UI01_Abhaengigkeit.ps1",
+      "groesse": 1757,
+      "sha256": "dc63b46042c0a1c78452c0c625658ff37f721572aa7e8f39169d9fcb842a8c37",
+      "zeitstempel": "2026-05-18T03:15:04.832431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10f_Platzhalter_Verfeinern.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10f_Platzhalter_Verfeinern.ps1",
+      "groesse": 2149,
+      "sha256": "33427223c55d1d4d7e638fa070db73ad812e5dc399776dc0ab92c766addb2b3d",
+      "zeitstempel": "2026-05-18T03:15:04.832431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10g_Reviewlisten.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10g_Reviewlisten.ps1",
+      "groesse": 2149,
+      "sha256": "a3e2ce5ce8a5359b1418993d87a6024113a17cb10da7eac4c46b3323cf53a25b",
+      "zeitstempel": "2026-05-18T03:15:04.832431"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE10_Konsistenz.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE10_Konsistenz.ps1",
+      "groesse": 1839,
+      "sha256": "a74c6898a42e8ce120a0b92967b90d5875b3107cbbd9b4cb594ebd28f6841ff9",
+      "zeitstempel": "2026-05-18T03:15:04.833432"
+    },
+    {
+      "relativer_pfad": "ALIN_Neustart_Core/Scripts/Run_CORE11_Gesamtpruefung.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/ALIN_Neustart_Core/Scripts/Run_CORE11_Gesamtpruefung.ps1",
+      "groesse": 1603,
+      "sha256": "5711052b0e42555bb64f2dfcbcc0e770caeef573ccb8c4b7592e869635ba3ed8",
+      "zeitstempel": "2026-05-18T03:15:04.833432"
+    },
+    {
+      "relativer_pfad": "Config/ui01_anwaltsansicht_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui01_anwaltsansicht_v1.json",
+      "groesse": 1438,
+      "sha256": "80d6ab7ddbb938010af05e768f7be94cda939a012bd80a9c06d44e1590cac236",
+      "zeitstempel": "2026-05-18T03:15:04.834435"
+    },
+    {
+      "relativer_pfad": "Config/ui02c_freigabe_dropdowns_notizen_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui02c_freigabe_dropdowns_notizen_v1.json",
+      "groesse": 1799,
+      "sha256": "0e3bd07b64adf3f7d05bec8afe112810b9b3e77ebfa85bc5d06fadd1d779ee8c",
+      "zeitstempel": "2026-05-18T03:15:04.835436"
+    },
+    {
+      "relativer_pfad": "Config/ui02_0_bestandsabgleich_tuerschwelle_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui02_0_bestandsabgleich_tuerschwelle_v1.json",
+      "groesse": 1470,
+      "sha256": "f76b5255354fa16c83c783caa0bac971fbd1d7da4d87ea6cc653cc7075befd43",
+      "zeitstempel": "2026-05-18T03:15:04.835436"
+    },
+    {
+      "relativer_pfad": "Config/ui02_tuerschwelle_bau_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui02_tuerschwelle_bau_v1.json",
+      "groesse": 1644,
+      "sha256": "57e711d0fd1c3ddcaf2e7dcbdc2e0bae723e48cd6350f697614fa11b220f6595",
+      "zeitstempel": "2026-05-18T03:15:04.836439"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1b_ocr_uebersetzungskontrolle_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1b_ocr_uebersetzungskontrolle_v1.json",
+      "groesse": 838,
+      "sha256": "19d8434f3f6a2a0cc79c714ea4610e5dd047d32e1041d22191058bdbb6e575ab",
+      "zeitstempel": "2026-05-18T03:15:04.836439"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1c_uebersetzungsarbeitsplatz_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1c_uebersetzungsarbeitsplatz_v1.json",
+      "groesse": 961,
+      "sha256": "f453e1e7ef29408d99b90c40c832d8430cda12313a747716f1a429de67d098d3",
+      "zeitstempel": "2026-05-18T03:15:04.837440"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1d_ocr_freigabeablauf_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1d_ocr_freigabeablauf_v1.json",
+      "groesse": 818,
+      "sha256": "739a9fc3a1b32582bf07b4097beae553eba2691280ae66f1b7de689e03f4a695",
+      "zeitstempel": "2026-05-18T03:15:04.837440"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1e_uebergabe_freigabe_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1e_uebergabe_freigabe_v1.json",
+      "groesse": 937,
+      "sha256": "c79f33068625053f7b50da35b858a31b7db3d657a82dbc4f38bf49c7926920e2",
+      "zeitstempel": "2026-05-18T03:15:04.838439"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1f_geparkte_auftraege_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1f_geparkte_auftraege_v1.json",
+      "groesse": 856,
+      "sha256": "a3bb402269bb112a0182de40f1db8fb6624a2886ee2d019c89d4619054db7284",
+      "zeitstempel": "2026-05-18T03:15:04.838439"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1g_gesamtansicht_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1g_gesamtansicht_v1.json",
+      "groesse": 1244,
+      "sha256": "8e16f66db47eb69136e3ee4eac67d27997ade2eb65b06a5b5d0ee874f69e9bde",
+      "zeitstempel": "2026-05-18T03:15:04.839445"
+    },
+    {
+      "relativer_pfad": "Config/ui03_1_anwalts_dreiansicht_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui03_1_anwalts_dreiansicht_v1.json",
+      "groesse": 2944,
+      "sha256": "69d9ada0edc123660c3d102fdbabd762f2b662771608d7117b83d34b16f7bcfa",
+      "zeitstempel": "2026-05-18T03:15:04.839445"
+    },
+    {
+      "relativer_pfad": "Config/ui04_durchstich_sekretariat_anwalt_ruecklauf_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui04_durchstich_sekretariat_anwalt_ruecklauf_v1.json",
+      "groesse": 3653,
+      "sha256": "1401b850c1a1bc0b8e7684b931939cf010a8f192a6854ef11db28cf4d845143a",
+      "zeitstempel": "2026-05-18T03:15:04.840437"
+    },
+    {
+      "relativer_pfad": "Config/ui05_mandantenakte_arbeitszentrale_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui05_mandantenakte_arbeitszentrale_v1.json",
+      "groesse": 1663,
+      "sha256": "d9e77ca1b85ad905455963fee61e0adce63780194444efc5e5dd189725003806",
+      "zeitstempel": "2026-05-18T03:15:04.840437"
+    },
+    {
+      "relativer_pfad": "Config/ui06_musterlauf_gesamtkette_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui06_musterlauf_gesamtkette_v1.json",
+      "groesse": 2040,
+      "sha256": "aec023aa6ce72687e5c34d21d088e67b5a71878f7991b85edc36d73b214c34a1",
+      "zeitstempel": "2026-05-18T03:15:04.841439"
+    },
+    {
+      "relativer_pfad": "Config/ui07b_gesamtfreeze_demo_betriebsstrecke_v1.json",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Config/ui07b_gesamtfreeze_demo_betriebsstrecke_v1.json",
+      "groesse": 6610,
+      "sha256": "9354a40e55ae035bca8338b9d011e50c8138c6f2cdb0ce366f825e4a73b22912",
+      "zeitstempel": "2026-05-18T03:15:04.841439"
+    },
+    {
+      "relativer_pfad": "Scripts/UI01_ANWALTSANSICHT_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI01_ANWALTSANSICHT_AUTOLAUF.ps1",
+      "groesse": 2633,
+      "sha256": "13cea675b5658ed6e9b18bde3735f6f7ad485460504990f76d1eee5eed5ea2a3",
+      "zeitstempel": "2026-05-18T03:15:04.842444"
+    },
+    {
+      "relativer_pfad": "Scripts/UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF.ps1",
+      "groesse": 2682,
+      "sha256": "5125f6f9f6dfc2e6e9be7c42e4399ed99aaddfde5da7bf970dcdf542bde964f5",
+      "zeitstempel": "2026-05-18T03:15:04.843437"
+    },
+    {
+      "relativer_pfad": "Scripts/ui02_0_bestandsabgleich_tuerschwelle.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/ui02_0_bestandsabgleich_tuerschwelle.ps1",
+      "groesse": 1494,
+      "sha256": "0834daa593e8cd6083701147ddb9371cf1f1ac4a41912809cf5756bddf3afcca",
+      "zeitstempel": "2026-05-18T03:15:04.843437"
+    },
+    {
+      "relativer_pfad": "Scripts/ui02_tuerschwelle_bau_starter.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/ui02_tuerschwelle_bau_starter.ps1",
+      "groesse": 1188,
+      "sha256": "fb4883e3bb3b0fb02cca4220d39deaf665a2db90a81ba0e38d7ff33052cbbf45",
+      "zeitstempel": "2026-05-18T03:15:04.844437"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF.ps1",
+      "groesse": 2494,
+      "sha256": "362886a70577715975fa96fd14d8177a4ce04465e98f957d1901cb7c9e8ec33f",
+      "zeitstempel": "2026-05-18T03:15:04.845437"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE_AUTOLAUF.ps1",
+      "groesse": 2234,
+      "sha256": "2d40349ef4de7a2bf8b2f21c7a354c8938f113da48d35a7a74dac38bfaecad25",
+      "zeitstempel": "2026-05-18T03:15:04.845437"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_AUTOLAUF.ps1",
+      "groesse": 2299,
+      "sha256": "4dbe87c090613624704059ffe643f3cea5fc9c6624d50b3c6124d331402ba3c8",
+      "zeitstempel": "2026-05-18T03:15:04.846439"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1d_OCR_FREIGABEABLAUF_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1d_OCR_FREIGABEABLAUF_AUTOLAUF.ps1",
+      "groesse": 2224,
+      "sha256": "a1ca46650b7d0a60c8eb92580db7971c39cf43b48c14853e982953ab866a16ec",
+      "zeitstempel": "2026-05-18T03:15:04.846439"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1e_UEBERGABE_FREIGABE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1e_UEBERGABE_FREIGABE_AUTOLAUF.ps1",
+      "groesse": 2279,
+      "sha256": "fddd94599985ef13ac43c607f928dc7e62d984ae1f16027310671ef9edda0840",
+      "zeitstempel": "2026-05-18T03:15:04.847438"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1f_GEPARKTE_AUFTRAEGE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1f_GEPARKTE_AUFTRAEGE_AUTOLAUF.ps1",
+      "groesse": 2240,
+      "sha256": "fea4f65ea0028f65ba1958c73fb9b6b38cf911b2b5181949d2f7b6e76ed57250",
+      "zeitstempel": "2026-05-18T03:15:04.847438"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1g_GESAMTANSICHT_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1g_GESAMTANSICHT_AUTOLAUF.ps1",
+      "groesse": 1118,
+      "sha256": "2e2e4e3276d9c95f893c734cff29209ca7ea54150eb640174e1d1899056d5524",
+      "zeitstempel": "2026-05-18T03:15:04.847438"
+    },
+    {
+      "relativer_pfad": "Scripts/UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF.ps1",
+      "groesse": 2162,
+      "sha256": "3d35471114043c1e0528cda3c154c72cab08e1838ce9c136bb1c911fe6291622",
+      "zeitstempel": "2026-05-18T03:15:04.848946"
+    },
+    {
+      "relativer_pfad": "Scripts/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF.ps1",
+      "groesse": 2462,
+      "sha256": "78f77ace72d5f3f0e75a93b31e2437bf1fe41cd2941724c038a497afda0d6698",
+      "zeitstempel": "2026-05-18T03:15:04.848946"
+    },
+    {
+      "relativer_pfad": "Scripts/UI05_MANDANTENAKTE_ARBEITSZENTRALE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI05_MANDANTENAKTE_ARBEITSZENTRALE_AUTOLAUF.ps1",
+      "groesse": 1635,
+      "sha256": "d4f927c3fe5c6e3923f48f542b003da412c994b3c81e67191a86489d648c6af2",
+      "zeitstempel": "2026-05-18T03:15:04.849952"
+    },
+    {
+      "relativer_pfad": "Scripts/UI06B_FEHLERPFAD_PRUEFUNG_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI06B_FEHLERPFAD_PRUEFUNG_AUTOLAUF.ps1",
+      "groesse": 1786,
+      "sha256": "11e2def64d9ac9e4dba027c6d4b56f41347df236f78d15132299c3650f38da5d",
+      "zeitstempel": "2026-05-18T03:15:04.849952"
+    },
+    {
+      "relativer_pfad": "Scripts/UI06_MUSTERLAUF_GESAMTKETTE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI06_MUSTERLAUF_GESAMTKETTE_AUTOLAUF.ps1",
+      "groesse": 1824,
+      "sha256": "60d96080704202c33e1318951ad8d852d5dc938f235f79da68e18772c7808e0f",
+      "zeitstempel": "2026-05-18T03:15:04.850954"
+    },
+    {
+      "relativer_pfad": "Scripts/UI07B_GESAMTFREEZE_DEMO_BETRIEBSSTRECKE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI07B_GESAMTFREEZE_DEMO_BETRIEBSSTRECKE_AUTOLAUF.ps1",
+      "groesse": 2818,
+      "sha256": "5a6d7e51754b37a59afcc64f767e9a86694f4be2e4bd71d386a01b9eed7d7ed2",
+      "zeitstempel": "2026-05-18T03:15:04.850954"
+    },
+    {
+      "relativer_pfad": "Scripts/UI07_BETRIEBSVORBEREITUNG_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI07_BETRIEBSVORBEREITUNG_AUTOLAUF.ps1",
+      "groesse": 2964,
+      "sha256": "de1133b0cec6f402df28d0c67ee9ff5c274e631242b050da5ed3d62088f4c6d8",
+      "zeitstempel": "2026-05-18T03:15:04.851954"
+    },
+    {
+      "relativer_pfad": "Scripts/UI08B_FEHLERPFAD_PRUEFUNG_POSTEINGANG_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI08B_FEHLERPFAD_PRUEFUNG_POSTEINGANG_AUTOLAUF.ps1",
+      "groesse": 2971,
+      "sha256": "536784ba4360849f93b66a630e64383ff3166168781a130550fec1fde8cd6d77",
+      "zeitstempel": "2026-05-18T03:15:04.851954"
+    },
+    {
+      "relativer_pfad": "Scripts/UI08C_FEHLERPFAD_SANIERUNGSPLAN_POSTEINGANG_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI08C_FEHLERPFAD_SANIERUNGSPLAN_POSTEINGANG_AUTOLAUF.ps1",
+      "groesse": 2964,
+      "sha256": "ba7979fc3138c425ef5c9b859329f2c1ffd3ecd03eba942720f7ab2298a98627",
+      "zeitstempel": "2026-05-18T03:15:04.852962"
+    },
+    {
+      "relativer_pfad": "Scripts/UI08_POSTEINGANG_IMPORTSTRECKE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI08_POSTEINGANG_IMPORTSTRECKE_AUTOLAUF.ps1",
+      "groesse": 2708,
+      "sha256": "cc48a19eb5450687992393e69a70549a9c75120a6942ca9ebd45b0bc92bc8fda",
+      "zeitstempel": "2026-05-18T03:15:04.852962"
+    },
+    {
+      "relativer_pfad": "Scripts/UI09_ZENTRALE_GRUNDSCHALTER_PROFILFELDER_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI09_ZENTRALE_GRUNDSCHALTER_PROFILFELDER_AUTOLAUF.ps1",
+      "groesse": 2962,
+      "sha256": "3c4c43550cf7443f2b5643cf264c8a4a268a9d633d5b8061ad3aabb24cd1c9ed",
+      "zeitstempel": "2026-05-18T03:15:04.853959"
+    },
+    {
+      "relativer_pfad": "Scripts/UI10_PROFIL_LESADAPTER_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI10_PROFIL_LESADAPTER_AUTOLAUF.ps1",
+      "groesse": 2907,
+      "sha256": "e4db16326b72ab97e6006597c94be2fd9371b209f60856ce57a04171e8b9208b",
+      "zeitstempel": "2026-05-18T03:15:04.853959"
+    },
+    {
+      "relativer_pfad": "Scripts/UI11_REGISTER_LESADAPTER_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI11_REGISTER_LESADAPTER_AUTOLAUF.ps1",
+      "groesse": 2911,
+      "sha256": "ab86626f8ea4f03d56f987f7116c16b84a4f7b830506e9ee345356086e6acecd",
+      "zeitstempel": "2026-05-18T03:15:04.854960"
+    },
+    {
+      "relativer_pfad": "Scripts/UI12_MASTER_ADAPTER_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI12_MASTER_ADAPTER_AUTOLAUF.ps1",
+      "groesse": 4028,
+      "sha256": "ea05a4acba82d1e93500ea12121548d90c2ffc44aa3bfea942cb26d0fdc71838",
+      "zeitstempel": "2026-05-18T03:15:04.854960"
+    },
+    {
+      "relativer_pfad": "Scripts/UI13_ABNAHME_ENTSCHEIDUNGSUEBERSICHT_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI13_ABNAHME_ENTSCHEIDUNGSUEBERSICHT_AUTOLAUF.ps1",
+      "groesse": 4655,
+      "sha256": "cf00d17642c1815f4497a718747da0b2c6e2c01eec8ab2ba91d8c7336e65a24b",
+      "zeitstempel": "2026-05-18T03:15:04.855959"
+    },
+    {
+      "relativer_pfad": "Scripts/UI14_AUSFUEHRUNGS_NACHLAUFZENTRALE_AUTOLAUF.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/UI14_AUSFUEHRUNGS_NACHLAUFZENTRALE_AUTOLAUF.ps1",
+      "groesse": 4553,
+      "sha256": "28967b92c9fee40a1cc66877d54a6725a7b89674d01cc6b109d3ba1558891abd",
+      "zeitstempel": "2026-05-18T03:15:04.855959"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/001_db_schema_audit.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/001_db_schema_audit.py",
+      "groesse": 4643,
+      "sha256": "24dc5c1447bfdc30944d5bb9e8a4460fa78899e81949495b5158221152bdbab1",
+      "zeitstempel": "2026-05-18T03:15:04.856962"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/002_apply_posteingang_schema.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/002_apply_posteingang_schema.py",
+      "groesse": 2054,
+      "sha256": "77f2e352bdeac4897d1ea881e2ff4b278f4bd00ba73b21d16c51ab2db631ce5e",
+      "zeitstempel": "2026-05-18T03:15:04.856962"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/003_verify_posteingang_schema.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/003_verify_posteingang_schema.py",
+      "groesse": 1295,
+      "sha256": "bef7dbbb1666a8c760de048bbac4ee3cdc573c13ac6b159a083a7dc6c23c343f",
+      "zeitstempel": "2026-05-18T03:15:04.857960"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/004_posteingang_arbeitsstruktur_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/004_posteingang_arbeitsstruktur_v1.py",
+      "groesse": 9128,
+      "sha256": "415c7caaebac4c47f1107eff4a9c399c6cdb93068faea9e65876602ce9a01018",
+      "zeitstempel": "2026-05-18T03:15:04.857960"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/005_posteingang_sicherheitsgate_v2.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/005_posteingang_sicherheitsgate_v2.py",
+      "groesse": 17315,
+      "sha256": "0904450eda9a0b4295915be976cdea0b962ff0593c70c97d81b4666141695428",
+      "zeitstempel": "2026-05-18T03:15:04.858965"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/005_windows_security_probe.ps1",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/005_windows_security_probe.ps1",
+      "groesse": 1899,
+      "sha256": "da3bc98b19f7a227d899ef676f8bf04211c6a97f1e2746b4766a785139d25051",
+      "zeitstempel": "2026-05-18T03:15:04.858965"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py",
+      "groesse": 16786,
+      "sha256": "f5d34de0bd98d37ff41e20bf102e2a00f0fa7a577f47dd867a77762a9053d539",
+      "zeitstempel": "2026-05-18T03:15:04.859964"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py",
+      "groesse": 4437,
+      "sha256": "c02e21241c1b35ba8709147060a89dacdb2731207bcf928e7ce1f605628d4dc4",
+      "zeitstempel": "2026-05-18T03:15:04.859964"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/014_posteingang_clean_verify.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/014_posteingang_clean_verify.py",
+      "groesse": 4087,
+      "sha256": "edefd03cd91d83548eb2b5abf202cd5f64606fb7662a48922a2acfa9b23ab33c",
+      "zeitstempel": "2026-05-18T03:15:04.860961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/014_posteingang_pipeline_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/014_posteingang_pipeline_v1.py",
+      "groesse": 7424,
+      "sha256": "721fc79ff5c91c1da7de718d211ee2093fb50922193356ff3e66e1af90310575",
+      "zeitstempel": "2026-05-18T03:15:04.860961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/015_posteingang_pipeline_smoketest_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/015_posteingang_pipeline_smoketest_v1.py",
+      "groesse": 10800,
+      "sha256": "f2029a3e25f296eb4915460cb2bf066e48dec8ca71ecba9ceb3f022e227d7766",
+      "zeitstempel": "2026-05-18T03:15:04.861962"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/016_posteingang_betriebsstatus_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/016_posteingang_betriebsstatus_v1.py",
+      "groesse": 6694,
+      "sha256": "b8566694b5b6a49e183eeb9f82fc583102c688b648562bc2c4c152a7c332a04a",
+      "zeitstempel": "2026-05-18T03:15:04.861962"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/017_vorzimmer_arbeitsliste_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/017_vorzimmer_arbeitsliste_v1.py",
+      "groesse": 9014,
+      "sha256": "efb8c231d4bc83b5d13d1df719dd20d7395ed757f2ed366db362dbdeacb18115",
+      "zeitstempel": "2026-05-18T03:15:04.862961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/018_vorzimmer_entscheidung_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/018_vorzimmer_entscheidung_v1.py",
+      "groesse": 12378,
+      "sha256": "7823c12ee12034134af33ef635d7c4e5a7232df5a6546a484f2e0db342f2c7f4",
+      "zeitstempel": "2026-05-18T03:15:04.862961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/019_vorzimmer_entscheidung_smoketest_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/019_vorzimmer_entscheidung_smoketest_v1.py",
+      "groesse": 9153,
+      "sha256": "4bce540e49e8748e523e79a0ade0e514a1dce6e9dd2bd5ad3044aff7c5a4769e",
+      "zeitstempel": "2026-05-18T03:15:04.862961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/020_posteingang_gesamtstatus_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/020_posteingang_gesamtstatus_v1.py",
+      "groesse": 10902,
+      "sha256": "7cb587aedb6a6de637fcd2e4d9cb24c4d7976a6ff141a39f1f42e26cc61c45c2",
+      "zeitstempel": "2026-05-18T03:15:04.863961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py",
+      "groesse": 10788,
+      "sha256": "cb34aea393f617730aa38db3f45d45f1673113c4190c61de57a846b273ff8f72",
+      "zeitstempel": "2026-05-18T03:15:04.863961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/022_posteingang_db_testlauf_auswertung_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/022_posteingang_db_testlauf_auswertung_v1.py",
+      "groesse": 11892,
+      "sha256": "4f275fd454e37bfeea99957585a81e158092d60ceb4ace23da20add5051c36f5",
+      "zeitstempel": "2026-05-18T03:15:04.864961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/023_vorzimmer_entscheidungsvorschlag_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/023_vorzimmer_entscheidungsvorschlag_v1.py",
+      "groesse": 9451,
+      "sha256": "8857a724e38ec1b56343e88ae8e6dbc3853c84824a7aa7dd2c7b9849f1b92284",
+      "zeitstempel": "2026-05-18T03:15:04.864961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/026_posteingang_aktenmaterial_agentenabgrenzung_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/026_posteingang_aktenmaterial_agentenabgrenzung_v1.py",
+      "groesse": 11642,
+      "sha256": "d74c584e4126d24bae2bb8116db3d11c0f1183be420b5775e24f866b38100c94",
+      "zeitstempel": "2026-05-18T03:15:04.865961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/027_posteingang_aktenmaterial_freigabeliste_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/027_posteingang_aktenmaterial_freigabeliste_v1.py",
+      "groesse": 9234,
+      "sha256": "028d0a0845b48611090348e4e182d1406463578b1d60c804927f9f6f67f548d8",
+      "zeitstempel": "2026-05-18T03:15:04.865961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/031_dokumentsprachprofil_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/031_dokumentsprachprofil_v1.py",
+      "groesse": 16859,
+      "sha256": "2128a078a24ffac5ea0cd81e91990c58c21f30ac075e2c194a95c5b5aae0106d",
+      "zeitstempel": "2026-05-18T03:15:04.865961"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/032_check_dokumentsprachprofil_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/032_check_dokumentsprachprofil_v1.py",
+      "groesse": 2238,
+      "sha256": "5d7ad02fe014e533680075ecc4398a8f126bd8551540348dbc35ebec2d6dcd2a",
+      "zeitstempel": "2026-05-18T03:15:04.867470"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py",
+      "groesse": 21601,
+      "sha256": "1e02ef8bb444312637278ede088fabf5c600ba228b333f701622ed9ed8c4107d",
+      "zeitstempel": "2026-05-18T03:15:04.867470"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/034_posteingang_endabnahme_v2.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/034_posteingang_endabnahme_v2.py",
+      "groesse": 12020,
+      "sha256": "fc27bb502da5a7084408e115b27f1fc550bd3b33f62f31eba60e5ab8bfa4f60a",
+      "zeitstempel": "2026-05-18T03:15:04.868482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/035_vorzimmer_kommunikationsparameter_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/035_vorzimmer_kommunikationsparameter_v1.py",
+      "groesse": 16938,
+      "sha256": "4ce6193add0dee465d7ea02e150d1dcf750d6fea826e93a8320294af3e8e4145",
+      "zeitstempel": "2026-05-18T03:15:04.869478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py",
+      "groesse": 1955,
+      "sha256": "c8fca66facebfb0a468fb93dd040bc4c574a9cdb38c7d3e59953bb76143cf13b",
+      "zeitstempel": "2026-05-18T03:15:04.869478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/037_posteingang_endabnahme_v3.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/037_posteingang_endabnahme_v3.py",
+      "groesse": 13046,
+      "sha256": "20d1372d85ec1e74a71ef2a7d3687302390551077738d89ede45021e19d715e7",
+      "zeitstempel": "2026-05-18T03:15:04.870482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py",
+      "groesse": 1406,
+      "sha256": "ab61598bc9cacd13c88b29924e91edeb9c7e8a6ce32b19107f77477277fc2669",
+      "zeitstempel": "2026-05-18T03:15:04.870482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/040_agentenbearbeitung_grundmodul_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/040_agentenbearbeitung_grundmodul_v1.py",
+      "groesse": 19981,
+      "sha256": "e54d52e9ae15ab653d1e7b07a21c6b57cb47e4c8aa3520a837d91ba7d2f5e144",
+      "zeitstempel": "2026-05-18T03:15:04.871480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py",
+      "groesse": 1628,
+      "sha256": "4cfe3a8f5049eabf39a3122d753064aaa2278ef4b8c4c4e387699dd187215024",
+      "zeitstempel": "2026-05-18T03:15:04.871480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py",
+      "groesse": 1594,
+      "sha256": "fd5107626e92565909634b220f4d4423e2c11a60432abcb223f3de10624e09d6",
+      "zeitstempel": "2026-05-18T03:15:04.871480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py",
+      "groesse": 1650,
+      "sha256": "2eb637399fb38bb628471256ad337d32adbb9e76b3e1aad625f9c800925d4140",
+      "zeitstempel": "2026-05-18T03:15:04.872479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/046_agent_sachverhaltsbezug_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/046_agent_sachverhaltsbezug_v1.py",
+      "groesse": 23882,
+      "sha256": "3c5b4ad5f51b63ff245d044b9565b76f44ec77e08f0b7c69c36a5a044fffee53",
+      "zeitstempel": "2026-05-18T03:15:04.873480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py",
+      "groesse": 1630,
+      "sha256": "9209b460d3d3b228eafe1025568eb15b0c3a723fb0b59be25290d07fd366bdaf",
+      "zeitstempel": "2026-05-18T03:15:04.873480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/047_check_quellenbetreuer_fachanwaltsraster_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/047_check_quellenbetreuer_fachanwaltsraster_v1.py",
+      "groesse": 5098,
+      "sha256": "90137783afdf3609adea4df4a6fa851206a652700d4925fa27b5e7107109f4f0",
+      "zeitstempel": "2026-05-18T03:15:04.874478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/048_agenten_kontext_skill_register_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/048_agenten_kontext_skill_register_v1.py",
+      "groesse": 1546,
+      "sha256": "f8694ee7c57be0a0049a4809f547e5430b29de83da94046204e6165ede3f2751",
+      "zeitstempel": "2026-05-18T03:15:04.874478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/049_check_agenten_kontext_skill_register_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/049_check_agenten_kontext_skill_register_v1.py",
+      "groesse": 4021,
+      "sha256": "654969a1e45fe15290bc3dfd491f99bc1f08a9e7697041d6aad6300a31f48cb5",
+      "zeitstempel": "2026-05-18T03:15:04.875480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/052_check_quellenkandidaten_eu_se_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/052_check_quellenkandidaten_eu_se_v1.py",
+      "groesse": 4256,
+      "sha256": "493d243f9cb9bd0f57ccaf4198a5c85898ff5c63caab5430b1b14d21ae8410db",
+      "zeitstempel": "2026-05-18T03:15:04.876480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/054_check_source_adapter_healthcheck_framework_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/054_check_source_adapter_healthcheck_framework_v1.py",
+      "groesse": 6864,
+      "sha256": "30dff1cd02558041853f79380023ce597ce21719895088b4d8b377c7ccf0aa72",
+      "zeitstempel": "2026-05-18T03:15:04.876480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/056_check_agent_handoff_test_harness_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/056_check_agent_handoff_test_harness_v1.py",
+      "groesse": 5667,
+      "sha256": "7dcd48c58865c0667555977bd3d956f78deeb97efb1400b6794881dee9c2c853",
+      "zeitstempel": "2026-05-18T03:15:04.877479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km12b_uebergrosse_arbeitsabbildungen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km12b_uebergrosse_arbeitsabbildungen.py",
+      "groesse": 6439,
+      "sha256": "e997cc93dcb1cf3041cfb9dbdca0c493443881b498e1ffa55c172373a7e7a3bf",
+      "zeitstempel": "2026-05-18T03:15:04.877479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km12_originalabbildung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km12_originalabbildung.py",
+      "groesse": 9804,
+      "sha256": "560683d1bb8eaf8be462c160eb1c1306b9abd33ffc61a210b513b56254d64ffd",
+      "zeitstempel": "2026-05-18T03:15:04.878480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km13b_tesseract_sprachpaket_abgleich.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km13b_tesseract_sprachpaket_abgleich.py",
+      "groesse": 6044,
+      "sha256": "1b6357c440bde41981ec8e8ec948b6d052525f8197066a542903359de2c7bb3e",
+      "zeitstempel": "2026-05-18T03:15:04.878480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km13_ocr_pipeline.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km13_ocr_pipeline.py",
+      "groesse": 9701,
+      "sha256": "e97e355866720453e8757f5aacac59f9224e0c955360f3915b20eabae8150740",
+      "zeitstempel": "2026-05-18T03:15:04.879480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km14_maschinenformat_fundstellenstruktur.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km14_maschinenformat_fundstellenstruktur.py",
+      "groesse": 7405,
+      "sha256": "e3820b2ad4a63fc803f634a8e8c0fe3c635acdeb755fd1ab8b5a37867fa6faad",
+      "zeitstempel": "2026-05-18T03:15:04.880480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "groesse": 6167,
+      "sha256": "1b59b2c461a29e682e3c53bf987445100e478f17bf3f2924b062c3661dace1ba",
+      "zeitstempel": "2026-05-18T03:15:04.880480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km16_sprachrouting_vor_ocr.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km16_sprachrouting_vor_ocr.py",
+      "groesse": 4457,
+      "sha256": "015e3a7ce2bd2c7a863f8edc6704d37d4523724bb2d8bb7888fd6cb939a61417",
+      "zeitstempel": "2026-05-18T03:15:04.881478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km17c_einzelseite_km12b_ocr.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km17c_einzelseite_km12b_ocr.py",
+      "groesse": 11112,
+      "sha256": "bff3d470858475e60335b9f17f7503454f755a50a759843802436a376d46d2f4",
+      "zeitstempel": "2026-05-18T03:15:04.881478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km17_sprachrouting_ocr_integration.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km17_sprachrouting_ocr_integration.py",
+      "groesse": 3939,
+      "sha256": "9343a60dbf29a46d0006c5c8564b3b6b86eaea00afc79c4b5bd0bec4601bc008",
+      "zeitstempel": "2026-05-18T03:15:04.882479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km18_ocr_ergebnisdiagnose.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km18_ocr_ergebnisdiagnose.py",
+      "groesse": 3950,
+      "sha256": "919d657b3881f8447cd05f321526d74aee7427fdebdcc658bf1bc05423c8b4a3",
+      "zeitstempel": "2026-05-18T03:15:04.882479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km19_ocrbetreuer_korrektur.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km19_ocrbetreuer_korrektur.py",
+      "groesse": 2338,
+      "sha256": "50889bf149b2d5b2997c1add5650dc5b416778b181e53a0e8f2a81261c3e1926",
+      "zeitstempel": "2026-05-18T03:15:04.883480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km19_ocr_gesamtkette_synchronisieren.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km19_ocr_gesamtkette_synchronisieren.py",
+      "groesse": 3324,
+      "sha256": "5de62b00503c1a7dd7a2f04515bce0729b9e44a6f73e41caae177e779778d92a",
+      "zeitstempel": "2026-05-18T03:15:04.884480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_km21_translation_env_prepare.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_km21_translation_env_prepare.py",
+      "groesse": 3663,
+      "sha256": "93a557460be467f2ef06a2ffb129ff8d6f82ddce296e1a48a6905fc4c973ad4c",
+      "zeitstempel": "2026-05-18T03:15:04.884480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui01_anwaltsansicht_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui01_anwaltsansicht_v1.py",
+      "groesse": 3121,
+      "sha256": "477277060acc570d0606069162d66d81fbd0bf70fa926c4fdf0b1f1c3e0a2ba5",
+      "zeitstempel": "2026-05-18T03:15:04.885480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui03_0_uebergabe_mandantenakte.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui03_0_uebergabe_mandantenakte.py",
+      "groesse": 3785,
+      "sha256": "c165db1446f11f1009b6c2c58ada2ae39eb5879aaeb3d19a821f31f9f13b38e7",
+      "zeitstempel": "2026-05-18T03:15:04.885480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui07b_gesamtfreeze_demo_betriebsstrecke.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui07b_gesamtfreeze_demo_betriebsstrecke.py",
+      "groesse": 4358,
+      "sha256": "ceb23c932fe8125ba8ce736caccb716b0ca0e3bb4664a71c7a6165438c226a87",
+      "zeitstempel": "2026-05-18T03:15:04.886480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui07_betriebsvorbereitung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui07_betriebsvorbereitung.py",
+      "groesse": 5606,
+      "sha256": "b18e5fd6cf4939b7f0e7d7360a9b2a3e52a1aee5573e07f8f7c484642852e70d",
+      "zeitstempel": "2026-05-18T03:15:04.886480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui08b_fehlerpfad_pruefung_posteingang.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui08b_fehlerpfad_pruefung_posteingang.py",
+      "groesse": 5755,
+      "sha256": "c7b948d5ad09cba6a0bfbbb2a7a2f91fe5b13eb865ea57952fa4ed18e25fc805",
+      "zeitstempel": "2026-05-18T03:15:04.887479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui08c_fehlerpfad_sanierungsplan_posteingang.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui08c_fehlerpfad_sanierungsplan_posteingang.py",
+      "groesse": 6128,
+      "sha256": "3017cebda938afe7da38c7f00e323bbacba58002c1094c8ca0e4b6bea4d75a22",
+      "zeitstempel": "2026-05-18T03:15:04.887479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui08_posteingang_importstrecke.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui08_posteingang_importstrecke.py",
+      "groesse": 3698,
+      "sha256": "dd348a2267e61b6bf052ad94dd108ea7a9019292d4e5b013194d1a97a930234d",
+      "zeitstempel": "2026-05-18T03:15:04.888481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui09_zentrale_grundschalter_profilfelder.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui09_zentrale_grundschalter_profilfelder.py",
+      "groesse": 6532,
+      "sha256": "0c5c1984a7607e2f04eabea1c2c64eb07cbd1070fa2fd4de854742d30d219cac",
+      "zeitstempel": "2026-05-18T03:15:04.888481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui10_profil_lesadapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui10_profil_lesadapter.py",
+      "groesse": 6490,
+      "sha256": "ee25230addd89d0a35e2260275dfdabfd59e27d61994b27d38c2b67db6b39add",
+      "zeitstempel": "2026-05-18T03:15:04.889481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui11_register_lesadapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui11_register_lesadapter.py",
+      "groesse": 6185,
+      "sha256": "4e834a9c42716fb33c3db27c9261b49aa1994b191d3fe9567413d3e9d8053163",
+      "zeitstempel": "2026-05-18T03:15:04.890480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui12_master_adapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui12_master_adapter.py",
+      "groesse": 4528,
+      "sha256": "01a4a055ade4416104e4aaa935e7713829f8fa22627a4533585e7b076a1620a0",
+      "zeitstempel": "2026-05-18T03:15:04.890480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui13_abnahme_entscheidungsuebersicht.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui13_abnahme_entscheidungsuebersicht.py",
+      "groesse": 4439,
+      "sha256": "ddfc00caf3bc7bb82a3e38b6473106832b37a2c9c1ee4d1e78020d77edaf15b7",
+      "zeitstempel": "2026-05-18T03:15:04.891483"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/check_ui14_ausfuehrungs_nachlaufzentrale.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/check_ui14_ausfuehrungs_nachlaufzentrale.py",
+      "groesse": 4614,
+      "sha256": "573dc8f7eb95fc963d32c6b1f73dbc70349268d438178bb675f1266b49d6ca79",
+      "zeitstempel": "2026-05-18T03:15:04.891483"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/core12_backup_rollback_konzept.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/core12_backup_rollback_konzept.py",
+      "groesse": 20243,
+      "sha256": "c313e206002428aa7b50780ea668764fce1731a7d575221404518a899d2b84ae",
+      "zeitstempel": "2026-05-18T03:15:04.892479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km12b_uebergrosse_arbeitsabbildungen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km12b_uebergrosse_arbeitsabbildungen.py",
+      "groesse": 26246,
+      "sha256": "277a963460407d8a79ff6f32d4b174444554fb6a78cbe3c5569452f7edcb8619",
+      "zeitstempel": "2026-05-18T03:15:04.893478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km13b_tesseract_sprachpaket_abgleich.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km13b_tesseract_sprachpaket_abgleich.py",
+      "groesse": 29133,
+      "sha256": "17a97a4c6c5a28dce7734a3f4dacdd02bf35849d356726470cd563a59993a72f",
+      "zeitstempel": "2026-05-18T03:15:04.893478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km13_ocr_pipeline.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km13_ocr_pipeline.py",
+      "groesse": 37722,
+      "sha256": "1247de82dd8ae8f3018dd9bb17eb1b90337866558a41c6fef6c407b1d5393124",
+      "zeitstempel": "2026-05-18T03:15:04.894478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km14_maschinenformat_fundstellenstruktur.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km14_maschinenformat_fundstellenstruktur.py",
+      "groesse": 46443,
+      "sha256": "ac94481dea05e83196d023279dc1627ff013f646431fd13dedfd87323f9066fa",
+      "zeitstempel": "2026-05-18T03:15:04.894478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "groesse": 29524,
+      "sha256": "3defca2c00fc3d6f1326134ae898c1fa9c5ebf5c0d1bb36bd42a88add9e7f813",
+      "zeitstempel": "2026-05-18T03:15:04.895480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km16_sprachrouting_vor_ocr.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km16_sprachrouting_vor_ocr.py",
+      "groesse": 19408,
+      "sha256": "f7f055024bc1bec3d3802c2383712dc175d3a73b80627e5a16bfef70c3f85143",
+      "zeitstempel": "2026-05-18T03:15:04.895480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km17c_einzelseite_km12b_ocr.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km17c_einzelseite_km12b_ocr.py",
+      "groesse": 24322,
+      "sha256": "d985409f04e1b24328a6b7460b58d695549ace426c756c645724b6b20f764af1",
+      "zeitstempel": "2026-05-18T03:15:04.896480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km17_sprachrouting_ocr_integration.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km17_sprachrouting_ocr_integration.py",
+      "groesse": 19109,
+      "sha256": "6830ea926e3ff2d129a0069ecd957a09e335d973f7a87b5a9b66546fc2506260",
+      "zeitstempel": "2026-05-18T03:15:04.897478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km18_ocr_ergebnisdiagnose.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km18_ocr_ergebnisdiagnose.py",
+      "groesse": 26260,
+      "sha256": "36872e061a10c80f3d5b663ccc7a878072d8860f787c5e7733e8f069c4cf5550",
+      "zeitstempel": "2026-05-18T03:15:04.897478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km19_ocrbetreuer_korrektur.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km19_ocrbetreuer_korrektur.py",
+      "groesse": 16513,
+      "sha256": "9e0e04bd52b285b1ffc2a2c995b71c6e704e7417d14736ae3d18f9e0e6d27eec",
+      "zeitstempel": "2026-05-18T03:15:04.898482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km19_ocr_gesamtkette_synchronisieren.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km19_ocr_gesamtkette_synchronisieren.py",
+      "groesse": 22964,
+      "sha256": "2c2060a6ef2d10eebd096ee285e78208f73f28802b5f545afaccf1d878fecc39",
+      "zeitstempel": "2026-05-18T03:15:04.899479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km20b_testdummy_ausschliessen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km20b_testdummy_ausschliessen.py",
+      "groesse": 5631,
+      "sha256": "4d0cbb2618688c3a73846b2e01d6b709b83ac73b8f352d4c3ed414b7cdb1b307",
+      "zeitstempel": "2026-05-18T03:15:04.899479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km20_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km20_pruefung.py",
+      "groesse": 2396,
+      "sha256": "b2bbc30cd021f4b67f617db87d67ec9d533338a9bf1533028ac2f85cc2309197",
+      "zeitstempel": "2026-05-18T03:15:04.900478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km20_quellen_fundstellen_konsolidierung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km20_quellen_fundstellen_konsolidierung.py",
+      "groesse": 21263,
+      "sha256": "6bd684c6e901dc8f6a170ef198047bda8d7460892c5d86b383f98240c5939e3e",
+      "zeitstempel": "2026-05-18T03:15:04.900478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/km21b0_argos_modellbereitstellung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/km21b0_argos_modellbereitstellung.py",
+      "groesse": 13161,
+      "sha256": "3fc60a9fd731268bf03a12b2ed469819c062b7cbd7051b73dd1c0414815e96ac",
+      "zeitstempel": "2026-05-18T03:15:04.901480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/post01_0_bestandsaufnahme_posteingang_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/post01_0_bestandsaufnahme_posteingang_v1.py",
+      "groesse": 28768,
+      "sha256": "d287a22ffe4a53878207d889f11c1e933afde6e0f35254db642bee59ab6f1f8b",
+      "zeitstempel": "2026-05-18T03:15:04.901480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/pruefe_ui02_0_bestandsabgleich.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/pruefe_ui02_0_bestandsabgleich.py",
+      "groesse": 3136,
+      "sha256": "11a325f7a8f67d4d93892577d601d6cae2278d2bc57108b7a256062df1eb0530",
+      "zeitstempel": "2026-05-18T03:15:04.902478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui01_anwaltsansicht_v1.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui01_anwaltsansicht_v1.py",
+      "groesse": 20893,
+      "sha256": "1343173cb2e1efb4dc0456a61a04d397648feae357345a4dfdba931e18b1cc52",
+      "zeitstempel": "2026-05-18T03:15:04.902478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui02c_freigabe_dropdowns_notizen.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui02c_freigabe_dropdowns_notizen.py",
+      "groesse": 50982,
+      "sha256": "8ba685d3f4a1084b0e87b27711652b95ad230fbd2dcde4af9e3619baf0a73ec5",
+      "zeitstempel": "2026-05-18T03:15:04.903478"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py",
+      "groesse": 31736,
+      "sha256": "2511c3070f34956a32bab8473d2366af01616c6db5ec4f8e6ec3dd0c67ad85a9",
+      "zeitstempel": "2026-05-18T03:15:04.904480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+      "groesse": 17931,
+      "sha256": "d37e2bc9d4c4e29305e1cd590146188fccfcbd488fd05ae6fd99622ad8c8b37d",
+      "zeitstempel": "2026-05-18T03:15:04.904480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1c_uebersetzungsarbeitsplatz.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1c_uebersetzungsarbeitsplatz.py",
+      "groesse": 27841,
+      "sha256": "64d2c3e4b3a81746834545876989220680bf4143780d41ac398a404b4adb7147",
+      "zeitstempel": "2026-05-18T03:15:04.905479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1d_ocr_freigabeablauf.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1d_ocr_freigabeablauf.py",
+      "groesse": 18747,
+      "sha256": "4eb8f877d37cd30e24b665ae72e42d30c7d49a56b5e75c8a4f3d486ff8141d22",
+      "zeitstempel": "2026-05-18T03:15:04.906480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1e_uebergabe_freigabe.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1e_uebergabe_freigabe.py",
+      "groesse": 22726,
+      "sha256": "398eeb2f87d14231af95c96a4ce3d8d215a17ea6b4d8298f4f3bab0ba5b134f7",
+      "zeitstempel": "2026-05-18T03:15:04.907479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1f_geparkte_auftraege.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1f_geparkte_auftraege.py",
+      "groesse": 20433,
+      "sha256": "090790eb33ee3bda60c02d6171384b5e19ff4295fb35791935cbdc8c54cada52",
+      "zeitstempel": "2026-05-18T03:15:04.907479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1g_gesamtansicht.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1g_gesamtansicht.py",
+      "groesse": 23504,
+      "sha256": "dfada9e8f61cfefdac41f4185ebd92ad404f24e17b2ae88d8f2a67f2b2337a13",
+      "zeitstempel": "2026-05-18T03:15:04.908481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui03_1_anwalts_dreiansicht.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui03_1_anwalts_dreiansicht.py",
+      "groesse": 56851,
+      "sha256": "c6b8a3b2fd76eea52e24c43faef3c1ccdc63483178c3697acd87a512a8de515c",
+      "zeitstempel": "2026-05-18T03:15:04.908481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "groesse": 44171,
+      "sha256": "37d55dfccfbf0b8e3359227c7f7a59f70d143de6ec5644f8a737d33941207256",
+      "zeitstempel": "2026-05-18T03:15:04.909481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui05_mandantenakte_arbeitszentrale.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui05_mandantenakte_arbeitszentrale.py",
+      "groesse": 27107,
+      "sha256": "cfbd47f3d026301a250b90f23cb881c5fb1a41eff93892eaf09abbdb7640b2ae",
+      "zeitstempel": "2026-05-18T03:15:04.909481"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui06b_fehlerpfad_pruefung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui06b_fehlerpfad_pruefung.py",
+      "groesse": 26232,
+      "sha256": "fd71e9a444c569408dcd78ba3224d52610c312579b24f3fb7fecf0f45548e8df",
+      "zeitstempel": "2026-05-18T03:15:04.910480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui06_musterlauf_gesamtkette.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui06_musterlauf_gesamtkette.py",
+      "groesse": 31236,
+      "sha256": "eaad50b5e13e4ee05dbcbc7846a757778d22a92e9daf14e8e9acc7e894a30ab0",
+      "zeitstempel": "2026-05-18T03:15:04.910480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui07b_gesamtfreeze_demo_betriebsstrecke.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui07b_gesamtfreeze_demo_betriebsstrecke.py",
+      "groesse": 16969,
+      "sha256": "d5486410cced6d694606774d9584f90560b2a2696c77e5509baf8f259a4ab243",
+      "zeitstempel": "2026-05-18T03:15:04.911482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui07_betriebsvorbereitung.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui07_betriebsvorbereitung.py",
+      "groesse": 20156,
+      "sha256": "376f160f8aa361d4cac6864f57ea7ace09b0e42c93717763de9d4f42fe90f336",
+      "zeitstempel": "2026-05-18T03:15:04.911482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui08b_fehlerpfad_pruefung_posteingang.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui08b_fehlerpfad_pruefung_posteingang.py",
+      "groesse": 19024,
+      "sha256": "c8df7f3b31709d0eab87e5fa29072aabefec158cf8ad0ad737561c0b6e579a4f",
+      "zeitstempel": "2026-05-18T03:15:04.912480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui08c_fehlerpfad_sanierungsplan_posteingang.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui08c_fehlerpfad_sanierungsplan_posteingang.py",
+      "groesse": 17694,
+      "sha256": "02b30ddbbb9f9b0f2f3c88f8a5dab24dbc556703125e437d77ade4a59f9397bc",
+      "zeitstempel": "2026-05-18T03:15:04.912480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui08_posteingang_importstrecke.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui08_posteingang_importstrecke.py",
+      "groesse": 17070,
+      "sha256": "074ff38bdb98add479f858e06a49ee9fd621055a83459d3de438434d57abe2e1",
+      "zeitstempel": "2026-05-18T03:15:04.913479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui09_zentrale_grundschalter_profilfelder.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui09_zentrale_grundschalter_profilfelder.py",
+      "groesse": 16551,
+      "sha256": "1b37160a51e5f747cefb4eb560f1f5b8d47a21b1144e592fd706375917cbb918",
+      "zeitstempel": "2026-05-18T03:15:04.913479"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui10_profil_lesadapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui10_profil_lesadapter.py",
+      "groesse": 23059,
+      "sha256": "90c261dbf1550be0823aa1ed6134a5629b853c3a58a3827b1520014d3b8c7404",
+      "zeitstempel": "2026-05-18T03:15:04.914480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui11_register_lesadapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui11_register_lesadapter.py",
+      "groesse": 19238,
+      "sha256": "778f7fe3b4c8e9dcf5d929f9c58e44cee7df963d5a534929b12b3d813c020c3a",
+      "zeitstempel": "2026-05-18T03:15:04.914480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui12_master_adapter.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui12_master_adapter.py",
+      "groesse": 24401,
+      "sha256": "4dad26d3924c594adb9cbb1921d49754a49db621945e4df8ff487d3879f2bf1b",
+      "zeitstempel": "2026-05-18T03:15:04.915480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui13_abnahme_entscheidungsuebersicht.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui13_abnahme_entscheidungsuebersicht.py",
+      "groesse": 21620,
+      "sha256": "6c4a142a53e8bf70f408625a241a3e3d42d31b46fd87865a32683d728f9aef97",
+      "zeitstempel": "2026-05-18T03:15:04.915480"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/ui14_ausfuehrungs_nachlaufzentrale.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/ui14_ausfuehrungs_nachlaufzentrale.py",
+      "groesse": 13278,
+      "sha256": "ef50e44805afe97d11ce0272a6d0e8df667484375c71d120ec12a64eabacc9c7",
+      "zeitstempel": "2026-05-18T03:15:04.916482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/_patch_css.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/_patch_css.py",
+      "groesse": 679,
+      "sha256": "93ba49466bd0d02c85d6b38a7d78329323b6b3342b05e9a3a5446786503f1bde",
+      "zeitstempel": "2026-05-18T03:15:04.916482"
+    },
+    {
+      "relativer_pfad": "Scripts/python_runner/_patch_html.py",
+      "ziel_pfad": "i:/KI_Legal_Project/ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/Scripts/python_runner/_patch_html.py",
+      "groesse": 3152,
+      "sha256": "b6d2f60810578fe63bf1b197953cdf09876594c5da906e5f3252a983f3173be8",
+      "zeitstempel": "2026-05-18T03:15:04.917481"
+    }
+  ]
+}

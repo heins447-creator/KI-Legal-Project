@@ -1,0 +1,74 @@
+======================================================================
+CORE-20 MASTER-UMBAU-BERICHT
+Autonomer Umbau-Automanager CORE-14 bis CORE-20
+======================================================================
+
+Zeitstempel: 2026-05-18T03:16:24.805420
+Gesamtstatus: OK
+
+CORE-14 AUSWERTUNG
+----------------------------------------
+  Gesamtdateien: 98436
+  Gesperrt: 6492
+  ARCHIV_VORSCHLAG                                1554
+  CONFIG_LOKAL_MANUELL                              10
+  DUBLETTE_NICHT_KOPIEREN                        59879
+  LAUFZEITARTEFAKT_NICHT_KOPIEREN                 1367
+  MANUELL_PRUEFEN                                25375
+  NICHT_UEBERNEHMEN_ERSETZT                         89
+  SPERREN_NICHT_KOPIEREN                          6492
+  TESTREST_NICHT_KOPIEREN                         3359
+  UEBERNEHMEN_KOPIEREND                            311
+
+CORE-15 MIGRATIONSPLAN
+----------------------------------------
+  Gesamtdateien: 98436
+  Konflikte: 0
+  Kopierende: 311
+
+CORE-16 DRY-RUN VALIDIERUNG
+----------------------------------------
+  Geprueft: 98436
+  OK: 98436
+  Warnungen: 0
+  Kritisch: 0
+  Freigegeben: True
+
+CORE-17 KOPIERENDE MIGRATION
+----------------------------------------
+  Geplant: 311
+  Kopiert: 311
+  Uebersprungen (gesperrt): 0
+  Fehler: 0
+  Bytes kopiert: 2663173
+
+CORE-18 NEUSTRUKTUR VALIDIERUNG
+----------------------------------------
+  Geprueft: 311
+  OK: 311
+  Fehlend: 0
+  Groesse abweichend: 0
+  SHA abweichend: 0
+  Bestanden: True
+
+CORE-19 RESTE-/ARCHIV-/SPERRPLAN
+----------------------------------------
+  archiv                           1643
+  dubletten                       59879
+  gesperrt                         6492
+  laufzeit                         1367
+  manuell                         25385
+  reste                               0
+  testreste                        3359
+
+BESTAETIGUNGEN
+----------------------------------------
+  [ ] Keine alten Dateien wurden geloescht
+  [ ] Keine alten Dateien wurden verschoben
+  [ ] Keine alten Dateien wurden umbenannt
+  [ ] Nur kopierende Operationen durchgefuehrt
+  [ ] UI03–UI07b wurden nicht geaendert
+  [ ] Keine Produktivfreigabe behauptet
+
+======================================================================
+ENDE MASTER-UMBAU-BERICHT
