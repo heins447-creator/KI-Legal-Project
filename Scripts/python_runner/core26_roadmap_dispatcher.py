@@ -362,22 +362,23 @@ def lade_projektstatus() -> tuple[dict, dict, dict, dict, dict, bool, str]:
 def ermittle_abgeschlossene_stufen(dashboard: dict, stufen: list[dict]) -> set[str]:
     """
     Ermittelt alle abgeschlossenen Stufen.
-    - Aus Dashboard: status_core_13_bis_22
-    - Aus Roadmap: status == 'abgeschlossen'
+    - Aus Roadmap-Stufen: status == 'abgeschlossen' (Hauptquelle)
+    - Aus Dashboard nur IDs, die auch in den Stufen vorkommen
     """
     abgeschlossen = set()
+    stufen_ids = {s.get("stufe_id", "") for s in stufen}
 
-    # Aus Dashboard
-    status_core = dashboard.get("status_core_13_bis_22", {})
-    for core_id, info in status_core.items():
-        if info.get("status") == "abgeschlossen":
-            abgeschlossen.add(core_id)
-
-    # Aus Roadmap-Stufen
+    # Aus Roadmap-Stufen (primär)
     for stufe in stufen:
         sid = stufe.get("stufe_id", "")
         if stufe.get("status") == "abgeschlossen":
             abgeschlossen.add(sid)
+
+    # Aus Dashboard nur übernehmen, wenn ID in aktuellen Stufen existiert
+    status_core = dashboard.get("status_core_13_bis_22", {})
+    for core_id, info in status_core.items():
+        if info.get("status") == "abgeschlossen" and core_id in stufen_ids:
+            abgeschlossen.add(core_id)
 
     return abgeschlossen
 
@@ -410,9 +411,12 @@ def ist_stufe_ausfuehrbar(
         blockaden.append("bereits abgeschlossen")
         return False, blockaden
 
-    # 2. Gesperrt?
+    # 2. Gesperrt oder blockiert?
     if status == "gesperrt":
         blockaden.append("Stufe ist gesperrt")
+        return False, blockaden
+    if status == "blockiert":
+        blockaden.append("Stufe ist blockiert")
         return False, blockaden
 
     # 3. Alle Abhaengigkeiten erfuellt?
@@ -467,7 +471,8 @@ def finde_naechste_ausfuehrbare_stufe(
         ok, gruende = ist_stufe_ausfuehrbar(stufe, abgeschlossen, arbeitsindex, agentenregeln)
         if ok:
             kandidaten.append(stufe)
-        else:
+        elif stufe.get("status") != "abgeschlossen":
+            # Nur nicht-abgeschlossene Stufen als blockiert melden
             blockierte.append({
                 "stufe_id": stufe.get("stufe_id", ""),
                 "name": stufe.get("name", ""),
@@ -534,7 +539,7 @@ def erzeuge_auftrag(
 
     # Berichtspflichten
     berichtspflichten = [
-        f"ALIN_Neustart_Core/Reports/{technische_id.replace('-', '_')}_BERICHT.txt"
+        f"ALIN_Neustart_Core/Reports/{sid.replace('-', '_')}_BERICHT.txt"
     ]
 
     auftrag = {
@@ -685,12 +690,12 @@ def erzeuge_bericht(
         lines.append(f"  - {sid}")
     lines.append(f"  Gesamt: {len(abgeschlossen_ids)} Stufen abgeschlossen")
     lines.append("")
-    lines.append("BLOCKIERTE STUFEN:")
+    lines.append("NICHT-AUSFUEHRBARE STUFEN (offen oder blockiert):")
     for b in blockierte:
         lines.append(f"  - {b['stufe_id']}: {b['name']}")
         for grund in b['blockade_gruende']:
             lines.append(f"      Grund: {grund}")
-    lines.append(f"  Gesamt: {len(blockierte)} Stufen blockiert")
+    lines.append(f"  Gesamt: {len(blockierte)} Stufen nicht ausfuehrbar")
     lines.append("")
     lines.append("NAECHSTE AUSGEWAEHLTE STUFE:")
     if naechste_stufe:
