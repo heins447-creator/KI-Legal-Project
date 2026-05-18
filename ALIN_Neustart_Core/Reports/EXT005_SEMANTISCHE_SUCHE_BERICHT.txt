@@ -1,0 +1,13 @@
+EXT-005 – Semantische Suche Bericht
+Erzeugt: 2026-05-18T21:10:26+0000
+Datenbank: I:\KI_Legal_Project\Database\DuckDB\alin_local.duckdb
+
+Texte indexiert: 5
+Vokabular-Groesse: 75
+Eingefuegte Embeddings: 5
+
+Test-Suche: 'Verordnung Europaeische Union'
+Bestes Ergebnis: Score=0.4420
+Text: Verordnung (EU) Rechtsakt der Europäischen Union mit allgemeiner Geltung Primärrecht, Vertragsrecht
+
+Status: ERFOLGREICH
