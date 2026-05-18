@@ -1,17 +1,17 @@
 {
-  "auftrags_id": "AUFTRAG-CORE-19-2026-05-18T064146+0000",
-  "stufe_id": "CORE-19",
-  "name": "Rechte und Rollen",
-  "beschreibung": "Rollenmodell implementieren, Berechtigungen pruefen, Freigaberegeln definieren.",
+  "auftrags_id": "AUFTRAG-STUFE-020-2026-05-18T103500+0000",
+  "stufe_id": "STUFE-020",
+  "name": "Datenschutz und Mandatsgeheimnis",
+  "beschreibung": "Datenschutz-Markierungen umsetzen, Mandatsgeheimnis-Regeln pruefen, Exportregeln definieren.",
   "eingaben": [
-    "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
-    "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
-    "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
   ],
   "ausgaben": [
-    "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
-    "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
-    "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+    "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
   ],
   "erlaubte_pfade": [
     "ALIN_Neustart_Core/00_Dokumentation/",
@@ -65,15 +65,15 @@
     "Bericht pruefen"
   ],
   "berichtspflichten": [
-    "ALIN_Neustart_Core/Reports/CORE_19_BERICHT.txt"
+    "ALIN_Neustart_Core/Reports/STUFE_020_BERICHT.txt"
   ],
   "commit_regel": "Nur bei Erfolg, Prefix: CORE-26",
-  "folgeentscheidung": "CORE-20",
+  "folgeentscheidung": "STUFE-024",
   "tests_aus_roadmap": [
-    "Rollenmodell validiert",
-    "Berechtigungs-Schema geprueft",
-    "Freigaberegeln definiert"
+    "Datenschutz-Markierungen validiert",
+    "Mandatsgeheimnis-Regeln geprueft",
+    "Exportregeln definiert"
   ],
-  "erzeugt_am": "2026-05-18T06:41:46+0000",
+  "erzeugt_am": "2026-05-18T10:35:00+0000",
   "modul": "CORE-26"
 }

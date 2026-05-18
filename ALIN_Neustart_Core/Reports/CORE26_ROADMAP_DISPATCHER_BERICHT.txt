@@ -1,11 +1,11 @@
 ================================================================================
 CORE-26: ROADMAP-DISPATCHER BERICHT
 ================================================================================
-Zeitstempel: 2026-05-18T06:41:46+0000
+Zeitstempel: 2026-05-18T10:35:00+0000
 Modul: CORE-26 - Roadmap-Dispatcher und Selbstfortsetzung
 Version: 1.0.0
 
-Commit-Hash: 17a49b801f68bfd98d990b2ace747e2264844a38
+Commit-Hash: 452d5901310946d772b36f5f9c021a2745ea91b9
 
 ROADMAP-STATUS:
   Roadmap gelesen: JA (CORE-25)
@@ -16,17 +16,6 @@ ABGESCHLOSSENE STUFEN:
   - AG02
   - AG03
   - AG04
-  - CORE-00
-  - CORE-01
-  - CORE-02
-  - CORE-03
-  - CORE-04
-  - CORE-05
-  - CORE-06
-  - CORE-07
-  - CORE-08
-  - CORE-09
-  - CORE-10
   - CORE-10a
   - CORE-10b
   - CORE-10c
@@ -34,20 +23,11 @@ ABGESCHLOSSENE STUFEN:
   - CORE-10e
   - CORE-10f
   - CORE-10g
-  - CORE-11
-  - CORE-12
   - CORE-13
-  - CORE-14
-  - CORE-15
-  - CORE-16
-  - CORE-17
-  - CORE-18
   - CORE-19
   - CORE-20
   - CORE-21
   - CORE-22
-  - CORE-23
-  - CORE-24
   - KM12
   - KM12b
   - KM13
@@ -70,6 +50,30 @@ ABGESCHLOSSENE STUFEN:
   - Q01
   - Q02
   - Q03
+  - STUFE-000
+  - STUFE-001
+  - STUFE-002
+  - STUFE-003
+  - STUFE-004
+  - STUFE-005
+  - STUFE-006
+  - STUFE-007
+  - STUFE-008
+  - STUFE-009
+  - STUFE-010
+  - STUFE-011
+  - STUFE-012
+  - STUFE-013
+  - STUFE-014
+  - STUFE-015
+  - STUFE-016
+  - STUFE-017
+  - STUFE-018
+  - STUFE-019
+  - STUFE-021
+  - STUFE-022
+  - STUFE-023
+  - STUFE-024
   - UI01
   - UI02
   - UI02c
@@ -98,30 +102,30 @@ ABGESCHLOSSENE STUFEN:
   - UI13
   - UI14
   - VZ01
-  Gesamt: 86 Stufen abgeschlossen
+  Gesamt: 90 Stufen abgeschlossen
 
 BLOCKIERTE STUFEN:
-  - CORE-00: Masterauftrag und Grundmodell
+  - STUFE-000: Masterauftrag und Grundmodell
       Grund: bereits abgeschlossen
-  - CORE-01: Register befuellen
+  - STUFE-001: Register befuellen
       Grund: bereits abgeschlossen
-  - CORE-02: Statusmodell implementieren
+  - STUFE-002: Statusmodell implementieren
       Grund: bereits abgeschlossen
-  - CORE-03: Schnittstellenvertraege finalisieren
+  - STUFE-003: Schnittstellenvertraege finalisieren
       Grund: bereits abgeschlossen
-  - CORE-04: Healthcheck implementieren
+  - STUFE-004: Healthcheck implementieren
       Grund: bereits abgeschlossen
-  - CORE-05: Resolver implementieren
+  - STUFE-005: Resolver implementieren
       Grund: bereits abgeschlossen
-  - CORE-06: Altbestand inventarisieren
+  - STUFE-006: Altbestand inventarisieren
       Grund: bereits abgeschlossen
-  - CORE-07: Posteingang anbinden
+  - STUFE-007: Posteingang anbinden
       Grund: bereits abgeschlossen
-  - CORE-08: OCR-Strecke anbinden
+  - STUFE-008: OCR-Strecke anbinden
       Grund: bereits abgeschlossen
-  - CORE-09: UI anbinden
+  - STUFE-009: UI anbinden
       Grund: bereits abgeschlossen
-  - CORE-10: Quellen und Skills anbinden
+  - STUFE-010: Quellen und Skills anbinden
       Grund: bereits abgeschlossen
   - CORE-10a: Findings Priorisierung und Reparaturplan
       Grund: bereits abgeschlossen
@@ -137,29 +141,31 @@ BLOCKIERTE STUFEN:
       Grund: bereits abgeschlossen
   - CORE-10g: Reviewlisten dokumentieren
       Grund: bereits abgeschlossen
-  - CORE-11: Windows-App-Architektur finalisieren
+  - STUFE-011: Windows-App-Architektur finalisieren
       Grund: bereits abgeschlossen
-  - CORE-12: UI-Grundlagen implementieren
+  - STUFE-012: UI-Grundlagen implementieren
       Grund: bereits abgeschlossen
-  - CORE-13: Altbestand inventarisiert und inventur
+  - STUFE-013: Altbestand inventarisiert und inventur
       Grund: bereits abgeschlossen
-  - CORE-14: CORE13-Auswertung und Sperrplan
+  - STUFE-014: CORE13-Auswertung und Sperrplan
       Grund: bereits abgeschlossen
-  - CORE-15: Migrationsplan und kopierende Migration
+  - STUFE-015: Migrationsplan und kopierende Migration
       Grund: bereits abgeschlossen
-  - CORE-16: Neustruktur-Validierung und Reste-Archiv
+  - STUFE-016: Neustruktur-Validierung und Reste-Archiv
       Grund: bereits abgeschlossen
-  - CORE-17: Arbeitsindex und Agenten-Einstieg
+  - STUFE-017: Arbeitsindex und Agenten-Einstieg
       Grund: bereits abgeschlossen
-  - CORE-18: Projekt-Dashboard
+  - STUFE-018: Projekt-Dashboard
       Grund: bereits abgeschlossen
-  - CORE-21: Arbeitsindex und Agentenregeln
+  - STUFE-019: Rechte und Rollen
       Grund: bereits abgeschlossen
-  - CORE-22: Agenten-Einstieg
+  - STUFE-021: Arbeitsindex und Agentenregeln
       Grund: bereits abgeschlossen
-  - CORE-23: Projekt-Dashboard
+  - STUFE-022: Agenten-Einstieg
       Grund: bereits abgeschlossen
-  - CORE-24: Autonomer Entwicklungsmanager
+  - STUFE-023: Projekt-Dashboard
+      Grund: bereits abgeschlossen
+  - STUFE-024: Autonomer Entwicklungsmanager
       Grund: bereits abgeschlossen
   - UI01: Anwaltsansicht
       Grund: bereits abgeschlossen
@@ -271,21 +277,22 @@ BLOCKIERTE STUFEN:
       Grund: bereits abgeschlossen
   - DEPLOY: Deployment und Betrieb
       Grund: Abhaengigkeit nicht erfuellt: WINAPP
-  - CORE-26: Gesamtabnahme und Produktionsfreigabe
+      Grund: Abhaengigkeit nicht erfuellt: STUFE-020
+  - STUFE-026: Gesamtabnahme und Produktionsfreigabe
       Grund: Stufe ist gesperrt
-  Gesamt: 86 Stufen blockiert
+  Gesamt: 87 Stufen blockiert
 
 NAECHSTE AUSGEWAEHLTE STUFE:
-  Stufe-ID: CORE-19
-  Name: Rechte und Rollen
+  Stufe-ID: STUFE-020
+  Name: Datenschutz und Mandatsgeheimnis
   Phase: Phase 4: Test und Abnahme
-  Prioritaet: 19
+  Prioritaet: 20
 
 ERZEUGTER AUFTRAG:
-  Auftrags-ID: AUFTRAG-CORE-19-2026-05-18T064146+0000
-  Stufe: CORE-19
-  Name: Rechte und Rollen
-  Folgeentscheidung: CORE-20
+  Auftrags-ID: AUFTRAG-STUFE-020-2026-05-18T103500+0000
+  Stufe: STUFE-020
+  Name: Datenschutz und Mandatsgeheimnis
+  Folgeentscheidung: STUFE-024
 
 QUEUE-STATUS:
   Queue-Eintrag geschrieben: JA
@@ -298,12 +305,12 @@ TECHNISCHE BLOCKADEN:
   Keine technischen Blockaden
 
 FORTSETZUNG:
-  Naechster automatischer Lauf wird Stufe 'CORE-19' bearbeiten
+  Naechster automatischer Lauf wird Stufe 'STUFE-020' bearbeiten
   Status-JSON und Auftrags-JSON wurden geschrieben
 
 ================================================================================
 ENDE BERICHT
 ================================================================================
-[2026-05-18T06:41:46+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
-[2026-05-18T06:41:46+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
-[2026-05-18T06:41:46+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
+[2026-05-18T10:35:00+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
+[2026-05-18T10:35:00+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
+[2026-05-18T10:35:00+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
