@@ -1,0 +1,9 @@
+EXT-006 – Semantische Suche API-Endpunkt Bericht
+Erzeugt: 2026-05-18T21:12:35+0000
+API-Datei: I:\KI_Legal_Project\ALIN_Neustart_Core\25_API_Backend\alin_api_erweitert.py
+Start-Skript: I:\KI_Legal_Project\ALIN_Neustart_Core\25_API_Backend\start_api_erweitert.ps1
+
+Smoke-Test: ERFOLGREICH
+Health={'status': 'ok', 'timestamp': '2026-05-18T21:12:35.787984+00:00', 'service': 'ALIN-API-EXT'}, Suche=1 Ergebnisse
+
+Status: ERFOLGREICH
