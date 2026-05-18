@@ -1394,10 +1394,10 @@
       {
         "stufe_id": "STUFE-025",
         "name": "Programmierbare Gesamt-Roadmap",
-        "beschreibung": "Fachliches Gesamtkonzept wird in maschinenlesbare Roadmap fuer CORE-24 zerlegt.",
+        "beschreibung": "Fachliches Gesamtkonzept wird in maschinenlesbare Roadmap fuer CORE-24 zerlegt. Bereits durch CORE-25 (Commit 17a49b8) vollstaendig erledigt.",
         "phase": "Phase 5: Autonomer Betrieb",
         "prioritaet": 25,
-        "status": "in_bearbeitung",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-024"
         ],
