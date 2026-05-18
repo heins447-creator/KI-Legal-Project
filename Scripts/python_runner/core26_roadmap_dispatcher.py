@@ -42,7 +42,7 @@ BASE_DIR = Path("I:/KI_Legal_Project")
 CONFIG_PATH = BASE_DIR / "Config" / "core26_roadmap_dispatcher_v1.json"
 
 # Eingabedateien
-ROADMAP_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE25_gesamt_roadmap.json"
+ROADMAP_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE25_gesamt_roadmap_v2.json"
 DASHBOARD_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE23_dashboard.json"
 ARBEITSINDEX_PATH = BASE_DIR / "Config" / "core21_arbeitsindex_v1.json"
 AGENTENREGELN_PATH = BASE_DIR / "Config" / "core22_agentenregeln_v1.json"

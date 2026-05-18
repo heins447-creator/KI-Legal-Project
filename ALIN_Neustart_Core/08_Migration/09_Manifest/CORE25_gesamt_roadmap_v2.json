@@ -1152,7 +1152,7 @@
         "beschreibung": "Rollenmodell implementieren, Berechtigungen pruefen, Freigaberegeln definieren.",
         "phase": "Phase 4: Test und Abnahme",
         "prioritaet": 19,
-        "status": "offen",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-017",
           "STUFE-018"

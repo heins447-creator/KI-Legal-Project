@@ -5,7 +5,7 @@ CORE-26: Pruefdatei fuer Roadmap-Dispatcher
 
 Prueft:
 1. Config core26_roadmap_dispatcher_v1.json lesbar
-2. Roadmap CORE25_gesamt_roadmap.json lesbar
+2. Roadmap CORE25_gesamt_roadmap_v2.json lesbar
 3. Dashboard CORE23_dashboard.json lesbar
 4. Arbeitsindex core21_arbeitsindex_v1.json lesbar
 5. Agentenregeln core22_agentenregeln_v1.json lesbar
@@ -29,7 +29,7 @@ from pathlib import Path
 BASE_DIR = Path("I:/KI_Legal_Project")
 
 CONFIG_PATH = BASE_DIR / "Config" / "core26_roadmap_dispatcher_v1.json"
-ROADMAP_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE25_gesamt_roadmap.json"
+ROADMAP_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE25_gesamt_roadmap_v2.json"
 DASHBOARD_PATH = BASE_DIR / "ALIN_Neustart_Core" / "08_Migration" / "09_Manifest" / "CORE23_dashboard.json"
 ARBEITSINDEX_PATH = BASE_DIR / "Config" / "core21_arbeitsindex_v1.json"
 AGENTENREGELN_PATH = BASE_DIR / "Config" / "core22_agentenregeln_v1.json"
