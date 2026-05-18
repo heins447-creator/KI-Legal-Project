@@ -9,6 +9,7 @@ Changes not staged for commit:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
+	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE20_git_status_nach.txt
 	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_git_status_nach.txt
 	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_git_status_vor.txt
 	ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_git_status_nach.txt

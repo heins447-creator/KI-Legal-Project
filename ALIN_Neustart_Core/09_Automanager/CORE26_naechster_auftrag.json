@@ -1,24 +1,18 @@
 {
-  "auftrags_id": "AUFTRAG-STUFE-025-2026-05-18T125448+0000",
-  "stufe_id": "STUFE-025",
-  "name": "Programmierbare Gesamt-Roadmap",
-  "beschreibung": "Fachliches Gesamtkonzept wird in maschinenlesbare Roadmap fuer CORE-24 zerlegt.",
+  "auftrags_id": "AUFTRAG-WINAPP-2026-05-18T130019+0000",
+  "stufe_id": "WINAPP",
+  "name": "Windows App Build und Release",
+  "beschreibung": "Windows-App kompilieren, Release-Checkliste, Changelog, Rollback-Plan.",
   "eingaben": [
-    "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
-    "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
-    "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
-    "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
-    "Config/core24_entwicklungsmanager_v1.json",
-    "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json"
+    "Windows_App/App/KI_Legal_WindowsApp.csproj",
+    "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
+    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+    "ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md"
   ],
   "ausgaben": [
-    "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
-    "ALIN_Neustart_Core/Reports/CORE25_GESAMT_ROADMAP_BERICHT.txt",
-    "Config/core25_roadmap_v1.json",
-    "Scripts/python_runner/core25_gesamt_roadmap.py",
-    "Scripts/python_runner/check_core25_gesamt_roadmap.py",
-    "Scripts/CORE25_GESAMT_ROADMAP_AUTOLAUF.ps1",
-    "Projektplanung/CORE25_GESAMT_ROADMAP.md"
+    "Windows_App/Scripts/Build_App.ps1",
+    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+    "ALIN_Neustart_Core/16_Build_Release/VERSION.json"
   ],
   "erlaubte_pfade": [
     "ALIN_Neustart_Core/00_Dokumentation/",
@@ -72,16 +66,15 @@
     "Bericht pruefen"
   ],
   "berichtspflichten": [
-    "ALIN_Neustart_Core/Reports/STUFE_025_BERICHT.txt"
+    "ALIN_Neustart_Core/Reports/WINAPP_BERICHT.txt"
   ],
   "commit_regel": "Nur bei Erfolg, Prefix: CORE-26",
-  "folgeentscheidung": "STUFE-026",
+  "folgeentscheidung": "DEPLOY",
   "tests_aus_roadmap": [
-    "Roadmap-JSON validiert",
-    "Abhaengigkeiten zyklenfrei",
-    "Alle Stufen eindeutige ID",
-    "Pruefdatei bestanden"
+    "Build erfolgreich",
+    "Release-Checkliste abgearbeitet",
+    "Rollback-Plan aktuell"
   ],
-  "erzeugt_am": "2026-05-18T12:54:48+0000",
+  "erzeugt_am": "2026-05-18T13:00:19+0000",
   "modul": "CORE-26"
 }
