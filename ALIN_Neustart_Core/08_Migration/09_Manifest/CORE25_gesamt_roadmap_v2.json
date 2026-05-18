@@ -3334,7 +3334,7 @@
         "beschreibung": "Vorbereitung zur Gesamtabnahme aller Module. Pruefung, Dokumentation, Bericht. KEINE Produktionsfreigabe. Produktionsfreigabe nur durch menschlichen Entscheid.",
         "phase": "Abschluss",
         "prioritaet": 100,
-        "status": "offen",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-025",
           "UI14",
