@@ -1,0 +1,38 @@
+{
+  "modul_id": "WINAPP",
+  "stufe_id": "WINAPP",
+  "name": "Windows App Build und Release (Vorbereitung)",
+  "version": "1.0.0",
+  "beschreibung": "Lokale Buildstruktur, Pruefskripte, Release-Artefaktordner, Bericht und Sperrhinweise. KEIN Produktivrelease.",
+  "eingaben": [
+    "Windows_App/App/KI_Legal_WindowsApp.csproj",
+    "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
+    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+    "ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md",
+    "ALIN_Neustart_Core/16_Build_Release/VERSION.json",
+    "Windows_App/Scripts/Build_App.ps1"
+  ],
+  "ausgaben": [
+    "ALIN_Neustart_Core/16_Build_Release/VERSION.json",
+    "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+    "ALIN_Neustart_Core/16_Build_Release/SPERRHINWEISE_WINAPP.md",
+    "ALIN_Neustart_Core/Reports/WINAPP_WINDOWS_APP_BUILD_RELEASE_BERICHT.txt"
+  ],
+  "sicherheitsgrenzen": [
+    "KEIN Produktivrelease ohne gesonderte Freigabe",
+    "KEIN Deployment auf Kanzleisysteme",
+    "KEINE echte Installation ohne Abnahme",
+    "KEINE Veroeffentlichung (Cloud/Internet)",
+    "KEINE echten Mandantendaten im Build"
+  ],
+  "tests": [
+    "Eingaben vorhanden",
+    "csproj-Struktur gueltig",
+    "VERSION.json aktualisiert",
+    "CHANGELOG.md aktualisiert",
+    "Sperrhinweise dokumentiert"
+  ],
+  "python_runner": "Scripts/python_runner/winapp_windows_app_build_release.py",
+  "check_file": "Scripts/python_runner/check_winapp_windows_app_build_release.py",
+  "powershell_starter": "Scripts/WINAPP_WINDOWS_APP_BUILD_RELEASE_AUTOLAUF.ps1"
+}

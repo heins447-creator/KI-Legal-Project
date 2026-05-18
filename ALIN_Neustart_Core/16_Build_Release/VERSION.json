@@ -4,7 +4,8 @@
   "major": 1,
   "minor": 0,
   "patch": 0,
-  "build": "20260516",
-  "status": "entwicklung",
-  "letzte_aenderung": "2026-05-16T00:00:00Z"
+  "build": "20260518",
+  "status": "vorbereitung",
+  "letzte_aenderung": "2026-05-18T13:10:09+0000",
+  "hinweis": "Nur lokale Vorbereitung. Kein Produktivrelease."
 }

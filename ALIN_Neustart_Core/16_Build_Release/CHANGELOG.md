@@ -28,3 +28,9 @@
 ### Behoben
 
 - Nichts (erste Version).
+
+## [2026-05-18T13:10:09+0000] WINAPP Vorbereitung
+- Buildstruktur geprueft
+- Release-Artefaktordner vorbereitet
+- Sperrhinweise dokumentiert
+- KEIN Produktivrelease
