@@ -1,0 +1,11 @@
+EXT-004 – FastAPI-Backend Bericht
+Erzeugt: 2026-05-18T20:56:30+0000
+API-Datei: I:\KI_Legal_Project\ALIN_Neustart_Core\25_API_Backend\alin_api_main.py
+OpenAPI-Schema: I:\KI_Legal_Project\ALIN_Neustart_Core\25_API_Backend\openapi_schema.json
+Start-Skript: I:\KI_Legal_Project\ALIN_Neustart_Core\25_API_Backend\start_api.ps1
+Datenbank: I:\KI_Legal_Project\Database\DuckDB\alin_local.duckdb
+
+Smoke-Test: ERFOLGREICH
+Health={'status': 'ok', 'timestamp': '2026-05-18T20:56:30.512598+00:00', 'service': 'ALIN-API'}, Terminologie=4 Eintraege
+
+Status: ERFOLGREICH
