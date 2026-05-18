@@ -25,7 +25,7 @@ Vor Beginn der Erweiterung müssen folgende Stufen der Roadmap v2 abgeschlossen 
 | EXT-003 | EU-Terminologiepakete für Rechtssicherheit | Phase C: Rechtswissen | 103 |
 | EXT-004 | FastAPI-Backend für lokale API | Phase D: API-Schicht | 104 |
 | EXT-005 | Semantische Suche in Dokumenten | Phase E: KI-Suche | 105 |
-| EXT-006 | WPF-Frontend für Windows-App | Phase F: UI-Neuaufbau | 106 |
+| EXT-006 | Semantische Suche API-Endpunkt | Phase E: KI-Suche API | 106 |
 
 ## Abhängigkeitsgraph
 
@@ -45,10 +45,8 @@ flowchart TD
     L[STUFE-019 Rechte/Rollen] --> K
     K --> M[EXT-005 Semantische Suche]
     E --> M
-    K --> N[EXT-006 WPF-Frontend]
+    K --> N[EXT-006 Semantische Suche API]
     M --> N
-    O[WINAPP Build] --> N
-    P[STUFE-011 Architektur] --> N
 ```
 
 ---
@@ -304,61 +302,48 @@ Implementierung einer lokalen semantischen Suche über Dokumenteninhalte. Verwen
 
 ---
 
-## EXT-006: WPF-Frontend für Windows-App
+## EXT-006: Semantische Suche API-Endpunkt
 
 ### Beschreibung
-Neuentwicklung des Windows-Frontends auf Basis von WPF (.NET 6/8). Ersetzt die bestehende WinUI-3-App. Bietet Dreiansicht, Posteingangsbearbeitung, OCR-Kontrolle, semantische Suche und Rechtswissen-Integration. Kommuniziert ausschließlich mit dem lokalen FastAPI-Backend.
+Erweiterung des FastAPI-Backends um einen `/suche` Endpunkt, der semantische Suche über DuckDB-Vektoren ermöglicht. TF-IDF-basiert, offline-fähig, vollständig lokal. Der ursprünglich geplante WPF-Frontend-Schritt wird als separater WINAPP-Batch geführt (kein EXT-007).
 
 ### Abhängigkeiten
 - `EXT-004` – FastAPI-Backend (Datenquelle und API)
-- `EXT-005` – Semantische Suche (UI-Integration der Suchergebnisse)
-- `WINAPP` – Windows App Build und Release (Archivierung der alten App)
-- `STUFE-011` – Windows-App-Architektur finalisiert
+- `EXT-005` – Semantische Suche / Vektor-Embeddings
 
 ### Eingaben
-- `ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md`
-- `ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md`
 - `Config/ext004_fastapi_backend_v1.json`
 - `Config/ext005_semantische_suche_v1.json`
-- `Windows_App/App/KI_Legal_WindowsApp.csproj`
+- `ALIN_Neustart_Core/25_API_Backend/alin_api_erweitert.py`
 
 ### Ausgaben
-- `Windows_App_WPF/App/KI_Legal_WPF.csproj`
-- `Windows_App_WPF/App/App.xaml`
-- `Windows_App_WPF/App/MainWindow.xaml`
-- `Windows_App_WPF/Scripts/Build_App.ps1`
-- `Windows_App_WPF/Scripts/Start_App.ps1`
-- `Config/ext006_wpf_frontend_v1.json`
-- `Projektplanung/EXT006_WPF_FRONTEND.md`
-- `ALIN_Neustart_Core/Reports/EXT006_WPF_FRONTEND_BERICHT.txt`
-- `ALIN_Neustart_Core/08_Migration/08_Archiv_Vorschlag/WINAPP_ARCHIVIERUNG.json`
+- `Scripts/python_runner/ext006_semantische_suche_api.py`
+- `Scripts/python_runner/check_ext006_semantische_suche_api.py`
+- `Scripts/EXT006_SEMANTISCHE_SUCHE_API_AUTOLAUF.ps1`
+- `Config/ext006_semantische_suche_api_v1.json`
+- `Projektplanung/EXT006_SEMANTISCHE_SUCHE_API.md`
+- `ALIN_Neustart_Core/Reports/EXT006_SEMANTISCHE_SUCHE_API_BERICHT.txt`
 
 ### Sperren
-- Kein Deployment der WPF-App
-- Keine Produktivfreigabe
-- Alte WinUI-3-App muss vor Freigabe archiviert werden
-- Keine echten Mandantendaten im UI-Test
-- Keine externen UI-Bibliotheken ohne Lizenzprüfung
-- App kommuniziert nur mit `localhost`
+- Kein Cloud-Suchdienst
+- Keine externen Embedding-Modelle
+- Nur localhost
+- Keine echten Mandantendaten
 
 ### Tests
-- WPF-App kompiliert und startet lokal
-- Dreiansicht funktioniert
-- Posteingangsbearbeitung über FastAPI getestet
-- Semantische Suche integriert und getestet
-- Rechtswissen-Panel funktioniert
+- FastAPI-Server startet lokal
+- `/suche` Endpunkt liefert Ergebnisse
+- TF-IDF-Berechnung funktioniert offline
 - Prüfdatei bestanden
-- Build-Skript funktioniert
-- Start-Skript funktioniert
-- Alte App wurde archiviert
+- Python-Runner und PowerShell-Starter funktionieren
 
 ### Fertigstellungskriterien
-- WPF-Projekt kompilierbar
-- Build- und Start-Skripte vorhanden
+- Python-Läufer und Prüfdatei vorhanden
+- PowerShell-Starter funktioniert
 - Konfiguration unter Config abgelegt
 - Dokumentation unter Projektplanung erstellt
 - Bericht unter Reports geschrieben
-- Archivierung der alten WinUI-3-App dokumentiert
+- API-Smoke-Test bestanden
 - Lizenzregister aktualisiert
 
 ---
@@ -381,7 +366,7 @@ Neuentwicklung des Windows-Frontends auf Basis von WPF (.NET 6/8). Ersetzt die b
 3. **Phase C: Rechtswissen** – EXT-003
 4. **Phase D: API-Schicht** – EXT-004
 5. **Phase E: KI-Suche** – EXT-005
-6. **Phase F: UI-Neuaufbau** – EXT-006
+6. **Phase E: KI-Suche API** – EXT-006
 
 ## Lieferpflichten je Stufe
 

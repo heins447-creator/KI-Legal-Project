@@ -306,66 +306,54 @@
       },
       {
         "stufe_id": "EXT-006",
-        "name": "WPF-Frontend fuer Windows-App",
-        "beschreibung": "Neuentwicklung des Windows-Frontends auf Basis von WPF. Ersetzt die WinUI-3-App. Bietet Dreiansicht, Posteingang, OCR-Kontrolle, semantische Suche und Rechtswissen-Integration. Kommuniziert ausschliesslich mit lokalem FastAPI-Backend.",
-        "phase": "Phase F: UI-Neuaufbau",
+        "name": "Semantische Suche API-Endpunkt",
+        "beschreibung": "Erweiterung des FastAPI-Backends um semantische Suche ueber TF-IDF-Vektoren. Endpunkt /suche fuer lokale Dokumentensuche. Vollstaendig offline-faehig mit NumPy.",
+        "phase": "Phase E: KI-Suche API",
         "prioritaet": 106,
         "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-004",
-          "EXT-005",
-          "WINAPP",
-          "STUFE-011"
+          "EXT-005"
         ],
         "eingaben": [
-          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
-          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
           "Config/ext004_fastapi_backend_v1.json",
           "Config/ext005_semantische_suche_v1.json",
-          "Windows_App/App/KI_Legal_WindowsApp.csproj"
+          "ALIN_Neustart_Core/25_API_Backend/alin_api_erweitert.py"
         ],
         "ausgaben": [
-          "Windows_App_WPF/App/KI_Legal_WPF.csproj",
-          "Windows_App_WPF/App/App.xaml",
-          "Windows_App_WPF/App/MainWindow.xaml",
-          "Windows_App_WPF/Scripts/Build_App.ps1",
-          "Windows_App_WPF/Scripts/Start_App.ps1",
-          "Config/ext006_wpf_frontend_v1.json",
-          "Projektplanung/EXT006_WPF_FRONTEND.md",
-          "ALIN_Neustart_Core/Reports/EXT006_WPF_FRONTEND_BERICHT.txt",
-          "ALIN_Neustart_Core/08_Migration/08_Archiv_Vorschlag/WINAPP_ARCHIVIERUNG.json"
+          "Scripts/python_runner/ext006_semantische_suche_api.py",
+          "Scripts/python_runner/check_ext006_semantische_suche_api.py",
+          "Scripts/EXT006_SEMANTISCHE_SUCHE_API_AUTOLAUF.ps1",
+          "Config/ext006_semantische_suche_api_v1.json",
+          "Projektplanung/EXT006_SEMANTISCHE_SUCHE_API.md",
+          "ALIN_Neustart_Core/Reports/EXT006_SEMANTISCHE_SUCHE_API_BERICHT.txt"
         ],
         "sperren": [
-          "Kein Deployment der WPF-App",
-          "Keine Produktivfreigabe",
-          "Alte WinUI-3-App muss vor Freigabe archiviert werden",
-          "Keine echten Mandantendaten im UI-Test",
-          "Keine externen UI-Bibliotheken ohne Lizenzpruefung",
-          "App kommuniziert nur mit localhost"
+          "Kein Cloud-Suchdienst",
+          "Keine externen Embedding-Modelle",
+          "Nur localhost",
+          "Keine echten Mandantendaten"
         ],
         "tests": [
-          "WPF-App kompiliert und startet lokal",
-          "Dreiansicht funktioniert",
-          "Posteingangsbearbeitung ueber FastAPI getestet",
-          "Semantische Suche integriert und getestet",
-          "Rechtswissen-Panel funktioniert",
+          "FastAPI-Server startet lokal",
+          "/suche Endpunkt liefert Ergebnisse",
+          "TF-IDF-Berechnung funktioniert offline",
           "Pruefdatei bestanden",
-          "Build-Skript funktioniert",
-          "Start-Skript funktioniert",
-          "Alte App wurde archiviert"
+          "Python-Runner und PowerShell-Starter funktionieren"
         ],
-        "erlaubte_naechste_module": [],
+        "erlaubte_naechste_module": [
+          "EXT-007"
+        ],
         "blockierte_module": [
           "DEPLOY"
         ],
         "fertigstellungskriterien": [
-          "WPF-Projekt kompilierbar",
-          "Build- und Start-Skripte vorhanden",
+          "Python-Laeufer und Pruefdatei vorhanden",
+          "PowerShell-Starter funktioniert",
           "Konfiguration unter Config abgelegt",
           "Dokumentation unter Projektplanung erstellt",
           "Bericht unter Reports geschrieben",
-          "Archivierung der alten WinUI-3-App dokumentiert",
-          "Lizenzregister aktualisiert"
+          "API-Smoke-Test bestanden"
         ]
       }
     ],

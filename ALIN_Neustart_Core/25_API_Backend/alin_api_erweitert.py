@@ -87,11 +87,11 @@ def root():
         "docs": "/docs",
     }
 
+from datetime import datetime, timezone
+
 @app.get("/health")
 def health():
     return {"status": "ok", "timestamp": datetime.now(timezone.utc).isoformat(), "service": "ALIN-API-EXT"}
-
-from datetime import datetime, timezone
 
 @app.get("/suche")
 def suche(q: str = Query(..., min_length=1)):
