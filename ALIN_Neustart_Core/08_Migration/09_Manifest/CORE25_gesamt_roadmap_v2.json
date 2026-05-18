@@ -3292,10 +3292,10 @@
       {
         "stufe_id": "DEPLOY",
         "name": "Deployment und Betrieb",
-        "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung.",
+        "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung. BLOCKIERT: Kein Deployment ohne gesonderte Freigabe.",
         "phase": "Build und Release",
         "prioritaet": 90,
-        "status": "offen",
+        "status": "blockiert",
         "abhaengigkeiten": [
           "WINAPP",
           "STUFE-020"
@@ -3312,7 +3312,8 @@
         ],
         "sperren": [
           "Windows-App nicht gebaut",
-          "Datenschutz nicht definiert"
+          "Datenschutz nicht definiert",
+          "Kein Deployment ohne gesonderte Freigabe"
         ],
         "tests": [
           "Deployment-Pruefpunkte abgearbeitet",
