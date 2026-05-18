@@ -1,8 +1,8 @@
 {
-  "auftrags_id": "AUFTRAG-DEPLOY-2026-05-18T131146+0000",
+  "auftrags_id": "AUFTRAG-DEPLOY-2026-05-18T131401+0000",
   "stufe_id": "DEPLOY",
   "name": "Deployment und Betrieb",
-  "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung.",
+  "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung. BLOCKIERT: Kein Deployment ohne gesonderte Freigabe.",
   "eingaben": [
     "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
     "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md",
@@ -74,6 +74,6 @@
     "Offline-Profil getestet",
     "Gerichtslaptop-Profil validiert"
   ],
-  "erzeugt_am": "2026-05-18T13:11:46+0000",
+  "erzeugt_am": "2026-05-18T13:14:01+0000",
   "modul": "CORE-26"
 }
