@@ -1,24 +1,23 @@
 {
   "modul_id": "CORE-26",
   "version": "1.0.0",
-  "zeitstempel": "2026-05-18T13:14:50+0000",
-  "dispatcher_status": "BLOCKIERT",
-  "naechste_stufe": null,
-  "naechste_stufe_name": null,
-  "blockierte_stufen_anzahl": 2,
+  "zeitstempel": "2026-05-18T14:04:29+0000",
+  "dispatcher_status": "BEREIT",
+  "naechste_stufe": "STUFE-026",
+  "naechste_stufe_name": "Gesamtabnahme und Produktionsfreigabe",
+  "blockierte_stufen_anzahl": 1,
   "blockierte_stufen_ids": [
-    "DEPLOY",
-    "STUFE-026"
+    "DEPLOY"
   ],
   "bericht_zusammenfassung": {
     "roadmap_gelesen": true,
     "stufen_anzahl": 90,
     "abgeschlossen_anzahl": 88,
-    "blockiert_anzahl": 2,
-    "naechste_stufe": null,
-    "queue_geschrieben": false,
+    "blockiert_anzahl": 1,
+    "naechste_stufe": "STUFE-026",
+    "queue_geschrieben": true,
     "modus": "execute_next",
     "technische_blockaden_anzahl": 0
   },
-  "fortsetzung_beim_naechsten_lauf": false
+  "fortsetzung_beim_naechsten_lauf": true
 }

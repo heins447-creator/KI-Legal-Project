@@ -1,11 +1,11 @@
 ================================================================================
 CORE-26: ROADMAP-DISPATCHER BERICHT
 ================================================================================
-Zeitstempel: 2026-05-18T13:14:50+0000
+Zeitstempel: 2026-05-18T14:04:29+0000
 Modul: CORE-26 - Roadmap-Dispatcher und Selbstfortsetzung
 Version: 1.0.0
 
-Commit-Hash: 9a4db0612dafcdb704c7ede7b3ef6877915cca6d
+Commit-Hash: 5c935262185565c7d1441b069b3d72359431ca87
 
 ROADMAP-STATUS:
   Roadmap gelesen: JA (CORE-25)
@@ -105,18 +105,22 @@ ABGESCHLOSSENE STUFEN:
 NICHT-AUSFUEHRBARE STUFEN (offen oder blockiert):
   - DEPLOY: Deployment und Betrieb
       Grund: Stufe ist blockiert
-  - STUFE-026: Gesamtabnahme und Produktionsfreigabe
-      Grund: Stufe ist gesperrt
-  Gesamt: 2 Stufen nicht ausfuehrbar
+  Gesamt: 1 Stufen nicht ausfuehrbar
 
 NAECHSTE AUSGEWAEHLTE STUFE:
-  KEINE ausfuehrbare Stufe gefunden
+  Stufe-ID: STUFE-026
+  Name: Gesamtabnahme und Produktionsfreigabe
+  Phase: Abschluss
+  Prioritaet: 100
 
 ERZEUGTER AUFTRAG:
-  KEIN Auftrag erzeugt
+  Auftrags-ID: AUFTRAG-STUFE-026-2026-05-18T140429+0000
+  Stufe: STUFE-026
+  Name: Gesamtabnahme und Produktionsfreigabe
+  Folgeentscheidung: None
 
 QUEUE-STATUS:
-  Queue-Eintrag geschrieben: NEIN
+  Queue-Eintrag geschrieben: JA
 
 AUSFUEHRUNGSMODUS:
   Modus: execute_next
@@ -126,11 +130,12 @@ TECHNISCHE BLOCKADEN:
   Keine technischen Blockaden
 
 FORTSETZUNG:
-  Keine automatische Fortsetzung moeglich - alle Stufen blockiert oder abgeschlossen
+  Naechster automatischer Lauf wird Stufe 'STUFE-026' bearbeiten
+  Status-JSON und Auftrags-JSON wurden geschrieben
 
 ================================================================================
 ENDE BERICHT
 ================================================================================
-[2026-05-18T13:14:50+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
-[2026-05-18T13:14:50+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
-[2026-05-18T13:14:50+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json
+[2026-05-18T14:04:29+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE26_ROADMAP_DISPATCHER_BERICHT.txt
+[2026-05-18T14:04:29+0000] Status-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_dispatcher_status.json
+[2026-05-18T14:04:29+0000] Auftrags-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\09_Automanager\CORE26_naechster_auftrag.json

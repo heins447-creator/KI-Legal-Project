@@ -3,6 +3,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json
+	modified:   ALIN_Neustart_Core/08_Migration/09_Manifest/CORE26_git_status_nach.txt
 	modified:   ALIN_Neustart_Core/Reports/CORE26_ROADMAP_DISPATCHER_BERICHT.txt
 	modified:   ALIN_Neustart_Core/Reports/CORE27_ROADMAP_ID_NORMALISIERUNG_BERICHT.txt
 

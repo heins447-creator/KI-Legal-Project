@@ -5,7 +5,6 @@ Changes not staged for commit:
 	modified:   ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json
 	modified:   ALIN_Neustart_Core/Reports/CORE26_ROADMAP_DISPATCHER_BERICHT.txt
 	modified:   ALIN_Neustart_Core/Reports/CORE27_ROADMAP_ID_NORMALISIERUNG_BERICHT.txt
-	modified:   Scripts/python_runner/core26_roadmap_dispatcher.py
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
