@@ -23,7 +23,7 @@
         "beschreibung": "Einfuehrung von DuckDB als lokale, dateibasierte analytische Datenbank. Schemas fuer Dokumente, OCR-Ergebnisse, Uebersetzungen, Terminologie und Vektorembeddings.",
         "phase": "Phase A: Datenfundament",
         "prioritaet": 101,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "STUFE-026",
           "STUFE-001",
@@ -140,7 +140,7 @@
         "beschreibung": "Aufbau eines lokalen EU-Terminologie-Registers fuer rechtssichere Uebersetzungen. Enthaelt EuroVoc-Konzepte, EU-Verordnungsbegriffe und validierte Uebersetzungsaequivalente.",
         "phase": "Phase C: Rechtswissen",
         "prioritaet": 103,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-001",
           "Q02",
@@ -197,7 +197,7 @@
         "beschreibung": "Lokales FastAPI-Backend als zentrale API-Schicht. Endpunkte fuer Dokumentenverwaltung, OCR-Trigger, Uebersetzungsanfragen, Terminologie-Abfragen und semantische Suche. Ausschliesslich localhost.",
         "phase": "Phase D: API-Schicht",
         "prioritaet": 104,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-001",
           "EXT-003",
