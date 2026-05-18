@@ -1,0 +1,97 @@
+================================================================================
+KLARSTELLUNG ZUR AGENTENFREIGABE
+================================================================================
+Gilt fuer: Roo (KI-Coding-Agent) im Projekt I:\KI_Legal_Project
+Erstellt:  2026-05-18
+Status:    Verbindlich
+
+================================================================================
+1. ARBEITSBEREICH
+================================================================================
+
+Ausschliesslich erlaubt:
+
+    I:\KI_Legal_Project
+
+Jede Operation ausserhalb dieses Verzeichnisses ist VERBOTEN.
+
+================================================================================
+2. AUTOMATISCH ERLAUBTE BEFEHLE
+================================================================================
+
+Folgende Befehle duerfen ohne zusaetzliche Nachfrage ausgefuehrt werden,
+sofern sie innerhalb I:\KI_Legal_Project arbeiten:
+
+    I:\KI_Legal_Project\Tools\Python312\python.exe
+        -m py_compile
+        Scripts\python_runner\*.py
+        -c "..."
+
+    Scripts\*.ps1
+    Scripts\python_runner\*.py
+
+    git status
+    git diff
+    git diff --stat
+    git diff --name-only
+    git add  (nur fuer auftragsbezogene Dateien)
+    git commit  (nur nach erfolgreichem Build und Pruefung)
+    git log -1 --oneline
+
+================================================================================
+3. VORAUSSETZUNGEN FUER AUTOMATISCHE AUSFUEHRUNG
+================================================================================
+
+    [a] Der Befehl muss innerhalb I:\KI_Legal_Project arbeiten.
+    [b] Der Zielpfad muss laut Config/core21_arbeitsindex_v1.json
+        den Status "aktiv" haben.
+    [c] Die CORE-22-Regel (Agenten-Einstieg) muss eingehalten sein.
+    [d] Es handelt sich um keine destruktive Operation.
+    [e] Es werden keine Daten ausserhalb des Projekts uebertragen.
+
+================================================================================
+4. VERBOTENE BEFEHLE (NIEMALS automatisch erlaubt)
+================================================================================
+
+    Remove-Item, del, erase
+    move, Move-Item
+    rename, Rename-Item
+    rmdir, rd
+    pip install, pip uninstall
+    winget, choco, npm install
+    curl, wget, Invoke-WebRequest
+    Start-Process fuer externe Installer
+    ssh, scp, ftp
+    Internet-/API-/Cloud-Zugriff
+    Datenbank-Aenderungen (INSERT, UPDATE, DELETE, DROP)
+    Aenderungen an Original-Mandantendaten
+    Produktivfreigabe oder Deployment
+
+================================================================================
+5. ENTSCHEIDUNGSBAUM FUER ROO
+================================================================================
+
+    Befehl innerhalb I:\KI_Legal_Project?
+        NEIN  -> ABLEHNEN
+        JA    -> Befehl in erlaubter Liste?
+                   NEIN  -> ABLEHNEN
+                   JA    -> Zielpfad aktiv laut CORE-21?
+                              NEIN  -> ABLEHNEN oder NUR LESEN
+                              JA    -> AUSFUEHREN
+
+================================================================================
+6. FOLGE
+================================================================================
+
+Wenn ein Befehl diese Regeln einhaelt, soll er nicht erneut fachlich
+nachfragen, sondern weiterarbeiten.
+
+CORE-23 und alle folgenden Module sollen vollstaendig autonom
+bis Pruefung, Bericht und Commit laufen.
+
+================================================================================
+Referenzen:
+- Config/core21_arbeitsindex_v1.json
+- Config/core22_agentenregeln_v1.json
+- ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json
+================================================================================
