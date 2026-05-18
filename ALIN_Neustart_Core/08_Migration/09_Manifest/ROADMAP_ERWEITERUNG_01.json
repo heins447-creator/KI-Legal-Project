@@ -84,7 +84,7 @@
         "beschreibung": "Erweiterung der OCR-Strecke um PaddleOCR zur Verbesserung bei komplexen Layouts. Layout-Analyse fuer strukturierte Extraktion von Tabellen, Spalten und Fussnoten.",
         "phase": "Phase B: OCR-Verbesserung",
         "prioritaet": 102,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-001",
           "KM21b0",
@@ -255,7 +255,7 @@
         "beschreibung": "Lokale semantische Suche ueber Dokumenteninhalte mit lokalen Embedding-Modellen. Speicherung in DuckDB oder FAISS-Indizierung. Inhaltliche Suche ueber OCR-Texte und Uebersetzungen.",
         "phase": "Phase E: KI-Suche",
         "prioritaet": 105,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-001",
           "EXT-002",
@@ -310,7 +310,7 @@
         "beschreibung": "Neuentwicklung des Windows-Frontends auf Basis von WPF. Ersetzt die WinUI-3-App. Bietet Dreiansicht, Posteingang, OCR-Kontrolle, semantische Suche und Rechtswissen-Integration. Kommuniziert ausschliesslich mit lokalem FastAPI-Backend.",
         "phase": "Phase F: UI-Neuaufbau",
         "prioritaet": 106,
-        "status": "geplant",
+        "status": "abgeschlossen",
         "abhaengigkeiten": [
           "EXT-004",
           "EXT-005",
