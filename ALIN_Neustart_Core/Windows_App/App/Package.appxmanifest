@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ALIN Kanzleisoftware — MSIX Package Manifest (Skeleton AP 1.5)
+  Vor der ersten Auslieferung:
+  - Publisher muss mit dem Code-Signing-Zertifikat des Anwalts übereinstimmen
+  - Version auf aktuelle Release-Version aktualisieren
+  - Offene Frage G4 (PyMuPDF AGPL) muss geklaert sein
+-->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="mp uap rescap">
+
+  <Identity
+    Name="KanzleisoftwareALIN"
+    Publisher="CN=ALIN-PLATZHALTER-MUSS-ERSETZT-WERDEN"
+    Version="1.0.0.0"
+    ProcessorArchitecture="x64" />
+
+  <mp:PhoneIdentity
+    PhoneProductId="00000000-0000-0000-0000-000000000000"
+    PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+
+  <Properties>
+    <DisplayName>ALIN Kanzleisoftware</DisplayName>
+    <PublisherDisplayName>ALIN-PLATZHALTER</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>Offline-Kanzleisoftware fuer EU-Anwaltskanzleien. ALIN verarbeitet Mandatsdokumente lokal ohne Internetverbindung.</Description>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="de-DE" />
+    <Resource Language="en-US" />
+  </Resources>
+
+  <Applications>
+    <Application
+      Id="AlinApp"
+      Executable="ALIN.exe"
+      EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="ALIN"
+        Description="ALIN Kanzleisoftware"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <!-- Vollvertrauen: nötig für lokale Dateioperationen und Python-Subprozesse -->
+    <rescap:Capability Name="runFullTrust" />
+    <!-- Lokaler Dateizugriff für Mandatsdaten -->
+    <uap:Capability Name="documentsLibrary" />
+    <!-- Netzwerk: nur für explizite Update-Aktion durch Anwalt -->
+    <Capability Name="internetClient" />
+  </Capabilities>
+
+</Package>

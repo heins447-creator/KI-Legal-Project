@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "phase": "1",
+  "arbeitspaket": "1.5",
+  "name": "MSIX-Skeleton fuer Windows-Paketierung",
+  "datum": "2026-05-19",
+  "ziel": "Minimales MSIX-Paketgeruest das compiliert und prueft werden kann — kein vollstaendiges UI, nur Fundament fuer Phase 2",
+  "dateien": {
+    "manifest": "Windows_App/App/Package.appxmanifest",
+    "projekt": "Windows_App/App/ALIN.csproj",
+    "app_xaml": "Windows_App/App/App.xaml",
+    "app_cs": "Windows_App/App/App.xaml.cs",
+    "hauptfenster": "Windows_App/App/MainWindow.xaml",
+    "hauptfenster_cs": "Windows_App/App/MainWindow.xaml.cs",
+    "build_skript": "Windows_App/Packaging/build_msix.ps1"
+  },
+  "offene_punkte_vor_auslieferung": [
+    "Publisher-CN muss mit Code-Signing-Zertifikat des Anwalts uebereinstimmen",
+    "Offene Frage G4: PyMuPDF AGPL vor Verkauf klaeren",
+    "Store-Logo und App-Icons in Assets/ hinterlegen",
+    "Version auf Release-Version aktualisieren"
+  ],
+  "abnahmekriterium_ap15": "Package.appxmanifest und ALIN.csproj vorhanden, Syntax korrekt, build_msix.ps1 --nur-pruefen liefert Exit 0",
+  "naechstes_ap": "Phase 2 — Eingang und OCR-Pipeline"
+}
