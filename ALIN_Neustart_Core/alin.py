@@ -23,6 +23,7 @@ sys.path.insert(0, str(ROOT))
 
 from alin_core.redline_guard import evaluate_action
 from alin_core.network_guard import NetworkBlockedError, check_outbound_allowed
+from alin_core.healthcheck import gate_check, run_healthcheck
 
 
 ADMIN_HASH_ENV = "ALIN_ADMIN_PASSWORD_SHA256"
@@ -52,15 +53,18 @@ def run_python_script(script: Path, args: list[str]) -> int:
 
 
 def command_health(mode: str) -> int:
+    ergebnis = run_healthcheck(stille=False)
     payload = {
-        "status": "ok",
+        "status": "ok" if ergebnis.gesamt_ok else "degraded",
         "mode": mode,
         "service": "ALIN Dispatcher",
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": ergebnis.zeitstempel,
         "workspace": str(ROOT),
+        "kritisch_fehler": ergebnis.kritisch_fehler,
+        "optionale_warnungen": ergebnis.optionale_warnungen,
     }
     json_print(payload)
-    return 0
+    return 0 if ergebnis.gesamt_ok else 1
 
 
 def command_redline_check(mode: str, note: str, paths: list[str]) -> int:
@@ -139,7 +143,12 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = parse_args(argv or sys.argv[1:])
+    # Pre-Run-Gate: kritische Tools pruefen (ueberspringen bei 'health'-Befehl)
+    argv_effektiv = argv or sys.argv[1:]
+    if argv_effektiv and argv_effektiv[0] != "health":
+        gate_check(stille=True)
+
+    args = parse_args(argv_effektiv)
     mode = "execute" if args.execute else "dry-run"
     try:
         if args.command == "health":
