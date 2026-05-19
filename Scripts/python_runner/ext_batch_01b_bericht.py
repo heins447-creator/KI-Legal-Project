@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+"""EXT-BATCH-01B – Batch-Abschlussbericht"""
+
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+REPORT_FILE = BASE_DIR / "ALIN_Neustart_Core" / "Reports" / "EXT_BATCH_01B_BERICHT.txt"
+
+def main() -> int:
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S%z")
+    bericht = f"""EXT-BATCH-01B – Batch-Abschlussbericht
+Erzeugt: {ts}
+
+=== Zusammenfassung ===
+Batch: EXT-BATCH-01B (3 Stufen)
+Status: ALLE STUFEN ABGESCHLOSSEN
+
+=== Einzelnachweise ===
+
+[EXT-002] PaddleOCR / Layout-Analyse
+  Commit: f84de18
+  Autolauf: ERFOLGREICH
+  Ausgaben:
+    - 1 synthetisches OCR-Ergebnis in alin_ext001.ocr_ergebnisse (PaddleOCR-Engine)
+    - PADDLEOCR_INSTALL.ps1 (Offline-Installations-Skript)
+    - alin_paddleocr_layout.py (Layout-Analyse-Stub)
+    - Config/ext002_paddleocr_layout_v1.json
+    - Projektplanung/EXT002_PADDLEOCR_LAYOUT.md
+  Notiz: PaddleOCR nicht installiert – Infrastruktur vorbereitet fuer manuelle Installation
+
+[EXT-005] Semantische Suche / Vektor-Embeddings
+  Commit: 16913aa
+  Autolauf: ERFOLGREICH
+  Ausgaben:
+    - 5 Texte indexiert (Terminologie + OCR)
+    - Vokabular: 75 Woerter
+    - 5 Vektor-Embeddings in alin_ext001.vektor_embeddings (TF-IDF)
+    - Config/ext005_semantische_suche_v1.json
+    - Projektplanung/EXT005_SEMANTISCHE_SUCHE.md
+  Test-Suche: 'Verordnung Europaeische Union' -> Score 0.4420
+  Notiz: NumPy-only, offline, keine externen Modelle
+
+[EXT-006] Semantische Suche API-Endpunkt
+  Commit: 8f28014
+  Autolauf: ERFOLGREICH
+  Ausgaben:
+    - alin_api_erweitert.py (FastAPI mit /suche Endpunkt)
+    - start_api_erweitert.ps1
+    - Config/ext006_semantische_suche_api_v1.json
+    - Projektplanung/EXT006_SEMANTISCHE_SUCHE_API.md
+  Smoke-Test:
+    - GET /health         -> OK
+    - GET /suche?q=Verordnung -> 1 Ergebnis
+  Notiz: TF-IDF on-the-fly, brute-force Cosinus-Aehnlichkeit
+
+=== Roadmap-Update ===
+ROADMAP_ERWEITERUNG_01.json: EXT-002, EXT-005, EXT-006 auf "abgeschlossen"
+Commit: 8d6db70
+
+=== Naechste empfohlene Schritte ===
+- WPF-Frontend als eigener UI-Batch (vorgeschlagen vom Nutzer)
+- PaddleOCR manuelle Installation via PADDLEOCR_INSTALL.ps1
+- Erweiterte Embedding-Modelle (z.B. sentence-transformers) bei Bedarf
+
+=== Git-Log (letzte 5) ===
+"""
+    REPORT_FILE.write_text(bericht, encoding="utf-8")
+    print(f"Bericht geschrieben: {REPORT_FILE}")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

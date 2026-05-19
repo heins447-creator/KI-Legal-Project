@@ -1,0 +1,7 @@
+tool_id,version,datei,sha256,datum
+ARGOS_TRANSLATE,1.11.0,09_Toolbibliothek/02_Installer_Offline/ARGOS_TRANSLATE/argostranslate-1.11.0-py3-none-any.whl,a89b42d82f40843900338f9ac60d4c82fda590b6898247f5d0c15d46731ca7df,2026-05-19T12:00:00+00:00
+CLAMAV,1.3.1,09_Toolbibliothek/02_Installer_Offline/CLAMAV/ClamAV-1.3.1.win.x64.msi,90806b663b863ae32aaaa2b750f56db10b91d876de9081b666cd1863ed380179,2026-05-19T12:00:00+00:00
+MSOFFCRYPTO,6.0.0,09_Toolbibliothek/02_Installer_Offline/MSOFFCRYPTO/msoffcrypto_tool-6.0.0-py3-none-any.whl,46c394ed5d9641e802fc79bf3fb0666a53748b23fa8c4aa634ae9d30d46fe397,2026-05-19T12:00:00+00:00
+OLLAMA,2030.6MB,09_Toolbibliothek/02_Installer_Offline/OLLAMA/OllamaSetup.exe,c445439b0101f0cc6a3419a4a198353472dbef22028843e4fc10203ef7352c75,2026-05-19T16:50:00+00:00
+PADDLEOCR,3.5.0,09_Toolbibliothek/02_Installer_Offline/PADDLEOCR/paddleocr-3.5.0-py3-none-any.whl,7fbf81bc88547d4f3116710177691f7beaf3324c21cbbf20f5b1f355b5369c95,2026-05-19T12:00:00+00:00
+PYHANKO,0.35.1,09_Toolbibliothek/02_Installer_Offline/PYHANKO/pyhanko-0.35.1-py3-none-any.whl,57c085f29d7f87334be2a5fbd38a1ca3c987f40f51aea38bde628497d6d9ef2e,2026-05-19T12:00:00+00:00

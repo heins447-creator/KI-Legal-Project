@@ -1,0 +1,25 @@
+{
+  "modul": "UI03-1b",
+  "version": "1.0.0",
+  "beschreibung": "OCR-/Übersetzungskontrolle mit Dreiansicht auf bereinigten CORE-11-Registern",
+  "core11_konform": true,
+  "register_pruefung": {
+    "tesseract_tool_id": "tesseract_ocr",
+    "argos_tool_id": "argos_translate",
+    "deepl_ressource_id": "deepl_api_key"
+  },
+  "ausgabe": {
+    "status_html": "02_Status/UI03_1b_OCR_KONTROLLE_STATUS.html",
+    "status_json": "02_Status/UI03_1b_OCR_KONTROLLE_STATUS.json",
+    "bericht": "03_Berichte/UI03_1b_OCR_KONTROLLE_BERICHT.txt",
+    "fehler": "05_Fehler/UI03_1b_OCR_KONTROLLE_FEHLER.txt"
+  },
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_endgueltige_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true
+  }
+}

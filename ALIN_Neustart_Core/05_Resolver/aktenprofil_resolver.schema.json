@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Aktenprofil-Resolver",
+  "description": "Schema für den Aktenprofil-Resolver.",
+  "type": "object",
+  "required": ["schema_version", "resolver_id", "eingabe", "ausgabe"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "resolver_id": { "type": "string", "const": "aktenprofil_resolver" },
+    "eingabe": {
+      "type": "object",
+      "required": ["dokument_id", "akten_id", "mandanten_id"],
+      "properties": {
+        "dokument_id": { "type": "string" },
+        "akten_id": { "type": "string" },
+        "mandanten_id": { "type": "string" },
+        "quelle": { "type": "string" },
+        "eingangsdatum": { "type": "string", "format": "date-time" }
+      }
+    },
+    "ausgabe": {
+      "type": "object",
+      "required": ["dokumentsprache", "anwaltssprache", "mandantensprache", "gerichtssprache", "land", "rechtsraum", "rechtsgebiet", "dokumenttyp"],
+      "properties": {
+        "dokumentsprache": { "type": "string" },
+        "anwaltssprache": { "type": "string" },
+        "mandantensprache": { "type": "string" },
+        "gerichtssprache": { "type": "string" },
+        "land": { "type": "string" },
+        "rechtsraum": { "type": "string" },
+        "rechtsgebiet": { "type": "string" },
+        "dokumenttyp": { "type": "string" },
+        "benoetigte_ocr_ressourcen": { "type": "array", "items": { "type": "string" } },
+        "benoetigte_uebersetzungsressourcen": { "type": "array", "items": { "type": "string" } },
+        "benoetigte_terminologie": { "type": "array", "items": { "type": "string" } },
+        "benoetigte_quellen": { "type": "array", "items": { "type": "string" } },
+        "benoetigte_skills": { "type": "array", "items": { "type": "string" } },
+        "zulaessiger_naechster_schritt": { "type": "string" },
+        "warnungen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

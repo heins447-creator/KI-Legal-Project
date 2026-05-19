@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "id": "RL001_SCOPE",
+      "title": "Keine Aenderungen ausserhalb der Arbeitswurzel",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "path_outside_workspace"
+      ]
+    },
+    {
+      "id": "RL002_CLIENT_DATA",
+      "title": "Keine echten Mandantendaten in Tests, Logs oder externe Modelle",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "real_client_data",
+        "mandant_echt"
+      ]
+    },
+    {
+      "id": "RL003_INTERNET",
+      "title": "Keine automatische Internetverbindung",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "network_request",
+        "http://",
+        "https://",
+        "requests.get",
+        "requests.post"
+      ]
+    },
+    {
+      "id": "RL004_FOREIGN_API",
+      "title": "Keine Cloud, keine Telemetrie, keine Fremd-API-Aufrufe",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "openai",
+        "telemetry",
+        "foreign_api"
+      ]
+    },
+    {
+      "id": "RL005_DB_MIGRATION",
+      "title": "Keine Datenbankaenderung ohne Migration",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "database_write_without_migration"
+      ]
+    },
+    {
+      "id": "RL006_NO_AI_TRANSLATION_AFTER_ACCEPTANCE",
+      "title": "Keine KI-Uebersetzung in der Aktenbearbeitung",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "ai_translation_after_acceptance"
+      ]
+    },
+    {
+      "id": "RL007_NO_TRIAGE_TO_CASE",
+      "title": "Keine stillschweigende Uebernahme von Triage-Ergebnissen",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "copy_triage_to_case"
+      ]
+    },
+    {
+      "id": "RL008_AUDIT_REQUIRED",
+      "title": "Keine Entscheidung ohne Audit-Spur",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "decision_without_audit"
+      ]
+    },
+    {
+      "id": "RL009_TEST_REQUIRED",
+      "title": "Keine Auslieferung ohne Tests",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "delivery_without_tests"
+      ]
+    },
+    {
+      "id": "RL010_THRESHOLD_BLOCK",
+      "title": "Keine Tuerschwelle vor Quellenregister, Fachanwaltsraster, Quellenbetreuer, Adapter, Cache und Offline-Fallback",
+      "severity": "block",
+      "blocker": true,
+      "patterns": [
+        "threshold_before_prerequisites"
+      ]
+    }
+  ]
+}

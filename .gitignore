@@ -1,5 +1,7 @@
-*
+﻿*
 !.gitignore
+!ALIN_Neustart_Core/
+!ALIN_Neustart_Core/**
 !Windows_App/
 !Windows_App/**
 
@@ -16,10 +18,23 @@ Windows_App/App/*.bak_*
 !Scripts/python_runner/*.py
 !Scripts/*.ps1
 !Projektplanung/
+!Projektplanung/*.md
 !Projektplanung/Quellen/
 !Projektplanung/Quellen/*.md
 !Projektplanung/Auftraege/
 !Projektplanung/Auftraege/*.md
 !Projektplanung/Agentensteuerung/
 !Projektplanung/Agentensteuerung/*.md
+!Config/
+!Config/*.json
 # KI_Legal_Project: Aider Freigaben
+Tools/Tesseract/tessdata/*.traineddata
+Tools/_ToolLibrary/Downloads/
+Tools/_ToolLibrary/PythonWheelhouse/
+
+
+
+# Grosse Datendateien (>50MB) - nicht fuer GitHub geeignet
+ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json
+ALIN_Neustart_Core/08_Migration/01_Plaene/CORE14_auswertung.json
+ALIN_Neustart_Core/08_Migration/01_Plaene/CORE15_migrationsplan.json

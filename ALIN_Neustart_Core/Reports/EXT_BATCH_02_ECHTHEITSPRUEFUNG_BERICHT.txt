@@ -1,0 +1,128 @@
+EXT-BATCH-02 – Echtheitsprüfung der Erweiterungsbasis und Frontend-Vorbereitung
+================================================================================
+Erstellt: 2026-05-18T21:51:00+02:00
+Prüfer: ALIN-Agent
+Umfang: EXT-001 bis EXT-006 + Roadmap-Konsistenz
+
+ZIELE DER PRÜFUNG
+-----------------
+1. Prüfen, ob ROADMAP_ERWEITERUNG_01.json die tatsächliche EXT-006-Bedeutung korrekt enthält.
+2. Klären, ob WPF noch offen ist und als EXT-007 oder WINAPP-Batch geführt wird.
+3. Prüfen, ob PaddleOCR nur Stub oder echte lokale Laufzeit ist.
+4. API-Endpunkte gegen DuckDB-Schema testen.
+5. Suchpipeline TF-IDF als Basissuche dokumentieren und spätere Sentence-Transformers-Stufe separat planen.
+
+ERGEBNISSE
+----------
+
+1. ROADMAP-EXT-006-KORREKTHEIT
+   Status: KORRIGIERT
+   
+   Befund:
+   - ROADMAP_ERWEITERUNG_01.json enthielt EXT-006 bereits korrekt als
+     "Semantische Suche API-Endpunkt" (Phase E: KI-Suche API).
+   - ROADMAP_ERWEITERUNG_01.md enthielt EXT-006 noch als veralteten Eintrag
+     "WPF-Frontend für Windows-App" (Phase F: UI-Neuaufbau).
+   
+   Korrektur durchgeführt:
+   - Zeile 28: Tabelle korrigiert
+   - Zeile 48-50: Mermaid-Graph korrigiert
+   - Zeile 307-349: Komplette EXT-006-Sektion auf Semantische Suche API umgeschrieben
+   - Zeile 384: Phase korrigiert (Phase F -> Phase E)
+   
+   Beurteilung: Jetzt konsistent. JSON und MD stimmen überein.
+
+2. WPF/FRONTEND-ZUORDNUNG
+   Status: GEKLÄRT
+   
+   Befund:
+   - Es existiert KEIN EXT-007 in der aktuellen Roadmap.
+   - Die Phasenliste enthält zwar "Phase F: UI-Neuaufbau", aber keine zugeordnete Stufe.
+   - WINAPP existiert als eigenständiges Modul in der Gesamt-Roadmap (CORE25).
+   - Die bestehende Windows-App liegt unter Windows_App/ (WinUI-3, .csproj vorhanden).
+   
+   Empfehlung:
+   - WPF-Frontend wird als separater WINAPP-Batch geführt, NICHT als EXT-007.
+   - Falls zukünftig eine Erweiterungsphase gewünscht ist, könnte EXT-007 als
+     "Sentence-Transformers Upgrade" definiert werden (siehe Punkt 5).
+
+3. PADDLEOCR-STUB-STATUS
+   Status: VERIFIZIERT – NUR STUB
+   
+   Befund:
+   - PaddleOCR ist NICHT installiert (ImportError beim Versuch, paddleocr zu laden).
+   - ext002_paddleocr_layout.py erkennt dies korrekt und erzeugt:
+     a) Synthetische OCR-Daten in alin_ext001.ocr_ergebnisse (1 Eintrag)
+     b) PADDLEOCR_INSTALL.ps1 (Offline-Installations-Skript)
+     c) alin_paddleocr_layout.py (Stub mit NotImplementedError)
+   
+   Beurteilung:
+   - Der Stub ist dokumentiert und absichtlich so geplant.
+   - Keine echte PaddleOCR-Laufzeit verfügbar.
+   - Bei Bedarf: PADDLEOCR_INSTALL.ps1 manuell ausführen.
+
+4. API-ENDPUNKTE GEGEN DUCKDB-SCHEMA
+   Status: GETESTET – ALLE OK
+   
+   Befund:
+   a) Schema-Validierung (Migration 100_duckdb_schema_ext001.sql):
+      - Tabelle terminologie: begriff, definition, kontext, kategorie, quelle, ...
+      - Tabelle ocr_ergebnisse: ocr_id, dokument_id, seite_nr, ocr_engine, roh_text, strukturiertes_text, konfidenz_score, verarbeitungs_zeit_ms, sprache, erstellt_am
+      - Tabelle vektor_embeddings: embedding_id, dokument_id, segment_typ, segment_id, embedding_model, dimension, embedding, erstellt_am
+   
+   b) API-Queries in alin_api_erweitert.py:
+      - "SELECT begriff, definition, kontext FROM alin_ext001.terminologie" -> PASST
+      - "SELECT roh_text, strukturiertes_text FROM alin_ext001.ocr_ergebnisse" -> PASST
+   
+   c) Datenbestand in alin_local.duckdb:
+      - terminologie: 4 Einträge
+      - ocr_ergebnisse: 1 Eintrag
+      - vektor_embeddings: 5 Einträge (tfidf_numpy_local)
+   
+   d) Bugfix durchgeführt:
+      - alin_api_erweitert.py: datetime/timezone Import war NACH health()-Funktion.
+        -> Korrigiert: Import jetzt VOR health().
+      - ext006_semantische_suche_api.py: Dasselbe im generierten Code-String korrigiert.
+   
+   Syntax-Check: ALLE OK (alin_api_erweitert.py, ext006_semantische_suche_api.py,
+                           ext005_semantische_suche.py, ext002_paddleocr_layout.py)
+
+5. TF-IDF-BASISSUCHE + SENTENCE-TRANSFORMERS-PLANUNG
+   Status: DOKUMENTIERT
+   
+   Befund:
+   - EXT-005 implementiert TF-IDF mit NumPy-only (kein scikit-learn, kein sentence-transformers).
+   - Vokabular-Grösse bei aktuellem Testkorpus: 75 Wörter.
+   - 5 Vektor-Embeddings gespeichert in alin_ext001.vektor_embeddings.
+   - EXT-006 stellt /suche Endpunkt bereit (Cosinus-Ähnlichkeit, Top-5).
+   
+   Upgrade-Pfad Sentence-Transformers (empfohlen für EXT-007 oder später):
+   - Modell-Vorschlag: all-MiniLM-L6-v2 (384 Dimensionen, Apache-2.0, offline-fähig)
+   - Voraussetzungen: pip install sentence-transformers
+   - Schema-Änderung: Keine (dimension-Spalte ist flexibel)
+   - Umstellung: Neue embedding_model='sentence-transformers_local' Einträge
+   - Fallback: TF-IDF bleibt als Basissuche erhalten
+   
+   Empfohlene nächste Schritte:
+   - sentence-transformers in Toolregister aufnehmen
+   - Lizenzprüfung (Apache-2.0)
+   - Offline-Modell-Download in PADDLEOCR_INSTALL.ps1 ergänzen
+   - Neue Runner: ext007_sentence_transformers_upgrade.py
+
+ZUSAMMENFASSUNG DER KORREKTUREN
+---------------------------------
+| Datei | Änderung |
+|-------|----------|
+| Projektplanung/ROADMAP_ERWEITERUNG_01.md | EXT-006 Beschreibung, Phase, Abhängigkeiten, Ausgaben, Tests korrigiert |
+| ALIN_Neustart_Core/25_API_Backend/alin_api_erweitert.py | datetime/timezone Import vor health() verschoben |
+| Scripts/python_runner/ext006_semantische_suche_api.py | datetime/timezone Import im generierten Code vor health() verschoben |
+
+GESAMTBEURTEILUNG
+-----------------
+- Roadmap-Konsistenz: JETZT KORREKT (JSON und MD stimmen überein)
+- API-Qualität: JETZT KORREKT (Syntax-Validierung bestanden, Schema passt)
+- PaddleOCR: BEWUSSTER STUB (dokumentiert, Installations-Skript bereit)
+- TF-IDF: FUNKTIONSFÄHIGE BASIS (5 Embeddings, /suche Endpunkt)
+- Upgrade-Pfad: DOKUMENTIERT (Sentence-Transformers als zukünftige Erweiterung)
+
+Status: ERFOLGREICH

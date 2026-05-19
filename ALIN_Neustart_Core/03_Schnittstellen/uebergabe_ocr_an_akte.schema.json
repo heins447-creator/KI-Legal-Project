@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Übergabe OCR → Akte",
+  "description": "Schnittstellenvertrag für die Übergabe von OCR-Ergebnissen an die Akte.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "vorgangs_id",
+    "dokument_id",
+    "quelle",
+    "status",
+    "sicherheitsstatus",
+    "voranalyse_status",
+    "entscheidungsstand",
+    "warnungen",
+    "fehler",
+    "naechster_schritt",
+    "erzeugt_von_modul",
+    "zeitstempel"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "vorgangs_id": { "type": "string" },
+    "dokument_id": { "type": "string" },
+    "seiten_id": { "type": "string" },
+    "akten_id": { "type": "string" },
+    "mandanten_id": { "type": "string" },
+    "quelle": { "type": "string" },
+    "status": { "type": "string" },
+    "sicherheitsstatus": {
+      "type": "string",
+      "enum": ["unbekannt", "geprueft", "warnung", "gesperrt", "quarantaene"]
+    },
+    "voranalyse_status": {
+      "type": "string",
+      "enum": ["offen", "in_bearbeitung", "abgeschlossen", "fehler"]
+    },
+    "entscheidungsstand": {
+      "type": "string",
+      "enum": ["offen", "vorgeschlagen", "bestaetigt", "abgelehnt", "zurueckgestellt"]
+    },
+    "ocr_ergebnis": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "sprache": { "type": "string" },
+        "konfidenz": { "type": "number" },
+        "seitenzahl": { "type": "integer" }
+      }
+    },
+    "warnungen": { "type": "array", "items": { "type": "string" } },
+    "fehler": { "type": "array", "items": { "type": "string" } },
+    "naechster_schritt": { "type": "string" },
+    "erzeugt_von_modul": { "type": "string" },
+    "zeitstempel": { "type": "string", "format": "date-time" }
+  }
+}

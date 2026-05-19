@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "anwalt_status",
+  "beschreibung": "Statusmodell für Anwaltsbearbeitung",
+  "zustaende": [
+    "anwalt_entscheidung_offen",
+    "in_pruefung",
+    "freigegeben",
+    "zurueckgewiesen",
+    "nachforderung",
+    "wiedervorlage",
+    "abgeschlossen"
+  ],
+  "uebergaenge": [
+    {"von": "anwalt_entscheidung_offen", "nach": "in_pruefung", "bedingung": "Anwalt öffnet Vorgang"},
+    {"von": "in_pruefung", "nach": "freigegeben", "bedingung": "Anwalt freigibt"},
+    {"von": "in_pruefung", "nach": "zurueckgewiesen", "bedingung": "Anwalt weist zurück"},
+    {"von": "in_pruefung", "nach": "nachforderung", "bedingung": "Unterlagen fehlen"},
+    {"von": "in_pruefung", "nach": "wiedervorlage", "bedingung": "Zurückgestellt"},
+    {"von": "freigegeben", "nach": "abgeschlossen", "bedingung": "Sekretariat bearbeitet"},
+    {"von": "zurueckgewiesen", "nach": "anwalt_entscheidung_offen", "bedingung": "Neue Vorlage"},
+    {"von": "nachforderung", "nach": "anwalt_entscheidung_offen", "bedingung": "Unterlagen eingegangen"},
+    {"von": "wiedervorlage", "nach": "in_pruefung", "bedingung": "Wiedervorlage fällig"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

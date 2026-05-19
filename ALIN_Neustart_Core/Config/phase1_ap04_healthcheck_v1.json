@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "phase": "1",
+  "arbeitspaket": "1.4",
+  "name": "Healthcheck als Pre-Run-Gate",
+  "datum": "2026-05-19",
+  "ziel": "Automatischer Schnell-Check aller kritischen Tools beim ALIN-Start — blockiert Start bei fehlenden Pflicht-Tools",
+  "kritische_tools": [
+    "PYTHON", "DUCKDB", "TESSERACT", "PYMUPDF", "PILLOW", "NUMPY", "OPENCV"
+  ],
+  "optionale_tools": [
+    "PADDLEOCR", "PYHANKO", "MSOFFCRYPTO", "CLAMAV",
+    "ARGOS_TRANSLATE", "OLLAMA"
+  ],
+  "infrastruktur_tools": [
+    "POWERSHELL", "DOTNET_RUNTIME", "WEBVIEW2"
+  ],
+  "verhalten_bei_fehler": {
+    "kritisch": "start_blockieren",
+    "optional": "warnung_zeigen",
+    "infrastruktur": "warnung_zeigen"
+  },
+  "timeout_sekunden": 5,
+  "report_pfad": "Windows_App/Logs/healthcheck_report.json",
+  "abnahmekriterium_ap14": "alin_core/healthcheck.py existiert, wird von alin.py importiert, alle kritischen Tools melden OK in unter 10s"
+}

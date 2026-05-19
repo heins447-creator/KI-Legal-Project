@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Übergabe Posteingang → Sekretariat",
+  "description": "Schnittstellenvertrag für die Übergabe vom Posteingang an das Sekretariat/Vorzimmer.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "vorgangs_id",
+    "dokument_id",
+    "quelle",
+    "status",
+    "sicherheitsstatus",
+    "voranalyse_status",
+    "entscheidungsstand",
+    "warnungen",
+    "fehler",
+    "naechster_schritt",
+    "erzeugt_von_modul",
+    "zeitstempel"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "vorgangs_id": { "type": "string", "description": "Eindeutige Vorgangs-ID" },
+    "dokument_id": { "type": "string", "description": "Eindeutige Dokument-ID" },
+    "seiten_id": { "type": "string", "description": "Optional: Seiten-ID, falls einzelne Seite" },
+    "akten_id": { "type": "string", "description": "Optional: Akten-ID, falls bekannt" },
+    "mandanten_id": { "type": "string", "description": "Optional: Mandanten-ID, falls bekannt" },
+    "quelle": { "type": "string", "description": "Herkunft des Dokuments (E-Mail, Scan, Upload, etc.)" },
+    "status": { "type": "string", "description": "Aktueller Status aus Statusmodell" },
+    "sicherheitsstatus": {
+      "type": "string",
+      "enum": ["unbekannt", "geprueft", "warnung", "gesperrt", "quarantaene"]
+    },
+    "voranalyse_status": {
+      "type": "string",
+      "enum": ["offen", "in_bearbeitung", "abgeschlossen", "fehler"]
+    },
+    "entscheidungsstand": {
+      "type": "string",
+      "enum": ["offen", "vorgeschlagen", "bestaetigt", "abgelehnt", "zurueckgestellt"]
+    },
+    "warnungen": { "type": "array", "items": { "type": "string" } },
+    "fehler": { "type": "array", "items": { "type": "string" } },
+    "naechster_schritt": { "type": "string", "description": "Empfohlener nächster Prozessschritt" },
+    "erzeugt_von_modul": { "type": "string", "description": "Modul-ID, das dieses Objekt erzeugt hat" },
+    "zeitstempel": { "type": "string", "format": "date-time" }
+  }
+}

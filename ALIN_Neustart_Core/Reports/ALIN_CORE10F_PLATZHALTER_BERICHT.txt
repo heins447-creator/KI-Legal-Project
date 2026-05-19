@@ -1,0 +1,213 @@
+======================================================================
+CORE-10f PLATZHALTER-VERFEINERUNGS-BERICHT
+======================================================================
+Erstellt: 2026-05-16
+
+1. UEBERSICHT
+----------------------------------------
+  Invoke_Aider_Local
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quellcode-Pfad, Aktion (add/edit/drop), Modell-Parameter, Kontextfenster. / Aider-Ausgabe, Aenderungsvorschlag, Diff-Preview, Exit-Code, Aider-Log.
+
+  KM17_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Arbeitsabbildung-Pfad, Seitenbereich, OCR-Parameter. / OCR-Gesamtergebnis, Seitenliste, Konfidenzreport, Log-Datei.
+
+  KM17c_EINZELSEITE_KM12b_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Einzelseite-Arbeitsabbildung, Seitennummer, Sprachvermutung. / OCR-Text der Seite, Koordinaten-Mapping, Seitenkonfidenz, Log.
+
+  KM18_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: OCR-Rohergebnis, erwartete Sprache, Qualitaetsschwellen. / OCR-Diagnosebericht, Qualitaetsbewertung, Korrekturvorschlag, Log.
+
+  KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Einzel-OCR-Ergebnisse, Dokument-ID, Synchronisierungsregeln. / Synchronisierte OCR-Kette, konsolidierter Text, Seitenverknuepfung, Log.
+
+  KM19_OCRBETREUER_KORREKTUR_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: OCR-Ergebnis mit Fehlverdacht, Korrekturvorschlaege, Seitenliste. / Korrigiertes OCR-Ergebnis, Aenderungsprotokoll, Konfidenznachweis, Log.
+
+  KM21_TRANSLATION_ENV_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quellsprache, Zielsprache, Argos-Modell-Pfad, Uebersetzungsparameter. / Uebersetzungsumgebungs-Status, verfuegbare Modelle, Testuebersetzung, Log.
+
+  Run_Agent_Dokumentart
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokumentdatei-Pfad, erwartete Kategorien, Erkennungsmodus, Konfidenzschwelle. / Erkannte Dokumentart, Konfidenzwert, Alternativvorschlaege, Agent-Log.
+
+  Run_Agent_Handoff_Test_Harness
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quell-Agent-ID, Ziel-Agent-ID, Uebergabedaten, Testmodus. / Handoff-Ergebnis, Datenintegritaet, Uebergabeprotokoll, Test-Log.
+
+  Run_Agent_Sachverhaltsbezug
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokumenttext, Sachverhalts-Keywords, Rechtsgebiet, Bezugsregeln. / Sachverhaltsbezug-Vorschlag, relevante Passagen, Konfidenz, Agent-Log.
+
+  Run_Agent_Sprache_Uebersetzung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quelltext, Quellsprache, Zielsprache, Agent-Parameter, Terminologie. / Agent-Uebersetzung, Konfidenz, Alternativen, Agent-Log.
+
+  Run_Agenten_Kontext_Skill_Register
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Agent-ID, Kontextdaten, Skill-Register-Referenz, Bindungsmodus. / Skill-Bindungsstatus, verfuegbare Skills, Kontext-Hash, Agent-Log.
+
+  Run_Agentenbearbeitung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Agentenauftrag, Eingabedaten, Skill-Set, Ausfuehrungsmodus. / Agent-Ergebnis, Zwischenschritte, Skill-Verbrauch, Agent-Log.
+
+  Run_AI_Coding_Agent_Project_Check
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Projektverzeichnis, Pruefmodus, Regelsatz, Ausgabeformat. / Pruefbericht, Fehlerliste, Empfehlungen, Projekt-Check-Log.
+
+  Run_AI_Coding_Agent_Repair_Loop
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Fehlerbericht, Modul-ID, Reparaturmodus, Max-Iterationen, Backup-Modus. / Reparaturvorschlag, angewendete Aenderungen, Testergebnis, Repair-Loop-Log.
+
+  Run_Aktenmaterial_Freigabeliste
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Akten-ID, Materialtyp, Freigabestatus, Empfaengerliste. / Freigabeliste, Versandstatus, Empfangsbestaetigungen, Freigabe-Log.
+
+  Run_ALIN_SafeJob
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Job-Definition, Sicherheitsparameter, Ausfuehrungsumgebung, Rollback-Plan. / Job-Status, Ergebnis, Sicherheitsprotokoll, SafeJob-Log.
+
+  Run_Anwaltvorlage
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Vorlagen-ID, Mandanten-Daten, Sachverhalt, Ausgabeformat. / Generierte Vorlage, Platzhalter-Ersetzung, Qualitaetsbewertung, Vorlagen-Log.
+
+  Run_Dokumentsprachprofil
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokumentdatei, erwartete Sprachen, Profilierungsmodus, Granularitaet. / Sprachprofil, Sprachanteile, Konfidenzwerte, Profil-Log.
+
+  Run_KM10_Schnittstellen_Lueckenabgleich
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Schnittstellenregister, Modulregister, Abgleichsmodus, Toleranzregeln. / Lueckenbericht, fehlende Schnittstellen, Empfehlungen, Abgleich-Log.
+
+  Run_KM12_Originalabbildung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Originaldatei-Pfad, Zielverzeichnis, Abbildungsmodus, Groessenlimit. / Arbeitsabbildung-Pfad, SHA256-Hash Original, SHA256-Hash Abbildung, Groesseninfo, Log.
+
+  Run_KM12b_Uebergrosse_Arbeitsabbildungen
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Arbeitsabbildung-Pfad, Seitengroessenlimit, Kompressionsmodus, Qualitaetsstufe. / Aufbereitete Arbeitsabbildung, Groessenreduktion, Qualitaetsbewertung, Log.
+
+  Run_KM13_OCR_Pipeline
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Arbeitsabbildung-Pfad, erwartete Sprachenliste, OCR-Engine-Auswahl, Konfiguration. / OCR-Text pro Seite, erkannte Sprache, Konfidenzwerte, Qualitaetsreport, Log.
+
+  Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Tessdata-Verzeichnis, erforderliche Sprachenliste, Vergleichsmodus. / Sprachpaket-Status, fehlende Pakete, Installationshinweise, Versionsabgleich, Log.
+
+  Run_KM14_Maschinenformat_Fundstellenstruktur
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: OCR-Text, Seitenkoordinaten, Dokument-ID, Strukturierungsregeln. / Fundstellen-JSON, Textstruktur-Markdown, Koordinaten-Mapping, Log.
+
+  Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quelltext, Quellsprache, Zielsprache, Terminologie-Profil, Fundstellen-JSON. / Uebersetzungsvorschlag, Fundstellen-Erklaerung, Konfidenz, Log.
+
+  Run_KM16_Sprachrouting_Vor_OCR
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokumentprobe, verfuegbare Sprachpakete, Routing-Regeln. / Erkannte Hauptsprache, OCR-Reihenfolge, Sprachwechsel-Verdacht, Log.
+
+  Run_KM20_Konsolidierung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quelldaten-Pfade, Konsolidierungsregeln, Zielformat, Deduplizierungsmodus. / Konsolidierte Daten, Duplikate-Report, Datenqualitaet, Konsolidierungs-Log.
+
+  Run_KM20b_Bereinigung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Zu bereinigende Daten, Bereinigungsregeln, Backup-Modus, Testmodus. / Bereinigte Daten, Entfernte Eintraege, Protokoll, Bereinigungs-Log.
+
+  Run_Posteingang_Menu
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Benutzerauswahl, Posteingangs-ID, Filterkriterien, Sortierung. / Gewaehlte Aktion, naechster Prozessschritt, Status, Menu-Log.
+
+  Run_Posteingang_Pipeline
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Posteingangsdatei, Dokumentart, Prioritaet, Mandanten-ID, Sachgebiet. / Verarbeitetes Dokument, Weichenstellung, OCR-Auftrag, Pipeline-Log.
+
+  Run_Posteingang_Schlusskontrolle
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Zu pruefendes Dokument, Pruefliste, Akten-ID, Kontrollmodus. / Kontrollergebnis, Freigabestatus, Auffaelligkeiten, Kontroll-Log.
+
+  Run_Posteingang_Zentrale
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Posteingangsverzeichnis, Verarbeitungsregeln, Batch-Modus, Zeitfenster. / Verarbeitete Dokumente, Fehlerliste, Statistik, Zentral-Log.
+
+  Run_Quellenbetreuer_Fachanwaltsraster
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Rechtsgebiet, Fachanwaltschaft, Rechtsraum, Aktualitaetsdatum. / Fachanwaltsraster-Eintrag, Quellenliste, Verfuegbarkeit, Quellen-Log.
+
+  Run_Quellenkandidaten_EU_SE
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Rechtsgebiet, EU-Rechtsraum, SE-Rechtsraum, Suchkriterien. / Quellenkandidaten-Liste, Verfuegbarkeitsstatus, URLs, Quellen-Log.
+
+  Run_Source_Adapter_Healthcheck_Framework
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Quellen-ID, Adapter-Typ, Pruefmodus, Timeout, Retry-Regeln. / Verfuegbarkeitsstatus, Antwortzeit, Offline-Fallback-Liste, Healthcheck-Log.
+
+  Run_Vorzimmer_Arbeitsliste
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Benutzer-ID, Filterdatum, Sortierung, Prioritaetsmodus. / Arbeitsliste, Faelligkeiten, Statusuebersicht, Erinnerungen, Arbeitsliste-Log.
+
+  Run_Vorzimmer_Entscheidung
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Entscheidungsvorschlag, Dokument-ID, Benutzerrolle, Entscheidungstyp. / Entscheidung, Kommentar, naechster Schritt, Weichenstellung, Entscheidungs-Log.
+
+  Run_Vorzimmer_Kommunikationsparameter
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Mandanten-ID, Kontaktliste, Kommunikationskanal, Vorlage. / Kommunikationsvorschlag, Parameter-Set, Adressatenliste, Kommunikations-Log.
+
+  UI01_ANWALTSANSICHT_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Mandanten-ID, Akten-ID, Dokument-ID, Anwalt-Ansichtsmodus. / Anwaltsansicht-Layout, Dokumentvorschau, Notizfeld, Statusleiste, UI-Log.
+
+  ui02_0_bestandsabgleich_tuerschwelle
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Posteingangs-ID, Dokumentart, Schweregrad, Freigabebedingungen. / Freigabeentscheidung, Weichenstellung, Protokolleintrag, Tuer-Schwelle-Log.
+
+  ui02_tuerschwelle_bau_starter
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Bausatz-ID, Konfigurationsprofil, Zielverzeichnis, Bauparameter. / Bausatz-Status, Installationsprotokoll, Fehlerliste, Bau-Starter-Log.
+
+  UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokument-ID, Freigabestatus, Dropdown-Werte, Notiztext. / Aktualisierter Status, gespeicherte Dropdown-Werte, Notiz, UI-Log.
+
+  UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokument-ID, Quellmodul, Zielmodul, Uebergabetyp, Prioritaet. / Uebergabestatus, Empfangsbestaetigung, Aktenverknuepfung, UI-Log.
+
+  UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokument-ID, Dreiansicht-Modus, Zoomstufe, Seitenbereich. / Dreiansicht-Layout, Navigationsleiste, Seitenminiaturen, UI-Log.
+
+  UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Dokument-ID, Sekretariat-Status, Anwalt-Rueckmeldung, Durchstichtyp. / Ruecklaufstatus, Anwalt-Entscheidung, Protokolleintrag, UI-Log.
+
+  UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Entscheidungsdaten, Logikregeln, Pruemuster, Eskalationsstufe. / Logikpruefungsergebnis, Plausibilitaetsbewertung, Warnungen, UI-Log.
+
+  Update_External_Tools_Library
+    ALT: Konfiguration und Umgebungsvariablen. / Prozess-Start, Log-Datei, Exit-Code.
+    NEU: Tool-Liste, Update-Modus, Versionspruefung, Download-Quellen. / Update-Status, neue Versionen, Fehlerliste, Hash-Verifizierung, Update-Log.
+
+
+2. ZUSAMMENFASSUNG
+----------------------------------------
+  Verfeinerte Eintraege: 48
+  Unveraenderte Eintraege: 115
+  Gesamt-Eintraege: 163
+
+3. ERGEBNIS
+----------------------------------------
+  Generische Platzhalter uebrig: 0
+
+======================================================================
+ENDE BERICHT
+======================================================================

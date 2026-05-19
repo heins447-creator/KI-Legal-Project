@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Abnahmekriterien",
+  "description": "Schema für Abnahmekriterien.",
+  "type": "object",
+  "required": ["schema_version", "kriterium_id", "beschreibung", "pruefmethode", "akzeptanzkriterium"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "kriterium_id": { "type": "string" },
+    "beschreibung": { "type": "string" },
+    "pruefmethode": { "type": "string" },
+    "akzeptanzkriterium": { "type": "string" }
+  }
+}

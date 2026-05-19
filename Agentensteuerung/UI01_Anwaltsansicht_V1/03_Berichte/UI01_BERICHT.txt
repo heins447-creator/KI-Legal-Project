@@ -1,0 +1,29 @@
+﻿============================================================
+UI01 – ANWALTSANSICHT – BERICHT
+============================================================
+Zeitpunkt: 2026-05-14T17:13:21.875078+00:00
+
+1. Angezeigtes Dokument: ORG-970b270eb1e8-00163
+2. Arbeitsvertrag erkannt: unsicher
+3. Seiten: 3
+4. Originalansicht verfuegbar: NEIN
+5. OCR verfuegbar: JA
+6. Deutsche Arbeitsuebersetzung: nur OCR-Arbeitsgrundlage
+7. Merkmalsvorschlaege: {
+  "dokumentart": "unbekannt",
+  "arbeitgeber": null,
+  "arbeitnehmer": null,
+  "mandant": null,
+  "arbeitsbeginn": null,
+  "vertragsdatum": null,
+  "kuendigungsdatum": null,
+  "orte": [],
+  "aktenzeichen": [],
+  "sprachen": [],
+  "ocr_qualitaet": "unsicher"
+}
+8. Browseransicht: Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht/index.html
+9. Anwalt kann entscheiden: Mandat annehmen/ablehnen/zurueckstellen, Notizen, Arbeitsauftrag
+10. Fehlend: Echte Uebersetzung (KM15 gesperrt), Originalbilder im Browser darstellbar?
+
+Naechster Auftrag: UI01 im Browser pruefen, Notizfelder testen, ggf. Layout anpassen

@@ -1,0 +1,31 @@
+{
+  "modul_id": "EXT-001",
+  "name": "DuckDB-Schema für lokale Datenhaltung",
+  "version": "1.0.0",
+  "datenbank_name": "alin_local.duckdb",
+  "datenbank_verzeichnis": "Database/DuckDB",
+  "migration": "Database/Migrations/100_duckdb_schema_ext001.sql",
+  "schema_name": "alin_ext001",
+  "tabellen": [
+    "dokumente",
+    "ocr_ergebnisse",
+    "uebersetzungen",
+    "terminologie",
+    "vektor_embeddings"
+  ],
+  "views": [
+    "v_dokumente_vollstaendigkeit"
+  ],
+  "sicherheit": {
+    "cloud_verboten": true,
+    "remote_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_datei": true
+  },
+  "tests": {
+    "tabellen_mindestanzahl": 5,
+    "views_mindestanzahl": 1,
+    "indizes_mindestanzahl": 6,
+    "testdaten_vorhanden": true
+  }
+}

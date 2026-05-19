@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "akte_status",
+  "beschreibung": "Statusmodell für Mandantenakten",
+  "zustaende": [
+    "neu",
+    "bestandsakte_erkannt",
+    "neumandat_moeglich",
+    "aktenbezug_unklar",
+    "verwaltungspost",
+    "in_bearbeitung",
+    "wiedervorlage",
+    "abgeschlossen",
+    "regulaere_verarbeitung"
+  ],
+  "uebergaenge": [
+    {"von": "neu", "nach": "bestandsakte_erkannt", "bedingung": "Mandant und Akte bekannt"},
+    {"von": "neu", "nach": "neumandat_moeglich", "bedingung": "Neuer Mandant"},
+    {"von": "neu", "nach": "aktenbezug_unklar", "bedingung": "Zuordnung unklar"},
+    {"von": "neu", "nach": "verwaltungspost", "bedingung": "Kein Mandantenbezug"},
+    {"von": "bestandsakte_erkannt", "nach": "in_bearbeitung", "bedingung": "Anwalt übernimmt"},
+    {"von": "neumandat_moeglich", "nach": "in_bearbeitung", "bedingung": "Mandat angenommen"},
+    {"von": "in_bearbeitung", "nach": "wiedervorlage", "bedingung": "Zurückgestellt"},
+    {"von": "wiedervorlage", "nach": "in_bearbeitung", "bedingung": "Wiedervorlage fällig"},
+    {"von": "in_bearbeitung", "nach": "abgeschlossen", "bedingung": "Vorgang erledigt"},
+    {"von": "in_bearbeitung", "nach": "regulaere_verarbeitung", "bedingung": "Standardablauf"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

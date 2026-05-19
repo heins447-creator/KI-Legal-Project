@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Cache-Status",
+  "description": "Schema für den Cache-Status.",
+  "type": "object",
+  "required": ["schema_version", "cache_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "cache_id": { "type": "string", "const": "cache_status" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ressource_id", "cache_pfad", "cache_alter", "gueltig", "warnungen"],
+        "properties": {
+          "ressource_id": { "type": "string" },
+          "cache_pfad": { "type": "string" },
+          "cache_alter": { "type": "integer", "description": "Alter in Stunden" },
+          "gueltig": { "type": "boolean" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

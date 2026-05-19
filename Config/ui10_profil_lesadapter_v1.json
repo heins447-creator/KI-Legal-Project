@@ -1,0 +1,147 @@
+{
+  "modul_id": "UI10",
+  "modulname": "Externer Profil-Leseadapter",
+  "version": "1.0.0",
+  "version_status": "Entwurf",
+  "letzte_aenderung": "2026-05-17",
+  "produktiv_freigegeben": false,
+  "nur_musterdaten": true,
+  "echte_daten_erlaubt": false,
+  "beschreibung": "Liest das UI09-Zentrale-Profil und stellt es als Adapter-JSON fuer Module ausserhalb des Freeze bereit. Prueft Konsistenz mit UI08, UI08b und UI08c ohne die eingefrorene Strecke UI03-UI07b zu beruehren.",
+  "register_pruefung": {
+    "sperrregister": true,
+    "modulregister": false,
+    "toolregister": false
+  },
+  "abhaengigkeiten": {
+    "ui09_zentrales_profil": "Windows_App/Logs/UI09_ZENTRALES_PROFIL.json",
+    "ui09_grundschalter": "Windows_App/Logs/UI09_GRUNDSCHALTER.json",
+    "ui08_posteingang_status": "Windows_App/Logs/UI08_POSTEINGANG_STATUS.json",
+    "ui08b_fehlerpfad_status": "Windows_App/Logs/UI08B_FEHLERPFAD_STATUS.json",
+    "ui08c_sanierungsstatus": "Windows_App/Logs/UI08C_SANIERUNGSSTATUS.json",
+    "sperrregister": "ALIN_Neustart_Core/01_Register/sperrregister.json",
+    "modulregister": "ALIN_Neustart_Core/01_Register/modulregister.json"
+  },
+  "adapter_konfiguration": {
+    "profil_version_min": "1.0.0",
+    "ausgabe_format": "json",
+    "konsistenzpruefung": true,
+    "freeze_kompatibilitaet": {
+      "beruehrt_ui03_ui07b": false,
+      "nur_lesend": true,
+      "neue_dateien": true
+    }
+  },
+  "konsistenzregeln": [
+    {
+      "regel_id": "KONS_01",
+      "beschreibung": "Wenn UI09 betriebsmodus=demo, dann darf UI08b keine KRITISCHEN Fehler mit 'gesperrt=true' haben",
+      "schwere": "WARNUNG",
+      "quelle": ["ui09", "ui08b"]
+    },
+    {
+      "regel_id": "KONS_02",
+      "beschreibung": "UI09 sprache_dokument muss mit UI08 Sprachprofilen kompatibel sein",
+      "schwere": "MITTEL",
+      "quelle": ["ui09", "ui08"]
+    },
+    {
+      "regel_id": "KONS_03",
+      "beschreibung": "Wenn UI09 sicherheitsstatus=gesperrt, dann muss UI08c bleibt_gesperrt=true sein",
+      "schwere": "KRITISCH",
+      "quelle": ["ui09", "ui08c"]
+    },
+    {
+      "regel_id": "KONS_04",
+      "beschreibung": "UI09 ressourcenpaket_ocr muss im Ressourcenregister verfuegbar sein",
+      "schwere": "HOCH",
+      "quelle": ["ui09", "ressourcenregister"]
+    },
+    {
+      "regel_id": "KONS_05",
+      "beschreibung": "UI09 online_status=false erfordert GS05 offline_cache_aktiv=true",
+      "schwere": "KRITISCH",
+      "quelle": ["ui09", "ui09_gs"]
+    }
+  ],
+  "bereitgestellte_module": [
+    {
+      "modul_id": "UI08",
+      "nutzt_profilfelder": ["sprache_dokument", "sicherheitsstatus", "betriebsmodus", "online_status"],
+      "kompatibilitaet": "lesend",
+      "freeze_status": "ausserhalb"
+    },
+    {
+      "modul_id": "UI08b",
+      "nutzt_profilfelder": ["betriebsmodus", "sicherheitsstatus", "freigabe_vorzimmer", "freigabe_anwalt", "freigabe_schlusskontrolle"],
+      "kompatibilitaet": "lesend",
+      "freeze_status": "ausserhalb"
+    },
+    {
+      "modul_id": "UI08c",
+      "nutzt_profilfelder": ["betriebsmodus", "sicherheitsstatus", "freigabe_vorzimmer", "freigabe_anwalt"],
+      "kompatibilitaet": "lesend",
+      "freeze_status": "ausserhalb"
+    },
+    {
+      "modul_id": "UI03-1b",
+      "nutzt_profilfelder": ["sprache_dokument", "sprache_anwalt", "akten_id", "betriebsmodus"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI03-1c",
+      "nutzt_profilfelder": ["sprache_dokument", "sprache_anwalt", "akten_id", "betriebsmodus"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI03-1d",
+      "nutzt_profilfelder": ["sprache_dokument", "akten_id", "betriebsmodus"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI03-1e",
+      "nutzt_profilfelder": ["sprache_anwalt", "akten_id", "betriebsmodus", "mandant_id"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI03-1f",
+      "nutzt_profilfelder": ["akten_id", "betriebsmodus", "mandant_id"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI03-1g",
+      "nutzt_profilfelder": ["betriebsmodus", "online_status", "mandant_id"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI04b",
+      "nutzt_profilfelder": ["betriebsmodus", "rechtsraum", "sachgebiet", "mandant_id"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    },
+    {
+      "modul_id": "UI05",
+      "nutzt_profilfelder": ["betriebsmodus", "online_status", "mandant_id", "akten_id", "freigabe_anwalt"],
+      "kompatibilitaet": "zukuenftig",
+      "freeze_status": "eingefroren"
+    }
+  ],
+  "ausgabe": {
+    "json_adapter": "Windows_App/Logs/UI10_PROFIL_ADAPTER.json",
+    "html_adapter_uebersicht": "Windows_App/Logs/UI10_ADAPTER_UEBERSICHT.html",
+    "bericht": "Windows_App/Logs/UI10_PROFIL_LESADAPTER_BERICHT.txt",
+    "konsistenz_log": "Windows_App/Logs/UI10_KONSISTENZ_LOG.json"
+  },
+  "grenzen": {
+    "max_dokumente_demo": 10,
+    "nur_lesend_auf_ui03_ui07b": true,
+    "keine_datenbank_aenderung": true,
+    "keine_dateien_in_frozen_module": true
+  }
+}

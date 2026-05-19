@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "regel_id": "healthcheck_regeln",
+  "beschreibung": "Regeln für den Healthcheck",
+  "regeln": [
+    {
+      "regel": "R1",
+      "beschreibung": "Projektwurzel muss vorhanden sein",
+      "komponente": "projektwurzel",
+      "aktion_bei_fehler": "abbruch"
+    },
+    {
+      "regel": "R2",
+      "beschreibung": "Datenbank muss vorhanden sein",
+      "komponente": "datenbank",
+      "aktion_bei_fehler": "abbruch"
+    },
+    {
+      "regel": "R3",
+      "beschreibung": "Tabellen müssen vorhanden sein",
+      "komponente": "tabellen",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R4",
+      "beschreibung": "Config muss vorhanden sein",
+      "komponente": "config",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R5",
+      "beschreibung": "Tools müssen vorhanden sein",
+      "komponente": "tools",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R6",
+      "beschreibung": "Tesseract muss vorhanden sein",
+      "komponente": "tesseract",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R7",
+      "beschreibung": "OCR-Sprachpakete müssen vorhanden sein",
+      "komponente": "ocr_sprachpakete",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R8",
+      "beschreibung": "Übersetzungspakete müssen vorhanden sein",
+      "komponente": "uebersetzungspakete",
+      "aktion_bei_fehler": "hinweis"
+    },
+    {
+      "regel": "R9",
+      "beschreibung": "Quellenregister muss vorhanden sein",
+      "komponente": "quellenregister",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R10",
+      "beschreibung": "Adapterregister muss vorhanden sein",
+      "komponente": "adapterregister",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R11",
+      "beschreibung": "Skillregister muss vorhanden sein",
+      "komponente": "skillregister",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R12",
+      "beschreibung": "Posteingang muss vorhanden sein",
+      "komponente": "posteingang",
+      "aktion_bei_fehler": "hinweis"
+    },
+    {
+      "regel": "R13",
+      "beschreibung": "KM12 bis KM21 müssen vorhanden sein",
+      "komponente": "km12_bis_km21",
+      "aktion_bei_fehler": "hinweis"
+    },
+    {
+      "regel": "R14",
+      "beschreibung": "UI01 bis UI04 müssen vorhanden sein",
+      "komponente": "ui01_bis_ui04",
+      "aktion_bei_fehler": "hinweis"
+    },
+    {
+      "regel": "R15",
+      "beschreibung": "Offline-Fallbacks müssen vorhanden sein",
+      "komponente": "offline_fallbacks",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R16",
+      "beschreibung": "Lizenzstatus darf nicht gesperrt sein",
+      "komponente": "lizenzstatus",
+      "aktion_bei_fehler": "sperre"
+    },
+    {
+      "regel": "R17",
+      "beschreibung": "Update-Status darf nicht kritisch sein",
+      "komponente": "update_status",
+      "aktion_bei_fehler": "warnung"
+    },
+    {
+      "regel": "R18",
+      "beschreibung": "Windows-App-Grundlage muss vorhanden sein",
+      "komponente": "windows_app_grundlage",
+      "aktion_bei_fehler": "hinweis"
+    }
+  ]
+}

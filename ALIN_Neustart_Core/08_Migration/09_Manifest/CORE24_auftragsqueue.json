@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "modul_id": "CORE-24",
+    "name": "Auftragsqueue",
+    "version": "1.0.0",
+    "zeitstempel_erstellung": "2026-05-18T05:02:56+0000",
+    "letzte_aktualisierung": "2026-05-18T05:02:56+0000"
+  },
+  "auftraege": [
+    {
+      "auftrag_id": "CORE24_AUTO_CORE-14_1779080576",
+      "modul_id": "CORE-14",
+      "titel": "Reparatur/Pruefung fuer CORE-14: CORE13-Auswertung",
+      "typ": "pruefung",
+      "status": "ausstehend",
+      "prioritaet": 1,
+      "erstellt": "2026-05-18T05:02:56+0000",
+      "reparaturversuche": 0,
+      "zielpfad": "ALIN_Neustart_Core/Reports/CORE-14_PRUEFBERICHT.txt",
+      "bemerkung": "Automatisch abgeleitet aus Dashboard: Status=fehlerhaft"
+    }
+  ],
+  "abgeschlossen": [],
+  "fehlgeschlagen": [],
+  "reparatur_auftraege": []
+}

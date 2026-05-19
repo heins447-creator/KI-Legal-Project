@@ -1,0 +1,31 @@
+﻿{
+  "modul": "UI01",
+  "dokument_id": "ORG-970b270eb1e8-00163",
+  "merkmalsvorschlaege": {
+    "dokumentart": "unbekannt",
+    "arbeitgeber": null,
+    "arbeitnehmer": null,
+    "mandant": null,
+    "arbeitsbeginn": null,
+    "vertragsdatum": null,
+    "kuendigungsdatum": null,
+    "orte": [],
+    "aktenzeichen": [],
+    "sprachen": [],
+    "ocr_qualitaet": "unsicher"
+  },
+  "merkmale_status": "Vorschlag aus OCR – anwaltlich zu pruefen",
+  "anwaltliche_notiz": "",
+  "arbeitsauftrag_sekretariat": "Akte anlegen / Dokument als Arbeitsvertrag ablegen / Uebersetzung pruefen",
+  "entscheidung": {
+    "mandat": null,
+    "begruendung": "",
+    "optionen": [
+      "annehmen",
+      "ablehnen",
+      "zurueckstellen",
+      "bestehender_Akte_zuordnen"
+    ]
+  },
+  "zeitpunkt": "2026-05-14T17:13:21.875078+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Integritätsprüfung",
+  "description": "Schema für die Integritätsprüfung.",
+  "type": "object",
+  "required": ["schema_version", "pruefung_id", "zeitstempel", "ergebnisse"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "pruefung_id": { "type": "string", "const": "integritaetspruefung" },
+    "zeitstempel": { "type": "string", "format": "date-time" },
+    "ergebnisse": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["objekt", "pruefmethode", "erwartet", "ist", "status"],
+        "properties": {
+          "objekt": { "type": "string" },
+          "pruefmethode": { "type": "string" },
+          "erwartet": { "type": "string" },
+          "ist": { "type": "string" },
+          "status": { "type": "string", "enum": ["ok", "fehler", "warnung"] }
+        }
+      }
+    }
+  }
+}

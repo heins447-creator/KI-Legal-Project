@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Diagnosepaket",
+  "description": "Schema für Diagnosepakete.",
+  "type": "object",
+  "required": ["schema_version", "paket_id", "zeitstempel", "inhalt"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "paket_id": { "type": "string" },
+    "zeitstempel": { "type": "string", "format": "date-time" },
+    "inhalt": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "datei": { "type": "string" },
+          "beschreibung": { "type": "string" }
+        }
+      }
+    }
+  }
+}

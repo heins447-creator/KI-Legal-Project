@@ -1,0 +1,3 @@
+CORE-07 Pruefbericht
+Fehler: 0
+Eintraege: 15

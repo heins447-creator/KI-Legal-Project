@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "dokument_status",
+  "beschreibung": "Statusmodell für einzelne Dokumente",
+  "zustaende": [
+    "eingegangen",
+    "in_bearbeitung",
+    "technisch_geprueft",
+    "sprachlich_geprueft",
+    "vorbereitet",
+    "weiche_zugewiesen",
+    "ocr_freigegeben",
+    "anwalt_zugewiesen",
+    "ruecklauf",
+    "abgeschlossen",
+    "gesperrt",
+    "quarantaene"
+  ],
+  "uebergaenge": [
+    {"von": "eingegangen", "nach": "in_bearbeitung", "bedingung": "Bearbeitung gestartet"},
+    {"von": "in_bearbeitung", "nach": "technisch_geprueft", "bedingung": "Sicherheitsprüfung OK"},
+    {"von": "technisch_geprueft", "nach": "sprachlich_geprueft", "bedingung": "Sprachprüfung OK"},
+    {"von": "sprachlich_geprueft", "nach": "vorbereitet", "bedingung": "Vorzimmer bearbeitet"},
+    {"von": "vorbereitet", "nach": "weiche_zugewiesen", "bedingung": "Weiche entschieden"},
+    {"von": "weiche_zugewiesen", "nach": "ocr_freigegeben", "bedingung": "OCR-Pfad gewählt"},
+    {"von": "weiche_zugewiesen", "nach": "anwalt_zugewiesen", "bedingung": "Anwalt-Pfad gewählt"},
+    {"von": "ocr_freigegeben", "nach": "anwalt_zugewiesen", "bedingung": "OCR abgeschlossen"},
+    {"von": "anwalt_zugewiesen", "nach": "ruecklauf", "bedingung": "Anwalt sendet zurück"},
+    {"von": "ruecklauf", "nach": "abgeschlossen", "bedingung": "Sekretariat bearbeitet"},
+    {"von": "eingegangen", "nach": "gesperrt", "bedingung": "Sicherheitsproblem"},
+    {"von": "eingegangen", "nach": "quarantaene", "bedingung": "Verdacht"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "modul_id": "CORE-25",
+  "version": "1.0.0",
+  "name": "Programmierbare Gesamt-Roadmap",
+  "beschreibung": "Maschinenlesbare Roadmap fuer CORE-24 (Autonomer Entwicklungsmanager). Zerlegt das fachliche Gesamtkonzept der Kanzleisoftware in Stufen mit Abhaengigkeiten, Eingaben, Ausgaben, Sperren, Tests, Prioritaeten und Fertigstellungskriterien.",
+  "zeitstempel": "2026-05-18T05:10:44+02:00",
+  "referenziert": {
+    "masterauftrag": "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+    "auftragsindex": "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+    "modulpakete": "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+    "naechste_auftraege": "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+    "konstruktion": "ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md",
+    "core24_config": "Config/core24_entwicklungsmanager_v1.json",
+    "core24_queue": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json",
+    "agentenfreigabe": "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+  },
+  "roadmap_regeln": {
+    "max_stufen": 100,
+    "pruefe_zyklische_abhaengigkeiten": true,
+    "erlaubte_status": [
+      "offen",
+      "in_bearbeitung",
+      "abgeschlossen",
+      "gesperrt",
+      "wartend",
+      "fehlerhaft",
+      "testbar",
+      "entwicklung",
+      "revision",
+      "ersetzt"
+    ],
+    "pflicht_felder": [
+      "stufe_id",
+      "name",
+      "abhaengigkeiten",
+      "eingaben",
+      "ausgaben",
+      "tests",
+      "prioritaet",
+      "fertigstellungskriterien"
+    ],
+    "ausgabe_dateien": {
+      "roadmap_json": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+      "bericht_txt": "ALIN_Neustart_Core/Reports/CORE25_GESAMT_ROADMAP_BERICHT.txt",
+      "git_status_vor": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_git_status_vor.txt",
+      "git_status_nach": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_git_status_nach.txt"
+    }
+  },
+  "ablauf": {
+    "schritt_1": "Quelldateien lesen (Masterauftrag, Auftragsindex, Modulpakete, Naechste Auftraege)",
+    "schritt_2": "Gesamt-Roadmap als Python-Datenstruktur erzeugen",
+    "schritt_3": "Zyklenfreiheit pruefen (DFS)",
+    "schritt_4": "Eindeutigkeit der IDs pruefen",
+    "schritt_5": "Pflichtfelder validieren",
+    "schritt_6": "Roadmap-JSON schreiben",
+    "schritt_7": "Textbericht schreiben",
+    "schritt_8": "Git-Status vorher speichern",
+    "schritt_9": "Git add + commit bei Erfolg",
+    "schritt_10": "Git-Status nachher speichern"
+  }
+}

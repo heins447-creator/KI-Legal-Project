@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "ALIN_Neustart_Core"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "08_Migration/02_Kopierte_Dateien/**": true,
+      "**/__pycache__/**": true,
+      "**/.pytest_cache/**": true,
+      "**/*.pyc": true,
+      "**/99_Reparatur/**": true,
+      "**/Backup*/**": true,
+      "**/*BACKUP*/**": true
+    },
+    "search.exclude": {
+      "08_Migration/02_Kopierte_Dateien/**": true,
+      "**/__pycache__/**": true,
+      "**/.pytest_cache/**": true,
+      "**/*.pyc": true,
+      "**/99_Reparatur/**": true,
+      "**/Backup*/**": true,
+      "**/*BACKUP*/**": true
+    }
+  }
+}

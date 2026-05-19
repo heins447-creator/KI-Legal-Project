@@ -1,0 +1,70 @@
+================================================================================
+ALIN CORE-10d PRÜFBERICHT
+================================================================================
+Bericht-ID    : CORE10D-PRUEF-20260516
+Erstellt      : 2026-05-16 19:05:00
+Prüfdatei     : alin_core10d_pruefung.py
+Exit-Code     : 0
+Status        : BESTANDEN (nach Korrektur fehlender Modul-IDs und SI_QUELLEN_ADAPTER-Status)
+================================================================================
+
+PRÜFPUNKTE
+----------
+[OK] schnittstellenregister.json vorhanden
+[OK] schnittstellenregister.json ist gueltiges JSON
+[OK] 14 Schnittstellen gefunden
+[OK] 14 Schnittstellen geprueft
+[OK] 3 Cloud-/Online-Schnittstellen als gesperrt/manuell markiert
+[OK] DEEPL_API nicht aktiv/freigegeben
+
+ERGEBNIS
+--------
+Keine Fehler gefunden.
+Alle 14 Schnittstellen im schnittstellenregister.json sind korrekt strukturiert.
+Alle Cloud-/API-Schnittstellen sind als gesperrt oder manuell freigabepflichtig markiert.
+DEEPL_API ist explizit als gesperrt behandelt.
+
+SCHNITTSTELLEN-STATUS
+---------------------
+  aktiv:                   7  (SI_CORE_REGISTRY, SI_UI_EINGANG_TUERSCHWELLE, SI_DOKUMENT_ORIGINAL,
+                                SI_OCR_PIPELINE, SI_RESSOURCEN_HEALTHCHECK,
+                                SI_AKTENPROFIL_GRUNDSCHALTER, SI_BACKUP_INTEGRITAET)
+  vorbereitet:             5  (SI_UI_MANDANTENAKTE, SI_FUNDSTELLEN_TEXTSTRUKTUR,
+                                SI_AGENTEN_AUFTRAG, SI_EXPORT_IMPORT, SI_QUELLEN_ADAPTER)
+  gesperrt:                2  (SI_UEBERSETZUNG_TERMINOLOGIE, SI_GESPERRTE_EXTERN)
+  platzhalter:             0
+  pruefung_erforderlich:   0
+
+CLOUD-/ONLINE-SCHNITTSTELLEN
+----------------------------
+  Gesperrt:                    2
+    - SI_UEBERSETZUNG_TERMINOLOGIE (indirekt, ARGOS gesperrt)
+    - SI_GESPERRTE_EXTERN (direkt, DEEPL_API gesperrt)
+  Manuell freigabepflichtig:    1
+    - SI_QUELLEN_ADAPTER (indirekt, Online-Quellen moeglich, status=vorbereitet)
+
+NEUE DATEIEN
+------------
+  ALIN_Neustart_Core/01_Register/schnittstellenregister.json
+
+GEÄNDERTE DATEIEN
+------------------
+  ALIN_Neustart_Core/01_Register/schnittstellenregister.json
+    - SI_CORE_REGISTRY: nicht-existente Modul-IDs entfernt
+    - SI_RESSOURCEN_HEALTHCHECK: nicht-existente Modul-IDs durch existierende Healthcheck-Module ersetzt
+    - SI_BACKUP_INTEGRITAET: nicht-existente Modul-IDs entfernt
+    - SI_EXPORT_IMPORT: nicht-existente Modul-ID entfernt
+    - SI_GESPERRTE_EXTERN: DEEPL_API als Modul entfernt (bleibt in quellen_oder_adapter)
+    - SI_QUELLEN_ADAPTER: status von "aktiv" auf "vorbereitet" korrigiert (Cloud-Regel)
+
+FOLGEAUFTRÄGE
+-------------
+[ ] UI-Schnittstellen (SI_UI_EINGANG_TUERSCHWELLE, SI_UI_MANDANTENAKTE) pruefen
+[ ] Agenten-Schnittstelle (SI_AGENTEN_AUFTRAG) freigeben
+[ ] Uebersetzungs-Schnittstelle (SI_UEBERSETZUNG_TERMINOLOGIE) nach Argos-Installation
+[ ] Fundstellen-Schnittstelle (SI_FUNDSTELLEN_TEXTSTRUKTUR) entwickeln
+[ ] DEEPL_API bleibt GESPERRT (Offline-Regel)
+
+================================================================================
+ENDE DER PRÜFUNG
+================================================================================

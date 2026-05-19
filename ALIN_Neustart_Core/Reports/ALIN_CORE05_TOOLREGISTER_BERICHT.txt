@@ -1,0 +1,40 @@
+======================================================================
+CORE-05 TOOLREGISTER BERICHT
+======================================================================
+Zeitstempel: 2026-05-16T04:15:00+00:00
+Gesamtanzahl Tools: 16
+
+Installiert: 13
+Nicht installiert: 1
+Unbekannt: 2
+
+Standardtools: 11
+Ersatztools: 3
+
+Tools mit Update-Verknuepfung:
+  TESSERACT -> UPD_TESSERACT
+  PYTHON -> UPD_PYTHON
+  POWERSHELL -> UPD_POWERSHELL
+  GIT -> UPD_GIT
+  SQLITE -> UPD_SQLITE
+  WEBVIEW2 -> UPD_WEBVIEW2
+  DOTNET_RUNTIME -> UPD_DOTNET
+  AIDER -> UPD_AIDER
+
+Tools ohne Update-Verknuepfung:
+  PYMUPDF
+  DUCKDB
+  PILLOW
+  NUMPY
+  OPENCV
+  ARGOS_TRANSLATE
+  OLLAMA
+  ABBYY
+
+Nicht freigegebene Tools:
+  AIDER (Aider (AI Coding Agent))
+  ARGOS_TRANSLATE (Argos Translate)
+  OLLAMA (Ollama)
+  ABBYY (ABBYY FineReader)
+
+======================================================================

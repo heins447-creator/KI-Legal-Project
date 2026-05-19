@@ -1,0 +1,124 @@
+======================================================================
+CORE-10d SCHNITTSTELLENBEREICHE ANALYSEBERICHT
+======================================================================
+Erstellt: 2026-05-16
+Analysierte Schnittstellen: 14
+
+1. SCHNITTSTELLEN-UEBERSICHT
+----------------------------------------
+  SI_CORE_REGISTRY [aktiv]
+    Bereich: register, Cloud: keiner
+    Module: 0 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 2 ok, 0 fehlend
+
+  SI_UI_EINGANG_TUERSCHWELLE [aktiv]
+    Bereich: ui, Cloud: keiner
+    Module: 5 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 0 ok, 0 fehlend
+
+  SI_UI_MANDANTENAKTE [vorbereitet]
+    Bereich: ui, Cloud: keiner
+    Module: 3 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 0 ok, 0 fehlend
+
+  SI_DOKUMENT_ORIGINAL [aktiv]
+    Bereich: schnittstellen, Cloud: keiner
+    Module: 4 ok, 0 fehlend
+    Ressourcen: 7 ok, 0 fehlend
+    Tools: 2 ok, 0 fehlend
+
+  SI_OCR_PIPELINE [aktiv]
+    Bereich: ocr, Cloud: keiner
+    Module: 6 ok, 0 fehlend
+    Ressourcen: 7 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_FUNDSTELLEN_TEXTSTRUKTUR [vorbereitet]
+    Bereich: schnittstellen, Cloud: keiner
+    Module: 3 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_UEBERSETZUNG_TERMINOLOGIE [gesperrt]
+    Bereich: sprache, Cloud: gesperrt
+    Module: 4 ok, 0 fehlend
+    Ressourcen: 6 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_QUELLEN_ADAPTER [vorbereitet]
+    Bereich: quellen, Cloud: manuell_freigabepflichtig
+    Module: 4 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_RESSOURCEN_HEALTHCHECK [aktiv]
+    Bereich: register, Cloud: keiner
+    Module: 3 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_AGENTEN_AUFTRAG [vorbereitet]
+    Bereich: agent, Cloud: keiner
+    Module: 6 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 2 ok, 0 fehlend
+
+  SI_AKTENPROFIL_GRUNDSCHALTER [aktiv]
+    Bereich: register, Cloud: keiner
+    Module: 3 ok, 0 fehlend
+    Ressourcen: 4 ok, 0 fehlend
+    Tools: 2 ok, 0 fehlend
+
+  SI_EXPORT_IMPORT [vorbereitet]
+    Bereich: schnittstellen, Cloud: keiner
+    Module: 1 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_BACKUP_INTEGRITAET [aktiv]
+    Bereich: register, Cloud: keiner
+    Module: 0 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 1 ok, 0 fehlend
+
+  SI_GESPERRTE_EXTERN [gesperrt]
+    Bereich: schnittstellen, Cloud: gesperrt
+    Module: 2 ok, 0 fehlend
+    Ressourcen: 0 ok, 0 fehlend
+    Tools: 0 ok, 0 fehlend
+
+2. STATUS-VERTEILUNG
+----------------------------------------
+  aktiv: 7
+  vorbereitet: 5
+  gesperrt: 2
+
+3. CLOUD-/ONLINE-SCHNITTSTELLEN
+----------------------------------------
+  Gesperrt: 2
+  Manuell freigabepflichtig: 1
+  DEEPL_API in Hinweisen: JA
+
+4. ZUSAMMENFASSUNG
+----------------------------------------
+  Gesamt-Schnittstellen: 14
+  Aktiv: 7
+  Vorbereitet: 5
+  Gesperrt: 2
+  Platzhalter: 0
+  Pruefung erforderlich: 0
+
+5. FOLGEAUFTRAEGE
+----------------------------------------
+  [ ] UI-Schnittstellen (SI_UI_EINGANG_TUERSCHWELLE, SI_UI_MANDANTENAKTE) pruefen
+  [ ] Agenten-Schnittstelle (SI_AGENTEN_AUFTRAG) freigeben
+  [ ] Uebersetzungs-Schnittstelle (SI_UEBERSETZUNG_TERMINOLOGIE) nach Argos-Installation
+  [ ] Fundstellen-Schnittstelle (SI_FUNDSTELLEN_TEXTSTRUKTUR) entwickeln
+  [ ] DEEPL_API bleibt GESPERRT (Offline-Regel)
+
+======================================================================
+ENDE ANALYSEBERICHT
+======================================================================

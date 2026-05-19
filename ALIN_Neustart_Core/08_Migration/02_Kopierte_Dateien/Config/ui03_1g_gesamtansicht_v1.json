@@ -1,0 +1,29 @@
+{
+  "modul": "UI03-1g",
+  "version": "1.0.0",
+  "beschreibung": "Kombinierte Gesamtansicht OCR → Freigabe → Übersetzungsauftrag → Parkstatus. Aggregiert UI03-1b bis UI03-1f ohne Neuberechnung.",
+  "core11_konform": true,
+  "quell_module": {
+    "1b": "Agentensteuerung/UI03_Mandantenakte/21_OCR_Uebersetzungskontrolle_UI03_1b",
+    "1c": "Agentensteuerung/UI03_Mandantenakte/22_Uebersetzungsarbeitsplatz_UI03_1c",
+    "1d": "Agentensteuerung/UI03_Mandantenakte/23_OCR_Freigabeablauf_UI03_1d",
+    "1e": "Agentensteuerung/UI03_Mandantenakte/24_Uebergabe_Freigabe_UI03_1e",
+    "1f": "Agentensteuerung/UI03_Mandantenakte/25_Geparkte_Auftraege_UI03_1f"
+  },
+  "ausgabe": {
+    "dashboard_html": "02_Status/UI03_1g_GESAMTANSICHT.html",
+    "aggregat_json": "02_Status/UI03_1g_GESAMTANSICHT.json",
+    "bericht": "03_Berichte/UI03_1g_GESAMTANSICHT_BERICHT.txt",
+    "fehler": "05_Fehler/UI03_1g_GESAMTANSICHT_FEHLER.txt"
+  },
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_neue_ocr": true,
+    "keine_echte_uebersetzung": true,
+    "keine_db_aenderung": true,
+    "kein_internet": true,
+    "keine_cloud": true,
+    "keine_registeraenderung": true,
+    "keine_vorgaenger_modifikation": true
+  }
+}

@@ -1,0 +1,28 @@
+PHASE 0, AP 0.2 MIGRATIONS-RUNNER BERICHT
+======================================================================
+Erstellt: 2026-05-19 10:59:17
+Modus: execute
+Datenbank: I:\KI_Legal_Project\ALIN_Neustart_Core\Database\DuckDB\alin_local.duckdb
+
+ERGEBNIS
+----------------------------------------------------------------------
+Migrationen gesamt: 2
+Ausstehend vor Lauf: 0
+In diesem Lauf angewendet: 0
+Uebersprungen: 2
+
+ANGEWENDET
+----------------------------------------------------------------------
+- keine
+
+AUSSTEHEND / DRY-RUN
+----------------------------------------------------------------------
+- keine
+
+SPERREN
+----------------------------------------------------------------------
+08_Migration wurde nicht beschrieben.
+Keine Internetverbindung, keine Fremd-API, keine echten Mandantendaten.
+
+ENDE BERICHT
+======================================================================

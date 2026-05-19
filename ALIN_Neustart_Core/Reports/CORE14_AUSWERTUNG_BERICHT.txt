@@ -1,0 +1,70 @@
+======================================================================
+CORE-14 AUSWERTUNG BERICHT
+======================================================================
+
+Zeitstempel: 2026-05-18T02:45:28.681064
+Gesamtdateien: 98436
+Gesperrte Dateien: 6492
+
+Zielentscheidungen:
+----------------------------------------
+  UEBERNEHMEN_KOPIEREND                            311 ( 0.32%)
+  NICHT_UEBERNEHMEN_ERSETZT                         89 ( 0.09%)
+  ARCHIV_VORSCHLAG                                1554 ( 1.58%)
+  DUBLETTE_NICHT_KOPIEREN                        59879 (60.83%)
+  TESTREST_NICHT_KOPIEREN                         3359 ( 3.41%)
+  LAUFZEITARTEFAKT_NICHT_KOPIEREN                 1367 ( 1.39%)
+  CONFIG_LOKAL_MANUELL                              10 ( 0.01%)
+  SPERREN_NICHT_KOPIEREN                          6492 ( 6.60%)
+  MANUELL_PRUEFEN                                25375 (25.78%)
+
+Top 20 MANUELL_PRUEFEN (Prio):
+----------------------------------------
+  .aider.chat.history.md
+  .aider.conf.yml
+  .aiderignore
+  .gitignore
+  AGENTS.md
+  ALIN_Ausfuehrliche_Agenten_Matrix.pdf
+  alin_dss_bridge.py
+  ALIN_Marschplan_Autonome_Installation.pdf
+  alin_posteingang_pruefung.py
+  alin_posteingang_ui.py
+  ARCHITECTURE.md
+  Case_Data.duckdb
+  CODING_RULES.md
+  Das ist die ausführliche technische Konzeption des autonomen Multi.docx
+  Forensik_Konfig.txt
+  Jura_Forensik.txt
+  KI_ENTWICKLUNGSKONZEPT.md
+  PROJECT_STATE.md
+  RUN_TASK_PLAN.md
+  Start_KI_System.ps1
+  ... und 25355 weitere
+
+Top 20 SPERREN_NICHT_KOPIEREN:
+----------------------------------------
+  Agentensteuerung/09_Analysebericht_Validator/01_Skript/analysebericht_validator.py – Klassifikation=LOG_BERICHT; Sperrhinweis KRITISCH: API_KEY
+  ALIN_Neustart_Core/Scripts/alin_core04_update_register_befuellen.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui07_betriebsvorbereitung_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui08_posteingang_importstrecke_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui09_zentrale_grundschalter_profilfelder_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui10_profil_lesadapter_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui11_register_lesadapter_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui12_master_adapter_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui13_abnahme_entscheidungsuebersicht_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Config/ui14_ausfuehrungs_nachlaufzentrale_v1.json – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/alin_bridge.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/start_analyse.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/temp_init_db.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/python_runner/011_language_context_v2.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/python_runner/038_anwaltvorlage_grundmodul_v1.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  Scripts/python_runner/042_agent_dokumentart_erkennen_v1.py – Klassifikation=SPERREN; explizit als SPERREN klassifiziert
+  ... und 6472 weitere
+
+======================================================================
+ENDE BERICHT

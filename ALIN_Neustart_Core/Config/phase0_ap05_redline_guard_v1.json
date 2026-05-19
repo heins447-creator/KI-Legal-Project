@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.5",
+  "name": "Rote Linien als technische Blocker",
+  "redlines": {
+    "rules": ".alin/redlines.json",
+    "schema": ".alin/redlines.schema.json",
+    "default_decision": "block_on_match"
+  },
+  "files": {
+    "module": "alin_core/redline_guard.py",
+    "runner": "Scripts/python_runner/phase0_ap05_redline_guard.py",
+    "check": "Scripts/python_runner/check_phase0_ap05_redline_guard.py",
+    "starter": "Scripts/Run_PHASE0_AP05_Redline_Guard.ps1",
+    "documentation": "Projektplanung/PHASE0_AP05_REDLINE_GUARD.md",
+    "report": "Reports/PHASE0_AP05_REDLINE_GUARD_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP05_REDLINE_GUARD_BERICHT.txt"
+  }
+}

@@ -1,0 +1,197 @@
+================================================================================
+ROADMAP-ERWEITERUNG-01 BERICHT
+================================================================================
+Auftrag:        ROADMAP-ERWEITERUNG-01 – Fachliche Ausbau-Roadmap für ALIN
+Erstellt:       2026-05-18T20:25:00+0000
+Ersteller:      ALIN Architektur-Agent
+Status:         Abgeschlossen
+Vorgaenger:     CORE25_gesamt_roadmap_v2.json (89/90 Stufen abgeschlossen)
+================================================================================
+
+1. ZUSAMMENFASSUNG
+--------------------------------------------------------------------------------
+Die Grundpipeline von ALIN ist mit 89 von 90 Stufen abgeschlossen. Die letzte
+Stufe DEPLOY bleibt blockiert, bis eine gesonderte Freigabe erfolgt.
+
+Dieser Bericht dokumentiert die Erstellung der Erweiterungs-Roadmap mit 6 neuen
+Stufen (EXT-001 bis EXT-006), die auf den abgeschlossenen Grundlagen aufbauen.
+
+2. ANALYSE BESTEHENDER ROADMAP
+--------------------------------------------------------------------------------
+Quelle: ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap_v2.json
+
+- Anzahl Stufen:        90
+- Abgeschlossen:        89
+- Blockiert:            1 (DEPLOY)
+- Phasen:               12 (Vorbereitung bis Abschluss)
+- ID-Schema:            STUFE-XXX, CORE-XX, UIxx, KMxx, POSTxx, Qxx, AGxx, WINAPP
+
+Kritische Voraussetzungen für Erweiterung:
+- STUFE-026 Gesamtabnahme:        abgeschlossen
+- STUFE-001 Register befuellt:    abgeschlossen
+- STUFE-019 Rechte/Rollen:        abgeschlossen
+- STUFE-011 Architektur:          abgeschlossen
+- KM21b0 ARGOS:                   abgeschlossen
+- Q02 EU-Quellen:                 abgeschlossen
+- WINAPP Build:                   abgeschlossen
+
+3. NEUE ERWEITERUNGSSTUFEN
+--------------------------------------------------------------------------------
+
+| Stufe | Name                              | Phase                  | Prio |
+|-------|-----------------------------------|------------------------|------|
+| EXT-001 | DuckDB-Schema                   | Phase A: Datenfundament| 101  |
+| EXT-002 | PaddleOCR + Layout-Analyse      | Phase B: OCR-Verbesserung| 102|
+| EXT-003 | EU-Terminologiepakete           | Phase C: Rechtswissen  | 103  |
+| EXT-004 | FastAPI-Backend                 | Phase D: API-Schicht   | 104  |
+| EXT-005 | Semantische Suche               | Phase E: KI-Suche      | 105  |
+| EXT-006 | WPF-Frontend                    | Phase F: UI-Neuaufbau  | 106  |
+
+4. ABHAENGIGKEITSGRAPH
+--------------------------------------------------------------------------------
+
+STUFE-026  -->  EXT-001
+STUFE-001  -->  EXT-001
+UI14       -->  EXT-001
+
+EXT-001    -->  EXT-002
+KM21b0     -->  EXT-002
+STUFE-008  -->  EXT-002
+
+EXT-001    -->  EXT-003
+Q02        -->  EXT-003
+KM21       -->  EXT-003
+
+EXT-001    -->  EXT-004
+EXT-003    -->  EXT-004
+STUFE-019  -->  EXT-004
+
+EXT-001    -->  EXT-005
+EXT-002    -->  EXT-005
+EXT-004    -->  EXT-005
+
+EXT-004    -->  EXT-006
+EXT-005    -->  EXT-006
+WINAPP     -->  EXT-006
+STUFE-011  -->  EXT-006
+
+Zyklische Abhaengigkeiten: KEINE
+Alle Abhaengigkeiten aufloesbar: JA
+
+5. SPERREN UND SICHERHEITSGRENZEN
+--------------------------------------------------------------------------------
+
+Globale Sperren (alle Stufen):
+- Kein Deployment
+- Keine Produktivfreigabe
+- Keine echten Mandantendaten
+- Keine Cloud/Internet-Abhaengigkeit
+- Nur lokale Open-Source-Tools
+- Stufen vollstaendig offline-faehig
+
+Stufenspezifische Sperren:
+
+EXT-001 (DuckDB):
+- Kein Cloud-DB-Service
+- Keine Remote-Verbindungen
+- Nur lokale .duckdb-Dateien
+- Schema-Migration nur nach Backup
+
+EXT-002 (PaddleOCR):
+- Kein Cloud-OCR-Service
+- Keine Internetverbindung waehrend OCR
+- Nur lokale PaddleOCR-Modelle
+- Keine echten Mandantendokumente fuer Training
+
+EXT-003 (EU-Terminologie):
+- Kein Cloud-Uebersetzungsdienst
+- Keine Online-Terminologie-Abfragen
+- EU-Daten nur aus lokalen Quellen
+- Lizenzpruefung aller EU-Daten
+
+EXT-004 (FastAPI):
+- Kein externer API-Zugriff
+- Nur 127.0.0.1 / localhost
+- Keine externe Authentifizierung
+- Kein HTTPS-Zwang im lokalen Modus
+
+EXT-005 (Semantische Suche):
+- Kein Cloud-Embedding-Service
+- Keine Vektor-Cloud-Datenbank
+- Nur lokale Modelle aus Toolregister
+- Embedding-Berechnung offline und lokal
+
+EXT-006 (WPF):
+- Kein Deployment der WPF-App
+- Alte WinUI-3-App muss archiviert werden
+- Keine externen UI-Bibliotheken ohne Lizenzpruefung
+- App kommuniziert nur mit localhost
+
+6. LIEFERARTEFAKTE
+--------------------------------------------------------------------------------
+
+Erstellte Dateien:
+
+1. Projektplanung/ROADMAP_ERWEITERUNG_01.md
+   - Vollstaendige Dokumentation der Erweiterung
+   - Abhaengigkeitsgraph, Sperren, Tests, Fertigstellungskriterien
+
+2. ALIN_Neustart_Core/08_Migration/09_Manifest/ROADMAP_ERWEITERUNG_01.json
+   - Maschinenlesbare Roadmap-Definition
+   - CORE-25 v2 kompatibel
+   - 6 Stufen mit vollstaendigen Metadaten
+
+3. ALIN_Neustart_Core/Reports/ROADMAP_ERWEITERUNG_01_BERICHT.txt
+   - Dieser Bericht
+
+7. LIEFERPFLICHTEN JE STUFE
+--------------------------------------------------------------------------------
+
+Jede Stufe muss liefern (gemaess AGENTS.md):
+1. Migration, falls Datenbank betroffen
+2. Python-Laeufer unter Scripts/python_runner
+3. Pruefdatei unter Scripts/python_runner
+4. PowerShell-Starter unter Scripts
+5. Konfiguration unter Config
+6. Dokumentation unter Projektplanung
+7. Testlauf
+8. Bericht unter ALIN_Neustart_Core/Reports
+9. Git-Status vor und nach Aenderung
+10. Git-Commit nur bei erfolgreichem Build und Pruefung
+
+8. EMPFOHLENE REIHENFOLGE
+--------------------------------------------------------------------------------
+
+1. EXT-001 (DuckDB-Schema) – Datenfundament
+2. EXT-002 (PaddleOCR) – OCR-Verbesserung
+3. EXT-003 (EU-Terminologie) – Rechtswissen
+4. EXT-004 (FastAPI-Backend) – API-Schicht
+5. EXT-005 (Semantische Suche) – KI-Suche
+6. EXT-006 (WPF-Frontend) – UI-Neuaufbau
+
+Parallele Arbeit moeglich:
+- EXT-002 und EXT-003 koennen parallel nach EXT-001 beginnen
+- EXT-005 und EXT-006 koennen nicht parallel laufen (EXT-005 blockiert EXT-006)
+
+9. RISIKEN UND HINWEISE
+--------------------------------------------------------------------------------
+
+- WPF ersetzt WinUI 3: Archivierung der alten App erforderlich
+- PaddleOCR benoetigt ggf. GPU fuer optimale Performance
+- Semantische Suche: Speicherbedarf fuer Embeddings dokumentieren
+- EU-Terminologie: Lizenzpruefung vor Import erforderlich
+- FastAPI: Netzwerk-Isolation muss verifiziert werden
+
+10. ABSCHLUSS
+--------------------------------------------------------------------------------
+
+Erweiterungs-Roadmap erfolgreich erstellt und validiert.
+Alle Stufen sind zyklenfrei, abhaengigkeitskonsistent und vollstaendig offline-
+faehig.
+
+Naechster Schritt: Freigabe der Erweiterung durch menschlichen Entscheid,
+danach Beginn mit EXT-001.
+
+================================================================================
+ENDE DES BERICHTS
+================================================================================

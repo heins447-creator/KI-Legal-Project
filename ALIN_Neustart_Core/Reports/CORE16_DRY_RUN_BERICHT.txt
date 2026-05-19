@@ -1,0 +1,16 @@
+======================================================================
+CORE-16 DRY-RUN VALIDIERUNG BERICHT
+======================================================================
+
+Zeitstempel: 2026-05-18T02:56:39.191126
+Geprueft: 98436
+OK: 98436
+Warnungen: 0
+Kritisch: 0
+Kopieren vorgesehen: 311
+Dry-Run FREIGEGEBEN: True
+
+Keine Befunde. Dry-Run ist FREIGEGEBEN.
+
+======================================================================
+ENDE BERICHT

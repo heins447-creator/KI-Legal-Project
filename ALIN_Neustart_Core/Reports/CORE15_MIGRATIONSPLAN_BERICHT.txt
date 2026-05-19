@@ -1,0 +1,23 @@
+======================================================================
+CORE-15 MIGRATIONSPLAN BERICHT
+======================================================================
+
+Zeitstempel: 2026-05-18T02:47:08.182310
+Gesamtdateien: 98436
+Konflikte: 0
+Kopierende Dateien: 311
+
+Zielentscheidungen:
+----------------------------------------
+  ARCHIV_VORSCHLAG                                1554
+  CONFIG_LOKAL_MANUELL                              10
+  DUBLETTE_NICHT_KOPIEREN                        59879
+  LAUFZEITARTEFAKT_NICHT_KOPIEREN                 1367
+  MANUELL_PRUEFEN                                25375
+  NICHT_UEBERNEHMEN_ERSETZT                         89
+  SPERREN_NICHT_KOPIEREN                          6492
+  TESTREST_NICHT_KOPIEREN                         3359
+  UEBERNEHMEN_KOPIEREND                            311
+
+======================================================================
+ENDE BERICHT

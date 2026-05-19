@@ -1,0 +1,824 @@
+{
+  "schema_version": "1.0.0",
+  "beschreibung": "Inventar aller Module im Altbestand.",
+  "status": "befuellt",
+  "letzte_aktualisierung": "2026-05-16T03:12:35.494680+00:00",
+  "hinweis": "Durch CORE-02 Inventarisierung ermittelt. Keine manuelle Bearbeitung.",
+  "module": [
+    {
+      "modul_id": "Invoke_Aider_Local",
+      "pfad": "Scripts/Invoke_Aider_Local.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM17_AUTOLAUF",
+      "pfad": "Scripts/KM17_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM17c_EINZELSEITE_KM12b_AUTOLAUF",
+      "pfad": "Scripts/KM17c_EINZELSEITE_KM12b_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM18_AUTOLAUF",
+      "pfad": "Scripts/KM18_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF",
+      "pfad": "Scripts/KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM19_OCRBETREUER_KORREKTUR_AUTOLAUF",
+      "pfad": "Scripts/KM19_OCRBETREUER_KORREKTUR_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "KM21_TRANSLATION_ENV_AUTOLAUF",
+      "pfad": "Scripts/KM21_TRANSLATION_ENV_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agent_Dokumentart",
+      "pfad": "Scripts/Run_Agent_Dokumentart.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agent_Handoff_Test_Harness",
+      "pfad": "Scripts/Run_Agent_Handoff_Test_Harness.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agent_Sachverhaltsbezug",
+      "pfad": "Scripts/Run_Agent_Sachverhaltsbezug.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agent_Sprache_Uebersetzung",
+      "pfad": "Scripts/Run_Agent_Sprache_Uebersetzung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agenten_Kontext_Skill_Register",
+      "pfad": "Scripts/Run_Agenten_Kontext_Skill_Register.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Agentenbearbeitung",
+      "pfad": "Scripts/Run_Agentenbearbeitung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_AI_Coding_Agent_Project_Check",
+      "pfad": "Scripts/Run_AI_Coding_Agent_Project_Check.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_AI_Coding_Agent_Repair_Loop",
+      "pfad": "Scripts/Run_AI_Coding_Agent_Repair_Loop.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Aktenmaterial_Freigabeliste",
+      "pfad": "Scripts/Run_Aktenmaterial_Freigabeliste.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_ALIN_SafeJob",
+      "pfad": "Scripts/Run_ALIN_SafeJob.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Anwaltvorlage",
+      "pfad": "Scripts/Run_Anwaltvorlage.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Dokumentsprachprofil",
+      "pfad": "Scripts/Run_Dokumentsprachprofil.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM10_Schnittstellen_Lueckenabgleich",
+      "pfad": "Scripts/Run_KM10_Schnittstellen_Lueckenabgleich.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM12_Originalabbildung",
+      "pfad": "Scripts/Run_KM12_Originalabbildung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM12b_Uebergrosse_Arbeitsabbildungen",
+      "pfad": "Scripts/Run_KM12b_Uebergrosse_Arbeitsabbildungen.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM13_OCR_Pipeline",
+      "pfad": "Scripts/Run_KM13_OCR_Pipeline.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM13b_Tesseract_Sprachpaket_Abgleich",
+      "pfad": "Scripts/Run_KM13b_Tesseract_Sprachpaket_Abgleich.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM14_Maschinenformat_Fundstellenstruktur",
+      "pfad": "Scripts/Run_KM14_Maschinenformat_Fundstellenstruktur.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM15_Arbeitsuebersetzung_Fundstellenbindung",
+      "pfad": "Scripts/Run_KM15_Arbeitsuebersetzung_Fundstellenbindung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM16_Sprachrouting_Vor_OCR",
+      "pfad": "Scripts/Run_KM16_Sprachrouting_Vor_OCR.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM20_Konsolidierung",
+      "pfad": "Scripts/Run_KM20_Konsolidierung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_KM20b_Bereinigung",
+      "pfad": "Scripts/Run_KM20b_Bereinigung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Posteingang_Menu",
+      "pfad": "Scripts/Run_Posteingang_Menu.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Posteingang_Pipeline",
+      "pfad": "Scripts/Run_Posteingang_Pipeline.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Posteingang_Schlusskontrolle",
+      "pfad": "Scripts/Run_Posteingang_Schlusskontrolle.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Posteingang_Zentrale",
+      "pfad": "Scripts/Run_Posteingang_Zentrale.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Quellenbetreuer_Fachanwaltsraster",
+      "pfad": "Scripts/Run_Quellenbetreuer_Fachanwaltsraster.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Quellenkandidaten_EU_SE",
+      "pfad": "Scripts/Run_Quellenkandidaten_EU_SE.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Source_Adapter_Healthcheck_Framework",
+      "pfad": "Scripts/Run_Source_Adapter_Healthcheck_Framework.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Arbeitsliste",
+      "pfad": "Scripts/Run_Vorzimmer_Arbeitsliste.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Entscheidung",
+      "pfad": "Scripts/Run_Vorzimmer_Entscheidung.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Run_Vorzimmer_Kommunikationsparameter",
+      "pfad": "Scripts/Run_Vorzimmer_Kommunikationsparameter.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI01_ANWALTSANSICHT_AUTOLAUF",
+      "pfad": "Scripts/UI01_ANWALTSANSICHT_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui02_0_bestandsabgleich_tuerschwelle",
+      "pfad": "Scripts/ui02_0_bestandsabgleich_tuerschwelle.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui02_tuerschwelle_bau_starter",
+      "pfad": "Scripts/ui02_tuerschwelle_bau_starter.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF",
+      "pfad": "Scripts/UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF",
+      "pfad": "Scripts/UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF",
+      "pfad": "Scripts/UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF",
+      "pfad": "Scripts/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF",
+      "pfad": "Scripts/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "Update_External_Tools_Library",
+      "pfad": "Scripts/Update_External_Tools_Library.ps1",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "001_db_schema_audit",
+      "pfad": "Scripts/python_runner/001_db_schema_audit.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "002_apply_posteingang_schema",
+      "pfad": "Scripts/python_runner/002_apply_posteingang_schema.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "003_verify_posteingang_schema",
+      "pfad": "Scripts/python_runner/003_verify_posteingang_schema.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "004_posteingang_arbeitsstruktur_v1",
+      "pfad": "Scripts/python_runner/004_posteingang_arbeitsstruktur_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "005_posteingang_sicherheitsgate_v2",
+      "pfad": "Scripts/python_runner/005_posteingang_sicherheitsgate_v2.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "011_language_context_v2",
+      "pfad": "Scripts/python_runner/011_language_context_v2.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "012_posteingang_sprachkontext_gate_v2",
+      "pfad": "Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "013_kontrolle_posteingang_nach_bereinigung",
+      "pfad": "Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "013_posteingang_db_altlasten_cleanup",
+      "pfad": "Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "014_posteingang_clean_verify",
+      "pfad": "Scripts/python_runner/014_posteingang_clean_verify.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "014_posteingang_pipeline_v1",
+      "pfad": "Scripts/python_runner/014_posteingang_pipeline_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "015_posteingang_pipeline_smoketest_v1",
+      "pfad": "Scripts/python_runner/015_posteingang_pipeline_smoketest_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "016_posteingang_betriebsstatus_v1",
+      "pfad": "Scripts/python_runner/016_posteingang_betriebsstatus_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "017_vorzimmer_arbeitsliste_v1",
+      "pfad": "Scripts/python_runner/017_vorzimmer_arbeitsliste_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "018_vorzimmer_entscheidung_v1",
+      "pfad": "Scripts/python_runner/018_vorzimmer_entscheidung_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "019_vorzimmer_entscheidung_smoketest_v1",
+      "pfad": "Scripts/python_runner/019_vorzimmer_entscheidung_smoketest_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "020_posteingang_gesamtstatus_v1",
+      "pfad": "Scripts/python_runner/020_posteingang_gesamtstatus_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "021_posteingang_db_dateien_auswahl_testlauf_v1",
+      "pfad": "Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "022_posteingang_db_testlauf_auswertung_v1",
+      "pfad": "Scripts/python_runner/022_posteingang_db_testlauf_auswertung_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "023_vorzimmer_entscheidungsvorschlag_v1",
+      "pfad": "Scripts/python_runner/023_vorzimmer_entscheidungsvorschlag_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "025_schweden_arbeitsrecht_sprachkontext_korrektur_v1",
+      "pfad": "Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "026_posteingang_aktenmaterial_agentenabgrenzung_v1",
+      "pfad": "Scripts/python_runner/026_posteingang_aktenmaterial_agentenabgrenzung_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "027_posteingang_aktenmaterial_freigabeliste_v1",
+      "pfad": "Scripts/python_runner/027_posteingang_aktenmaterial_freigabeliste_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "031_dokumentsprachprofil_v1",
+      "pfad": "Scripts/python_runner/031_dokumentsprachprofil_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "032_check_dokumentsprachprofil_v1",
+      "pfad": "Scripts/python_runner/032_check_dokumentsprachprofil_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "033_posteingang_schlusskontrolle_v2",
+      "pfad": "Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "034_posteingang_endabnahme_v2",
+      "pfad": "Scripts/python_runner/034_posteingang_endabnahme_v2.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "035_vorzimmer_kommunikationsparameter_v1",
+      "pfad": "Scripts/python_runner/035_vorzimmer_kommunikationsparameter_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "036_check_vorzimmer_kommunikationsparameter_v1",
+      "pfad": "Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "037_posteingang_endabnahme_v3",
+      "pfad": "Scripts/python_runner/037_posteingang_endabnahme_v3.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "038_anwaltvorlage_grundmodul_v1",
+      "pfad": "Scripts/python_runner/038_anwaltvorlage_grundmodul_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "039_check_anwaltvorlage_grundmodul_v1",
+      "pfad": "Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "040_agentenbearbeitung_grundmodul_v1",
+      "pfad": "Scripts/python_runner/040_agentenbearbeitung_grundmodul_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "041_check_agentenbearbeitung_grundmodul_v1",
+      "pfad": "Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "042_agent_dokumentart_erkennen_v1",
+      "pfad": "Scripts/python_runner/042_agent_dokumentart_erkennen_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "043_check_agent_dokumentart_erkennen_v1",
+      "pfad": "Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "044_agent_sprache_uebersetzung_v1",
+      "pfad": "Scripts/python_runner/044_agent_sprache_uebersetzung_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "045_check_agent_sprache_uebersetzung_v1",
+      "pfad": "Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "046_agent_sachverhaltsbezug_v1",
+      "pfad": "Scripts/python_runner/046_agent_sachverhaltsbezug_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "046_quellenbetreuer_fachanwaltsraster_v1",
+      "pfad": "Scripts/python_runner/046_quellenbetreuer_fachanwaltsraster_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "047_check_agent_sachverhaltsbezug_v1",
+      "pfad": "Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "047_check_quellenbetreuer_fachanwaltsraster_v1",
+      "pfad": "Scripts/python_runner/047_check_quellenbetreuer_fachanwaltsraster_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "048_agenten_kontext_skill_register_v1",
+      "pfad": "Scripts/python_runner/048_agenten_kontext_skill_register_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "049_check_agenten_kontext_skill_register_v1",
+      "pfad": "Scripts/python_runner/049_check_agenten_kontext_skill_register_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "050_fix_agenten_kontext_skill_bindings_v1",
+      "pfad": "Scripts/python_runner/050_fix_agenten_kontext_skill_bindings_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "051_quellenkandidaten_eu_se_v1",
+      "pfad": "Scripts/python_runner/051_quellenkandidaten_eu_se_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "052_check_quellenkandidaten_eu_se_v1",
+      "pfad": "Scripts/python_runner/052_check_quellenkandidaten_eu_se_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "053_source_adapter_healthcheck_framework_v1",
+      "pfad": "Scripts/python_runner/053_source_adapter_healthcheck_framework_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "054_check_source_adapter_healthcheck_framework_v1",
+      "pfad": "Scripts/python_runner/054_check_source_adapter_healthcheck_framework_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "055_agent_handoff_test_harness_v1",
+      "pfad": "Scripts/python_runner/055_agent_handoff_test_harness_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "056_check_agent_handoff_test_harness_v1",
+      "pfad": "Scripts/python_runner/056_check_agent_handoff_test_harness_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "_patch_css",
+      "pfad": "Scripts/python_runner/_patch_css.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "_patch_html",
+      "pfad": "Scripts/python_runner/_patch_html.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km10_schnittstellen_lueckenabgleich",
+      "pfad": "Scripts/python_runner/check_km10_schnittstellen_lueckenabgleich.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km12_originalabbildung",
+      "pfad": "Scripts/python_runner/check_km12_originalabbildung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km12b_uebergrosse_arbeitsabbildungen",
+      "pfad": "Scripts/python_runner/check_km12b_uebergrosse_arbeitsabbildungen.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km13_ocr_pipeline",
+      "pfad": "Scripts/python_runner/check_km13_ocr_pipeline.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km13b_tesseract_sprachpaket_abgleich",
+      "pfad": "Scripts/python_runner/check_km13b_tesseract_sprachpaket_abgleich.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km14_maschinenformat_fundstellenstruktur",
+      "pfad": "Scripts/python_runner/check_km14_maschinenformat_fundstellenstruktur.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km15_arbeitsuebersetzung_fundstellenbindung",
+      "pfad": "Scripts/python_runner/check_km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km16_sprachrouting_vor_ocr",
+      "pfad": "Scripts/python_runner/check_km16_sprachrouting_vor_ocr.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km17_sprachrouting_ocr_integration",
+      "pfad": "Scripts/python_runner/check_km17_sprachrouting_ocr_integration.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km17c_einzelseite_km12b_ocr",
+      "pfad": "Scripts/python_runner/check_km17c_einzelseite_km12b_ocr.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km18_ocr_ergebnisdiagnose",
+      "pfad": "Scripts/python_runner/check_km18_ocr_ergebnisdiagnose.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km19_ocr_gesamtkette_synchronisieren",
+      "pfad": "Scripts/python_runner/check_km19_ocr_gesamtkette_synchronisieren.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km19_ocrbetreuer_korrektur",
+      "pfad": "Scripts/python_runner/check_km19_ocrbetreuer_korrektur.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_km21_translation_env_prepare",
+      "pfad": "Scripts/python_runner/check_km21_translation_env_prepare.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui01_anwaltsansicht_v1",
+      "pfad": "Scripts/python_runner/check_ui01_anwaltsansicht_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui02c_freigabe_dropdowns_notizen",
+      "pfad": "Scripts/python_runner/check_ui02c_freigabe_dropdowns_notizen.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui03_0_uebergabe_mandantenakte",
+      "pfad": "Scripts/python_runner/check_ui03_0_uebergabe_mandantenakte.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui03_1_anwalts_dreiansicht",
+      "pfad": "Scripts/python_runner/check_ui03_1_anwalts_dreiansicht.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui04_durchstich_sekretariat_anwalt_ruecklauf",
+      "pfad": "Scripts/python_runner/check_ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "check_ui04b_logikpruefung_entscheidung",
+      "pfad": "Scripts/python_runner/check_ui04b_logikpruefung_entscheidung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km10_schnittstellen_lueckenabgleich",
+      "pfad": "Scripts/python_runner/km10_schnittstellen_lueckenabgleich.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km12_originalabbildung",
+      "pfad": "Scripts/python_runner/km12_originalabbildung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km12b_uebergrosse_arbeitsabbildungen",
+      "pfad": "Scripts/python_runner/km12b_uebergrosse_arbeitsabbildungen.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km13_ocr_pipeline",
+      "pfad": "Scripts/python_runner/km13_ocr_pipeline.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km13b_tesseract_sprachpaket_abgleich",
+      "pfad": "Scripts/python_runner/km13b_tesseract_sprachpaket_abgleich.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km14_maschinenformat_fundstellenstruktur",
+      "pfad": "Scripts/python_runner/km14_maschinenformat_fundstellenstruktur.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km15_arbeitsuebersetzung_fundstellenbindung",
+      "pfad": "Scripts/python_runner/km15_arbeitsuebersetzung_fundstellenbindung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km16_sprachrouting_vor_ocr",
+      "pfad": "Scripts/python_runner/km16_sprachrouting_vor_ocr.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km17_sprachrouting_ocr_integration",
+      "pfad": "Scripts/python_runner/km17_sprachrouting_ocr_integration.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km17c_einzelseite_km12b_ocr",
+      "pfad": "Scripts/python_runner/km17c_einzelseite_km12b_ocr.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km18_ocr_ergebnisdiagnose",
+      "pfad": "Scripts/python_runner/km18_ocr_ergebnisdiagnose.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km19_ocr_gesamtkette_synchronisieren",
+      "pfad": "Scripts/python_runner/km19_ocr_gesamtkette_synchronisieren.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km19_ocrbetreuer_korrektur",
+      "pfad": "Scripts/python_runner/km19_ocrbetreuer_korrektur.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km20_pruefung",
+      "pfad": "Scripts/python_runner/km20_pruefung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km20_quellen_fundstellen_konsolidierung",
+      "pfad": "Scripts/python_runner/km20_quellen_fundstellen_konsolidierung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km20b_testdummy_ausschliessen",
+      "pfad": "Scripts/python_runner/km20b_testdummy_ausschliessen.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "km21_translation_env_prepare",
+      "pfad": "Scripts/python_runner/km21_translation_env_prepare.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "post01_0_bestandsaufnahme_posteingang_v1",
+      "pfad": "Scripts/python_runner/post01_0_bestandsaufnahme_posteingang_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "pruefe_ui02_0_bestandsabgleich",
+      "pfad": "Scripts/python_runner/pruefe_ui02_0_bestandsabgleich.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui01_anwaltsansicht_v1",
+      "pfad": "Scripts/python_runner/ui01_anwaltsansicht_v1.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui02_0_bestandsabgleich_tuerschwelle",
+      "pfad": "Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui02_tuerschwelle_bau",
+      "pfad": "Scripts/python_runner/ui02_tuerschwelle_bau.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui02c_freigabe_dropdowns_notizen",
+      "pfad": "Scripts/python_runner/ui02c_freigabe_dropdowns_notizen.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui03_0_uebergabe_mandantenakte",
+      "pfad": "Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui03_1_anwalts_dreiansicht",
+      "pfad": "Scripts/python_runner/ui03_1_anwalts_dreiansicht.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui04_durchstich_sekretariat_anwalt_ruecklauf",
+      "pfad": "Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "ui04b_logikpruefung_entscheidung",
+      "pfad": "Scripts/python_runner/ui04b_logikpruefung_entscheidung.py",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "001_posteingang_intake_schema",
+      "pfad": "Database/Migrations/001_posteingang_intake_schema.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "004_language_context_v2",
+      "pfad": "Database/Migrations/004_language_context_v2.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "005_dokumentsprachprofil_v1",
+      "pfad": "Database/Migrations/005_dokumentsprachprofil_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "006_vorzimmer_kommunikationsparameter_v1",
+      "pfad": "Database/Migrations/006_vorzimmer_kommunikationsparameter_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "007_anwaltvorlage_grundmodul_v1",
+      "pfad": "Database/Migrations/007_anwaltvorlage_grundmodul_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "008_agentenbearbeitung_grundmodul_v1",
+      "pfad": "Database/Migrations/008_agentenbearbeitung_grundmodul_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "009_agent_dokumentart_erkennen_v1",
+      "pfad": "Database/Migrations/009_agent_dokumentart_erkennen_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "010_agent_sprache_uebersetzung_v1",
+      "pfad": "Database/Migrations/010_agent_sprache_uebersetzung_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "011_agent_sachverhaltsbezug_v1",
+      "pfad": "Database/Migrations/011_agent_sachverhaltsbezug_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "011_quellenbetreuer_fachanwaltsraster_v1",
+      "pfad": "Database/Migrations/011_quellenbetreuer_fachanwaltsraster_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "012_agenten_kontext_skill_register_v1",
+      "pfad": "Database/Migrations/012_agenten_kontext_skill_register_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "014_source_adapter_healthcheck_framework_v1",
+      "pfad": "Database/Migrations/014_source_adapter_healthcheck_framework_v1.sql",
+      "status": "produktiv"
+    },
+    {
+      "modul_id": "WINAPP_APP.XAML",
+      "pfad": "Windows_App/App/App.xaml.cs",
+      "status": "entwicklung"
+    },
+    {
+      "modul_id": "WINAPP_ASSEMBLYINFO",
+      "pfad": "Windows_App/App/AssemblyInfo.cs",
+      "status": "entwicklung"
+    },
+    {
+      "modul_id": "WINAPP_MAINWINDOW.XAML",
+      "pfad": "Windows_App/App/MainWindow.xaml.cs",
+      "status": "entwicklung"
+    }
+  ]
+}

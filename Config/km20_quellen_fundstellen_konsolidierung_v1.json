@@ -1,0 +1,31 @@
+{
+  "modul": "KM20 – Quellen- und Fundstellenkonsolidierung",
+  "version": "km20_quellen_fundstellen_konsolidierung_v1",
+  "beschreibung": "Konsolidiert pro Originalseite: OCR-Quelle, TXT/HOCR/TSV-Pfade, KM14-Fundstellen, KM15-Uebersetzungseinheiten, Koordinaten, Unsicherheiten, Rueckbindungskette auf KM12/12b/17/17c/19",
+  "quellen": {
+    "km13_manifest": "Agentensteuerung/13_OCR_Pipeline/07_Manifest/KM13_OCR_MANIFEST.json",
+    "km14_maschinenformat_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/08_Maschinenformat",
+    "km14_fundstellen_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/09_Fundstellen",
+    "km14_textstruktur_dir": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/10_Textstruktur",
+    "km14_unsicherheiten": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur/11_Unsicherheiten/KM14_UNSICHERHEITEN.json",
+    "km15_uebersetzungseinheiten_dir": "Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung/08_Uebersetzungseinheiten",
+    "km15_unsicherheiten_dir": "Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung/09_Unsicherheiten",
+    "km17_manifest": "Agentensteuerung/17_Sprachrouting_OCR/07_Manifest/KM17_OCR_MANIFEST.json",
+    "km17c_manifest": "Agentensteuerung/17c_Einzelne_KM12b_Seite_OCR/07_Manifest/KM17c_MANIFEST.json",
+    "km19_status": "Agentensteuerung/19_OCR_Gesamtkette_Synchronisieren/02_Status/KM19_STATUS.json",
+    "km12_manifest": "Agentensteuerung/12_Originalabbildung_Arbeitsabbildung/07_Manifest/KM12_ABBILDUNG_MANIFEST.json",
+    "km13_ocr_dir": "Agentensteuerung/13_OCR_Pipeline/08_OCR_Ergebnisse",
+    "km17_ocr_dir": "Agentensteuerung/17_Sprachrouting_OCR/08_OCR_Ergebnisse",
+    "km17c_ocr_dir": "Agentensteuerung/17c_Einzelne_KM12b_Seite_OCR/08_OCR_Ergebnisse"
+  },
+  "schreibbereich": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung",
+  "ausgaben": {
+    "konsolidierung_json": "08_Konsolidierung/KM20_KONSOLIDIERUNG.json",
+    "konsolidierung_csv": "08_Konsolidierung/KM20_KONSOLIDIERUNG.csv",
+    "rueckbindung_json": "10_Rueckbindung/KM20_RUECKBINDUNG.json",
+    "master_index_json": "07_Manifest/KM20_MASTER_INDEX.json",
+    "master_index_csv": "07_Manifest/KM20_MASTER_INDEX.csv",
+    "unsicherheiten_json": "09_Unsicherheiten/KM20_UNSICHERHEITEN.json",
+    "statistik_json": "02_Status/KM20_STATUS.json"
+  }
+}

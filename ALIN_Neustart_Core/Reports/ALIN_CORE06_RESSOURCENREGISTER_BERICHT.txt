@@ -1,0 +1,56 @@
+======================================================================
+CORE-06 – Ressourcenregister Befüllung und Abgleich
+======================================================================
+Datum: 2026-05-16T05:35:00+00:00
+Agent: ALIN_Core_Build_Agent
+
+1. Anzahl Ressourcen
+   Vorher: 2
+   Nachher: 36
+   Zuwachs: 34
+
+2. Verteilung nach Typ
+   OCR-Sprachpakete:        5
+   Übersetzungsressourcen:   4
+   Terminologie/Schreibweise: 4
+   Quellen/Adapter:          3
+   Windows-App-Ressourcen:   4
+   UI-Hilfen:                3
+   Sicherheitsressourcen:    3
+   Sonstige:                 10
+
+3. Physische Verfügbarkeit
+   Vorhanden (ja):   17
+   Fehlt (nein):     4
+   Unbekannt:        15
+
+4. Status
+   Freigegeben:  27
+   Testbar:      2
+   Veraltet:     0
+   Gesperrt:     4
+   Fehlt:        3
+
+5. Verknüpfungen
+   Mit Toolregister:   21/36
+   Mit Update-Register: 16/36
+   Mit Lizenzregister: 16/36
+
+6. Gesperrt / Nicht für Module freigegeben
+   Nicht für Modulnutzung freigegeben: 10
+
+7. Fehlende Verknüpfungen (Tool)
+   (keine)
+
+8. Fehlende Verknüpfungen (Update)
+   (keine)
+
+9. Fehlende Verknüpfungen (Lizenz)
+   (keine)
+
+10. Gesamtergebnis
+     Ressourcenregister: OK
+     Altbestand-Ressourcenkarte: OK
+     Nächster sinnvoller Auftrag: CORE-07 – Quellen-/Adapterregister vervollständigen
+
+======================================================================

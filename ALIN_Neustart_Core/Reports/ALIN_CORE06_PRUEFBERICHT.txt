@@ -1,0 +1,3 @@
+CORE-06 Pruefbericht
+Fehler: 0
+Eintraege: 36

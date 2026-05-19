@@ -1,0 +1,86 @@
+{
+  "modul_id": "UI07",
+  "modulname": "Betriebsvorbereitung ohne Produktivfreigabe",
+  "version": "1.0.0",
+  "version_status": "vorbereitung",
+  "betriebsmodus": "vorbereitung",
+  "produktiv_freigegeben": false,
+  "warnung_roter_rahmen": "DIES IST EINE VORBEREITUNG. KEINE PRODUKTIVFREIGABE. KEINE ECHTEN MANDANTENDATEN.",
+  "verzeichnisse": {
+    "logs": "Windows_App/Logs",
+    "daten": "Windows_App/Daten",
+    "backup": "Windows_App/Backup",
+    "temp": "Windows_App/Temp",
+    "pruefseiten": "Windows_App/Pruefseiten"
+  },
+  "healthcheck": {
+    "interval_sekunden": 300,
+    "pruefe_register": [
+      "ALIN_Neustart_Core/01_Register/modulregister.json",
+      "ALIN_Neustart_Core/01_Register/sperrregister.json",
+      "ALIN_Neustart_Core/01_Register/toolregister.json",
+      "ALIN_Neustart_Core/01_Register/ressourcenregister.json"
+    ],
+    "pruefe_schnittstellen": [
+      "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_posteingang_sekretariat.schema.json",
+      "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_weiche_ocr.schema.json"
+    ],
+    "pruefe_statusmodelle": [
+      "ALIN_Neustart_Core/02_Statusmodell/akte_status.json",
+      "ALIN_Neustart_Core/02_Statusmodell/dokument_status.json"
+    ]
+  },
+  "sperrregister_pruefung": {
+    "aktiv": true,
+    "pfad": "ALIN_Neustart_Core/01_Register/sperrregister.json",
+    "kritische_eintraege_blockieren_start": true
+  },
+  "backup": {
+    "hinweis_aktiv": true,
+    "letztes_backup_datum": null,
+    "backup_verzeichnis": "Windows_App/Backup",
+    "empfohlene_haeufigkeit": "taeglich"
+  },
+  "demo_modus": {
+    "max_dokumente": 3,
+    "nur_musterdaten": true,
+    "echte_daten_erlaubt": false,
+    "wasserzeichen": "DEMO – KEINE PRODUKTIVFREIGABE"
+  },
+  "startseite": {
+    "titel": "KI Legal – Betriebsvorbereitung",
+    "untertitel": "Statusprüfung vor Inbetriebnahme (nicht produktiv)",
+    "anzeige_module": [
+      "UI03-1b",
+      "UI03-1c",
+      "UI03-1d",
+      "UI03-1e",
+      "UI03-1f",
+      "UI03-1g",
+      "UI04b",
+      "UI05",
+      "UI06"
+    ]
+  },
+  "register_pruefung": {
+    "pfad": "ALIN_Neustart_Core/01_Register",
+    "erforderlich": [
+      "modulregister.json",
+      "sperrregister.json",
+      "toolregister.json",
+      "ressourcenregister.json",
+      "skillregister.json",
+      "lizenzregister.json"
+    ]
+  },
+  "ausgabe": {
+    "html_pruefstartseite": "Windows_App/Pruefseiten/UI07_Betriebsvorbereitung.html",
+    "json_status": "Windows_App/Logs/UI07_BETRIEBSSTATUS.json",
+    "bericht": "Windows_App/Logs/UI07_BETRIEBSVORBEREITUNG_BERICHT.txt"
+  },
+  "grenzen": {
+    "max_dateigroesse_mb": 50,
+    "max_dokumente_pro_lauf": 10,
+    "timeout_sekunden": 30
+  }
+}

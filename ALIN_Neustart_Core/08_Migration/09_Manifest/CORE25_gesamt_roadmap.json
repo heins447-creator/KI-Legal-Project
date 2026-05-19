@@ -1,0 +1,3394 @@
+{
+  "meta": {
+    "modul_id": "CORE-25",
+    "name": "Programmierbare Gesamt-Roadmap",
+    "version": "1.0.0",
+    "zeitstempel_erstellung": "2026-05-18T05:34:45+0000",
+    "quellen": [
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+      "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+      "Config/core24_entwicklungsmanager_v1.json",
+      "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json"
+    ],
+    "ziel_format": "CORE-24 kompatibel",
+    "anzahl_stufen": 90
+  },
+  "roadmap": {
+    "stufen": [
+      {
+        "stufe_id": "CORE-00",
+        "name": "Masterauftrag und Grundmodell",
+        "beschreibung": "Professionelles Software-Grundmodell, Windows-Grundlage, Toolbestand, Lizenzregister, Updateueberwachung und Kanzlei-Sprachgebrauch anlegen.",
+        "phase": "Vorbereitung",
+        "prioritaet": 0,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [],
+        "eingaben": [
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_GRUNDMODELL.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+          "ALIN_Neustart_Core/Reports/ALIN_NEUSTART_CORE_MASTER_BERICHT.txt"
+        ],
+        "sperren": [],
+        "tests": [
+          "Dokumentation vollstaendig",
+          "Scope-Lock definiert",
+          "Keine zyklischen Abhaengigkeiten im Grundmodell"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-01",
+          "CORE-02",
+          "CORE-03",
+          "CORE-04",
+          "CORE-05",
+          "CORE-13"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Masterdokumentation angelegt",
+          "Grundmodell definiert",
+          "Modulpakete kategorisiert",
+          "Auftragsindex erstellt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-01",
+        "name": "Register befuellen",
+        "beschreibung": "Modulregister, Ressourcenregister, Skillregister, Quellen-/Adapterregister, Toolregister, Lizenzregister, Update-Register initialisieren und mit Altbestand abgleichen.",
+        "phase": "Phase 1: Grundmodell",
+        "prioritaet": 1,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-00"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_GRUNDMODELL.md",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_modulkarte.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_ressourcenkarte.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_toolkarte.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/01_Register/modulregister.json",
+          "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+          "ALIN_Neustart_Core/01_Register/skillregister.json",
+          "ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+          "ALIN_Neustart_Core/01_Register/toolregister.json",
+          "ALIN_Neustart_Core/01_Register/lizenzregister.json",
+          "ALIN_Neustart_Core/01_Register/update_register.json"
+        ],
+        "sperren": [
+          "Kein Altbestand inventarisiert"
+        ],
+        "tests": [
+          "Alle Register-Schemas validieren",
+          "Keine doppelten Eintraege",
+          "Lizenzregister vollstaendig"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-02",
+          "CORE-03",
+          "CORE-04",
+          "CORE-05"
+        ],
+        "blockierte_module": [
+          "CORE-06",
+          "CORE-07",
+          "CORE-08",
+          "CORE-09",
+          "CORE-10"
+        ],
+        "fertigstellungskriterien": [
+          "Alle 7 Register angelegt und befuellt",
+          "Register-Schemas definiert",
+          "Altbestand abgeglichen"
+        ]
+      },
+      {
+        "stufe_id": "CORE-02",
+        "name": "Statusmodell implementieren",
+        "beschreibung": "Status-JSON-Dateien mit Uebergangsregeln, Fehlerklassen definieren, Status-Validierung.",
+        "phase": "Phase 1: Grundmodell",
+        "prioritaet": 2,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/modulregister.json",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_GRUNDMODELL.md"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/02_Statusmodell/akte_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/anwalt_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/dokument_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/eingang_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/ruecklauf_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/weiche_status.json",
+          "ALIN_Neustart_Core/02_Statusmodell/statusmodell.schema.json",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE02_ALTBESTAND_INVENTAR_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE02_PRUEFBERICHT.txt"
+        ],
+        "sperren": [
+          "Register unvollstaendig"
+        ],
+        "tests": [
+          "Statusuebergaenge zulaessig",
+          "Fehlerklassen abgedeckt",
+          "Schema-Validierung bestanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-03",
+          "CORE-04",
+          "CORE-05",
+          "CORE-06"
+        ],
+        "blockierte_module": [
+          "CORE-07",
+          "CORE-08",
+          "CORE-09",
+          "CORE-10"
+        ],
+        "fertigstellungskriterien": [
+          "6 Statusmodelle definiert",
+          "Uebergangsregeln dokumentiert",
+          "Schema validiert",
+          "Pruefbericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-03",
+        "name": "Schnittstellenvertraege finalisieren",
+        "beschreibung": "Alle Uebergabe-Schemas pruefen und abstimmen, Pflichtfelder validieren, Beispiel-Objekte erstellen.",
+        "phase": "Phase 1: Grundmodell",
+        "prioritaet": 3,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01",
+          "CORE-02"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/02_Statusmodell/statusmodell.schema.json",
+          "ALIN_Neustart_Core/01_Register/modulregister.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/03_Schnittstellen/ruecklauf_anwalt_sekretariat.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_ocr_an_akte.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_ocr_an_anwalt.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_posteingang_sekretariat.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_sekretariat_weiche.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_weiche_anwalt.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_weiche_ocr.schema.json"
+        ],
+        "sperren": [
+          "Statusmodell unvollstaendig",
+          "Register nicht befuellt"
+        ],
+        "tests": [
+          "Alle Schemas validieren",
+          "Pflichtfelder definiert",
+          "Beispiel-Objekte vorhanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-04",
+          "CORE-05",
+          "CORE-06",
+          "CORE-07"
+        ],
+        "blockierte_module": [
+          "CORE-08",
+          "CORE-09",
+          "CORE-10"
+        ],
+        "fertigstellungskriterien": [
+          "7 Schnittstellen-Schemas definiert",
+          "Pflichtfelder validiert",
+          "Beispiel-Objekte erstellt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-04",
+        "name": "Healthcheck implementieren",
+        "beschreibung": "Systemstart-Healthcheck als Python-Runner, Pruefung aller Bestandteile, Berichterstellung.",
+        "phase": "Phase 1: Grundmodell",
+        "prioritaet": 4,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01",
+          "CORE-02",
+          "CORE-03"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/",
+          "ALIN_Neustart_Core/02_Statusmodell/",
+          "ALIN_Neustart_Core/03_Schnittstellen/",
+          "Config/core21_arbeitsindex_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/04_Healthcheck/healthcheck_regeln.json",
+          "ALIN_Neustart_Core/04_Healthcheck/healthcheck_statuswerte.json",
+          "ALIN_Neustart_Core/04_Healthcheck/systemstart_healthcheck.schema.json",
+          "ALIN_Neustart_Core/04_Healthcheck/review_listen.json",
+          "ALIN_Neustart_Core/04_Healthcheck/healthcheck_bericht_template.txt"
+        ],
+        "sperren": [
+          "Register nicht befuellt",
+          "Statusmodell fehlt",
+          "Schnittstellen unvollstaendig"
+        ],
+        "tests": [
+          "Healthcheck-Regeln vollstaendig",
+          "Statuswerte abgedeckt",
+          "Review-Listen definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-05",
+          "CORE-06",
+          "CORE-11"
+        ],
+        "blockierte_module": [
+          "CORE-07",
+          "CORE-08",
+          "CORE-09",
+          "CORE-10"
+        ],
+        "fertigstellungskriterien": [
+          "Healthcheck-Regeln definiert",
+          "Statuswerte katalogisiert",
+          "Berichtstemplate erstellt",
+          "Review-Listen angelegt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-05",
+        "name": "Resolver implementieren",
+        "beschreibung": "Aktenprofil-Resolver, Ressourcen-Resolver, Workflow-Resolver, Tool-Resolver, Quellen-Resolver.",
+        "phase": "Phase 1: Grundmodell",
+        "prioritaet": 5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01",
+          "CORE-02",
+          "CORE-03",
+          "CORE-04"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/",
+          "ALIN_Neustart_Core/04_Healthcheck/healthcheck_regeln.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/05_Resolver/aktenprofil_resolver.schema.json",
+          "ALIN_Neustart_Core/05_Resolver/ressourcen_resolver.schema.json",
+          "ALIN_Neustart_Core/05_Resolver/workflow_resolver.schema.json",
+          "ALIN_Neustart_Core/05_Resolver/tool_resolver.schema.json",
+          "ALIN_Neustart_Core/05_Resolver/quellen_resolver.schema.json"
+        ],
+        "sperren": [
+          "Healthcheck nicht implementiert",
+          "Register unvollstaendig"
+        ],
+        "tests": [
+          "Resolver-Schemas validieren",
+          "Alle Resolver-Typen abgedeckt",
+          "Fehlerfaelle definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-06",
+          "CORE-11",
+          "CORE-12"
+        ],
+        "blockierte_module": [
+          "CORE-07",
+          "CORE-08",
+          "CORE-09",
+          "CORE-10"
+        ],
+        "fertigstellungskriterien": [
+          "5 Resolver-Schemas definiert",
+          "Validierung erfolgreich",
+          "Fehlerfaelle dokumentiert"
+        ]
+      },
+      {
+        "stufe_id": "CORE-06",
+        "name": "Altbestand inventarisieren",
+        "beschreibung": "Modulkarte, Ressourcenkarte, Schnittstellenkarte, Luecken identifizieren, Toolkarte, Lizenzhinweise sammeln.",
+        "phase": "Phase 2: Altbestand",
+        "prioritaet": 6,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01",
+          "CORE-02",
+          "CORE-05"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/modulregister.json",
+          "ALIN_Neustart_Core/01_Register/ressourcenregister.json",
+          "ALIN_Neustart_Core/01_Register/toolregister.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_modulkarte.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_ressourcenkarte.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_schnittstellen.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_luecken.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_toolkarte.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_lizenzhinweise.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json",
+          "ALIN_Neustart_Core/Reports/CORE13_ALTBESTAND_INVENTUR_BERICHT.txt"
+        ],
+        "sperren": [
+          "Register nicht befuellt",
+          "Resolver fehlt"
+        ],
+        "tests": [
+          "Alle Altbestand-Karten erstellt",
+          "Luecken identifiziert",
+          "Inventur-Bericht vorhanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-07",
+          "CORE-08",
+          "CORE-09",
+          "CORE-10",
+          "CORE-10a"
+        ],
+        "blockierte_module": [
+          "CORE-11",
+          "CORE-12"
+        ],
+        "fertigstellungskriterien": [
+          "6 Altbestand-Karten angelegt",
+          "Luecken dokumentiert",
+          "Inventur-Bericht erstellt",
+          "CSV-Exporte vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-07",
+        "name": "Posteingang anbinden",
+        "beschreibung": "Posteingang als Modul im Modulregister eintragen, Schnittstelle Posteingang -> Sekretariat definieren, Statusuebergaenge abbilden.",
+        "phase": "Phase 2: Altbestand",
+        "prioritaet": 7,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-03",
+          "CORE-06"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_posteingang_sekretariat.schema.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/altbestand_modulkarte.json",
+          "Config/posteingang_aktenmaterial_agentenabgrenzung_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json (aktualisiert)",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE07_QUELLEN_ADAPTERREGISTER_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE07_PRUEFBERICHT.txt"
+        ],
+        "sperren": [
+          "Schnittstellen nicht finalisiert",
+          "Altbestand nicht inventarisiert"
+        ],
+        "tests": [
+          "Posteingang im Modulregister eingetragen",
+          "Schnittstelle definiert",
+          "Statusuebergaenge abgebildet"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-08",
+          "CORE-09",
+          "CORE-10",
+          "UI08"
+        ],
+        "blockierte_module": [
+          "CORE-11",
+          "CORE-16"
+        ],
+        "fertigstellungskriterien": [
+          "Posteingang als Modul registriert",
+          "Schnittstelle dokumentiert",
+          "Pruefbericht bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-08",
+        "name": "OCR-Strecke anbinden",
+        "beschreibung": "KM12-KM21 als Modulpaket eintragen, Schnittstelle Weiche -> OCR definieren, Schnittstelle OCR -> Akte definieren.",
+        "phase": "Phase 2: Altbestand",
+        "prioritaet": 8,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-06",
+          "CORE-07"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_weiche_ocr.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_ocr_an_akte.schema.json",
+          "Config/ocr_pipeline_v1.json",
+          "Config/km12b_uebergrosse_arbeitsabbildungen_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORE08_SKILLREGISTER_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE08_PRUEFBERICHT.txt"
+        ],
+        "sperren": [
+          "Posteingang nicht angebunden",
+          "OCR-Pipeline nicht konfiguriert"
+        ],
+        "tests": [
+          "KM12-KM21 im Modulregister",
+          "OCR-Schnittstellen definiert",
+          "Skillregister aktualisiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-09",
+          "CORE-10",
+          "KM12",
+          "KM13",
+          "UI03_1b"
+        ],
+        "blockierte_module": [
+          "CORE-11"
+        ],
+        "fertigstellungskriterien": [
+          "OCR-Modulpaket eingetragen",
+          "Schnittstellen verifiziert",
+          "Skillregister-Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-09",
+        "name": "UI anbinden",
+        "beschreibung": "UI01-UI04 als Modulpaket eintragen, Schnittstelle Weiche -> Anwalt definieren, Schnittstelle Ruecklauf definieren.",
+        "phase": "Phase 2: Altbestand",
+        "prioritaet": 9,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-06",
+          "CORE-07",
+          "CORE-08"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_weiche_anwalt.schema.json",
+          "ALIN_Neustart_Core/03_Schnittstellen/ruecklauf_anwalt_sekretariat.schema.json",
+          "Config/ui01_anwaltsansicht_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORE09_MODULREGISTER_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE09_PRUEFBERICHT.txt"
+        ],
+        "sperren": [
+          "OCR-Strecke nicht angebunden",
+          "Posteingang nicht angebunden"
+        ],
+        "tests": [
+          "UI01-UI04 im Modulregister",
+          "Anwaltsschnittstelle definiert",
+          "Ruecklauf-Schnittstelle definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-10",
+          "CORE-10a",
+          "UI01",
+          "UI02",
+          "UI03",
+          "UI04"
+        ],
+        "blockierte_module": [
+          "CORE-11"
+        ],
+        "fertigstellungskriterien": [
+          "UI-Modulpaket eingetragen",
+          "Schnittstellen dokumentiert",
+          "Modulregister-Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10",
+        "name": "Quellen und Skills anbinden",
+        "beschreibung": "Quellenbetreuer, Agenten, Skills eintragen, Adapter-Healthchecks definieren, Offline-Fallbacks dokumentieren.",
+        "phase": "Phase 2: Altbestand",
+        "prioritaet": 10,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-01",
+          "CORE-06",
+          "CORE-09"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/01_Register/quellen_adapter_register.json",
+          "ALIN_Neustart_Core/01_Register/skillregister.json",
+          "Config/agentenbearbeitung_grundmodul_v1.json",
+          "Config/source_adapter_policy_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORE10_KONSISTENZ_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE10_PRUEFBERICHT.txt"
+        ],
+        "sperren": [
+          "UI nicht angebunden",
+          "Quellenregister leer"
+        ],
+        "tests": [
+          "Quellenbetreuer eingetragen",
+          "Skills registriert",
+          "Konsistenzpruefung bestanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-10a",
+          "CORE-10b",
+          "CORE-10c",
+          "CORE-10d",
+          "CORE-10e",
+          "CORE-10f",
+          "CORE-10g",
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Quellen und Skills eingetragen",
+          "Adapter-Healthchecks definiert",
+          "Offline-Fallbacks dokumentiert",
+          "Konsistenz-Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10a",
+        "name": "Findings Priorisierung und Reparaturplan",
+        "beschreibung": "Teilschritt von CORE-10: Findings Priorisierung und Reparaturplan",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.1,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10A_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10A_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10A_FINDINGS_PRIORISIERU_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10a bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10a Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10b",
+        "name": "Ressourcenluecken Klaerung",
+        "beschreibung": "Teilschritt von CORE-10: Ressourcenluecken Klaerung",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.2,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10a"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10B_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10B_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10B_RESSOURCENLUECKEN_KL_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10b bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10b Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10c",
+        "name": "SQL Modulnamen bereinigen",
+        "beschreibung": "Teilschritt von CORE-10: SQL Modulnamen bereinigen",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.3,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10b"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10C_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10C_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10C_SQL_MODULNAMEN_BEREI_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10c bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10c Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10d",
+        "name": "Schnittstellenbereiche nachtragen",
+        "beschreibung": "Teilschritt von CORE-10: Schnittstellenbereiche nachtragen",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.4,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10c"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10D_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10D_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10D_SCHNITTSTELLENBEREIC_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10d bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10d Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10e",
+        "name": "UI01 Abhaengigkeit Klaerung",
+        "beschreibung": "Teilschritt von CORE-10: UI01 Abhaengigkeit Klaerung",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10d"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10E_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10E_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10E_UI01_ABHAENGIGKEIT_K_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10e bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10e Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10f",
+        "name": "Platzhalter verfeinern",
+        "beschreibung": "Teilschritt von CORE-10: Platzhalter verfeinern",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.6,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10e"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10F_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10F_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10F_PLATZHALTER_VERFEINE_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10f bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "CORE-10f Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-10g",
+        "name": "Reviewlisten dokumentieren",
+        "beschreibung": "Teilschritt von CORE-10: Reviewlisten dokumentieren",
+        "phase": "Phase 2: Altbestand (Details)",
+        "prioritaet": 10.7,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10f"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10G_PRUEFBERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10G_PRUEFBERICHT.txt",
+          "ALIN_Neustart_Core/Reports/ALIN_CORECORE10G_REVIEWLISTEN_DOKUMEN_BERICHT.txt"
+        ],
+        "sperren": [
+          "Vorgaenger nicht abgeschlossen"
+        ],
+        "tests": [
+          "Pruefbericht CORE-10g bestanden",
+          "Keine offenen Findings"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-11"
+        ],
+        "blockierte_module": [
+          "CORE-11"
+        ],
+        "fertigstellungskriterien": [
+          "CORE-10g Bericht erstellt",
+          "Pruefung bestanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-11",
+        "name": "Windows-App-Architektur finalisieren",
+        "beschreibung": "Entscheidung WinUI 3 vs. WebView2 vs. WPF, Projektstruktur anlegen, Build-Prozess definieren.",
+        "phase": "Phase 3: Windows-App",
+        "prioritaet": 11,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-05",
+          "CORE-10g"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
+          "Windows_App/App/KI_Legal_WindowsApp.csproj"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_APP_ARCHITEKTUR_V1.md",
+          "Windows_App/App/App.xaml",
+          "Windows_App/App/MainWindow.xaml",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE11_ABNAHME_BERICHT.txt"
+        ],
+        "sperren": [
+          "Resolver nicht implementiert",
+          "Altbestand nicht konsistent"
+        ],
+        "tests": [
+          "Architekturentscheidung dokumentiert",
+          "Projektstruktur angelegt",
+          "Build-Prozess definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-12",
+          "CORE-13",
+          "CORE-14",
+          "CORE-15"
+        ],
+        "blockierte_module": [
+          "CORE-16",
+          "CORE-17",
+          "CORE-18"
+        ],
+        "fertigstellungskriterien": [
+          "Architektur dokumentiert",
+          "Projekt kompilierbar",
+          "Build-Skript vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-12",
+        "name": "UI-Grundlagen implementieren",
+        "beschreibung": "Hauptfenster, Dreiansicht (Original / OCR / Uebersetzung), Sekretariatsansicht, Anwaltsansicht.",
+        "phase": "Phase 3: Windows-App",
+        "prioritaet": 12,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-11"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_UI_GRUNDSAETZE_V1.md",
+          "ALIN_Neustart_Core/03_Schnittstellen/uebergabe_ocr_an_anwalt.schema.json",
+          "Config/ui03_1_anwalts_dreiansicht_v1.json"
+        ],
+        "ausgaben": [
+          "Windows_App/App/MainWindow.xaml.cs",
+          "Windows_App/App/App.xaml.cs",
+          "Windows_App/Scripts/Build_App.ps1",
+          "Windows_App/Scripts/Start_App.ps1",
+          "ALIN_Neustart_Core/Reports/ALIN_CORE11_ABNAHME_BERICHT.txt"
+        ],
+        "sperren": [
+          "Architektur nicht finalisiert"
+        ],
+        "tests": [
+          "MainWindow kompilierbar",
+          "Dreiansicht definiert",
+          "Start-Skript funktioniert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-13",
+          "CORE-15",
+          "UI03_1"
+        ],
+        "blockierte_module": [
+          "CORE-14"
+        ],
+        "fertigstellungskriterien": [
+          "UI-Grundlagen implementiert",
+          "Build erfolgreich",
+          "Start-Skript getestet"
+        ]
+      },
+      {
+        "stufe_id": "CORE-13",
+        "name": "Altbestand inventarisiert und inventur",
+        "beschreibung": "Altbestand-Inventur, Dublettenpruefung, Klassifikation, Sperrhinweise.",
+        "phase": "Phase 3: Windows-App",
+        "prioritaet": 13,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-06",
+          "CORE-11"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/",
+          "Config/core12_backup_rollback_konzept_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.csv",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_dubletten.csv",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_klassifikation.csv",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_sperrhinweise.csv",
+          "ALIN_Neustart_Core/Reports/CORE13_ALTBESTAND_INVENTUR_BERICHT.txt"
+        ],
+        "sperren": [
+          "Altbestand nicht inventarisiert",
+          "Backup-Konzept fehlt"
+        ],
+        "tests": [
+          "Inventur vollstaendig",
+          "Dubletten identifiziert",
+          "Sperrhinweise erfasst"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-14",
+          "CORE-15",
+          "CORE-16"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Inventur-JSON und CSVs erstellt",
+          "Dubletten-Report vorhanden",
+          "Sperrhinweise dokumentiert"
+        ]
+      },
+      {
+        "stufe_id": "CORE-14",
+        "name": "CORE13-Auswertung und Sperrplan",
+        "beschreibung": "Auswertung der Altbestand-Inventur, Reste-Archiv-Sperrplan, Umbau-Bericht.",
+        "phase": "Phase 3: Windows-App",
+        "prioritaet": 14,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-13"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_sperrhinweise.csv",
+          "Config/core21_arbeitsindex_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/CORE14_AUSWERTUNG_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE14_20_AUTOMANAGER_BLOCKIERT_DURCH_AGENTENFREIGABE.txt"
+        ],
+        "sperren": [
+          "Inventur nicht abgeschlossen"
+        ],
+        "tests": [
+          "Auswertung vollstaendig",
+          "Sperrplan definiert",
+          "Automaneger-Regeln geprueft"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-15",
+          "CORE-16",
+          "CORE-19"
+        ],
+        "blockierte_module": [
+          "CORE-17",
+          "CORE-18"
+        ],
+        "fertigstellungskriterien": [
+          "Auswertungsbericht erstellt",
+          "Sperrplan dokumentiert",
+          "Automaneger-Freigabe geprueft"
+        ]
+      },
+      {
+        "stufe_id": "CORE-15",
+        "name": "Migrationsplan und kopierende Migration",
+        "beschreibung": "Migrationsplan erstellen, Dry-Run, kopierende Migration durchfuehren.",
+        "phase": "Phase 3: Windows-App",
+        "prioritaet": 15,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-14"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/Reports/CORE14_AUSWERTUNG_BERICHT.txt",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/",
+          "Config/core21_arbeitsindex_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/CORE15_MIGRATIONSPLAN_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE16_DRY_RUN_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE17_KOPIERENDE_MIGRATION_BERICHT.txt",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE17_kopierte_dateien_manifest.json"
+        ],
+        "sperren": [
+          "Auswertung nicht abgeschlossen",
+          "Sperrplan nicht freigegeben"
+        ],
+        "tests": [
+          "Migrationsplan validiert",
+          "Dry-Run erfolgreich",
+          "Kopierte Dateien manifestiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-16",
+          "CORE-17",
+          "CORE-18"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Migrationsplan dokumentiert",
+          "Dry-Report vorhanden",
+          "Kopiermigrations-Bericht vorhanden",
+          "Manifest der kopierten Dateien erstellt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-16",
+        "name": "Neustruktur-Validierung und Reste-Archiv",
+        "beschreibung": "Neustruktur validieren, Reste-Archiv-Sperrplan umsetzen, Umbau-Bericht.",
+        "phase": "Phase 4: Test und Abnahme",
+        "prioritaet": 16,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-15"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE17_kopierte_dateien_manifest.json",
+          "ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_sperrhinweise.csv"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/CORE18_NEUSTRUKTUR_VALIDIERUNG_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE19_RESTE_ARCHIV_SPERRPLAN_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE20_MASTER_UMBAU_BERICHT.txt"
+        ],
+        "sperren": [
+          "Migration nicht abgeschlossen"
+        ],
+        "tests": [
+          "Neustruktur validiert",
+          "Reste-Archiv gesperrt",
+          "Master-Umbau-Bericht vorhanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-17",
+          "CORE-18",
+          "CORE-19",
+          "CORE-20"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Validierungsbericht erstellt",
+          "Sperrplan umgesetzt",
+          "Master-Umbau dokumentiert"
+        ]
+      },
+      {
+        "stufe_id": "CORE-17",
+        "name": "Arbeitsindex und Agenten-Einstieg",
+        "beschreibung": "Arbeitsindex erstellen, Agentenregeln definieren, Agenten-Einstieg dokumentieren.",
+        "phase": "Phase 4: Test und Abnahme",
+        "prioritaet": 17,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-16"
+        ],
+        "eingaben": [
+          "Config/core21_arbeitsindex_v1.json",
+          "Config/core22_agentenregeln_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+        ],
+        "ausgaben": [
+          "Config/core21_arbeitsindex_v1.json",
+          "Config/core22_agentenregeln_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+          "ALIN_Neustart_Core/Reports/CORE21_ARBEITSINDEX_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE22_AGENTEN_EINSTIEG_BERICHT.txt"
+        ],
+        "sperren": [
+          "Validierung nicht abgeschlossen",
+          "Agentenfreigabe nicht klar"
+        ],
+        "tests": [
+          "Arbeitsindex vollstaendig",
+          "Agentenregeln validiert",
+          "Agenten-Einstieg dokumentiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-18",
+          "CORE-19",
+          "CORE-20",
+          "CORE-21"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Arbeitsindex-Bericht vorhanden",
+          "Agentenregeln manifestiert",
+          "Einstiegs-Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-18",
+        "name": "Projekt-Dashboard",
+        "beschreibung": "Projekt-Dashboard erstellen, HTML- und JSON-Dashboard, Statusvisualisierung.",
+        "phase": "Phase 4: Test und Abnahme",
+        "prioritaet": 18,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-17"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/Reports/CORE21_ARBEITSINDEX_BERICHT.txt",
+          "Config/core23_dashboard_v1.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.html",
+          "ALIN_Neustart_Core/Reports/CORE23_PROJEKT_DASHBOARD_BERICHT.txt"
+        ],
+        "sperren": [
+          "Arbeitsindex nicht erstellt"
+        ],
+        "tests": [
+          "Dashboard-JSON validiert",
+          "Dashboard-HTML renderbar",
+          "Status korrekt visualisiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-19",
+          "CORE-20",
+          "CORE-21",
+          "CORE-24"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Dashboard-JSON erstellt",
+          "Dashboard-HTML erstellt",
+          "Dashboard-Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-19",
+        "name": "Rechte und Rollen",
+        "beschreibung": "Rollenmodell implementieren, Berechtigungen pruefen, Freigaberegeln definieren.",
+        "phase": "Phase 4: Test und Abnahme",
+        "prioritaet": 19,
+        "status": "offen",
+        "abhaengigkeiten": [
+          "CORE-17",
+          "CORE-18"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+          "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+          "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/18_Rechte_Rollen/ROLLENMODELL.md",
+          "ALIN_Neustart_Core/18_Rechte_Rollen/FREIGABEREGELN.md",
+          "ALIN_Neustart_Core/18_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+        ],
+        "sperren": [
+          "Dashboard nicht fertig",
+          "Rollenmodell unvollstaendig"
+        ],
+        "tests": [
+          "Rollenmodell validiert",
+          "Berechtigungs-Schema geprueft",
+          "Freigaberegeln definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-20",
+          "CORE-24"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Rollenmodell dokumentiert",
+          "Berechtigungs-Schema validiert",
+          "Freigaberegeln festgelegt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-20",
+        "name": "Datenschutz und Mandatsgeheimnis",
+        "beschreibung": "Datenschutz-Markierungen umsetzen, Mandatsgeheimnis-Regeln pruefen, Exportregeln definieren.",
+        "phase": "Phase 4: Test und Abnahme",
+        "prioritaet": 20,
+        "status": "offen",
+        "abhaengigkeiten": [
+          "CORE-19"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/MANDATSGEHEIMNIS_REGELN.md",
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/EXPORTREGELN.md",
+          "ALIN_Neustart_Core/20_Datenschutz_Mandatsgeheimnis/DATENSCHUTZ_MARKIERUNGEN.schema.json"
+        ],
+        "sperren": [
+          "Rechte und Rollen nicht definiert"
+        ],
+        "tests": [
+          "Datenschutz-Markierungen validiert",
+          "Mandatsgeheimnis-Regeln geprueft",
+          "Exportregeln definiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-24",
+          "CORE-25"
+        ],
+        "blockierte_module": [
+          "CORE-21"
+        ],
+        "fertigstellungskriterien": [
+          "Datenschutz-Schema validiert",
+          "Mandatsgeheimnis-Regeln dokumentiert",
+          "Exportregeln festgelegt"
+        ]
+      },
+      {
+        "stufe_id": "CORE-21",
+        "name": "Arbeitsindex und Agentenregeln",
+        "beschreibung": "Arbeitsindex vollstaendig, Agentenregeln finalisiert, Agentenfreigabe klar gestellt.",
+        "phase": "Phase 5: Autonomer Betrieb",
+        "prioritaet": 21,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-17",
+          "CORE-18"
+        ],
+        "eingaben": [
+          "Config/core21_arbeitsindex_v1.json",
+          "Config/core22_agentenregeln_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+        ],
+        "ausgaben": [
+          "Config/core21_arbeitsindex_v1.json",
+          "Config/core22_agentenregeln_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+          "ALIN_Neustart_Core/Reports/CORE21_ARBEITSINDEX_BERICHT.txt",
+          "ALIN_Neustart_Core/Reports/CORE22_AGENTEN_EINSTIEG_BERICHT.txt"
+        ],
+        "sperren": [
+          "Agentenfreigabe unklar"
+        ],
+        "tests": [
+          "Arbeitsindex vollstaendig",
+          "Agentenregeln validiert",
+          "Freigabe klar gestellt"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-22",
+          "CORE-23",
+          "CORE-24",
+          "CORE-25"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Arbeitsindex manifestiert",
+          "Agentenregeln manifestiert",
+          "Berichte vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-22",
+        "name": "Agenten-Einstieg",
+        "beschreibung": "Agenten-Einstieg dokumentieren, erste autonome Auftraege definieren, Regelwerk manifestieren.",
+        "phase": "Phase 5: Autonomer Betrieb",
+        "prioritaet": 22,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-21"
+        ],
+        "eingaben": [
+          "Config/core22_agentenregeln_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+          "ALIN_Neustart_Core/Reports/CORE22_AGENTEN_EINSTIEG_BERICHT.txt"
+        ],
+        "sperren": [
+          "Agentenregeln nicht final"
+        ],
+        "tests": [
+          "Agentenregeln validiert",
+          "Freigabe manifestiert",
+          "Einstieg dokumentiert"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-23",
+          "CORE-24",
+          "CORE-25"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Agentenregeln manifestiert",
+          "Einstiegs-Bericht vorhanden",
+          "Freigabe klar"
+        ]
+      },
+      {
+        "stufe_id": "CORE-23",
+        "name": "Projekt-Dashboard",
+        "beschreibung": "Projekt-Dashboard als zentrale Statusuebersicht, HTML- und JSON-Variante.",
+        "phase": "Phase 5: Autonomer Betrieb",
+        "prioritaet": 23,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-22"
+        ],
+        "eingaben": [
+          "Config/core23_dashboard_v1.json",
+          "ALIN_Neustart_Core/Reports/CORE21_ARBEITSINDEX_BERICHT.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.html",
+          "ALIN_Neustart_Core/Reports/CORE23_PROJEKT_DASHBOARD_BERICHT.txt"
+        ],
+        "sperren": [
+          "Agenten-Einstieg nicht dokumentiert"
+        ],
+        "tests": [
+          "Dashboard-JSON validiert",
+          "Dashboard-HTML renderbar"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-24",
+          "CORE-25"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Dashboard-JSON erstellt",
+          "Dashboard-HTML erstellt",
+          "Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-24",
+        "name": "Autonomer Entwicklungsmanager",
+        "beschreibung": "Auftragsqueue, Selbstreparatur, Queue-Verwaltung, autonome Auftragsableitung.",
+        "phase": "Phase 5: Autonomer Betrieb",
+        "prioritaet": 24,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-21",
+          "CORE-22",
+          "CORE-23"
+        ],
+        "eingaben": [
+          "Config/core24_entwicklungsmanager_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_reparatur_log.json",
+          "ALIN_Neustart_Core/Reports/CORE24_ENTWICKLUNGSMANAGER_BERICHT.txt",
+          "Scripts/python_runner/core24_entwicklungsmanager.py"
+        ],
+        "sperren": [
+          "Dashboard nicht fertig",
+          "Agentenfreigabe nicht klar"
+        ],
+        "tests": [
+          "Queue-JSON validiert",
+          "Reparatur-Log funktioniert",
+          "Autonome Ableitung getestet"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-25",
+          "CORE-26"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Entwicklungsmanager laeuft",
+          "Queue erstellt",
+          "Reparatur-Log funktioniert",
+          "Bericht vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-25",
+        "name": "Programmierbare Gesamt-Roadmap",
+        "beschreibung": "Fachliches Gesamtkonzept wird in maschinenlesbare Roadmap fuer CORE-24 zerlegt.",
+        "phase": "Phase 5: Autonomer Betrieb",
+        "prioritaet": 25,
+        "status": "in_bearbeitung",
+        "abhaengigkeiten": [
+          "CORE-24"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md",
+          "ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md",
+          "Config/core24_entwicklungsmanager_v1.json",
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+          "ALIN_Neustart_Core/Reports/CORE25_GESAMT_ROADMAP_BERICHT.txt",
+          "Config/core25_roadmap_v1.json",
+          "Scripts/python_runner/core25_gesamt_roadmap.py",
+          "Scripts/python_runner/check_core25_gesamt_roadmap.py",
+          "Scripts/CORE25_GESAMT_ROADMAP_AUTOLAUF.ps1",
+          "Projektplanung/CORE25_GESAMT_ROADMAP.md"
+        ],
+        "sperren": [
+          "CORE-24 nicht abgeschlossen",
+          "Auftragsqueue leer"
+        ],
+        "tests": [
+          "Roadmap-JSON validiert",
+          "Abhaengigkeiten zyklenfrei",
+          "Alle Stufen eindeutige ID",
+          "Pruefdatei bestanden"
+        ],
+        "erlaubte_naechste_module": [
+          "CORE-26",
+          "UI14"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Roadmap-JSON erstellt",
+          "Zyklenfreiheit geprueft",
+          "Bericht vorhanden",
+          "Config erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI01",
+        "name": "Anwaltsansicht",
+        "beschreibung": "UI-Modul: Anwaltsansicht",
+        "phase": "UI-Strecke",
+        "prioritaet": 30,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-09",
+          "CORE-10"
+        ],
+        "eingaben": [
+          "Config/ui01_anwaltsansicht_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui01_anwaltsansicht.py",
+          "Scripts/UI01_ANWALTSANSICHT_AUTOLAUF.ps1",
+          "Projektplanung/UI01_ANWALTSANSICHT_V1.md"
+        ],
+        "sperren": [
+          "CORE-09 nicht abgeschlossen",
+          "CORE-10 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI01 Python-Runner erfolgreich",
+          "UI01 Check-Datei bestanden",
+          "UI01 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI01 erstellt",
+          "Check-Datei UI01 erstellt",
+          "PowerShell-Starter UI01 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI02",
+        "name": "Tuerschwelle und Bestandsabgleich",
+        "beschreibung": "UI-Modul: Tuerschwelle und Bestandsabgleich",
+        "phase": "UI-Strecke",
+        "prioritaet": 31,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI01"
+        ],
+        "eingaben": [
+          "Config/ui02_tuerschwelle_bau_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui02_0_bestandsabgleich_tuerschwelle.py",
+          "Scripts/ui02_tuerschwelle_bau_starter.ps1",
+          "Projektplanung/UI02_0_BESTANDSABGLEICH_DOKUMENTATION.md",
+          "Projektplanung/UI02_TUERSCHWELLENVORLAGE_DOKU.md"
+        ],
+        "sperren": [
+          "UI01 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI02 Python-Runner erfolgreich",
+          "UI02 Check-Datei bestanden",
+          "UI02 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI02 erstellt",
+          "Check-Datei UI02 erstellt",
+          "PowerShell-Starter UI02 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI02c",
+        "name": "Freigabe Dropdowns und Notizen",
+        "beschreibung": "UI-Modul: Freigabe Dropdowns und Notizen",
+        "phase": "UI-Strecke",
+        "prioritaet": 31.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI02"
+        ],
+        "eingaben": [
+          "Config/ui02c_freigabe_dropdowns_notizen_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui02c_freigabe_dropdowns_notizen.py",
+          "Scripts/UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF.ps1",
+          "Projektplanung/UI02c_FREIGABE_DROPDOWNS_NOTIZEN.md"
+        ],
+        "sperren": [
+          "UI02 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI02c Python-Runner erfolgreich",
+          "UI02c Check-Datei bestanden",
+          "UI02c PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI02c erstellt",
+          "Check-Datei UI02c erstellt",
+          "PowerShell-Starter UI02c erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_0",
+        "name": "Uebergabe Mandantenakte",
+        "beschreibung": "UI-Modul: Uebergabe Mandantenakte",
+        "phase": "UI-Strecke",
+        "prioritaet": 32,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI02c"
+        ],
+        "eingaben": [
+          "Config/ui03_1_anwalts_dreiansicht_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_0_uebergabe_mandantenakte.py",
+          "Scripts/UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF.ps1",
+          "Projektplanung/UI03_0_UEBERGABE_MANDANTENAKTE.md"
+        ],
+        "sperren": [
+          "UI02c nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_0 Python-Runner erfolgreich",
+          "UI03_0 Check-Datei bestanden",
+          "UI03_0 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_0 erstellt",
+          "Check-Datei UI03_0 erstellt",
+          "PowerShell-Starter UI03_0 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1",
+        "name": "Anwalts Dreiansicht",
+        "beschreibung": "UI-Modul: Anwalts Dreiansicht",
+        "phase": "UI-Strecke",
+        "prioritaet": 33,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_0"
+        ],
+        "eingaben": [
+          "Config/ui03_1_anwalts_dreiansicht_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1_anwalts_dreiansicht.py",
+          "Scripts/UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1_ANWALTS_DREIANSICHT.md"
+        ],
+        "sperren": [
+          "UI03_0 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1 Python-Runner erfolgreich",
+          "UI03_1 Check-Datei bestanden",
+          "UI03_1 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1 erstellt",
+          "Check-Datei UI03_1 erstellt",
+          "PowerShell-Starter UI03_1 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1b",
+        "name": "OCR Uebersetzungskontrolle",
+        "beschreibung": "UI-Modul: OCR Uebersetzungskontrolle",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.1,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1",
+          "CORE-08"
+        ],
+        "eingaben": [
+          "Config/ui03_1b_ocr_uebersetzungskontrolle_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1b_ocr_uebersetzungskontrolle.py",
+          "Scripts/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1b_OCR_UEBERSETZUNGSKONTROLLE.md"
+        ],
+        "sperren": [
+          "UI03_1 nicht abgeschlossen",
+          "CORE-08 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1b Python-Runner erfolgreich",
+          "UI03_1b Check-Datei bestanden",
+          "UI03_1b PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1b erstellt",
+          "Check-Datei UI03_1b erstellt",
+          "PowerShell-Starter UI03_1b erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1c",
+        "name": "Uebersetzungsarbeitsplatz",
+        "beschreibung": "UI-Modul: Uebersetzungsarbeitsplatz",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.2,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1b"
+        ],
+        "eingaben": [
+          "Config/ui03_1c_uebersetzungsarbeitsplatz_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1c_uebersetzungsarbeitsplatz.py",
+          "Scripts/UI03_1c_UEBERSETZUNGSARBEITSPLATZ_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1c_UEBERSETZUNGSARBEITSPLATZ.md"
+        ],
+        "sperren": [
+          "UI03_1b nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1c Python-Runner erfolgreich",
+          "UI03_1c Check-Datei bestanden",
+          "UI03_1c PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1c erstellt",
+          "Check-Datei UI03_1c erstellt",
+          "PowerShell-Starter UI03_1c erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1d",
+        "name": "OCR Freigabeablauf",
+        "beschreibung": "UI-Modul: OCR Freigabeablauf",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.3,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1c"
+        ],
+        "eingaben": [
+          "Config/ui03_1d_ocr_freigabeablauf_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1d_ocr_freigabeablauf.py",
+          "Scripts/UI03_1d_OCR_FREIGABEABLAUF_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1d_OCR_FREIGABEABLAUF.md"
+        ],
+        "sperren": [
+          "UI03_1c nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1d Python-Runner erfolgreich",
+          "UI03_1d Check-Datei bestanden",
+          "UI03_1d PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1d erstellt",
+          "Check-Datei UI03_1d erstellt",
+          "PowerShell-Starter UI03_1d erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1e",
+        "name": "Uebergabe Freigabe",
+        "beschreibung": "UI-Modul: Uebergabe Freigabe",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.4,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1d"
+        ],
+        "eingaben": [
+          "Config/ui03_1e_uebergabe_freigabe_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1e_uebergabe_freigabe.py",
+          "Scripts/UI03_1e_UEBERGABE_FREIGABE_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1e_UEBERGABE_FREIGABE.md"
+        ],
+        "sperren": [
+          "UI03_1d nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1e Python-Runner erfolgreich",
+          "UI03_1e Check-Datei bestanden",
+          "UI03_1e PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1e erstellt",
+          "Check-Datei UI03_1e erstellt",
+          "PowerShell-Starter UI03_1e erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1f",
+        "name": "Geparkte Auftraege",
+        "beschreibung": "UI-Modul: Geparkte Auftraege",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1e"
+        ],
+        "eingaben": [
+          "Config/ui03_1f_geparkte_auftraege_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1f_geparkte_auftraege.py",
+          "Scripts/UI03_1f_GEPARKTE_AUFTRAEGE_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1f_GEPARKTE_AUFTRAEGE.md"
+        ],
+        "sperren": [
+          "UI03_1e nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1f Python-Runner erfolgreich",
+          "UI03_1f Check-Datei bestanden",
+          "UI03_1f PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1f erstellt",
+          "Check-Datei UI03_1f erstellt",
+          "PowerShell-Starter UI03_1f erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI03_1g",
+        "name": "Gesamtansicht",
+        "beschreibung": "UI-Modul: Gesamtansicht",
+        "phase": "UI-Strecke",
+        "prioritaet": 33.6,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1f"
+        ],
+        "eingaben": [
+          "Config/ui03_1g_gesamtansicht_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui03_1g_gesamtansicht.py",
+          "Scripts/UI03_1g_GESAMTANSICHT_AUTOLAUF.ps1",
+          "Projektplanung/UI03_1g_GESAMTANSICHT.md"
+        ],
+        "sperren": [
+          "UI03_1f nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI03_1g Python-Runner erfolgreich",
+          "UI03_1g Check-Datei bestanden",
+          "UI03_1g PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI03_1g erstellt",
+          "Check-Datei UI03_1g erstellt",
+          "PowerShell-Starter UI03_1g erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI04",
+        "name": "Durchstich Sekretariat-Anwalt-Ruecklauf",
+        "beschreibung": "UI-Modul: Durchstich Sekretariat-Anwalt-Ruecklauf",
+        "phase": "UI-Strecke",
+        "prioritaet": 34,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI03_1g"
+        ],
+        "eingaben": [
+          "Config/ui04_durchstich_sekretariat_anwalt_ruecklauf_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui04_durchstich_sekretariat_anwalt_ruecklauf.py",
+          "Scripts/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF.ps1",
+          "Projektplanung/UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF.md"
+        ],
+        "sperren": [
+          "UI03_1g nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI04 Python-Runner erfolgreich",
+          "UI04 Check-Datei bestanden",
+          "UI04 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI04 erstellt",
+          "Check-Datei UI04 erstellt",
+          "PowerShell-Starter UI04 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI04b",
+        "name": "Logikpruefung Entscheidung",
+        "beschreibung": "UI-Modul: Logikpruefung Entscheidung",
+        "phase": "UI-Strecke",
+        "prioritaet": 34.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI04"
+        ],
+        "eingaben": [
+          "Config/ui04b_logikpruefung_entscheidung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui04b_logikpruefung_entscheidung.py",
+          "Scripts/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF.ps1",
+          "Projektplanung/UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG.md"
+        ],
+        "sperren": [
+          "UI04 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI04b Python-Runner erfolgreich",
+          "UI04b Check-Datei bestanden",
+          "UI04b PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI04b erstellt",
+          "Check-Datei UI04b erstellt",
+          "PowerShell-Starter UI04b erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI05",
+        "name": "Mandantenakte Arbeitszentrale",
+        "beschreibung": "UI-Modul: Mandantenakte Arbeitszentrale",
+        "phase": "UI-Strecke",
+        "prioritaet": 35,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI04b"
+        ],
+        "eingaben": [
+          "Config/ui05_mandantenakte_arbeitszentrale_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui05_mandantenakte_arbeitszentrale.py",
+          "Scripts/UI05_MANDANTENAKTE_ARBEITSZENTRALE_AUTOLAUF.ps1",
+          "Projektplanung/UI05_MANDANTENAKTE_ARBEITSZENTRALE.md"
+        ],
+        "sperren": [
+          "UI04b nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI05 Python-Runner erfolgreich",
+          "UI05 Check-Datei bestanden",
+          "UI05 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI05 erstellt",
+          "Check-Datei UI05 erstellt",
+          "PowerShell-Starter UI05 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI06",
+        "name": "Musterlauf Gesamtkette",
+        "beschreibung": "UI-Modul: Musterlauf Gesamtkette",
+        "phase": "UI-Strecke",
+        "prioritaet": 36,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI05"
+        ],
+        "eingaben": [
+          "Config/ui06_musterlauf_gesamtkette_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui06_musterlauf_gesamtkette.py",
+          "Scripts/UI06_MUSTERLAUF_GESAMTKETTE_AUTOLAUF.ps1",
+          "Projektplanung/UI06_MUSTERLAUF_GESAMTKETTE.md"
+        ],
+        "sperren": [
+          "UI05 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI06 Python-Runner erfolgreich",
+          "UI06 Check-Datei bestanden",
+          "UI06 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI06 erstellt",
+          "Check-Datei UI06 erstellt",
+          "PowerShell-Starter UI06 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI06b",
+        "name": "Fehlerpfad Pruefung",
+        "beschreibung": "UI-Modul: Fehlerpfad Pruefung",
+        "phase": "UI-Strecke",
+        "prioritaet": 36.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI06"
+        ],
+        "eingaben": [
+          "Config/ui06b_fehlerpfad_pruefung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui06b_fehlerpfad_pruefung.py",
+          "Scripts/UI06B_FEHLERPFAD_PRUEFUNG_AUTOLAUF.ps1",
+          "Projektplanung/UI06B_FEHLERPFAD_PRUEFUNG.md"
+        ],
+        "sperren": [
+          "UI06 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI06b Python-Runner erfolgreich",
+          "UI06b Check-Datei bestanden",
+          "UI06b PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI06b erstellt",
+          "Check-Datei UI06b erstellt",
+          "PowerShell-Starter UI06b erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI07",
+        "name": "Betriebsvorbereitung",
+        "beschreibung": "UI-Modul: Betriebsvorbereitung",
+        "phase": "UI-Strecke",
+        "prioritaet": 37,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI06b"
+        ],
+        "eingaben": [
+          "Config/ui07_betriebsvorbereitung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui07_betriebsvorbereitung.py",
+          "Scripts/UI07_BETRIEBSVORBEREITUNG_AUTOLAUF.ps1",
+          "Projektplanung/UI07_BETRIEBSVORBEREITUNG.md"
+        ],
+        "sperren": [
+          "UI06b nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI07 Python-Runner erfolgreich",
+          "UI07 Check-Datei bestanden",
+          "UI07 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI07 erstellt",
+          "Check-Datei UI07 erstellt",
+          "PowerShell-Starter UI07 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI07b",
+        "name": "Gesamtfreeze Demo Betriebsstrecke",
+        "beschreibung": "UI-Modul: Gesamtfreeze Demo Betriebsstrecke",
+        "phase": "UI-Strecke",
+        "prioritaet": 37.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI07"
+        ],
+        "eingaben": [
+          "Config/ui07b_gesamtfreeze_demo_betriebsstrecke_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui07b_gesamtfreeze_demo_betriebsstrecke.py",
+          "Scripts/UI07B_GESAMTFREEZE_DEMO_BETRIEBSSTRECKE_AUTOLAUF.ps1",
+          "Projektplanung/UI07B_GESAMTFREEZE_DEMO_BETRIEBSSTRECKE.md"
+        ],
+        "sperren": [
+          "UI07 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI07b Python-Runner erfolgreich",
+          "UI07b Check-Datei bestanden",
+          "UI07b PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI07b erstellt",
+          "Check-Datei UI07b erstellt",
+          "PowerShell-Starter UI07b erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI08",
+        "name": "Posteingang Importstrecke",
+        "beschreibung": "UI-Modul: Posteingang Importstrecke",
+        "phase": "UI-Strecke",
+        "prioritaet": 38,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-07",
+          "UI07b"
+        ],
+        "eingaben": [
+          "Config/ui08_posteingang_importstrecke_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui08_posteingang_importstrecke.py",
+          "Scripts/UI08_POSTEINGANG_IMPORTSTRECKE_AUTOLAUF.ps1",
+          "Projektplanung/UI08_POSTEINGANG_IMPORTSTRECKE.md"
+        ],
+        "sperren": [
+          "CORE-07 nicht abgeschlossen",
+          "UI07b nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI08 Python-Runner erfolgreich",
+          "UI08 Check-Datei bestanden",
+          "UI08 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI08 erstellt",
+          "Check-Datei UI08 erstellt",
+          "PowerShell-Starter UI08 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI08b",
+        "name": "Fehlerpfad Pruefung Posteingang",
+        "beschreibung": "UI-Modul: Fehlerpfad Pruefung Posteingang",
+        "phase": "UI-Strecke",
+        "prioritaet": 38.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI08"
+        ],
+        "eingaben": [
+          "Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui08b_fehlerpfad_pruefung_posteingang.py",
+          "Scripts/UI08B_FEHLERPFAD_PRUEFUNG_POSTEINGANG_AUTOLAUF.ps1",
+          "Projektplanung/UI08B_FEHLERPFAD_PRUEFUNG_POSTEINGANG.md"
+        ],
+        "sperren": [
+          "UI08 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI08b Python-Runner erfolgreich",
+          "UI08b Check-Datei bestanden",
+          "UI08b PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI08b erstellt",
+          "Check-Datei UI08b erstellt",
+          "PowerShell-Starter UI08b erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI08c",
+        "name": "Fehlerpfad Sanierungsplan Posteingang",
+        "beschreibung": "UI-Modul: Fehlerpfad Sanierungsplan Posteingang",
+        "phase": "UI-Strecke",
+        "prioritaet": 38.6,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI08b"
+        ],
+        "eingaben": [
+          "Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui08c_fehlerpfad_sanierungsplan_posteingang.py",
+          "Scripts/UI08C_FEHLERPFAD_SANIERUNGSPLAN_POSTEINGANG_AUTOLAUF.ps1",
+          "Projektplanung/UI08C_FEHLERPFAD_SANIERUNGSPLAN_POSTEINGANG.md"
+        ],
+        "sperren": [
+          "UI08b nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI08c Python-Runner erfolgreich",
+          "UI08c Check-Datei bestanden",
+          "UI08c PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI08c erstellt",
+          "Check-Datei UI08c erstellt",
+          "PowerShell-Starter UI08c erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI09",
+        "name": "Zentrale Grundschalter Profilfelder",
+        "beschreibung": "UI-Modul: Zentrale Grundschalter Profilfelder",
+        "phase": "UI-Strecke",
+        "prioritaet": 39,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI08c"
+        ],
+        "eingaben": [
+          "Config/ui09_zentrale_grundschalter_profilfelder_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui09_zentrale_grundschalter_profilfelder.py",
+          "Scripts/UI09_ZENTRALE_GRUNDSCHALTER_PROFILFELDER_AUTOLAUF.ps1",
+          "Projektplanung/UI09_ZENTRALE_GRUNDSCHALTER_PROFILFELDER.md"
+        ],
+        "sperren": [
+          "UI08c nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI09 Python-Runner erfolgreich",
+          "UI09 Check-Datei bestanden",
+          "UI09 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI09 erstellt",
+          "Check-Datei UI09 erstellt",
+          "PowerShell-Starter UI09 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI10",
+        "name": "Profil Lesadapter",
+        "beschreibung": "UI-Modul: Profil Lesadapter",
+        "phase": "UI-Strecke",
+        "prioritaet": 40,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI09"
+        ],
+        "eingaben": [
+          "Config/ui10_profil_lesadapter_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui10_profil_lesadapter.py",
+          "Scripts/UI10_PROFIL_LESADAPTER_AUTOLAUF.ps1",
+          "Projektplanung/UI10_PROFIL_LESADAPTER.md"
+        ],
+        "sperren": [
+          "UI09 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI10 Python-Runner erfolgreich",
+          "UI10 Check-Datei bestanden",
+          "UI10 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI10 erstellt",
+          "Check-Datei UI10 erstellt",
+          "PowerShell-Starter UI10 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI11",
+        "name": "Register Lesadapter",
+        "beschreibung": "UI-Modul: Register Lesadapter",
+        "phase": "UI-Strecke",
+        "prioritaet": 41,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI10"
+        ],
+        "eingaben": [
+          "Config/ui11_register_lesadapter_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui11_register_lesadapter.py",
+          "Scripts/UI11_REGISTER_LESADAPTER_AUTOLAUF.ps1",
+          "Projektplanung/UI11_REGISTER_LESADAPTER.md"
+        ],
+        "sperren": [
+          "UI10 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI11 Python-Runner erfolgreich",
+          "UI11 Check-Datei bestanden",
+          "UI11 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI11 erstellt",
+          "Check-Datei UI11 erstellt",
+          "PowerShell-Starter UI11 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI12",
+        "name": "Master Adapter",
+        "beschreibung": "UI-Modul: Master Adapter",
+        "phase": "UI-Strecke",
+        "prioritaet": 42,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI11"
+        ],
+        "eingaben": [
+          "Config/ui12_master_adapter_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui12_master_adapter.py",
+          "Scripts/UI12_MASTER_ADAPTER_AUTOLAUF.ps1",
+          "Projektplanung/UI12_MASTER_ADAPTER.md"
+        ],
+        "sperren": [
+          "UI11 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI12 Python-Runner erfolgreich",
+          "UI12 Check-Datei bestanden",
+          "UI12 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI12 erstellt",
+          "Check-Datei UI12 erstellt",
+          "PowerShell-Starter UI12 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI13",
+        "name": "Abnahme Entscheidungsuebersicht",
+        "beschreibung": "UI-Modul: Abnahme Entscheidungsuebersicht",
+        "phase": "UI-Strecke",
+        "prioritaet": 43,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI12"
+        ],
+        "eingaben": [
+          "Config/ui13_abnahme_entscheidungsuebersicht_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui13_abnahme_entscheidungsuebersicht.py",
+          "Scripts/UI13_ABNAHME_ENTSCHEIDUNGSUEBERSICHT_AUTOLAUF.ps1",
+          "Projektplanung/UI13_ABNAHME_ENTSCHEIDUNGSUEBERSICHT.md"
+        ],
+        "sperren": [
+          "UI12 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI13 Python-Runner erfolgreich",
+          "UI13 Check-Datei bestanden",
+          "UI13 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI13 erstellt",
+          "Check-Datei UI13 erstellt",
+          "PowerShell-Starter UI13 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "UI14",
+        "name": "Ausfuehrungs-Nachlaufzentrale",
+        "beschreibung": "UI-Modul: Ausfuehrungs-Nachlaufzentrale",
+        "phase": "UI-Strecke",
+        "prioritaet": 44,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "UI13",
+          "CORE-25"
+        ],
+        "eingaben": [
+          "Config/ui14_ausfuehrungs_nachlaufzentrale_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/python_runner/ui14_ausfuehrungs_nachlaufzentrale.py",
+          "Scripts/UI14_AUSFUEHRUNGS_NACHLAUFZENTRALE_AUTOLAUF.ps1",
+          "Projektplanung/UI14_AUSFUEHRUNGS_NACHLAUFZENTRALE.md"
+        ],
+        "sperren": [
+          "UI13 nicht abgeschlossen",
+          "CORE-25 nicht abgeschlossen"
+        ],
+        "tests": [
+          "UI14 Python-Runner erfolgreich",
+          "UI14 Check-Datei bestanden",
+          "UI14 PowerShell-Starter funktioniert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Python-Runner UI14 erstellt",
+          "Check-Datei UI14 erstellt",
+          "PowerShell-Starter UI14 erstellt",
+          "Dokumentation erstellt"
+        ]
+      },
+      {
+        "stufe_id": "KM12",
+        "name": "Originalabbildung",
+        "beschreibung": "KM-Modul: Originalabbildung",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 50,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-08"
+        ],
+        "eingaben": [
+          "Config/originalabbildung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM12_Originalabbildung.ps1",
+          "Projektplanung/KM12b_UEBERGROSSE_ARBEITSABBILDUNGEN.md"
+        ],
+        "sperren": [
+          "CORE-08 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM12 Konfiguration validiert",
+          "KM12 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM12 erstellt",
+          "Skripte KM12 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM12b",
+        "name": "Uebergrosse Arbeitsabbildungen",
+        "beschreibung": "KM-Modul: Uebergrosse Arbeitsabbildungen",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 50.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM12"
+        ],
+        "eingaben": [
+          "Config/km12b_uebergrosse_arbeitsabbildungen_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM12b_Uebergrosse_Arbeitsabbildungen.ps1",
+          "Projektplanung/KM12b_UEBERGROSSE_ARBEITSABBILDUNGEN.md"
+        ],
+        "sperren": [
+          "KM12 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM12b Konfiguration validiert",
+          "KM12b Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM12b erstellt",
+          "Skripte KM12b erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM13",
+        "name": "OCR-Pipeline",
+        "beschreibung": "KM-Modul: OCR-Pipeline",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 51,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM12b"
+        ],
+        "eingaben": [
+          "Config/ocr_pipeline_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM13_OCR_Pipeline.ps1",
+          "Projektplanung/KM13b_TESSERACT_SPRACHPAKET_ABGLEICH.md"
+        ],
+        "sperren": [
+          "KM12b nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM13 Konfiguration validiert",
+          "KM13 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM13 erstellt",
+          "Skripte KM13 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM13b",
+        "name": "Tesseract Sprachpaket Abgleich",
+        "beschreibung": "KM-Modul: Tesseract Sprachpaket Abgleich",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 51.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM13"
+        ],
+        "eingaben": [
+          "Config/tesseract_sprachpaket_abgleich_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM13b_Tesseract_Sprachpaket_Abgleich.ps1",
+          "Projektplanung/KM13b_TESSERACT_SPRACHPAKET_ABGLEICH.md"
+        ],
+        "sperren": [
+          "KM13 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM13b Konfiguration validiert",
+          "KM13b Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM13b erstellt",
+          "Skripte KM13b erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM14",
+        "name": "Maschinenformat Fundstellenstruktur",
+        "beschreibung": "KM-Modul: Maschinenformat Fundstellenstruktur",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 52,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM13b"
+        ],
+        "eingaben": [
+          "Config/maschinenformat_fundstellenstruktur_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM14_Maschinenformat_Fundstellenstruktur.ps1",
+          "Projektplanung/KM14_DOKUMENTATION.md"
+        ],
+        "sperren": [
+          "KM13b nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM14 Konfiguration validiert",
+          "KM14 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM14 erstellt",
+          "Skripte KM14 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM15",
+        "name": "Arbeitsuebersetzung Fundstellenbindung",
+        "beschreibung": "KM-Modul: Arbeitsuebersetzung Fundstellenbindung",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 53,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM14"
+        ],
+        "eingaben": [
+          "Config/arbeitsuebersetzung_fundstellenbindung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM15_Arbeitsuebersetzung_Fundstellenbindung.ps1"
+        ],
+        "sperren": [
+          "KM14 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM15 Konfiguration validiert",
+          "KM15 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM15 erstellt",
+          "Skripte KM15 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM16",
+        "name": "Sprachrouting vor OCR",
+        "beschreibung": "KM-Modul: Sprachrouting vor OCR",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 54,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM15"
+        ],
+        "eingaben": [
+          "Config/sprachrouting_vor_ocr_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM16_Sprachrouting_Vor_OCR.ps1",
+          "Projektplanung/KM16_SPRACHROUTING_VOR_OCR.md"
+        ],
+        "sperren": [
+          "KM15 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM16 Konfiguration validiert",
+          "KM16 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM16 erstellt",
+          "Skripte KM16 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM17",
+        "name": "Sprachrouting OCR Integration",
+        "beschreibung": "KM-Modul: Sprachrouting OCR Integration",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 55,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM16"
+        ],
+        "eingaben": [
+          "Config/km17_sprachrouting_ocr_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM17_AUTOLAUF.ps1",
+          "Projektplanung/KM17_SPRACHROUTING_OCR_INTEGRATION.md"
+        ],
+        "sperren": [
+          "KM16 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM17 Konfiguration validiert",
+          "KM17 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM17 erstellt",
+          "Skripte KM17 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM17c",
+        "name": "Einzelseite KM12b OCR",
+        "beschreibung": "KM-Modul: Einzelseite KM12b OCR",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 55.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM17"
+        ],
+        "eingaben": [
+          "Config/km17c_einzelseite_km12b_ocr_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM17c_EINZELSEITE_KM12b_AUTOLAUF.ps1",
+          "Projektplanung/KM17c_EINZELSEITE_KM12b_OCR.md"
+        ],
+        "sperren": [
+          "KM17 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM17c Konfiguration validiert",
+          "KM17c Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM17c erstellt",
+          "Skripte KM17c erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM18",
+        "name": "OCR Ergebnisdiagnose",
+        "beschreibung": "KM-Modul: OCR Ergebnisdiagnose",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 56,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM17c"
+        ],
+        "eingaben": [
+          "Config/km18_ocr_ergebnisdiagnose_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM18_AUTOLAUF.ps1",
+          "Projektplanung/KM18_OCR_ERGEBNISDIAGNOSE.md"
+        ],
+        "sperren": [
+          "KM17c nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM18 Konfiguration validiert",
+          "KM18 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM18 erstellt",
+          "Skripte KM18 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM19",
+        "name": "OCR Gesamtkette synchronisieren",
+        "beschreibung": "KM-Modul: OCR Gesamtkette synchronisieren",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 57,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM18"
+        ],
+        "eingaben": [
+          "Config/km19_ocr_gesamtkette_synchronisieren_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF.ps1",
+          "Projektplanung/KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN.md"
+        ],
+        "sperren": [
+          "KM18 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM19 Konfiguration validiert",
+          "KM19 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM19 erstellt",
+          "Skripte KM19 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM19b",
+        "name": "OCRBetreuer Korrektur",
+        "beschreibung": "KM-Modul: OCRBetreuer Korrektur",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 57.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM19"
+        ],
+        "eingaben": [
+          "Config/km19_ocrbetreuer_korrektur_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM19_OCRBETREUER_KORREKTUR_AUTOLAUF.ps1",
+          "Projektplanung/KM19_OCRBETREUER_KORREKTUR.md"
+        ],
+        "sperren": [
+          "KM19 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM19b Konfiguration validiert",
+          "KM19b Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM19b erstellt",
+          "Skripte KM19b erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM20",
+        "name": "Konsolidierung",
+        "beschreibung": "KM-Modul: Konsolidierung",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 58,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM19b"
+        ],
+        "eingaben": [
+          "Config/km20_quellen_fundstellen_konsolidierung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM20_Konsolidierung.ps1",
+          "Projektplanung/KM20_KONSOLIDIERUNG.md"
+        ],
+        "sperren": [
+          "KM19b nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM20 Konfiguration validiert",
+          "KM20 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM20 erstellt",
+          "Skripte KM20 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM20b",
+        "name": "Bereinigung",
+        "beschreibung": "KM-Modul: Bereinigung",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 58.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM20"
+        ],
+        "eingaben": [
+          "Config/km20b_bereinigung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM20b_Bereinigung.ps1"
+        ],
+        "sperren": [
+          "KM20 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM20b Konfiguration validiert",
+          "KM20b Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM20b erstellt",
+          "Skripte KM20b erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM21",
+        "name": "Translation Environment",
+        "beschreibung": "KM-Modul: Translation Environment",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 59,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM20b"
+        ],
+        "eingaben": [
+          "Config/km21_translation_env_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_KM21_TRANSLATION_ENV.ps1",
+          "Projektplanung/KM21_TRANSLATION_ENV.md"
+        ],
+        "sperren": [
+          "KM20b nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM21 Konfiguration validiert",
+          "KM21 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM21 erstellt",
+          "Skripte KM21 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "KM21b0",
+        "name": "ARGOS Modellbereitstellung",
+        "beschreibung": "KM-Modul: ARGOS Modellbereitstellung",
+        "phase": "OCR- und Uebersetzungsstrecke",
+        "prioritaet": 59.5,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "KM21"
+        ],
+        "eingaben": [
+          "Config/km21b0_argos_modellbereitstellung_v1.json"
+        ],
+        "ausgaben": [
+          "Projektplanung/KM21b0_ARGOS_MODELLBEREITSTELLUNG.md"
+        ],
+        "sperren": [
+          "KM21 nicht abgeschlossen"
+        ],
+        "tests": [
+          "KM21b0 Konfiguration validiert",
+          "KM21b0 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration KM21b0 erstellt",
+          "Skripte KM21b0 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "POST01",
+        "name": "Posteingang Intake",
+        "beschreibung": "Posteingang/Vorzimmer: Posteingang Intake",
+        "phase": "Posteingang und Vorzimmer",
+        "prioritaet": 60,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-07"
+        ],
+        "eingaben": [
+          "Config/alin_posteingang_config.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Posteingang_Pipeline.ps1",
+          "Scripts/Run_Posteingang_Zentrale.ps1"
+        ],
+        "sperren": [
+          "CORE-07 nicht abgeschlossen"
+        ],
+        "tests": [
+          "POST01 Pipeline erfolgreich",
+          "POST01 Endabnahme bestanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Pipeline POST01 laeuft",
+          "Endabnahme POST01 bestanden"
+        ]
+      },
+      {
+        "stufe_id": "POST02",
+        "name": "Posteingang Schlusskontrolle",
+        "beschreibung": "Posteingang/Vorzimmer: Posteingang Schlusskontrolle",
+        "phase": "Posteingang und Vorzimmer",
+        "prioritaet": 61,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "POST01"
+        ],
+        "eingaben": [
+          "Config/posteingang_schlusskontrolle_v2.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Posteingang_Schlusskontrolle.ps1"
+        ],
+        "sperren": [
+          "POST01 nicht abgeschlossen"
+        ],
+        "tests": [
+          "POST02 Pipeline erfolgreich",
+          "POST02 Endabnahme bestanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Pipeline POST02 laeuft",
+          "Endabnahme POST02 bestanden"
+        ]
+      },
+      {
+        "stufe_id": "POST03",
+        "name": "Posteingang Endabnahme",
+        "beschreibung": "Posteingang/Vorzimmer: Posteingang Endabnahme",
+        "phase": "Posteingang und Vorzimmer",
+        "prioritaet": 62,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "POST02"
+        ],
+        "eingaben": [
+          "Config/posteingang_schlusskontrolle_v2.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Posteingang_Menu.ps1",
+          "Scripts/Run_Posteingang_Zentrale.ps1"
+        ],
+        "sperren": [
+          "POST02 nicht abgeschlossen"
+        ],
+        "tests": [
+          "POST03 Pipeline erfolgreich",
+          "POST03 Endabnahme bestanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Pipeline POST03 laeuft",
+          "Endabnahme POST03 bestanden"
+        ]
+      },
+      {
+        "stufe_id": "VZ01",
+        "name": "Vorzimmer Kommunikationsparameter",
+        "beschreibung": "Posteingang/Vorzimmer: Vorzimmer Kommunikationsparameter",
+        "phase": "Posteingang und Vorzimmer",
+        "prioritaet": 63,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "POST03"
+        ],
+        "eingaben": [
+          "Config/vorzimmer_kommunikationsparameter_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Vorzimmer_Kommunikationsparameter.ps1",
+          "Scripts/python_runner/035_vorzimmer_kommunikationsparameter_v1.py"
+        ],
+        "sperren": [
+          "POST03 nicht abgeschlossen"
+        ],
+        "tests": [
+          "VZ01 Pipeline erfolgreich",
+          "VZ01 Endabnahme bestanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Pipeline VZ01 laeuft",
+          "Endabnahme VZ01 bestanden"
+        ]
+      },
+      {
+        "stufe_id": "Q01",
+        "name": "Quellenbetreuer Fachanwaltsraster",
+        "beschreibung": "Quellen/Agenten: Quellenbetreuer Fachanwaltsraster",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 70,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10"
+        ],
+        "eingaben": [
+          "Config/agentenbearbeitung_grundmodul_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Quellenbetreuer_Fachanwaltsraster.ps1",
+          "Projektplanung/Quellen/QUELLENBETREUER_FACHANWALTSRASTER_V1.md"
+        ],
+        "sperren": [
+          "CORE-10 nicht abgeschlossen"
+        ],
+        "tests": [
+          "Q01 Konfiguration validiert",
+          "Q01 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration Q01 erstellt",
+          "Skripte Q01 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "Q02",
+        "name": "Quellenkandidaten EU SE Official Sources",
+        "beschreibung": "Quellen/Agenten: Quellenkandidaten EU SE Official Sources",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 71,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "Q01"
+        ],
+        "eingaben": [
+          "Config/eu_official_ocr_languages_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Quellenkandidaten_EU_SE.ps1",
+          "Projektplanung/Quellen/QUELLENKANDIDATEN_EU_SE_OFFICIAL_SOURCES_V1.md"
+        ],
+        "sperren": [
+          "Q01 nicht abgeschlossen"
+        ],
+        "tests": [
+          "Q02 Konfiguration validiert",
+          "Q02 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration Q02 erstellt",
+          "Skripte Q02 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "Q03",
+        "name": "Source Adapter Healthcheck Framework",
+        "beschreibung": "Quellen/Agenten: Source Adapter Healthcheck Framework",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 72,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "Q02"
+        ],
+        "eingaben": [
+          "Config/source_adapter_policy_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Source_Adapter_Healthcheck_Framework.ps1",
+          "Projektplanung/Quellen/SOURCE_ADAPTER_HEALTHCHECK_FRAMEWORK_V1.md"
+        ],
+        "sperren": [
+          "Q02 nicht abgeschlossen"
+        ],
+        "tests": [
+          "Q03 Konfiguration validiert",
+          "Q03 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration Q03 erstellt",
+          "Skripte Q03 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "AG01",
+        "name": "Agentenbearbeitung Grundmodul",
+        "beschreibung": "Quellen/Agenten: Agentenbearbeitung Grundmodul",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 73,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "CORE-10"
+        ],
+        "eingaben": [
+          "Config/agentenbearbeitung_grundmodul_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Agentenbearbeitung.ps1",
+          "Scripts/python_runner/037_posteingang_endabnahme_v3.py"
+        ],
+        "sperren": [
+          "CORE-10 nicht abgeschlossen"
+        ],
+        "tests": [
+          "AG01 Konfiguration validiert",
+          "AG01 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration AG01 erstellt",
+          "Skripte AG01 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "AG02",
+        "name": "Agent Dokumentart erkennen",
+        "beschreibung": "Quellen/Agenten: Agent Dokumentart erkennen",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 74,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "AG01"
+        ],
+        "eingaben": [
+          "Config/agent_dokumentart_erkennen_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Agent_Dokumentart.ps1"
+        ],
+        "sperren": [
+          "AG01 nicht abgeschlossen"
+        ],
+        "tests": [
+          "AG02 Konfiguration validiert",
+          "AG02 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration AG02 erstellt",
+          "Skripte AG02 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "AG03",
+        "name": "Agent Sprache Uebersetzung",
+        "beschreibung": "Quellen/Agenten: Agent Sprache Uebersetzung",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 75,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "AG02"
+        ],
+        "eingaben": [
+          "Config/agent_sprache_uebersetzung_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Agent_Sprache_Uebersetzung.ps1"
+        ],
+        "sperren": [
+          "AG02 nicht abgeschlossen"
+        ],
+        "tests": [
+          "AG03 Konfiguration validiert",
+          "AG03 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration AG03 erstellt",
+          "Skripte AG03 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "AG04",
+        "name": "Agent Sachverhaltsbezug",
+        "beschreibung": "Quellen/Agenten: Agent Sachverhaltsbezug",
+        "phase": "Quellen und Agenten",
+        "prioritaet": 76,
+        "status": "abgeschlossen",
+        "abhaengigkeiten": [
+          "AG03"
+        ],
+        "eingaben": [
+          "Config/agent_sachverhaltsbezug_v1.json"
+        ],
+        "ausgaben": [
+          "Scripts/Run_Agent_Sachverhaltsbezug.ps1"
+        ],
+        "sperren": [
+          "AG03 nicht abgeschlossen"
+        ],
+        "tests": [
+          "AG04 Konfiguration validiert",
+          "AG04 Skripte vorhanden"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Konfiguration AG04 erstellt",
+          "Skripte AG04 erstellt",
+          "Dokumentation vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "WINAPP",
+        "name": "Windows App Build und Release",
+        "beschreibung": "Windows-App kompilieren, Release-Checkliste, Changelog, Rollback-Plan.",
+        "phase": "Build und Release",
+        "prioritaet": 80,
+        "status": "offen",
+        "abhaengigkeiten": [
+          "CORE-12",
+          "UI14"
+        ],
+        "eingaben": [
+          "Windows_App/App/KI_Legal_WindowsApp.csproj",
+          "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md",
+          "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+          "ALIN_Neustart_Core/16_Build_Release/ROLLBACK_PLAN.md"
+        ],
+        "ausgaben": [
+          "Windows_App/Scripts/Build_App.ps1",
+          "ALIN_Neustart_Core/16_Build_Release/CHANGELOG.md",
+          "ALIN_Neustart_Core/16_Build_Release/VERSION.json"
+        ],
+        "sperren": [
+          "UI-Grundlagen nicht fertig",
+          "Windows-App-Architektur nicht final"
+        ],
+        "tests": [
+          "Build erfolgreich",
+          "Release-Checkliste abgearbeitet",
+          "Rollback-Plan aktuell"
+        ],
+        "erlaubte_naechste_module": [
+          "DEPLOY"
+        ],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Build-Skript funktioniert",
+          "Changelog aktualisiert",
+          "VERSION.json aktualisiert"
+        ]
+      },
+      {
+        "stufe_id": "DEPLOY",
+        "name": "Deployment und Betrieb",
+        "beschreibung": "MSIX-Paketierung, Offline-Installation, Gerichtslaptop-Profil, Betriebsvorbereitung.",
+        "phase": "Build und Release",
+        "prioritaet": 90,
+        "status": "offen",
+        "abhaengigkeiten": [
+          "WINAPP",
+          "CORE-20"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_OFFLINE_GERICHTSLAPTOP_V1.md",
+          "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/08_Windows_App_Grundlage/ALIN_WINDOWS_DEPLOYMENT_PRUEFPUNKTE_V1.md",
+          "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_GERICHTSLAPTOP_OFFLINE.json",
+          "ALIN_Neustart_Core/24_Konfigurationsprofile/PROFIL_KANZLEI_PC.json"
+        ],
+        "sperren": [
+          "Windows-App nicht gebaut",
+          "Datenschutz nicht definiert"
+        ],
+        "tests": [
+          "Deployment-Pruefpunkte abgearbeitet",
+          "Offline-Profil getestet",
+          "Gerichtslaptop-Profil validiert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [],
+        "fertigstellungskriterien": [
+          "Deployment-Checkliste abgeschlossen",
+          "Offline-Profil getestet",
+          "Konfigurationsprofile vorhanden"
+        ]
+      },
+      {
+        "stufe_id": "CORE-26",
+        "name": "Gesamtabnahme und Produktionsfreigabe",
+        "beschreibung": "Finale Gesamtabnahme aller Module, Produktionsfreigabe (nur durch menschlichen Entscheid).",
+        "phase": "Abschluss",
+        "prioritaet": 100,
+        "status": "gesperrt",
+        "abhaengigkeiten": [
+          "CORE-25",
+          "DEPLOY",
+          "UI14",
+          "KM21b0"
+        ],
+        "eingaben": [
+          "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+          "ALIN_Neustart_Core/Reports/",
+          "Config/"
+        ],
+        "ausgaben": [
+          "ALIN_Neustart_Core/Reports/CORE26_GESAMTABNAHME_BERICHT.txt",
+          "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md"
+        ],
+        "sperren": [
+          "Menschliche Freigabe erforderlich",
+          "Nicht alle Module abgeschlossen",
+          "Keine Beweiswuerdigung durch KI"
+        ],
+        "tests": [
+          "Alle Pruefberichte bestanden",
+          "Roadmap vollstaendig",
+          "Zyklenfreiheit bestaetigt",
+          "Menschliche Abnahme dokumentiert"
+        ],
+        "erlaubte_naechste_module": [],
+        "blockierte_module": [
+          "ALLE"
+        ],
+        "fertigstellungskriterien": [
+          "Alle Lieferpflichten erfuellt",
+          "Menschliche Abnahme dokumentiert",
+          "Keine offenen Sperren",
+          "Release-Checkliste abgeschlossen"
+        ]
+      }
+    ],
+    "abhaengigkeits_graph": {},
+    "phases": [
+      "Vorbereitung",
+      "Phase 1: Grundmodell",
+      "Phase 2: Altbestand",
+      "Phase 3: Windows-App",
+      "Phase 4: Test und Abnahme",
+      "Phase 5: Autonomer Betrieb",
+      "UI-Strecke",
+      "OCR- und Uebersetzungsstrecke",
+      "Posteingang und Vorzimmer",
+      "Quellen und Agenten",
+      "Build und Release",
+      "Abschluss"
+    ]
+  },
+  "validierung": {
+    "zyklische_abhaengigkeiten": false,
+    "alle_stufen_eindeutige_id": true,
+    "alle_abhaengigkeiten_aufloesbar": true,
+    "pruefzeitstempel": "2026-05-18T05:34:45+0000"
+  }
+}

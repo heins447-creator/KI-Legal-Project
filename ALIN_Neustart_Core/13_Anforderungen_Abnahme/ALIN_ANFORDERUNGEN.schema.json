@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Anforderungen",
+  "description": "Schema für Anforderungen an Module.",
+  "type": "object",
+  "required": ["schema_version", "anforderung_id", "zweck", "eingabe", "ausgabe", "abnahmekriterium", "sperrfall", "fehlerfall", "testfall", "grenzen"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "anforderung_id": { "type": "string" },
+    "zweck": { "type": "string" },
+    "eingabe": { "type": "string" },
+    "ausgabe": { "type": "string" },
+    "abnahmekriterium": { "type": "string" },
+    "sperrfall": { "type": "string" },
+    "fehlerfall": { "type": "string" },
+    "testfall": { "type": "string" },
+    "grenzen": { "type": "string" }
+  }
+}

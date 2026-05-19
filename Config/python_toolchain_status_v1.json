@@ -1,0 +1,109 @@
+{
+  "python": "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+  "modules": [
+    {
+      "module": "fitz",
+      "display": "PyMuPDF",
+      "ok": true,
+      "version": "1.27.2.3",
+      "error": ""
+    },
+    {
+      "module": "PIL",
+      "display": "Pillow",
+      "ok": true,
+      "version": "12.2.0",
+      "error": ""
+    },
+    {
+      "module": "numpy",
+      "display": "NumPy",
+      "ok": true,
+      "version": "2.4.4",
+      "error": ""
+    },
+    {
+      "module": "cv2",
+      "display": "OpenCV",
+      "ok": true,
+      "version": "4.13.0",
+      "error": ""
+    },
+    {
+      "module": "docx",
+      "display": "python-docx",
+      "ok": true,
+      "version": "1.2.0",
+      "error": ""
+    },
+    {
+      "module": "openpyxl",
+      "display": "openpyxl",
+      "ok": true,
+      "version": "3.1.5",
+      "error": ""
+    },
+    {
+      "module": "duckdb",
+      "display": "duckdb",
+      "ok": true,
+      "version": "1.5.2",
+      "error": ""
+    },
+    {
+      "module": "pytesseract",
+      "display": "pytesseract",
+      "ok": true,
+      "version": "0.3.13",
+      "error": ""
+    },
+    {
+      "module": "yaml",
+      "display": "PyYAML",
+      "ok": true,
+      "version": "6.0.3",
+      "error": ""
+    },
+    {
+      "module": "lxml",
+      "display": "lxml",
+      "ok": true,
+      "version": "6.1.0",
+      "error": ""
+    },
+    {
+      "module": "packaging",
+      "display": "packaging",
+      "ok": true,
+      "version": "26.2",
+      "error": ""
+    },
+    {
+      "module": "typing_extensions",
+      "display": "typing_extensions",
+      "ok": true,
+      "version": "",
+      "error": ""
+    }
+  ],
+  "tesseract": {
+    "exe": "",
+    "available": false,
+    "languages": [],
+    "required_languages": [
+      "eng",
+      "osd",
+      "deu",
+      "swe"
+    ],
+    "missing_languages": [
+      "eng",
+      "osd",
+      "deu",
+      "swe"
+    ],
+    "language_warning_only": true,
+    "output": ""
+  },
+  "ok": true
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "profil_id": "entwicklung",
+  "beschreibung": "Profil für Entwicklungsrechner",
+  "einstellungen": {
+    "online": true,
+    "automatische_updates": false,
+    "cloud_synchronisation": false,
+    "offline_fallback": true,
+    "maximale_dateigroesse_mb": 200,
+    "maximale_seitenzahl": 2000,
+    "parallelverarbeitung": 8,
+    "timeout_ocr_sekunden": 300,
+    "timeout_uebersetzung_sekunden": 120
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Tool-Resolver",
+  "description": "Schema für den Tool-Resolver.",
+  "type": "object",
+  "required": ["schema_version", "resolver_id", "eingabe", "ausgabe"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "resolver_id": { "type": "string", "const": "tool_resolver" },
+    "eingabe": {
+      "type": "object",
+      "required": ["tool_kategorie", "aufgabe"],
+      "properties": {
+        "tool_kategorie": { "type": "string", "enum": ["ocr", "pdf", "bildverarbeitung", "uebersetzung", "windows_app", "datenbank", "sicherheit"] },
+        "aufgabe": { "type": "string" },
+        "sprache": { "type": "string" },
+        "land": { "type": "string" }
+      }
+    },
+    "ausgabe": {
+      "type": "object",
+      "required": ["tool_id", "name", "pfad", "darf_verwendet_werden"],
+      "properties": {
+        "tool_id": { "type": "string" },
+        "name": { "type": "string" },
+        "pfad": { "type": "string" },
+        "version": { "type": "string" },
+        "darf_verwendet_werden": { "type": "boolean" },
+        "warnungen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

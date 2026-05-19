@@ -1,0 +1,171 @@
+{
+  "modul_id": "UI08b",
+  "modulname": "Fehlerpfadprüfung / Plausibilitätsprüfung Posteingang",
+  "version": "1.0.0",
+  "version_status": "entwicklung",
+  "betriebsmodus": "demo",
+  "produktiv_freigegeben": false,
+  "warnung": "DIES IST EINE DEMO-FEHLERPFADPRÜFUNG. KEINE PRODUKTIVFREIGABE. KEINE ECHTEN MANDANTENDATEN.",
+  "beschreibung": "UI08b prüft die bestehende Posteingang-Infrastruktur auf Fehlerlagen und macht diese sichtbar. Es liest DuckDB-Tabellen und JSON-Karten ein und identifiziert 9 typische Fehlerpfade.",
+  "fehlerpfade": [
+    {
+      "id": "FEHLER_01",
+      "name": "Fehlende Sprache",
+      "beschreibung": "Dokument hat kein Sprachprofil in posteingang_document_language_profile",
+      "db_pruefung": {
+        "tabelle": "posteingang_document_language_profile",
+        "bedingung": "document_language_id IS NULL OR document_language_id = ''",
+        "schwere": "HOCH"
+      },
+      "json_pruefung": {
+        "feld": "language_status",
+        "fehler_werte": ["", "unknown", "UNBEKANNT"],
+        "schwere": "HOCH"
+      }
+    },
+    {
+      "id": "FEHLER_02",
+      "name": "Unsichere Sprache",
+      "beschreibung": "Spracherkennung mit niedriger confidence oder Rough-Translation erforderlich",
+      "db_pruefung": {
+        "tabelle": "posteingang_document_language_profile",
+        "bedingung": "confidence < 0.7 OR rough_translation_required = TRUE",
+        "schwere": "MITTEL"
+      },
+      "json_pruefung": {
+        "feld": "language_status",
+        "fehler_werte": ["SPRACHE_UNSICHER", "ROUGH_TRANSLATION_REQUIRED"],
+        "schwere": "MITTEL"
+      }
+    },
+    {
+      "id": "FEHLER_03",
+      "name": "Fehlender Aktenbezug",
+      "beschreibung": "intake_id ist nicht zugeordnet oder fehlt in der Aktenstruktur",
+      "db_pruefung": {
+        "tabelle": "posteingang_document_language_profile",
+        "bedingung": "intake_id IS NULL OR intake_id = ''",
+        "schwere": "KRITISCH"
+      },
+      "json_pruefung": {
+        "feld": "intake_id",
+        "fehler_werte": ["", "FEHLER", "OHNE_INTAKE"],
+        "schwere": "KRITISCH"
+      }
+    },
+    {
+      "id": "FEHLER_04",
+      "name": "Gesperrter Eingang",
+      "beschreibung": "Dokument ist im Sicherheitsgate als GESPERRT oder QUARANTAENE markiert",
+      "db_pruefung": {
+        "tabelle": "posteingang_document_language_profile",
+        "bedingung": "status LIKE '%GESPERRT%' OR status LIKE '%QUARANTAENE%'",
+        "schwere": "KRITISCH"
+      },
+      "json_pruefung": {
+        "feld": "security_status",
+        "fehler_werte": ["GESPERRT", "QUARANTAENE", "SICHERHEITSVERSTOSS"],
+        "schwere": "KRITISCH"
+      }
+    },
+    {
+      "id": "FEHLER_05",
+      "name": "Fehlende Sicherheitsfreigabe",
+      "beschreibung": "Keine Sicherheitskarte vorhanden oder Status nicht FREIGEGEBEN",
+      "json_pruefung": {
+        "feld": "security_status",
+        "fehler_werte": ["", "OFFEN", "NICHT_FREIGEGEBEN", "PRUEFUNG_AUSSTEHEND"],
+        "schwere": "HOCH"
+      },
+      "datei_pruefung": {
+        "pattern": "Posteingang/Sicherheit/*_sicherheitsbericht.json",
+        "invert": true,
+        "schwere": "HOCH"
+      }
+    },
+    {
+      "id": "FEHLER_06",
+      "name": "Unklare Vorzimmerentscheidung",
+      "beschreibung": "Entscheidung fehlt oder ist AMBIGUOUS / OFFEN",
+      "json_pruefung": {
+        "feld": "vorzimmer_status",
+        "fehler_werte": ["", "AMBIGUOUS", "OFFEN", "NICHT_ENTSCHIEDEN"],
+        "schwere": "MITTEL"
+      },
+      "datei_pruefung": {
+        "pattern": "Posteingang/Vorzimmer/*_sprachkarte.json",
+        "invert": true,
+        "schwere": "MITTEL"
+      }
+    },
+    {
+      "id": "FEHLER_07",
+      "name": "Fehlende Anwaltfreigabe",
+      "beschreibung": "anwalt_review_queue Status ist nicht OK oder FREIGEGEBEN",
+      "db_pruefung": {
+        "tabelle": "anwalt_review_queue",
+        "bedingung": "lawyer_review_status NOT IN ('OK','FREIGEGEBEN','ANWALTVORLAGE')",
+        "schwere": "HOCH"
+      },
+      "json_pruefung": {
+        "feld": "lawyer_review_status",
+        "fehler_werte": ["", "OFFEN", "BLOCKIERT", "RUECKFRAGE"],
+        "schwere": "HOCH"
+      }
+    },
+    {
+      "id": "FEHLER_08",
+      "name": "Blockierte Agentenbearbeitung",
+      "beschreibung": "agent_work_queue Status ist BLOCKIERT oder FEHLER",
+      "db_pruefung": {
+        "tabelle": "agent_work_queue",
+        "bedingung": "job_status IN ('BLOCKIERT','FEHLER','ABBRUCH')",
+        "schwere": "MITTEL"
+      },
+      "json_pruefung": {
+        "feld": "agent_status",
+        "fehler_werte": ["BLOCKIERT", "FEHLER", "ABBRUCH"],
+        "schwere": "MITTEL"
+      }
+    },
+    {
+      "id": "FEHLER_09",
+      "name": "Unvollständige Schlusskontrolle",
+      "beschreibung": "Schlusskarte fehlt oder Status ist nicht FREIGEGEBEN",
+      "json_pruefung": {
+        "feld": "schlusskontrolle_status",
+        "fehler_werte": ["", "OFFEN", "UNVOLLSTAENDIG", "NICHT_FREIGEGEBEN"],
+        "schwere": "HOCH"
+      },
+      "datei_pruefung": {
+        "pattern": "Posteingang/Schlusskontrolle/*_schlusskarte.json",
+        "invert": true,
+        "schwere": "HOCH"
+      }
+    }
+  ],
+  "abhaengigkeiten": {
+    "datenbank": "Database/Legal_Brain.duckdb",
+    "posteingang_verzeichnis": "Posteingang"
+  },
+  "demo_modus": {
+    "max_dokumente": 10,
+    "nur_musterdaten": true,
+    "echte_daten_erlaubt": false,
+    "wasserzeichen": "DEMO – UI08b FEHLERPFADPRÜFUNG"
+  },
+  "sperrregister_pruefung": {
+    "aktiv": true,
+    "pfad": "ALIN_Neustart_Core/01_Register/sperrregister.json"
+  },
+  "ausgabe": {
+    "html_fehlerpfad_uebersicht": "Windows_App/Pruefseiten/UI08b_Fehlerpfad_Uebersicht.html",
+    "json_status": "Windows_App/Logs/UI08B_FEHLERPFAD_STATUS.json",
+    "bericht": "Windows_App/Logs/UI08B_FEHLERPFAD_BERICHT.txt"
+  },
+  "grenzen": {
+    "max_dateigroesse_mb": 50,
+    "max_dokumente_pro_lauf": 20,
+    "timeout_sekunden": 30
+  }
+}

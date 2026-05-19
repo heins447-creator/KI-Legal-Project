@@ -1,0 +1,102 @@
+{
+  "modul_id": "CORE-24",
+  "version": "1.0.0",
+  "name": "Autonomer Entwicklungsmanager / Auftragsqueue / Selbstreparatur",
+  "zeitstempel": "2026-05-18T04:17:38+02:00",
+  "referenziert": {
+    "dashboard": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE23_dashboard.json",
+    "arbeitsindex": "Config/core21_arbeitsindex_v1.json",
+    "agentenregeln": "Config/core22_agentenregeln_v1.json",
+    "agenten_regeln_manifest": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE22_agenten_regeln.json",
+    "agentenfreigabe": "ALIN_Neustart_Core/08_Migration/09_Manifest/AGENTENFREIGABE_KLARSTELLUNG.txt"
+  },
+  "queue_regeln": {
+    "queue_datei": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json",
+    "reparatur_log": "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_reparatur_log.json",
+    "bericht_datei": "ALIN_Neustart_Core/Reports/CORE24_ENTWICKLUNGSMANAGER_BERICHT.txt",
+    "max_reparaturversuche": 3,
+    "pause_zwischen_auftraegen_sekunden": 2,
+    "automatisch_naechsten_ableiten": true
+  },
+  "erlaubte_auftragstypen": [
+    "python_runner",
+    "alin_core_script",
+    "pruefung",
+    "manifest_schreiben",
+    "bericht_schreiben",
+    "git_status",
+    "git_commit"
+  ],
+  "verbotene_auftragstypen": [
+    "delete",
+    "move",
+    "rename",
+    "pip_install",
+    "pip_uninstall",
+    "internet_zugriff",
+    "datenbank_aenderung",
+    "produktivfreigabe",
+    "deployment"
+  ],
+  "pfad_pruefung": {
+    "funktion": "bereich_status(pfad)",
+    "ergebnisse": ["aktiv", "referenz", "gesperrt", "unbekannt"],
+    "schreibregel": {
+      "aktiv": "erlaubt",
+      "referenz": "nur_lesen",
+      "gesperrt": "verboten",
+      "unbekannt": "nachfragen"
+    }
+  },
+  "ablauf": {
+    "schritt_1": "Dashboard lesen (CORE23_dashboard.json)",
+    "schritt_2": "Arbeitsindex pruefen (Config/core21_arbeitsindex_v1.json)",
+    "schritt_3": "Naechsten zulaessigen Auftrag selbst bestimmen",
+    "schritt_4": "Auftragsqueue fuehren (JSON-Datei)",
+    "schritt_5": "Fuer jeden Auftrag ausfuehren: py_compile → Runner → Check",
+    "schritt_6": "Bei Fehler: Fehlerbericht auswerten → Reparaturauftrag erzeugen → erneut testen",
+    "schritt_7": "Bei Erfolg: git add + git commit",
+    "schritt_8": "Naechsten Auftrag aus der Queue ableiten",
+    "schritt_9": "Nur bei harter Sperre anhalten (z.B. Check 3x fehlgeschlagen, unbekannter Fehler, Pfad gesperrt)"
+  },
+  "harte_sperre_bedingungen": [
+    "Check 3x fehlgeschlagen fuer selben Auftrag",
+    "Unbekannter Fehlertyp (nicht in erlaubten Fehlerkategorien)",
+    "Zielpfad hat bereich_status == 'gesperrt'",
+    "py_compile fehlschlaegt nach 3 Reparaturversuchen",
+    "Runner fehlschlaegt nach 3 Reparaturversuchen",
+    "Git-Commit fehlschlaegt nach 3 Versuchen",
+    "Auftragstyp in verbotene_auftragstypen"
+  ],
+  "erlaubte_fehlerkategorien": [
+    "SyntaxError",
+    "ImportError",
+    "ModuleNotFoundError",
+    "FileNotFoundError",
+    "PermissionError",
+    "JSONDecodeError",
+    "KeyError",
+    "TypeError",
+    "ValueError"
+  ],
+  "git_regeln": {
+    "erlaubte_befehle": [
+      "git status",
+      "git diff",
+      "git diff --stat",
+      "git diff --name-only",
+      "git add",
+      "git commit",
+      "git log -1 --oneline"
+    ],
+    "commit_nachricht_prefix": "CORE-24",
+    "commit_nur_bei_erfolg": true,
+    "nur_auftragsbezogene_dateien": true
+  },
+  "python_toolchain": {
+    "python_exe": "I:\\KI_Legal_Project\\Tools\\Python312\\python.exe",
+    "py_compile_flag": "-m py_compile",
+    "runner_verzeichnis": "Scripts/python_runner/",
+    "check_prefix": "check_"
+  }
+}

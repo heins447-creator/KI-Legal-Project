@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "stage_id": "EXT-006",
+  "stage_name": "Semantische Suche API-Endpunkt",
+  "purpose": "Erweiterung des FastAPI-Backends um semantische Suche ueber DuckDB-Vektoren. TF-IDF-basiert, offline-faehig.",
+  "dependencies": ["EXT-004", "EXT-005"],
+  "security_rules": {
+    "cloud_verboten": true,
+    "online_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_localhost": true
+  },
+  "api": {
+    "neuer_endpunkt": "/suche",
+    "method": "GET",
+    "parameter": ["q"],
+    "ausgabe": ["ergebnisse", "score"]
+  },
+  "ausgaben": {
+    "api_datei": "ALIN_Neustart_Core/25_API_Backend/alin_api_erweitert.py",
+    "start_script": "ALIN_Neustart_Core/25_API_Backend/start_api_erweitert.ps1",
+    "bericht": "ALIN_Neustart_Core/Reports/EXT006_SEMANTISCHE_SUCHE_API_BERICHT.txt"
+  }
+}

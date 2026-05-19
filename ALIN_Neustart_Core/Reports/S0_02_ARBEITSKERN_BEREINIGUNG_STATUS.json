@@ -1,0 +1,32 @@
+{
+    "status":  "aktiver_programmierordner_festgelegt_geprueft",
+    "aktive_wurzel":  "I:\\KI_Legal_Project\\ALIN_Neustart_Core",
+    "altbestand_gesperrt":  true,
+    "migration_gesperrt":  true,
+    "angelegte_dateien":  [
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\AKTIVER_PROGRAMMIERORDNER.md",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\AGENTS.md",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\.alin_active_root.json",
+                              "I:\\KI_Legal_Project\\ALIN_PROGRAMMIERUNG.code-workspace",
+                              "I:\\KI_Legal_Project\\ALTBEstand_NUR_SICHERUNG_NICHT_AKTIV_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\Scripts\\NUR_ALT_BESTAND_NICHT_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\Agentensteuerung\\NUR_ALT_BESTAND_NICHT_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\Module\\NUR_ALT_BESTAND_NICHT_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\Windows_App\\NUR_ALT_BESTAND_NICHT_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\08_Migration\\02_Kopierte_Dateien\\NUR_MIGRATION_NICHT_AKTIV_BEARBEITEN.md",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\Reports\\S0_02_ARBEITSKERN_BEREINIGUNG_BERICHT.txt",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\Reports\\S0_02_ARBEITSKERN_BEREINIGUNG_STATUS.json",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\Scripts\\check_s0_02_arbeitskern_bereinigung.py",
+                              "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\Scripts\\Run_S0_02_Arbeitskern_Bereinigung.ps1"
+                          ],
+    "warnungen":  [
+                      "Erste Pruefrunde: python nicht im PATH; Starter wurde auf vorhandenen gebuendelten Python mit Fallback repariert.",
+                      "Direkter py.exe-Aufruf verweist auf WindowsApps-Python und meldete Zugriff verweigert; gebuendelter Python bestand die Pruefung.",
+                      "PowerShell meldet beim Shell-Start eine Profilwarnung wegen deaktivierter Skriptausfuehrung; der S0-02-Starter selbst laeuft mit -NoProfile erfolgreich.",
+                      "py_compile hat einen __pycache__-Ordner erzeugt; dieser wurde nicht geloescht und nicht fuer Commit vorgesehen."
+                  ],
+    "fehler":  [
+
+               ],
+    "produktiv_freigegeben":  false
+}

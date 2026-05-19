@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.7",
+  "name": "Internet-Sperre als technische Komponente",
+  "policy": {
+    "default_outbound": "deny",
+    "software_internet_allowed": false,
+    "external_api_allowed": false,
+    "telemetry_allowed": false,
+    "update_channel_requires_explicit_click": true,
+    "update_hosts": []
+  },
+  "update_policy": {
+    "automatic_updates_allowed": false,
+    "background_update_check_allowed": false,
+    "telemetry_allowed": false,
+    "update_trigger": "nur auf explizite Nutzeraktion — kein automatischer Update-Check im Hintergrund",
+    "development_tools_internet": true,
+    "development_tools_note": "uv, pytest und Entwicklungswerkzeuge duerfen waehrend der Programmierung online gehen. Diese Regel gilt NICHT fuer die laufende ALIN-Anwendung."
+  },
+  "pending_configuration": [
+    "Hersteller-Update-Host wird spaeter festgelegt und bleibt bis dahin leer.",
+    "Ohne expliziten Klick und Allowlist-Eintrag wird auch der Update-Kanal blockiert."
+  ],
+  "files": {
+    "module": "alin_core/network_guard.py",
+    "runner": "Scripts/python_runner/phase0_ap07_network_guard.py",
+    "check": "Scripts/python_runner/check_phase0_ap07_network_guard.py",
+    "starter": "Scripts/Run_PHASE0_AP07_Network_Guard.ps1",
+    "documentation": "Projektplanung/PHASE0_AP07_NETWORK_GUARD.md",
+    "report": "Reports/PHASE0_AP07_NETWORK_GUARD_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP07_NETWORK_GUARD_BERICHT.txt"
+  }
+}

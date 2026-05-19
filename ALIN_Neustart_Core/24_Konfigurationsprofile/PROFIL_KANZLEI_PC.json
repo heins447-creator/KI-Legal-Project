@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "profil_id": "kanzlei_pc",
+  "beschreibung": "Profil für Kanzlei-PC mit Online-Verbindung",
+  "einstellungen": {
+    "online": true,
+    "automatische_updates": true,
+    "cloud_synchronisation": false,
+    "offline_fallback": false,
+    "maximale_dateigroesse_mb": 100,
+    "maximale_seitenzahl": 1000,
+    "parallelverarbeitung": 4,
+    "timeout_ocr_sekunden": 300,
+    "timeout_uebersetzung_sekunden": 120
+  }
+}

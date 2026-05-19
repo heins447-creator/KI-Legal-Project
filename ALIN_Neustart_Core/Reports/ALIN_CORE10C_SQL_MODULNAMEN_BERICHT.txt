@@ -1,0 +1,90 @@
+============================================================
+CORE-10c SQL-MODULNAMEN BEREINIGUNG
+Erstellt: 2026-05-16T10:50:00Z
+============================================================
+
+Anzahl korrigierter Module: 20
+
+  001_db_schema_audit
+    ALT: SELECT table_schema, table_name, table_type
+    NEU: 001_db_schema_audit
+
+  002_apply_posteingang_schema
+    ALT: SELECT table_name
+    NEU: 002_apply_posteingang_schema
+
+  003_verify_posteingang_schema
+    ALT: SELECT table_name
+    NEU: 003_verify_posteingang_schema
+
+  012_posteingang_sprachkontext_gate_v2
+    ALT: SELECT table_name
+    NEU: 012_posteingang_sprachkontext_gate_v2
+
+  013_kontrolle_posteingang_nach_bereinigung
+    ALT: SELECT table_name
+    NEU: 013_kontrolle_posteingang_nach_bereinigung
+
+  013_posteingang_db_altlasten_cleanup
+    ALT: SELECT COUNT(*)
+    NEU: 013_posteingang_db_altlasten_cleanup
+
+  014_posteingang_clean_verify
+    ALT: SELECT COUNT(*)
+    NEU: 014_posteingang_clean_verify
+
+  020_posteingang_gesamtstatus_v1
+    ALT: SELECT table_name
+    NEU: 020_posteingang_gesamtstatus_v1
+
+  021_posteingang_db_dateien_auswahl_testlauf_v1
+    ALT: SELECT table_name
+    NEU: 021_posteingang_db_dateien_auswahl_testlauf_v1
+
+  025_schweden_arbeitsrecht_sprachkontext_korrektur_v1
+    ALT: SELECT COUNT(*)
+    NEU: 025_schweden_arbeitsrecht_sprachkontext_korrektur_v1
+
+  032_check_dokumentsprachprofil_v1
+    ALT: SELECT table_name
+    NEU: 032_check_dokumentsprachprofil_v1
+
+  033_posteingang_schlusskontrolle_v2
+    ALT: SELECT table_name
+    NEU: 033_posteingang_schlusskontrolle_v2
+
+  034_posteingang_endabnahme_v2
+    ALT: SELECT table_name
+    NEU: 034_posteingang_endabnahme_v2
+
+  036_check_vorzimmer_kommunikationsparameter_v1
+    ALT: SELECT table_name
+    NEU: 036_check_vorzimmer_kommunikationsparameter_v1
+
+  037_posteingang_endabnahme_v3
+    ALT: SELECT table_name
+    NEU: 037_posteingang_endabnahme_v3
+
+  039_check_anwaltvorlage_grundmodul_v1
+    ALT: SELECT table_name
+    NEU: 039_check_anwaltvorlage_grundmodul_v1
+
+  041_check_agentenbearbeitung_grundmodul_v1
+    ALT: SELECT table_name
+    NEU: 041_check_agentenbearbeitung_grundmodul_v1
+
+  043_check_agent_dokumentart_erkennen_v1
+    ALT: SELECT table_name
+    NEU: 043_check_agent_dokumentart_erkennen_v1
+
+  045_check_agent_sprache_uebersetzung_v1
+    ALT: SELECT table_name
+    NEU: 045_check_agent_sprache_uebersetzung_v1
+
+  047_check_agent_sachverhaltsbezug_v1
+    ALT: SELECT table_name
+    NEU: 047_check_agent_sachverhaltsbezug_v1
+
+============================================================
+ENDE BERICHT
+============================================================

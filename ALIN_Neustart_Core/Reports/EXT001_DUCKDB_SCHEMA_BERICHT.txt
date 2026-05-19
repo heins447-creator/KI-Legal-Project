@@ -1,0 +1,11 @@
+EXT-001 – DuckDB-Schema Bericht
+Erzeugt: 2026-05-18T20:44:34+0000
+Datenbank: I:\KI_Legal_Project\Database\DuckDB\alin_local.duckdb
+Migration: I:\KI_Legal_Project\Database\Migrations\100_duckdb_schema_ext001.sql
+
+Tabellen: ['dokumente', 'ocr_ergebnisse', 'terminologie', 'uebersetzungen', 'vektor_embeddings', 'v_dokumente_vollstaendigkeit']
+Views: ['v_dokumente_vollstaendigkeit']
+Indizes: 7
+Fehlende Tabellen: []
+
+Status: ERFOLGREICH

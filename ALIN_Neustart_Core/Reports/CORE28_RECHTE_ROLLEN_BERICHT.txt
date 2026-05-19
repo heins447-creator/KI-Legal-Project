@@ -1,0 +1,31 @@
+============================================
+CORE-28 BERICHT: Rechte und Rollen
+============================================
+Zeitstempel: 2026-05-18T08:27:31+0000
+
+1. DATEI-EXISTENZ
+-----------------
+  rollenmodell: OK
+  freigaberegeln: OK
+  berechtigungen: OK
+
+2. VALIDIERUNG
+--------------
+
+  rollenmodell:
+    OK
+
+  freigaberegeln:
+    OK
+
+  berechtigungen:
+    OK
+
+3. ZUSAMMENFASSUNG
+------------------
+  Gesamtfehler: 0
+  Status: ERFOLG
+
+============================================
+ENDE CORE-28 BERICHT
+============================================

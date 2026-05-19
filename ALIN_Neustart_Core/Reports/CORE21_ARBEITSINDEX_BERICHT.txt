@@ -1,0 +1,161 @@
+======================================================================
+CORE-21 ARBEITSINDEX-BERICHT
+Umschalt- und Arbeitsindex für ALIN_Neustart_Core
+======================================================================
+
+Modul-ID:      CORE-21
+Version:       1.0.0
+Zeitstempel:   2026-05-18T01:34:51.632002+00:00
+Freigegeben:   False
+
+QUELLEN
+----------------------------------------------------------------------
+  manifest             ALIN_Neustart_Core\08_Migration\09_Manifest\CORE17_kopierte_dateien_manifest.json
+  sperrplan            ALIN_Neustart_Core\08_Migration\01_Plaene\CORE19_reste_archiv_sperrplan.json
+  auswertung           ALIN_Neustart_Core\08_Migration\01_Plaene\CORE14_auswertung.csv
+  master_bericht       ALIN_Neustart_Core\Reports\CORE20_MASTER_UMBAU_BERICHT.txt
+
+ZUSAMMENFASSUNG
+----------------------------------------------------------------------
+  Arbeitsbestand ( aktiv):           311
+  Referenzbestand (Migration):       311
+  Gesperrte Pfade gesamt:          34887
+  Maßgebliche Skripte:               236
+  Alte Arbeitsbereiche:                7
+  Neue Arbeitsbereiche:               22
+
+ARBEITSBESTAND KATEGORIEN
+----------------------------------------------------------------------
+  dokumentation                 14
+  konfiguration                 19
+  migration_sql                  1
+  planung                        4
+  register                      11
+  schema_status                 10
+  script                       141
+  sonstige                      61
+  starter                       44
+  test                           6
+
+EMPFOHLENER START
+----------------------------------------------------------------------
+  Primär:   ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md
+  Bemerkung: Erste Datei die Roo lesen sollte: Masterauftrag Neustart Core
+  Alternativen:
+    - ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md
+    - ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md
+    - ALIN_Neustart_Core/00_Dokumentation/ALIN_PROFESSIONELLE_SOFTWARE_KONSTRUKTION.md
+
+MAßGEBLICHE SKRIPTE (Auswahl)
+----------------------------------------------------------------------
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core02_altbestand_inventar.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core02_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core03_registerqualitaet_analyse.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core04_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core05_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core05_toolregister_befuellen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core06_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core06_ressourcenregister_befuellen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core07_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core07_quellen_adapterregister_befuellen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core08_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core08_skillregister_befuellen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core09_modulregister_befuellen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core09_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10a_findings_priorisierung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10b_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10b_ressourcenluecken_klaeren.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10c_sql_modulnamen_bereinigen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10d_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10d_schnittstellenbereiche_nachtragen.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10e_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10e_ui01_abhaengigkeit_klaeren.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10f_platzhalter_verfeinern.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10f_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10g_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10g_reviewlisten_dokumentieren.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core10_konsistenz_pruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/alin_core11_gesamtpruefung.py
+  [script    ] ALIN_Neustart_Core/Scripts/check_alin_core10a_findings_priorisierung.py
+  [script    ] ALIN_Neustart_Core/Scripts/check_alin_core10c_sql_modulnamen.py
+  ... und 206 weitere
+
+ALTE ARBEITSBEREICHE (nicht mehr aktiv bearbeiten)
+----------------------------------------------------------------------
+  [ALT] ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/
+  [ALT] ALIN_Neustart_Core/08_Migration/01_Plaene/
+  [ALT] ALIN_Neustart_Core/08_Migration/02_Kopierte_Dateien/
+  [ALT] ALIN_Neustart_Core/08_Migration/09_Manifest/
+  [ALT] Agentensteuerung/
+  [ALT] 07_Berichte/
+  [ALT] 10_Tool_Inventar/
+
+NEUE ARBEITSBEREICHE (zukünftige Arbeit)
+----------------------------------------------------------------------
+  [NEU] ALIN_Neustart_Core/00_Dokumentation/
+  [NEU] ALIN_Neustart_Core/01_Register/
+  [NEU] ALIN_Neustart_Core/02_Statusmodell/
+  [NEU] ALIN_Neustart_Core/03_Schnittstellen/
+  [NEU] ALIN_Neustart_Core/04_Healthcheck/
+  [NEU] ALIN_Neustart_Core/05_Resolver/
+  [NEU] ALIN_Neustart_Core/06_Audit_Protokoll/
+  [NEU] ALIN_Neustart_Core/10_Update_Ueberwachung/
+  [NEU] ALIN_Neustart_Core/12_Dokumentation_Hilfe_Infofelder/
+  [NEU] ALIN_Neustart_Core/13_Anforderungen_Abnahme/
+  [NEU] ALIN_Neustart_Core/14_Architekturentscheidungen/
+  [NEU] ALIN_Neustart_Core/15_Teststrategie/
+  [NEU] ALIN_Neustart_Core/23_Import_Export/
+  [NEU] ALIN_Neustart_Core/24_Konfigurationsprofile/
+  [NEU] ALIN_Neustart_Core/Config/
+  [NEU] ALIN_Neustart_Core/Scripts/
+  [NEU] ALIN_Neustart_Core/Reports/
+  [NEU] Projektplanung/
+  [NEU] Scripts/python_runner/
+  [NEU] Config/
+  [NEU] Database/Migrations/
+  [NEU] Windows_App/
+
+GESPERRTE PFADE (Status-Übersicht)
+----------------------------------------------------------------------
+  gesperrt        6492 Einträge
+  manuell        25385 Einträge
+  archiv          1643 Einträge
+  dublette           0 Einträge
+  testrest           0 Einträge
+  laufzeit        1367 Einträge
+
+ALTDATEIEN-SPERRE (Beispiele)
+----------------------------------------------------------------------
+  [gesperrt  ] Agentensteuerung/09_Analysebericht_Validator/01_Skript/analysebericht_validator.py
+  [gesperrt  ] ALIN_Neustart_Core/Scripts/alin_core04_update_register_befuellen.py
+  [gesperrt  ] Config/ui07_betriebsvorbereitung_v1.json
+  [gesperrt  ] Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json
+  [gesperrt  ] Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json
+  [gesperrt  ] Config/ui08_posteingang_importstrecke_v1.json
+  [gesperrt  ] Config/ui09_zentrale_grundschalter_profilfelder_v1.json
+  [gesperrt  ] Config/ui10_profil_lesadapter_v1.json
+  [gesperrt  ] Config/ui11_register_lesadapter_v1.json
+  [gesperrt  ] Config/ui12_master_adapter_v1.json
+  [gesperrt  ] Config/ui13_abnahme_entscheidungsuebersicht_v1.json
+  [gesperrt  ] Config/ui14_ausfuehrungs_nachlaufzentrale_v1.json
+  [gesperrt  ] Scripts/alin_bridge.py
+  [gesperrt  ] Scripts/start_analyse.py
+  [gesperrt  ] Scripts/temp_init_db.py
+  [gesperrt  ] Scripts/python_runner/011_language_context_v2.py
+  [gesperrt  ] Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py
+  [gesperrt  ] Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py
+  [gesperrt  ] Scripts/python_runner/038_anwaltvorlage_grundmodul_v1.py
+  [gesperrt  ] Scripts/python_runner/042_agent_dokumentart_erkennen_v1.py
+
+PRÜFUNGEN
+----------------------------------------------------------------------
+  Arbeitsbestand = 311:           OK
+  Referenzbestand = 311:          OK
+  Gesperrte Pfade vorhanden:      OK
+  Manifest lesbar:                OK
+  Sperrplan lesbar:               OK
+  Gesamtprüfung:                  BESTANDEN
+
+======================================================================
+ENDE CORE-21 ARBEITSINDEX-BERICHT
+======================================================================

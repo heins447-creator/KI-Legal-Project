@@ -1,0 +1,65 @@
+======================================================================
+CORE-11 ABNAHMEBERICHT – POST-CORE-10 FREEZE
+======================================================================
+Erstellt: 2026-05-16T19:37:06.877127+00:00
+
+1. GEPRUEFTE REGISTER
+----------------------------------------
+  [OK] modulregister.json
+  [OK] toolregister.json
+  [OK] ressourcenregister.json
+  [OK] quellen_adapter_register.json
+  [OK] lizenzregister.json
+  [OK] update_register.json
+  [OK] skillregister.json
+  [OK] schnittstellenregister.json
+
+2. CORE-10 REPARATURSTATUS
+----------------------------------------
+  [OK] CORE-10c: SQL-Modulnamen bereinigt
+  [OK] CORE-10e: ui01-Abhaengigkeit korrigiert
+  [OK] CORE-10b: Ressourcenluecken geklaert (TESS_*, ARGOS_DE_*)
+  [OK] CORE-10d: Schnittstellenbereiche nachtragen (14 Bereiche)
+  [OK] CORE-10f: Platzhalter verfeinern (48 PowerShell-Starter)
+  [OK] CORE-10g: Reviewlisten dokumentieren (163 Module analysiert)
+
+3. KONSISTENZPRUEFUNG
+----------------------------------------
+  Module im Register: 163
+  Ressourcen im Register: 45
+  Tools im Register: 16
+  Schnittstellen im Register: 14
+  Fehlende Ressourcenverweise: 0
+  Fehlende Toolverweise: 0
+  Generische Platzhalter: 0
+  SQL-Modulnamen: 0
+
+4. SICHERHEITSPRUEFUNG
+----------------------------------------
+  DEEPL_API gesperrt: JA
+  Cloud-Schnittstellen markiert: 3
+  Kritische Module (KRITISCH): 2
+  DB-aendernde Module: 18
+  Online-faehige Module: 14
+
+5. FEHLER UND WARNUNGEN
+----------------------------------------
+  Keine Fehler.
+  WARNUNGEN (1):
+    - ui01-Referenzen noch vorhanden in: ['check_ui01_anwaltsansicht_v1', 'ui02_tuerschwelle_bau']
+
+6. ABNAHMEENTSCHEIDUNG
+----------------------------------------
+  STATUS: ABNAHME EMPFOHLEN
+  Alle Register konsistent. Alle CORE-10-Findings abgearbeitet.
+
+7. EMPFOHLENE NAECHSTE SCHRITTE
+----------------------------------------
+  [ ] UI04b abnehmen
+  [ ] UI03-1 OCR-/Uebersetzungskontrolle mit Dreiansicht starten
+  [ ] Kritische Module (011_quellenbetreuer, 014_source_adapter) freigabepflichtig halten
+  [ ] Backup-Konzept fuer 18 DB-aendernde Module aktualisieren
+
+======================================================================
+ENDE ABNAHMEBERICHT
+======================================================================

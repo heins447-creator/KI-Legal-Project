@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.6",
+  "name": "Dispatcher alin.py",
+  "dispatcher": {
+    "entrypoint": "alin.py",
+    "default_mode": "dry-run",
+    "execute_requires_flag": "--execute",
+    "dry_run_flag": "--dry-run",
+    "admin_password_hash_env": "ALIN_ADMIN_PASSWORD_SHA256",
+    "stores_plaintext_password": false
+  },
+  "commands": [
+    "health",
+    "redline-check",
+    "migrate",
+    "safety-setting"
+  ],
+  "files": {
+    "runner": "Scripts/python_runner/phase0_ap06_dispatcher_setup.py",
+    "check": "Scripts/python_runner/check_phase0_ap06_dispatcher.py",
+    "starter": "Scripts/Run_PHASE0_AP06_Dispatcher.ps1",
+    "documentation": "Projektplanung/PHASE0_AP06_DISPATCHER.md",
+    "report": "Reports/PHASE0_AP06_DISPATCHER_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP06_DISPATCHER_BERICHT.txt"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "modul_id": "CORE-27",
+    "version": "1.0.0",
+    "zeitstempel_erstellung": "2026-05-18T07:52:58+0000",
+    "beschreibung": "Mapping von Roadmap-Stufen (STUFE-XXX) zu technischen Modul-IDs (CORE-YY)"
+  },
+  "mapping_regel": {
+    "kollisionsbereich": "CORE-14 bis CORE-26",
+    "naechste_freie_nummer_start": 27,
+    "logik": "Fuer jede STUFE-XXX, deren urspruengliche CORE-Nummer in 14-26 liegt, wird eine neue fortlaufende CORE-Nummer vergeben"
+  },
+  "mapping_eintraege": [
+    {
+      "stufe_id": "STUFE-014",
+      "stufe_name": "CORE13-Auswertung und Sperrplan",
+      "technische_modul_id": "CORE-27",
+      "urspruengliche_id": "CORE-14",
+      "kollidiert_mit": "CORE-14",
+      "bemerkung": "Urspruengliche ID CORE-14 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-015",
+      "stufe_name": "Migrationsplan und kopierende Migration",
+      "technische_modul_id": "CORE-28",
+      "urspruengliche_id": "CORE-15",
+      "kollidiert_mit": "CORE-15",
+      "bemerkung": "Urspruengliche ID CORE-15 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-016",
+      "stufe_name": "Neustruktur-Validierung und Reste-Archiv",
+      "technische_modul_id": "CORE-29",
+      "urspruengliche_id": "CORE-16",
+      "kollidiert_mit": "CORE-16",
+      "bemerkung": "Urspruengliche ID CORE-16 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-017",
+      "stufe_name": "Arbeitsindex und Agenten-Einstieg",
+      "technische_modul_id": "CORE-30",
+      "urspruengliche_id": "CORE-17",
+      "kollidiert_mit": "CORE-17",
+      "bemerkung": "Urspruengliche ID CORE-17 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-018",
+      "stufe_name": "Projekt-Dashboard",
+      "technische_modul_id": "CORE-31",
+      "urspruengliche_id": "CORE-18",
+      "kollidiert_mit": "CORE-18",
+      "bemerkung": "Urspruengliche ID CORE-18 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-019",
+      "stufe_name": "Rechte und Rollen",
+      "technische_modul_id": "CORE-32",
+      "urspruengliche_id": "CORE-19",
+      "kollidiert_mit": "CORE-19",
+      "bemerkung": "Urspruengliche ID CORE-19 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-020",
+      "stufe_name": "Datenschutz und Mandatsgeheimnis",
+      "technische_modul_id": "CORE-33",
+      "urspruengliche_id": "CORE-20",
+      "kollidiert_mit": "CORE-20",
+      "bemerkung": "Urspruengliche ID CORE-20 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-021",
+      "stufe_name": "Arbeitsindex und Agentenregeln",
+      "technische_modul_id": "CORE-34",
+      "urspruengliche_id": "CORE-21",
+      "kollidiert_mit": "CORE-21",
+      "bemerkung": "Urspruengliche ID CORE-21 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-022",
+      "stufe_name": "Agenten-Einstieg",
+      "technische_modul_id": "CORE-35",
+      "urspruengliche_id": "CORE-22",
+      "kollidiert_mit": "CORE-22",
+      "bemerkung": "Urspruengliche ID CORE-22 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-023",
+      "stufe_name": "Projekt-Dashboard",
+      "technische_modul_id": "CORE-36",
+      "urspruengliche_id": "CORE-23",
+      "kollidiert_mit": "CORE-23",
+      "bemerkung": "Urspruengliche ID CORE-23 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-024",
+      "stufe_name": "Autonomer Entwicklungsmanager",
+      "technische_modul_id": "CORE-37",
+      "urspruengliche_id": "CORE-24",
+      "kollidiert_mit": "CORE-24",
+      "bemerkung": "Urspruengliche ID CORE-24 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-025",
+      "stufe_name": "Programmierbare Gesamt-Roadmap",
+      "technische_modul_id": "CORE-38",
+      "urspruengliche_id": "CORE-25",
+      "kollidiert_mit": "CORE-25",
+      "bemerkung": "Urspruengliche ID CORE-25 kollidiert mit existierendem technischen Modul"
+    },
+    {
+      "stufe_id": "STUFE-026",
+      "stufe_name": "Gesamtabnahme und Produktionsfreigabe",
+      "technische_modul_id": "CORE-39",
+      "urspruengliche_id": "CORE-26",
+      "kollidiert_mit": "CORE-26",
+      "bemerkung": "Urspruengliche ID CORE-26 kollidiert mit existierendem technischen Modul"
+    }
+  ],
+  "zusammenfassung": {
+    "anzahl_kollisionen": 13,
+    "naechste_freie_core_nummer": 40,
+    "vergebene_bereich": "CORE-27 bis CORE-39"
+  }
+}

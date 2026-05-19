@@ -1,0 +1,38 @@
+﻿{
+  "modul": "UI01",
+  "version": "1.0.0",
+  "beschreibung": "Anwaltliche Dokumentenvorlage V1 im Browser",
+  "datenquellen": {
+    "km20_master_index": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/07_Manifest/KM20_MASTER_INDEX.json",
+    "km20_konsolidierung": "Agentensteuerung/20_Quellen_Fundstellen_Konsolidierung/08_Konsolidierung/KM20_KONSOLIDIERUNG.json",
+    "km14_fundstellen": "Agentensteuerung/14_Maschinenformat_Fundstellenstruktur",
+    "km15_uebersetzung": "Agentensteuerung/15_Arbeitsuebersetzung_Fundstellenbindung",
+    "km17_sprachrouting": "Agentensteuerung/17_Sprachrouting_OCR",
+    "km12_abbildungen": "Agentensteuerung/12_Originalabbildung_Arbeitsabbildung"
+  },
+  "arbeitsvertrag_suchbegriffe": [
+    "anställningsavtal",
+    "employment contract",
+    "arbetsavtal",
+    "Arbeitsvertrag",
+    "anställning",
+    "employer",
+    "employee"
+  ],
+  "testdaten_ids": [
+    "ORG-TEST-KM14"
+  ],
+  "ausgabe": {
+    "browseransicht": "Agentensteuerung/UI01_Anwaltsansicht_V1/10_Browseransicht",
+    "notizen": "Agentensteuerung/UI01_Anwaltsansicht_V1/09_Notizen",
+    "entscheidung": "Agentensteuerung/UI01_Anwaltsansicht_V1/11_Entscheidung"
+  },
+  "grenzen": {
+    "keine_originalaenderung": true,
+    "keine_db_aenderung": true,
+    "keine_neue_ocr": true,
+    "keine_uebersetzungserfindung": true,
+    "keine_rechtsbewertung": true,
+    "kein_internet": true
+  }
+}

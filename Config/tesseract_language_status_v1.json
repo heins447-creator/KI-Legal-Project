@@ -1,0 +1,22 @@
+﻿{
+    "time":  "2026-05-11 10:55:54",
+    "tesseract_exe":  "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "tessdata_dir":  "I:\\KI_Legal_Project\\Tools\\Tesseract\\tessdata",
+    "languages":  [
+                      "deu",
+                      "eng",
+                      "osd",
+                      "swe"
+                  ],
+    "required_languages":  [
+                               "eng",
+                               "osd",
+                               "deu",
+                               "swe"
+                           ],
+    "missing_languages":  [
+
+                          ],
+    "manifest":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Hashes\\TESSERACT_TESSDATA_MANIFEST_2026-05-11_10-55-32.csv",
+    "ok":  true
+}

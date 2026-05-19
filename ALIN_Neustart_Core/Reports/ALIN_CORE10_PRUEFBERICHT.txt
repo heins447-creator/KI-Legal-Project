@@ -1,0 +1,612 @@
+======================================================================
+CORE-10 DETAIL-PRUEFBERICHT
+Erstellt: 2026-05-16T08:35:24Z
+======================================================================
+
+
+----------------------------------------------------------------------
+Pruefung 01: Modul-ID-Eindeutigkeit
+----------------------------------------------------------------------
+OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 02: Fehlende Abhaengigkeiten
+----------------------------------------------------------------------
+FEHLENDE_ABHAENGIGKEIT modul='check_ui01_anwaltsansicht_v1' referenziert unbekanntes Modul 'ui01_anwaltsansicht'
+
+----------------------------------------------------------------------
+Pruefung 03: Widerspruechliche Modulnamen
+----------------------------------------------------------------------
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='002_apply_posteingang_schema'(pfad=Scripts/python_runner/002_apply_posteingang_schema.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='003_verify_posteingang_schema'(pfad=Scripts/python_runner/003_verify_posteingang_schema.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='012_posteingang_sprachkontext_gate_v2'(pfad=Scripts/python_runner/012_posteingang_sprachkontext_gate_v2.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='013_kontrolle_posteingang_nach_bereinigung'(pfad=Scripts/python_runner/013_kontrolle_posteingang_nach_bereinigung.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='020_posteingang_gesamtstatus_v1'(pfad=Scripts/python_runner/020_posteingang_gesamtstatus_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='021_posteingang_db_dateien_auswahl_testlauf_v1'(pfad=Scripts/python_runner/021_posteingang_db_dateien_auswahl_testlauf_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='032_check_dokumentsprachprofil_v1'(pfad=Scripts/python_runner/032_check_dokumentsprachprofil_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='033_posteingang_schlusskontrolle_v2'(pfad=Scripts/python_runner/033_posteingang_schlusskontrolle_v2.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='034_posteingang_endabnahme_v2'(pfad=Scripts/python_runner/034_posteingang_endabnahme_v2.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='036_check_vorzimmer_kommunikationsparameter_v1'(pfad=Scripts/python_runner/036_check_vorzimmer_kommunikationsparameter_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py) vs id2='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='037_posteingang_endabnahme_v3'(pfad=Scripts/python_runner/037_posteingang_endabnahme_v3.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py) vs id2='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='039_check_anwaltvorlage_grundmodul_v1'(pfad=Scripts/python_runner/039_check_anwaltvorlage_grundmodul_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py) vs id2='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='041_check_agentenbearbeitung_grundmodul_v1'(pfad=Scripts/python_runner/041_check_agentenbearbeitung_grundmodul_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py) vs id2='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='043_check_agent_dokumentart_erkennen_v1'(pfad=Scripts/python_runner/043_check_agent_dokumentart_erkennen_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT table_name' -> id1='045_check_agent_sprache_uebersetzung_v1'(pfad=Scripts/python_runner/045_check_agent_sprache_uebersetzung_v1.py) vs id2='047_check_agent_sachverhaltsbezug_v1'(pfad=Scripts/python_runner/047_check_agent_sachverhaltsbezug_v1.py)
+WIDERSPRUCH modulname='SELECT COUNT(*)' -> id1='013_posteingang_db_altlasten_cleanup'(pfad=Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py) vs id2='014_posteingang_clean_verify'(pfad=Scripts/python_runner/014_posteingang_clean_verify.py)
+WIDERSPRUCH modulname='SELECT COUNT(*)' -> id1='013_posteingang_db_altlasten_cleanup'(pfad=Scripts/python_runner/013_posteingang_db_altlasten_cleanup.py) vs id2='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1'(pfad=Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py)
+WIDERSPRUCH modulname='SELECT COUNT(*)' -> id1='014_posteingang_clean_verify'(pfad=Scripts/python_runner/014_posteingang_clean_verify.py) vs id2='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1'(pfad=Scripts/python_runner/025_schweden_arbeitsrecht_sprachkontext_korrektur_v1.py)
+
+----------------------------------------------------------------------
+Pruefung 04: Module ohne Eingabe/Ausgabe/Teststatus
+----------------------------------------------------------------------
+LEER_EINGABE modul='Invoke_Aider_Local' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Invoke_Aider_Local' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM17_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM17_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM18_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM18_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agent_Dokumentart' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agent_Dokumentart' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agent_Handoff_Test_Harness' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agent_Handoff_Test_Harness' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agent_Sachverhaltsbezug' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agent_Sachverhaltsbezug' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agent_Sprache_Uebersetzung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agent_Sprache_Uebersetzung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agenten_Kontext_Skill_Register' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agenten_Kontext_Skill_Register' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Agentenbearbeitung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Agentenbearbeitung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_AI_Coding_Agent_Project_Check' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_AI_Coding_Agent_Project_Check' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_AI_Coding_Agent_Repair_Loop' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_AI_Coding_Agent_Repair_Loop' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Aktenmaterial_Freigabeliste' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Aktenmaterial_Freigabeliste' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_ALIN_SafeJob' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_ALIN_SafeJob' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Anwaltvorlage' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Anwaltvorlage' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Dokumentsprachprofil' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Dokumentsprachprofil' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM10_Schnittstellen_Lueckenabgleich' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM10_Schnittstellen_Lueckenabgleich' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM12_Originalabbildung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM12_Originalabbildung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM12b_Uebergrosse_Arbeitsabbildungen' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM12b_Uebergrosse_Arbeitsabbildungen' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM13_OCR_Pipeline' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM13_OCR_Pipeline' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM14_Maschinenformat_Fundstellenstruktur' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM14_Maschinenformat_Fundstellenstruktur' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM16_Sprachrouting_Vor_OCR' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM16_Sprachrouting_Vor_OCR' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM20_Konsolidierung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM20_Konsolidierung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_KM20b_Bereinigung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_KM20b_Bereinigung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Posteingang_Menu' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Posteingang_Menu' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Posteingang_Pipeline' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Posteingang_Pipeline' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Posteingang_Schlusskontrolle' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Posteingang_Schlusskontrolle' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Posteingang_Zentrale' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Posteingang_Zentrale' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Quellenbetreuer_Fachanwaltsraster' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Quellenbetreuer_Fachanwaltsraster' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Quellenkandidaten_EU_SE' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Quellenkandidaten_EU_SE' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Source_Adapter_Healthcheck_Framework' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Source_Adapter_Healthcheck_Framework' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Vorzimmer_Arbeitsliste' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Vorzimmer_Arbeitsliste' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Vorzimmer_Entscheidung' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Vorzimmer_Entscheidung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Run_Vorzimmer_Kommunikationsparameter' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Run_Vorzimmer_Kommunikationsparameter' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI01_ANWALTSANSICHT_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI01_ANWALTSANSICHT_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='ui02_0_bestandsabgleich_tuerschwelle' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='ui02_0_bestandsabgleich_tuerschwelle' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='ui02_tuerschwelle_bau_starter' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='ui02_tuerschwelle_bau_starter' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+LEER_EINGABE modul='Update_External_Tools_Library' eingabe='Konfiguration und Umgebungsvariablen.'
+LEER_AUSGABE modul='Update_External_Tools_Library' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+
+----------------------------------------------------------------------
+Pruefung 05: Aufrufrechte ohne Ressourcen
+----------------------------------------------------------------------
+OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 06: Datenbank-aendernde Module
+----------------------------------------------------------------------
+DB_AENDERUNG modul='001_db_schema_audit' modultyp='python_runner' bereich='register'
+DB_AENDERUNG modul='002_apply_posteingang_schema' modultyp='python_runner' bereich='posteingang'
+DB_AENDERUNG modul='003_verify_posteingang_schema' modultyp='python_runner' bereich='posteingang'
+DB_AENDERUNG modul='013_posteingang_db_altlasten_cleanup' modultyp='python_runner' bereich='posteingang'
+DB_AENDERUNG modul='021_posteingang_db_dateien_auswahl_testlauf_v1' modultyp='python_runner' bereich='posteingang'
+DB_AENDERUNG modul='022_posteingang_db_testlauf_auswertung_v1' modultyp='python_runner' bereich='posteingang'
+DB_AENDERUNG modul='001_posteingang_intake_schema' modultyp='datenbank_migration' bereich='posteingang'
+DB_AENDERUNG modul='004_language_context_v2' modultyp='datenbank_migration' bereich='register'
+DB_AENDERUNG modul='005_dokumentsprachprofil_v1' modultyp='datenbank_migration' bereich='sprache'
+DB_AENDERUNG modul='006_vorzimmer_kommunikationsparameter_v1' modultyp='datenbank_migration' bereich='vorzimmer'
+DB_AENDERUNG modul='007_anwaltvorlage_grundmodul_v1' modultyp='datenbank_migration' bereich='anwalt'
+DB_AENDERUNG modul='008_agentenbearbeitung_grundmodul_v1' modultyp='datenbank_migration' bereich='agent'
+DB_AENDERUNG modul='009_agent_dokumentart_erkennen_v1' modultyp='datenbank_migration' bereich='agent'
+DB_AENDERUNG modul='010_agent_sprache_uebersetzung_v1' modultyp='datenbank_migration' bereich='agent'
+DB_AENDERUNG modul='011_agent_sachverhaltsbezug_v1' modultyp='datenbank_migration' bereich='agent'
+DB_AENDERUNG modul='011_quellenbetreuer_fachanwaltsraster_v1' modultyp='datenbank_migration' bereich='anwalt'
+DB_AENDERUNG modul='012_agenten_kontext_skill_register_v1' modultyp='datenbank_migration' bereich='agent'
+DB_AENDERUNG modul='014_source_adapter_healthcheck_framework_v1' modultyp='datenbank_migration' bereich='quellen'
+
+----------------------------------------------------------------------
+Pruefung 07: Online-faehige Module
+----------------------------------------------------------------------
+ONLINE_FAEHIG modul='Invoke_Aider_Local' modultyp='powershell_starter' bereich='unbekannt'
+ONLINE_FAEHIG modul='Run_Quellenbetreuer_Fachanwaltsraster' modultyp='powershell_starter' bereich='anwalt'
+ONLINE_FAEHIG modul='Run_Quellenkandidaten_EU_SE' modultyp='powershell_starter' bereich='quellen'
+ONLINE_FAEHIG modul='Run_Source_Adapter_Healthcheck_Framework' modultyp='powershell_starter' bereich='quellen'
+ONLINE_FAEHIG modul='Update_External_Tools_Library' modultyp='powershell_starter' bereich='unbekannt'
+ONLINE_FAEHIG modul='046_quellenbetreuer_fachanwaltsraster_v1' modultyp='python_runner' bereich='anwalt'
+ONLINE_FAEHIG modul='047_check_quellenbetreuer_fachanwaltsraster_v1' modultyp='pruefdatei' bereich='anwalt'
+ONLINE_FAEHIG modul='051_quellenkandidaten_eu_se_v1' modultyp='python_runner' bereich='quellen'
+ONLINE_FAEHIG modul='052_check_quellenkandidaten_eu_se_v1' modultyp='pruefdatei' bereich='quellen'
+ONLINE_FAEHIG modul='053_source_adapter_healthcheck_framework_v1' modultyp='pruefdatei' bereich='quellen'
+ONLINE_FAEHIG modul='054_check_source_adapter_healthcheck_framework_v1' modultyp='pruefdatei' bereich='quellen'
+ONLINE_FAEHIG modul='km20_quellen_fundstellen_konsolidierung' modultyp='python_runner' bereich='quellen'
+ONLINE_FAEHIG modul='011_quellenbetreuer_fachanwaltsraster_v1' modultyp='datenbank_migration' bereich='anwalt'
+ONLINE_FAEHIG modul='014_source_adapter_healthcheck_framework_v1' modultyp='datenbank_migration' bereich='quellen'
+
+----------------------------------------------------------------------
+Pruefung 08: Unklare Schnittstellen
+----------------------------------------------------------------------
+UNKLAR_EINGABE modul='Invoke_Aider_Local' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Invoke_Aider_Local' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM17_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM17_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM17c_EINZELSEITE_KM12b_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM18_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM18_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agent_Dokumentart' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agent_Dokumentart' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agent_Handoff_Test_Harness' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agent_Handoff_Test_Harness' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agent_Sachverhaltsbezug' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agent_Sachverhaltsbezug' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agent_Sprache_Uebersetzung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agent_Sprache_Uebersetzung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agenten_Kontext_Skill_Register' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agenten_Kontext_Skill_Register' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Agentenbearbeitung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Agentenbearbeitung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_AI_Coding_Agent_Project_Check' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_AI_Coding_Agent_Project_Check' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_AI_Coding_Agent_Repair_Loop' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_AI_Coding_Agent_Repair_Loop' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Aktenmaterial_Freigabeliste' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Aktenmaterial_Freigabeliste' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_ALIN_SafeJob' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_ALIN_SafeJob' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Anwaltvorlage' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Anwaltvorlage' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Dokumentsprachprofil' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Dokumentsprachprofil' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM10_Schnittstellen_Lueckenabgleich' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM10_Schnittstellen_Lueckenabgleich' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM12_Originalabbildung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM12_Originalabbildung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM12b_Uebergrosse_Arbeitsabbildungen' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM12b_Uebergrosse_Arbeitsabbildungen' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM13_OCR_Pipeline' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM13_OCR_Pipeline' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM14_Maschinenformat_Fundstellenstruktur' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM14_Maschinenformat_Fundstellenstruktur' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM16_Sprachrouting_Vor_OCR' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM16_Sprachrouting_Vor_OCR' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM20_Konsolidierung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM20_Konsolidierung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_KM20b_Bereinigung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_KM20b_Bereinigung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Posteingang_Menu' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Posteingang_Menu' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Posteingang_Pipeline' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Posteingang_Pipeline' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Posteingang_Schlusskontrolle' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Posteingang_Schlusskontrolle' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Posteingang_Zentrale' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Posteingang_Zentrale' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Quellenbetreuer_Fachanwaltsraster' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Quellenbetreuer_Fachanwaltsraster' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Quellenkandidaten_EU_SE' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Quellenkandidaten_EU_SE' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Source_Adapter_Healthcheck_Framework' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Source_Adapter_Healthcheck_Framework' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Vorzimmer_Arbeitsliste' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Vorzimmer_Arbeitsliste' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Vorzimmer_Entscheidung' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Vorzimmer_Entscheidung' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Run_Vorzimmer_Kommunikationsparameter' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Run_Vorzimmer_Kommunikationsparameter' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI01_ANWALTSANSICHT_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI01_ANWALTSANSICHT_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='ui02_0_bestandsabgleich_tuerschwelle' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='ui02_0_bestandsabgleich_tuerschwelle' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='ui02_tuerschwelle_bau_starter' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='ui02_tuerschwelle_bau_starter' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI02c_FREIGABE_DROPDOWNS_NOTIZEN_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI03_0_UEBERGABE_MANDANTENAKTE_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI03_1_ANWALTS_DREIANSICHT_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI04_DURCHSTICH_SEKRETARIAT_ANWALT_RUECKLAUF_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='UI04b_LOGIKPRUEFUNG_ENTSCHEIDUNG_AUTOLAUF' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+UNKLAR_EINGABE modul='Update_External_Tools_Library' eingabe='Konfiguration und Umgebungsvariablen.'
+UNKLAR_AUSGABE modul='Update_External_Tools_Library' ausgabe='Prozess-Start, Log-Datei, Exit-Code.'
+
+----------------------------------------------------------------------
+Pruefung 09: Uebergaben ohne Schema-Abdeckung
+----------------------------------------------------------------------
+SCHEMA_LUECKE modul='017_vorzimmer_arbeitsliste_v1' liefert_an=['Run_Vorzimmer_Arbeitsliste'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='018_vorzimmer_entscheidung_v1' liefert_an=['Run_Vorzimmer_Entscheidung', 'ui04_durchstich_sekretariat_anwalt_ruecklauf'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='035_vorzimmer_kommunikationsparameter_v1' liefert_an=['Run_Vorzimmer_Kommunikationsparameter', '036_check_vorzimmer_kommunikationsparameter_v1'] aber bereich='vorzimmer' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='040_agentenbearbeitung_grundmodul_v1' liefert_an=['Run_Agentenbearbeitung', '041_check_agentenbearbeitung_grundmodul_v1', '042_agent_dokumentart_erkennen_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='042_agent_dokumentart_erkennen_v1' liefert_an=['Run_Agent_Dokumentart', '043_check_agent_dokumentart_erkennen_v1', '044_agent_sprache_uebersetzung_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='044_agent_sprache_uebersetzung_v1' liefert_an=['Run_Agent_Sprache_Uebersetzung', '045_check_agent_sprache_uebersetzung_v1', '046_agent_sachverhaltsbezug_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='046_agent_sachverhaltsbezug_v1' liefert_an=['Run_Agent_Sachverhaltsbezug', '047_check_agent_sachverhaltsbezug_v1', '048_agenten_kontext_skill_register_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='048_agenten_kontext_skill_register_v1' liefert_an=['Run_Agenten_Kontext_Skill_Register', '049_check_agenten_kontext_skill_register_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='051_quellenkandidaten_eu_se_v1' liefert_an=['Run_Quellenkandidaten_EU_SE', '052_check_quellenkandidaten_eu_se_v1', '053_source_adapter_healthcheck_framework_v1'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='053_source_adapter_healthcheck_framework_v1' liefert_an=['Run_Source_Adapter_Healthcheck_Framework', '054_check_source_adapter_healthcheck_framework_v1'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='055_agent_handoff_test_harness_v1' liefert_an=['Run_Agent_Handoff_Test_Harness', '056_check_agent_handoff_test_harness_v1'] aber bereich='agent' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='km15_arbeitsuebersetzung_fundstellenbindung' liefert_an=['Run_KM15_Arbeitsuebersetzung_Fundstellenbindung', 'check_km15_arbeitsuebersetzung_fundstellenbindung', 'km20_quellen_fundstellen_konsolidierung'] aber bereich='sprache' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='km20_quellen_fundstellen_konsolidierung' liefert_an=['Run_KM20_Konsolidierung', 'km20_pruefung', 'km20b_testdummy_ausschliessen'] aber bereich='quellen' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='km21_translation_env_prepare' liefert_an=['check_km21_translation_env_prepare'] aber bereich='sprache' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='ui02_tuerschwelle_bau' liefert_an=['ui02c_freigabe_dropdowns_notizen'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='ui03_0_uebergabe_mandantenakte' liefert_an=['check_ui03_0_uebergabe_mandantenakte', 'ui03_1_anwalts_dreiansicht'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+SCHEMA_LUECKE modul='ui04b_logikpruefung_entscheidung' liefert_an=['check_ui04b_logikpruefung_entscheidung'] aber bereich='ui' passt zu keinem Schnittstellen-Schema
+
+----------------------------------------------------------------------
+Pruefung 10: Querregister-Verknuepfungen
+----------------------------------------------------------------------
+UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='KM18_AUTOLAUF' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='KM19_OCRBETREUER_KORREKTUR_AUTOLAUF' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='KM21_TRANSLATION_ENV_AUTOLAUF' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='Run_Agent_Sprache_Uebersetzung' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='Run_Dokumentsprachprofil' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='Run_KM13_OCR_Pipeline' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='Run_KM13_OCR_Pipeline' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='Run_KM13_OCR_Pipeline' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='Run_KM13b_Tesseract_Sprachpaket_Abgleich' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='Run_KM15_Arbeitsuebersetzung_Fundstellenbindung' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='Run_KM16_Sprachrouting_Vor_OCR' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='012_posteingang_sprachkontext_gate_v2' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='012_posteingang_sprachkontext_gate_v2' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='012_posteingang_sprachkontext_gate_v2' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='012_posteingang_sprachkontext_gate_v2' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='012_posteingang_sprachkontext_gate_v2' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='025_schweden_arbeitsrecht_sprachkontext_korrektur_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='031_dokumentsprachprofil_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='031_dokumentsprachprofil_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='031_dokumentsprachprofil_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='031_dokumentsprachprofil_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='031_dokumentsprachprofil_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='032_check_dokumentsprachprofil_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='032_check_dokumentsprachprofil_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='032_check_dokumentsprachprofil_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='032_check_dokumentsprachprofil_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='032_check_dokumentsprachprofil_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='044_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='044_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='044_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='044_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='044_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='045_check_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='045_check_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='045_check_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='045_check_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='045_check_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='check_km13_ocr_pipeline' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km13_ocr_pipeline' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km13_ocr_pipeline' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='check_km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='check_km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='check_km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='check_km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='check_km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='check_km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='check_km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='check_km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='check_km17c_einzelseite_km12b_ocr' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km17c_einzelseite_km12b_ocr' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km17c_einzelseite_km12b_ocr' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km18_ocr_ergebnisdiagnose' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km18_ocr_ergebnisdiagnose' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km18_ocr_ergebnisdiagnose' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocr_gesamtkette_synchronisieren' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocr_gesamtkette_synchronisieren' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocr_gesamtkette_synchronisieren' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocrbetreuer_korrektur' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocrbetreuer_korrektur' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='check_km19_ocrbetreuer_korrektur' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='check_km21_translation_env_prepare' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='check_km21_translation_env_prepare' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='check_km21_translation_env_prepare' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='check_km21_translation_env_prepare' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='check_km21_translation_env_prepare' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='km13_ocr_pipeline' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km13_ocr_pipeline' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km13_ocr_pipeline' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='km13b_tesseract_sprachpaket_abgleich' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='km15_arbeitsuebersetzung_fundstellenbindung' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='km16_sprachrouting_vor_ocr' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='km17_sprachrouting_ocr_integration' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='km17c_einzelseite_km12b_ocr' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km17c_einzelseite_km12b_ocr' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km17c_einzelseite_km12b_ocr' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km18_ocr_ergebnisdiagnose' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km18_ocr_ergebnisdiagnose' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km18_ocr_ergebnisdiagnose' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km19_ocr_gesamtkette_synchronisieren' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km19_ocr_gesamtkette_synchronisieren' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km19_ocr_gesamtkette_synchronisieren' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km19_ocrbetreuer_korrektur' ressource='TESS_SPA'
+UNGUELTIGE_RESSOURCE modul='km19_ocrbetreuer_korrektur' ressource='TESS_NLD'
+UNGUELTIGE_RESSOURCE modul='km19_ocrbetreuer_korrektur' ressource='TESS_POL'
+UNGUELTIGE_RESSOURCE modul='km21_translation_env_prepare' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='km21_translation_env_prepare' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='km21_translation_env_prepare' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='km21_translation_env_prepare' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='km21_translation_env_prepare' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='005_dokumentsprachprofil_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='005_dokumentsprachprofil_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='005_dokumentsprachprofil_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='005_dokumentsprachprofil_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='005_dokumentsprachprofil_v1' ressource='ARGOS_DE_FR'
+UNGUELTIGE_RESSOURCE modul='010_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_SV'
+UNGUELTIGE_RESSOURCE modul='010_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_ES'
+UNGUELTIGE_RESSOURCE modul='010_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_NL'
+UNGUELTIGE_RESSOURCE modul='010_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_PL'
+UNGUELTIGE_RESSOURCE modul='010_agent_sprache_uebersetzung_v1' ressource='ARGOS_DE_FR'
+
+----------------------------------------------------------------------
+Pruefung 11: Bidirektionale Abhaengigkeiten
+----------------------------------------------------------------------
+OK – keine Auffaelligkeiten.
+
+----------------------------------------------------------------------
+Pruefung 12: AGENTS.md-Konformitaet
+----------------------------------------------------------------------
+OK – keine Auffaelligkeiten.
+
+======================================================================
+ENDE DETAIL-PRUEFBERICHT
+======================================================================

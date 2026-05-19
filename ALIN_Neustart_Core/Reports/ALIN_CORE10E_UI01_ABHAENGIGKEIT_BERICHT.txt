@@ -1,0 +1,87 @@
+================================================================================
+ALIN CORE-10e BERICHT
+Fehlende Abhängigkeit ui01_anwaltsansicht klären
+================================================================================
+Bericht-ID    : CORE10E-20260516
+Erstellt      : 2026-05-16 19:25:00
+Bearbeiter    : ALIN Core-Agent
+Status        : ABGESCHLOSSEN (wartet auf Freigabe)
+================================================================================
+
+1. AUFTRAG
+-----------
+Ticket : CORE-10e
+Thema  : P02-Finding aus CORE-10 Konsistenzprüfung
+         Modul check_ui01_anwaltsansicht_v1 referenziert nicht-existentes
+         Modul "ui01_anwaltsansicht"
+
+2. ANALYSE
+-----------
+Register    : ALIN_Neustart_Core/01_Register/modulregister.json
+Betroffenes : check_ui01_anwaltsansicht_v1 (Zeile ~4364)
+Abhängigkeit: ui01_anwaltsansicht (Zeile ~4381)
+
+Suche nach "ui01_anwaltsansicht" im Register:
+  - check_ui01_anwaltsansicht_v1  [pruefdatei]   Zeile 4364
+  - ui01_anwaltsansicht_v1        [python_runner] Zeile 5410  <-- EXISTIERT
+
+Root Cause:
+  Die Abhängigkeit verweist auf "ui01_anwaltsansicht" (ohne _v1),
+  das tatsächliche Modul heißt jedoch "ui01_anwaltsansicht_v1".
+  Ursache: Fehlende Versionsnummer im Abhängigkeitsverweis.
+
+3. DURCHGEFÜHRTE ÄNDERUNG
+--------------------------
+Datei  : ALIN_Neustart_Core/01_Register/modulregister.json
+Zeile  : 4381
+Feld   : abhaengigkeiten (Array)
+
+ALT:
+  "abhaengigkeiten": ["ui01_anwaltsansicht"]
+
+NEU:
+  "abhaengigkeiten": ["ui01_anwaltsansicht_v1"]
+
+Begründung:
+  - Zielmodul eindeutig identifizierbar
+  - Offensichtliche Namensinkonsistenz (fehlendes _v1-Suffix)
+  - Keine Auswirkungen auf Altbestand, UI, DB, Ressourcen
+
+4. PRÜFUNG
+-----------
+Prüfdatei : alin_core10e_pruefung.py
+Ergebnis  : BESTANDEN
+Exit-Code : 0
+
+Prüfpunkte:
+  [OK] Alle Abhängigkeiten von check_ui01_anwaltsansicht_v1 existieren
+  [OK] Keine Verweise auf nicht-existente Module
+  [OK] Modul ui01_anwaltsansicht_v1 im Register gefunden
+
+5. LIEFERGEGENSTÄNDE
+---------------------
+  Scripts/alin_core10e_ui01_abhaengigkeit_klaeren.py
+  Scripts/alin_core10e_pruefung.py
+  Scripts/Run_CORE10e_UI01_Abhaengigkeit.ps1
+  07_Bestandsaufnahme_Altbestand/CORE10e_UI01_Abhaengigkeit_Klaerung.md
+  Reports/ALIN_CORE10E_UI01_ABHAENGIGKEIT_BERICHT.txt  (dieser Bericht)
+
+6. AUSWIRKUNGEN
+----------------
+P02-Findings behoben    : 1
+Risiko                  : Keines
+Breaking Change         : Nein
+Datenbank betroffen     : Nein
+Altbestand betroffen    : Nein
+Schnittstellen betroffen: Nein
+Ressourcen betroffen    : Nein
+
+7. NÄCHSTE SCHRITTE
+--------------------
+[ ] Freigabe durch Projektleitung
+[ ] Git-Commit nach Freigabe
+[ ] Fortsetzung mit CORE-10b (Ressourcenlücken)
+
+================================================================================
+ENDE DES BERICHTS
+================================================================================

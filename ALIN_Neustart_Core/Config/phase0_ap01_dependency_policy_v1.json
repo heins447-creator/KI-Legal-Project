@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.1",
+  "name": "Dependency-Management und Offline-Wheelhouse",
+  "python": {
+    "required": ">=3.12,<3.13",
+    "project_config": "Config/CORE02_python.config.json",
+    "preferred_local_runtime": "I:/KI_Legal_Project/Tools/Python312/python.exe"
+  },
+  "uv": {
+    "required": true,
+    "install_automatically": false,
+    "status": "not_installed_in_checked_runtime",
+    "reason": "Keine Installation ohne ausdrueckliche Zustimmung; AP 0.1 legt die reproduzierbare Struktur an."
+  },
+  "files": {
+    "pyproject": "pyproject.toml",
+    "lockfile": "requirements.lock",
+    "wheelhouse": "Wheelhouse/python",
+    "runner": "Scripts/python_runner/phase0_ap01_dependency_setup.py",
+    "check": "Scripts/python_runner/check_phase0_ap01_dependency_setup.py",
+    "starter": "Scripts/Run_PHASE0_AP01_Dependency_Setup.ps1",
+    "documentation": "Projektplanung/PHASE0_AP01_DEPENDENCY_SETUP.md",
+    "report": "Reports/PHASE0_AP01_DEPENDENCY_SETUP_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP01_DEPENDENCY_SETUP_BERICHT.txt"
+  },
+  "allowed_dependency_names": [
+    "annotated-doc",
+    "annotated-types",
+    "anyio",
+    "click",
+    "colorama",
+    "duckdb",
+    "fastapi",
+    "h11",
+    "idna",
+    "numpy",
+    "pydantic",
+    "pydantic_core",
+    "sniffio",
+    "starlette",
+    "typing-inspection",
+    "typing_extensions",
+    "uvicorn"
+  ],
+  "forbidden_dependency_names": [
+    "aider-chat",
+    "litellm",
+    "openai"
+  ],
+  "offline_rules": [
+    "uv sync oder uv pip sync nur mit --offline ausfuehren.",
+    "Wheelhouse-Dateien muessen vor Aufnahme mit SHA-256 inventarisiert werden.",
+    "Keine automatische Installation von uv oder Python-Paketen.",
+    "Keine API-Schluessel, keine Fremd-API-Abhaengigkeit, keine Telemetrie."
+  ],
+  "next_controlled_step": "uv-Binary und Wheelhouse in Phase 0/1 nur nach ausdruecklicher Freigabe bereitstellen."
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Lizenzregister",
+  "description": "Zentrales Verzeichnis aller Lizenzen und Komponenten.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "lizenzregister" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "komponente_id",
+          "name",
+          "version",
+          "typ",
+          "hersteller_oder_projekt",
+          "lizenzname",
+          "spdx_id",
+          "lizenztext_pfad",
+          "copyright_hinweis",
+          "notice_erforderlich",
+          "kommerziell_erlaubt",
+          "weitergabe_erlaubt",
+          "interne_nutzung_erlaubt",
+          "quellcode_offenlegung_erforderlich",
+          "kauf_lizenz_erforderlich",
+          "quelle_offiziell",
+          "download_pfad",
+          "sha256",
+          "freigabestatus",
+          "geprueft_am",
+          "warnungen"
+        ],
+        "properties": {
+          "komponente_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "typ": {
+            "type": "string",
+            "enum": ["software", "sprachpaket", "modell", "quelle", "schriftart", "sonstiges"]
+          },
+          "hersteller_oder_projekt": { "type": "string" },
+          "lizenzname": { "type": "string" },
+          "spdx_id": { "type": "string" },
+          "lizenztext_pfad": { "type": "string" },
+          "copyright_hinweis": { "type": "string" },
+          "notice_erforderlich": { "type": "boolean" },
+          "kommerziell_erlaubt": { "type": "boolean" },
+          "weitergabe_erlaubt": { "type": "boolean" },
+          "interne_nutzung_erlaubt": { "type": "boolean" },
+          "quellcode_offenlegung_erforderlich": { "type": "boolean" },
+          "kauf_lizenz_erforderlich": { "type": "boolean" },
+          "quelle_offiziell": { "type": "string" },
+          "download_pfad": { "type": "string" },
+          "sha256": { "type": "string" },
+          "freigabestatus": {
+            "type": "string",
+            "enum": ["freigegeben", "nur_interne_nutzung", "lizenz_pruefen", "kommerziell_klaeren", "gesperrt", "ersatztool_erforderlich"]
+          },
+          "geprueft_am": { "type": "string", "format": "date-time" },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

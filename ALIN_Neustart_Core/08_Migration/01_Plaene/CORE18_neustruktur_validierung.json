@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "modul_id": "CORE-18",
+    "name": "Validierung der neuen Struktur",
+    "version": "1.0.0",
+    "zeitstempel": "2026-05-18T03:15:24.824756",
+    "produktiv_freigegeben": false,
+    "nur_pruefend": true
+  },
+  "zusammenfassung": {
+    "geprueft": 311,
+    "ok": 311,
+    "fehlend": 0,
+    "groesse_abweichend": 0,
+    "sha_abweichend": 0,
+    "validierung_bestanden": true
+  },
+  "befund": {
+    "kritisch": [],
+    "warnung": [],
+    "info": []
+  }
+}

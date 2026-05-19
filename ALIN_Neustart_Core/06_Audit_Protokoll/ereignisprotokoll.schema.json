@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Ereignisprotokoll",
+  "description": "Schema für das Ereignisprotokoll.",
+  "type": "object",
+  "required": ["schema_version", "protokoll_id", "ereignisse"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "protokoll_id": { "type": "string", "const": "ereignisprotokoll" },
+    "ereignisse": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ereignis_id", "zeitstempel", "wer", "rolle", "ereignis", "bezogen_auf"],
+        "properties": {
+          "ereignis_id": { "type": "string" },
+          "zeitstempel": { "type": "string", "format": "date-time" },
+          "wer": { "type": "string", "description": "Wer hat das Ereignis ausgelöst" },
+          "rolle": { "type": "string", "enum": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"] },
+          "ereignis": { "type": "string", "description": "Beschreibung des Ereignisses" },
+          "bezogen_auf": { "type": "string", "description": "Vorgangs-ID, Dokument-ID oder Akten-ID" },
+          "details": { "type": "string" }
+        }
+      }
+    }
+  }
+}

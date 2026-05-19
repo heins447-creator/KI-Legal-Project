@@ -1,0 +1,47 @@
+{
+  "modul": "UI03-1",
+  "version": "1.0.0",
+  "beschreibung": "Anwalts-Dreiansicht fuer die Mandantenakte",
+  "schreibbereiche": {
+    "status": "02_Status",
+    "berichte": "03_Berichte",
+    "fehler": "05_Fehler",
+    "manifest": "07_Manifest",
+    "viewdata": "08_ViewData",
+    "ocr_text": "09_OCR_Text",
+    "deutsche_arbeitsansicht": "10_Deutsche_Arbeitsansicht",
+    "zuordnung": "11_Zuordnung",
+    "agentenauftraege": "12_Agentenauftraege",
+    "notizen": "13_Notizen",
+    "browseransicht": "14_Browseransicht",
+    "eingang_browser": "30_Eingang_vom_Browser",
+    "runlogs": "90_RunLogs"
+  },
+  "dropdowns": {
+    "dokumentart": ["Arbeitsvertrag", "Kuendigung", "Nachtrag", "E-Mail", "Behoerdenschreiben", "Gerichtsschreiben", "Beweisunterlage", "Korrespondenz", "Anlage", "Sonstiges"],
+    "rechtsgebiet": ["Arbeitsrecht", "Schulrecht / Bildungsrecht", "Verwaltungsrecht", "Zivilrecht", "Sozialrecht", "Strafrecht", "Handelsrecht", "Mietrecht", "Sonstiges"],
+    "verfahrensland": ["Schweden", "Deutschland", "Portugal", "Sonstiges"],
+    "dokumentsprache": ["Schwedisch", "Deutsch", "Englisch", "Franzoesisch", "Sonstiges"],
+    "anwaltssprache": ["Deutsch", "Englisch", "Schwedisch", "Sonstiges"],
+    "mandantensprache": ["Englisch", "Deutsch", "Schwedisch", "Sonstiges"],
+    "gerichtssprache": ["Schwedisch", "Deutsch", "Englisch", "Sonstiges"],
+    "sachverhalt": ["Arbeitsvertrag", "Kuendigung", "Arbeitsbeginn", "Arbeitsende", "Kuendigungsdatum", "Beendigungsdatum", "Begruendung Kuendigung", "Frist / Fristenverdacht", "Parteien", "Verguetung", "Arbeitszeit", "Beweis", "Korrespondenz", "organisatorische Maengel", "Mandantenangabe", "gegnerischer Vortrag", "Sonstiges"],
+    "speicherweg": ["Handakte", "Gerichtsakte", "Beweismittel", "Korrespondenz", "Uebersetzung", "Mandantenangaben", "Sekretariat", "Agentenpruefung", "Sonstiges"]
+  },
+  "agentenauftraege": [
+    {"id": "av_auswerten", "text": "Arbeitsvertrag vollstaendig auswerten"},
+    {"id": "ku_auswerten", "text": "Kuendigung vollstaendig auswerten"},
+    {"id": "fristen", "text": "Fristen pruefen"},
+    {"id": "parteien", "text": "Parteien und Daten pruefen"},
+    {"id": "begruendung", "text": "Begruendung der Kuendigung pruefen"},
+    {"id": "unterlagen", "text": "fehlende Unterlagen feststellen"},
+    {"id": "beweisliste", "text": "Beweis-/Dokumentenliste vorbereiten"},
+    {"id": "uebersetzung", "text": "Uebersetzung regulär erstellen"},
+    {"id": "zeitleiste", "text": "Sachverhaltszeitleiste vorbereiten"},
+    {"id": "gegenargumente", "text": "Gegenargumente pruefen"},
+    {"id": "sonstiges", "text": "Sonstiges"}
+  ],
+  "warnung_rechtsgebiet": true,
+  "warnung_rechtsgebiet_text": "Hinweis: Aus der Türschwelle wurde Schulrecht/Bildungsrecht übernommen. Für die aktuelle Arbeitsvertrags-/Kündigungsprüfung kann Arbeitsrecht zutreffender sein. Anwaltliche Bestätigung erforderlich.",
+  "vorgeschlagenes_rechtsgebiet": "Arbeitsrecht"
+}

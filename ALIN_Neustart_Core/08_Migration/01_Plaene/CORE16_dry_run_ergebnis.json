@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "modul_id": "CORE-16",
+    "name": "Dry-Run Validierung des Migrationsplans",
+    "version": "1.0.0",
+    "zeitstempel": "2026-05-18T02:56:39.190123",
+    "produktiv_freigegeben": false,
+    "nur_pruefend": true
+  },
+  "zusammenfassung": {
+    "geprueft": 98436,
+    "ok": 98436,
+    "warnung": 0,
+    "kritisch": 0,
+    "kopieren_vorgesehen": 311,
+    "dry_run_freigegeben": true
+  },
+  "befund": {
+    "kritisch": [],
+    "warnung": [],
+    "info": []
+  }
+}

@@ -1,0 +1,570 @@
+================================================================================
+CORE-25: GESAMT-ROADMAP BERICHT
+================================================================================
+Zeitstempel: 2026-05-18T05:34:45+0000
+Modul: CORE-25 - Programmierbare Gesamt-Roadmap
+Version: 1.0.0
+Anzahl Stufen: 90
+
+QUELLEN:
+  - ALIN_Neustart_Core/00_Dokumentation/ALIN_MASTERAUFTRAG_NEUSTART_CORE_01.md
+  - ALIN_Neustart_Core/00_Dokumentation/ALIN_AUFTRAGSINDEX.md
+  - ALIN_Neustart_Core/00_Dokumentation/ALIN_MODULPAKETE.md
+  - ALIN_Neustart_Core/00_Dokumentation/ALIN_NAECHSTE_AUFTRAEGE.md
+  - Config/core24_entwicklungsmanager_v1.json
+  - ALIN_Neustart_Core/08_Migration/09_Manifest/CORE24_auftragsqueue.json
+
+VALIDIERUNG:
+  Zyklenfrei: False
+  Eindeutige IDs: True
+  Aufloesbare Abhaengigkeiten: True
+  Runtime-Validierung OK: True
+  Keine Fehler.
+
+STUFEN-UEBERSICHT (nach Prioritaet):
+--------------------------------------------------------------------------------
+[   0.0] CORE-00  | abgeschlossen  | Vorbereitung
+         Name: Masterauftrag und Grundmodell
+         Abhaengigkeiten: keine
+         Sperren: keine
+         Blockiert danach: keine
+
+[   1.0] CORE-01  | abgeschlossen  | Phase 1: Grundmodell
+         Name: Register befuellen
+         Abhaengigkeiten: CORE-00
+         Sperren: Kein Altbestand inventarisiert
+         Blockiert danach: CORE-06, CORE-07, CORE-08, CORE-09, CORE-10
+
+[   2.0] CORE-02  | abgeschlossen  | Phase 1: Grundmodell
+         Name: Statusmodell implementieren
+         Abhaengigkeiten: CORE-01
+         Sperren: Register unvollstaendig
+         Blockiert danach: CORE-07, CORE-08, CORE-09, CORE-10
+
+[   3.0] CORE-03  | abgeschlossen  | Phase 1: Grundmodell
+         Name: Schnittstellenvertraege finalisieren
+         Abhaengigkeiten: CORE-01, CORE-02
+         Sperren: Statusmodell unvollstaendig; Register nicht befuellt
+         Blockiert danach: CORE-08, CORE-09, CORE-10
+
+[   4.0] CORE-04  | abgeschlossen  | Phase 1: Grundmodell
+         Name: Healthcheck implementieren
+         Abhaengigkeiten: CORE-01, CORE-02, CORE-03
+         Sperren: Register nicht befuellt; Statusmodell fehlt; Schnittstellen unvollstaendig
+         Blockiert danach: CORE-07, CORE-08, CORE-09, CORE-10
+
+[   5.0] CORE-05  | abgeschlossen  | Phase 1: Grundmodell
+         Name: Resolver implementieren
+         Abhaengigkeiten: CORE-01, CORE-02, CORE-03, CORE-04
+         Sperren: Healthcheck nicht implementiert; Register unvollstaendig
+         Blockiert danach: CORE-07, CORE-08, CORE-09, CORE-10
+
+[   6.0] CORE-06  | abgeschlossen  | Phase 2: Altbestand
+         Name: Altbestand inventarisieren
+         Abhaengigkeiten: CORE-01, CORE-02, CORE-05
+         Sperren: Register nicht befuellt; Resolver fehlt
+         Blockiert danach: CORE-11, CORE-12
+
+[   7.0] CORE-07  | abgeschlossen  | Phase 2: Altbestand
+         Name: Posteingang anbinden
+         Abhaengigkeiten: CORE-03, CORE-06
+         Sperren: Schnittstellen nicht finalisiert; Altbestand nicht inventarisiert
+         Blockiert danach: CORE-11, CORE-16
+
+[   8.0] CORE-08  | abgeschlossen  | Phase 2: Altbestand
+         Name: OCR-Strecke anbinden
+         Abhaengigkeiten: CORE-06, CORE-07
+         Sperren: Posteingang nicht angebunden; OCR-Pipeline nicht konfiguriert
+         Blockiert danach: CORE-11
+
+[   9.0] CORE-09  | abgeschlossen  | Phase 2: Altbestand
+         Name: UI anbinden
+         Abhaengigkeiten: CORE-06, CORE-07, CORE-08
+         Sperren: OCR-Strecke nicht angebunden; Posteingang nicht angebunden
+         Blockiert danach: CORE-11
+
+[  10.0] CORE-10  | abgeschlossen  | Phase 2: Altbestand
+         Name: Quellen und Skills anbinden
+         Abhaengigkeiten: CORE-01, CORE-06, CORE-09
+         Sperren: UI nicht angebunden; Quellenregister leer
+         Blockiert danach: keine
+
+[  10.1] CORE-10a | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: Findings Priorisierung und Reparaturplan
+         Abhaengigkeiten: CORE-10
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.2] CORE-10b | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: Ressourcenluecken Klaerung
+         Abhaengigkeiten: CORE-10a
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.3] CORE-10c | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: SQL Modulnamen bereinigen
+         Abhaengigkeiten: CORE-10b
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.4] CORE-10d | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: Schnittstellenbereiche nachtragen
+         Abhaengigkeiten: CORE-10c
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.5] CORE-10e | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: UI01 Abhaengigkeit Klaerung
+         Abhaengigkeiten: CORE-10d
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.6] CORE-10f | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: Platzhalter verfeinern
+         Abhaengigkeiten: CORE-10e
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: keine
+
+[  10.7] CORE-10g | abgeschlossen  | Phase 2: Altbestand (Details)
+         Name: Reviewlisten dokumentieren
+         Abhaengigkeiten: CORE-10f
+         Sperren: Vorgaenger nicht abgeschlossen
+         Blockiert danach: CORE-11
+
+[  11.0] CORE-11  | abgeschlossen  | Phase 3: Windows-App
+         Name: Windows-App-Architektur finalisieren
+         Abhaengigkeiten: CORE-05, CORE-10g
+         Sperren: Resolver nicht implementiert; Altbestand nicht konsistent
+         Blockiert danach: CORE-16, CORE-17, CORE-18
+
+[  12.0] CORE-12  | abgeschlossen  | Phase 3: Windows-App
+         Name: UI-Grundlagen implementieren
+         Abhaengigkeiten: CORE-11
+         Sperren: Architektur nicht finalisiert
+         Blockiert danach: CORE-14
+
+[  13.0] CORE-13  | abgeschlossen  | Phase 3: Windows-App
+         Name: Altbestand inventarisiert und inventur
+         Abhaengigkeiten: CORE-06, CORE-11
+         Sperren: Altbestand nicht inventarisiert; Backup-Konzept fehlt
+         Blockiert danach: keine
+
+[  14.0] CORE-14  | abgeschlossen  | Phase 3: Windows-App
+         Name: CORE13-Auswertung und Sperrplan
+         Abhaengigkeiten: CORE-13
+         Sperren: Inventur nicht abgeschlossen
+         Blockiert danach: CORE-17, CORE-18
+
+[  15.0] CORE-15  | abgeschlossen  | Phase 3: Windows-App
+         Name: Migrationsplan und kopierende Migration
+         Abhaengigkeiten: CORE-14
+         Sperren: Auswertung nicht abgeschlossen; Sperrplan nicht freigegeben
+         Blockiert danach: keine
+
+[  16.0] CORE-16  | abgeschlossen  | Phase 4: Test und Abnahme
+         Name: Neustruktur-Validierung und Reste-Archiv
+         Abhaengigkeiten: CORE-15
+         Sperren: Migration nicht abgeschlossen
+         Blockiert danach: keine
+
+[  17.0] CORE-17  | abgeschlossen  | Phase 4: Test und Abnahme
+         Name: Arbeitsindex und Agenten-Einstieg
+         Abhaengigkeiten: CORE-16
+         Sperren: Validierung nicht abgeschlossen; Agentenfreigabe nicht klar
+         Blockiert danach: keine
+
+[  18.0] CORE-18  | abgeschlossen  | Phase 4: Test und Abnahme
+         Name: Projekt-Dashboard
+         Abhaengigkeiten: CORE-17
+         Sperren: Arbeitsindex nicht erstellt
+         Blockiert danach: keine
+
+[  19.0] CORE-19  | offen          | Phase 4: Test und Abnahme
+         Name: Rechte und Rollen
+         Abhaengigkeiten: CORE-17, CORE-18
+         Sperren: Dashboard nicht fertig; Rollenmodell unvollstaendig
+         Blockiert danach: keine
+
+[  20.0] CORE-20  | offen          | Phase 4: Test und Abnahme
+         Name: Datenschutz und Mandatsgeheimnis
+         Abhaengigkeiten: CORE-19
+         Sperren: Rechte und Rollen nicht definiert
+         Blockiert danach: CORE-21
+
+[  21.0] CORE-21  | abgeschlossen  | Phase 5: Autonomer Betrieb
+         Name: Arbeitsindex und Agentenregeln
+         Abhaengigkeiten: CORE-17, CORE-18
+         Sperren: Agentenfreigabe unklar
+         Blockiert danach: keine
+
+[  22.0] CORE-22  | abgeschlossen  | Phase 5: Autonomer Betrieb
+         Name: Agenten-Einstieg
+         Abhaengigkeiten: CORE-21
+         Sperren: Agentenregeln nicht final
+         Blockiert danach: keine
+
+[  23.0] CORE-23  | abgeschlossen  | Phase 5: Autonomer Betrieb
+         Name: Projekt-Dashboard
+         Abhaengigkeiten: CORE-22
+         Sperren: Agenten-Einstieg nicht dokumentiert
+         Blockiert danach: keine
+
+[  24.0] CORE-24  | abgeschlossen  | Phase 5: Autonomer Betrieb
+         Name: Autonomer Entwicklungsmanager
+         Abhaengigkeiten: CORE-21, CORE-22, CORE-23
+         Sperren: Dashboard nicht fertig; Agentenfreigabe nicht klar
+         Blockiert danach: keine
+
+[  25.0] CORE-25  | in_bearbeitung | Phase 5: Autonomer Betrieb
+         Name: Programmierbare Gesamt-Roadmap
+         Abhaengigkeiten: CORE-24
+         Sperren: CORE-24 nicht abgeschlossen; Auftragsqueue leer
+         Blockiert danach: keine
+
+[  30.0] UI01     | abgeschlossen  | UI-Strecke
+         Name: Anwaltsansicht
+         Abhaengigkeiten: CORE-09, CORE-10
+         Sperren: CORE-09 nicht abgeschlossen; CORE-10 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  31.0] UI02     | abgeschlossen  | UI-Strecke
+         Name: Tuerschwelle und Bestandsabgleich
+         Abhaengigkeiten: UI01
+         Sperren: UI01 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  31.5] UI02c    | abgeschlossen  | UI-Strecke
+         Name: Freigabe Dropdowns und Notizen
+         Abhaengigkeiten: UI02
+         Sperren: UI02 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  32.0] UI03_0   | abgeschlossen  | UI-Strecke
+         Name: Uebergabe Mandantenakte
+         Abhaengigkeiten: UI02c
+         Sperren: UI02c nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.0] UI03_1   | abgeschlossen  | UI-Strecke
+         Name: Anwalts Dreiansicht
+         Abhaengigkeiten: UI03_0
+         Sperren: UI03_0 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.1] UI03_1b  | abgeschlossen  | UI-Strecke
+         Name: OCR Uebersetzungskontrolle
+         Abhaengigkeiten: UI03_1, CORE-08
+         Sperren: UI03_1 nicht abgeschlossen; CORE-08 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.2] UI03_1c  | abgeschlossen  | UI-Strecke
+         Name: Uebersetzungsarbeitsplatz
+         Abhaengigkeiten: UI03_1b
+         Sperren: UI03_1b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.3] UI03_1d  | abgeschlossen  | UI-Strecke
+         Name: OCR Freigabeablauf
+         Abhaengigkeiten: UI03_1c
+         Sperren: UI03_1c nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.4] UI03_1e  | abgeschlossen  | UI-Strecke
+         Name: Uebergabe Freigabe
+         Abhaengigkeiten: UI03_1d
+         Sperren: UI03_1d nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.5] UI03_1f  | abgeschlossen  | UI-Strecke
+         Name: Geparkte Auftraege
+         Abhaengigkeiten: UI03_1e
+         Sperren: UI03_1e nicht abgeschlossen
+         Blockiert danach: keine
+
+[  33.6] UI03_1g  | abgeschlossen  | UI-Strecke
+         Name: Gesamtansicht
+         Abhaengigkeiten: UI03_1f
+         Sperren: UI03_1f nicht abgeschlossen
+         Blockiert danach: keine
+
+[  34.0] UI04     | abgeschlossen  | UI-Strecke
+         Name: Durchstich Sekretariat-Anwalt-Ruecklauf
+         Abhaengigkeiten: UI03_1g
+         Sperren: UI03_1g nicht abgeschlossen
+         Blockiert danach: keine
+
+[  34.5] UI04b    | abgeschlossen  | UI-Strecke
+         Name: Logikpruefung Entscheidung
+         Abhaengigkeiten: UI04
+         Sperren: UI04 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  35.0] UI05     | abgeschlossen  | UI-Strecke
+         Name: Mandantenakte Arbeitszentrale
+         Abhaengigkeiten: UI04b
+         Sperren: UI04b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  36.0] UI06     | abgeschlossen  | UI-Strecke
+         Name: Musterlauf Gesamtkette
+         Abhaengigkeiten: UI05
+         Sperren: UI05 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  36.5] UI06b    | abgeschlossen  | UI-Strecke
+         Name: Fehlerpfad Pruefung
+         Abhaengigkeiten: UI06
+         Sperren: UI06 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  37.0] UI07     | abgeschlossen  | UI-Strecke
+         Name: Betriebsvorbereitung
+         Abhaengigkeiten: UI06b
+         Sperren: UI06b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  37.5] UI07b    | abgeschlossen  | UI-Strecke
+         Name: Gesamtfreeze Demo Betriebsstrecke
+         Abhaengigkeiten: UI07
+         Sperren: UI07 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  38.0] UI08     | abgeschlossen  | UI-Strecke
+         Name: Posteingang Importstrecke
+         Abhaengigkeiten: CORE-07, UI07b
+         Sperren: CORE-07 nicht abgeschlossen; UI07b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  38.5] UI08b    | abgeschlossen  | UI-Strecke
+         Name: Fehlerpfad Pruefung Posteingang
+         Abhaengigkeiten: UI08
+         Sperren: UI08 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  38.6] UI08c    | abgeschlossen  | UI-Strecke
+         Name: Fehlerpfad Sanierungsplan Posteingang
+         Abhaengigkeiten: UI08b
+         Sperren: UI08b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  39.0] UI09     | abgeschlossen  | UI-Strecke
+         Name: Zentrale Grundschalter Profilfelder
+         Abhaengigkeiten: UI08c
+         Sperren: UI08c nicht abgeschlossen
+         Blockiert danach: keine
+
+[  40.0] UI10     | abgeschlossen  | UI-Strecke
+         Name: Profil Lesadapter
+         Abhaengigkeiten: UI09
+         Sperren: UI09 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  41.0] UI11     | abgeschlossen  | UI-Strecke
+         Name: Register Lesadapter
+         Abhaengigkeiten: UI10
+         Sperren: UI10 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  42.0] UI12     | abgeschlossen  | UI-Strecke
+         Name: Master Adapter
+         Abhaengigkeiten: UI11
+         Sperren: UI11 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  43.0] UI13     | abgeschlossen  | UI-Strecke
+         Name: Abnahme Entscheidungsuebersicht
+         Abhaengigkeiten: UI12
+         Sperren: UI12 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  44.0] UI14     | abgeschlossen  | UI-Strecke
+         Name: Ausfuehrungs-Nachlaufzentrale
+         Abhaengigkeiten: UI13, CORE-25
+         Sperren: UI13 nicht abgeschlossen; CORE-25 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  50.0] KM12     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Originalabbildung
+         Abhaengigkeiten: CORE-08
+         Sperren: CORE-08 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  50.5] KM12b    | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Uebergrosse Arbeitsabbildungen
+         Abhaengigkeiten: KM12
+         Sperren: KM12 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  51.0] KM13     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: OCR-Pipeline
+         Abhaengigkeiten: KM12b
+         Sperren: KM12b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  51.5] KM13b    | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Tesseract Sprachpaket Abgleich
+         Abhaengigkeiten: KM13
+         Sperren: KM13 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  52.0] KM14     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Maschinenformat Fundstellenstruktur
+         Abhaengigkeiten: KM13b
+         Sperren: KM13b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  53.0] KM15     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Arbeitsuebersetzung Fundstellenbindung
+         Abhaengigkeiten: KM14
+         Sperren: KM14 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  54.0] KM16     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Sprachrouting vor OCR
+         Abhaengigkeiten: KM15
+         Sperren: KM15 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  55.0] KM17     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Sprachrouting OCR Integration
+         Abhaengigkeiten: KM16
+         Sperren: KM16 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  55.5] KM17c    | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Einzelseite KM12b OCR
+         Abhaengigkeiten: KM17
+         Sperren: KM17 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  56.0] KM18     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: OCR Ergebnisdiagnose
+         Abhaengigkeiten: KM17c
+         Sperren: KM17c nicht abgeschlossen
+         Blockiert danach: keine
+
+[  57.0] KM19     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: OCR Gesamtkette synchronisieren
+         Abhaengigkeiten: KM18
+         Sperren: KM18 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  57.5] KM19b    | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: OCRBetreuer Korrektur
+         Abhaengigkeiten: KM19
+         Sperren: KM19 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  58.0] KM20     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Konsolidierung
+         Abhaengigkeiten: KM19b
+         Sperren: KM19b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  58.5] KM20b    | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Bereinigung
+         Abhaengigkeiten: KM20
+         Sperren: KM20 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  59.0] KM21     | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: Translation Environment
+         Abhaengigkeiten: KM20b
+         Sperren: KM20b nicht abgeschlossen
+         Blockiert danach: keine
+
+[  59.5] KM21b0   | abgeschlossen  | OCR- und Uebersetzungsstrecke
+         Name: ARGOS Modellbereitstellung
+         Abhaengigkeiten: KM21
+         Sperren: KM21 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  60.0] POST01   | abgeschlossen  | Posteingang und Vorzimmer
+         Name: Posteingang Intake
+         Abhaengigkeiten: CORE-07
+         Sperren: CORE-07 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  61.0] POST02   | abgeschlossen  | Posteingang und Vorzimmer
+         Name: Posteingang Schlusskontrolle
+         Abhaengigkeiten: POST01
+         Sperren: POST01 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  62.0] POST03   | abgeschlossen  | Posteingang und Vorzimmer
+         Name: Posteingang Endabnahme
+         Abhaengigkeiten: POST02
+         Sperren: POST02 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  63.0] VZ01     | abgeschlossen  | Posteingang und Vorzimmer
+         Name: Vorzimmer Kommunikationsparameter
+         Abhaengigkeiten: POST03
+         Sperren: POST03 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  70.0] Q01      | abgeschlossen  | Quellen und Agenten
+         Name: Quellenbetreuer Fachanwaltsraster
+         Abhaengigkeiten: CORE-10
+         Sperren: CORE-10 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  71.0] Q02      | abgeschlossen  | Quellen und Agenten
+         Name: Quellenkandidaten EU SE Official Sources
+         Abhaengigkeiten: Q01
+         Sperren: Q01 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  72.0] Q03      | abgeschlossen  | Quellen und Agenten
+         Name: Source Adapter Healthcheck Framework
+         Abhaengigkeiten: Q02
+         Sperren: Q02 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  73.0] AG01     | abgeschlossen  | Quellen und Agenten
+         Name: Agentenbearbeitung Grundmodul
+         Abhaengigkeiten: CORE-10
+         Sperren: CORE-10 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  74.0] AG02     | abgeschlossen  | Quellen und Agenten
+         Name: Agent Dokumentart erkennen
+         Abhaengigkeiten: AG01
+         Sperren: AG01 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  75.0] AG03     | abgeschlossen  | Quellen und Agenten
+         Name: Agent Sprache Uebersetzung
+         Abhaengigkeiten: AG02
+         Sperren: AG02 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  76.0] AG04     | abgeschlossen  | Quellen und Agenten
+         Name: Agent Sachverhaltsbezug
+         Abhaengigkeiten: AG03
+         Sperren: AG03 nicht abgeschlossen
+         Blockiert danach: keine
+
+[  80.0] WINAPP   | offen          | Build und Release
+         Name: Windows App Build und Release
+         Abhaengigkeiten: CORE-12, UI14
+         Sperren: UI-Grundlagen nicht fertig; Windows-App-Architektur nicht final
+         Blockiert danach: keine
+
+[  90.0] DEPLOY   | offen          | Build und Release
+         Name: Deployment und Betrieb
+         Abhaengigkeiten: WINAPP, CORE-20
+         Sperren: Windows-App nicht gebaut; Datenschutz nicht definiert
+         Blockiert danach: keine
+
+[ 100.0] CORE-26  | gesperrt       | Abschluss
+         Name: Gesamtabnahme und Produktionsfreigabe
+         Abhaengigkeiten: CORE-25, DEPLOY, UI14, KM21b0
+         Sperren: Menschliche Freigabe erforderlich; Nicht alle Module abgeschlossen; Keine Beweiswuerdigung durch KI
+         Blockiert danach: ALLE
+
+--------------------------------------------------------------------------------
+ENDE BERICHT
+================================================================================
+[2026-05-18T05:34:45+0000] Bericht geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\Reports\CORE25_GESAMT_ROADMAP_BERICHT.txt
+[2026-05-18T05:34:45+0000] Roadmap-JSON geschrieben: I:\KI_Legal_Project\ALIN_Neustart_Core\08_Migration\09_Manifest\CORE25_gesamt_roadmap.json

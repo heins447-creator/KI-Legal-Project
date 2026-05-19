@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Berechtigungen",
+  "description": "Schema für Berechtigungen.",
+  "type": "object",
+  "required": ["schema_version", "berechtigung_id", "rolle", "aktion", "erlaubt"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "berechtigung_id": { "type": "string" },
+    "rolle": {
+      "type": "string",
+      "enum": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"]
+    },
+    "aktion": { "type": "string" },
+    "erlaubt": { "type": "boolean" },
+    "einschraenkungen": { "type": "string" }
+  }
+}

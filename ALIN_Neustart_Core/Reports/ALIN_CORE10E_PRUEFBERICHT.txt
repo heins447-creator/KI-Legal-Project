@@ -1,0 +1,29 @@
+================================================================================
+ALIN CORE-10e PRÜFBERICHT
+================================================================================
+Bericht-ID    : CORE10E-PRUEF-20260516
+Erstellt      : 2026-05-16 19:40:00
+Prüfdatei     : alin_core10e_pruefung.py
+Exit-Code     : 0
+Status        : BESTANDEN
+================================================================================
+
+PRÜFPUNKTE
+----------
+[OK] check_ui01_anwaltsansicht_v1 hat 1 Abhaengigkeit(en)
+[OK] Alle sind im Register vorhanden: ['ui01_anwaltsansicht_v1']
+
+ERGEBNIS
+--------
+Keine Fehler gefunden.
+Alle Abhaengigkeiten von check_ui01_anwaltsansicht_v1 sind im Modulregister
+als existierende Modul-IDs vorhanden.
+
+MODIFIZIERTE DATEI
+------------------
+ALIN_Neustart_Core/01_Register/modulregister.json
+  Zeile 4381: "ui01_anwaltsansicht" -> "ui01_anwaltsansicht_v1"
+
+================================================================================
+ENDE DER PRÜFUNG
+================================================================================

@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Skillregister",
+  "description": "Zentrales Verzeichnis aller Skills und Agenten-Fähigkeiten.",
+  "type": "object",
+  "required": ["schema_version", "register_id", "letzte_aenderung", "eintraege"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "register_id": { "type": "string", "const": "skillregister" },
+    "letzte_aenderung": { "type": "string", "format": "date-time" },
+    "eintraege": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "skillname",
+          "zweck",
+          "eingabe",
+          "ausgabe",
+          "modellabhaengigkeit",
+          "fallback",
+          "teststatus",
+          "darf_bewerten",
+          "darf_beweiswuerdigen",
+          "warnungen"
+        ],
+        "properties": {
+          "skill_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "skillname": { "type": "string" },
+          "zweck": { "type": "string" },
+          "eingabe": { "type": "string", "description": "Beschreibung der Eingabe" },
+          "ausgabe": { "type": "string", "description": "Beschreibung der Ausgabe" },
+          "modellabhaengigkeit": { "type": "string", "description": "Welches Modell/Tool erforderlich ist" },
+          "fallback": { "type": "string", "description": "skill_id des Fallbacks oder 'manuell'" },
+          "teststatus": {
+            "type": "string",
+            "enum": ["geprueft", "testbar", "ungeprueft", "gesperrt"]
+          },
+          "darf_bewerten": { "type": "boolean", "description": "Darf der Skill rechtlich bewerten? Immer false." },
+          "darf_beweiswuerdigen": { "type": "boolean", "description": "Darf der Skill Beweise würdigen? Immer false." },
+          "warnungen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

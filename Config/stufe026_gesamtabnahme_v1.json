@@ -1,0 +1,30 @@
+{
+  "modul_id": "STUFE-026",
+  "stufe_id": "STUFE-026",
+  "name": "Gesamtabnahme und Produktionsfreigabe (Vorbereitung)",
+  "version": "1.0.0",
+  "beschreibung": "Pruefung aller Module, Reports, Configs, Roadmap-Vollstaendigkeit. KEINE Produktionsfreigabe.",
+  "eingaben": [
+    "ALIN_Neustart_Core/08_Migration/09_Manifest/CORE25_gesamt_roadmap.json",
+    "ALIN_Neustart_Core/Reports/",
+    "Config/"
+  ],
+  "ausgaben": [
+    "ALIN_Neustart_Core/Reports/CORE26_GESAMTABNAHME_BERICHT.txt",
+    "ALIN_Neustart_Core/16_Build_Release/RELEASE_CHECKLIST.md"
+  ],
+  "sicherheitsgrenzen": [
+    "KEINE Produktionsfreigabe durch diesen Lauf",
+    "Produktionsfreigabe nur durch menschlichen Entscheid",
+    "DEPLOY bleibt blockiert"
+  ],
+  "tests": [
+    "Alle Reports vorhanden",
+    "Alle Configs gueltig",
+    "Roadmap vollstaendig",
+    "Release-Checkliste aktualisiert"
+  ],
+  "python_runner": "Scripts/python_runner/stufe026_gesamtabnahme.py",
+  "check_file": "Scripts/python_runner/check_stufe026_gesamtabnahme.py",
+  "powershell_starter": "Scripts/STUFE026_GESAMTABNAHME_AUTOLAUF.ps1"
+}

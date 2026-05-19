@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Quellen-Resolver",
+  "description": "Schema für den Quellen-Resolver.",
+  "type": "object",
+  "required": ["schema_version", "resolver_id", "eingabe", "ausgabe"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "resolver_id": { "type": "string", "const": "quellen_resolver" },
+    "eingabe": {
+      "type": "object",
+      "required": ["land", "rechtsgebiet", "sprache"],
+      "properties": {
+        "land": { "type": "string" },
+        "rechtsgebiet": { "type": "string" },
+        "sprache": { "type": "string" },
+        "quellentyp": { "type": "string", "enum": ["gesetz", "verordnung", "gerichtsentscheidung", "fachliteratur", "datenbank"] }
+      }
+    },
+    "ausgabe": {
+      "type": "object",
+      "required": ["quellen", "empfohlene_quelle"],
+      "properties": {
+        "quellen": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "quelle_id": { "type": "string" },
+              "name": { "type": "string" },
+              "adapter": { "type": "string" },
+              "darf_verwendet_werden": { "type": "boolean" },
+              "offline_verfuegbar": { "type": "boolean" }
+            }
+          }
+        },
+        "empfohlene_quelle": { "type": "string" },
+        "warnungen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

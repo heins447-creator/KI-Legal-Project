@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "stage_id": "EXT-002",
+  "stage_name": "PaddleOCR / Layout-Analyse",
+  "purpose": "Vorbereitung der OCR-Strecke mit PaddleOCR fuer komplexe Layouts. Synthetische Layout-Daten als Infrastruktur-Grundlage.",
+  "dependencies": ["EXT-001", "KM21b0", "STUFE-008"],
+  "security_rules": {
+    "cloud_verboten": true,
+    "online_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_modelle": true
+  },
+  "paddleocr": {
+    "framework": "PaddleOCR",
+    "version": "2.7.3",
+    "install_required": true,
+    "offline_faehig": false,
+    "modelle": ["ppocr_v4", "layout_v2"]
+  },
+  "layout_block_typen": ["text", "tabelle", "spalte", "kopfzeile", "fusszeile", "bild", "fussnote"],
+  "ausgaben": {
+    "install_script": "ALIN_Neustart_Core/09_Toolbibliothek/01_Download_Quellen/PADDLEOCR_INSTALL.ps1",
+    "bericht": "ALIN_Neustart_Core/Reports/EXT002_PADDLEOCR_LAYOUT_BERICHT.txt"
+  }
+}

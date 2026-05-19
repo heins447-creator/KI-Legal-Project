@@ -1,0 +1,36 @@
+PHASE 0, AP 0.1 DEPENDENCY-SETUP BERICHT
+======================================================================
+Erstellt: 2026-05-19 05:00:28
+Arbeitswurzel: I:\KI_Legal_Project\ALIN_Neustart_Core
+
+ERGEBNIS
+----------------------------------------------------------------------
+pyproject.toml, requirements.lock und Offline-Wheelhouse-Policy sind angelegt.
+Es wurde keine Installation und kein Internetzugriff ausgefuehrt.
+
+UV-STATUS
+----------------------------------------------------------------------
+uv verfuegbar: nein
+uv Ausgabe: [WinError 2] Das System kann die angegebene Datei nicht finden
+
+LOCKFILE
+----------------------------------------------------------------------
+Lockfile: requirements.lock
+Gepinnte Pakete: 17
+
+WHEELHOUSE
+----------------------------------------------------------------------
+Pfad: Wheelhouse/python
+Status: Struktur angelegt, Spiegelbefuellung steht noch aus.
+
+NAECHSTER KONTROLLIERTER SCHRITT
+----------------------------------------------------------------------
+uv-Binary und Wheelhouse in Phase 0/1 nur nach ausdruecklicher Freigabe bereitstellen.
+
+HINWEIS
+----------------------------------------------------------------------
+Ein echtes uv.lock wurde noch nicht generiert, weil uv nicht installiert ist und keine Installation ohne Zustimmung erfolgt.
+Der aktuelle Lock ist ein offline nutzbares requirements.lock fuer uv pip sync.
+
+ENDE BERICHT
+======================================================================

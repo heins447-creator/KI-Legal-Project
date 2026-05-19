@@ -1,0 +1,94 @@
+============================================================
+CORE-13 – ALTBESTAND INVENTUR BERICHT
+============================================================
+
+Zeitstempel: 2026-05-18T01:10:18.508872
+Modus: NUR LESEND – keine Dateien verschoben, gelöscht oder umbenannt
+Produktivfreigabe: NEIN
+
+ZUSAMMENFASSUNG
+----------------------------------------
+Gescannte Dateien:     98436
+Ausgeschlossen:        3372
+Dubletten (SHA):       17671
+Sperrhinweise:         8093
+Fehler:                0
+Warnungen:             0
+
+KLASSIFIKATIONEN
+----------------------------------------
+  AKTIV                        311
+  ERSETZT                       89
+  ALT_ABER_NOCH_RELEVANT         0
+  TESTREST                    3359
+  LAUFZEIT_ARTEFAKT           1396
+  LOG_BERICHT                 1557
+  CONFIG_LOKAL                  10
+  DUBLETTE                   64820
+  UNGEKLÄRT                  25375
+  SPERREN                     1519
+
+REGISTER-STATUS
+----------------------------------------
+  modulregister             OK
+  ressourcenregister        OK
+  skillregister             OK
+  toolregister              OK
+  quellenregister           OK
+  lizenzregister            OK
+  update_register           OK
+  sperrregister             OK
+
+AUSGESCHLOSSENE BEREICHE (Beispiele)
+----------------------------------------
+  AnythingLLM_Storage/Local Storage/leveldb/LOG.old
+  AnythingLLM_Storage/Session Storage/LOG.old
+  AnythingLLM_Storage/shared_proto_db/LOG.old
+  AnythingLLM_Storage/shared_proto_db/metadata/LOG.old
+  AnythingLLM_Storage/VideoDecodeStats/LOG.old
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/AbstractAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/AbstractStatusAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/Alert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/ExceptionOnStatusAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/LogOnStatusAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/SilentOnAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/SilentOnStatusAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/StatusAlert.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/detector/AlertDetector.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/detector/StatusDetector.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/exception/AlertException.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/handler/AlertHandler.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/handler/CompositeAlertHandler.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/handler/LogHandler$1.class
+  Tools/DSS/dss-6.4/dss-alert/target/classes/eu/europa/esig/dss/alert/handler/LogHandler.class
+  ... und 3352 weitere
+
+SPERRHINWEISE (nach Schweregrad)
+----------------------------------------
+  KRITISCH   1740
+  HOCH       6125
+  MITTEL     228
+  NIEDRIG    0
+
+WICHTIGE RISIKEN
+----------------------------------------
+  KRITISCHE Hinweise: 1740
+    Agentensteuerung/09_Analysebericht_Validator/01_Skript/analysebericht_validator.py – API_KEY
+    Config/ui07_betriebsvorbereitung_v1.json – PRODUKTIVFREIGABE
+    Config/ui08b_fehlerpfad_pruefung_posteingang_v1.json – PRODUKTIVFREIGABE
+    Config/ui08c_fehlerpfad_sanierungsplan_posteingang_v1.json – PRODUKTIVFREIGABE
+    Config/ui08_posteingang_importstrecke_v1.json – PRODUKTIVFREIGABE
+    Config/ui09_zentrale_grundschalter_profilfelder_v1.json – PRODUKTIVFREIGABE
+    Config/ui10_profil_lesadapter_v1.json – PRODUKTIVFREIGABE
+    Config/ui11_register_lesadapter_v1.json – PRODUKTIVFREIGABE
+    Config/ui12_master_adapter_v1.json – PRODUKTIVFREIGABE
+    Config/ui13_abnahme_entscheidungsuebersicht_v1.json – PRODUKTIVFREIGABE
+
+NÄCHSTE EMPFOHLENE SCHRITTE
+----------------------------------------
+1. CORE-14: Bereinigung der Dubletten und Testreste planen
+2. CORE-15: SPERREN-Kandidaten manuell prüfen und freigeben oder löschen
+3. CORE-16: AKTIV- und ALT_ABER_NOCH_RELEVANT-Dateien in Register überführen
+
+============================================================
+ENDE BERICHT

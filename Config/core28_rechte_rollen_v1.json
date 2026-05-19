@@ -1,0 +1,35 @@
+{
+  "modul_id": "CORE-28",
+  "name": "Rechte und Rollen",
+  "version": "1.0.0",
+  "beschreibung": "Validiert Rollenmodell, Berechtigungs-Schema und Freigaberegeln im Projekt.",
+  "referenziert": {
+    "roadmap_stufe": "STUFE-019",
+    "quellen": [
+      "ALIN_Neustart_Core/02_Module_Aktiv/CORE28_Rechte_Rollen/ROLLENMODELL.md",
+      "ALIN_Neustart_Core/02_Module_Aktiv/CORE28_Rechte_Rollen/FREIGABEREGELN.md",
+      "ALIN_Neustart_Core/02_Module_Aktiv/CORE28_Rechte_Rollen/BERECHTIGUNGEN.schema.json"
+    ],
+    "ausgaben": [
+      "ALIN_Neustart_Core/Reports/CORE28_RECHTE_ROLLEN_BERICHT.txt"
+    ]
+  },
+  "pfad_pruefung": {
+    "basis": "ALIN_Neustart_Core/18_Rechte_Rollen/",
+    "schreibregel": "nur_in_reports"
+  },
+  "validierung": {
+    "rollenmodell_pflichtfelder": ["Rolle", "Beschreibung", "Berechtigungen"],
+    "freigaberegeln_pflichtabschnitte": ["Grundsatz", "Regeln", "Widerruf"],
+    "berechtigungen_schema_required": ["schema_version", "berechtigung_id", "rolle", "aktion", "erlaubt"],
+    "erlaubte_rollen": ["Sekretariat", "Anwalt", "Administrator", "System", "Agent", "Entwickler"]
+  },
+  "bericht": {
+    "pfad": "ALIN_Neustart_Core/Reports/CORE28_RECHTE_ROLLEN_BERICHT.txt",
+    "template": "standard_zeilenbericht"
+  },
+  "python_toolchain": {
+    "runner": "Scripts/python_runner/core28_rechte_rollen.py",
+    "check": "Scripts/python_runner/check_core28_rechte_rollen.py"
+  }
+}

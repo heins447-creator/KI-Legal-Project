@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "status_id": "eingang_status",
+  "beschreibung": "Statusmodell für Dokumenteingang",
+  "zustaende": [
+    "roh_eingang",
+    "technisch_geprueft",
+    "gesperrt",
+    "quarantaene",
+    "sprachpruefung",
+    "sekretariat_prueft",
+    "anwaltvorlage"
+  ],
+  "uebergaenge": [
+    {"von": "roh_eingang", "nach": "technisch_geprueft", "bedingung": "Sicherheitsgate bestanden"},
+    {"von": "roh_eingang", "nach": "gesperrt", "bedingung": "Sicherheitsgate fehlgeschlagen"},
+    {"von": "roh_eingang", "nach": "quarantaene", "bedingung": "Verdacht auf Schadsoftware"},
+    {"von": "technisch_geprueft", "nach": "sprachpruefung", "bedingung": "Sprachgate gestartet"},
+    {"von": "sprachpruefung", "nach": "sekretariat_prueft", "bedingung": "Sprache erkannt"},
+    {"von": "sekretariat_prueft", "nach": "anwaltvorlage", "bedingung": "Sekretariat freigegeben"},
+    {"von": "sekretariat_prueft", "nach": "gesperrt", "bedingung": "Sekretariat gesperrt"}
+  ],
+  "fehlerklassen": [
+    "hinweis",
+    "warnung",
+    "sperre",
+    "abbruch",
+    "manuelle_pruefung_erforderlich",
+    "technisch_nicht_verfuegbar",
+    "fachlich_nicht_entscheidbar"
+  ]
+}

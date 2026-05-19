@@ -1,0 +1,121 @@
+======================================================================
+CORE-10g REVIEWLISTEN BERICHT
+======================================================================
+Erstellt: 2026-05-16T19:22:24.897306+00:00
+Gesamt-Module im Register: 163
+
+1. DB-ÄNDERNDE MODULE
+----------------------------------------
+  Anzahl: 18
+    - 001_db_schema_audit [register] status=produktiv
+    - 002_apply_posteingang_schema [posteingang] status=produktiv
+    - 003_verify_posteingang_schema [posteingang] status=produktiv
+    - 013_posteingang_db_altlasten_cleanup [posteingang] status=produktiv
+    - 021_posteingang_db_dateien_auswahl_testlauf_v1 [posteingang] status=produktiv
+    - 022_posteingang_db_testlauf_auswertung_v1 [posteingang] status=produktiv
+    - 001_posteingang_intake_schema [posteingang] status=produktiv
+    - 004_language_context_v2 [register] status=produktiv
+    - 005_dokumentsprachprofil_v1 [sprache] status=produktiv
+    - 006_vorzimmer_kommunikationsparameter_v1 [vorzimmer] status=produktiv
+    - 007_anwaltvorlage_grundmodul_v1 [anwalt] status=produktiv
+    - 008_agentenbearbeitung_grundmodul_v1 [agent] status=produktiv
+    - 009_agent_dokumentart_erkennen_v1 [agent] status=produktiv
+    - 010_agent_sprache_uebersetzung_v1 [agent] status=produktiv
+    - 011_agent_sachverhaltsbezug_v1 [agent] status=produktiv
+    - 011_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+    - 012_agenten_kontext_skill_register_v1 [agent] status=produktiv
+    - 014_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+
+2. ONLINE-FÄHIGE MODULE
+----------------------------------------
+  Anzahl: 14
+    - Invoke_Aider_Local [unbekannt] status=produktiv
+    - Run_Quellenbetreuer_Fachanwaltsraster [anwalt] status=produktiv
+    - Run_Quellenkandidaten_EU_SE [quellen] status=produktiv
+    - Run_Source_Adapter_Healthcheck_Framework [quellen] status=produktiv
+    - Update_External_Tools_Library [unbekannt] status=produktiv
+    - 046_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+    - 047_check_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+    - 051_quellenkandidaten_eu_se_v1 [quellen] status=produktiv
+    - 052_check_quellenkandidaten_eu_se_v1 [quellen] status=produktiv
+    - 053_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+    - 054_check_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+    - km20_quellen_fundstellen_konsolidierung [quellen] status=produktiv
+    - 011_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+    - 014_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+
+3. INSTALLATIONS-/UPDATE-BEZOGENE MODULE
+----------------------------------------
+  Anzahl: 5
+    - Update_External_Tools_Library [unbekannt] keyword=update
+    - _patch_css [Allgemein] keyword=patch
+    - _patch_html [ui] keyword=patch
+    - km13b_tesseract_sprachpaket_abgleich [ocr] keyword=install
+    - km21_translation_env_prepare [sprache] keyword=install
+
+4. RECHTSBEWERTENDE MODULE
+----------------------------------------
+  Anzahl: 0
+
+5. BEWEISWÜRDIGENDE MODULE
+----------------------------------------
+  Anzahl: 0
+
+6. ORIGINAL-ÄNDERNDE MODULE
+----------------------------------------
+  Anzahl: 2
+    - _patch_css [Allgemein] status=produktiv
+    - _patch_html [ui] status=produktiv
+
+7. PRODUKTIV FREIGEGEBENE MODULE
+----------------------------------------
+  Anzahl: 0
+
+8. RISIKOKLASSEN-VERTEILUNG
+----------------------------------------
+  KRITISCH:  2 Module
+  HOCH:      14 Module
+  MITTEL:    16 Module
+  NIEDRIG:   131 Module
+
+9. KRITISCHE MODULE (Detail)
+----------------------------------------
+    - 011_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+      Risikogrund: darf_datenbank_aendern=true, darf_online_gehen=true
+    - 014_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+      Risikogrund: darf_datenbank_aendern=true, darf_online_gehen=true
+
+10. HOCHRISIKO-MODULE (Detail)
+----------------------------------------
+    - Invoke_Aider_Local [unbekannt] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - Run_Quellenbetreuer_Fachanwaltsraster [anwalt] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - Run_Quellenkandidaten_EU_SE [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - Run_Source_Adapter_Healthcheck_Framework [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - Update_External_Tools_Library [unbekannt] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 046_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 047_check_quellenbetreuer_fachanwaltsraster_v1 [anwalt] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 051_quellenkandidaten_eu_se_v1 [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 052_check_quellenkandidaten_eu_se_v1 [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 053_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - 054_check_source_adapter_healthcheck_framework_v1 [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+    - _patch_css [Allgemein] status=produktiv
+      Risikogrund: darf_originale_veraendern=true
+    - _patch_html [ui] status=produktiv
+      Risikogrund: darf_originale_veraendern=true
+    - km20_quellen_fundstellen_konsolidierung [quellen] status=produktiv
+      Risikogrund: darf_online_gehen=true
+
+======================================================================
+ENDE BERICHT
+======================================================================

@@ -1,0 +1,45 @@
+﻿============================================================
+KM20 – QUELLEN- UND FUNDSTELLENKONSOLIDIERUNG – FINALBERICHT
+============================================================
+Zeitpunkt: 2026-05-14T13:35 UTC
+
+--- Lieferumfang ---
+1. Migration: N/V (keine DB betroffen)
+2. Python-Läufer: Scripts/python_runner/km20_quellen_fundstellen_konsolidierung.py
+3. Prüfdatei: Scripts/python_runner/km20_pruefung.py
+4. PowerShell-Starter: Scripts/Run_KM20_Konsolidierung.ps1
+5. Konfiguration: Config/km20_quellen_fundstellen_konsolidierung_v1.json
+6. Dokumentation: Projektplanung/KM20_KONSOLIDIERUNG.md
+7. Testlauf: 15/15 Selbsttest, 20/20 Prüfung
+8. Bericht: Windows_App/Logs/km20_finalbericht.txt (diese Datei)
+
+--- Ergebnisse ---
+- 25 Seiten konsolidiert (24 echte, 1 Testdummy)
+- 4 Originale
+- 4.560 Fundstellen (KM14) = 4.560 Übersetzungseinheiten (KM15)
+- Fundstellen/UE-Konsistenz: 1:1 ✅
+- Rückbindungstiefe max: 7 Module
+- 27 Unsicherheiten dokumentiert
+- Alle Seiten mit BBox-Koordinaten
+
+--- Grenzen eingehalten ---
+- Keine Originaländerung
+- Keine OCR/Übersetzung/DB-Änderung
+- Kein Internet
+- Keine Installation
+- Keine Rechtsbewertung
+
+--- Prüfungen ---
+- Selbsttest: 15/15 ✅
+- Prüfdatei: 20/20 ✅
+- Fundstellen-Konsistenz mit KM14: ✅ (exakt 4.560)
+- ÜE-Konsistenz mit KM15: ✅ (exakt 4.560)
+- Rückbindungskette lückenlos: ✅
+
+--- Fehler: 0, Warnungen: 0 ---
+
+--- Nächster empfohlener Auftrag ---
+Lokales Übersetzungsmodell in Tools/Translation bereitstellen
+(Argos Translate / LibreTranslate), dann KM15-Neulauf mit
+aktiver Übersetzung.
+============================================================

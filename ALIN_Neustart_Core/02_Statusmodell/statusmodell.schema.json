@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ALIN Statusmodell Schema",
+  "description": "Schema für alle Statusmodelle in ALIN.",
+  "type": "object",
+  "required": ["schema_version", "status_id", "beschreibung", "zustaende", "uebergaenge", "fehlerklassen"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0.0"] },
+    "status_id": { "type": "string", "pattern": "^[a-z_]+$" },
+    "beschreibung": { "type": "string" },
+    "zustaende": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 2
+    },
+    "uebergaenge": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["von", "nach", "bedingung"],
+        "properties": {
+          "von": { "type": "string" },
+          "nach": { "type": "string" },
+          "bedingung": { "type": "string" }
+        }
+      }
+    },
+    "fehlerklassen": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "hinweis",
+          "warnung",
+          "sperre",
+          "abbruch",
+          "manuelle_pruefung_erforderlich",
+          "technisch_nicht_verfuegbar",
+          "fachlich_nicht_entscheidbar"
+        ]
+      }
+    }
+  }
+}

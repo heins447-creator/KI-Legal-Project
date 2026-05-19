@@ -1,0 +1,55 @@
+================================================================================
+ALIN CORE-10f PRÜFBERICHT
+================================================================================
+Bericht-ID    : CORE10F-PRUEF-20260516
+Erstellt      : 2026-05-16 19:17:00
+Prüfdatei     : alin_core10f_pruefung.py
+Exit-Code     : 0
+Status        : BESTANDEN
+================================================================================
+
+PRÜFPUNKTE
+----------
+[OK] modulregister.json vorhanden und lesbar
+[OK] 163 Module geprüft
+[OK] 0 generische Platzhalter gefunden
+[OK] Alle 48 PowerShell-Starter haben modulspezifische eingabe/ausgabe
+
+ERGEBNIS
+--------
+Keine Fehler gefunden.
+Generische Platzhalter "Konfiguration und Umgebungsvariablen" /
+"Prozess-Start, Log-Datei, Exit-Code" sind vollständig entfernt.
+
+SCHNITTSTELLEN-VERBESSE RUNG
+----------------------------
+  OCR / Arbeitsabbildung:        11 Module verfeinert
+  Übersetzung:                    2 Module verfeinert
+  Agenten:                        6 Module verfeinert
+  Posteingang / Vorzimmer:        7 Module verfeinert
+  Quellen / Rechtsquellen:        3 Module verfeinert
+  UI / Anwalt / Mandant:          8 Module verfeinert
+  Tools / External / Hilfe:      11 Module verfeinert
+  ----------------------------------------
+  Gesamt:                        48 Module verfeinert
+
+NEUE DATEIEN
+------------
+  ALIN_Neustart_Core/Scripts/alin_core10f_platzhalter_verfeinern.py
+  ALIN_Neustart_Core/Scripts/alin_core10f_pruefung.py
+  ALIN_Neustart_Core/Scripts/Run_CORE10f_Platzhalter_Verfeinern.ps1
+  ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE10f_Platzhalter_Verfeinern.md
+  ALIN_Neustart_Core/Reports/ALIN_CORE10F_PLATZHALTER_BERICHT.txt
+
+GEÄNDERTE DATEIEN
+------------------
+  ALIN_Neustart_Core/01_Register/modulregister.json
+    - 48 PowerShell-Starter: eingabe/ausgabe von generisch auf modulspezifisch
+
+FOLGEAUFTRÄGE
+-------------
+[ ] CORE-10g: P06/P07 Reviewlisten dokumentieren (DB-ändernde und online-fähige Module)
+
+================================================================================
+ENDE DER PRÜFUNG
+================================================================================

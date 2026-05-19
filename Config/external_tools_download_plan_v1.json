@@ -1,0 +1,70 @@
+﻿{
+    "created_at":  "2026-05-11 10:27:40",
+    "root":  "I:\\KI_Legal_Project",
+    "library_root":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary",
+    "downloads_root":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads",
+    "wheel_root":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\PythonWheelhouse",
+    "note":  "Nur Bibliothek und Downloadplan. Installation nur durch gesonderten Auftrag.",
+    "winget_packages":  [
+                            {
+                                "tool_key":  "7zip",
+                                "winget_id":  "7zip.7zip",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\7zip"
+                            },
+                            {
+                                "tool_key":  "tesseract",
+                                "winget_id":  "UB-Mannheim.TesseractOCR",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\tesseract"
+                            },
+                            {
+                                "tool_key":  "ghostscript",
+                                "winget_id":  "ArtifexSoftware.Ghostscript",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\ghostscript"
+                            },
+                            {
+                                "tool_key":  "qpdf",
+                                "winget_id":  "QPDF.qpdf",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\qpdf"
+                            },
+                            {
+                                "tool_key":  "libreoffice",
+                                "winget_id":  "TheDocumentFoundation.LibreOffice",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\libreoffice"
+                            },
+                            {
+                                "tool_key":  "imagemagick",
+                                "winget_id":  "ImageMagick.ImageMagick",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\imagemagick"
+                            },
+                            {
+                                "tool_key":  "exiftool",
+                                "winget_id":  "OliverBetz.ExifTool",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\exiftool"
+                            },
+                            {
+                                "tool_key":  "clamav",
+                                "winget_id":  "ClamAV.ClamAV",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\clamav"
+                            },
+                            {
+                                "tool_key":  "java",
+                                "winget_id":  "EclipseAdoptium.Temurin.21.JRE",
+                                "download_dir":  "I:\\KI_Legal_Project\\Tools\\_ToolLibrary\\Downloads\\java"
+                            }
+                        ],
+    "python_packages_core":  [
+                                 "pymupdf",
+                                 "pillow",
+                                 "numpy",
+                                 "opencv-python",
+                                 "python-docx",
+                                 "openpyxl",
+                                 "duckdb",
+                                 "pytesseract",
+                                 "pyyaml"
+                             ],
+    "python_packages_later":  [
+                                  "ocrmypdf",
+                                  "paddleocr"
+                              ]
+}

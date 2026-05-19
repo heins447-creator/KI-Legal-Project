@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "stage_id": "EXT-005",
+  "stage_name": "Semantische Suche in Dokumenten",
+  "purpose": "Lokale semantische Suche ueber Dokumenteninhalte mit TF-IDF-basierten Vektor-Embeddings. Offline-faehig, keine externen Modelle.",
+  "dependencies": ["EXT-001", "EXT-002", "EXT-004"],
+  "security_rules": {
+    "cloud_verboten": true,
+    "online_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_modelle": true
+  },
+  "embedding": {
+    "model": "tfidf_numpy_local",
+    "dimension": "dynamisch",
+    "framework": "NumPy",
+    "offline_faehig": true
+  },
+  "ausgaben": {
+    "bericht": "ALIN_Neustart_Core/Reports/EXT005_SEMANTISCHE_SUCHE_BERICHT.txt"
+  }
+}

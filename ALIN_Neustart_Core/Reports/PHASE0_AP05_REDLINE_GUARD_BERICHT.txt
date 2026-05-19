@@ -1,0 +1,23 @@
+PHASE 0, AP 0.5 REDLINE-GUARD BERICHT
+======================================================================
+Erstellt: 2026-05-19 11:07:40
+
+ERGEBNIS
+----------------------------------------------------------------------
+Rote Linien sind als technische JSON-Regeln angelegt.
+Regeln: 10
+
+SMOKE-TESTS
+----------------------------------------------------------------------
+Verbotene Beispielaktion: blocked
+Erlaubte Beispielaktion: allowed
+
+SPERREN
+----------------------------------------------------------------------
+Pfad ausserhalb Arbeitswurzel wird blockiert.
+Internet-/Fremd-API-Muster werden blockiert.
+Datenbankaenderung ohne Migration wird blockiert.
+Tuerschwelle vor Voraussetzungen wird blockiert.
+
+ENDE BERICHT
+======================================================================

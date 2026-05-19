@@ -1,0 +1,110 @@
+======================================================================
+CORE-10b RESSOURCENLUECKEN ANALYSEBERICHT
+======================================================================
+Erstellt: 2026-05-16
+Analysierte Ressourcen: 8
+
+1. REGISTERSTATUS
+----------------------------------------
+  TESS_SPA: IM REGISTER
+  TESS_NLD: IM REGISTER
+  TESS_POL: IM REGISTER
+  ARGOS_DE_ES: IM REGISTER
+  ARGOS_DE_FR: IM REGISTER
+  ARGOS_DE_NL: IM REGISTER
+  ARGOS_DE_PL: IM REGISTER
+  ARGOS_DE_SV: IM REGISTER
+
+2. LOKALE DATEIPRUEFUNG
+----------------------------------------
+  TESS_SPA (Tesseract .traineddata): VORHANDEN
+  TESS_NLD (Tesseract .traineddata): VORHANDEN
+  TESS_POL (Tesseract .traineddata): VORHANDEN
+  ARGOS_DE_ES (Argos Modellverzeichnis): NICHT VORHANDEN
+  ARGOS_DE_FR (Argos Modellverzeichnis): NICHT VORHANDEN
+  ARGOS_DE_NL (Argos Modellverzeichnis): NICHT VORHANDEN
+  ARGOS_DE_PL (Argos Modellverzeichnis): NICHT VORHANDEN
+  ARGOS_DE_SV (Argos Modellverzeichnis): NICHT VORHANDEN
+
+3. TOOL-/UPDATE-/LIZENZ-VERKNUEPFUNG
+----------------------------------------
+  TESSERACT: tool=True, update=True, lizenz=True
+  ARGOS_TRANSLATE: tool=True, update=True, lizenz=True
+
+4. MODUL-REFERENZEN (Auszug)
+----------------------------------------
+  TESS_SPA: 22 Modul(e)
+    - KM18_AUTOLAUF
+    - KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF
+    - KM19_OCRBETREUER_KORREKTUR_AUTOLAUF
+    - Run_KM13_OCR_Pipeline
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    ... und 17 weitere
+  TESS_NLD: 22 Modul(e)
+    - KM18_AUTOLAUF
+    - KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF
+    - KM19_OCRBETREUER_KORREKTUR_AUTOLAUF
+    - Run_KM13_OCR_Pipeline
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    ... und 17 weitere
+  TESS_POL: 22 Modul(e)
+    - KM18_AUTOLAUF
+    - KM19_OCR_GESAMTKETTE_SYNCHRONISIEREN_AUTOLAUF
+    - KM19_OCRBETREUER_KORREKTUR_AUTOLAUF
+    - Run_KM13_OCR_Pipeline
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    ... und 17 weitere
+  ARGOS_DE_ES: 24 Modul(e)
+    - KM21_TRANSLATION_ENV_AUTOLAUF
+    - Run_Agent_Sprache_Uebersetzung
+    - Run_Dokumentsprachprofil
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    - Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ... und 19 weitere
+  ARGOS_DE_FR: 24 Modul(e)
+    - KM21_TRANSLATION_ENV_AUTOLAUF
+    - Run_Agent_Sprache_Uebersetzung
+    - Run_Dokumentsprachprofil
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    - Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ... und 19 weitere
+  ARGOS_DE_NL: 24 Modul(e)
+    - KM21_TRANSLATION_ENV_AUTOLAUF
+    - Run_Agent_Sprache_Uebersetzung
+    - Run_Dokumentsprachprofil
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    - Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ... und 19 weitere
+  ARGOS_DE_PL: 24 Modul(e)
+    - KM21_TRANSLATION_ENV_AUTOLAUF
+    - Run_Agent_Sprache_Uebersetzung
+    - Run_Dokumentsprachprofil
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    - Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ... und 19 weitere
+  ARGOS_DE_SV: 24 Modul(e)
+    - KM21_TRANSLATION_ENV_AUTOLAUF
+    - Run_Agent_Sprache_Uebersetzung
+    - Run_Dokumentsprachprofil
+    - Run_KM13b_Tesseract_Sprachpaket_Abgleich
+    - Run_KM15_Arbeitsuebersetzung_Fundstellenbindung
+    ... und 19 weitere
+
+5. ZUSAMMENFASSUNG
+----------------------------------------
+  Alle Ressourcen im Register: JA
+  TESS_SPA, TESS_NLD, TESS_POL: lokal vorhanden, freigegeben
+  ARGOS_DE_*: nicht lokal vorhanden, als 'fehlend' markiert
+  Toolregister: ARGOS_TRANSLATE update_id korrigiert -> UPD_ARGOS
+
+6. FOLGEAUFTRAEGE
+----------------------------------------
+  [ ] Kontrollierter Download der Argos-Modelle (de-es, de-fr, de-nl, de-pl, de-sv)
+  [ ] Lizenzpruefung der heruntergeladenen Modelle
+  [ ] Healthcheck Argos Translate nach Installation
+  [ ] Toolfreigabe pruefen (darf_verwendet_werden)
+  [ ] Modulregister: darf_von_modulen_verwendet_werden auf true setzen
+
+======================================================================
+ENDE ANALYSEBERICHT
+======================================================================

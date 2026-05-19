@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "phase": "1",
+  "arbeitspaket": "1.1",
+  "name": "Endgueltige Werkzeugliste mit Lizenzcheck",
+  "datum": "2026-05-19",
+  "ziel": "16 Produktions-Tools identifiziert, lizenzgeprueft und im Toolregister dokumentiert",
+  "entfernt": [
+    {
+      "tool_id": "ABBYY",
+      "grund": "Proprietaere kommerzielle Lizenz — per Arbeitsauftrag B7 gestrichen"
+    },
+    {
+      "tool_id": "AIDER",
+      "grund": "Entwicklungswerkzeug, nicht Teil der Produktionssoftware"
+    },
+    {
+      "tool_id": "GIT",
+      "grund": "Entwicklungswerkzeug, nicht Teil der Produktionssoftware"
+    },
+    {
+      "tool_id": "SQLITE",
+      "grund": "DuckDB ist die Hauptdatenbank; SQLite nur in Python-Stdlib, kein separates Tool"
+    }
+  ],
+  "hinzugefuegt": [
+    {
+      "tool_id": "PADDLEOCR",
+      "grund": "Zweite OCR-Stufe fuer Doppel-OCR (Arbeitsauftrag B2)"
+    },
+    {
+      "tool_id": "PYHANKO",
+      "grund": "PDF-Signaturpruefung (Arbeitsauftrag C2)"
+    },
+    {
+      "tool_id": "MSOFFCRYPTO",
+      "grund": "Office-Passwortschutz-Erkennung (Arbeitsauftrag C2)"
+    },
+    {
+      "tool_id": "CLAMAV",
+      "grund": "Virenscan-Fallback (Arbeitsauftrag C1)"
+    }
+  ],
+  "lizenz_ampel": {
+    "gruen": ["PYTHON", "POWERSHELL", "DOTNET_RUNTIME", "WEBVIEW2", "DUCKDB",
+              "TESSERACT", "PADDLEOCR", "PYHANKO", "MSOFFCRYPTO",
+              "PILLOW", "NUMPY", "OPENCV", "OLLAMA"],
+    "gelb_offene_frage": ["PYMUPDF"],
+    "gelb_gpl_beachten": ["CLAMAV"],
+    "rot": []
+  },
+  "offene_lizenzfragen": [
+    "G4: PyMuPDF AGPL — vor Verkauf klaeren ob kommerzielle Lizenz benoetigt wird",
+    "G5: LLM-Modell-Lizenz (Mistral/Phi-3/Llama) — Standardmodell fuer Erstauslieferung festlegen"
+  ],
+  "abnahmekriterium_ap11": "Toolregister enthaelt genau 16 Produktions-Tools, alle mit lizenz_id, healthcheck_befehl und darf_verwendet_werden=true",
+  "naechstes_ap": "AP 1.2 — Werkzeuge offline herunterladen und SHA-256 pruefen"
+}

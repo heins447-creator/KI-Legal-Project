@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.4",
+  "name": "Strukturiertes JSON-Logging",
+  "logging": {
+    "default_app_name": "ALIN",
+    "default_log_file": "alin.jsonl",
+    "default_level": "INFO",
+    "path_policy": "%LocalAppData%/ALIN/Logs",
+    "format": "json_lines",
+    "include_fields": [
+      "timestamp",
+      "level",
+      "logger",
+      "message",
+      "module",
+      "event",
+      "context"
+    ]
+  },
+  "privacy": {
+    "real_client_data_allowed": false,
+    "external_api_allowed": false,
+    "internet_allowed": false
+  },
+  "files": {
+    "module": "alin_core/logging_config.py",
+    "runner": "Scripts/python_runner/phase0_ap04_logging_setup.py",
+    "check": "Scripts/python_runner/check_phase0_ap04_logging_setup.py",
+    "starter": "Scripts/Run_PHASE0_AP04_Logging_Setup.ps1",
+    "documentation": "Projektplanung/PHASE0_AP04_LOGGING_SETUP.md",
+    "report": "Reports/PHASE0_AP04_LOGGING_SETUP_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP04_LOGGING_SETUP_BERICHT.txt"
+  }
+}

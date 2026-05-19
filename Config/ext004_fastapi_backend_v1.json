@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "stage_id": "EXT-004",
+  "stage_name": "FastAPI-Backend fuer lokale API",
+  "purpose": "Lokales API-Backend mit FastAPI fuer interne Dienste",
+  "dependencies": ["EXT-001"],
+  "security_rules": {
+    "cloud_verboten": true,
+    "online_abfragen_verboten": true,
+    "echte_daten_verboten": true,
+    "nur_lokale_dienste": true
+  },
+  "backend": {
+    "framework": "FastAPI",
+    "framework_version": "0.128.8",
+    "server": "uvicorn",
+    "host": "127.0.0.1",
+    "port": 8744,
+    "reload": false,
+    "log_level": "info"
+  },
+  "endpoints": [
+    {
+      "path": "/",
+      "method": "GET",
+      "description": "API-Info und verfuegbare Endpunkte"
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "description": "Healthcheck mit Zeitstempel"
+    },
+    {
+      "path": "/terminologie",
+      "method": "GET",
+      "description": "Alle EU-Terminologie-Eintraege aus DuckDB"
+    },
+    {
+      "path": "/terminologie/{begriff}",
+      "method": "GET",
+      "description": "Einzelnen Terminologie-Eintrag abfragen"
+    },
+    {
+      "path": "/dokumente",
+      "method": "GET",
+      "description": "Alle Dokumente aus DuckDB"
+    }
+  ],
+  "ausgaben": {
+    "api_datei": "ALIN_Neustart_Core/25_API_Backend/alin_api_main.py",
+    "openapi_schema": "ALIN_Neustart_Core/25_API_Backend/openapi_schema.json",
+    "start_script": "ALIN_Neustart_Core/25_API_Backend/start_api.ps1",
+    "bericht": "ALIN_Neustart_Core/Reports/EXT004_FASTAPI_BACKEND_BERICHT.txt"
+  }
+}

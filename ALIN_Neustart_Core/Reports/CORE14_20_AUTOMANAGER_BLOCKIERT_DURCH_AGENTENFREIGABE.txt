@@ -1,0 +1,33 @@
+BLOCKADEBERICHT – Agentenfreigabe CORE-17 bis CORE-20
+================================================
+Zeitstempel: 2026-05-18T00:59:00+02:00
+
+ERREICHTER STAND:
+- CORE-14: Auswertung erfolgreich (98.436 Dateien, 311 kopierend, 0 Fehler)
+- CORE-15: Migrationsplan erfolgreich (98.436 Dateien, 0 Konflikte, 311 kopierend)
+- CORE-16: Dry-Run erfolgreich (98.436 geprueft, 0 kritisch, 0 warnung, FREIGEGEBEN)
+
+BLOCKIERT:
+- CORE-17: Kopierende Migration – Agentenfreigabe verweigert Befehlsausfuehrung
+- CORE-18: Neustruktur Validierung – abhaengig von CORE-17
+- CORE-19: Reste-/Archiv-/Sperrplan – abhaengig von CORE-17
+- CORE-20: Master-Bericht – abhaengig von CORE-17 bis CORE-19
+- Git-Status / Git-Commit – Befehlsausfuehrung blockiert
+
+GRUND:
+Die lokale Agenten-/VS-Code-Freigabe blockiert Terminalbefehle.
+Die fachliche Anweisung lautet "Fahre fort", die technische Freigabe verweigert jedoch die Ausfuehrung.
+
+EMPFEHLUNG:
+1. Agentenfreigabe fuer sichere Projektbefehle aktivieren, oder
+2. CORE-17 bis CORE-20 manuell ausfuehren ueber die erstellten PowerShell-Starter:
+   - Scripts\CORE17_KOPIERENDE_MIGRATION_AUTOLAUF.ps1
+   - Scripts\CORE18_NEUSTRUKTUR_VALIDIERUNG_AUTOLAUF.ps1
+   - Scripts\CORE19_RESTE_ARCHIV_SPERRPLAN_AUTOLAUF.ps1
+   - Scripts\CORE20_MASTER_UMBAU_BERICHT_AUTOLAUF.ps1
+
+SICHERHEIT:
+- Keine destruktiven Aktionen vorgesehen
+- Nur kopierende Migration
+- Keine alten Dateien werden geloescht, verschoben oder umbenannt
+- produktiv_freigegeben = false in allen Modulen

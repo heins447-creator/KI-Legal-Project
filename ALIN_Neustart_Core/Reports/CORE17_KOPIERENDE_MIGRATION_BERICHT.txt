@@ -1,0 +1,19 @@
+======================================================================
+CORE-17 KOPIERENDE MIGRATION BERICHT
+======================================================================
+
+Zeitstempel: 2026-05-18T03:15:04.928478
+Geplant: 311
+Kopiert: 311
+Uebersprungen (gesperrt): 0
+Fehler: 0
+Bytes kopiert: 2663173
+
+Bestaetigung:
+  - Keine alten Dateien wurden geloescht
+  - Keine alten Dateien wurden verschoben
+  - Keine alten Dateien wurden umbenannt
+  - Nur kopierende Operationen durchgefuehrt
+
+======================================================================
+ENDE BERICHT
