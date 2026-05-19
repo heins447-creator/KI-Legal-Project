@@ -1,0 +1,30 @@
+[project]
+name = "alin-neustart-core"
+version = "0.1.0"
+description = "ALIN Kanzleisoftware Kernprojekt, offline-first und lokal betrieben."
+readme = "00_Dokumentation/ALIN_ARBEITSAUFTRAG_KI_ENTWICKLUNG.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb==1.5.2",
+    "fastapi==0.128.8",
+    "numpy==2.4.4",
+    "uvicorn==0.46.0",
+]
+
+[tool.uv]
+package = false
+offline = true
+link-mode = "copy"
+
+[tool.alin]
+phase = "0"
+arbeitspaket = "0.1"
+offline_first = true
+internet_research_allowed = false
+foreign_api_calls_allowed = false
+
+[tool.alin.wheelhouse]
+path = "Wheelhouse/python"
+lockfile = "requirements.lock"
+install_command = "uv pip sync --offline --find-links Wheelhouse/python requirements.lock"
+status = "mirror_pending"
