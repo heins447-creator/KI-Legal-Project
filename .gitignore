@@ -33,3 +33,8 @@ Tools/_ToolLibrary/Downloads/
 Tools/_ToolLibrary/PythonWheelhouse/
 
 
+
+# Grosse Datendateien (>50MB) - nicht fuer GitHub geeignet
+ALIN_Neustart_Core/07_Bestandsaufnahme_Altbestand/CORE13_altbestand_inventur.json
+ALIN_Neustart_Core/08_Migration/01_Plaene/CORE14_auswertung.json
+ALIN_Neustart_Core/08_Migration/01_Plaene/CORE15_migrationsplan.json
