@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.2",
+  "name": "DuckDB-Schema und versionierter Migrations-Runner",
+  "database": {
+    "engine": "duckdb",
+    "path": "Database/DuckDB/alin_local.duckdb",
+    "schema_migrations_table": "alin_system.schema_migrations",
+    "active_migrations_dir": "Database/Migrations"
+  },
+  "runner": {
+    "path": "Scripts/python_runner/phase0_ap02_migration_runner.py",
+    "mode_default": "dry-run",
+    "execute_requires_flag": "--execute",
+    "dry_run_flag": "--dry-run"
+  },
+  "check": {
+    "path": "Scripts/python_runner/check_phase0_ap02_migration_runner.py",
+    "uses_temporary_database": true,
+    "does_not_touch_production_database": true
+  },
+  "migration_policy": [
+    "Jede Datenbankaenderung erfolgt nur ueber eine versionierte SQL-Datei in Database/Migrations.",
+    "Bereits angewendete Migrationen duerfen nicht still geaendert werden; der SHA-256 wird geprueft.",
+    "Der Runner startet standardmaessig im dry-run.",
+    "Produktive Ausfuehrung braucht --execute.",
+    "Altbestand in 08_Migration wird nur lesend verwendet."
+  ],
+  "created_schemas": [
+    "alin_system",
+    "alin_audit"
+  ],
+  "created_tables": [
+    "alin_system.schema_migrations",
+    "alin_system.database_metadata",
+    "alin_audit.audit_events"
+  ]
+}

@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+Database/DuckDB/*.duckdb
+Windows_App/Logs/*.duckdb
