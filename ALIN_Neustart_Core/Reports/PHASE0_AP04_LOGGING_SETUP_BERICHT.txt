@@ -1,0 +1,24 @@
+PHASE 0, AP 0.4 JSON-LOGGING BERICHT
+======================================================================
+Erstellt: 2026-05-19 11:05:38
+Standard-Logpfad: C:\Users\heins\AppData\Local\ALIN\Logs
+
+ERGEBNIS
+----------------------------------------------------------------------
+Zentrale JSON-Logging-Komponente ist angelegt.
+Smoke-Log wurde synthetisch geschrieben und als JSON gelesen.
+
+SMOKE-TEST
+----------------------------------------------------------------------
+Logdatei: I:\KI_Legal_Project\ALIN_Neustart_Core\Windows_App\Logs\logging_smoke\phase0_ap04_smoke.jsonl
+Event: phase0_ap04_logging_smoke
+Level: INFO
+
+SPERREN
+----------------------------------------------------------------------
+Echte Mandantendaten erlaubt: False
+Internet erlaubt: False
+Externe APIs erlaubt: False
+
+ENDE BERICHT
+======================================================================
