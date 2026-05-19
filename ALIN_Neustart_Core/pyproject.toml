@@ -16,9 +16,25 @@ package = false
 offline = true
 link-mode = "copy"
 
+[dependency-groups]
+test = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = [
+    "-ra",
+    "--strict-config",
+    "--strict-markers",
+]
+
 [tool.alin]
 phase = "0"
-arbeitspaket = "0.1"
+arbeitspaket = "0.3"
 offline_first = true
 internet_research_allowed = false
 foreign_api_calls_allowed = false

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "phase": "0",
+  "arbeitspaket": "0.3",
+  "name": "pytest-Aufsetzung und tests-Struktur",
+  "pytest": {
+    "configured_in": "pyproject.toml",
+    "testpaths": [
+      "tests"
+    ],
+    "required": true,
+    "install_automatically": false,
+    "availability_in_checked_runtime": "not_installed"
+  },
+  "files": {
+    "runner": "Scripts/python_runner/phase0_ap03_pytest_setup.py",
+    "check": "Scripts/python_runner/check_phase0_ap03_pytest_setup.py",
+    "starter": "Scripts/Run_PHASE0_AP03_Pytest_Setup.ps1",
+    "documentation": "Projektplanung/PHASE0_AP03_PYTEST_SETUP.md",
+    "report": "Reports/PHASE0_AP03_PYTEST_SETUP_BERICHT.txt",
+    "log_report": "Windows_App/Logs/PHASE0_AP03_PYTEST_SETUP_BERICHT.txt"
+  },
+  "test_policy": [
+    "Neue produktive Komponenten erhalten mindestens eine pytest-kompatible Testdatei.",
+    "Tests nutzen synthetische Daten und keine echten Mandantendaten.",
+    "Tests duerfen keine Internetverbindungen oeffnen.",
+    "Datenbanktests nutzen temporaere DuckDB-Dateien, keine produktive Datenbank.",
+    "pytest wird erst aus dem Offline-Wheelhouse installiert, nicht automatisch."
+  ]
+}

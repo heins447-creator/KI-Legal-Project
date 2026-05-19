@@ -1,0 +1,34 @@
+PHASE 0, AP 0.3 PYTEST-SETUP BERICHT
+======================================================================
+Erstellt: 2026-05-19 11:03:30
+Arbeitswurzel: I:\KI_Legal_Project\ALIN_Neustart_Core
+
+ERGEBNIS
+----------------------------------------------------------------------
+pytest-Konfiguration und tests-Verzeichnis sind angelegt.
+Es wurde keine Installation und kein Internetzugriff ausgefuehrt.
+
+PYTEST-STATUS
+----------------------------------------------------------------------
+pytest verfuegbar: nein
+Status: pytest nicht installiert
+
+TESTDATEIEN
+----------------------------------------------------------------------
+- tests\test_phase0_ap02_migrations.py
+- tests\test_phase0_ap03_pytest_setup.py
+
+POLICY
+----------------------------------------------------------------------
+Neue produktive Komponenten erhalten mindestens eine pytest-kompatible Testdatei.
+Tests nutzen synthetische Daten und keine echten Mandantendaten.
+Tests duerfen keine Internetverbindungen oeffnen.
+Datenbanktests nutzen temporaere DuckDB-Dateien, keine produktive Datenbank.
+pytest wird erst aus dem Offline-Wheelhouse installiert, nicht automatisch.
+
+HINWEIS
+----------------------------------------------------------------------
+Die pytest-Ausfuehrung ist vorbereitet. In der aktuellen Projektlaufzeit fehlt pytest noch; Installation erfolgt spaeter nur kontrolliert aus dem Offline-Wheelhouse.
+
+ENDE BERICHT
+======================================================================
