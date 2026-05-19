@@ -1,0 +1,22 @@
+PHASE 0, AP 0.7 NETWORK-GUARD BERICHT
+======================================================================
+Erstellt: 2026-05-19 11:12:23
+
+ERGEBNIS
+----------------------------------------------------------------------
+App-interne Outbound-Sperre ist angelegt.
+Der Smoke-Test wurde blockiert, bevor eine echte Verbindung aufgebaut wurde.
+
+POLICY
+----------------------------------------------------------------------
+Default Outbound: deny
+Software-Internet erlaubt: False
+Update-Klick erforderlich: True
+Update-Hosts konfiguriert: 0
+
+SMOKE-TEST
+----------------------------------------------------------------------
+example.invalid:443: blocked
+
+ENDE BERICHT
+======================================================================

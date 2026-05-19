@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
 from alin_core.redline_guard import evaluate_action
+from alin_core.network_guard import NetworkBlockedError, check_outbound_allowed
 
 
 ADMIN_HASH_ENV = "ALIN_ADMIN_PASSWORD_SHA256"
@@ -101,6 +102,16 @@ def command_safety_setting(mode: str, password: str | None) -> int:
     return 0
 
 
+def command_network_check(mode: str, host: str, port: int, update_click: bool) -> int:
+    try:
+        check_outbound_allowed(host, port, update_click=update_click)
+    except NetworkBlockedError as exc:
+        json_print({"mode": mode, "status": "blocked", "reason": str(exc), "host": host, "port": port})
+        return 2
+    json_print({"mode": mode, "status": "allowed", "host": host, "port": port})
+    return 0
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="ALIN lokaler Dispatcher")
     mode = parser.add_mutually_exclusive_group()
@@ -119,6 +130,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     safety = sub.add_parser("safety-setting")
     safety.add_argument("--admin-password")
 
+    network = sub.add_parser("network-check")
+    network.add_argument("--host", required=True)
+    network.add_argument("--port", type=int, default=443)
+    network.add_argument("--update-click", action="store_true")
+
     return parser.parse_args(argv)
 
 
@@ -134,6 +150,8 @@ def main(argv: list[str] | None = None) -> int:
             return command_migrate(mode)
         if args.command == "safety-setting":
             return command_safety_setting(mode, args.admin_password)
+        if args.command == "network-check":
+            return command_network_check(mode, args.host, args.port, args.update_click)
     except PermissionError as exc:
         json_print({"mode": mode, "status": "blocked", "reason": str(exc)})
         return 3
