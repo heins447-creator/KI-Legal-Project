@@ -1,0 +1,22 @@
+PHASE 0, AP 0.6 DISPATCHER BERICHT
+======================================================================
+Erstellt: 2026-05-19 11:10:45
+
+ERGEBNIS
+----------------------------------------------------------------------
+Dispatcher alin.py ist angelegt.
+Standardmodus ist dry-run; execute muss explizit gesetzt werden.
+
+SMOKE-TESTS
+----------------------------------------------------------------------
+health Exitcode: 0
+redline block Exitcode: 2
+safety-setting ohne Admin-Hash Exitcode: 3
+
+ADMIN
+----------------------------------------------------------------------
+Passwort-Hash-Variable: ALIN_ADMIN_PASSWORD_SHA256
+Klartextspeicherung: False
+
+ENDE BERICHT
+======================================================================
