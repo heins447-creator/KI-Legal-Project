@@ -1,0 +1,12 @@
+{
+  "projekt": "ALIN",
+  "aktiver_programmierordner": "I:\\KI_Legal_Project\\ALIN_Neustart_Core",
+  "altbestand_wurzel": "I:\\KI_Legal_Project",
+  "migration_nur_lesend": "I:\\KI_Legal_Project\\ALIN_Neustart_Core\\08_Migration\\02_Kopierte_Dateien",
+  "loeschen_erlaubt": false,
+  "altbestand_bearbeiten_erlaubt": false,
+  "produktive_daten_erlaubt": false,
+  "internet_erlaubt": false,
+  "cloud_erlaubt": false,
+  "status": "aktiver_programmierordner_festgelegt"
+}
