@@ -34,7 +34,7 @@ addopts = [
 
 [tool.alin]
 phase = "0"
-arbeitspaket = "0.4"
+arbeitspaket = "0.5"
 offline_first = true
 internet_research_allowed = false
 foreign_api_calls_allowed = false
