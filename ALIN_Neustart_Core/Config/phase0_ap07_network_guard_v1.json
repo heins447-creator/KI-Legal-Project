@@ -11,6 +11,14 @@
     "update_channel_requires_explicit_click": true,
     "update_hosts": []
   },
+  "update_policy": {
+    "automatic_updates_allowed": false,
+    "background_update_check_allowed": false,
+    "telemetry_allowed": false,
+    "update_trigger": "nur auf explizite Nutzeraktion — kein automatischer Update-Check im Hintergrund",
+    "development_tools_internet": true,
+    "development_tools_note": "uv, pytest und Entwicklungswerkzeuge duerfen waehrend der Programmierung online gehen. Diese Regel gilt NICHT fuer die laufende ALIN-Anwendung."
+  },
   "pending_configuration": [
     "Hersteller-Update-Host wird spaeter festgelegt und bleibt bis dahin leer.",
     "Ohne expliziten Klick und Allowlist-Eintrag wird auch der Update-Kanal blockiert."

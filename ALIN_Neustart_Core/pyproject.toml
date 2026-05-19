@@ -13,7 +13,8 @@ dependencies = [
 
 [tool.uv]
 package = false
-offline = true
+# offline = true gilt nur für das Deployment (via install_command im Wheelhouse-Abschnitt).
+# Beim Entwickeln und Testen darf uv online gehen.
 link-mode = "copy"
 
 [dependency-groups]
